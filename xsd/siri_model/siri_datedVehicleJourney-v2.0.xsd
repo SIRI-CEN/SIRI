@@ -107,7 +107,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for Planned VEHICLE JOURNEY (Production Timetable Service).</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="DatedVehicleJourneyCode" type="DatedVehicleJourneyCodeType">
+   <xsd:element name="DatedVehicleJourneyCode" type="DatedVehicleJourneyCodeType" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Identifier for a VEHICLE JOURNEY.</xsd:documentation>
     </xsd:annotation>

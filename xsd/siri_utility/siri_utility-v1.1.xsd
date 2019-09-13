@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" id="siri_utility">
  <!-- ======================================================================= -->
  <xsd:annotation>
@@ -72,7 +73,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for Extensions to schema. Wraps an 'any' tag to ensure decidability.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:any namespace="##any" processContents="lax" minOccurs="0">
+   <xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Placeholder for user extensions.</xsd:documentation>
     </xsd:annotation>

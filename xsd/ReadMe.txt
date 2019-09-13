@@ -20,7 +20,28 @@ This ReadMe describes Changes to the SIRI schema up to  v2.0 version 2.0   since
 ========================
 Changes to  SIRI schema v2.0   since v1.4
 
- 2015.02.10 Bub fix (from french feedback)
+ 2015.05.20 Bug fix (from SG7 feedback) SIRI 2.0o Draft2
+	* siri_situationExchange_service.xsd FilterByKeword corrected to FilterByKeyword
+	* siri_estimatedVehicleJourney-v2.0.xsd coorections of typo in comments and documentation
+	
+ 2015.05.13 Bug fix (from SG7 feedback) SIRI 2.0o Draft2
+ 	* update annotation in siri.xsd and and siri_all_functionalService.xsd (to add <Requires> siri__facilityMonitoring_service.xsd ...)
+	* siri.xsd: move of a SituationExchangeDelivery, renamed IncludedSituationExchangeDelivery, before other complemented service deliveries.
+	* siri_situationExchange_service.xsd: addition of IncludedSituationExchangeDelivery element
+
+ 2015.05.11 Bug fix (from SG7 skype meeting on May 11th 2015) SIRI 2.0o Draft1
+ 	* Allow multiple tags within an extension (reapply lost chnage from 2012.06.18 SIRI 2.0d) - siri_utility-v1.1.xsd
+	* siri_estimatedVehicleJourney-v2.0.xsd : in EstimatedTimetableAlterationGroup, addition of FramedVehicleJourneyRef as an alternative to DatedVehicleJourneyRef (choice) and deprecation of DatedVehicleJourneyRef and EstimatedVehicleJourneyCode
+	* siri_datedVehicleJourney-v2.0.xsd : DatedVehicleJourneyCode is now optional
+	* siri.xsd: SituationExchangeDelivery now can be provided as a complement to any other Service delivery (and can still be provided standalone)... note that the SituationExchangeDelivery must be after the other Delivery to get a validating, non-ambiguous XSD.
+	* siri_estimatedVehicleJourney-v2.0.xsd : EstimatedVehicleJourneyStructure brought back to SIRI 2.0k situation
+		* Replacement of EstimatedJourneyInfoGroup by JourneyEndTimesGroup 
+		* Replacement of inclusion of siri_journey-v2.0.xsd by siri_monitoredVehicleJourney-v2.0.xsd
+		* Replacement of EstimatedRealtimeInfoGroup by journeyProgressGroup
+		* Replacement of OperationalInfoGroup by TrainOperationalInfoGroup
+
+
+ 2015.02.10 Bug fix (from french feedback)
  	* [fr] siri_wsProducer-Framework.xsd: use of siri:CheckStatusRequestStructure instead of siri:RequestStructure for checkStatus (one addition non mandatory version attribute)
  	* [fr] siri_wsProducer.wsdl: use of siri:CheckStatusRequestStructure instead of siri:RequestStructure for checkStatus (one addition non mandatory version attribute)
  	* [fr] siri_wsConsumer-Framework.xsd: update type of NotifySubscriptionTerminated to siri:SubscriptionTerminatedNotificationStructure (instead of TerminateSubbscriptionREquest !)

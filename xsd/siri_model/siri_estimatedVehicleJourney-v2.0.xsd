@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_estimatedVehicleJourney">
  <xsd:annotation>
   <xsd:appinfo>
@@ -84,7 +85,7 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRI-ET Estimated Timetable Service.</xsd:documentation>
  </xsd:annotation>
  <!-- ==== Dependencies=========================================-->
- <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_monitoredVehicleJourney-v2.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:element name="EstimatedVehicleJourney" type="EstimatedVehicleJourneyStructure">
   <xsd:annotation>
@@ -97,11 +98,19 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
-    <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' ie be with the data context of the ESTIMATED Timetable. </xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    <xsd:choice>
+     <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+      <xsd:annotation>
+       <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
+      <xsd:annotation>
+       <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' ie be with the data context of the ESTIMATED Timetable. 
+DEPRECATED from SIRI 2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:choice>
     <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure">
      <xsd:annotation>
       <xsd:documentation>If no VEHICLE JOURNEY reference is available, identify it by origin and destination and the scheduled times at these stops.</xsd:documentation>
@@ -109,7 +118,8 @@ Rail transport, Roads and road transport
     </xsd:element>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
-      <xsd:documentation>If this is the first message about an extra unplanned VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'.</xsd:documentation>
+      <xsd:documentation>If this is the first message about an extra unplanned VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'. 
+DEPRECATED from SIRI 2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -268,19 +278,25 @@ Rail transport, Roads and road transport
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="LineIdentityGroup"/>
-   <xsd:group ref="EstimatedTimetableAlterationGroup"/>
+   <xsd:group ref="EstimatedTimetableAlterationGroup">
+    <xsd:annotation>
+     <xsd:documentation>Gives the DATED VEHICLE JOURNEY
+which the vehicle is running and if the journey is an alteration to the timetable indicates
+the original journey and the nature of the difference.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:group>
    <xsd:group ref="JourneyPatternInfoGroup" minOccurs="0"/>
    <xsd:group ref="JourneyEndNamesGroup"/>
    <xsd:group ref="ServiceInfoGroup" minOccurs="0"/>
    <xsd:group ref="JourneyInfoGroup" minOccurs="0"/>
-   <xsd:group ref="EstimatedJourneyInfoGroup" minOccurs="0"/>
+   <xsd:group ref="JourneyEndTimesGroup" minOccurs="0"/>
    <xsd:group ref="DisruptionGroup"/>
-   <xsd:group ref="EstimatedRealtimeInfoGroup" minOccurs="0"/>
-   <xsd:group ref="OperationalInfoGroup"/>
+   <xsd:group ref="JourneyProgressGroup" minOccurs="0"/>
+   <xsd:group ref="TrainOperationalInfoGroup"/>
    <xsd:sequence>
     <xsd:element name="RecordedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Observed call tmes for that art of teh journey that has already been completed.  (+ SIRI 2..0)</xsd:documentation>
+      <xsd:documentation>Observed call times for that art of teh journey that has already been completed.  (+ SIRI 2..0)</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
@@ -290,7 +306,7 @@ Rail transport, Roads and road transport
     </xsd:element>
     <xsd:element name="EstimatedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Estimated call tmes for journey</xsd:documentation>
+      <xsd:documentation>Estimated call times for journey</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
