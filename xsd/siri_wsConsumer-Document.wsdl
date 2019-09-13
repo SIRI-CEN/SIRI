@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
+<!-- edited with XMLSPY v2011 (http://www.xmlspy.com) by Christophe Duquesne (Aurige- www.aurigetech.com) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:siriWS="http://wsdl.siri.org.uk" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ns="http://datex2.eu/schema/1_0/1_0" xmlns:ns1="http://www.ifopt.org.uk/acsb" xmlns:ns2="http://www.ifopt.org.uk/ifopt" xmlns:ns3="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://wsdl.siri.org.uk">
+ <types>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk">
+   <xsd:include schemaLocation="wsdl_model/siri_wsConsumer-Framework.xsd"/>
+   <xsd:include schemaLocation="wsdl_model/siri_wsConsumer-Services.xsd"/>
+  </xsd:schema>
+ </types>
+ <message name="HeartbeatNotify">
+  <part name="HeartbeatNotifyParameters" element="siriWS:NotifyHeartbeat"/>
+ </message>
+ <message name="DataReadyNotify">
+  <part name="DataReadyNotifyParameters" element="siriWS:NotifyDataReady"/>
+ </message>
+ <message name="SubscriptionTerminatedNotify">
+  <part name="SubscriptionTerminatedNotifyParameters" element="siriWS:NotifySubscriptionTerminated"/>
+ </message>
+ <message name="ProductionTimetableNotify">
+  <part name="ProductionTimetableNotifyParameters" element="siriWS:NotifyProductionTimetable"/>
+ </message>
+ <message name="EstimatedTimetableNotify">
+  <part name="EstimatedTimetableNotifyParameters" element="siriWS:NotifyEstimatedTimetable"/>
+ </message>
+ <message name="StopTimetableNotify">
+  <part name="StopTimetableNotifyParameters" element="siriWS:NotifyStopTimetable"/>
+ </message>
+ <message name="StopMonitoringNotify">
+  <part name="StopMonitoringNotifyParameters" element="siriWS:NotifyStopMonitoring"/>
+ </message>
+ <message name="VehicleMonitoringNotify">
+  <part name="VehicleMonitoringNotifyParameters" element="siriWS:NotifyVehicleMonitoring"/>
+ </message>
+ <message name="ConnectionTimetableNotify">
+  <part name="ConnectionTimetableNotifyParameters" element="siriWS:NotifyConnectionTimetable"/>
+ </message>
+ <message name="ConnectionMonitoringNotify">
+  <part name="ConnectionMonitoringNotifyParameters" element="siriWS:NotifyConnectionMonitoring"/>
+ </message>
+ <message name="GeneralMessageNotify">
+  <part name="GeneralMessageNotifyParameters" element="siriWS:NotifyGeneralMessage"/>
+ </message>
+ <message name="FacilityMonitoringNotify">
+  <part name="FacilityMonitoringNotifyParameters" element="siriWS:NotifyFacilityMonitoring"/>
+ </message>
+ <message name="SituationExchangeNotify">
+  <part name="SituationExchangeNotifyParameters" element="siriWS:NotifySituationExchange"/>
+ </message>
+ <portType name="SiriConsumerDocPort">
+  <operation name="NotifyDataReady">
+   <input message="siriWS:DataReadyNotify"/>
+  </operation>
+  <operation name="NotifyHeartbeat">
+   <input message="siriWS:HeartbeatNotify"/>
+  </operation>
+  <!-- == Service Specific == -->
+  <operation name="NotifySubscriptionTerminated">
+   <input message="siriWS:SubscriptionTerminatedNotify"/>
+  </operation>
+  <operation name="NotifyProductionTimetable">
+   <input message="siriWS:ProductionTimetableNotify"/>
+  </operation>
+  <operation name="NotifyEstimatedTimetable">
+   <input message="siriWS:EstimatedTimetableNotify"/>
+  </operation>
+  <operation name="NotifyStopTimetable">
+   <input message="siriWS:StopTimetableNotify"/>
+  </operation>
+  <operation name="NotifyStopMonitoring">
+   <input message="siriWS:StopMonitoringNotify"/>
+  </operation>
+  <operation name="NotifyVehicleMonitoring">
+   <input message="siriWS:VehicleMonitoringNotify"/>
+  </operation>
+  <operation name="NotifyConnectionTimetable">
+   <input message="siriWS:ConnectionTimetableNotify"/>
+  </operation>
+  <operation name="NotifyConnectionMonitoring">
+   <input message="siriWS:ConnectionMonitoringNotify"/>
+  </operation>
+  <operation name="NotifyGeneralMessage">
+   <input message="siriWS:GeneralMessageNotify"/>
+  </operation>
+  <operation name="NotifyFacilityMonitoring">
+   <input message="siriWS:FacilityMonitoringNotify"/>
+  </operation>
+  <operation name="NotifySituationExchange">
+   <input message="siriWS:SituationExchangeNotify"/>
+  </operation>
+ </portType>
+ <binding name="SiriConsumerDocBinding" type="siriWS:SiriConsumerDocPort">
+  <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="NotifySubscriptionTerminated">
+   <soap:operation soapAction="NotifySubscriptionTerminated"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyDataReady">
+   <soap:operation soapAction="NotifyDataReady"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyHeartbeat">
+   <soap:operation soapAction="NotifyHeartbeat"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyProductionTimetable">
+   <soap:operation soapAction="GetProductionTimetable"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyEstimatedTimetable">
+   <soap:operation soapAction="GetEstimatedTimetable"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyStopTimetable">
+   <soap:operation soapAction="GetStopTimetable"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyStopMonitoring">
+   <soap:operation soapAction="GetStopMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyVehicleMonitoring">
+   <soap:operation soapAction="GetVehicleMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyConnectionTimetable">
+   <soap:operation soapAction="GetConnectionTimetable"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyConnectionMonitoring">
+   <soap:operation soapAction="GetConnectionMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyGeneralMessage">
+   <soap:operation soapAction="GetGeneralMessage"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyFacilityMonitoring">
+   <soap:operation soapAction="GetFacilityMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifySituationExchange">
+   <soap:operation soapAction="GetSituationExchange"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+ </binding>
+ <service name="SiriConsumerDocServices">
+  <port name="SiriWSPort" binding="siriWS:SiriConsumerDocBinding">
+   <soap:address location="http://www.siri-service-location.com"/>
+  </port>
+ </service>
+ <!--
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience> 
+				<Contributor>Christophe Duquesne, Aurige, Guyancourt FRANCE</Contributor> 
+				<Contributor>Nicholas Knowles, KIZOOM LTD., London EC4A 1LT</Contributor> 
+				<Coverage>Europe</Coverage>
+				<Creator>>Drafted for version 1.0  CEN TC278 WG3 SG7  Editor Christophe Duquesne, Aurige </Creator>
+				<Date>
+					<Created>2012-05-29</Created>
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN technical standard for the exchange of real time information.</p>
+					<p>SIRI is defined by XMLschemas and  comprises a general protocol for communication, and a modular set of functional services as follows :
+                        <ul>
+							<li>Production Timetable:  Exchanges planned timetables.</li>
+							<li>Estimated Timetable:  Exchanges real-time updates to timetables.</li>
+							<li>Stop Timetable: Provides timetable information about stop departures and arrivals.</li>
+							<li>Stop Monitoring: Provides real time information about stop departures and arrivals.</li>
+							<li>Vehicle Monitoring: Provides real time information about vehicle movements.</li>
+							<li>Connection Timetable: Provides timetabled information about feeder and distributor arrivals and departures at a connection point.</li>
+							<li>Connection Monitoring: Provides real time information about feeder and distributor arrivals and departures at a a connection point. Can be used to support "Connection protection".</li>
+							<li>General Message: Exchanges general information messages between participants</li>
+							<li>Facility Monitoring: Provides real time information about facilities.</li>
+							<li>SItuation  Monitoring: Provides real time information about Incidents.</li>
+						</ul>
+					</p>
+					<p>SIRI supports both direct request/response and publish subscribe patterns of interaction.</p>
+					<p>SIRI includes common mechanisms and messages for system status management.</p>
+					<p>SIRI documents can be exchanged using http post, and/or SOAP.  
+					This package describes consumer bindings using Document/Literal Wrapped encoding for SOAP. It is fully compatible with the RPC/Literal style</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0}siri.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/siri_wsCOnsumer-Document.wsdl</Requires>
+				</Relation>
+				<Rights>Unclassified
+                                      <Copyright>CEN, VDV, RTIG  2004-2012</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.0 Draft</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+Air transport, Airports,
+Ports and maritime transport, Ferries (marine),
+Public transport, Bus services, Coach services, Bus stops and stations,
+Rail transport, Railway stations and track, Train services, Underground trains,
+Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
+Rail transport, Roads and road transport.
+</Category>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>WSDL Consumer interafce for SIRI XML schema. Service Interface for Real Time Information relating to Public Transport Operations. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+	</xsd:annotation>    
+-->
+ <!-- ============
+    <xsd:annotation>
+        <xsd:appinfo xmlns:gms="http://www.govtalk.gov.uk/CM/gms">
+            <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+                <Aggregation>main schema</Aggregation>
+                <Audience>e-service developers</Audience>
+				<Contributor>Christophe Duquesne, Aurige, Guyancourt FRANCE</Contributor>
+				<Contributor>Michel Etienne, Cityway, Paris FRANCE</Contributor>
+				<Contributor>Robin Vettier, RATP, Paris FRANCE</Contributor>
+				<Contributor>Nicholas Knowles, KIZOOM LTD., London EC4A 1LT</Contributor>                <Coverage>Europe</Coverage>
+                <Creator>>Drafted for version 1.0 , by  CEN TC278 WG3 SG7 Christophe Duquesne DRYADE SA mailto:schemer@siri.org.uk</Creator>
+                <Date>
+                    <Created>2005-03-01</Created>
+                </Date>
+                <Date>
+                    <Modified>2005-05-11</Modified>
+                </Date>
+                <Date>
+                    <Modified>2007-01-30</Modified>
+                </Date>   <Date>
+                    <Modified>2007-04-17</Modified>
+               Name Space changes 
+                </Date>
+                              <Date>
+                    <Modified>2008-02-12</Modified>   
+					 SIRI-SXe changes 
+                </Date>
+		<Date> 	 Revise namespaces 
+					<Modified>2012-03-19</Modified>
+				
+				</Date>
+                <Description>
+                    <p>SIRI is a European CEN standard for the exchange of real time information. This describes WSDL client binding</p>
+                </Description>
+                <Format>
+                    <MediaType>text/xml</MediaType>
+                    <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+                    <Description>XML schema, W3C Recommendation 2001</Description>
+                </Format>
+                <Identifier>{http://www.siri.org.uk/schema/2.0/siri}siri_wsConsumer.wsdl</Identifier>
+                <Language>[ISO 639-2/B] ENG</Language>
+                <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+                <Rights>Unclassified
+                                         <Copyright>CEN, VDV, RTIG  2004-2012</Copyright>
+                </Rights>
+                <Source>
+                    <ul>
+                        <li>SIRI is derived from the VDV, RTIGXML and Trident standards.</li>
+                    </ul>
+                </Source>
+                <Status>Version 2.0 Draft</Status>
+                <Subject>
+                    <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+ Air transport, Airports,
+ Ports and maritime transport, Ferries (marine),
+ Public transport, Bus services, Coach services, Bus stops and stations,
+ Rail transport, Railway stations and track, Train services, Underground trains,
+ Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
+ Rail transport, Roads and road transport
+ </Category>
+                    <Project>CEN TC278 WG3 SG7</Project>
+                </Subject>
+                <Title>SIRI XML schema. WSDL Client binding. </Title>
+                <Type>Standard</Type>
+            </Metadata>
+        </xsd:appinfo>
+    </xsd:annotation>
+ -->
+</definitions>

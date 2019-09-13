@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SIRI Model - All SIRI IFOPT STop Place packagaes
+ Copyright CEN 2004-2012
+ 
+ -->
+<!--  
+The Purpose of this file is to overcome a technical limitation in Xerces (and possibly other) widely used XML processors.
+ 
+ Xerces has a limitation in that it only notices the first import for a given namespace that it encounters - all others are effectively ignored. Thus if one imports seperate individual xsd files from the same namespace as separate import statements, only the elements in the first are found. This applies on a per-schema basis, i.e. when processing a complex depedency graph with multiple files referencing the same namespace, once the first import for a namespace has been loaded no further files are imported for that namespace during the whole JAXB run. 
+ 
+ The practical effect of this limitation is that you should always import all of the types in a namespace, not just the ones that the current file requires. 
+ 
+ This file provides a single declaration of all the ifopt Stop Model data elements for use in such an import.
+
+ -->
+<xsd:schema xmlns="http://www.ifopt.org.uk/ifopt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.ifopt.org.uk/ifopt" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.3" id="ifopt_allStopPlace">
+ <!-- ===Global include of all ACSB namespace elements neeeded to work around XERCES limitation=====-->
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all-v0.3.xsd"/>
+ <!-- ======================================================================= -->
+ <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_location-v2.0.xsd"/>
+ <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
+ <xsd:include schemaLocation="ifopt_administration-v0.3.xsd"/>
+ <xsd:include schemaLocation="ifopt_countries-v0.2.xsd"/>
+ <xsd:include schemaLocation="ifopt_location-v0.3.xsd"/>
+ <xsd:include schemaLocation="ifopt_modification-v0.3.xsd"/>
+ <xsd:include schemaLocation="ifopt_path-v0.2.xsd"/>
+ <xsd:include schemaLocation="ifopt_equipment-v0.3.xsd"/>
+ <xsd:include schemaLocation="ifopt_stop-v0.3.xsd"/>
+ <xsd:include schemaLocation="ifopt_time-v0.2.xsd"/>
+ <xsd:include schemaLocation="ifopt_types-v0.2.xsd"/>
+ <xsd:include schemaLocation="ifopt_checkpoint-v0.3.xsd"/>
+ <xsd:include schemaLocation="ifopt_modes-v0.2.xsd"/>
+</xsd:schema>

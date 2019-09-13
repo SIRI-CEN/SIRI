@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="13.2">
+    <meta>
+        <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="Siri-2.0.xpr">
+        <folder name="examples">
+            <folder name="SIRI-AA  Generic framework Examples">
+                <file name="../examples/siri_exa_framework/exa_checkStatus_request.xml"/>
+                <file name="../examples/siri_exa_framework/exa_checkStatus_response.xml"/>
+                <file name="../examples/siri_exa_framework/exa_dataReady_request.xml"/>
+                <file name="../examples/siri_exa_framework/exa_dataReady_response.xml"/>
+                <file name="../examples/siri_exa_framework/exa_dataReceived_response.xml"/>
+                <file name="../examples/siri_exa_framework/exa_dataSupply_request.xml"/>
+                <file name="../examples/siri_exa_framework/exa_heartbeat_request.xml"/>
+                <file name="../examples/siri_exa_framework/exa_requestSubscription_response.xml"/>
+                <file name="../examples/siri_exa_framework/exa_terminateSubscription_request.xml"/>
+                <file name="../examples/siri_exa_framework/exa_terminateSubscription_response_err.xml"/>
+                <file name="../examples/siri_exa_framework/exa_terminateSubscription_response.xml"/>
+            </folder>
+            <folder name="SIRI-CM Connection Monitoring Examples">
+                <file name="../examples/siri_exm_CM/exc_connectionMonitoring_capabilitiesResponse.xml"/>
+                <file name="../examples/siri_exm_CM/exc_connectionMonitoring_request.xml"/>
+                <file name="../examples/siri_exm_CM/exc_connectionMonitoring_subscriptionRequest.xml"/>
+                <file name="../examples/siri_exm_CM/exc_connectionMonitoringDistributor_response.xml"/>
+                <file name="../examples/siri_exm_CM/exc_connectionMonitoringFeeder_response.xml"/>
+            </folder>
+            <folder name="SIRI-CT Connection Timetable Examples">
+                <file name="../examples/siri_exm_CT/exc_connectionTimetable_capabilitiesResponse.xml"/>
+                <file name="../examples/siri_exm_CT/exc_connectionTimetable_request.xml"/>
+                <file name="../examples/siri_exm_CT/exc_connectionTimetable_response.xml"/>
+                <file name="../examples/siri_exm_CT/exc_connectionTimetable_subscriptionRequest.xml"/>
+            </folder>
+            <folder name="SIRI-ET Estimated Timetable Examples">
+                <file name="../examples/siri_exm_ET/ext_estimatedTimetable_capabilitiesResponse.xml"/>
+                <file name="../examples/siri_exm_ET/ext_estimatedTimetable_request.xml"/>
+                <file name="../examples/siri_exm_ET/ext_estimatedTimetable_response.xml"/>
+                <file name="../examples/siri_exm_ET/ext_estimatedTimetable_subscriptionRequest.xml"/>
+            </folder>
+            <folder name="SIRI-FM Facility Monitoring Examples">
+                <file name="../examples/siri_exm_FM/exf_facilityMonitoring_capabilitiesResponse.xml"/>
+                <file name="../examples/siri_exm_FM/exf_facilityMonitoring_request.xml"/>
+                <file name="../examples/siri_exm_FM/exf_facilityMonitoring_response.xml"/>
+                <file name="../examples/siri_exm_FM/exf_facilityMonitoring_subscriptionRequest.xml"/>
+            </folder>
+            <folder name="SIRI-GM General Message Timetable Examples">
+                <file name="../examples/siri_exm_GM/exm_generalMessage_capabilityResponse.xml"/>
+                <file name="../examples/siri_exm_GM/exm_generalMessage_request.xml"/>
+                <file name="../examples/siri_exm_GM/exm_generalMessage_response_embed.xml"/>
+                <file name="../examples/siri_exm_GM/exm_generalMessage_response.xml"/>
+                <file name="../examples/siri_exm_GM/exm_generalMessage_subscriptionRequest.xml"/>
+            </folder>
+            <folder name="SIRI-PT Production Timetable Examples">
+                <file name="../examples/siri_exm_PT/ext_productionTimetable_capabilitiesResponse.xml"/>
+                <file name="../examples/siri_exm_PT/ext_productionTimetable_request.xml"/>
+                <file name="../examples/siri_exm_PT/ext_productionTimetable_response.xml"/>
+                <file name="../examples/siri_exm_PT/ext_productionTimetable_subscriptionRequest.xml"/>
+            </folder>
+            <folder name="SIRI-SM Stop Monitoring Examples">
+                <file name="../examples/siri_exm_SM/exp_stopMonitoring_permissions.xml"/>
+                <file name="../examples/siri_exm_SM/exs_stopMonitoring_capabilitiesResponse.xml"/>
+                <file name="../examples/siri_exm_SM/exs_stopMonitoring_request.xml"/>
+                <file name="../examples/siri_exm_SM/exs_stopMonitoring_response_equip.xml"/>
+                <file name="../examples/siri_exm_SM/exs_stopMonitoring_response.xml"/>
+                <file name="../examples/siri_exm_SM/exs_stopMonitoring_subscriptionRequest.xml"/>
+            </folder>
+            <folder name="SIRI-ST Stop Timetable Examples">
+                <file name="../examples/siri_exm_ST/exs_stopTimetable_capabilitiesResponse.xml"/>
+                <file name="../examples/siri_exm_ST/exs_stopTimetable_request.xml"/>
+                <file name="../examples/siri_exm_ST/exs_stopTimetable_response.xml"/>
+                <file name="../examples/siri_exm_ST/exs_stopTimetable_subscriptionRequest.xml"/>
+            </folder>
+            <folder name="SIRI-SX Stituation Exchange Examples">
+                <file name="../examples/siri_exm_SX/exx_situationExchange_capabilityResponse.xml"/>
+                <file name="../examples/siri_exm_SX/exx_situationExchange_Pt.xml"/>
+                <file name="../examples/siri_exm_SX/exx_situationExchange_request.xml"/>
+                <file name="../examples/siri_exm_SX/exx_situationExchange_response.xml"/>
+                <file name="../examples/siri_exm_SX/exx_situationExchange_road.xml"/>
+                <file name="../examples/siri_exm_SX/exx_situationExchange_subscriptionRequest.xml"/>
+                <file name="../examples/siri_exm_SX/exx_situationExchangeResponse.xml"/>
+            </folder>
+            <folder name="SIRI-VM Vehicle Monitoring Examples">
+                <file name="../examples/siri_exm_VM/exv_vehicleMonitoring_capabilitiesResponse.xml"/>
+                <file name="../examples/siri_exm_VM/exv_vehicleMonitoring_request.xml"/>
+                <file name="../examples/siri_exm_VM/exv_vehicleMonitoring_response.xml"/>
+                <file name="../examples/siri_exm_VM/exv_vehicleMonitoring_subscriptionRequest.xml"/>
+            </folder>
+            <folder name="SIRI-XX Capability ">
+                <file name="../examples/siri_exu_capability/exd_allServices_capabilitiesRequest.xml"/>
+            </folder>
+            <folder name="SIRI-XX Discovery">
+                <file name="../examples/siri_exu_discovery/exd_lines_discoveryRequest.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_lines_discoveryResponse.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_productCategories_discoveryRequest.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_productCategories_discoveryResponse.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_serviceFeatures_discoveryRequest.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_serviceFeatures_discoveryResponse.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_stopPoints_discoveryRequest.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_stopPoints_discoveryResponse.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_vehicleFeatures_discoveryRequest.xml"/>
+                <file name="../examples/siri_exu_discovery/exd_vehicleFeatures_discoveryResponse.xml"/>
+            </folder>
+        </folder>
+        <folder name="schema">
+            <folder name="acsb">
+                <file name="acsb/acsb_accessibility-v0.3.xsd"/>
+                <file name="acsb/acsb_all-v0.3.xsd"/>
+                <file name="acsb/acsb_limitations-v0.2.xsd"/>
+                <file name="acsb/acsb_passengerMobility-v0.3.xsd"/>
+            </folder>
+            <folder name="datex2">
+                <file name="datex2/DATEXIISchema_1_0_1_0.xsd"/>
+            </folder>
+            <folder name="ifopt">
+                <file name="ifopt/ifopt_administration-v0.3.xsd"/>
+                <file name="ifopt/ifopt_allStopPlace-v0.3.xsd"/>
+                <file name="ifopt/ifopt_checkpoint-v0.3.xsd"/>
+                <file name="ifopt/ifopt_countries-v0.2.xsd"/>
+                <file name="ifopt/ifopt_equipment-v0.3.xsd"/>
+                <file name="ifopt/ifopt_location-v0.3.xsd"/>
+                <file name="ifopt/ifopt_modes-v0.2.xsd"/>
+                <file name="ifopt/ifopt_modification-v0.3.xsd"/>
+                <file name="ifopt/ifopt_path-v0.2.xsd"/>
+                <file name="ifopt/ifopt_stop-v0.3.xsd"/>
+                <file name="ifopt/ifopt_time-v0.2.xsd"/>
+                <file name="ifopt/ifopt_types-v0.2.xsd"/>
+            </folder>
+            <folder name="services">
+                <file name="siri_connectionMonitoring_service.xsd"/>
+                <file name="siri_connectionTimetable_service.xsd"/>
+                <file name="siri_discovery.xsd"/>
+                <file name="siri_estimatedTimetable_service.xsd"/>
+                <file name="siri_facilityMonitoring_service.xsd"/>
+                <file name="siri_generalMessage_service.xsd"/>
+                <file name="siri_productionTimetable_service.xsd"/>
+                <file name="siri_situationExchange_service.xsd"/>
+                <file name="siri_stopMonitoring_service.xsd"/>
+                <file name="siri_stopTimetable_service.xsd"/>
+                <file name="siri_vehicleMonitoring_service.xsd"/>
+            </folder>
+            <folder name="siri">
+                <file name="siri/siri_all_framework-v2.0.xsd"/>
+                <file name="siri/siri_base-v2.0.xsd"/>
+                <file name="siri/siri_common_services-v2.0.xsd"/>
+                <file name="siri/siri_request_errorConditions-v2.0.xsd"/>
+                <file name="siri/siri_requests-v2.0.xsd"/>
+            </folder>
+            <folder name="siri_model">
+                <folder name="siri_components">
+                    <file name="siri_model/siri_facilities-v1.2.xsd"/>
+                    <file name="siri_model/siri_facility-v2.0.xsd"/>
+                    <file name="siri_model/siri_feature_support-v2.0.xsd"/>
+                    <file name="siri_model/siri_journey_support-v2.0.xsd"/>
+                    <file name="siri_model/siri_journey-v2.0.xsd"/>
+                    <file name="siri_model/siri_modelPermissions-v2.0.xsd"/>
+                    <file name="siri_model/siri_modes-v1.1.xsd"/>
+                    <file name="siri_model/siri_operator_support-v2.0.xsd"/>
+                    <file name="siri_model/siri_reference-v2.0.xsd"/>
+                    <file name="siri_model/siri_situationActions-v1.0.xsd"/>
+                    <file name="siri_model/siri_situationAffects-v2.0.xsd"/>
+                    <file name="siri_model/siri_situationClassifiers-v1.1.xsd"/>
+                    <file name="siri_model/siri_situationIdentity-v1.1.xsd"/>
+                    <file name="siri_model/siri_situationReasons-v1.1.xsd"/>
+                    <file name="siri_model/siri_situationServiceTypes-v1.0.xsd"/>
+                    <file name="siri_model/siri_targetedVehicleJourney-v2.0.xsd"/>
+                    <file name="siri_model/siri_time-v1.2.xsd"/>
+                </folder>
+                <folder name="siri_journeys">
+                    <file name="siri_model/siri_datedVehicleJourney-v2.0.xsd"/>
+                    <file name="siri_model/siri_estimatedVehicleJourney-v2.0.xsd"/>
+                    <file name="siri_model/siri_interchangeJourney-v2.0.xsd"/>
+                    <file name="siri_model/siri_monitoredVehicleJourney-v2.0.xsd"/>
+                    <file name="siri_model/siri_serviceJourneyInterchangev-2.0.xsd"/>
+                    <file name="siri_model/siri_situation-v2.0.xsd"/>
+                </folder>
+                <folder name="siri_model_discovery"/>
+                <file name="siri_model/siri_all_journeyModel-v2.0.xsd"/>
+                <file name="siri_model/siri_all_model-v2.0.xsd"/>
+                <file name="siri_model/siri_all_situation-v2.0.xsd"/>
+                <file name="siri_model/siri_all-v2.0.xsd"/>
+            </folder>
+            <file name="siri.xsd"/>
+            <file name="siriSg.xsd"/>
+        </folder>
+        <folder name="wsdl">
+            <folder name="wsdl_model">
+                <file name="wsdl_model/siri_wsConsumer-Framework.xsd"/>
+                <file name="wsdl_model/siri_wsConsumer-Services.xsd"/>
+                <file name="wsdl_model/siri_wsProducer-DiscoveryCapability.xsd"/>
+                <file name="wsdl_model/siri_wsProducer-Framework.xsd"/>
+                <file name="wsdl_model/siri_wsProducer-Services.xsd"/>
+            </folder>
+            <file name="siri_wsConsumer-Document.wsdl"/>
+            <file name="siri_wsConsumer-WSDL2.wsdl"/>
+            <file name="siri_wsConsumer.wsdl"/>
+            <file name="siri_wsProducer-Document.wsdl"/>
+            <file name="siri_wsProducer-WSDL2.wsdl"/>
+            <file name="siri_wsProducer.wsdl"/>
+        </folder>
+    </projectTree>
+</project>

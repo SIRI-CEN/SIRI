@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SIRI Model - All ACSB  Journey Model packages
+ Copyright CEN 2004-2012
+ 
+ -->
+<xsd:schema xmlns="http://www.ifopt.org.uk/acsb" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ifopt.org.uk/acsb" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.2" id="acsb_all">
+ <!-- ======================================================================= -->
+ <xsd:include schemaLocation="acsb_accessibility-v0.3.xsd"/>
+ <xsd:include schemaLocation="acsb_limitations-v0.2.xsd"/>
+ <xsd:include schemaLocation="acsb_passengerMobility-v0.3.xsd"/>
+</xsd:schema>

@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Christophe Duquesne (DRYADE SA) -->
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:siriWS="http://wsdl.siri.org.uk" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ns="http://datex2.eu/schema/1_0/1_0" xmlns:ns1="http://www.ifopt.org.uk/acsb" xmlns:ns2="http://www.ifopt.org.uk/ifopt" targetNamespace="http://wsdl.siri.org.uk">
+ <types>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk">
+   <xsd:include schemaLocation="wsdl_model/siri_wsProducer-Framework.xsd"/>
+   <xsd:include schemaLocation="wsdl_model/siri_wsProducer-DiscoveryCapability.xsd"/>
+   <xsd:include schemaLocation="wsdl_model/siri_wsProducer-Services.xsd"/>
+  </xsd:schema>
+ </types>
+ <message name="CheckStatusRequest">
+  <part name="CheckStatusRequestParameters" element="siriWS:CheckStatus"/>
+ </message>
+ <message name="CheckStatusAnswer">
+  <part name="CheckStatusAnswerParameters" element="siriWS:CheckStatusResponse"/>
+ </message>
+ <message name="CheckStatusError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSErrorConditionElement"/>
+ </message>
+ <message name="SubscriptionRequest">
+  <part name="SubscriptionRequestParameters" element="siriWS:Subscribe"/>
+ </message>
+ <message name="SubscriptionAnswer">
+  <part name="SubscriptionAnswerParameters" element="siriWS:SubscribeResponse"/>
+ </message>
+ <message name="SubscriptionError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSErrorConditionElement"/>
+ </message>
+ <message name="DeleteSubscriptionRequest">
+  <part name="DeleteSubscriptionRequestParameters" element="siriWS:DeleteSubscription"/>
+ </message>
+ <message name="DeleteSubscriptionAnswer">
+  <part name="DeleteSubscriptionAnswerParameters" element="siriWS:DeleteSubscriptionResponse"/>
+ </message>
+ <message name="DeleteSubscriptionError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSErrorConditionElement"/>
+ </message>
+ <message name="DataSupplyRequest">
+  <part name="DataSupplyRequestParameters" element="siriWS:DataSupply"/>
+ </message>
+ <message name="DataSupplyAnswer">
+  <part name="DataSupplyAnswerParameters" element="siriWS:DataSupplyResponse"/>
+ </message>
+ <message name="DataSupplyError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSErrorConditionElement"/>
+ </message>
+ <message name="ProductionTimetableRequest">
+  <part name="ProductionTimetableRequestParameters" element="siriWS:GetProductionTimetable"/>
+ </message>
+ <message name="ProductionTimetableAnswer">
+  <part name="ProductionTimetableAnswerParameters" element="siriWS:GetProductionTimetableResponse"/>
+ </message>
+ <message name="ProductionTimetableError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="EstimatedTimetableRequest">
+  <part name="EstimatedTimetableRequestParameters" element="siriWS:GetEstimatedTimetable"/>
+ </message>
+ <message name="EstimatedTimetableAnswer">
+  <part name="EstimatedTimetableAnswerParameters" element="siriWS:GetEstimatedTimetableResponse"/>
+ </message>
+ <message name="EstimatedTimetableError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="StopTimetableRequest">
+  <part name="StopTimetableRequestParameters" element="siriWS:GetStopTimetable"/>
+ </message>
+ <message name="StopTimetableAnswer">
+  <part name="StopTimetableAnswerParameters" element="siriWS:GetStopTimetableResponse"/>
+ </message>
+ <message name="StopTimetableError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="StopMonitoringRequest">
+  <part name="StopMonitoringRequestParameters" element="siriWS:GetStopMonitoring"/>
+ </message>
+ <message name="StopMonitoringMultipleRequest">
+  <part name="StopMonitoringMultipleRequestParameters" element="siriWS:GetMultipleStopMonitoring"/>
+ </message>
+ <message name="StopMonitoringAnswer">
+  <part name="StopMonitoringAnswerParameters" element="siriWS:GetStopMonitoringResponse"/>
+ </message>
+ <message name="StopMonitoringMultipleAnswer">
+  <part name="StopMonitoringMultipleAnswerParameters" element="siriWS:GetMultipleStopMonitoringResponse"/>
+ </message>
+ <message name="StopMonitoringError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="VehicleMonitoringRequest">
+  <part name="VehicleMonitoringRequestParameters" element="siriWS:GetVehicleMonitoring"/>
+ </message>
+ <message name="VehicleMonitoringAnswer">
+  <part name="VehicleMonitoringAnswerParameters" element="siriWS:GetVehicleMonitoringResponse"/>
+ </message>
+ <message name="VehicleMonitoringError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="ConnectionTimetableRequest">
+  <part name="ConnectionTimetableRequestParameters" element="siriWS:GetConnectionTimetable"/>
+ </message>
+ <message name="ConnectionTimetableAnswer">
+  <part name="ConnectionTimetableAnswerParameters" element="siriWS:GetConnectionTimetableResponse"/>
+ </message>
+ <message name="ConnectionTimetableError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="ConnectionMonitoringRequest">
+  <part name="ConnectionMonitoringRequestParameters" element="siriWS:GetConnectionMonitoring"/>
+ </message>
+ <message name="ConnectionMonitoringAnswer">
+  <part name="ConnectionMonitoringAnswerParameters" element="siriWS:GetConnectionMonitoringResponse"/>
+ </message>
+ <message name="ConnectionMonitoringError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="GeneralMessageRequest">
+  <part name="GeneralMessageRequestParameters" element="siriWS:GetGeneralMessage"/>
+ </message>
+ <message name="GeneralMessageAnswer">
+  <part name="GeneralMessageAnswerParameters" element="siriWS:GetGeneralMessageResponse"/>
+ </message>
+ <message name="GeneralMessageError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="FacilityMonitoringRequest">
+  <part name="FacilityMonitoringRequestParameters" element="siriWS:GetFacilityMonitoring"/>
+ </message>
+ <message name="FacilityMonitoringAnswer">
+  <part name="FacilityMonitoringAnswerParameters" element="siriWS:GetFacilityMonitoringResponse"/>
+ </message>
+ <message name="FacilityMonitoringError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="SituationExchangeRequest">
+  <part name="SituationExchangeRequestParameters" element="siriWS:GetSituationExchange"/>
+ </message>
+ <message name="SituationExchangeAnswer">
+  <part name="SituationExchangeAnswerParameters" element="siriWS:GetSituationExchangeResponse"/>
+ </message>
+ <message name="SituationExchangeError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message>
+ <message name="GetCapabilitiesRequest">
+  <part name="GetCapabilitiesRequestParameters" element="siriWS:GetCapabilities"/>
+ </message>
+ <message name="GetCapabilitiesAnswer">
+  <part name="GetCapabilitiesAnswerParameters" element="siriWS:GetCapabilitiesResponse"/>
+ </message>
+ <message name="GetCapabilitiesError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSErrorConditionElement"/>
+ </message>
+ <message name="StopPointsDiscoveryRequest">
+  <part name="StopPointsDiscoveryRequestParameters" element="siriWS:StopPointsDiscovery"/>
+ </message>
+ <message name="StopPointsDiscoveryAnswer">
+  <part name="StopPointsDiscoveryAnswerParameters" element="siriWS:StopPointsDiscoveryResponse"/>
+ </message>
+ <message name="StopPointsDiscoveryError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSErrorConditionElement"/>
+ </message>
+ <message name="LinesDiscoveryRequest">
+  <part name="LinesDiscoveryRequestParameters" element="siriWS:LinesDiscovery"/>
+ </message>
+ <message name="LinesDiscoveryAnswer">
+  <part name="LinesDiscoveryAnswerParameters" element="siriWS:LinesDiscoveryResponse"/>
+ </message>
+ <message name="LinesDiscoveryError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSErrorConditionElement"/>
+ </message>
+ <message name="ConnectionLinksDiscoveryRequest">
+  <part name="ConnectionLinksDiscoveryRequestParameters" element="siriWS:ConnectionLinksDiscovery"/>
+ </message>
+ <message name="ConnectionLinksDiscoveryAnswer">
+  <part name="ConnectionLinksDiscoveryAnswerParameters" element="siriWS:ConnectionLinksDiscoveryResponse"/>
+ </message>
+ <message name="ConnectionLinksDiscoveryError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSErrorConditionElement"/>
+ </message>
+ <message name="SiriServiceRequest">
+  <part name="SiriServiceRequestParameters" element="siriWS:GetSiriService"/>
+ </message>
+ <message name="SiriServiceAnswer">
+  <part name="SiriServiceAnswerParameters" element="siriWS:GetSiriServiceResponse"/>
+ </message>
+ <portType name="SiriProducerDocPort">
+  <!-- ====PORTS ================================================================================== -->
+  <operation name="Subscribe">
+   <input message="siriWS:SubscriptionRequest"/>
+   <output message="siriWS:SubscriptionAnswer"/>
+   <fault name="FaultName" message="siriWS:SubscriptionError"/>
+  </operation>
+  <operation name="DeleteSubscription">
+   <input message="siriWS:DeleteSubscriptionRequest"/>
+   <output message="siriWS:DeleteSubscriptionAnswer"/>
+   <fault name="FaultName" message="siriWS:DeleteSubscriptionError"/>
+  </operation>
+  <operation name="DataSupply">
+   <input message="siriWS:DataSupplyRequest"/>
+   <output message="siriWS:DataSupplyAnswer"/>
+   <fault name="FaultName" message="siriWS:DataSupplyError"/>
+  </operation>
+  <operation name="CheckStatus">
+   <input message="siriWS:CheckStatusRequest"/>
+   <output message="siriWS:CheckStatusAnswer"/>
+   <fault name="FaultName" message="siriWS:CheckStatusError"/>
+  </operation>
+  <operation name="GetProductionTimetable">
+   <input message="siriWS:ProductionTimetableRequest"/>
+   <output message="siriWS:ProductionTimetableAnswer"/>
+   <fault name="FaultName" message="siriWS:ProductionTimetableError"/>
+  </operation>
+  <operation name="GetEstimatedTimetable">
+   <input message="siriWS:EstimatedTimetableRequest"/>
+   <output message="siriWS:EstimatedTimetableAnswer"/>
+   <fault name="FaultName" message="siriWS:EstimatedTimetableError"/>
+  </operation>
+  <operation name="GetStopTimetable">
+   <input message="siriWS:StopTimetableRequest"/>
+   <output message="siriWS:StopTimetableAnswer"/>
+   <fault name="FaultName" message="siriWS:StopTimetableError"/>
+  </operation>
+  <operation name="GetStopMonitoring">
+   <input message="siriWS:StopMonitoringRequest"/>
+   <output message="siriWS:StopMonitoringAnswer"/>
+   <fault name="FaultName" message="siriWS:StopMonitoringError"/>
+  </operation>
+  <operation name="GetMultipleStopMonitoring">
+   <documentation>GetMultipleStopMonitoring deprecated from Siri 2.0 (use GetSiriService instead)</documentation>
+   <input message="siriWS:StopMonitoringMultipleRequest"/>
+   <output message="siriWS:StopMonitoringMultipleAnswer"/>
+   <fault name="FaultName" message="siriWS:StopMonitoringError"/>
+  </operation>
+  <operation name="GetVehicleMonitoring">
+   <input message="siriWS:VehicleMonitoringRequest"/>
+   <output message="siriWS:VehicleMonitoringAnswer"/>
+   <fault name="FaultName" message="siriWS:VehicleMonitoringError"/>
+  </operation>
+  <operation name="GetConnectionTimetable">
+   <input message="siriWS:ConnectionTimetableRequest"/>
+   <output message="siriWS:ConnectionTimetableAnswer"/>
+   <fault name="FaultName" message="siriWS:ConnectionTimetableError"/>
+  </operation>
+  <operation name="GetConnectionMonitoring">
+   <input message="siriWS:ConnectionMonitoringRequest"/>
+   <output message="siriWS:ConnectionMonitoringAnswer"/>
+   <fault name="FaultName" message="siriWS:ConnectionMonitoringError"/>
+  </operation>
+  <operation name="GetGeneralMessage">
+   <input message="siriWS:GeneralMessageRequest"/>
+   <output message="siriWS:GeneralMessageAnswer"/>
+   <fault name="FaultName" message="siriWS:GeneralMessageError"/>
+  </operation>
+  <operation name="GetFacilityMonitoring">
+   <input message="siriWS:FacilityMonitoringRequest"/>
+   <output message="siriWS:FacilityMonitoringAnswer"/>
+   <fault name="FaultName" message="siriWS:FacilityMonitoringError"/>
+  </operation>
+  <operation name="GetSituationExchange">
+   <input message="siriWS:SituationExchangeRequest"/>
+   <output message="siriWS:SituationExchangeAnswer"/>
+   <fault name="FaultName" message="siriWS:SituationExchangeError"/>
+  </operation>
+  <operation name="GetCapabilities">
+   <input message="siriWS:GetCapabilitiesRequest"/>
+   <output message="siriWS:GetCapabilitiesAnswer"/>
+   <fault name="FaultName" message="siriWS:GetCapabilitiesError"/>
+  </operation>
+  <operation name="StopPointsDiscovery">
+   <input message="siriWS:StopPointsDiscoveryRequest"/>
+   <output message="siriWS:StopPointsDiscoveryAnswer"/>
+   <fault name="FaultName" message="siriWS:StopPointsDiscoveryError"/>
+  </operation>
+  <operation name="LinesDiscovery">
+   <input message="siriWS:LinesDiscoveryRequest"/>
+   <output message="siriWS:LinesDiscoveryAnswer"/>
+   <fault name="FaultName" message="siriWS:LinesDiscoveryError"/>
+  </operation>
+  <operation name="ConnectionLinksDiscovery">
+   <input message="siriWS:ConnectionLinksDiscoveryRequest"/>
+   <output message="siriWS:ConnectionLinksDiscoveryAnswer"/>
+   <fault name="FaultName" message="siriWS:ConnectionLinksDiscoveryError"/>
+  </operation>
+  <!-- SIRI 2.x addition : global SIRI service access (access to any SIRI services) -->
+  <operation name="GetSiriService">
+   <documentation>SIRI 2.x : Single access to any SIRI Service</documentation>
+   <input message="siriWS:SiriServiceRequest"/>
+   <output message="siriWS:SiriServiceAnswer"/>
+  </operation>
+ </portType>
+ <binding name="SiriProducerDocBinding" type="siriWS:SiriProducerDocPort">
+  <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+  <!-- ====BINDINGS  ================================================================================== -->
+  <!-- ====general  services ===== -->
+  <operation name="Subscribe">
+   <soap:operation soapAction="Subscribe"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="DeleteSubscription">
+   <soap:operation soapAction="DeleteSubscription"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="DataSupply">
+   <soap:operation soapAction="DataSupply"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="CheckStatus">
+   <soap:operation soapAction="CheckStatus"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <!-- ====SIRI services ===== -->
+  <operation name="GetProductionTimetable">
+   <soap:operation soapAction="GetProductionTimetable"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetEstimatedTimetable">
+   <soap:operation soapAction="GetEstimatedTimetable"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetStopTimetable">
+   <soap:operation soapAction="GetStopTimetable"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetStopMonitoring">
+   <soap:operation soapAction="GetStopMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetMultipleStopMonitoring">
+   <soap:operation soapAction="GetMultipleStopMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetVehicleMonitoring">
+   <soap:operation soapAction="GetVehicleMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetConnectionTimetable">
+   <soap:operation soapAction="GetConnectionTimetable"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetConnectionMonitoring">
+   <soap:operation soapAction="GetConnectionMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetGeneralMessage">
+   <soap:operation soapAction="GetGeneralMessage"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetFacilityMonitoring">
+   <soap:operation soapAction="GetFacilityMonitoring"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetSituationExchange">
+   <soap:operation soapAction="GetSituationExchange"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="GetCapabilities">
+   <soap:operation soapAction="GetCapabilities"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <!-- ====Access to any Siri Service (from 2.0) ===== -->
+  <operation name="GetSiriService">
+   <soap:operation soapAction="GetSiriService"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+  </operation>
+  <!-- ====Discovery  services ===== -->
+  <operation name="StopPointsDiscovery">
+   <soap:operation soapAction="StopPointsDiscovery"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="LinesDiscovery">
+   <soap:operation soapAction="LinesDiscovery"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+  <operation name="ConnectionLinksDiscovery">
+   <soap:operation soapAction="ConnectionLinksDiscovery"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>
+ </binding>
+ <service name="SiriProducerDocServices">
+  <port name="SiriWSPort" binding="siriWS:SiriProducerDocBinding">
+   <soap:address location="http://www.siri-service-location.com"/>
+  </port>
+ </service>
+ <!--
+<xsd:annotation>
+		<xsd:appinfo xmlns:gms="http://www.govtalk.gov.uk/CM/gms">
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>Christophe Duquesne, Aurige, Guyancourt FRANCE</Contributor>
+				<Contributor>Michel Etienne, Cityway, Paris FRANCE</Contributor>
+				<Contributor>Robin Vettier, RATP, Paris FRANCE</Contributor>
+				<Contributor>Nicholas Knowles, KIZOOM LTD., London EC4A 1LT</Contributor>				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0, by  Cen TC278 WG3 SG7 Christophe Duquesne DRYADE SA mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2005-03-01</Created>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-01-30</Modified>
+				</Date>
+				<Date>
+					<Modified>2008-03-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-04-17</Modified>
+					Name Space changes 
+				</Date>
+			  <Date>
+					<Modified>2008-02-12</Modified>
+					Situation  Exchange
+				</Date>
+			  <Date>
+					<Modified>2011-11-21</Modified>
+					 switch from rpc to documment mode
+					the two modes give sames XML messages
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of real time information. This describes WSDL Server binding</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schemas/1.3/siri}siri_wsProducer.wsdl</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Rights>Unclassified
+                             <Copyright>CEN, VDV, RTIG 2005, 2007</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>SIRI is derived from the VDV, RTIGXML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 1.0 Draft for approval</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+ Air transport, Airports,
+ Ports and maritime transport, Ferries (marine),
+ Public transport, Bus services, Coach services, Bus stops and stations,
+ Rail transport, Railway stations and track, Train services, Underground trains,
+ Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
+ Rail transport, Roads and road transport
+ </Category>
+					<Project>Cen TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI XML schema. WSDL Server binding. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+	</xsd:annotation>	
+-->
+ <!-- ======== All the structures are comming from siri.xsd ========= -->
+ <!-- ======== Descritions of request parameters (requests and answers) ========= -->
+ <!-- ========Service Requests ========= -->
+ <!-- ========Production Tiemtable== -->
+ <!-- ====Estimated Timetable== -->
+ <!-- ====Stop Timetable== -->
+ <!-- ====StopMonitoring== -->
+ <!-- ====Vehicle Monitoring== -->
+ <!-- ====Connection Timetable== -->
+ <!-- ====Connection Monitoring== -->
+ <!-- ====General Message== -->
+ <!-- ====Capabilities management ======= -->
+</definitions>

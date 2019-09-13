@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SIRI Model - All SIRI Model packages
+ (C) Copyright CEN 2004-2012
+ 
+ -->
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_all_model">
+ <!-- ===Global include of all prerequried ACSB namespace elements neeeded to work around XERCES limitation=====-->
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all-v0.3.xsd"/>
+ <!-- ================== =================================================== -->
+ <xsd:include schemaLocation="siri_all_journeyModel-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_all_situation-v2.0.xsd"/>
+ <!-- ======================================================================= -->
+</xsd:schema>

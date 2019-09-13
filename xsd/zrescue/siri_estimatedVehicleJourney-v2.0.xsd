@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_estimatedVehicleJourney">
+ <xsd:annotation>
+  <xsd:appinfo>
+   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+    <Aggregation>main schema</Aggregation>
+    <Audience>e-service developers</Audience>
+    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+    <Contributor>Werner Kohl MDV</Contributor>
+    <Coverage>Europe</Coverage>
+    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+    <Date>
+     <Created>2003-02-10</Created>
+    </Date>
+    <Date>
+     <Modified>2004-10-31</Modified>
+    </Date>
+    <Date>
+     <Modified>2005-02-14</Modified>
+    </Date>
+    <Date>
+     <Modified>2005-02-20</Modified>
+    </Date>
+    <Date>
+     <Modified>2005-05-11</Modified>
+    </Date>
+    <Date><Modified>2007-04-17</Modified>
+				 Name Space changes 
+				</Date>
+    <Date><Modified>2008-03-26</Modified>
+				 Add wrapper tag for Line DIRECTION to help binding to Axis 
+				</Date>
+    <Date><Modified>2008-11-17</Modified>
+					 Revise to support substitution groups 
+				</Date>
+    <Date><Modified>2011-01-19</Modified>
+				 Drop use of As Flat Groups for EstimatedCalls 
+				</Date>
+    <Date><Modified>2012-03-23</Modified>
+					 +SIRI v2.0
+					  Factored out of estimatedTimetableService
+					  Add EstimatedServiceJourneyInterchange (i.e. Estimated Connection of VEHICLE) to EstimatedTimetableDelivery
+					  Corrected feed and distributor Journety refs and add InterchangeRef
+				</Date>
+    <Description>
+     <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+     <p>This sub-schema describes the Estimated Timetable Service.</p>
+    </Description>
+    <Format>
+     <MediaType>text/xml</MediaType>
+     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+     <Description>XML schema, W3C Recommendation 2001</Description>
+    </Format>
+    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model}siri_estimatedVehicleJourney.xsd</Identifier>
+    <Language>[ISO 639-2/B] ENG</Language>
+    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+    <Relation>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey-v2.0.xsd</Requires>
+    </Relation>
+    <Rights>Unclassified
+       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+				</Rights>
+    <Source>
+     <ul>
+      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
+     </ul>
+    </Source>
+    <Status>Version 2.0 Draft</Status>
+    <Subject>
+     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+Air transport, Airports,
+Ports and maritime transport, Ferries (marine),
+Public transport, Bus services, Coach services, Bus stops and stations,
+Rail transport, Railway stations and track, Train services, Underground trains,
+Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
+Rail transport, Roads and road transport
+</Category>
+     <Project>CEN TC278 WG3 SG7</Project>
+    </Subject>
+    <Title>SIRI-ET XML schema. Service Interface for Real-time  Information. Estimated Timetable Service.</Title>
+    <Type>Standard</Type>
+   </Metadata>
+  </xsd:appinfo>
+  <xsd:documentation>SIRI-ET Estimated Timetable Service.</xsd:documentation>
+ </xsd:annotation>
+ <!-- ==== Dependencies=========================================-->
+ <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
+ <!-- ======================================================================= -->
+ <xsd:element name="EstimatedVehicleJourney" type="EstimatedVehicleJourneyStructure">
+  <xsd:annotation>
+   <xsd:documentation>A VEHICLE JOURNEY taking place on a particular date that will be managed by an AVMs.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:group name="EstimatedTimetableAlterationGroup">
+  <xsd:annotation>
+   <xsd:documentation>If the journey is an alteration to a timetable, indicates the original journey and the nature of the difference.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:choice>
+    <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
+     <xsd:annotation>
+      <xsd:documentation>Reference to a dated VEHICLE JOURNEY.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure">
+     <xsd:annotation>
+      <xsd:documentation>If no VEHICLE JOURNEY reference is available, identify it by origin and destination and the scheduled times at these stops.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
+     <xsd:annotation>
+      <xsd:documentation>If this is the first message about an extra unplanned VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
+   <xsd:choice>
+    <xsd:element name="ExtraJourney" type="xsd:boolean" default="false" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Whether this VEHICLE JOURNEY is an addition to the planning data already sent. Default is 'false': i.e. not an additional journey.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Cancellation" type="xsd:boolean" default="false" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Whether this VEHICLE JOURNEY is a deletion of a previous scheduled journey. Default is 'false': this is not a VEHICLE JOURNEY that has been cancelled. An Extra Journey may be deleted.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:group name="EstimatedJourneyInfoGroup">
+  <xsd:annotation>
+   <xsd:documentation>General properties of the journey.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="HeadwayService" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether this is a Headway Service, that is shown as operating at a prescribed interval rather than to a fixed timetable. Inherited property: if omitted: same as indicated by (i) any preceding update message, or (ii) if no preceding update, by the referenced dated VEHICLE JOURNEY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="FirstOrLastJourney" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:group name="EstimatedRealtimeInfoGroup">
+  <xsd:annotation>
+   <xsd:documentation>Real-time properties of the journey.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Monitored" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether the VEHICLE JOURNEY is monitored by an AVMS: true if active. Inherited property: if omitted: same as indicated by (i) any preceding update message, or (ii) if no preceding update, by the referenced dated VEHICLE JOURNEY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PredictionInaccurate" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether the prediction for the journey is considered to be of a useful accuracy or not. Default is 'false'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>How full the bus is. If omitted: Passenger load is unknown.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:complexType name="DatedVehicleJourneyIndirectRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Origin and Destination stop of a VEHICLE JOURNEY.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="OriginRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>The origin is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedDepartureTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>Departure time from origin SCHEDULED STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DestinationRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>The destination is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedArrivalTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>Arrival time at destination SCHEDULED STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- ======================================================================= -->
+ <xsd:element name="EstimatedServiceJourneyInterchange" type="EstimatedServiceJourneyInterchangeStructure">
+  <xsd:annotation>
+   <xsd:documentation>A VEHICLE JOURNEY taking place on a particular date that will be managed by an AVMs.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="EstimatedServiceJourneyInterchangeStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Estimated SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:choice>
+    <xsd:element ref="InterchangeRef"/>
+    <xsd:sequence>
+     <xsd:element name="FeederJourneyRef" type="ConnectingJourneyRefStructure">
+      <xsd:annotation>
+       <xsd:documentation>Reference to a connecting distributor VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="DistributorJourneyRef" type="ConnectingJourneyRefStructure">
+      <xsd:annotation>
+       <xsd:documentation>Reference to a connecting distributor VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:choice>
+   <xsd:choice>
+    <xsd:element name="WillNotWait" type="EmptyType">
+     <xsd:annotation>
+      <xsd:documentation>Distributor will not wait (i.e. connection broken) SIRI w.0</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="WillWait" type="WillWaitStructure">
+     <xsd:annotation>
+      <xsd:documentation>Nature of wait that distributer will make. +SIRI v2.0</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
+   <xsd:element name="ExpectedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Time at which distributor VEHICLE is expected to depart. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ConnectionMonitoring" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether connection monitoring is active or not for this connection +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="WillWaitStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Will Wait details</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="WaitUntilTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>Time up until which the distributor will wait. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DriverHasAcknowledgeWIllWait" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether an acknowledgement has been received that the driver will wait. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- ======================================================================= -->
+ <xsd:complexType name="EstimatedVehicleJourneyStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Real-time info about a VEHICLE JOURNEY.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="RecordedAtTime" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Time at which data was recorded for that individual Journey</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="LineIdentityGroup"/>
+   <xsd:group ref="EstimatedTimetableAlterationGroup"/>
+   <xsd:group ref="JourneyPatternInfoGroup" minOccurs="0"/>
+   <xsd:group ref="JourneyEndNamesGroup"/>
+   <xsd:group ref="ServiceInfoGroup" minOccurs="0"/>
+   <xsd:group ref="JourneyInfoGroup" minOccurs="0"/>
+   <xsd:group ref="JourneyEndTimesGroup" minOccurs="0"/>
+   <xsd:group ref="DisruptionGroup"/>
+   <xsd:group ref="JourneyProgressGroup" minOccurs="1"/>
+   <xsd:group ref="TrainOperationalInfoGroup"/>
+   <xsd:sequence>
+    <xsd:element name="EstimatedCalls" minOccurs="0">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element ref="EstimatedCall" maxOccurs="unbounded"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="IsCompleteStopSequence" type="xsd:boolean" default="false" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Whether the above call sequence is complete, i.e. represents every CALL of the SERVICE PATTERN and so can be used to replace a previous call sequence. Default is 'false'.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:sequence>
+   <xsd:element ref="Extensions" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:element name="EstimatedCall" type="EstimatedCallStructure">
+  <xsd:annotation>
+   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="EstimatedCallStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Rea-ltime info about a VEHICLE JOURNEY Stop.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="StopPointInSequenceGroup"/>
+   <xsd:choice minOccurs="0">
+    <xsd:element name="ExtraCall" type="xsd:boolean" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>This call is additional and unplanned. If omitted: CALL is planned.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Cancellation" type="xsd:boolean" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>This call is a cancellation of a previously announced call.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
+   <xsd:group ref="CallRealTimeInfoGroup"/>
+   <xsd:group ref="CallRealtimeGroup"/>
+   <xsd:group ref="CallRailGroup"/>
+   <xsd:group ref="CallPropertyGroup"/>
+   <xsd:group ref="CallNoteGroup"/>
+   <xsd:group ref="DisruptionGroup"/>
+   <xsd:group ref="OnwardsCallGroup"/>
+   <xsd:element ref="Extensions" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="CallRealTimeInfoGroup">
+  <xsd:annotation>
+   <xsd:documentation>Information relating to real-time properties of call.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="PredictionInaccurate" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether the prediction for the specific stop is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is not known to be inaccurate. {DOUBLE NEGATIVE IS BAD _ BETTER AS PredictionAccurate. Default is 'true'?]. If prediction is degraded, e.g. because in congestion, used to 9indicate a lowered quality of data. Inherited property. {SHOULD THIS JUST BE THE SPECIFIC InCongestion INDICATOR INSTEAD, OR IS IT MORE GENERAL]</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>How full the bus is at the stop. If omitted: Passenger load is unknown.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ======================================================================= -->
+ <xsd:element name="RecordedCall" type="RecordedCallStructure">
+  <xsd:annotation>
+   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:group name="RecordedCallGroup">
+  <xsd:annotation>
+   <xsd:documentation>Information relating to recorded real-time properties of call.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
+   <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
+   <xsd:element ref="ActualArrivalTime" minOccurs="0"/>
+   <xsd:element ref="ArrivalPlatformName" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicel to arrive at.Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is
+(i) any arrival platform on any related dated timetable element, 
+(ii) any departure platform name on this estimated element;
+(iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="AimedDepartureTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Target departure time of VEHICLE according to latest working timetable.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="ExpectedDepartureTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="DeparturePlatformName" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Departure QUAY ( Bay or platform) name. Defaulted taken from  from planned timetable..</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="ActualDepartureTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:complexType name="RecordedCallStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for  recroded Real-time info about a VEHICLE JOURNEY Stop.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="StopPointInSequenceGroup"/>
+   <xsd:choice minOccurs="0">
+    <xsd:element name="ExtraCall" type="xsd:boolean" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>This call is additional and unplanned. If omitted: CALL is planned.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Cancellation" type="xsd:boolean" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>This call is a cancellation of a previously announced call.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
+   <xsd:group ref="CallRealTimeInfoGroup"/>
+   <xsd:group ref="RecordedCallGroup"/>
+   <xsd:element ref="Extensions" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- ======================================================================= -->
+</xsd:schema>

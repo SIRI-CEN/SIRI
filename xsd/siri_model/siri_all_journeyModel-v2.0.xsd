@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SIRI Model - All SIRI Journey Model packages
+ (C) Copyright CEN 2004-2012
+ 
+ -->
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_all_journeyModel">
+ <!-- ======================================================================= -->
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all-v0.3.xsd"/>
+ <!-- ======================================================================= -->
+ <xsd:include schemaLocation="siri_facilities-v1.2.xsd"/>
+ <xsd:include schemaLocation="siri_facility-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_feature_support-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_journey_support-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_modes-v1.1.xsd"/>
+ <xsd:include schemaLocation="siri_monitoredVehicleJourney-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_operator_support-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_reference-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_time-v2.0.xsd"/>
+ <!-- ======================================================================= -->
+</xsd:schema>
