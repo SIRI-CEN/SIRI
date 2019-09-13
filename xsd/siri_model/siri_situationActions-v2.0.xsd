@@ -22,6 +22,12 @@
     <Date><Modified>2013-05-01</Modified>
          [de] Add SocialNetworks to PublishToWeb action
 				</Date>
+    <Date><Modified>2018-11-13</Modified>
+          [vdv] ActionsStructure.ActionsGroup.PublishToTvAction changed to unbounded
+          [vdv] ActionsStructure.ActionsGroup.NotifyBySmsAction changed to unbounded
+          [vdv] PublishToDisplayAction added to ActionsGroup
+          [vdv] ActionsStructure.ActionsGroup.PublishToTvAction.Ceefax and Teletext: annotation switched
+				</Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs. This subschema describes publishing actions </p>
     </Description>
@@ -188,11 +194,12 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element ref="PublishToWebAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="PublishToMobileAction" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="PublishToTvAction" minOccurs="0"/>
+   <xsd:element ref="PublishToTvAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="PublishToAlertsAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="PublishToDisplayAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="ManualAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyByEmailAction" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="NotifyBySmsAction" minOccurs="0"/>
+   <xsd:element ref="NotifyBySmsAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyByPagerAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyUserAction" minOccurs="0" maxOccurs="unbounded"/>
   </xsd:sequence>
@@ -325,12 +332,12 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="Ceefax" type="xsd:boolean" default="true" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Publish to Teltext. Default is 'true'.</xsd:documentation>
+       <xsd:documentation>Publish to Ceefax. Default is 'true'.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="Teletext" type="xsd:boolean" default="true" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Publish to Ceefax. Default is 'true'.</xsd:documentation>
+       <xsd:documentation>Publish to Teletext. Default is 'true'.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>

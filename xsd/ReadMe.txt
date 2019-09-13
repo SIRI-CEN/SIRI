@@ -20,16 +20,15 @@ This ReadMe describes Changes to the SIRI schema up to  v2.0 version 2.0   since
 ========================
 Changes to  SIRI schema v2.0   since v1.4
 
- 2015.05.20 Bug fix (from SG7 feedback) SIRI 2.0o Draft2
-	* siri_situationExchange_service.xsd FilterByKeword corrected to FilterByKeyword
-	* siri_estimatedVehicleJourney-v2.0.xsd coorections of typo in comments and documentation
-	
- 2015.05.13 Bug fix (from SG7 feedback) SIRI 2.0o Draft2
+ 2015.05.13 Bug fix (from french feedback) SIRI 2.0p
+	* replacement of "NotifyExtension" (appearing 10 times) with "SiriExtension" in siri_wsConsumer.wsdl in order to ensure compatibility with the Document version
+
+ 2015.05.13 Bug fix (from SG7 feedback) SIRI 2.0o
  	* update annotation in siri.xsd and and siri_all_functionalService.xsd (to add <Requires> siri__facilityMonitoring_service.xsd ...)
 	* siri.xsd: move of a SituationExchangeDelivery, renamed IncludedSituationExchangeDelivery, before other complemented service deliveries.
 	* siri_situationExchange_service.xsd: addition of IncludedSituationExchangeDelivery element
 
- 2015.05.11 Bug fix (from SG7 skype meeting on May 11th 2015) SIRI 2.0o Draft1
+ 2015.05.11 Bug fix (from SG7 skype meeting on May 11th 2015) SIRI 2.0o
  	* Allow multiple tags within an extension (reapply lost chnage from 2012.06.18 SIRI 2.0d) - siri_utility-v1.1.xsd
 	* siri_estimatedVehicleJourney-v2.0.xsd : in EstimatedTimetableAlterationGroup, addition of FramedVehicleJourneyRef as an alternative to DatedVehicleJourneyRef (choice) and deprecation of DatedVehicleJourneyRef and EstimatedVehicleJourneyCode
 	* siri_datedVehicleJourney-v2.0.xsd : DatedVehicleJourneyCode is now optional

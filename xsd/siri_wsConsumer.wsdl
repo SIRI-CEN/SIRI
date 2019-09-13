@@ -23,52 +23,52 @@
  <message name="ProductionTimetableNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:ProductionTimetableDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="EstimatedTimetableNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:EstimatedTimetableDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="StopTimetableNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:StopTimetableDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="StopMonitoringNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:StopMonitoringDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="VehicleMonitoringNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:VehicleMonitoringDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="ConnectionTimetableNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:ConnectionTimetableDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="ConnectionMonitoringNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:ConnectionMonitoringDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="GeneralMessageNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:GeneralMessageDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="FacilityMonitoringNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:FacilityMonitoringDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <message name="SituationExchangeNotify">
   <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
   <part name="Notification" type="siri:SituationExchangeDeliveriesStructure"/>
-  <part name="NotifyExtension" type="siri:ExtensionsStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
  <portType name="SiriConsumerRpcPort">
   <operation name="NotifyDataReady">

@@ -43,6 +43,10 @@
     <Date><Modified>2013-02-11</Modified>
 					Correction: PlaceName unbounded to allow multiple languages
 				</Date>
+    <Date><Modified>2018-11-08</Modified>
+          [vdv] "PublishedLineName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+          [vdv] "DestinationName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+				</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information .</p>
      <p>This package defines common basic domain model identifier elements that are used in one or more SIRI fucntional service.</p>
@@ -488,8 +492,8 @@ Values for these elements can be specified on an annual schedule and will be inh
    <xsd:documentation>Elements describing the LINEand DESTINATION of a journey. Values for these elements can be specified on an annual schedule and will be inherited, unless overriden, onto the production timetable and then onto the individul dated VEHICLE JOURNEYs of the timetable. Each real-time journey takes its values from the dated VEHICLE JOURNEY that it follows. The absence of a value on an entity at a given level indicates that the value should be inherited (i) from any recent preceding update message for the same entity, or if there is no previous override, (ii) from its immediate parent entity.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element ref="PublishedLineName" minOccurs="0"/>
-   <xsd:element name="DestinationName" type="NaturalLanguageStringStructure" minOccurs="0">
+   <xsd:element ref="PublishedLineName" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element name="DestinationName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Description of the destination stop (vehicle signage), if different from the that in  timetable - the DESTINATION DISPLAY. Can be overwritten section by section by the entry in an individual CALL.</xsd:documentation>
     </xsd:annotation>

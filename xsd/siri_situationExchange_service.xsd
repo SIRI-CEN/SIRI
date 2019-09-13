@@ -50,6 +50,9 @@
         * [doc/fx] Correct   capability Matrix  siri_situationExchange_service.xsd.
           * [fx] StopPlaceFilterGroup: add missing component ref and facility that was in doc but missing from schema
 				</Date>
+    <Date><Modified>2018-11-13</Modified>
+          [vdv-UmS] SituationExchangeServiceCapabilitiesStructure.TopicFiltering "FilterByKeword" changed to "FilterByKeyword" according to recommendation.
+				</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
      <p>This sub-schema describes the Situation Exchange Service.</p>

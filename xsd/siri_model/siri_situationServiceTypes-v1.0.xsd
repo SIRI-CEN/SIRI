@@ -17,6 +17,10 @@
     <Date>
      <Modified>2007-05-14</Modified>
     </Date>
+    <Date><Modified>2007-05-14</Modified>
+          [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_2" changed to "27_1_Alias_2" according to recommendation document
+          [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_3" changed to "27_1_Alias_3" according to recommendation document
+				</Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes reason codes </p>
     </Description>
@@ -83,12 +87,10 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="incident"/>
    <xsd:enumeration value="27_1_Alias_1"/>
    <xsd:enumeration value="general"/>
-   <xsd:enumeration value="2_27_1_Alias_2"/>
+   <xsd:enumeration value="27_1_Alias_2"/>
    <xsd:enumeration value="operator"/>
-   <xsd:enumeration value="2_27_1_Alias_3"/>
+   <xsd:enumeration value="27_1_Alias_3"/>
    <xsd:enumeration value="network"/>
-   <xsd:enumeration value="27_3"/>
-   <xsd:enumeration value="route"/>
    <xsd:enumeration value="27_2"/>
    <xsd:enumeration value="stationTerminal"/>
    <xsd:enumeration value="27_2_Alias_1"/>
@@ -97,6 +99,8 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="connectionLink"/>
    <xsd:enumeration value="27_2_Alias_3"/>
    <xsd:enumeration value="point"/>
+   <xsd:enumeration value="27_3"/>
+   <xsd:enumeration value="route"/>
    <xsd:enumeration value="27_4"/>
    <xsd:enumeration value="individualService"/>
    <xsd:enumeration value="27_255"/>

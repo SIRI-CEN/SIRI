@@ -19,6 +19,9 @@
     <Date><Modified>2012-03-12</Modified>
 					Change IdentifertYpe to normalizedString
 				</Date>
+    <Date><Modified>2018-11-13</Modified>
+          [vdv] Enum "ferrytPort" in StopPlaceTypeEnumeration changed to "ferryPort"
+				</Date>
     <Description>
      <p>Fixed Objects in Public Transport. This subschema defines STOP PLACE base types.</p>
     </Description>
@@ -251,7 +254,7 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="coachStation"/>
    <xsd:enumeration value="busStation"/>
    <xsd:enumeration value="harbourPort"/>
-   <xsd:enumeration value="ferrytPort"/>
+   <xsd:enumeration value="ferryPort"/>
    <xsd:enumeration value="ferryStop"/>
    <xsd:enumeration value="onStreetBus"/>
    <xsd:enumeration value="onStreetTram"/>
