@@ -1,0 +1,57 @@
+Changes made against SIRI 2.0p for SIRI 2.0q by VDV-Ums
+2018-11-13 - D. Rubli, K. Grimme
+
+ifopt\ifopt_stop-v0.3.xsd
+- Enum "ferrytPort" in StopPlaceTypeEnumeration changed to "ferryPort"
+
+siri_model\siri_reference-v2.0.xsd
+- "PublishedLineName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+- "DestinationName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+
+siri_model\siri_situationActions-v2.0.xsd:
+- ActionsStructure.ActionsGroup.PublishToTvAction changed to unbounded
+- ActionsStructure.ActionsGroup.NotifyBySmsAction changed to unbounded
+- PublishToDisplayAction added to ActionsGroup
+- ActionsStructure.ActionsGroup.PublishToTvAction.Ceefax and Teletext: annotation switched
+
+siri_model\siri_situationAffects-v2.0.xsd
+- Wrapped "AffectedInterchanges" node around AffectedInterchange in AffectedCallStructure
+- "PublishedLineName" inside "LineGroup" and "AffectedVehicleJourneyStructure" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+- "Route" inside "AffectedVehicleJourneyStructure" is now optional since all of its content are optional
+
+siri_model\siri_situationReasons-v2.0.xsd:
+- MiscellaneousReasonEnumeration TPEC-code of "altercation" changed from pti19_1_Alias_6 to pti19_1_Alias_7 because TPEC-code pti19_1_Alias_6 was wrongly doubled in use for "emergencyServicesCall" and "altercation"
+- MiscellaneousReasonEnumeration TPEC-code of "illVehicleOccupants" changed from pti19_1_Alias_7 to pti19_1_Alias_8
+- MiscellaneousReasonEnumeration TPEC-code of "undefinedProblem" changed from pti19_27 to pti19_255
+- MiscellaneousSubReasonEnumeration TPEC-code value "assault" added according to recommendation document and Datex2  
+- EquipmentReasonEnumeration TPEC-code pti21_6_Alias_2 "defectiveTrain" added according to recommendation document
+- EquipmentReasonEnumeration TPEC-code pti21_8_Alias_10 "leveCrossingFailure" changed to "levelCrossingFailure" according to recommendation document
+- EquipmentReasonEnumeration TPEC-code pti21_8_Alias_11 "trafficManagementSystemFailure" added according to recommendation document
+- EquipmentReasonEnumeration TPEC-code pti21_12_Alias_1 value changed from "oveheadWireFailure" to "overheadWireFailure" according to recommendation document
+- EquipmentSubReasonEnumeration TPEC-code value "defectiveTrain" added according to recommendation document
+- EquipmentSubReasonEnumeration TPEC-code value "leveCrossingFailure" changed to "levelCrossingFailure" according to recommendation document
+- EquipmentSubReasonEnumeration TPEC-code value "trafficManagementSystemFailure" added according to recommendation document
+- EquipmentSubReasonEnumeration TPEC-code value "oveheadWireFailure" changed to "overheadWireFailure" according to recommendation document
+- EnvironmentReasonEnumeration TPEC-code pti22_13_Alias_1 "flashFloods" added according to recommendation document
+- EnvironmentReasonEnumeration TPEC-code pti22_19_Alias_1 "mudslide" added according to recommendation document
+- EnvironmentReasonEnumeration TPEC-code pti22_19_Alias_2 "rockfalls" added according to recommendation document
+- EnvironmentReasonEnumeration TPEC-code pti22_19_Alias_3 "subsidence" added according to recommendation document
+- EnvironmentReasonEnumeration TPEC-code pti22_19_Alias_4 "earthquakeDamage" added according to recommendation document
+- EnvironmentReasonEnumeration TPEC-code pti22_3_Alias_3 "avalanches" added according to TPEG document
+- EnvironmentReasonEnumeration TPEC-code pti22_13_Alias_1 "flashFloods" added according to recommendation document
+- EnvironmentSubReasonEnumeration TPEC-code value "lighteningStrike" changed to "lightningStrike" according to recommendation document
+- EnvironmentSubReasonEnumeration TPEC-code value "mudslip" changed to "mudslide" according to recommendation document and Datex2
+
+siri_model\siri_situationServiceTypes-v1.0.xsd:
+- ReportTypeEnumeration TPEC-code "2_27_1_Alias_2" changed to "27_1_Alias_2" according to recommendation document
+- ReportTypeEnumeration TPEC-code "2_27_1_Alias_3" changed to "27_1_Alias_3" according to recommendation document
+
+siri_model\siri_situation-v2.0.xsd:
+- RelatedToEnumeration Enum value "correctionTo" added according to recommendation document
+- WorkflowStatusEnumeration Enum value "pendingApproval" added according to recommendation document
+- AudienceEnumeration Enum value "authorities" added according to recommendation document
+- AudienceEnumeration Enum value "transportOperators" added according to recommendation document
+- Severity changed from mandatory to optional as mentioned in XSD annotation and recommendation
+
+xsd\siri_situationExchange_service.xsd:
+- SituationExchangeServiceCapabilitiesStructure.TopicFiltering "FilterByKeword" changed to "FilterByKeyword" according to recommendation document

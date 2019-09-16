@@ -107,7 +107,7 @@ Rail transport, Roads and road transport
      <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
       <xsd:annotation>
        <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' ie be with the data context of the ESTIMATED Timetable. 
-DEPRECATED from SIRI 2.0</xsd:documentation>
+DEPRECATED from SRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:choice>
@@ -119,7 +119,7 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
       <xsd:documentation>If this is the first message about an extra unplanned VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'. 
-DEPRECATED from SIRI 2.0</xsd:documentation>
+DEPRECATED from SRI 2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -296,7 +296,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:sequence>
     <xsd:element name="RecordedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Observed call times for that art of teh journey that has already been completed.  (+ SIRI 2..0)</xsd:documentation>
+      <xsd:documentation>Observed call tmes for that art of teh journey that has already been completed.  (+ SIRI 2..0)</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
@@ -306,7 +306,7 @@ the original journey and the nature of the difference.</xsd:documentation>
     </xsd:element>
     <xsd:element name="EstimatedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Estimated call times for journey</xsd:documentation>
+      <xsd:documentation>Estimated call tmes for journey</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>

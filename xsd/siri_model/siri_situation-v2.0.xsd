@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situation">
  <!-- ======================================================================= -->
  <!--Needed to work around import limitation in JAXB - all namespaces. -->
@@ -202,6 +203,7 @@ Rail transport, Roads and road transport
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="cause"/>
    <xsd:enumeration value="effect"/>
+   <xsd:enumeration value="correctionTo"/>
    <xsd:enumeration value="update"/>
    <xsd:enumeration value="supercedes"/>
    <xsd:enumeration value="supercededBy"/>
@@ -602,6 +604,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="draft"/>
+   <xsd:enumeration value="pendingApproval"/>
    <xsd:enumeration value="approvedDraft"/>
    <xsd:enumeration value="open"/>
    <xsd:enumeration value="published"/>
@@ -759,7 +762,9 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="staff"/>
    <xsd:enumeration value="stationStaff"/>
    <xsd:enumeration value="management"/>
+   <xsd:enumeration value="authorities"/>
    <xsd:enumeration value="infoServices"/>
+   <xsd:enumeration value="transportOperators"/>
   </xsd:restriction>
  </xsd:simpleType>
  <xsd:simpleType name="NatureEnumeration">
@@ -1120,7 +1125,7 @@ Rail transport, Roads and road transport
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="Condition" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element name="Severity" type="SeverityEnumeration">
+   <xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Severity of disruption if different from that of SITUATION. TPEG pti26</xsd:documentation>
     </xsd:annotation>
@@ -1249,7 +1254,7 @@ Rail transport, Roads and road transport
  <!--==Delay =========================================== -->
  <xsd:simpleType name="DelayBandEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Type for allwoed values of Dela band. Based on Datex2</xsd:documentation>
+   <xsd:documentation>Type for allwoed values of DelayBand. Based on Datex2</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:normalizedString">
    <xsd:enumeration value="delayTwoMinutes"/>

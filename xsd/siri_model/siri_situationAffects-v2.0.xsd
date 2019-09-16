@@ -47,6 +47,11 @@
         * [de] Add IncludeOnly-IfInPublicationWindow to situation request temporal filter   siri_situationExchange_service.xsd.  
         * [doc/fx] Correct   capability Matrix  siri_situationExchange_service.xsd.
 				</Date>
+    <Date><Modified>2018-11-08</Modified>
+          [vdv] Wrapped "AffectedInterchanges" node around AffectedInterchange in AffectedCallStructure
+          [vdv] "PublishedLineName" inside "LineGroup" and "AffectedVehicleJourneyStructure" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+          [vdv] "Route" inside "AffectedVehicleJourneyStructure" is now optional since all of its content are optional
+				</Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents </p>
     </Description>
@@ -446,7 +451,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="LineRef"/>
-   <xsd:element ref="PublishedLineName" minOccurs="0"/>
+   <xsd:element ref="PublishedLineName" minOccurs="0" maxOccurs="unbounded"/>
   </xsd:sequence>
  </xsd:group>
  <!-- ======================================================================= -->
@@ -720,7 +725,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Reference to the LINE of the journey  affected by an SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element ref="PublishedLineName" minOccurs="0"/>
+   <xsd:element ref="PublishedLineName" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>DIRECTION of LINE in which journey runs.</xsd:documentation>
@@ -769,7 +774,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Destination SCHEDULED STOP POINTs  to which the LINE runs. [equivalent to pti15 2 destination route_description_type]</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Route" type="AffectedRouteStructure" maxOccurs="unbounded">
+   <xsd:element name="Route" type="AffectedRouteStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>ROUTE affected by the SITUATION.</xsd:documentation>
     </xsd:annotation>
@@ -928,7 +933,13 @@ Rail transport, Roads and road transport
      <xsd:group ref="AffectedStopArrivalGroup"/>
      <xsd:group ref="AffectedStopDepartureGroup"/>
      <xsd:group ref="HeadwayIntervalGroup"/>
-     <xsd:element name="AffectedInterchange" type="AffectedInterchangeStructure" minOccurs="0" maxOccurs="unbounded"/>
+     <xsd:element name="AffectedInterchanges" minOccurs="0">
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="AffectedInterchange" type="AffectedInterchangeStructure" minOccurs="0" maxOccurs="unbounded"/>
+       </xsd:sequence>
+      </xsd:complexType>
+     </xsd:element>
     </xsd:sequence>
    </xsd:extension>
   </xsd:complexContent>
