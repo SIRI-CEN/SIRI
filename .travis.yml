@@ -4,5 +4,4 @@ before_script:
   - sudo apt-get install -qq libxml2-utils
 
 script:
-  - "xmllint --noout --schema xsd/NeTEx_publication.xsd examples/functions/calendar/*xml examples/functions/fares/*xml examples/functions/grouping/*xml examples/functions/patterns/*xml examples/functions/pointOfInterest/*xml examples/functions/simpleNetwork/*xml examples/functions/site/*xml examples/functions/stopPlace/*xml examples/functions/timetable/*xml examples/functions/validityCondition/*xml examples/functions/variant/*xml examples/functions/vehicleSchedule/*xml examples/functions/versioning/*xml"
-
+  - "xmllint --noout --schema xsd/siri.xsd examples/siri_exa_framework/*xml examples/siri_exm_CM/*xml examples/siri_exm_CT/*xml examples/siri_exm_ET/*xml examples/siri_exm_FM/*xml examples/siri_exm_GM/*xml examples/siri_exm_PT/*xml examples/siri_exm_SM/*xml examples/siri_exm_ST/*xml examples/siri_exm_SX/*xml examples/siri_exm_VM/*xml examples/siri_exu_capability/*xml examples/siri_exu_discovery/*xml"
