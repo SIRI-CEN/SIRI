@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von David Sielaff (Verkehrsverbund Rhein-Sieg GmbH) bearbeitet -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="siri_situationServiceType">
  <xsd:annotation>
   <xsd:appinfo>
@@ -238,50 +239,26 @@ Rail transport, Roads and road transport
  <!-- ==Route point Type================================= -->
  <xsd:element name="RoutePointType" type="RoutePointTypeEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>Route point type Tpeg Report Type pti15.</xsd:documentation>
+   <xsd:documentation>Route point type TPEG PTS044: StopPlaceUsage</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="RoutePointTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation> route_point_type TPEG pti_table15.</xsd:documentation>
+   <xsd:documentation> route_point_type TPEG PTS044: StopPlaceUsage</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="pti15_0"/>
    <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="pti15_1"/>
-   <xsd:enumeration value="startPoint"/>
-   <xsd:enumeration value="pti15_2"/>
+   <xsd:enumeration value="origin"/>
    <xsd:enumeration value="destination"/>
-   <xsd:enumeration value="pti15_3"/>
-   <xsd:enumeration value="stop"/>
-   <xsd:enumeration value="pti15_4"/>
-   <xsd:enumeration value="via"/>
-   <xsd:enumeration value="pti15_5"/>
-   <xsd:enumeration value="notStopping"/>
-   <xsd:enumeration value="pti15_6"/>
-   <xsd:enumeration value="temporaryStop"/>
-   <xsd:enumeration value="pti15_7"/>
-   <xsd:enumeration value="temporarilyNotStopping"/>
-   <xsd:enumeration value="pti15_8"/>
-   <xsd:enumeration value="exceptionalStop"/>
-   <xsd:enumeration value="pti15_9"/>
-   <xsd:enumeration value="additionalStop"/>
-   <xsd:enumeration value="pti15_10"/>
-   <xsd:enumeration value="requestStop"/>
-   <xsd:enumeration value="pti15_11"/>
-   <xsd:enumeration value="frontTrainDestination"/>
-   <xsd:enumeration value="pti15_12"/>
-   <xsd:enumeration value="rearTrainDestination"/>
-   <xsd:enumeration value="pti15_13"/>
-   <xsd:enumeration value="throughServiceDestination"/>
-   <xsd:enumeration value="pti15_14"/>
-   <xsd:enumeration value="notVia"/>
-   <xsd:enumeration value="pti15_15"/>
-   <xsd:enumeration value="alteredStartPoint"/>
-   <xsd:enumeration value="pti15_16"/>
-   <xsd:enumeration value="alteredDestination"/>
-   <xsd:enumeration value="pti15_255"/>
-   <xsd:enumeration value="undefinedRoutePoint"/>
+   <xsd:enumeration value="intermediate"/>
+   <xsd:enumeration value="legBoard"/>
+   <xsd:enumeration value="legIntermediate"/>
+   <xsd:enumeration value="legAlight"/>
+   <xsd:enumeration value="firstRoutePoint"/>
+   <xsd:enumeration value="lastRoutePoint"/>
+   <xsd:enumeration value="affectedStopplace"/>
+   <xsd:enumeration value="presentedStopplace"/>
+   <xsd:enumeration value="undefinedStopplaceUsage"/>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ==STOP POINT Type================================= -->

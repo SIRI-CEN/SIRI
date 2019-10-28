@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von David Sielaff (Verkehrsverbund Rhein-Sieg GmbH) bearbeitet -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_reasons">
  <xsd:annotation>
   <xsd:appinfo>
@@ -101,6 +102,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Structured Classification Elements. Corresponds to TPEG 18 Event Reason.</xsd:documentation>
   </xsd:annotation>
   <xsd:choice>
+   <xsd:element ref="AlertCause"/>
    <xsd:element ref="UnknownReason"/>
    <xsd:element ref="MiscellaneousReason"/>
    <xsd:element ref="PersonnelReason">
@@ -136,6 +138,161 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:choice>
  </xsd:group>
+ <xsd:element name="AlertCause" type="AlertCauseEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>TPEG PTS038: AlertCause.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="AlertCauseEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Values for AlertCause. TPEG PTS038: AlertCause </xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti_19_0 unknown.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="securityAlert"/>
+   <xsd:enumeration value="emergencyServicesCall"/>
+   <xsd:enumeration value="policeActivity"/>
+   <xsd:enumeration value="policeOrder"/>
+   <xsd:enumeration value="fire"/>
+   <xsd:enumeration value="cableFire"/>
+   <xsd:enumeration value="smokeDetectedOnVehicle"/>
+   <xsd:enumeration value="fireAtTheStation"/>
+   <xsd:enumeration value="fireRun"/>
+   <xsd:enumeration value="fireBrigadeOrder"/>
+   <xsd:enumeration value="explosion"/>
+   <xsd:enumeration value="explosionHazard"/>
+   <xsd:enumeration value="bombDisposal"/>
+   <xsd:enumeration value="emergencyMedicalServices"/>
+   <xsd:enumeration value="emergencyBrake"/>
+   <xsd:enumeration value="vandalism"/>
+   <xsd:enumeration value="cableTheft"/>
+   <xsd:enumeration value="signalPassedAtDanger"/>
+   <xsd:enumeration value="stationOverrun"/>
+   <xsd:enumeration value="passengersBlockingDoors"/>
+   <xsd:enumeration value="defectiveSecuritySystem"/>
+   <xsd:enumeration value="overcrowded"/>
+   <xsd:enumeration value="borderControl"/>
+   <xsd:enumeration value="unattendedBag"/>
+   <xsd:enumeration value="telephonedThreat"/>
+   <xsd:enumeration value="suspectVehicle"/>
+   <xsd:enumeration value="evacuation"/>
+   <xsd:enumeration value="terroristIncident"/>
+   <xsd:enumeration value="publicDisturbance"/>
+   <xsd:enumeration value="technicalProblem"/>
+   <xsd:enumeration value="vehicleFailure"/>
+   <xsd:enumeration value="serviceDisruption"/>
+   <xsd:enumeration value="doorFailure"/>
+   <xsd:enumeration value="lightingFailure"/>
+   <xsd:enumeration value="pointsProblem"/>
+   <xsd:enumeration value="pointsFailure"/>
+   <xsd:enumeration value="signalProblem"/>
+   <xsd:enumeration value="signalFailure"/>
+   <xsd:enumeration value="overheadWireFailure"/>
+   <xsd:enumeration value="levelCrossingFailure"/>
+   <xsd:enumeration value="trafficManagementSystemFailure"/>
+   <xsd:enumeration value="engineFailure"/>
+   <xsd:enumeration value="breakdown"/>
+   <xsd:enumeration value="repairWork"/>
+   <xsd:enumeration value="constructionWork"/>
+   <xsd:enumeration value="maintenanceWork"/>
+   <xsd:enumeration value="powerProblem"/>
+   <xsd:enumeration value="trackCircuitProblem"/>
+   <xsd:enumeration value="swingBridgeFailure"/>
+   <xsd:enumeration value="escalatorFailure"/>
+   <xsd:enumeration value="liftFailure"/>
+   <xsd:enumeration value="gangwayProblem"/>
+   <xsd:enumeration value="defectiveVehicle"/>
+   <xsd:enumeration value="brokenRail"/>
+   <xsd:enumeration value="poorRailConditions"/>
+   <xsd:enumeration value="deicingWork"/>
+   <xsd:enumeration value="wheelProblem"/>
+   <xsd:enumeration value="routeBlockage"/>
+   <xsd:enumeration value="congestion"/>
+   <xsd:enumeration value="heavyTraffic"/>
+   <xsd:enumeration value="routeDiversion"/>
+   <xsd:enumeration value="roadworks"/>
+   <xsd:enumeration value="unscheduledConstructionWork"/>
+   <xsd:enumeration value="levelCrossingBlocked"/>
+   <xsd:enumeration value="sewerageMaintenance"/>
+   <xsd:enumeration value="roadClosed"/>
+   <xsd:enumeration value="roadwayDamage"/>
+   <xsd:enumeration value="bridgeDamage"/>
+   <xsd:enumeration value="personOnTheLine"/>
+   <xsd:enumeration value="objectOnTheLine"/>
+   <xsd:enumeration value="vehicleOnTheLine"/>
+   <xsd:enumeration value="animalOnTheLine"/>
+   <xsd:enumeration value="fallenTreeOnTheLine"/>
+   <xsd:enumeration value="vegetation"/>
+   <xsd:enumeration value="speedRestrictions"/>
+   <xsd:enumeration value="precedingVehicle"/>
+   <xsd:enumeration value="accident"/>
+   <xsd:enumeration value="nearMiss"/>
+   <xsd:enumeration value="personHitByVehicle"/>
+   <xsd:enumeration value="vehicleStruckObject"/>
+   <xsd:enumeration value="vehicleStruckAnimal"/>
+   <xsd:enumeration value="derailment"/>
+   <xsd:enumeration value="collision"/>
+   <xsd:enumeration value="levelCrossingAccident"/>
+   <xsd:enumeration value="poorWeather"/>
+   <xsd:enumeration value="fog"/>
+   <xsd:enumeration value="heavySnowfall"/>
+   <xsd:enumeration value="heavyRain"/>
+   <xsd:enumeration value="strongWinds"/>
+   <xsd:enumeration value="ice"/>
+   <xsd:enumeration value="hail"/>
+   <xsd:enumeration value="highTemperatures"/>
+   <xsd:enumeration value="flooding"/>
+   <xsd:enumeration value="lowWaterLevel"/>
+   <xsd:enumeration value="riskOfFlooding"/>
+   <xsd:enumeration value="highWaterLevel"/>
+   <xsd:enumeration value="fallenLeaves"/>
+   <xsd:enumeration value="fallenTree"/>
+   <xsd:enumeration value="landslide"/>
+   <xsd:enumeration value="riskOfLandslide"/>
+   <xsd:enumeration value="driftingSnow"/>
+   <xsd:enumeration value="blizzardConditions"/>
+   <xsd:enumeration value="stormDamage"/>
+   <xsd:enumeration value="lightningStrike"/>
+   <xsd:enumeration value="roughSea"/>
+   <xsd:enumeration value="highTide"/>
+   <xsd:enumeration value="lowTide"/>
+   <xsd:enumeration value="iceDrift"/>
+   <xsd:enumeration value="avalanches"/>
+   <xsd:enumeration value="riskOfAvalanches"/>
+   <xsd:enumeration value="flashFloods"/>
+   <xsd:enumeration value="mudslide"/>
+   <xsd:enumeration value="rockfalls"/>
+   <xsd:enumeration value="subsidence"/>
+   <xsd:enumeration value="earthquakeDamage"/>
+   <xsd:enumeration value="grassFire"/>
+   <xsd:enumeration value="wildlandFire"/>
+   <xsd:enumeration value="iceOnRailway"/>
+   <xsd:enumeration value="iceOnCarriages"/>
+   <xsd:enumeration value="specialEvent"/>
+   <xsd:enumeration value="procession"/>
+   <xsd:enumeration value="demonstration"/>
+   <xsd:enumeration value="industrialAction"/>
+   <xsd:enumeration value="staffSickness"/>
+   <xsd:enumeration value="staffAbsence"/>
+   <xsd:enumeration value="operatorCeasedTrading"/>
+   <xsd:enumeration value="previousDisturbances"/>
+   <xsd:enumeration value="vehicleBlockingTrack"/>
+   <xsd:enumeration value="foreignDisturbances"/>
+   <xsd:enumeration value="waitingForTransferPassengers"/>
+   <xsd:enumeration value="changeInCarriages"/>
+   <xsd:enumeration value="trainCoupling"/>
+   <xsd:enumeration value="boardingDelay"/>
+   <xsd:enumeration value="awaitingOncomingVehicle"/>
+   <xsd:enumeration value="overtaking"/>
+   <xsd:enumeration value="provisionDelay"/>
+   <xsd:enumeration value="miscellaneous"/>
+   <xsd:enumeration value="undefinedAlertCause"/>
+  </xsd:restriction>
+ </xsd:simpleType>
  <!-- ===INCIDENT REASON TYPES====================================== -->
  <xsd:element name="UnknownReason" type="xsd:string">
   <xsd:annotation>
@@ -1975,10 +2132,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>TPEG Pti22_2 rough sea.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="heavySnowFall"/>
-   <xsd:annotation>
-    <xsd:documentation>TPEG Pti22_3 heavy snow fall.</xsd:documentation>
-   </xsd:annotation>
+   <xsd:enumeration value="heavySnowFall">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti22_3 heavy snow fall.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
    <xsd:enumeration value="driftingSnow">
     <xsd:annotation>
      <xsd:documentation>drifting snow - Alias to TPEG Pti22_3 heavySnowFall.</xsd:documentation>

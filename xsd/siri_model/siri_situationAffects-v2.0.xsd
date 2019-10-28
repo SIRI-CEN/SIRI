@@ -47,10 +47,18 @@
         * [de] Add IncludeOnly-IfInPublicationWindow to situation request temporal filter   siri_situationExchange_service.xsd.  
         * [doc/fx] Correct   capability Matrix  siri_situationExchange_service.xsd.
 				</Date>
+    <Date><Modified>2018-06-13</Modified>
+          [vdv-UmS] StopPoints and StopPlaces added to AffectedLineStructure to be able to restrict line-oriented information for specific stopping points or stops
+          [vdv-UmS] Lines added to AffectedStopPointStructure and AffectedStopPlaceStructure to be able to restrict stopping point- or stop-oriented information for specific lines
+				</Date>
     <Date><Modified>2018-11-08</Modified>
           [vdv] Wrapped "AffectedInterchanges" node around AffectedInterchange in AffectedCallStructure
           [vdv] "PublishedLineName" inside "LineGroup" and "AffectedVehicleJourneyStructure" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+		  [VDV-UmS] optional "StopPlaceName" (unbounded because of lang-attr.) and optional "StopPlaceRef" inserted to "AffectedStopPointStructure" to be able to send stop information for the affected StopPoint
           [vdv] "Route" inside "AffectedVehicleJourneyStructure" is now optional since all of its content are optional
+				</Date>
+    <Date><Modified>2019-05-07</Modified>
+		  [VDV-UmS] "AffectedLines" inside "LineGroup" changed to "AffectedLine"
 				</Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents </p>
@@ -122,6 +130,16 @@ Rail transport, Roads and road transport
      <xsd:documentation>Spatial coordinates of STOP POINT. Derivable from StopRef.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference of Stop Place related to this affected StopPoint.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StopPlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Name of Stop Place related to this affected StopPoint.  (Unbounded to allow a text for every language)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="AffectedModes" type="AffectedModesStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Modes within station/stop affected by the SITUATION. If not specified, assume all modes of that station.</xsd:documentation>
@@ -158,6 +176,16 @@ Rail transport, Roads and road transport
         <xsd:documentation>CONNECTION LINKs from stop that are affected by the SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Lines" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Used to restrict stop points to some lines</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded"/>
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
@@ -594,6 +622,26 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
+   <xsd:element name="StopPoints" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Used to restrict lines to some stop points</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="StopPlaces" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Used to restrict lines to some stop places</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
@@ -962,7 +1010,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="VehicleDepartureTimesGroup"/>
    <xsd:element ref="DepartureStatus" minOccurs="0"/>
-   <xsd:element ref="DeparturePlatformName" minOccurs="0"/>
+   <xsd:element ref="DeparturePlatformName" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
@@ -1109,6 +1157,16 @@ Rail transport, Roads and road transport
       <xsd:complexType>
        <xsd:sequence>
         <xsd:element name="NavigationPathRef" type="ifopt:NavigationPathRefStructure" maxOccurs="unbounded"/>
+       </xsd:sequence>
+      </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="Lines" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Used to restrict stop places to some lines</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded"/>
        </xsd:sequence>
       </xsd:complexType>
      </xsd:element>
