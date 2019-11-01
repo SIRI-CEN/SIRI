@@ -53,6 +53,10 @@
     <Date><Modified>2013-02-11</Modified>
 					SIRI v2.0 Modified ServiceJourneyInterchange  SIRI:PT
 				</Date>
+    <Date>
+     <Modified>2019-11-01</Modified>
+	 +SIRI v2.1 ExtraCall, Cancellation added to DatedCall
+    </Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
      <p>This sub-schema describes the Production Timetable Service.</p>
@@ -483,7 +487,7 @@ Rail transport, Roads and road transport
  <!-- ==== CALL =========================================-->
  <xsd:element name="DatedCall" type="DatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Complete sequence of stops along the route path, in calling order.</xsd:documentation>
+   <xsd:documentation>One of the Stops along the route path of a Planned VEHICLE JOURNEY.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="DatedCallStructure">
@@ -492,6 +496,18 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="StopPointInSequenceGroup"/>
+   <xsd:choice minOccurs="0">
+    <xsd:element name="ExtraCall" type="xsd:boolean" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>This call is additional and unplanned. If omitted: call is planned.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Cancellation" type="xsd:boolean" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>This call is a cancellation of a previously announced call.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
    <xsd:group ref="CallPropertyGroup"/>
    <xsd:element name="CallNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
