@@ -1975,10 +1975,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>TPEG Pti22_2 rough sea.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="heavySnowFall"/>
-   <xsd:annotation>
-    <xsd:documentation>TPEG Pti22_3 heavy snow fall.</xsd:documentation>
-   </xsd:annotation>
+   <xsd:enumeration value="heavySnowFall">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti22_3 heavy snow fall.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
    <xsd:enumeration value="driftingSnow">
     <xsd:annotation>
      <xsd:documentation>drifting snow - Alias to TPEG Pti22_3 heavySnowFall.</xsd:documentation>
