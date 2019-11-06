@@ -632,6 +632,37 @@ Values for these elements can be specified on an annual schedule and will be inh
    <xsd:enumeration value="full"/>
    <xsd:enumeration value="seatsAvailable"/>
    <xsd:enumeration value="standingAvailable"/>
+   <xsd:enumeration value="unknown"/>
+   <xsd:enumeration value="empty">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle is considered empty by most measures, and has few or no passengers onboard, but is still accepting passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="manySeatsAvailable">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle has a large percentage of seats available. What percentage of free seats out of the total seats available is to be considered large enough to fall into this category is determined at the discretion of the producer.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="fewSeatsAvailable">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle has a small percentage of seats available. What percentage of free seats out of the total seats available is to be considered small enough to fall into this category is determined at the discretion of the producer.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="standingRoomOnly">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle can currently accommodate only standing passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="CrushedStandingRoomOnly">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle can currently accommodate only standing passengers and has limited space for them.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="NotAcceptingPassengers">
+    <xsd:annotation>
+     <xsd:documentation>The vehicle cannot accept passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
  <xsd:simpleType name="DriverCodeType">
