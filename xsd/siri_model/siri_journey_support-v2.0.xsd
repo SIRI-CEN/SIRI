@@ -192,6 +192,16 @@ Rail transport, Roads and road transport
      <xsd:documentation>LINE Reference.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
+   	<xsd:annotation>
+   	 <xsd:documentation>TRAIN NUMBER Reference.</xsd:documentation>
+   	</xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+   	<xsd:annotation>
+   	 <xsd:documentation>OPERATOR Reference.</xsd:documentation>
+   	</xsd:annotation>
+   </xsd:element>
    <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
@@ -572,5 +582,63 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    <xsd:enumeration value="lastServiceOfDay"/>
    <xsd:enumeration value="unspecified"/>
   </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =====JourneyRelation============================================================ -->
+ <xsd:simpleType name="JourneyRelationTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed types of relation between JOURNEYs.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+  	<xsd:enumeration value="ContinuationOfJourney">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "FortfuehrungVonFahrt": The journey is a continuation of the specified RelatedJourney (VDV "BeziehungZuFahrt") at the stop point given in CallInfo (VDV "StreckenBezug/Halt"). Passengers don't need to change vehicles. The new journey is not communicated as an interchange. </xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="ContinuedByJourney">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "FortfuehrungDurchFahrt": The journey is continued by the specified RelatedJourney (VDV "BeziehungZuFahrt") at the stop point given in CallInfo (VDV "StreckenBezug/Halt"). Passengers don't need to change vehicles. The new journey is not communicated as an interchange. </xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="SplitsIntoJourneys">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "TrennungVonFahrtIn": The journey splits into multiple RelatedJourneys (VDV "BeziehungZuFahrt") at the stop point given in CallInfo (VDV "StreckenBezug/Halt"). </xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="ContinuationOfSplitJourney">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "FortfuehrungVonGetrennterFahrt": The journey is a continuation of a single RelatedJourney (VDV "BeziehungZuFahrt") splitting into multiple journeys at the stop point given in CallInfo (VDV "StreckenBezug/Halt"). </xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="JoiningOfJourneys">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "ZusammenfuehrungVonFahrt": The journey is the continuation of multiple RelatedJourneys (VDV "BeziehungZuFahrt") joining together at the stop point given in CallInfo (VDV "StreckenBezug/Halt"). </xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="ContinuedByJoinedJourney">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "FortfuehrungDurchZusammengefuehrteFahrt": The journey is continued by a single RelatedJourney (VDV "BeziehungZuFahrt") after joining other journeys at the stop point given in CallInfo (VDV "StreckenBezug/Halt"). </xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="ReplacementOfJourney">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "ErsatzVonFahrt": The journey replaces one or more partially or fully cancelled RelatedJourneys (VDV "BeziehungZuFahrt") during the JourneyPart defined or referenced in JourneyPartInfo (VDV "FahrtAbschnitt"). </xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="ReplacedByJourney">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "ErsatzDurchFahrt": The partially or fully cancelled journey is replaced by one or more RelatedJourneys (VDV "BeziehungZuFahrt") during the JourneyPart defined or referenced in JourneyPartInfo (VDV "FahrtAbschnitt").</xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="SupportOfJourney">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "EntlastungVonFahrt": The journey partially or fully supports one or more RelatedJourneys (VDV "BeziehungZuFahrt") during the JourneyPart defined or referenced in JourneyPartInfo (VDV "FahrtAbschnitt"). </xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  	<xsd:enumeration value="SupportedByJourney">
+  	 <xsd:annotation>
+  	  <xsd:documentation>VDV "EntlastungDurchFahrt": The journey is partially or fully supported by one or more RelatedJourneys (VDV "BeziehungZuFahrt") during the JourneyPart defined or referenced in JourneyPartInfo (VDV "FahrtAbschnitt").</xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:enumeration>
+  </xsd:restriction> 
  </xsd:simpleType>
 </xsd:schema>
