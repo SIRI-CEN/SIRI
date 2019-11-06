@@ -322,8 +322,36 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
      <xsd:documentation>Operator of JOURNEY PART. +SIRI v2.0 </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:group ref="JourneyPartViewGroup"/>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:group name="JourneyPartViewGroup">
+  <xsd:annotation>
+  	<xsd:documentation>JourneyPart information instead of or in addition to the JourneyPartRef. +SIRI v2.0</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+  	<xsd:element name="FromStopPointRef" type="StopPointRefStructure">
+  	 <xsd:annotation>
+  	  <xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related JOURNEY PART begins.</xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:element>
+  	<xsd:element name="ToStopPointRef" type="StopPointRefStructure">
+  	 <xsd:annotation>
+  	  <xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related JOURNEY PART ends.</xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:element>
+  	<xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
+  	 <xsd:annotation>
+  	  <xsd:documentation>Time at which the related JOURNEY PART begins.</xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:element>
+  	<xsd:element name="EndTime" type="xsd:dateTime" minOccurs="0">
+  	 <xsd:annotation>
+  	  <xsd:documentation>Time at which the related JOURNEY PART ends.</xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:element>
+  </xsd:sequence>
+ </xsd:group>
  <!-- ======================================================================= -->
  <xsd:complexType name="TrainBlockPartStructure">
   <xsd:annotation>
