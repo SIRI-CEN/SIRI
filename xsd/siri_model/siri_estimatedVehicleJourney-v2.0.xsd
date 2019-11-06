@@ -99,14 +99,21 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:choice>
     <xsd:choice>
-     <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
+     <xsd:sequence>
+      <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+       <xsd:annotation>
+        <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>If no VEHICLE JOURNEY reference is available, identify it by origin and destination and the scheduled times at these stops.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:sequence>
      <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
       <xsd:annotation>
-       <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' ie be with the data context of the ESTIMATED Timetable. 
+       <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' i.e. be with the data context of the ESTIMATED Timetable.
 DEPRECATED from SRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
@@ -118,7 +125,7 @@ DEPRECATED from SRI 2.0</xsd:documentation>
     </xsd:element>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
-      <xsd:documentation>If this is the first message about an extra unplanned VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'. 
+      <xsd:documentation>If this is the first message for an unplanned 'extra' VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'.
 DEPRECATED from SRI 2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
