@@ -287,6 +287,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Requested end time for subscription.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="SubscriptionRenewal" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+   	 <xsd:documentation>By using this element, the subscriber informs the data provider that no data is requested but only an extension of the InitialTerminationTime of the subscription. It is therefore not necessary to transmit any journey or interchange information (corresponding to the subscription) in the next response. Only the data triggered by hysteresis / ChangeBeforeUpdate, PreviewInterval etc. needs to be sent. If SubscriptionRenewal is omitted, all data corresponding to the SubscriptionRequest must be sent in the initial response (or a portion of the data if MoreData is set to 'true').</xsd:documentation>
+   	</xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:group name="SubscriptionIdentityGroup">
