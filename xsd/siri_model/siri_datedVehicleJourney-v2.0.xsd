@@ -129,6 +129,11 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
+   <xsd:element name="JourneyRelations" type="JourneyRelationsStructure" minOccurs="0">
+   	<xsd:annotation>
+   	 <xsd:documentation>Relations of the journey with other journeys, e.g., in case a joining/splitting takes place or the journey substitutes for another one etc.</xsd:documentation>
+   	</xsd:annotation>
+   </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
