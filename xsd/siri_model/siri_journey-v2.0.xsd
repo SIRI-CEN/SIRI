@@ -897,5 +897,79 @@ Rail transport, Roads and road transport
    <xsd:documentation>For frequency based services, observed interval between vehicles at stop.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
+ <!-- =====JourneyRelation================================================== -->
+ <xsd:complexType name="JourneyRelationsStructure">
+  <xsd:annotation>
+   <xsd:documentation>Provides information about relations to other journeys.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="JourneyRelation" type="JourneyRelationStructure" maxOccurs="unbounded"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="JourneyRelationStructure">
+  <xsd:sequence>
+   <xsd:element name="JourneyRelationType" type="JourneyRelationTypeEnumeration">
+    <xsd:annotation>
+  	 <xsd:documentation>Specifies the type of the relation, e.g., joining, splitting, replacement etc.</xsd:documentation>
+  	</xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="JourneyRelationInfoGroup"/>
+   <xsd:element ref="RelatedJourney" maxOccurs="unbounded"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="JourneyRelationInfoGroup">
+  <xsd:annotation>
+   <xsd:documentation>Specifies which CALL or JOURNEY PART of the JOURNEY has a JOURNEY RELATION.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:choice>
+    <xsd:element name="CallInfo" type="RelatedCallStructure">
+  	 <xsd:annotation>
+  	  <xsd:documentation>Information about the stop at which the JOURNEY is related to another JOURNEY.</xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:element>
+  	<xsd:element name="JourneyPartInfo" type="RelatedJourneyPartStructure">
+  	 <xsd:annotation>
+  	  <xsd:documentation>Information about the JOURNEY PART for which the JOURNEY has a JOURNEY RELATION.</xsd:documentation>
+  	 </xsd:annotation>
+  	</xsd:element>
+   </xsd:choice>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:complexType name="RelatedCallStructure">
+  <xsd:annotation>
+   <xsd:documentation>The JOURNEY RELATION refers to this CALL.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="AbstractCallStructure">
+    <xsd:sequence>
+ 	 <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
+ 	 <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
+ 	</xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="RelatedJourneyPartStructure">
+  <xsd:annotation>
+   <xsd:documentation>The JOURNEY RELATION refers to this JOURNEY PART.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="JourneyPartInfoStructure"/>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="RelatedJourney" type="RelatedJourneyStructure">
+  <xsd:annotation>
+   <xsd:documentation>Refers to the JOURNEY to which the current JOURNEY is related.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="RelatedJourneyStructure">
+  <xsd:complexContent>
+   <xsd:extension base="ConnectingJourneyRefStructure">
+    <xsd:sequence>
+  	 <xsd:group ref="JourneyRelationInfoGroup" minOccurs="0"/>
+  	</xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
  <!-- ====================================================================== -->
 </xsd:schema>
