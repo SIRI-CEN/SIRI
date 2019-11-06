@@ -426,6 +426,18 @@ Values for these elements can be specified on an annual schedule and will be inh
      <xsd:documentation>Alternative identifier of LINE that an external system may associate with journey.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:choice>
+    <xsd:element name="BrandingRef" type="BrandingRefStructure" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Reference to a BRANDING.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Branding" type="BrandingStructure" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>An arbitrary marketing classification.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="LineIdentityGroup">
@@ -679,5 +691,39 @@ Values for these elements can be specified on an annual schedule and will be inh
    <xsd:extension base="InfoChannelCodeType"/>
   </xsd:simpleContent>
  </xsd:complexType>
+ <!-- ======================================================================= -->
+ <xsd:simpleType name="BrandingRefCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a BRANDING.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="BrandingRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a BRANDING.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="BrandingRefCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:complexType name="BrandingStructure">
+  <xsd:annotation>
+   <xsd:documentation>An arbitrary marketing classification.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="TypeOfValueGroup"/>
+  </xsd:sequence>
+  <xsd:attribute name="derivedFromObjectRef" type="BrandingIdType" use="optional">
+   <xsd:annotation>
+    <xsd:documentation>Identity of object from which this BRANDING was derived.</xsd:documentation>
+   </xsd:annotation>
+  </xsd:attribute>
+ </xsd:complexType>
+ <xsd:simpleType name="BrandingIdType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of BRANDING.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="TypeOfValueIdType"/>
+ </xsd:simpleType>
  <!-- ======================================================================= -->
 </xsd:schema>
