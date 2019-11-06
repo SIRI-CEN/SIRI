@@ -653,12 +653,12 @@ Values for these elements can be specified on an annual schedule and will be inh
      <xsd:documentation>The vehicle can currently accommodate only standing passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="CrushedStandingRoomOnly">
+   <xsd:enumeration value="crushedStandingRoomOnly">
     <xsd:annotation>
      <xsd:documentation>The vehicle can currently accommodate only standing passengers and has limited space for them.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="NotAcceptingPassengers">
+   <xsd:enumeration value="notAcceptingPassengers">
     <xsd:annotation>
      <xsd:documentation>The vehicle cannot accept passengers.</xsd:documentation>
     </xsd:annotation>
