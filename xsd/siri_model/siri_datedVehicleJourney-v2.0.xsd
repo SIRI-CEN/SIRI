@@ -114,6 +114,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:group ref="TimetableAlterationGroup" minOccurs="0"/>
    <xsd:group ref="JourneyPatternInfoGroup"/>
+   <xsd:group ref="JourneyEndNamesGroup"/>
    <xsd:group ref="ServiceInfoGroup"/>
    <xsd:group ref="JourneyInfoGroup"/>
    <xsd:group ref="DatedServiceInfoGroup"/>
