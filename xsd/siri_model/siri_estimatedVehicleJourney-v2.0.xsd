@@ -385,6 +385,11 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
    <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
    <xsd:element ref="ActualArrivalTime" minOccurs="0"/>
+   <xsd:element name="ArrivalStatus" type="CallStatusEnumeration">
+    <xsd:annotation>
+     <xsd:documentation>Classification of the timeliness of the visit according to a fixed list of values. If not specified, same as DepartureStatus.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicel to arrive at.Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is
@@ -421,6 +426,11 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DepartureStatus" type="CallStatusEnumeration">
+    <xsd:annotation>
+     <xsd:documentation>Classification of the timeliness of the departure part of the CALL, according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0">
