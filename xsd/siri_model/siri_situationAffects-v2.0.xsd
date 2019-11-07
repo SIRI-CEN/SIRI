@@ -952,6 +952,7 @@ Rail transport, Roads and road transport
    <xsd:group ref="VehicleArrivalTimesGroup"/>
    <xsd:element ref="ArrivalStatus" minOccurs="0"/>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
+   <xsd:element ref="ArrivalSectorName" minOccurs="0"/>
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
@@ -963,6 +964,7 @@ Rail transport, Roads and road transport
    <xsd:group ref="VehicleDepartureTimesGroup"/>
    <xsd:element ref="DepartureStatus" minOccurs="0"/>
    <xsd:element ref="DeparturePlatformName" minOccurs="0"/>
+   <xsd:element ref="DepartureSectorName" minOccurs="0"/>
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
