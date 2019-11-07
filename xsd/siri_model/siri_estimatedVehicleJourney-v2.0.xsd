@@ -393,6 +393,11 @@ the original journey and the nature of the difference.</xsd:documentation>
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element ref="ArrivalSectorName" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Target departure time of VEHICLE according to latest working timetable.</xsd:documentation>
@@ -406,6 +411,11 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="DeparturePlatformName" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Departure QUAY ( Bay or platform) name. Defaulted taken from  from planned timetable..</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="DepartureSectorName" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
