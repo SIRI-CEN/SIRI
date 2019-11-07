@@ -393,6 +393,11 @@ the original journey and the nature of the difference.</xsd:documentation>
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element ref="ArrivalBoardingActivity" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Type of boarding and alighting at stop, e.g. alighting, noAlighting or passThru.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure +SIRI v2.0.</xsd:documentation>
@@ -416,6 +421,11 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="DepartureBoardingActivity" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Nature of boarding at stop, e.g. boarding, noBoarding or passThru.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0">
