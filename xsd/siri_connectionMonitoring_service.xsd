@@ -365,6 +365,7 @@ Rail transport, Roads and road transport
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
+	 <xsd:element ref="ArrivalSectorName" minOccurs="0"/>
      <xsd:element name="SuggestedWaitDecisionTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Latest time by which the feeder needs informationabout the connection from the distributor as to whether it will wait and for how long. +SIRI v2.0</xsd:documentation>
