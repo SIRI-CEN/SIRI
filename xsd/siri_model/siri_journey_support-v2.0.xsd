@@ -182,7 +182,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for a reference to a connecting journey.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+   <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>A reference to the DATE VEHICLE JOURNEY that the VEHICLE is making, unique with the data horizon of the service.</xsd:documentation>
     </xsd:annotation>
