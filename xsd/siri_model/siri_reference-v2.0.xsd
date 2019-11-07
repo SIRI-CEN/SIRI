@@ -692,7 +692,7 @@ Values for these elements can be specified on an annual schedule and will be inh
   </xsd:simpleContent>
  </xsd:complexType>
  <!-- ======================================================================= -->
- <xsd:simpleType name="BrandingRefCodeType">
+ <xsd:simpleType name="BrandingCodeType">
   <xsd:annotation>
    <xsd:documentation>Type for identifier of a BRANDING.</xsd:documentation>
   </xsd:annotation>
@@ -703,7 +703,7 @@ Values for these elements can be specified on an annual schedule and will be inh
    <xsd:documentation>Type for reference to a BRANDING.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
-   <xsd:extension base="BrandingRefCodeType"/>
+   <xsd:extension base="BrandingCodeType"/>
   </xsd:simpleContent>
  </xsd:complexType>
  <xsd:complexType name="BrandingStructure">
