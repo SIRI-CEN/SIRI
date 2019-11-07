@@ -769,7 +769,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Bay or platform name. Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is (i) any arrival platform on any related dated timetable element, (ii) any departure platform name on this estimated element; (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="ArrivalSectorName" type="NaturalLanguageStringStructure" minOccurs="0">
+ <xsd:element name="ArrivalSectorName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName.</xsd:documentation>
   </xsd:annotation>
@@ -844,7 +844,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Departure QUAY ( Bay or platform) name. Inheritable property.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="DepartureSectorName" type="NaturalLanguageStringStructure" minOccurs="0">
+ <xsd:element name="DepartureSectorName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle.</xsd:documentation>
   </xsd:annotation>
