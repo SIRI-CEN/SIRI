@@ -411,6 +411,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
+   <xsd:element ref="ArrivalSectorName" minOccurs="0"/>
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0"/>
    <xsd:element name="ArrivalStopAssignment" type="PlannedStopAssignmentStructure" minOccurs="0">
     <xsd:annotation>
@@ -431,6 +432,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
    <xsd:element ref="DeparturePlatformName" minOccurs="0"/>
+   <xsd:element ref="DepartureSectorName" minOccurs="0"/>
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0"/>
    <xsd:element name="DepartureStopAssignment" type="PlannedStopAssignmentStructure" minOccurs="0"/>
    <xsd:element name="DepartureOperatorRefs" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
@@ -458,12 +460,13 @@ Rail transport, Roads and road transport
    <xsd:element ref="ArrivalProximityText" minOccurs="0"/>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicel to arrive at.Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is
+     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicel to arrive at. Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is
 (i) any arrival platform on any related dated timetable element, 
 (ii) any departure platform name on this estimated element;
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element ref="ArrivalSectorName" minOccurs="0"/>
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Nature of boarding and alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
@@ -493,6 +496,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Departure QUAY ( Bay or platform) name. Defaulted taken from  from planned timetable..</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element ref="DepartureSectorName" minOccurs="0"/>
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0"/>
    <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0">
     <xsd:annotation>
@@ -765,6 +769,11 @@ Rail transport, Roads and road transport
    <xsd:documentation>Bay or platform name. Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is (i) any arrival platform on any related dated timetable element, (ii) any departure platform name on this estimated element; (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
+ <xsd:element name="ArrivalSectorName" type="NaturalLanguageStringStructure" minOccurs="0">
+  <xsd:annotation>
+   <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting">
   <xsd:annotation>
    <xsd:documentation>Type of boarding and alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
@@ -833,6 +842,11 @@ Rail transport, Roads and road transport
  <xsd:element name="DeparturePlatformName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>Departure QUAY ( Bay or platform) name. Inheritable property.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="DepartureSectorName" type="NaturalLanguageStringStructure" minOccurs="0">
+  <xsd:annotation>
+   <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" default="boarding">
