@@ -281,9 +281,11 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="local"/>
    <xsd:enumeration value="loc13_1"/>
    <xsd:enumeration value="international"/>
-   <!-- === DEPRECATED from SIRI 2.1 ========== -->
-   <xsd:enumeration value="interbational"/>
-   <!-- ======================================= -->
+   <xsd:enumeration value="interbational">
+    <xsd:annotation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ======================================================================= -->
