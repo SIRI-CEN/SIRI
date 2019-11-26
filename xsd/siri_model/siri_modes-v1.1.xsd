@@ -126,62 +126,62 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="unknown"/>
    <xsd:enumeration value="airService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in AirSubmodesOfTransportEnumeration (TPEG PTS108)</xsd:documentation>
+     <xsd:documentation>Submodes provided in AirSubmodesOfTransportEnumeration (TPEG PTS101)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="gondolaCableCarService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in TelecabinSubmodesOfTransportEnumeration (TPEG PTS109)</xsd:documentation>
+     <xsd:documentation>Submodes provided in TelecabinSubmodesOfTransportEnumeration (TPEG PTS102)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="chairliftService"/>
    <xsd:enumeration value="elevatorService"/>
    <xsd:enumeration value="railwayService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS102)</xsd:documentation>
+     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="urbanRailwayService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in MetroSubmodesOfTransportEnumeration (TPEG PTS104)</xsd:documentation>
+     <xsd:documentation>Submodes provided in MetroSubmodesOfTransportEnumeration (TPEG PTS106)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="lightRailwayService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS102)</xsd:documentation>
+     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="rackRailService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS102)</xsd:documentation>
+     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="funicularService"/>
    <xsd:enumeration value="busService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in BusSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
+     <xsd:documentation>Submodes provided in BusSubmodesOfTransportEnumeration (TPEG PTS110)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="trolleybusService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in BusSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
+     <xsd:documentation>Submodes provided in BusSubmodesOfTransportEnumeration (TPEG PTS110)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="coachService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in CoachSubmodesOfTransportEnumeration (TPEG PTS103)</xsd:documentation>
+     <xsd:documentation>Submodes provided in CoachSubmodesOfTransportEnumeration (TPEG PTS112)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="taxiService"/>
    <xsd:enumeration value="rentalVehicle"/>
    <xsd:enumeration value="waterTransportService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in WaterSubmodesOfTransportEnumeration (TPEG PTS107)</xsd:documentation>
+     <xsd:documentation>Submodes provided in WaterSubmodesOfTransportEnumeration (TPEG PTS115)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="cableDrawnBoatService">
     <xsd:annotation>
-     <xsd:documentation>Submodes provided in WaterSubmodesOfTransportEnumeration (TPEG PTS107)</xsd:documentation>
+     <xsd:documentation>Submodes provided in WaterSubmodesOfTransportEnumeration (TPEG PTS115)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedModeOfTransport"/>
@@ -190,12 +190,12 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="RailSubmode" type="RailSubmodesOfTransportEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>TPEG PTS102 RailwayService</xsd:documentation>
+   <xsd:documentation>TPEG PTS105 RailwayService</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="RailSubmodesOfTransportEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Rail ModesOfTransport: TPEG PTS102 RailwayService</xsd:documentation>
+   <xsd:documentation>Values for Rail ModesOfTransport: TPEG PTS105 RailwayService</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -223,12 +223,12 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="CoachSubmode" type="CoachSubmodesOfTransportEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>TPEG PTS103 CoachService</xsd:documentation>
+   <xsd:documentation>TPEG PTS112 CoachService</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="CoachSubmodesOfTransportEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Coach ModesOfTransport: TPEG PTS103 CoachService</xsd:documentation>
+   <xsd:documentation>Values for Coach ModesOfTransport: TPEG PTS112 CoachService</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -249,12 +249,12 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="MetroSubmode" type="MetroSubmodesOfTransportEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>TPEG PTS104 UrbanRailwayService</xsd:documentation>
+   <xsd:documentation>TPEG PTS106 UrbanRailwayService</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="MetroSubmodesOfTransportEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Metro ModesOfTransport: TPEG PTS104 UrbanRailwayService.</xsd:documentation>
+   <xsd:documentation>Values for Metro ModesOfTransport: TPEG PTS106 UrbanRailwayService.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -273,12 +273,12 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="BusSubmode" type="BusSubmodesOfTransportEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>TPEG PTS105 BusService</xsd:documentation>
+   <xsd:documentation>TPEG PTS110 BusService</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="BusSubmodesOfTransportEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Bus ModesOfTransport: TPEG PTS105 BusService</xsd:documentation>
+   <xsd:documentation>Values for Bus ModesOfTransport: TPEG PTS110 BusService</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -337,12 +337,12 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="WaterSubmode" type="WaterSubmodesOfTransportEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>TPEG PTS107: WaterService</xsd:documentation>
+   <xsd:documentation>TPEG PTS115: WaterService</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="WaterSubmodesOfTransportEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Water ModesOfTransport: TPEG PTS107: WaterService</xsd:documentation>
+   <xsd:documentation>Values for Water ModesOfTransport: TPEG PTS115: WaterService</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -374,12 +374,12 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="AirSubmode" type="AirSubmodesOfTransportEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>TPEG PTS108 AirService</xsd:documentation>
+   <xsd:documentation>TPEG PTS101 AirService</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="AirSubmodesOfTransportEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Air ModesOfTransport: TPEG PTS108 AirService.</xsd:documentation>
+   <xsd:documentation>Values for Air ModesOfTransport: TPEG PTS101 AirService.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -403,12 +403,12 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="TelecabinSubmode" type="TelecabinSubmodesOfTransportEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>TPEG PTS109: GondolaCableCarService</xsd:documentation>
+   <xsd:documentation>TPEG PTS102: GondolaCableCarService</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="TelecabinSubmodesOfTransportEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Telecabin ModesOfTransport: TPEG PTS109: GondolaCableCarService</xsd:documentation>
+   <xsd:documentation>Values for Telecabin ModesOfTransport: TPEG PTS102: GondolaCableCarService</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
