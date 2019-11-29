@@ -29,7 +29,7 @@
  <siri:Severity>severe</siri:Severity>
  <siri:Audience>public</siri:Audience>
  <siri:ReportType>point</siri:ReportType>
- <siri:Summary overridden="true">Jam on the access road to Barchester Station</siri:Summary>
+ <siri:Summary overridden="true" xml:lang="EN">Jam on the access road to Barchester Station</siri:Summary>
  <siri:Description overridden="true" xml:lang="EN">Grislock and panic</siri:Description>
  <siri:Affects>
   <siri:Operators>

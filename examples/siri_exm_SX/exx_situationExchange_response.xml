@@ -40,7 +40,7 @@
      <Severity>severe</Severity>
      <Audience>public</Audience>
      <ReportType>point</ReportType>
-     <Summary overridden="true">Bomb at Barchester station</Summary>
+     <Summary overridden="true" xml:lang="EN">Bomb at Barchester station</Summary>
      <Description overridden="true" xml:lang="EN">Building evacuated. AVoid station untile further notice</Description>
      <Affects>
       <Operators>
@@ -134,7 +134,7 @@
      <Severity>severe</Severity>
      <Audience>public</Audience>
      <ReportType>point</ReportType>
-     <Summary overridden="true">Jam on the access road to Barchester Station</Summary>
+     <Summary overridden="true" xml:lang="EN">Jam on the access road to Barchester Station</Summary>
      <Description overridden="true" xml:lang="EN">Grislock and panic</Description>
      <Affects>
       <Operators>
