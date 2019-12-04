@@ -307,7 +307,7 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
    <xsd:documentation>Type for a reference to JOURNEY PART. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="JourneyPartRef" type="xsd:normalizedString">
+   <xsd:element name="JourneyPartRef" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Reference to a JOURNEY part. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
