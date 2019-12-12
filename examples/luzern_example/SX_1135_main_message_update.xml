@@ -33,7 +33,7 @@
 					<Language>de</Language>
 					<Summary xml:lang="de">
 	Unterbruch zwischen Luzernerhof und Verkehrshaus
-                    </Summary>
+					</Summary>
 					<InfoLinks>
 						<InfoLink>
 							<Uri>http://www.vbl.ch/aktuelles/verkehrsmeldungen/stoerungen/20160603_13?</Uri>
@@ -560,9 +560,9 @@
 														<StopPointName>Luzernerhof (B)</StopPointName>
 													</AffectedStopPoint>
 												</StopPoints>
-											<AffectedLine>
-										<AffectedNetwork>
-									<Networks>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
 								</Affects>
 							</PublishAtScope>
 							<PassengerInformationAction>
