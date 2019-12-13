@@ -27,12 +27,12 @@
 						<EndTime>2017-05-28T17:10:00+02:00</EndTime>
 					</ValidityPeriod>
 					<MiscellaneousReason>fire</MiscellaneousReason>
-					<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
+					<ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
 					<Priority>3</Priority>
 					<ScopeType>line</ScopeType>
 					<Planned>false</Planned>
 					<Language>de</Language>
-					<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+					<Summary xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
 					<!-- Kein Infolink element im PT Situation laut Verwendungstabelle -->
 					<Affects>
 						<StopPlaces>
@@ -44,7 +44,7 @@
 					</Affects>
 					<Consequences>
 						<Consequence>
-							<Condition>disrupted</Condition>
+							<Condition>disruption</Condition>
 							<Affects>
 								<Networks>
 									<AffectedNetwork>
@@ -106,19 +106,19 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Betroffen sind die Linien 6, 8, 24 und 73</Description>
+										<DescriptionText xml:lang="DE">Betroffen sind die Linien 6, 8, 24 und 73</DescriptionText>
 									</DescriptionContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
+										<Remark xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -159,19 +159,19 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Betroffen sind die Linien 6, 8, 24 und 73</Description>
+										<DescriptionText xml:lang="DE">Betroffen sind die Linien 6, 8, 24 und 73</DescriptionText>
 									</DescriptionContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
+										<Remark xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -212,19 +212,19 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Betroffen sind die Linien 6, 8, 24 und 73</Description>
+										<DescriptionText xml:lang="DE">Betroffen sind die Linien 6, 8, 24 und 73</DescriptionText>
 									</DescriptionContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
+										<Remark xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>

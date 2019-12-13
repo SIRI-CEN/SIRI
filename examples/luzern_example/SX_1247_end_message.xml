@@ -27,16 +27,16 @@
 						<EndTime>2017-05-28T17:10:00+02:00</EndTime>
 					</ValidityPeriod>
 					<MiscellaneousReason>fire</MiscellaneousReason>
-					<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
+					<ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
 					<Priority>3</Priority>
 					<ScopeType>line</ScopeType>
 					<Planned>false</Planned>
 					<Language>de</Language>
-					<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+					<Summary xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
 					<InfoLinks>
 						<InfoLink>
 							<Uri>http://www.vbl.ch/aktuelles/verkehrsmeldungen/stoerungen/20160603_13?</Uri>
-							<Label xml:lang="de">Weitere Informationen erhalten Sie unter:</Label>
+							<Label xml:lang="DE">Weitere Informationen erhalten Sie unter:</Label>
 						</InfoLink>
 					</InfoLinks>
 					<Affects>
@@ -49,7 +49,7 @@
 					</Affects>
 					<Consequences>
 						<Consequence>
-							<Condition>normalService</Condition>
+							<Condition>disturbanceRectified</Condition>
 							<Affects>
 								<Networks>
 									<AffectedNetwork>
@@ -115,13 +115,13 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</Description>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
 									</DescriptionContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -167,13 +167,13 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</Description>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
 									</DescriptionContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -219,13 +219,13 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</Description>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
 									</DescriptionContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -267,13 +267,13 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</Description>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
 									</DescriptionContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -315,13 +315,13 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</Description>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
 									</DescriptionContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -363,13 +363,13 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</Description>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
 									</DescriptionContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>

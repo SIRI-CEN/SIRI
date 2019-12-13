@@ -27,17 +27,17 @@
 						<EndTime>2017-05-28T17:10:00+02:00</EndTime>
 					</ValidityPeriod>
 					<MiscellaneousReason>fire</MiscellaneousReason>
-					<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
+					<ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
 					<Priority>3</Priority>
 					<ScopeType>route</ScopeType>
 					<Language>de</Language>
-					<Summary xml:lang="de">
+					<Summary xml:lang="DE">
 	Unterbruch zwischen Luzernerhof und Verkehrshaus
-                    </Summary>
+					</Summary>
 					<InfoLinks>
 						<InfoLink>
 							<Uri>http://www.vbl.ch/aktuelles/verkehrsmeldungen/stoerungen/20160603_13?</Uri>
-							<Label xml:lang="de">Weitere Informationen erhalten Sie unter:</Label>
+							<Label xml:lang="DE">Weitere Informationen erhalten Sie unter:</Label>
 						</InfoLink>
 					</InfoLinks>
 					<Affects>
@@ -50,7 +50,7 @@
 					</Affects>
 					<Consequences>
 						<Consequence>
-							<Condition>disrupted</Condition>
+							<Condition>disruption</Condition>
 							<Affects>
 								<Networks>
 									<AffectedNetwork>
@@ -69,22 +69,22 @@
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:621::01</StopPointRef>
 													<StopPointName>Casino-Palace</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:615::01</StopPointRef>
 													<StopPointName>Europe</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:616::01</StopPointRef>
 													<StopPointName>Dietschiberg</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:617::01</StopPointRef>
 													<StopPointName>Verkehrshaus</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 											</StopPoints>
 										</AffectedLine>
@@ -103,27 +103,27 @@
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:617::02</StopPointRef>
 													<StopPointName>Verkehrshaus</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:616::02</StopPointRef>
 													<StopPointName>Dietschiberg</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:615::02</StopPointRef>
 													<StopPointName>Europe</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:621::02</StopPointRef>
 													<StopPointName>Casino-Palace</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:622::02</StopPointRef>
 													<StopPointName>Haldensteig</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 											</StopPoints>
 										</AffectedLine>
@@ -142,22 +142,22 @@
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:621::01</StopPointRef>
 													<StopPointName>Casino-Palace</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:615::01</StopPointRef>
 													<StopPointName>Europe</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:616::01</StopPointRef>
 													<StopPointName>Dietschiberg</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:617::01</StopPointRef>
 													<StopPointName>Verkehrshaus</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 											</StopPoints>
 										</AffectedLine>
@@ -176,27 +176,27 @@
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:617::02</StopPointRef>
 													<StopPointName>Verkehrshaus</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:616::02</StopPointRef>
 													<StopPointName>Dietschiberg</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:615::02</StopPointRef>
 													<StopPointName>Europe</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:621::02</StopPointRef>
 													<StopPointName>Casino-Palace</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:622::02</StopPointRef>
 													<StopPointName>Haldensteig</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 											</StopPoints>
 										</AffectedLine>
@@ -227,57 +227,57 @@
 											<StopPoints>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:121::02</StopPointRef>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:621::01</StopPointRef>
 													<StopPointName>Casino-Palace</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:617::01</StopPointRef>
 													<StopPointName>Verkehrshaus</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:715::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:716::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1405::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1406::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1407::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1408::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1409::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1410::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1411::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1412::01</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 											</StopPoints>
 										</AffectedLine>
@@ -296,56 +296,56 @@
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:617::02</StopPointRef>
 													<StopPointName>Verkehrshaus</StopPointName>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:621::02</StopPointRef>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:622::02</StopPointRef>
-													<StopCondition>notStopping</StopCondition>
+													<StopCondition>affectedStopplace</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1412::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1411::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1410::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1409::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1408::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1407::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1406::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:1405::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:716::02</StopPointRef>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>ch:vbl:715::01</StopPointRef>
 													<StopPointName>Wey Auch?<!-- nein oder? --></StopPointName>
-													<StopCondition>additionalStop</StopCondition>
+													<StopCondition>intermediate</StopCondition>
 												</AffectedStopPoint>
 											</StopPoints>
 										</AffectedLine>
@@ -398,34 +398,34 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Betroffen sind die Linien 6,8, 24 und 73</Description>
+										<DescriptionText xml:lang="DE">Betroffen sind die Linien 6,8, 24 und 73</DescriptionText>
 									</DescriptionContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Linie 6 und 8 fallen zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
 									</ConsequenceContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Linie 24 wird zwischen Luzernerhof und Brüel via St. Anna umgeleitet.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Linie 24 wird zwischen Luzernerhof und Brüel via St. Anna umgeleitet.</ConsequenceText>
 									</ConsequenceContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Ca. 7 Min. längere Fahrzeit. Linie 73 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 6 Min. längere Fahrzeit.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Ca. 7 Min. längere Fahrzeit. Linie 73 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 6 Min. längere Fahrzeit.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Zwischen «Luzern, Bahnhof» und «Verkehrshaus» benutzen sie die S3 oder das Schiff.</Recommendation>
+										<RecommendationText xml:lang="DE">Zwischen «Luzern, Bahnhof» und «Verkehrshaus» benutzen sie die S3 oder das Schiff.</RecommendationText>
 									</RecommendationContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Umstiegsempfehlung für die Linien 6 und 8: Bei den Haltestellen Luzernerhof bzw. Brüelstrasse auf die umgeleiteten Linien 24 und 73, die normal verkehrende Linie 14 oder den	Entlastungsbus umsteigen. </Recommendation>
+										<RecommendationText xml:lang="DE">Umstiegsempfehlung für die Linien 6 und 8: Bei den Haltestellen Luzernerhof bzw. Brüelstrasse auf die umgeleiteten Linien 24 und 73, die normal verkehrende Linie 14 oder den	Entlastungsbus umsteigen. </RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -500,19 +500,19 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Die Linie 6 fällt zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Die Linie 6 fällt zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 und 73 (ohne Halte zwischen Wey und Brühlstrasse) oder die normal verkehrende Linie 14 (mit Halten) und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Ver-kehrshaus erreichen ihr Ziel nur zu Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 und 73 (ohne Halte zwischen Wey und Brühlstrasse) oder die normal verkehrende Linie 14 (mit Halten) und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Ver-kehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText>Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -526,24 +526,24 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Die Linie 6 fällt zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Die Linie 6 fällt zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 und 73 (ohne Halte zwischen Wey und
+										<RecommendationText xml:lang="DE">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 und 73 (ohne Halte zwischen Wey und
 						Brühlstrasse) oder die normal verkehrende Linie 14 (mit Halten) und steigen an der Brüelstrasse wieder um. Reisende nach
-						Haldensteig, Casino-Palace, Europe, Dietschiberg und Ver-kehrshaus erreichen ihr Ziel nur zu Fuß.</Recommendation>
+						Haldensteig, Casino-Palace, Europe, Dietschiberg und Ver-kehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText>Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark>Weitere Informationen erhalten Sie unter www.vbl.ch/stoerung/haldenstrasse</Remark>
+										<Remark xml:lang="DE">Weitere Informationen erhalten Sie unter www.vbl.ch/stoerung/haldenstrasse</Remark>
 									</RemarkContent>
 									<InfoLink>
 										<Uri>www.vbl.ch/stoerung/haldenstrasse</Uri>
@@ -585,18 +585,18 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Linie 6 wendet hier</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Linie 6 wendet hier</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Reisende zur Brühlstrasse und weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
+										<RecommendationText xml:lang="DE">Reisende zur Brühlstrasse und weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
 						zwischen Wey und Brühlstrasse) oder die normale verkehrende Linie 14 (mit Halten) ab Kante F (Wey) und steigen an der Brüelstrasse
-						wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Ver-kehrshaus erreichen ihr Ziel nur zu Fuß.</Recommendation>
+						wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Ver-kehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -649,24 +649,24 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Unterbruch der Linien 6 und 8</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleiteten Linien 24 und 73, die
+										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleiteten Linien 24 und 73, die
 						normal verkehrende Linie 14 oder den Entlastungsbus ab Kante F (Wey) und steigen Sie an der Brüelstrasse wieder um. Reisende nach
-						Haldensteig, Casino-Palace, Europe, Dietschiberg und Ver-kehrshaus erreichen ihr Ziel nur zu Fuß.</Recommendation>
+						Haldensteig, Casino-Palace, Europe, Dietschiberg und Ver-kehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText>Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark>Weitere Informationen erhalten Sie beim Auskunftspersonal.</Remark>
+										<Remark xml:lang="DE">Weitere Informationen erhalten Sie beim Auskunftspersonal.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -731,20 +731,20 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Unterbruch der Linien 6 und 8; Umleitung der Linien 24 und 73</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8; Umleitung der Linien 24 und 73</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Benutzen Sie die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte bis Brühlstrasse) oder die normal
-						verkehrende Linie 14 (mit Halten) bis Brüelstrasse.</Recommendation>
+										<RecommendationText xml:lang="DE">Benutzen Sie die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte bis Brühlstrasse) oder die normal
+						verkehrende Linie 14 (mit Halten) bis Brüelstrasse.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText>Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -797,24 +797,24 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Linie 6 und 8 fallen bis Brüelstrasse aus. Linie 24 wird zwischen Luzernerhof und Brüelstrasse via St. Anna
+										<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen bis Brüelstrasse aus. Linie 24 wird zwischen Luzernerhof und Brüelstrasse via St. Anna
 						umgeleitet. Ca. 7 Min. längere Fahrzeit. Linie 73 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 6 Min.
 						längere Fahrzeit.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleiteten Linien 24, 73 und den
+										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleiteten Linien 24, 73 und den
 						Entlastungsbus (ohne Halte zwischen Wey und Brühlstrasse) oder die normale verkehrende Linie 14 (mit Halten) ab Kante F (Wey) und
 						steigen Sie an der Brüelstrasse um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr
-						Ziel nur zu Fuß.</Recommendation>
+						Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText>Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1049,23 +1049,23 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Keine Bedienung der Linien 6, 8, 24 und 73 zwischen Luzernerhof und Brüelstrasse</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Keine Bedienung der Linien 6, 8, 24 und 73 zwischen Luzernerhof und Brüelstrasse</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Reisende zwischen Luzernerhof und Brüelstrasse erreichen ihr Ziel nur zu Fuß. Ab Luzernerhof und Brüelstrasse
-						verkehren die Linie auf den normalen Fahrwegen.</Recommendation>
+										<RecommendationText xml:lang="DE">Reisende zwischen Luzernerhof und Brüelstrasse erreichen ihr Ziel nur zu Fuß. Ab Luzernerhof und Brüelstrasse
+						verkehren die Linie auf den normalen Fahrwegen.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText>Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark>Fällt aus</Remark>
+										<Remark xml:lang="DE">Fällt aus</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1087,7 +1087,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:618::01</StopPointRef>
 														<StopPointName>Brüelstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1105,13 +1105,13 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Einstieg der Linien 6 und 8 bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1133,7 +1133,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:618::01</StopPointRef>
 														<StopPointName>Brüelstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1148,7 +1148,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:618::04</StopPointRef>
 														<StopPointName>Brüelstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1166,17 +1166,17 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Die Umleitung endet hier</Description>
+										<DescriptionText xml:lang="DE">Die Umleitung endet hier</DescriptionText>
 									</DescriptionContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Umstieg auf Linie 6 und 8: Einstieg bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel
-						nur zu Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Umstieg auf Linie 6 und 8: Einstieg bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel
+						nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1229,19 +1229,19 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Normale Bedienung der Linien 6 bis Büttenenhalde und 8 bis Würzenbach.</Description>
+										<DescriptionText xml:lang="DE">Normale Bedienung der Linien 6 bis Büttenenhalde und 8 bis Würzenbach.</DescriptionText>
 									</DescriptionContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Es muss mit Verspätungen gerechnet werden.</Remark>
+										<Remark xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1268,31 +1268,32 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2502::01</StopPointRef>
 														<StopPointName>Giseli</StopPointName>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2503::01</StopPointRef>
 														<StopPointName>Oberseeburg</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2504::01</StopPointRef>
 														<StopPointName>Oberseeburghöhe</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2505::01</StopPointRef>
 														<StopPointName>Eggen</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2506::01</StopPointRef>
 														<StopPointName>Büttenen</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2507::01</StopPointRef>
 														<StopPointName>Büttenenhalde</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1312,12 +1313,12 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:619::01</StopPointRef>
 														<StopPointName>Würzenbachmatte</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:620::01</StopPointRef>
 														<StopPointName>Würzenbach</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1335,16 +1336,16 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Es muss mit Verspätungen gerechnet werden.</Remark>
+										<Remark xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1383,17 +1384,17 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Diese Fahrt endet hier</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Diese Fahrt endet hier</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Einstieg der Linien 6 und 8 bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu
-						Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu
+						Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1415,32 +1416,32 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2507::01</StopPointRef>
 														<StopPointName>Büttenenhalde</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>origin</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2506::02</StopPointRef>
 														<StopPointName>Büttenen</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2505::02</StopPointRef>
 														<StopPointName>Eggen</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2504::02</StopPointRef>
 														<StopPointName>Oberseeburghöhe</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2503::02</StopPointRef>
 														<StopPointName>Oberseeburg</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2502::02</StopPointRef>
 														<StopPointName>Giseli</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1458,21 +1459,21 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Die Linie 6 fällt zwischen Brüelstrasse und Luzernerhof aus.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Die Linie 6 fällt zwischen Brüelstrasse und Luzernerhof aus.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Reisende nach Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
+										<RecommendationText xml:lang="DE">Reisende nach Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
 						zwischen Brühlstrasse und Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) bis Luzernerhof und steigen dort wieder um.
-						Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</Recommendation>
+						Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1494,32 +1495,32 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2507::01</StopPointRef>
 														<StopPointName>Büttenenhalde</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>origin</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2506::02</StopPointRef>
 														<StopPointName>Büttenen</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2505::02</StopPointRef>
 														<StopPointName>Eggen</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2504::02</StopPointRef>
 														<StopPointName>Oberseeburghöhe</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2503::02</StopPointRef>
 														<StopPointName>Oberseeburg</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:2502::02</StopPointRef>
 														<StopPointName>Giseli</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1537,21 +1538,21 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Die Linie 6 fällt zwischen Brüelstrasse und Luzernerhof aus.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Die Linie 6 fällt zwischen Brüelstrasse und Luzernerhof aus.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Reisende nach Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
+										<RecommendationText xml:lang="DE">Reisende nach Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
 						zwischen Brühlstrasse und Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) bis Luzernerhof und steigen dort wieder um.
-						Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</Recommendation>
+						Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1573,7 +1574,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:618::02</StopPointRef>
 														<StopPointName>Brüelstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1591,18 +1592,18 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Linie 6 wendet hier</Description>
+										<DescriptionText xml:lang="DE">Linie 6 wendet hier</DescriptionText>
 									</DescriptionContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Reisende zum Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
+										<RecommendationText xml:lang="DE">Reisende zum Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
 						bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) ab Kante D und steigen beim Luzernerhof wieder um. Reisende nach
-						Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Hal-densteig erreichen ihr Ziel nur zu Fuß.</Recommendation>
+						Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Hal-densteig erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1624,7 +1625,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:618::02</StopPointRef>
 														<StopPointName>Brüelstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1639,7 +1640,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:618::02</StopPointRef>
 														<StopPointName>Brüelstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1657,16 +1658,16 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Unterbruch der Linien 6 und 8</Description>
+										<DescriptionText xml:lang="DE">Unterbruch der Linien 6 und 8</DescriptionText>
 									</DescriptionContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Reisende zum Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
+										<ConsequenceText xml:lang="DE">Reisende zum Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte
 						bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) ab Kante D und steigen beim Luzernerhof wieder um. Reisende nach
 						Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Hal-densteig erreichen ihr Ziel nur zu Fuß.</ConsequenceText>
 									</ConsequenceContent>
@@ -1690,7 +1691,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:618::04</StopPointRef>
 														<StopPointName>Brühlstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1707,7 +1708,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:618::04</StopPointRef>
 														<StopPointName>Brühlstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1726,16 +1727,16 @@
 									<TextualContentSize>L</TextualContentSize>
 									<!--Wie sind hier die unterschiedlichen Ankündigungen abzubilden? Wie in <ActionRef>0070</ActionRef> und Folgende oder alles in einem Text? -->
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Unterbruch der Linien 6 und 8; Umleitung der Linien 24 und 73.</Description>
+										<DescriptionText xml:lang="DE">Unterbruch der Linien 6 und 8; Umleitung der Linien 24 und 73.</DescriptionText>
 									</DescriptionContent>
 									<ConsequenceContent>
-										<ConsequenceText>Benutzen Sie die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) bis Luzernerhof.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Benutzen Sie die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) bis Luzernerhof.</ConsequenceText>
 									</ConsequenceContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1760,7 +1761,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:121::xx</StopPointRef>
 														<StopPointName>Luzernerhof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1778,17 +1779,17 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Die Umleitung endet hier</Description>
+										<DescriptionText xml:lang="DE">Die Umleitung endet hier</DescriptionText>
 									</DescriptionContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel
-						nur zu Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel
+						nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1810,7 +1811,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:121::03</StopPointRef>
 														<StopPointName>Luzernerhof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1828,14 +1829,14 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel
-						nur zu Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel
+						nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1857,7 +1858,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:121::3</StopPointRef>
 														<StopPointName>Luzernerhof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>origin</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1872,7 +1873,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:121::3</StopPointRef>
 														<StopPointName>Luzernerhof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>origin</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1890,16 +1891,16 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Die Umleitung endet hier</Description>
+										<DescriptionText xml:lang="DE">Die Umleitung endet hier</DescriptionText>
 									</DescriptionContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel nur zu Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1921,22 +1922,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:121::3</StopPointRef>
 														<StopPointName>Luzernerhof</StopPointName>
-														<StopCondition>stop</StopCondition>
-													</AffectedStopPoint>
-												</StopPoints>
-											</AffectedLine>
-											<AffectedLine>
-												<LineRef>ch:vbl:VBL024</LineRef>
-												<PublishedLineName>24</PublishedLineName>
-												<Direction>
-													<DirectionRef>ch:vbl:VBL024:B</DirectionRef>
-													<DirectionName>Bahnhof</DirectionName>
-												</Direction>
-												<StopPoints>
-													<AffectedStopPoint>
-														<StopPointRef>ch:vbl:121::3</StopPointRef>
-														<StopPointName>Luzernerhof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>origin</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -1954,16 +1940,16 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Die Umleitung endet hier</Description>
+										<DescriptionText xml:lang="DE">Die Umleitung endet hier</DescriptionText>
 									</DescriptionContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Umstieg auf die Linien 6 und 8: Einstieg bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</Recommendation>
+										<RecommendationText xml:lang="DE">Umstieg auf die Linien 6 und 8: Einstieg bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1985,7 +1971,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:121::04</StopPointRef>
 														<StopPointName>Luzernerhof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>origin</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -2000,7 +1986,7 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:121::04</StopPointRef>
 														<StopPointName>Luzernerhof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>origin</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -2018,19 +2004,19 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Normale Bedienung der Linien 6 bis Matthof und 8 bis Hirtenhof.</Description>
+										<DescriptionText xml:lang="DE">Normale Bedienung der Linien 6 bis Matthof und 8 bis Hirtenhof.</DescriptionText>
 									</DescriptionContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 									<RemarkContent>
-										<Remark xml:lang="de">Es muss mit Verspätungen gerechnet werden.</Remark>
+										<Remark xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -2052,52 +2038,52 @@
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:120::02</StopPointRef>
 														<StopPointName>Schwanenplatz</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:119::01</StopPointRef>
 														<StopPointName>Bahnhof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:118::02</StopPointRef>
 														<StopPointName>Kantonalbank</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:407::03</StopPointRef>
 														<StopPointName>Bundesplatz</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:606::02</StopPointRef>
 														<StopPointName>Werkhofstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:605::02</StopPointRef>
 														<StopPointName>Weinbergli</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:604::02</StopPointRef>
 														<StopPointName>Eisfeldstrasse</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:603::02</StopPointRef>
 														<StopPointName>Wartegg</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:602::02</StopPointRef>
 														<StopPointName>Schönbühl</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>intermediate</StopCondition>
 													</AffectedStopPoint>
 													<AffectedStopPoint>
 														<StopPointRef>ch:vbl:601::01</StopPointRef>
 														<StopPointName>Matthof</StopPointName>
-														<StopCondition>stop</StopCondition>
+														<StopCondition>destination</StopCondition>
 													</AffectedStopPoint>
 												</StopPoints>
 											</AffectedLine>
@@ -2115,16 +2101,16 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<DescriptionContent>
-										<Description xml:lang="de">Es muss mit Verspätungen gerechnet werden.</Description>
+										<DescriptionText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</DescriptionText>
 									</DescriptionContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Dauer der Störung ist noch unbekannt.</DurationText>
+										<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -2159,19 +2145,19 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Unterbruch der Linien 6 und 8</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleitete Linie 73 oder die normal verkehrende Linie 14 und steigen Sie an der Brüelstrasse wieder um. Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</Recommendation>
+										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleitete Linie 73 oder die normal verkehrende Linie 14 und steigen Sie an der Brüelstrasse wieder um. Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -2210,19 +2196,19 @@
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
-										<Summary xml:lang="de">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 									</SummaryContent>
-									<ReasonNameContent>
-										<ReasonName xml:lang="de">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-									</ReasonNameContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+									</ReasonContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="de">Unterbruch der Linien 6 und 8</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<Recommendation xml:lang="de">Empfehlung für Linien 6 und 8: Für Fahrten zur Brüelstrasse und weiter bleiben Sie in der Linie 14 und steigen Sie an der Brüelstrasse um. Reisende nach dem Verkehrshaus benutzen ab dem Bahnhof die S3 oder das Schiff.</Recommendation>
+										<RecommendationText xml:lang="DE">Empfehlung für Linien 6 und 8: Für Fahrten zur Brüelstrasse und weiter bleiben Sie in der Linie 14 und steigen Sie an der Brüelstrasse um. Reisende nach dem Verkehrshaus benutzen ab dem Bahnhof die S3 oder das Schiff.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText xml:lang="de">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
