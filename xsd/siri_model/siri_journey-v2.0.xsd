@@ -900,7 +900,7 @@ Rail transport, Roads and road transport
  <!-- =====JourneyRelation================================================== -->
  <xsd:complexType name="JourneyRelationsStructure">
   <xsd:annotation>
-   <xsd:documentation>Provides information about relations to other journeys.</xsd:documentation>
+   <xsd:documentation>Provides information about relations to other journeys. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="JourneyRelation" type="JourneyRelationStructure" maxOccurs="unbounded"/>
@@ -910,8 +910,8 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="JourneyRelationType" type="JourneyRelationTypeEnumeration">
     <xsd:annotation>
-  	 <xsd:documentation>Specifies the type of the relation, e.g., joining, splitting, replacement etc.</xsd:documentation>
-  	</xsd:annotation>
+     <xsd:documentation>Specifies the type of the relation, e.g., joining, splitting, replacement etc. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:group ref="JourneyRelationInfoGroup"/>
    <xsd:element ref="RelatedJourney" maxOccurs="unbounded"/>
@@ -919,39 +919,48 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="JourneyRelationInfoGroup">
   <xsd:annotation>
-   <xsd:documentation>Specifies which CALL or JOURNEY PART of the JOURNEY has a JOURNEY RELATION.</xsd:documentation>
+   <xsd:documentation>Specifies which CALL or JOURNEY PART of the JOURNEY has a JOURNEY RELATION. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
     <xsd:element name="CallInfo" type="RelatedCallStructure">
-  	 <xsd:annotation>
-  	  <xsd:documentation>Information about the stop at which the JOURNEY is related to another JOURNEY.</xsd:documentation>
-  	 </xsd:annotation>
-  	</xsd:element>
-  	<xsd:element name="JourneyPartInfo" type="RelatedJourneyPartStructure">
-  	 <xsd:annotation>
-  	  <xsd:documentation>Information about the JOURNEY PART for which the JOURNEY has a JOURNEY RELATION.</xsd:documentation>
-  	 </xsd:annotation>
-  	</xsd:element>
+     <xsd:annotation>
+      <xsd:documentation>Information about the stop at which the JOURNEY is related to another JOURNEY. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="JourneyParts">
+     <xsd:annotation>
+      <xsd:documentation>Information about the JOURNEY PARTs for which the JOURNEY has a JOURNEY RELATION. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+	 <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="JourneyPartInfo" type="RelatedJourneyPartStructure" maxOccurs="unbounded">
+        <xsd:annotation>
+         <xsd:documentation>Information about related parts of JOURNEY. +SIRI v2.1</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
    </xsd:choice>
   </xsd:sequence>
  </xsd:group>
  <xsd:complexType name="RelatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>The JOURNEY RELATION refers to this CALL.</xsd:documentation>
+   <xsd:documentation>The JOURNEY RELATION refers to this CALL. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="AbstractCallStructure">
     <xsd:sequence>
- 	 <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
- 	 <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
- 	</xsd:sequence>
+     <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
+     <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
+    </xsd:sequence>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
  <xsd:complexType name="RelatedJourneyPartStructure">
   <xsd:annotation>
-   <xsd:documentation>The JOURNEY RELATION refers to this JOURNEY PART.</xsd:documentation>
+   <xsd:documentation>The JOURNEY RELATION refers to this JOURNEY PART. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="JourneyPartInfoStructure"/>
@@ -959,15 +968,15 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="RelatedJourney" type="RelatedJourneyStructure">
   <xsd:annotation>
-   <xsd:documentation>Refers to the JOURNEY to which the current JOURNEY is related.</xsd:documentation>
+   <xsd:documentation>Refers to the JOURNEY to which the current JOURNEY is related. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="RelatedJourneyStructure">
   <xsd:complexContent>
    <xsd:extension base="ConnectingJourneyRefStructure">
     <xsd:sequence>
-  	 <xsd:group ref="JourneyRelationInfoGroup" minOccurs="0"/>
-  	</xsd:sequence>
+     <xsd:group ref="JourneyRelationInfoGroup" minOccurs="0"/>
+    </xsd:sequence>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
