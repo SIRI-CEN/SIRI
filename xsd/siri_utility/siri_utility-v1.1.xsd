@@ -102,7 +102,7 @@ Rail transport, Roads and road transport
    <xsd:element name="KeyValue" type="KeyValueStructure" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Key value pair for Entity.</xsd:documentation>
-  	</xsd:annotation>
+    </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
@@ -113,8 +113,8 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="Key" type="xsd:normalizedString" maxOccurs="1">
     <xsd:annotation>
-  	 <xsd:documentation>Identifier of value e.g. System.</xsd:documentation>
-  	</xsd:annotation>
+     <xsd:documentation>Identifier of value e.g. System.</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:element name="Value" type="xsd:normalizedString" maxOccurs="1">
     <xsd:annotation>
@@ -175,28 +175,28 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
-   	 <xsd:documentation>Name of TYPE OF VALUE.</xsd:documentation>
-   	</xsd:annotation>
+     <xsd:documentation>Name of TYPE OF VALUE.</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:element name="ShortName" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
-   	 <xsd:documentation>Short Name for TYPE OF VALUE.</xsd:documentation>
-   	</xsd:annotation>
+     <xsd:documentation>Short Name for TYPE OF VALUE.</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
-   	<xsd:annotation>
-   	 <xsd:documentation>Description of TYPE OF VALUE.</xsd:documentation>
-   	</xsd:annotation>
+    <xsd:annotation>
+     <xsd:documentation>Description of TYPE OF VALUE.</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:element name="Image" type="xsd:anyURI" minOccurs="0">
-   	<xsd:annotation>
-   	 <xsd:documentation>Default image for TYPE OF VALUE.</xsd:documentation>
-   	</xsd:annotation>
+    <xsd:annotation>
+     <xsd:documentation>Default image for TYPE OF VALUE.</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:element name="Url" type="xsd:anyURI" minOccurs="0">
-   	<xsd:annotation>
-   	 <xsd:documentation>Default URL for TYPE OF VALUE.</xsd:documentation>
-   	</xsd:annotation>
+    <xsd:annotation>
+     <xsd:documentation>Default URL for TYPE OF VALUE.</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:element name="PrivateCode" type="xsd:normalizedString" minOccurs="0"/>
   </xsd:sequence>
@@ -208,11 +208,11 @@ Rail transport, Roads and road transport
   <xsd:complexType>
    <xsd:complexContent>
     <xsd:restriction base="ValueSetStructure">
-  	 <xsd:sequence>
-  	  <xsd:group ref="ValueSetGroup"/>
-  	 </xsd:sequence>
-  	 <xsd:attribute name="id" type="VslueSetIdType"/>
-  	</xsd:restriction>
+     <xsd:sequence>
+      <xsd:group ref="ValueSetGroup"/>
+     </xsd:sequence>
+     <xsd:attribute name="id" type="ValueSetIdType"/>
+    </xsd:restriction>
    </xsd:complexContent>
   </xsd:complexType>
   <xsd:unique name="TypeOfValue_Unique">
@@ -231,7 +231,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="ValueSetGroup"/>
   </xsd:sequence>
-  <xsd:attribute name="id" type="VslueSetIdType"/>
+  <xsd:attribute name="id" type="ValueSetIdType"/>
   <xsd:attribute name="classOfValues" type="NameOfClass">
    <xsd:annotation>
     <xsd:documentation>Name of Class of Values in Set.</xsd:documentation>
@@ -245,12 +245,12 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
-  	 <xsd:documentation>Name of Value.</xsd:documentation>
-  	</xsd:annotation>
+     <xsd:documentation>Name of Value.</xsd:documentation>
+    </xsd:annotation>
    </xsd:element>
    <xsd:element name="Values" type="ValuesStructure" minOccurs="0">
     <xsd:annotation>
-  	 <xsd:documentation>Values in Set.</xsd:documentation>
+     <xsd:documentation>Values in Set.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -270,7 +270,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:restriction base="ObjectIdType"/>
  </xsd:simpleType>
- <xsd:simpleType name="VslueSetIdType">
+ <xsd:simpleType name="ValueSetIdType">
   <xsd:annotation>
    <xsd:documentation>Type for identifier of a VALUE SET.</xsd:documentation>
   </xsd:annotation>
