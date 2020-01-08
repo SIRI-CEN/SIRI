@@ -215,7 +215,12 @@ DEPRECATED from SRI 2.0</xsd:documentation>
    <xsd:choice>
     <xsd:element ref="InterchangeRef"/>
     <xsd:sequence>
-	 <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0">
+     <xsd:element name="InterchangeCode" type="InterchangeCodeType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Identifier of ESTIMATED SERVICE JOURNEY INTERCHANGE in case it is an addition to the plan. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place. +SIRI v2.0</xsd:documentation>
       </xsd:annotation>
@@ -233,7 +238,7 @@ how do we communicate this change in the interchange? If the STOP POINTs are mod
 reference the STOP POINT of the new/expected QUAY (which was transmitted in the ESTIMATED VEHICLE JOURNEY). +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="FeederVisitNumber" type="VisitNumberType" minOccurs="0">
+     <xsd:element name="FeederVisitNumber" type="VisitNumberType" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Sequence of visit to Feeder stop within Feeder JOURNEY PATTERN.</xsd:documentation>
       </xsd:annotation>
@@ -262,7 +267,7 @@ Assuming that the distributor is directed to another QUAY (and that STOP POINTs 
 should always reference the STOP POINT of the new/expected QUAY (which was transmitted in the ESTIMATED VEHICLE JOURNEY). +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
+     <xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Sequence of visit to Distributor stop within Distributor JOURNEY PATTERN.</xsd:documentation>
       </xsd:annotation>
@@ -279,15 +284,15 @@ despatching alterations. Because such an extra CALL may have the same VisitNumbe
        <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-    </xsd:sequence>
-   </xsd:choice>
-   <xsd:group ref="InterchangePropertyGroup" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Properties of SERVICE JOURNEY INTERCHANGE. It is important to note that the InterchangePropertyGroup displays planning data whereas, for example, 
+     <xsd:group ref="InterchangePropertyGroup" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Properties of SERVICE JOURNEY INTERCHANGE. It is important to note that the InterchangePropertyGroup displays planning data whereas, for example, 
 InterchangeStatus or Will(Not)Wait contain the real-time data. A SERVICE JOURNEY INTERCHANGE may be transmitted with "Guaranteed=true", but also WillNotWait due to major despatching alterations.
 However, Will(Not)Wait will always take precedence over the property Guaranteed, which means that WillNotWait breaks the connection regardless of whether Guarateed was transmitted. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
+      </xsd:annotation>
+     </xsd:group>
+    </xsd:sequence>
+   </xsd:choice>
    <xsd:element name="InterchangeStatus" type="InterchangeStatusEnumeration" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Whether this interchange is planned, updated, additional or cancelled. +SIRI v2.1</xsd:documentation>
