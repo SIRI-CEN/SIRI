@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Siri xmlns="http://www.siri.org.uk/siri" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../../schema/xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
 	<ServiceDelivery>
 		<ResponseTimestamp>2018-10-16T10:22:30+00:00</ResponseTimestamp>
 		<ProducerRef>ch:VBL</ProducerRef>
@@ -28,16 +28,17 @@
 					</ValidityPeriod>
 					<MiscellaneousReason>fire</MiscellaneousReason>
 					<ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
+					<ReasonName xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonName>
 					<Priority>3</Priority>
 					<ScopeType>route</ScopeType>
-					<Language>de</Language>
-					<Summary xml:lang="DE">
-	Unterbruch zwischen Luzernerhof und Verkehrshaus
-					</Summary>
+					<Language>DE</Language>
+					<Summary xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+					<Summary xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</Summary>
 					<InfoLinks>
 						<InfoLink>
 							<Uri>http://www.vbl.ch/aktuelles/verkehrsmeldungen/stoerungen/20160603_13?</Uri>
 							<Label xml:lang="DE">Weitere Informationen erhalten Sie unter:</Label>
+							<Label xml:lang="EN">For more information, please visit:</Label>
 						</InfoLink>
 					</InfoLinks>
 					<Affects>
@@ -395,33 +396,33 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<DescriptionContent>
 										<DescriptionText xml:lang="DE">Betroffen sind die Linien 6, 8 und 24</DescriptionText>
+										<DescriptionText xml:lang="EN">Affected lines are 6, 8 and 24</DescriptionText>
 									</DescriptionContent>
 									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
-									</ConsequenceContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Linie 24 wird zwischen Luzernerhof und Brüel via St. Anna umgeleitet.</ConsequenceText>
-									</ConsequenceContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Ca. 7 Min. längere Fahrzeit.</ConsequenceText>
+										<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen zwischen Luzernerhof und Brüelstrasse aus.
+											Linie 24 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 7 Min. längere Fahrzeit.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 and 8 services cancelled between Luzernerhof and Brüelstrasse.
+											Line 24 divirted between Luzernerhof and Brüelstrasse via St. Anna. Approx. 7 min delay.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
-									</RecommendationContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Zwischen «Luzern, Bahnhof» und «Verkehrshaus» benutzen sie die S3 oder das Schiff.</RecommendationText>
-									</RecommendationContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Umstiegsempfehlung für die Linien 6 und 8: Bei den Haltestellen Luzernerhof bzw. Brüelstrasse auf die umgeleitete Linie 24, die normal verkehrenden Linien 14 und 73 oder den Entlastungsbus umsteigen.</RecommendationText>
+										<RecommendationText xml:lang="DE">Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.
+											Zwischen Luzern, Bahnhof und Verkehrshaus benutzen sie die S3 oder das Schiff.
+											Umstiegsempfehlung für die Linien 6 und 8: Bei den Haltestellen Luzernerhof bzw. Brüelstrasse auf die umgeleitete Linie 24, die normal verkehrenden Linien 14 und 73 oder den Entlastungsbus umsteigen.</RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.
+											Between Luzern, Bahnhof and Verkehrshaus use the S3 or ferry.
+											Transfer advice for line 6 and 8: At Luzernerhof or Brüelstrasse use diverted line 24, 73, additional buses or the regular line 14 services.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -497,18 +498,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Die Linie 6 fällt zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 cancelled between Luzernerhof and Brüelstrasse.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 (ohne Halte zwischen Wey und Brüelstrasse) oder die normal verkehrenden Linien 14 und 73 und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24 (direct between Wey and Brühlstrasse) or the regular line 14 or 73 services and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText xml:lang="DE">Dauer	Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -518,26 +524,32 @@
 								<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 								<Version>1</Version>
 								<SourceRef>vbl</SourceRef>
-								<Perspective>vehicleJourney</Perspective>
+								<Perspective>stopPoint</Perspective>
 								<TextualContent>
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Die Linie 6 fällt zwischen Luzernerhof und Brüelstrasse aus.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 cancelled between Luzernerhof and Brüelstrasse.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 (ohne Halte zwischen Wey und Brüelstrasse) oder die normal verkehrenden Linien 14 und 73 und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß. </RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24 (direct between Wey and Brühlstrasse) or the regular services of line 14 or 73 and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 									<RemarkContent>
 										<Remark xml:lang="DE">Weitere Informationen erhalten Sie unter www.vbl.ch/stoerung/haldenstrasse</Remark>
+										<Remark xml:lang="EN">For further information, please visit www.vbl.ch/stoerung/haldenstrasse</Remark>
 									</RemarkContent>
 									<InfoLink>
 										<Uri>www.vbl.ch/stoerung/haldenstrasse</Uri>
@@ -576,15 +588,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Linie 6 wendet hier</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 turns here</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Reisende zur Brüelstrasse und weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte zwischen Wey und Brüelstrasse) oder die normale verkehrende Linie 14 (mit Halten) ab Kante F (Wey) oder die Linie 73 ab Kante D und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24, additonal buses (direct between Wey and Brüelstrasse), the regular services of line 14 (all stops) from platform F (Way) or line 73 from platform D and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -638,21 +654,27 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleitete Linie 24, die normal verkehrende Linie 14 und den Entlastungsbus ab Kante F (Wey) oder die Linie 73 ab Kante D und steigen Sie an der Brüelstrasse wieder um.Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleitete Linie 24, die normal verkehrende Linie 14 und den Entlastungsbus ab Kante F (Wey) oder die Linie 73 ab Kante D und steigen Sie an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Transfer advice line 6 and 8: To Brüelstrasse use diverted line 24, the regular line 14 services or the additional buses from platform F (Wey) or line 73 from platform D and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
-										<DurationText xml:lang="DE">Weitere Informationen erhalten Sie beim Auskunftspersonal.</DurationText>
+										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 									<RemarkContent>
 										<Remark xml:lang="DE">Weitere Informationen erhalten Sie beim Auskunftspersonal.</Remark>
+										<Remark xml:lang="EN">For further information, please contact staff.</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -707,18 +729,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8; Umleitung der Linien 24.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted; Line 24 diverted.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Benutzen Sie die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte bis Brüelstrasse) oder die normal verkehrenden Linie 14 (mit Halten) und 73 bis Brüelstrasse.</RecommendationText>
+										<RecommendationText xml:lang="EN">Use diverted line 24, additional buses (direct to Brüelstrasse), regular services of line 14 (all stops) or 73 to Brüelstrasse.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -772,18 +799,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen bis Brüelstrasse aus. Linie 24 wird zwischen Luzernerhof und Brüel via St. Anna umgeleitet. Ca. 7 Min. längere Fahrzeit. Linie 73 verkehrt wieder normal.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 and 8 cancelled services to Brüelstrasse. Line 24 services diverted between Luzernerhof and Brüel via St. Anna. Approx. 7 min delay. Line 73 back to regular service.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte zwischen Wey und Brüelstrasse) oder die normale verkehrende Linie 14 (mit Halten) ab Kante F (Wey) oder die Linie 73 ab Kante D und steigen Sie an der Brüelstrasse um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Transfer advice for line 6 and 8: Use diverted line 73, additonal buses (direct between Wey and Brüelstrasse), the regular line 14 services (all stops) from platform F (Wey) or line 73 from platform D and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -977,21 +1009,27 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Keine Bedienung der Linien 6, 8 und 24 zwischen Luzernerhof und Brüelstrasse</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6, 8 and 24 no service between Luzernerhof and Brüelstrasse</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Reisende zwischen Luzernerhof und Brüelstrasse erreichen ihr Ziel nur zu Fuß. Ab Luzernerhof und Brüelstrasse verkehren die Linie auf den normalen Fahrwegen.</RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers between Luzernerhof and Brüelstrasse can only reach their destination on foot. From Luzernerhof and Brüelstrasse lines will run on regular routes.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 									<RemarkContent>
 										<Remark xml:lang="DE">Fällt aus</Remark>
+										<Remark xml:lang="EN">Cancelled</Remark>
 									</RemarkContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1032,15 +1070,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Die Fahrt endet hier</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Service terminates here</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Board line 6 and 8 from platform C. Travellers to Verkehrshaus and Dietschiberg can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1081,15 +1123,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Die Umleitung endet hier</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Diversion ends here</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Umstieg auf Linie 6 und 8: Einstieg bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Transfer to line 6 and 8: Board from platform C. Travellers to Verkehrshaus and Dietschiberg can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1143,15 +1189,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Normale Bedienung der Linien 6 bis Büttenenhalde und 8 bis Würzenbach. Es muss mit Verspätungen gerechnet werden.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Regular service on line 6 to Büttenenhalde and 8 to Würzenbach. Expect delays.</ConsequenceText>
 									</ConsequenceContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1236,15 +1286,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Expect delays.</ConsequenceText>
 									</ConsequenceContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1284,15 +1338,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Diese Fahrt endet hier</ConsequenceText>
+										<ConsequenceText xml:lang="EN">This service terminates here</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Board line 6 and 8 from platform C. Travellers to Verkehrshaus and Dietschiberg can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1358,18 +1416,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Die Linie 6 fällt zwischen Brüelstrasse und Luzernerhof aus.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 cancelled between Brüelstrasse and Luzernerhof.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Reisende nach Luzernerhof oder weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte zwischen Brüelstrasse und Luzernerhof) oder die normal verkehrenden Linien 14 (mit Halten) und 73 bis Luzernerhof und steigen dort wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers to Luzernerhof or further use the diverted line 24, additional buses (direct between Brühlstrasse and Luzernerhof), the regular line 14 services (all stop) or line 73 to Luzernhof and transfer there. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1435,18 +1498,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Die Linie 6 fällt zwischen Brüelstrasse und Luzernerhof aus.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 cancelled between Brüelstrasse and Luzernerhof.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Reisende nach Luzernerhof oder weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte zwischen Brüelstrasse und Luzernerhof) oder die normal verkehrenden Linien 14 (mit Halten) und 73 bis Luzernerhof und steigen dort wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers to Luzernerhof or further use the diverted line 24, the additional buses (direct between Brühlstrasse and Luzernerhof), the regular line 14 services (all stop) or line 73 to Luzernhof and transfer there. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1486,15 +1554,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Linie 6 wendet hier</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 turns here</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Reisende zum Luzernerhof oder weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) oder 73 ab Kante D und steigen beim Luzernerhof wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers to Luzernerhof or further use the diverted line 24, addintional buses (direct to Luzernerhof), the regular line 14 services (all stops) or line 73 from platform D and transfer back to Luzernerhof. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1534,18 +1606,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Reisende zum Luzernerhof oder weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte bis Luzernerhof) ab Kante D oder die normal verkehrenden Linien 14 (mit Halten) ab Kante D und 73 ab Kante C und steigen beim Luzernerhof wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Travellers to Luzernerhof or further use the diverted line 24, addintional buses (direct to Luzernerhof) from platform D, the regular line 14 services (all stops) from platform D or line 73 from platform C and transfer back to Luzernerhof. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1611,18 +1688,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8; Umleitung der Linien 24.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted; Line 24 diverted.</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Benutzen Sie die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrenden Linien 14 (mit Halten) und 73 bis Luzernerhof.</RecommendationText>
+										<RecommendationText xml:lang="EN">Use diverted line 24 and additional buses (direct to Luzernerhof) or the regular line 14 (all stops) and line 73 to Luzernerhof.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1662,18 +1744,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Diese Fahrt endet hier</ConsequenceText>
+										<ConsequenceText xml:lang="EN">This service terminates here</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Board line 6 and 8 from platform A. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1714,15 +1801,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Die Umleitung endet hier</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Diversion ends here</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Umstieg auf Linie 6 und 8: Einstieg bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Transfer to line 6 and 8: Board from platform A. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1809,15 +1900,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Die Umleitung endet hier</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Diversion ends here</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Umstieg auf die Linien 6 und 8: Einstieg bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
+										<RecommendationText xml:lang="EN">Transfer to line 6 and 8: Board from platform A. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1873,15 +1968,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Normale Bedienung der Linien 6 bis Matthof und 8 bis Hirtenhof. Es muss mit Verspätungen gerechnet werden.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Regular service on line 6 to Matthof and line 8 to Hirtenhof. Expect delays.</ConsequenceText>
 									</ConsequenceContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -1967,15 +2066,19 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Expect delays.</ConsequenceText>
 									</ConsequenceContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -2017,18 +2120,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die Linien 14 oder 73 und steigen Sie an der Brüelstrasse wieder um.Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</RecommendationText>
+										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die Linien 14 oder 73 und steigen Sie an der Brüelstrasse wieder um. Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</RecommendationText>
+										<RecommendationText xml:lang="EN">Transfer advice line 6 and 8: Use line 14 or 73 to Brüelstrasse and transfer back to line 6 and 8. Travellers to Verkehrshaus use the S3 or ferry.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
@@ -2069,18 +2177,23 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<ConsequenceContent>
 										<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8</ConsequenceText>
+										<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted</ConsequenceText>
 									</ConsequenceContent>
 									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die Linien 14 oder 73 und steigen Sie an der Brüelstrasse wieder um.Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</RecommendationText>
+										<RecommendationText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die Linien 14 oder 73 und steigen Sie an der Brüelstrasse wieder um. Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</RecommendationText>
+										<RecommendationText xml:lang="EN">Transfer advice line 6 and 8: Use line 14 or 73 to Brüelstrasse and transfer back to line 6 and 8. Travellers to Verkehrshaus use the S3 or ferry.</RecommendationText>
 									</RecommendationContent>
 									<DurationContent>
 										<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+										<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 									</DurationContent>
 								</TextualContent>
 							</PassengerInformationAction>
