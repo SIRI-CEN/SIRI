@@ -771,7 +771,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:element name="ArrivalSectorName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName.</xsd:documentation>
+   <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting">
@@ -846,7 +846,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:element name="DepartureSectorName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle.</xsd:documentation>
+   <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" default="boarding">

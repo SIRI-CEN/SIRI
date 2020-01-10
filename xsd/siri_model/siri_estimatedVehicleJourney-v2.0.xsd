@@ -395,7 +395,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element ref="ArrivalSectorName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName.</xsd:documentation>
+     <xsd:documentation>QUAY sector name to show passenger, i.e., section of the ARRIVAL PLATFORM where passengers may actually alight or board the vehicle. Can be omitted if the same as DepartureSectorName. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
@@ -415,7 +415,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element ref="DepartureSectorName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle.</xsd:documentation>
+     <xsd:documentation>QUAY sector name to show passenger, i.e., section of the DEPARTURE PLATFORM where passengers may actually board or alight the vehicle. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
