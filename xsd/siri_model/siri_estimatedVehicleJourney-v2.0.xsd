@@ -395,7 +395,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
@@ -420,7 +420,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Assignments of departure platfiorm for Scheduled STOP POINT to a physical QUAY. +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Assignments of departure platfiorm for Scheduled STOP POINT to a physical QUAY. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>
