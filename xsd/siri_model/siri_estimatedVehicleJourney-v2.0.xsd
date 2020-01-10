@@ -397,7 +397,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicel to arrive at.Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is
+     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicle to arrive at. Inheritable property. Can be omitted if the same as the DeparturePlatformName. If there is no arrival platform name separate from the departure platform name, the precedence is
 (i) any arrival platform on any related dated timetable element, 
 (ii) any departure platform name on this estimated element;
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
@@ -425,7 +425,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element ref="DeparturePlatformName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Departure QUAY ( Bay or platform) name. Defaulted taken from  from planned timetable..</xsd:documentation>
+     <xsd:documentation>Bay or platform (QUAY) name from which VEHICLE will depart. Inherited property.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
