@@ -430,12 +430,12 @@ Values for these elements can be specified on an annual schedule and will be inh
    <xsd:choice>
     <xsd:element name="BrandingRef" type="BrandingRefStructure" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Reference to a BRANDING.</xsd:documentation>
+      <xsd:documentation>Reference to a BRANDING. +SIRI v2.1</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="Branding" type="BrandingStructure" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>An arbitrary marketing classification.</xsd:documentation>
+      <xsd:documentation>An arbitrary marketing classification. +SIRI v2.1</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -695,13 +695,13 @@ Values for these elements can be specified on an annual schedule and will be inh
  <!-- ======================================================================= -->
  <xsd:simpleType name="BrandingCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a BRANDING.</xsd:documentation>
+   <xsd:documentation>Type for identifier of a BRANDING. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="BrandingRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a BRANDING.</xsd:documentation>
+   <xsd:documentation>Type for reference to a BRANDING. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="BrandingCodeType"/>
@@ -709,22 +709,16 @@ Values for these elements can be specified on an annual schedule and will be inh
  </xsd:complexType>
  <xsd:complexType name="BrandingStructure">
   <xsd:annotation>
-   <xsd:documentation>An arbitrary marketing classification.</xsd:documentation>
+   <xsd:documentation>An arbitrary marketing classification. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:group ref="TypeOfValueGroup"/>
+   <xsd:element name="BrandingCode" type="xsd:NMTOKEN">
+    <xsd:annotation>
+     <xsd:documentation>Identity of BRANDING.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="TypeOfValueGroup" minOccurs="0"/>
   </xsd:sequence>
-  <xsd:attribute name="derivedFromObjectRef" type="BrandingIdType" use="optional">
-   <xsd:annotation>
-    <xsd:documentation>Identity of object from which this BRANDING was derived.</xsd:documentation>
-   </xsd:annotation>
-  </xsd:attribute>
  </xsd:complexType>
- <xsd:simpleType name="BrandingIdType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of BRANDING.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="TypeOfValueIdType"/>
- </xsd:simpleType>
  <!-- ======================================================================= -->
 </xsd:schema>
