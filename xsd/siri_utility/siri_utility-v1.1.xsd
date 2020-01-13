@@ -152,7 +152,7 @@ such as the description and allowed values for codes. +SIRI v2.1</xsd:documentat
    <xsd:element ref="TypeOfValue"/>
   </xsd:choice>
  </xsd:complexType>
- <xsd:element name="TypeOfValue" abstract="true">
+ <xsd:element name="TypeOfValue" type="TypeOfValueStructure" abstract="false">
   <xsd:annotation>
    <xsd:documentation>A code value from an extensible set which may be added to by user applications, and is used to classify other SIRI entities. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
@@ -212,30 +212,11 @@ such as the description and allowed values for codes. +SIRI v2.1</xsd:documentat
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <xsd:element name="ValueSet">
+ <xsd:element name="ValueSet" type="ValueSetStructure">
   <xsd:annotation>
    <xsd:documentation>An extensible set of code values which may be added to by user applications and is used to validate the properties of entities. 
 Contains TYPE OF VALUEs that are an instance of the same class. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:restriction base="ValueSetStructure">
-     <xsd:sequence>
-	  <xsd:element name="ValueSetCode" type="ValueSetCodeType">
-       <xsd:annotation>
-        <xsd:documentation>Identifier of VALUE SET.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="ClassOfValues" type="NameOfClassType">
-       <xsd:annotation>
-        <xsd:documentation>Name of Class of values in set.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-      <xsd:group ref="ValueSetGroup"/>
-     </xsd:sequence>
-    </xsd:restriction>
-   </xsd:complexContent>
-  </xsd:complexType>
   <xsd:unique name="TypeOfValue_unique">
    <xsd:annotation>
     <xsd:documentation>TYPE OF VALUEs of the set must be unique.</xsd:documentation>
@@ -315,14 +296,4 @@ Contains TYPE OF VALUEs that are an instance of the same class. +SIRI v2.1</xsd:
   <xsd:restriction base="xsd:Name"/>
  </xsd:simpleType>
  <!-- ======================================================================= -->
- <xsd:element name="TypeOfMonitoringError" abstract="false" substitutionGroup="TypeOfValue">
-  <xsd:annotation>
-   <xsd:documentation>A Classification of reasons for non-availability of real-time data. Serves as an example for the usefulness of the TYPE OF VALUEs extension. Possible TypeOfMonitoringError codes could include 'NoError', 'GpsLocalisation' or 'RadioConnection'.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-  	<xsd:extension base="TypeOfValueStructure"/>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
 </xsd:schema>
