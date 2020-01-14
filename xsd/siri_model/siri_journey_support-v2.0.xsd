@@ -573,4 +573,37 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    <xsd:enumeration value="unspecified"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <!-- =====PredictionInaccuracy============================================================ -->
+ <xsd:simpleType name="PredictionInaccurateReasonEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for PredictionInaccurateReason, i.e., possible reasons for a change in prediction (in)accuracy.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="vehicleInTrafficJam">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate because of a traffic jam.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="technicalProblem">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate because of technical problems.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="dispatchAction">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate because of a despatching alteration.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="missingUpdate">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate because communication errors have prevented any updates.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate but the reason for an inaccurate prediction is unknown.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
 </xsd:schema>
