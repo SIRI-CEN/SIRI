@@ -158,6 +158,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Whether the prediction should be judged as inaccurate.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="PredictionInaccurateReason" type="PredictionInaccurateReasonEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="DataSource" type="xsd:string" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>System originating real-time data. Can be used to make judgements of relative quality and accuracy compared to other feeds.</xsd:documentation>
