@@ -165,6 +165,11 @@ DEPRECATED from SRI 2.0</xsd:documentation>
      <xsd:documentation>Whether the prediction for the journey is considered to be of a useful accuracy or not. Default is 'false'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="PredictionInaccurateReason" type="PredictionInaccurateReasonEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>How full the bus is. If omitted: Passenger load is unknown.</xsd:documentation>
@@ -362,6 +367,11 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element name="PredictionInaccurate" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Whether the prediction for the specific stop is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is not known to be inaccurate. {DOUBLE NEGATIVE IS BAD _ BETTER AS PredictionAccurate. Default is 'true'?]. If prediction is degraded, e.g. because in congestion, used to 9indicate a lowered quality of data. Inherited property. {SHOULD THIS JUST BE THE SPECIFIC InCongestion INDICATOR INSTEAD, OR IS IT MORE GENERAL]</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PredictionInaccurateReason" type="PredictionInaccurateReasonEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
