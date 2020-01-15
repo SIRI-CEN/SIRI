@@ -172,6 +172,21 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
+   <xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys of the specified VEHICLE MODE. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ProductCategoryRef" type="ProductCategoryRefStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys of the specified TYPE OF PRODUCT CATEGORY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys with a CALL at the specified STOP POINT. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="ProductionTimetableRequestPolicyGroup">
