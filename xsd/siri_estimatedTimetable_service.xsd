@@ -395,6 +395,9 @@ If false each subscription response will contain the full information as specifi
         </xsd:element>
         <xsd:element ref="FilterByOperatorRef"/>
         <xsd:element ref="FilterByLineRef"/>
+		<xsd:element ref="FilterByVehicleMode"/>
+		<xsd:element ref="FilterByProductCategoryRef"/>
+		<xsd:element ref="FilterByStopPointRef"/>
         <xsd:element name="FilterByVersionRef" type="xsd:boolean" default="true" minOccurs="0">
          <xsd:annotation>
           <xsd:documentation>Whether results can be filtered by TIMETABLE VERSION Default is 'true'.</xsd:documentation>
