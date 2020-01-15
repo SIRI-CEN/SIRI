@@ -134,6 +134,18 @@ Rail transport, Roads and road transport
      <xsd:documentation>Condition indicating nature of real-time fault. Present if VEHICLE JOURNEY is normally monitored but temporarily cannot be Monitored for a known reason.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="MonitoringResetMode" type="MonitoringResetModeEnumeration" default="fallBackToPlanningData" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The element must only be used if "Monitored=false" is transmitted. MonitoringResetMode describes how the schedule information system should handle a loss of monitoring, 
+i.e. non-availability of real-time information. The Producer can, for example, inform the Consumer system to reset the expected times to the aimed times, or even revoke the previously reported 
+predictions entirely. In the latter case the journey receives the same status as if it had not been reported at all, implying a fall-back to the planning data. +SIRI v2.1 
+Inherited property, i.e., if omitted in an update message: same as indicated by 
+(i) any preceding update message, 
+(ii) or, if no preceding message exists, by the referenced DATED VEHICLE JOURNEY. 
+(iii) In case no preceding message exists and a PT fallback is not possible either, the default value applies.
+The default value is 'fallBackToPlanningData' to preserve backward compatibility.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:group ref="ProgressDataQualityGroup"/>
    <xsd:group ref="ProgressDataGroup"/>
   </xsd:sequence>
