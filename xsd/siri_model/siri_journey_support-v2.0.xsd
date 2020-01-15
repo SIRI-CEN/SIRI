@@ -573,4 +573,24 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    <xsd:enumeration value="unspecified"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <!-- =============================================================================== -->
+ <xsd:simpleType name="MonitoringResetModeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for MonitoringResetMode, i.e., options a Consumer system has in case the Producer is affected by a loss of monitoring (non-availability of real-time information). +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="fallBackToPlanningData">
+    <xsd:annotation>
+     <xsd:documentation>The Producer revokes the previously reported predictions entirely, and informs the Consumer system to discard all ET messages that have been transmitted for this journey. 
+The journey receives the same status as if it had not been reported at all, i.e., it is reset to the planning data.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="resetExpectedTimesToAimed">
+    <xsd:annotation>
+     <xsd:documentation>The Consumer system should reset the predicted times to the planned times (ExpectedXXXTime => AimedXXXTime). 
+Other changes, e.g., platform changes, cancellations or extra CALLs etc. remain unchanged.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
 </xsd:schema>
