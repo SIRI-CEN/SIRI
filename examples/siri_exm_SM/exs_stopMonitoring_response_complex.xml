@@ -24,8 +24,8 @@
    <ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
    <ShortestPossibleCycle>PT3M</ShortestPossibleCycle>
    <MonitoringRef>HLTST011</MonitoringRef>
-   <MonitoringName xml:lang="en">British Museum Stop A</MonitoringName>
-   <MonitoringName xml:lang="fr">Musee Britannique Halte A</MonitoringName>
+   <MonitoringName xml:lang="EN">British Museum Stop A</MonitoringName>
+   <MonitoringName xml:lang="FR">Musee Britannique Halte A</MonitoringName>
    <!--====FIRST ARRIVAL ============================================ -->
    <MonitoredStopVisit>
     <RecordedAtTime>2004-12-17T09:25:46-05:00</RecordedAtTime>
@@ -58,8 +58,8 @@
       <PlaceName>Roman Road</PlaceName>
      </Via>
      <DestinationRef>PLACE45</DestinationRef>
-     <DestinationName xml:lang="en">Paradise Park</DestinationName>
-     <DestinationName xml:lang="fr">Parc du Paradis</DestinationName>
+     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
+     <DestinationName xml:lang="FR">Parc du Paradis</DestinationName>
      <VehicleJourneyName xml:lang="EN">Boris Special</VehicleJourneyName>
      <!-- JOURNEY INFO GROUP -->
      <JourneyNote>Kensall Green</JourneyNote>
@@ -95,8 +95,8 @@
       <PreviousCall>
        <StopPointRef>HLT0010</StopPointRef>
        <VisitNumber>2</VisitNumber>
-       <StopPointName xml:lang="en">Town Hall</StopPointName>
-       <StopPointName xml:lang="en">Hotel de Ville</StopPointName>
+       <StopPointName xml:lang="EN">Town Hall</StopPointName>
+       <StopPointName xml:lang="EN">Hotel de Ville</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedDepartureTime>2004-12-17T09:32:43-05:00</AimedDepartureTime>
        <ActualDepartureTime>2004-12-17T09:32:43-05:00</ActualDepartureTime>
@@ -125,8 +125,8 @@
       <OnwardCall>
        <StopPointRef>HLTST012</StopPointRef>
        <VisitNumber>4</VisitNumber>
-       <StopPointName xml:lang="en">Church</StopPointName>
-       <StopPointName xml:lang="fr">Eglise</StopPointName>
+       <StopPointName xml:lang="EN">Church</StopPointName>
+       <StopPointName xml:lang="FR">Eglise</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T09:30:56-05:00</AimedArrivalTime>
        <ExpectedArrivalTime>2004-12-17T09:30:56-05:00</ExpectedArrivalTime>
@@ -267,7 +267,7 @@
        </ExpectedDeparturePredictionQuality>
        <AimedLatestPassengerAccessTime>2004-12-17T09:55:47-05:00</AimedLatestPassengerAccessTime>
        <DepartureStatus>onTime</DepartureStatus>
-       <DepartureProximityText xml:lang="en">Approaching stop</DepartureProximityText>
+       <DepartureProximityText xml:lang="EN">Approaching stop</DepartureProximityText>
        <DeparturePlatformName>2</DeparturePlatformName>
        <AimedHeadwayInterval>PT10M</AimedHeadwayInterval>
        <ExpectedHeadwayInterval>PT11M</ExpectedHeadwayInterval>
