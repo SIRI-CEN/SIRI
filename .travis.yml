@@ -1,7 +1,10 @@
-language: c
+language: minimal
 
 before_script:
   - sudo apt-get install -qq libxml2-utils
 
 script:
-  - "xmllint --noout --schema xsd/siri.xsd examples/siri_exa_framework/*xml examples/siri_exm_CM/*xml examples/siri_exm_CT/*xml examples/siri_exm_ET/*xml examples/siri_exm_FM/*xml examples/siri_exm_GM/*xml examples/siri_exm_PT/*xml examples/siri_exm_SM/*xml examples/siri_exm_ST/*xml examples/siri_exm_SX/*xml examples/siri_exm_VM/*xml examples/siri_exu_capability/*xml examples/siri_exu_discovery/*xml"
+  - bash .travis/xmllint-check.sh
+
+after_script:
+  - bash .travis/travis-ci_git-commit.sh
