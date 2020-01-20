@@ -91,7 +91,9 @@ Rail transport, Roads and road transport
    <xsd:element ref="TimingPoint" minOccurs="0"/>
    <xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether real-time data is available for the stop. Default is 'true'. Detail level is 'normal'.</xsd:documentation>
+     <xsd:documentation>Whether real-time data is available for the stop. Inherited property, i.e., if omitted in an update message: same as indicated by 
+(i) any preceding update message, 
+(ii) or the default value 'true'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">

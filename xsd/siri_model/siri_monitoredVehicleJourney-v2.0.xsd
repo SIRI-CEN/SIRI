@@ -155,7 +155,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="PredictionInaccurate" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the prediction should be judged as inaccurate.</xsd:documentation>
+     <xsd:documentation>Whether the prediction for the journey is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is considered accurate.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DataSource" type="xsd:string" minOccurs="0">
@@ -163,9 +163,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>System originating real-time data. Can be used to make judgements of relative quality and accuracy compared to other feeds.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ConfidenceLevel" type="QualityIndexEnumeration" default="reliable" minOccurs="0">
+   <xsd:element name="ConfidenceLevel" type="QualityIndexEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Confidence QUALITY LEVEL of data. Default is 'reliable'.</xsd:documentation>
+     <xsd:documentation>Confidence QUALITY LEVEL of data. Inherited property, i.e., if omitted in an update message: same as indicated by 
+(i) any preceding update message, 
+(ii) or default value "reliable" in case no preceding message exists.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

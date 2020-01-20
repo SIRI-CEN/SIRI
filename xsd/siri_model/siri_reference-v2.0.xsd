@@ -269,7 +269,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:element name="VehicleAtStop" type="xsd:boolean" default="false">
   <xsd:annotation>
-   <xsd:documentation>Whether VEHICLE is currently at stop.  Default is false (xml  default added from SIRI 2.0) </xsd:documentation>
+   <xsd:documentation>Whether VEHICLE is currently at stop. Default is false (xml default value added in SIRI 2.0).</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ===  CONNECTION link ====================================================== -->

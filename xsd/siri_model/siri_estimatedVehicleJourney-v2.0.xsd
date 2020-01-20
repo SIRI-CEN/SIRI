@@ -160,9 +160,9 @@ DEPRECATED from SRI 2.0</xsd:documentation>
      <xsd:documentation>Whether the VEHICLE JOURNEY is monitored by an AVMS: true if active. Inherited property: if omitted: same as indicated by (i) any preceding update message, or (ii) if no preceding update, by the referenced dated VEHICLE JOURNEY.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="PredictionInaccurate" type="xsd:boolean" default="false" minOccurs="0">
+   <xsd:element name="PredictionInaccurate" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the prediction for the journey is considered to be of a useful accuracy or not. Default is 'false'.</xsd:documentation>
+     <xsd:documentation>Whether the prediction for the journey is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is considered accurate.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
@@ -361,7 +361,7 @@ the original journey and the nature of the difference.</xsd:documentation>
   <xsd:sequence>
    <xsd:element name="PredictionInaccurate" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the prediction for the specific stop is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is not known to be inaccurate. {DOUBLE NEGATIVE IS BAD _ BETTER AS PredictionAccurate. Default is 'true'?]. If prediction is degraded, e.g. because in congestion, used to 9indicate a lowered quality of data. Inherited property. {SHOULD THIS JUST BE THE SPECIFIC InCongestion INDICATOR INSTEAD, OR IS IT MORE GENERAL]</xsd:documentation>
+     <xsd:documentation>Whether the prediction for the specific stop is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is considered accurate.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">

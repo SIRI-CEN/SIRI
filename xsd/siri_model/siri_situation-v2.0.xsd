@@ -1183,14 +1183,18 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for boarding restrictions.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting" minOccurs="0">
+   <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Type of boarding and alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
+     <xsd:documentation>Type of boarding and alighting allowed at stop. Inherited property, i.e., if omitted in an update message: same as indicated by 
+(i) any preceding update message, 
+(ii) or default value "alighting" in case no preceding message exists.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" default="boarding" minOccurs="0">
+   <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Type of alighting allowed at stop. Default is 'Boarding'.</xsd:documentation>
+     <xsd:documentation>Nature of boarding allowed at stop. Inherited property, i.e., if omitted in an update message: same as indicated by 
+(i) any preceding update message, 
+(ii) or default value "boarding" in case no preceding message exists.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

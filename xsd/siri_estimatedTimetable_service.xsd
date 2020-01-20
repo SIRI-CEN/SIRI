@@ -210,12 +210,12 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="calls">
     <xsd:annotation>
-     <xsd:documentation>Return in addition to normal data, the estimated call data  i .</xsd:documentation>
+     <xsd:documentation>Return in addition to normal data, the estimated call data.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="full">
     <xsd:annotation>
-     <xsd:documentation>Return all available data for each   including calls.</xsd:documentation>
+     <xsd:documentation>Return all available data including full calling pattern.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>

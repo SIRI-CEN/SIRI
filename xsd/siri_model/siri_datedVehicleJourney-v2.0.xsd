@@ -609,22 +609,24 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:group name="InterchangePropertyGroup">
   <xsd:annotation>
-   <xsd:documentation>Properties of SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
+   <xsd:documentation>Properties of SERVICE JOURNEY INTERCHANGE. Inherited properties, i.e., if omitted in an update message: same as indicated by 
+(i) any preceding update message, 
+(ii) or "false" if no preceding message exists.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="StaySeated" type="xsd:boolean" default="false" minOccurs="0">
+   <xsd:element name="StaySeated" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the passenger can remain in VEHICLE (i.e. BLOCKlinking). Default is 'false': the passenger must change vehicles for this connection.</xsd:documentation>
+     <xsd:documentation>Whether the passenger can remain in VEHICLE (i.e. BLOCKlinking).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Guaranteed" type="xsd:boolean" default="false" minOccurs="0">
+   <xsd:element name="Guaranteed" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the SERVICE JOURNEY INTERCHANGE is guaranteed. Default is 'false'; SERVICE JOURNEY INTERCHANGE is not guaranteed.</xsd:documentation>
+     <xsd:documentation>Whether the SERVICE JOURNEY INTERCHANGE is guaranteed.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Advertised" type="xsd:boolean" default="false" minOccurs="0">
+   <xsd:element name="Advertised" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the SERVICE JOURNEY INTERCHANGE is advertised as a connection. Default is 'false'.</xsd:documentation>
+     <xsd:documentation>Whether the SERVICE JOURNEY INTERCHANGE is advertised as a connection.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
