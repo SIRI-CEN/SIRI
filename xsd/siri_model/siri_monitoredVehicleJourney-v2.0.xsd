@@ -322,6 +322,13 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
      <xsd:documentation>Operator of JOURNEY PART. +SIRI v2.0 </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element ref="CompoundTrainRef" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to a COMPOUND TRAIN which represents the train formation/composition as a whole. 
+A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs in which the train composition remains unchanged. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ======================================================================= -->
@@ -386,6 +393,7 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
+   <xsd:group ref="JourneyFormationGroup"/>
   </xsd:sequence>
  </xsd:group>
  <!-- ======================================================================= -->
