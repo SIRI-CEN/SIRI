@@ -135,4 +135,22 @@ A string containing a phrase in a natural language name that requires at least o
   </xsd:annotation>
   <xsd:restriction base="xsd:string"/>
  </xsd:simpleType>
+ <xsd:simpleType name="LengthType">
+  <xsd:annotation>
+   <xsd:documentation>Length type for short distances. System for Units can be specified on frame. Normally (metres) as defined by http://www.ordnancesurvey.co.uk/xml/resource/units.xml#metres.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:decimal"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="WeightType">
+  <xsd:annotation>
+   <xsd:documentation>Weight type for mass. System for Units can be specified on Frame. Normal default is (kilos) as defined by http://www.ordnancesurvey.co.uk/xml/resource/units.xml#metres.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:decimal"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="NumberOfPassengers">
+  <xsd:annotation>
+   <xsd:documentation>Number of passengers - capacity.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:nonNegativeInteger"/>
+ </xsd:simpleType>
 </xsd:schema>
