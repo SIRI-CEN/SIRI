@@ -242,6 +242,16 @@ If false each subscription response will contain the full information as specifi
      <xsd:documentation>The amount of change to the arrival or departure time that can happen before an update is sent (i.e. if ChangeBeforeUpdate is set to 2 minutes, the subscriber will not be told that a timetable is changed by 30 seconds - an update will only be sent when the timetable is changed by at least least 2 minutes. (OPtional from SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="SkipRecordedCallUpdates" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Indicates whether actual arrival-/departure times should be delivered as incremental updates, i.e. whether RECORDED CALL updates are transmitted immediately after an event occurs. +SIRI v2.1
+- 'true': Specifies that the data producer should transmit RECORDED CALL data, in particular actual arrival-/departure information as an incremental update immediately after an event occurs (with hysteresis taken into account). 
+The server will automatically proceed with 'false' if capability is not supported.
+- 'false': Can be requested if the data traffic is to be reduced and an immediate transmissions is not required in any of the consumer systems.
+'false' specifies that the data producer should skip RECORDED CALL updates (if capability is supported after all), i.e., deliver them with the next update instead.  
+No specification: Default value 'false' applies (don't skip updates of recorded data).</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:complexType name="EstimatedTimetableSubscriptionStructure">
