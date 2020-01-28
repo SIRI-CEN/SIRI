@@ -320,6 +320,101 @@ Rail transport, Roads and road transport
    <xsd:extension base="TrainNumber"/>
   </xsd:simpleContent>
  </xsd:complexType>
+ <xsd:simpleType name="TrainElementCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a TRAIN ELEMENT. An elementary component of a TRAIN (e.g. wagon, locomotive etc.). +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="TrainElementRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="TrainElementCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="TrainElementRef" type="TrainElementRefStructure">
+  <xsd:annotation>
+ 	<xsd:documentation>Reference to a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="TrainComponentCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a TRAIN COMPONENT. A TRAIN ELEMENT with a specific order in a TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="TrainComponentRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="TrainComponentCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="TrainComponentRef" type="TrainComponentRefStructure">
+  <xsd:annotation>
+ 	<xsd:documentation>Reference to a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="TrainCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a TRAIN. An ordered sequence of TRAIN ELEMENTs or TRAIN COMPONENTs respectively. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="TrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="TrainCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="TrainRef" type="TrainRefStructure">
+  <xsd:annotation>
+ 	<xsd:documentation>Reference to a TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="CompoundTrainCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a COMPOUND TRAIN. An ordered sequence of TRAINs. A journey does always have one or more JOURNEY PARTs in which the TRAIN composition remains unchanged. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="CompoundTrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="CompoundTrainCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="CompoundTrainRef" type="CompoundTrainRefStructure">
+  <xsd:annotation>
+ 	<xsd:documentation>Reference to a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="TrainInCompoundTrainCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a TRAIN IN COMPOUND TRAIN. A TRAIN with a specific order in a COMPOUND TRAIN (the train formation as a whole). +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="TrainInCompoundTrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="TrainInCompoundTrainCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="TrainInCompoundTrainRef" type="TrainInCompoundTrainRefStructure">
+  <xsd:annotation>
+ 	<xsd:documentation>Reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <!-- =====MonitoredCallPoint============================================================ -->
  <xsd:simpleType name="BoardingActivityEnumeration">
   <xsd:annotation>
@@ -573,4 +668,112 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    <xsd:enumeration value="unspecified"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <!-- =============================================================================== -->
+ <xsd:simpleType name="TrainElementTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for TYPE OF TRAIIN ELEMENT. +SIRI v2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="buffetCar"/>
+			<xsd:enumeration value="carriage"/>
+			<xsd:enumeration value="engine"/>
+			<xsd:enumeration value="carTransporter"/>
+			<xsd:enumeration value="sleeperCarriage"/>
+			<xsd:enumeration value="luggageVan"/>
+			<xsd:enumeration value="restaurantCarriage"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+ <!-- =============================================================================== -->
+ <xsd:simpleType name="TrainSizeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for TYPE OF TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="normal"/>
+			<xsd:enumeration value="short"/>
+			<xsd:enumeration value="long"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TypeOfFuelEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for type of fuel. +SIRI v2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="petrol"/>
+			<xsd:enumeration value="diesel"/>
+			<xsd:enumeration value="naturalGas"/>
+			<xsd:enumeration value="biodiesel"/>
+			<xsd:enumeration value="electricity"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+ <!-- ======================================================================= -->
+ <xsd:element name="FareClass" type="FareClassEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Classification of FARE CLASSes. +SIRI v2.1</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FareClasses" type="FareClassListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of FARE CLASSes. +SIRI v2.1</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="FareClassListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of values for FARE CLASSes. +SIRI v2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="FareClassEnumeration"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="FareClassEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for Fare Class Facility. +SIRI v2.1</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>pti23_0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="firstClass">
+				<xsd:annotation>
+					<xsd:documentation>pti23_6</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="secondClass ">
+				<xsd:annotation>
+					<xsd:documentation>pti23_7</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="thirdClass">
+				<xsd:annotation>
+					<xsd:documentation>pti23_8</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="preferente"/>
+			<xsd:enumeration value="premiumClass">
+				<xsd:annotation>
+					<xsd:documentation>pti23_6_1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="businessClass">
+				<xsd:annotation>
+					<xsd:documentation>Busienss Class - pti23_10</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="standardClass">
+				<xsd:annotation>
+					<xsd:documentation>Standard class Add pti23_7</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="turista"/>
+			<xsd:enumeration value="economyClass">
+				<xsd:annotation>
+					<xsd:documentation>pti23_9</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="any"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+ <!-- =============================================================================== -->
 </xsd:schema>
