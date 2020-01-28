@@ -285,6 +285,20 @@ If false each subscription response will contain the full information as specifi
        <xsd:documentation>Timetable Version.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
+     <xsd:element name="ValidityPeriod" type="ClosedTimestampRangeStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Start and end of timetable validity (time window) of journeys for which schedules are returned. 
+Refers to the departure time at the first stop of each VEHICLE JOURNEY If blank the configured data horizon will be used.
+The data producer will cover the VALIDITY PERIOD requested by the subscriber as completely as possible, and is encouraged 
+to include the actually covered time frame in the delivery message in each of the DATED TIMETABLE VERSION FRAMEs. However,
+the VALIDITY PERIOD delivered in the response must not exceed the VALIDITY PERIOD requested by the subscriber. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="ShortestPossibleCycle" type="PositiveDurationType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Minimum interval at which updates for this DATED TIMETABLE VERSION FRAME can be sent. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
      <xsd:group ref="LineIdentityGroup"/>
      <xsd:group ref="JourneyPatternInfoGroup"/>
      <xsd:group ref="ServiceInfoGroup" minOccurs="0"/>
