@@ -900,589 +900,571 @@ Rail transport, Roads and road transport
   </xsd:annotation>
  </xsd:element>
  <!-- ===== Train formation / composition model inspired by NeTEx and VDV454 ================================================================= -->
- 
- <!-- ===== NeTEx VehicleType? ===== -->
-
- <!-- ===== NeTEx Train (with TrainComponent and TrainElement) ===== -->
-
- <!-- ===== NeTEx CompoundTrain ===== -->
- 
- <!-- ===== New structures imbedded in the StopAssignmentStructure to mimic VDV454 "FoHalte" of the formation model ===== -->
+ <!-- ===== (NeTEx VehicleType?) ===== -->
  <xsd:group name="JourneyFormationGroup">
-		<xsd:annotation>
-			<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="TrainElements" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-				   <xsd:choice maxOccurs="unbounded">
-					<xsd:element ref="TrainElementRef"/>
-					<xsd:element ref="TrainElement"/>
-				   </xsd:choice>
-				 </xsd:complexType>
-			</xsd:element>
-			<xsd:element name="Trains" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-				   <xsd:choice maxOccurs="unbounded">
-					<xsd:element name="TrainRef"/>
-					<xsd:element ref="Train"/>
-				   </xsd:choice>
-				 </xsd:complexType>
-			</xsd:element>
-			<xsd:element name="CompoundTrains" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-				   <xsd:choice maxOccurs="unbounded">
-					<xsd:element name="CompoundTrainRef"/>
-					<xsd:element ref="CompoundTrain"/>
-				   </xsd:choice>
-				 </xsd:complexType>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
- 
- 
- 
- 
+  <xsd:annotation>
+   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="TrainElements" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:choice maxOccurs="unbounded">
+      <xsd:element ref="TrainElementRef"/>
+      <xsd:element ref="TrainElement"/>
+     </xsd:choice>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Trains" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:choice maxOccurs="unbounded">
+      <xsd:element name="TrainRef"/>
+      <xsd:element ref="Train"/>
+     </xsd:choice>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="CompoundTrains" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:choice maxOccurs="unbounded">
+      <xsd:element name="CompoundTrainRef"/>
+      <xsd:element ref="CompoundTrain"/>
+     </xsd:choice>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ===== New structures imbedded in the StopAssignmentStructure to mimic VDV454 "FoHalte" of the formation model ========================= -->
  <xsd:group name="CallFormationGroup">
-		<xsd:annotation>
-			<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="SectorPositionAssignment" type="SectorPositionAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="VehicleOrientationRelativeToQuay" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Orientation of a vehicle or vehicle formation/composition relative to a QUAY. Possible values might include 'towardsStartOfQuay', 'towardsEndOfQuay' or 'towards0'.
+  <xsd:annotation>
+   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+	<xsd:element name="SectorPositionAssignment" type="SectorPositionAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+	 <xsd:annotation>
+	  <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+	 </xsd:annotation>
+	</xsd:element>
+	<xsd:element name="VehicleOrientationRelativeToQuay" type="NaturalLanguageStringStructure" minOccurs="0">
+	 <xsd:annotation>
+	  <xsd:documentation>Orientation of a vehicle or vehicle formation/composition relative to a QUAY. Possible values might include 'towardsStartOfQuay', 'towardsEndOfQuay' or 'towards0'.
 The latter example would implicate that the vehicle will depart towards the reference point of the QUAY (reference for measurements such as the VehicleStoppingPosition of SectorPositionAssignments). +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="TrainStopAssignment" type="TrainStopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	
-	
-	<xsd:complexType name="SectorPositionAssignmentStructure">
-		<xsd:annotation>
-			<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="SectorName" type="NaturalLanguageStringStructure">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="VehicleStoppingPositionStart" type="xsd:nonNegativeInteger">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="VehicleStoppingPositionEnd" type="xsd:nonNegativeInteger">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="TrainStopAssignmentStructure">
-		<xsd:annotation>
-			<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:choice>
-				<xsd:element name="VehicleRef" type="VehicleRefStructure" minOccurs="0">
-					<xsd:annotation>
-						<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-					</xsd:annotation>
-				</xsd:element>
-				<xsd:sequence>
-					<xsd:element ref="CompoundTrainRef" minOccurs="0"/>
-					<xsd:element name="TrainRef" minOccurs="0"/>
-					<xsd:element name="TrainComponentRef" minOccurs="0"/>
-				</xsd:sequence>
-			</xsd:choice>
-			<xsd:element name="VehicleStoppingPositionStart" type="xsd:nonNegativeInteger">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="VehicleStoppingPositionEnd" type="xsd:nonNegativeInteger">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element ref="PassengerCapacity" minOccurs="0"/>
-			<!-- ersetzen mit +structure für ZustandsText-->
-			<xsd:element name="VehicleStatus" type="VehicleStatusEnumeration">
-				<xsd:annotation>
-					<xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:complexType>
-	<!-- ===== NeTEx PassengerCapacity model ===== -->
-	<xsd:element name="PassengerCapacity" type="PassengerCapacityStructure">
-		<xsd:annotation>
-			<xsd:documentation>Capacity for a VEHICLE TYPE and fare class. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="PassengerCapacityStructure">
-		<xsd:annotation>
-			<xsd:documentation>Capacity for a VEHICLE TYPE and fare class. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="FareClass" type="FareClassEnumeration" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Fare class in VEHICLE for which capacity is specified.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>How occupied or full the VEHICLE is. This is an approximate figure. The PassengerCapacityGroup provides more accurate data.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:group ref="PassengerCapacityGroup"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:group name="PassengerCapacityGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for a PASSENGER CAPACITY REQUIREMENT. relevant for passenger systems. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="TotalCapacity" type="NumberOfPassengers" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The total capacity of vehicles of the type.  For a requirement this is the minimum needed.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="SeatingCapacity" type="NumberOfPassengers" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The seating capacity of vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="StandingCapacity" type="NumberOfPassengers" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The standing capacity of vehicles of the type.  For a requirement this is the minimum needed.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="SpecialPlaceCapacity" type="NumberOfPassengers" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The number of special places on vehicles of the type, e.g. seats for the disabled. For a requirement this is the minimum needed.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="PushchairCapacity" type="NumberOfPassengers" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The number of push chair places on vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="WheelchairPlaceCapacity" type="NumberOfPassengers" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The number of wheelchairs places on vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	<!-- ======================================================================= -->
-	
-	<xsd:element name="TrainElement" type="TrainElementStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="TrainElementStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="TrainElementCode" type="TrainElementCodeType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Identifier for TRAIN ELEMENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:group ref="TrainElementGroup"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	
-	<!-- ... -->
-	<xsd:group name="TrainElementGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Name of TRAIN ELEMENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Description of TRAIN ELEMENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="TrainElementType" type="TrainElementTypeEnumeration" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Type of TRAIN ELEMENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element ref="FareClasses" minOccurs="0"/>
-			<xsd:element name="Capacities" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Break down of Capacities by FARE CLASS (number of passengers that TRAIN ELEMENT can carry).</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-				  <xsd:sequence>
-				   <xsd:element ref="PassengerCapacity" maxOccurs="unbounded"/>
-				  </xsd:sequence>
-				 </xsd:complexType>
-			</xsd:element>
-			<xsd:element name="Length" type="LengthType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The length of a TRAIN ELEMENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Width" type="LengthType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The width of a TRAIN ELEMENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Facilities" type="NaturalLanguageStringStructure" minOccurs="0"><!-- type will be changed -->
-				<xsd:annotation>
-					<xsd:documentation>Facilities of element.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Equipments" type="NaturalLanguageStringStructure" minOccurs="0"><!-- type will be changed -->
-				<xsd:annotation>
-					<xsd:documentation>Actual EQUIPMENT on element.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	
-	<xsd:element name="TrainComponent" type="TrainComponentStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="TrainComponentStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="TrainComponentCode" type="TrainComponentCodeType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Identifier for TRAIN COMPONENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Order" type="xsd:positiveInteger">
-				<xsd:annotation>
-					<xsd:documentation>Order of TRAIN ELEMENT within TRAIN.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:group ref="TrainComponentGroup"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	
-	<xsd:group name="TrainComponentGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Label for TRAIN COMPONENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Description of TRAIN COMPONENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:choice>
-				<xsd:element ref="TrainElementRef"/>
-				<xsd:element ref="TrainElement"/>
-			</xsd:choice>
-		</xsd:sequence>
-	</xsd:group>
-	
-	
-	<xsd:element name="Train" type="TrainStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="TrainStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="TrainCode" type="TrainCodeType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Label for TRAIN COMPONENT.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:group ref="VehicleTypeGroup"/>
-			<xsd:group ref="TrainGroup"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	
-	
-	<xsd:group name="TrainGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for TRAIN. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="NumberOfCars" type="xsd:nonNegativeInteger" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Number of cars needed in TRAIN.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="TrainSizeType" type="TrainSizeEnumeration" default="normal" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Nature of Train Size., Short, long, normal. Default is normal.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Components" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Ordered collection of TRAIN COMPONENTs making up TRAIN.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-				 <xsd:choice maxOccurs="unbounded">
-				  <xsd:element ref="TrainComponentRef"/>
-				  <xsd:element ref="TrainComponent"/>
-			     </xsd:choice>
-				</xsd:complexType>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	
-	
-	
-	<xsd:element name="CompoundTrain" type="CompoundTrainStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of COMPOUND TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="CompoundTrainStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of COMPOUND TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="CompoundTrainCode" type="CompoundTrainCodeType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Ordered collection of TRAIN in COMPOUND TRAINs making up COMPOUND TRAIN. Each references a TRAIN.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:group ref="VehicleTypeGroup"/>
-			<xsd:element name="Components" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Ordered collection of TRAINs making up a COMPOUND TRAIN. Each references a TRAIN.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-				 <xsd:choice maxOccurs="unbounded">
-				  <xsd:element ref="TrainInCompoundTrainRef"/>
-				  <xsd:element ref="TrainInCompoundTrain"/>
-			     </xsd:choice>
-				</xsd:complexType>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:complexType>
-	
-	<xsd:element name="TrainInCompoundTrain" type="TrainInCompoundTrainStructure">
-		<xsd:annotation>
-			<xsd:documentation>A vehicle composed of COMPOUND TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	
-	<xsd:complexType name="TrainInCompoundTrainStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="Order" type="xsd:positiveInteger">
-				<xsd:annotation>
-					<xsd:documentation>Order of TRAIN IN COMPOUND TRAIN within TRAIN.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:group ref="TrainInCompoundTrainGroup">
-				<xsd:annotation>
-					<xsd:documentation>Elements for a TRAIN IN COMPOUND TRAIN.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:group>
-		</xsd:sequence>
-	</xsd:complexType>
-	
-	<xsd:group name="TrainInCompoundTrainGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Description of TRAIN IN COMPOUND TRAIN.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:choice>
-				<xsd:element name="TrainRef" type="TrainRefStructure">
-					<xsd:annotation>
-						<xsd:documentation>Reference to a TRAIN. +SIRI v2.1</xsd:documentation>
-					</xsd:annotation>
-				</xsd:element>
-				<xsd:element ref="Train"/>
-			</xsd:choice>
-			<xsd:element name="ReversedOrientation" type="xsd:boolean" default="false" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Whether the component order of the TRAIN IN COMPOUND TRAIN is reversed compared to the order in the TRAIN.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Label for TRAIN IN COMPOUND TRAIN.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	
-	
-	
-	
-	<xsd:group name="VehicleTypeGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for a VEHICLE. TYPE. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Name of VEHICLE TYPE.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="ShortName" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Short Name of VEHICLE TYPE.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Description of VEHICLE TYPE.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="PrivateCode" type="xsd:normalizedString" minOccurs="0"/>
-			<xsd:group ref="VehicleTypePropertiesGroup"/>
-			<xsd:element name="Facilities" type="NaturalLanguageStringStructure" minOccurs="0"><!-- type will be changed -->
-				<xsd:annotation>
-					<xsd:documentation>Facilities of VEHICLE.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	<xsd:group name="VehicleTypePropertiesGroup">
-		<xsd:annotation>
-			<xsd:documentation>Prooprty Elements for a VEHICLE. TYPE. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="ReversingDirection" type="xsd:boolean" default="true" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Whether vehicles of the type have a reversing direction.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="SelfPropelled" type="xsd:boolean" default="true" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Whether vehicles of the type are self-propelled.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="TypeOfFuel" type="TypeOfFuelEnumeration" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The type of fuel used by a vehicle of the type.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="EuroClass" type="xsd:normalizedString" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Euroclass of the vehicle type.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="PassengerCapacity" type="PassengerCapacityStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Total Number of passengers that VEHICLE TYPE. can carry.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Capacities" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Break down of Capacities by FARE CLASS.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-				  <xsd:sequence>
-				   <xsd:element ref="PassengerCapacity" maxOccurs="unbounded"/>
-				  </xsd:sequence>
-				 </xsd:complexType>
-			</xsd:element>
-			<xsd:group ref="VehicleAccessibilityRequirementsGroup"/>
-			<xsd:group ref="VehicleDimensionsGroup"/>
-		</xsd:sequence>
-	</xsd:group>
-	<xsd:group name="VehicleDimensionsGroup">
-		<xsd:annotation>
-			<xsd:documentation>Dimension elements for a VEHICLE TYPE. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="Length" type="LengthType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The length of a VEHICLE of the type.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Width" type="LengthType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The width of a VEHICLE of the type.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Height" type="LengthType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The length of a VEHICLE of the type.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Weight" type="WeightType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The weight of a VEHICLE of the type.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	<xsd:group name="VehicleAccessibilityRequirementsGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements specifying Requirement properties of VEHICLE TYPE. Vehicle should satisfy these requirements. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="LowFloor" type="xsd:boolean" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Whether Vehicle is low floor to facilitate access by the mobility impaired.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="HasLiftOrRamp" type="xsd:boolean" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Whether vehicle has lift or ramp to facilitate wheelchair access.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="HasHoist" type="xsd:boolean" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Whether vehicle has hoist for wheelchair access.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	
-	
-	
-	
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TrainStopAssignment" type="TrainStopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:complexType name="SectorPositionAssignmentStructure">
+  <xsd:annotation>
+   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="SectorName" type="NaturalLanguageStringStructure">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="VehicleStoppingPositionStart" type="xsd:nonNegativeInteger">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="VehicleStoppingPositionEnd" type="xsd:nonNegativeInteger">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="TrainStopAssignmentStructure">
+  <xsd:annotation>
+   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:choice>
+    <xsd:element name="VehicleRef" type="VehicleRefStructure" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:sequence>
+     <xsd:element ref="CompoundTrainRef" minOccurs="0"/>
+     <xsd:element name="TrainRef" minOccurs="0"/>
+     <xsd:element name="TrainComponentRef" minOccurs="0"/>
+    </xsd:sequence>
+   </xsd:choice>
+   <xsd:element name="VehicleStoppingPositionStart" type="xsd:nonNegativeInteger">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="VehicleStoppingPositionEnd" type="xsd:nonNegativeInteger">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Capacities" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Break down of Capacities by FARE CLASS (number of passengers that TRAIN ELEMENT can carry).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element ref="PassengerCapacity" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <!-- replace with +structure for  additional Status text -->
+   <xsd:element name="VehicleStatus" type="VehicleStatusEnumeration">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- ===== NeTEx PassengerCapacity ============================================ -->
+ <xsd:element name="PassengerCapacity" type="PassengerCapacityStructure">
+  <xsd:annotation>
+   <xsd:documentation>Capacity for a VEHICLE TYPE and fare class. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="PassengerCapacityStructure">
+  <xsd:annotation>
+   <xsd:documentation>Capacity for a VEHICLE TYPE and fare class. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="FareClass" type="FareClassEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Fare class in VEHICLE for which capacity is specified.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>How occupied or full the VEHICLE is. This is an approximate figure. The PassengerCapacityGroup provides more accurate data.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="PassengerCapacityGroup"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="PassengerCapacityGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for a PASSENGER CAPACITY REQUIREMENT. relevant for passenger systems. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="TotalCapacity" type="NumberOfPassengers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The total capacity of vehicles of the type.  For a requirement this is the minimum needed.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="SeatingCapacity" type="NumberOfPassengers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The seating capacity of vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StandingCapacity" type="NumberOfPassengers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The standing capacity of vehicles of the type.  For a requirement this is the minimum needed.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="SpecialPlaceCapacity" type="NumberOfPassengers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The number of special places on vehicles of the type, e.g. seats for the disabled. For a requirement this is the minimum needed.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PushchairCapacity" type="NumberOfPassengers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The number of push chair places on vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="WheelchairPlaceCapacity" type="NumberOfPassengers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The number of wheelchairs places on vehicles of the type. For a requirement this is the minimum needed.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ===== NeTEx TrainElement: corresponds to VDV454 FoFahrzeuge. +SIRI v2.1 ============================================ -->
+ <xsd:element name="TrainElement" type="TrainElementStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="TrainElementStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="TrainElementCode" type="TrainElementCodeType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Identifier for TRAIN ELEMENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="TrainElementGroup"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="TrainElementGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Name of TRAIN ELEMENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Description of TRAIN ELEMENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TrainElementType" type="TrainElementTypeEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Type of TRAIN ELEMENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="FareClasses" minOccurs="0"/>
+   <xsd:element name="Capacities" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Break down of Capacities by FARE CLASS (number of passengers that TRAIN ELEMENT can carry).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element ref="PassengerCapacity" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Length" type="LengthType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The length of a TRAIN ELEMENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Width" type="LengthType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The width of a TRAIN ELEMENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Facilities" type="NaturalLanguageStringStructure" minOccurs="0">
+    <!-- type will be changed -->
+    <xsd:annotation>
+     <xsd:documentation>Facilities of element.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Equipments" type="NaturalLanguageStringStructure" minOccurs="0">
+    <!-- type will be changed -->
+    <xsd:annotation>
+     <xsd:documentation>Actual EQUIPMENT on element.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ===== NeTEx TrainComponent: corresponds to VDV454 FoFahrzeugPosition. +SIRI v2.1 ============================================ -->
+ <xsd:element name="TrainComponent" type="TrainComponentStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="TrainComponentStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="TrainComponentCode" type="TrainComponentCodeType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Identifier for TRAIN COMPONENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Order" type="xsd:positiveInteger">
+    <xsd:annotation>
+     <xsd:documentation>Order of TRAIN ELEMENT within TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="TrainComponentGroup"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="TrainComponentGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Label for TRAIN COMPONENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Description of TRAIN COMPONENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:choice>
+    <xsd:element ref="TrainElementRef"/>
+    <xsd:element ref="TrainElement"/>
+   </xsd:choice>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ===== NeTEx Train: corresponds to VDV454 FoFahrzeugGruppe. +SIRI v2.1 ============================================ --> 
+ <xsd:element name="Train" type="TrainStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="TrainStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="TrainCode" type="TrainCodeType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Label for TRAIN COMPONENT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="VehicleTypeGroup"/>
+   <xsd:group ref="TrainGroup"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="TrainGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="NumberOfCars" type="xsd:nonNegativeInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Number of cars needed in TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TrainSizeType" type="TrainSizeEnumeration" default="normal" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Nature of Train Size., Short, long, normal. Default is normal.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Components" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Ordered collection of TRAIN COMPONENTs making up TRAIN.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:choice maxOccurs="unbounded">
+      <xsd:element ref="TrainComponentRef"/>
+      <xsd:element ref="TrainComponent"/>
+     </xsd:choice>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ===== NeTEx CompoundTrain: When combined with the CompoundTrainRef in JourneyPartInfo it corresonds to VDV454 FoFahrzeugGruppenFahrtAbschnitt. +SIRI v2.1 =========================== -->
+ <xsd:element name="CompoundTrain" type="CompoundTrainStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of COMPOUND TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="CompoundTrainStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of COMPOUND TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="CompoundTrainCode" type="CompoundTrainCodeType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Ordered collection of TRAIN in COMPOUND TRAINs making up COMPOUND TRAIN. Each references a TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="VehicleTypeGroup"/>
+   <xsd:element name="Components" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Ordered collection of TRAINs making up a COMPOUND TRAIN. Each references a TRAIN.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:choice maxOccurs="unbounded">
+      <xsd:element ref="TrainInCompoundTrainRef"/>
+      <xsd:element ref="TrainInCompoundTrain"/>
+     </xsd:choice>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:element name="TrainInCompoundTrain" type="TrainInCompoundTrainStructure">
+  <xsd:annotation>
+   <xsd:documentation>A vehicle composed of COMPOUND TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="TrainInCompoundTrainStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Order" type="xsd:positiveInteger">
+    <xsd:annotation>
+     <xsd:documentation>Order of TRAIN IN COMPOUND TRAIN within TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="TrainInCompoundTrainGroup">
+    <xsd:annotation>
+     <xsd:documentation>Elements for a TRAIN IN COMPOUND TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:group>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="TrainInCompoundTrainGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Description of TRAIN IN COMPOUND TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:choice>
+    <xsd:element name="TrainRef" type="TrainRefStructure">
+     <xsd:annotation>
+      <xsd:documentation>Reference to a TRAIN. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element ref="Train"/>
+   </xsd:choice>
+   <xsd:element name="ReversedOrientation" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether the component order of the TRAIN IN COMPOUND TRAIN is reversed compared to the order in the TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Label for TRAIN IN COMPOUND TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ===== Various NeTEx property groups needed for the train formation model. +SIRI v2.1 ============================================ -->
+ <xsd:group name="VehicleTypeGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for a VEHICLE. TYPE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Name of VEHICLE TYPE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ShortName" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Short Name of VEHICLE TYPE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Description of VEHICLE TYPE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PrivateCode" type="xsd:normalizedString" minOccurs="0"/>
+   <xsd:group ref="VehicleTypePropertiesGroup"/>
+   <xsd:element name="Facilities" type="NaturalLanguageStringStructure" minOccurs="0">
+    <!-- type will be changed -->
+    <xsd:annotation>
+     <xsd:documentation>Facilities of VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:group name="VehicleTypePropertiesGroup">
+  <xsd:annotation>
+   <xsd:documentation>Prooprty Elements for a VEHICLE. TYPE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="ReversingDirection" type="xsd:boolean" default="true" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether vehicles of the type have a reversing direction.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="SelfPropelled" type="xsd:boolean" default="true" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether vehicles of the type are self-propelled.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TypeOfFuel" type="TypeOfFuelEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The type of fuel used by a vehicle of the type.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="EuroClass" type="xsd:normalizedString" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Euroclass of the vehicle type.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PassengerCapacity" type="PassengerCapacityStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Total Number of passengers that VEHICLE TYPE. can carry.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Capacities" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Break down of Capacities by FARE CLASS.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element ref="PassengerCapacity" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:group ref="VehicleAccessibilityRequirementsGroup"/>
+   <xsd:group ref="VehicleDimensionsGroup"/>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:group name="VehicleDimensionsGroup">
+  <xsd:annotation>
+   <xsd:documentation>Dimension elements for a VEHICLE TYPE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Length" type="LengthType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The length of a VEHICLE of the type.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Width" type="LengthType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The width of a VEHICLE of the type.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Height" type="LengthType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The length of a VEHICLE of the type.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Weight" type="WeightType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The weight of a VEHICLE of the type.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:group name="VehicleAccessibilityRequirementsGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements specifying Requirement properties of VEHICLE TYPE. Vehicle should satisfy these requirements. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="LowFloor" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether Vehicle is low floor to facilitate access by the mobility impaired.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="HasLiftOrRamp" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether vehicle has lift or ramp to facilitate wheelchair access.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="HasHoist" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether vehicle has hoist for wheelchair access.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ======================================================================================================== -->
 </xsd:schema>
