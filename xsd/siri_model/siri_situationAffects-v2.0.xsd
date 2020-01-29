@@ -59,9 +59,10 @@
       -->
     </Date>
     <Date>
-     <Modified>2020-01-28</Modified>
+     <Modified>2020-01-29</Modified>
      <!-- SIRI 2.1
-	   Aligned with TPEG2 PTS, removed unused AreaOfInterestEnumeration
+	   Aligned with TPEG2 PTS, added AccessibilityFeatureEnumeration (more values than in IFOPT)
+	   Removed unused AreaOfInterestEnumeration
 	  -->
     </Date>
     <Description>
@@ -76,7 +77,7 @@
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
     <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situationServiceTypes-v1.2.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situationServiceTypes-v1.0.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modes-v1.1.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey-v2.0.xsd</Requires>
     </Relation>
@@ -109,7 +110,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="AffectedStopPointStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for an SCHEDUELD STOP POINT affected by a SITUATION.</xsd:documentation>
+   <xsd:documentation>Type for an SCHEDULED STOP POINT affected by a SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="StopPointRef" minOccurs="0"/>
@@ -120,7 +121,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Name of SCHEDULED STOP POIHT.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPointType" type="StopPointTypeEnumeration" minOccurs="0">
@@ -140,7 +141,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="PlaceRef" type="ZoneRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Refernce to a SITE or TOPOGRAPHIC PLACE affected by the Locality of stop (In UK NPtg Locality Code). Derivable from StopRef.</xsd:documentation>
+     <xsd:documentation>Reference to a SITE or TOPOGRAPHIC PLACE affected by the Locality of stop (In UK NPtg Locality Code). Derivable from StopRef.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="PlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -150,7 +151,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Assesment of current ACCESSIBILITY of the STOP POINT as affected by the SITUATION.</xsd:documentation>
+     <xsd:documentation>Assessment of current ACCESSIBILITY of the STOP POINT as affected by the SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopCondition" type="RoutePointTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -288,7 +289,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Description of Link.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="AccessibilityFeature" type="ifopt:AccessibilityFeatureEnumeration" minOccurs="0">
+   <xsd:element name="AccessibilityFeature" type="AccessibilityFeatureEnumeration" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Nature of CONNECTION link.</xsd:documentation>
     </xsd:annotation>
@@ -1297,6 +1298,103 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="metroStation">
     <xsd:annotation>
      <xsd:documentation>IFOPT, deprecated (SIRI 2.1), use undergroundStation</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="AccessibilityFeatureEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Values for AccessibilityFeature - TPEG Pts040 and IFOPT</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:string">
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_0, unknown</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="singleStep">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts40_1, single step</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="stairs">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_2, stairs</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="escalator">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_3, escalator</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="travelator">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_4, travelator / moving walkway</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="lift">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_5, lift / elevator</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ramp">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_6, ramp</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="mindTheGap">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts40_7, mind the gap</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="tactilePaving">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts40_8, tactile paving</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="seriesOfStairs">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, series of stairs</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="shuttle">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, shuttle</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="barrier">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, barrier</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="narrowEntrance">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, narrow entrance</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="confinedSpace">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, confined space</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="queueManagement">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, queue management</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="none">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, none</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="other">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, other</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefined">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts40_255, undefined accessibility feature type</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
