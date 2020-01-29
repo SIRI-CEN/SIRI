@@ -585,9 +585,9 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
 The journey receives the same status as if it had not been reported at all, i.e., it is reset to the planning data.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="resetExpectedTimesToAimed">
+   <xsd:enumeration value="dropExpectedAndActualTimes">
     <xsd:annotation>
-     <xsd:documentation>The Consumer system should reset the predicted times to the planned times (ExpectedXXXTime =&gt; AimedXXXTime). 
+     <xsd:documentation>The Consumer system should drop predicted/recorded times, i.e., stop transmitting them until MONITORED is switched to 'true'.
 Other changes, e.g., platform changes, cancellations or extra CALLs etc. remain unchanged.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
