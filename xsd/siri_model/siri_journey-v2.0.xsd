@@ -1117,7 +1117,7 @@ The latter example would implicate that the vehicle will depart towards the refe
 			<xsd:documentation>The intersection of supplied elements describes the extent that the Occupancy values applies to.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:group name="TrainFormationReferenceGroup" minOccurs="0"/>
+			<xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
 			<xsd:element name="FareClass" minOccurs="0"/>
 			<xsd:element name="PassengerCategory" minOccurs="0">
 				<xsd:annotation>
