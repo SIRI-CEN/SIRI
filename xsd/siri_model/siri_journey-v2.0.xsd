@@ -757,7 +757,6 @@ Rail transport, Roads and road transport
      <xsd:documentation>Scheduled Platform name. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="CallFormationGroup" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <!-- =====Arrival================================================================== -->
