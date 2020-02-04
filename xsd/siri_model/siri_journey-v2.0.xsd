@@ -757,6 +757,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Scheduled Platform name. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="QuayType" type="QuayTypeEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <!-- =====Arrival================================================================== -->
@@ -1037,7 +1042,7 @@ The latter example would implicate that the vehicle will depart towards the refe
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <!-- remove ================== -->
+   <!-- remove? ================== 
    <xsd:element name="VehicleStoppingPositionStart" type="xsd:nonNegativeInteger">
     <xsd:annotation>
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
@@ -1048,19 +1053,19 @@ The latter example would implicate that the vehicle will depart towards the refe
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Capacities" minOccurs="0">
+    ================= -->
+   <!-- replace with +structure for  additional Status text
+        es braucht hier vermutlich FormationStatus und VehicleStatus oder so:
+		 1) FormationStatus entspricht FoAenderung und bezieht sich auf das ganze xxxFormationAssignment.
+		 2) VehicleStatus entspricht FoZustand und kann für jedes Fahrzeug innerhalb der Formation angegeben werden. 
+		Da wir uns ja aber für unbounded xxxFormationAssignment entschieden haben, können diese Stati evtl. auch einfach auf beiden (flat) vorhanden sein. 
+		Oder man mach ein eigenes Element dafür: xxxFormationStatus (unbounded) mit Referenzen auf die TRAINs und TRAIN ELEMENTs etc. -->
+   <xsd:element name="FormationStatus" type="FormationUpdateStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Break down of Capacities by FARE CLASS (number of passengers that TRAIN ELEMENT can carry).</xsd:documentation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element ref="PassengerCapacity" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
-   <!-- ================= -->
-   <!-- replace with +structure for  additional Status text -->
-   <xsd:element name="VehicleStatus" type="VehicleStatusEnumeration">
+   <xsd:element name="VehicleStatus" type="VehicleStatusStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
@@ -1070,49 +1075,63 @@ The latter example would implicate that the vehicle will depart towards the refe
  <!-- ===== NeTEx PassengerCapacity ============================================ -->
  <xsd:group name="PassengerCapacityGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for a PASSENGER CAPACITY. Used to indicate the capacities of a TRAIN ELEMENT, i.e., provide the estimated or actual number of passengers. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for a PASSENGER CAPACITY. Used to indicate the maximum capacities of a TRAIN ELEMENT or the estimated/recorded capacities of a TRAIN ELEMENT at a specific stop (in number of passengers). +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="TotalCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
+   <xsd:element name="TotalCapacity" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The total capacity of vehicles of the type.</xsd:documentation>
+     <xsd:documentation>The total capacity of the vehicle in number of passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="SeatingCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
+   <xsd:element name="SeatingCapacity" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The seating capacity of vehicles of the type.</xsd:documentation>
+     <xsd:documentation>The seating capacity of the vehicle in number of passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="StandingCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
+   <xsd:element name="StandingCapacity" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The standing capacity of vehicles of the type.</xsd:documentation>
+     <xsd:documentation>The standing capacity of the vehicle in number of passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="SpecialPlaceCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
+   <xsd:element name="SpecialPlaceCapacity" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The number of special places on vehicles of the type, e.g. seats for the disabled.</xsd:documentation>
+     <xsd:documentation>The number of special places on the vehicle, e.g. seats for the disabled.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="PushchairCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
+   <xsd:element name="PushchairCapacity" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The number of push chair places on vehicles of the type.</xsd:documentation>
+     <xsd:documentation>The number of push chair places on the vehicle.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="WheelchairPlaceCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
+   <xsd:element name="WheelchairPlaceCapacity" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The number of wheelchairs places on vehicles of the type.</xsd:documentation>
+     <xsd:documentation>The number of wheelchair places on the vehicle.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PramPlaceCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The number of places on the vehicle that are suitable for prams.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="BicycleRackCapacity" type="xsd:nonNegativeInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The number of bicycle racks on the vehicle.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="OccupancyScopeFilterGroup">
   <xsd:annotation>
-   <xsd:documentation>The intersection of supplied elements describes the extent that the Occupancy values applies to.</xsd:documentation>
+   <xsd:documentation>The intersection of supplied elements describes the extent that the Occupancy values applies to. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
-   <xsd:element name="FareClass" minOccurs="0"/>
-   <xsd:element name="PassengerCategory" minOccurs="0">
+   <xsd:element name="FareClass" type="FareClassEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Fare class in VEHICLE for which occupancy and capacities are specified.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PassengerCategory" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Adult, child, wheelchair etc.</xsd:documentation>
     </xsd:annotation>
@@ -1121,39 +1140,121 @@ The latter example would implicate that the vehicle will depart towards the refe
  </xsd:group>
  <xsd:group name="OccupancyValuesGroup">
   <xsd:annotation>
-   <xsd:documentation>Occupancy values applying to indicated scope.</xsd:documentation>
+   <xsd:documentation>Occupancy values applying to indicated scope. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="OccupancyLevel" minOccurs="0"/>
-   <xsd:element name="OnboardCount" minOccurs="0"/>
+   <xsd:element name="OccupancyLevel" type="OccupancyEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>An approximate figure of how occupied or full the VEHICLE is, e.g. manySeatsAvailable or standingRoomOnly. 
+More accurate data can be provided by the individual occupancies or capacities below.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OccupancyPercentage" type="PercentageType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Utilised percentage of maximum payload after departing the STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Occupancies" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Provides occupancy information relevant for the used occupancy scope filter.</xsd:documentation>
+    </xsd:annotation>
+   	<xsd:complexType>
+	 <xsd:sequence>
+      <xsd:element name="AlightingCount" type="NumberOfPassengers" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>Total number of alighting passengers for this vehicle journey at this STOP POINT.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="BoardingCount" type="NumberOfPassengers" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>Total number of boarding passengers for this vehicle journey at this STOP POINT.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="OnboardCount" type="NumberOfPassengers" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>Total number of passengers on-board after departing the STOP POINT.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="WheelchairsOnboardCount" type="NumberOfPassengers" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>Total number of wheelchairs on-board after departing the STOP POINT.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PramsOnboardCount" type="NumberOfPassengers" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>Total number of prams on-board after departing the STOP POINT.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="BicycleOnboardCount" type="NumberOfPassengers" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>Total number of bicycles on-board, i.e., number of bicycle racks that are occupied after departing the STOP POINT.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+	 </xsd:sequence>
+   	</xsd:complexType>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <!-- integrate into new structure above -->
- <xsd:element name="PassengerCapacity" type="PassengerCapacityStructure">
+ <xsd:complexType name="GroupReservationStructure">
   <xsd:annotation>
-   <xsd:documentation>Capacity for a VEHICLE TYPE and fare class. +SIRI v2.1</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="PassengerCapacityStructure">
-  <xsd:annotation>
-   <xsd:documentation>Capacity for a VEHICLE TYPE and fare class. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Used to specify that a travel group has booked a section of the vehicle for a part of the journey, and if so under what name. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="FareClass" type="FareClassEnumeration" minOccurs="0">
+   <xsd:element name="NameOfGroup" type="NaturalLanguageStringStructure">
     <xsd:annotation>
-     <xsd:documentation>Fare class in VEHICLE for which capacity is specified.</xsd:documentation>
+     <xsd:documentation>Name for which the travel group has made the reservation.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
+   <xsd:element name="NumberOfSeats" type="NumberOfPassengers">
     <xsd:annotation>
-     <xsd:documentation>How occupied or full the VEHICLE is. This is an approximate figure. The PassengerCapacityGroup provides more accurate data.</xsd:documentation>
+     <xsd:documentation>Number of seats that the group has booked.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- Occupancy/Capacity model for use on CALL level -->
+ <xsd:complexType name="VehicleOccupancyStructure">
+  <xsd:annotation>
+   <xsd:documentation>Occupancies and real-time capacities of a vehicle (by fare classes) after departing a given STOP POINT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="OccupancyScopeFilterGroup"/>
+   <xsd:group ref="OccupancyValuesGroup"/>
+   <xsd:element name="EstimatedCapacities" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Provides capacity information relevant for the used occupancy scope filter.</xsd:documentation>
+    </xsd:annotation>
+   	<xsd:complexType>
+	 <xsd:sequence>
+      <xsd:group ref="PassengerCapacityGroup"/>
+	 </xsd:sequence>
+   	</xsd:complexType>
+   </xsd:element>
+   <!-- Here and in JourneyPartInfo or only in one of the two? Or just allow a JourneyPartRef here? 
+        Do we actually need to indicate it for every stop? But if we only indicate it in JourneyPartInfo, it becomees independent from the Occupancy model.. -->
+   <xsd:element name="GroupReservation" type="GroupReservationStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Reservations of travel groups, i.e., name of group and number of seats booked.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- Capacity model for use on JOURNEY level to indicate maximum capacities of a TRAIN ELEMENT -->
+ <xsd:complexType name="PassengerCapacityStructure">
+  <xsd:annotation>
+   <xsd:documentation>Maximum capacities of a vehicle, e.g. TRAIN ELEMENT, by its fare classes. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="OccupancyScopeFilterGroup"/>
    <xsd:group ref="PassengerCapacityGroup"/>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:element name="PassengerCapacity" type="PassengerCapacityStructure" minOccurs="0">
+  <xsd:annotation>
+   <xsd:documentation>Maximum number of passengers that can be carried by a vehicle of given type.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <!-- ============================ -->
- <!-- ===== NeTEx TrainElement: corresponds to VDV454 FoFahrzeuge. +SIRI v2.1 ============================================ -->
  <xsd:group name="TrainFormationReferenceGroup">
   <xsd:annotation>
    <xsd:documentation>Goups together the relevant references needed in a formation. 
@@ -1166,6 +1267,7 @@ If the formation consists of multiple coupled TRAINs, a reference to the COMPOUN
    <xsd:element ref="TrainComponentRef" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
+ <!-- ===== NeTEx TrainElement: corresponds to VDV454 FoFahrzeuge. +SIRI v2.1 ============================================ -->
  <xsd:element name="TrainElement" type="TrainElementStructure">
   <xsd:annotation>
    <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
@@ -1204,10 +1306,20 @@ If the formation consists of multiple coupled TRAINs, a reference to the COMPOUN
      <xsd:documentation>Type of TRAIN ELEMENT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element ref="FareClasses" minOccurs="0"/>
-   <xsd:element name="Capacities" minOccurs="0">
+   <xsd:element name="ForProductionNumber" type="TrainElementTypeEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Break down of Capacities by FARE CLASS (number of passengers that TRAIN ELEMENT can carry).</xsd:documentation>
+     <xsd:documentation>Denotes the official "registration number" of the vehicle. Mainly for production purposes.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ForAdvertisementNumber" type="TrainElementTypeEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Advertised serial number of the vehicle for seat reservations and passenger orientation.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="FareClasses" minOccurs="0"/>
+   <xsd:element name="MaximumCapacities" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Break down of capacities by FARE CLASS (number of passengers that TRAIN ELEMENT can carry).</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -1372,7 +1484,7 @@ If the formation consists of multiple coupled TRAINs, a reference to the COMPOUN
    <xsd:documentation>Type for a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="TrainInCompoundTrainCode" type="TrainInComoundTrainCodeType" minOccurs="0">
+   <xsd:element name="TrainInCompoundTrainCode" type="TrainInCompoundTrainCodeType" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Identifier for TRAIN IN COMPOUND TRAIN.</xsd:documentation>
     </xsd:annotation>
@@ -1472,14 +1584,9 @@ If the formation consists of multiple coupled TRAINs, a reference to the COMPOUN
      <xsd:documentation>Euroclass of the vehicle type.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="PassengerCapacity" type="PassengerCapacityStructure" minOccurs="0">
+   <xsd:element name="MaximumCapacities" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Total Number of passengers that VEHICLE TYPE. can carry.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Capacities" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Break down of Capacities by FARE CLASS.</xsd:documentation>
+     <xsd:documentation>Break down of total capacities by FARE CLASS.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
