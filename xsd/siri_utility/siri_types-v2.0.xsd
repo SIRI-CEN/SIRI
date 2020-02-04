@@ -153,4 +153,13 @@ A string containing a phrase in a natural language name that requires at least o
   </xsd:annotation>
   <xsd:restriction base="xsd:nonNegativeInteger"/>
  </xsd:simpleType>
+ <xsd:simpleType name="PercentageType">
+  <xsd:annotation>
+   <xsd:documentation>Specifies a percentage from 0 to 100.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:decimal">
+   <xsd:minInclusive value="0"/>
+   <xsd:maxInclusive value="100"/>
+  </xsd:restriction>
+ </xsd:simpleType>
 </xsd:schema>
