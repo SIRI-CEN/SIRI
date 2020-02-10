@@ -177,6 +177,9 @@ Rail transport, Roads and road transport
    <xsd:element ref="LineRef" minOccurs="0"/>
    <xsd:element ref="StopPointRef" minOccurs="0"/>
    <xsd:element ref="VehicleRef" minOccurs="0"/>
+   <xsd:sequence>
+    <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
+   </xsd:sequence>
    <xsd:element ref="DatedVehicleJourneyRef" minOccurs="0"/>
    <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
    <xsd:element ref="InterchangeRef" minOccurs="0"/>
