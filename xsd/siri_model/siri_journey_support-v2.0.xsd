@@ -681,22 +681,56 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    <xsd:enumeration value="unspecified"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <!-- =====StopAssignment============================================================ -->
+ <xsd:simpleType name="QuayTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for QuayType which is used to characterise the STOP ASSIGNMENTs. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="platformGroup">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY that consists of multiple QUAYs of type 'platform'. Examples of such groups would be the lower and upper level of a station.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platform">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY that consists of at least two child QUAYs of type 'platformEdge'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platformEdge">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY which allows direct access to a VEHICLE, e.g. an on-street bus stop, or consists of multiple child QUAYs of type 'platformSector'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platformSector">
+    <xsd:annotation>
+     <xsd:documentation>A QUAY of type 'platformEdge' may be divided into multiple sectors, e.g. "A", "B", "C" etc., to help passengers find a specific part of a vehicle. 
+The first class carriage of a TRAIN might, for example, be assigned to sector "A" of a QUAY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="boardingPosition">
+    <xsd:annotation>
+     <xsd:documentation>A location within a QUAY from which passengers may directly board, or onto which passengers may directly alight from a VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
  <!-- =============================================================================== -->
  <xsd:simpleType name="TrainElementTypeEnumeration">
-		<xsd:annotation>
-			<xsd:documentation>Allowed values for TYPE OF TRAIIN ELEMENT. +SIRI v2.1</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN">
-			<xsd:enumeration value="buffetCar"/>
-			<xsd:enumeration value="carriage"/>
-			<xsd:enumeration value="engine"/>
-			<xsd:enumeration value="carTransporter"/>
-			<xsd:enumeration value="sleeperCarriage"/>
-			<xsd:enumeration value="luggageVan"/>
-			<xsd:enumeration value="restaurantCarriage"/>
-			<xsd:enumeration value="other"/>
-		</xsd:restriction>
-	</xsd:simpleType>
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for TYPE OF TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="buffetCar"/>
+   <xsd:enumeration value="carriage"/>
+   <xsd:enumeration value="engine"/>
+   <xsd:enumeration value="carTransporter"/>
+   <xsd:enumeration value="sleeperCarriage"/>
+   <xsd:enumeration value="luggageVan"/>
+   <xsd:enumeration value="restaurantCarriage"/>
+   <xsd:enumeration value="other"/>
+  </xsd:restriction>
+ </xsd:simpleType>
  <!-- =============================================================================== -->
  <xsd:simpleType name="TrainSizeEnumeration">
 		<xsd:annotation>
