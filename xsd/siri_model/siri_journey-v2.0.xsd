@@ -593,12 +593,27 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
-   <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
-   <xsd:element name="ExpectedArrivalPredictionQuality" type="PredictionQualityStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Prediction quality, either as approximate level, or more quantitayive percentile range of   predictions will  fall within a given range of times.  +SIRI v2.0 </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:choice>
+    <xsd:sequence>
+     <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
+     <xsd:element name="ExpectedArrivalPredictionQuality" type="PredictionQualityStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Prediction quality, either as approximate level, or more quantitative percentile range of predictions that will fall within a given range of times. +SIRI v2.0 </xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+	<xsd:element name="ArrivalPredictionUnknown" type="EmptyType">
+     <xsd:annotation>
+      <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options to inform the consumer:
+(i) set Monitored to 'false'
+(ii) transmit ExpectedTime together with "PredictionInaccurate=true"
+(iii) drop/omit ExpectedTimes
+(iv) set ArrivalStatus to 'noReport'
+However, option (iii) might introduce ambiguity: one consumer might interpret it as "on time" and another one as "indefinite delay". 
+To avoid this, the producer should transmit xxxPredictionUnknown instead of any ExpectedTimes. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="OnwardVehicleDepartureTimesGroup">
@@ -611,26 +626,41 @@ Rail transport, Roads and road transport
      <xsd:documentation>Target departure time of VEHICLE according to latest working timetable.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element ref="ExpectedDepartureTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Estimated time of departure of VEHICLE, most likely taking into account all control actions such as waiting.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ProvisionalExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Expected departure time of VEHICLE without waiting time due to operational actions. For people at stop this would normally be shown if different from Expected departure time. So if servcie decides not to wait may leave earler than expected departure time +SIRI v2.0.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="EarliestExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Earliest time at which VEHICLE may leave the stop. Used to secure connections. Used for passenger announcements. Passengers must be at boarding point by this time to be sure of catching VEHICLE.  i.e. "Vehicle will not leave before this time" - may be revised from original aimed time. +SIRI v2.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ExpectedDeparturePredictionQuality" type="PredictionQualityStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Prediction quality, either as approximate level, or more quantitayive percentile range of   predictions will  fall within a given range of times.  +SIRI v2.0 </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:choice>
+    <xsd:sequence>
+     <xsd:element ref="ExpectedDepartureTime" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Estimated time of departure of VEHICLE, most likely taking into account all control actions such as waiting.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="ProvisionalExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Expected departure time of VEHICLE without waiting time due to operational actions. For people at stop this would normally be shown if different from Expected departure time. So if servcie decides not to wait may leave earler than expected departure time +SIRI v2.0.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="EarliestExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Earliest time at which VEHICLE may leave the stop. Used to secure connections. Used for passenger announcements. Passengers must be at boarding point by this time to be sure of catching VEHICLE.  i.e. "Vehicle will not leave before this time" - may be revised from original aimed time. +SIRI v2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="ExpectedDeparturePredictionQuality" type="PredictionQualityStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Prediction quality, either as approximate level, or more quantitative percentile range of predictions that will fall within a given range of times. +SIRI v2.0 </xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+	<xsd:element name="DeparturePredictionUnknown" type="EmptyType">
+     <xsd:annotation>
+      <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options to inform the consumer:
+(i) set Monitored to 'false'
+(ii) transmit ExpectedTime together with "PredictionInaccurate=true"
+(iii) drop/omit ExpectedTimes
+(iv) set ArrivalStatus to 'noReport'
+However, option (iii) might introduce ambiguity: one consumer might interpret it as "on time" and another one as "indefinite delay". 
+To avoid this, the producer should transmit xxxPredictionUnknown instead of any ExpectedTimes. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="HeadwayIntervalGroup">
