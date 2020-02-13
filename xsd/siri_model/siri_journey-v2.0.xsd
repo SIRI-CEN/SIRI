@@ -1060,7 +1060,7 @@ The latter example would implicate that the vehicle will depart towards the refe
 		 2) VehicleStatus entspricht FoZustand und kann für jedes Fahrzeug innerhalb der Formation angegeben werden. 
 		Da wir uns ja aber für unbounded xxxFormationAssignment entschieden haben, können diese Stati evtl. auch einfach auf beiden (flat) vorhanden sein. 
 		Oder man mach ein eigenes Element dafür: xxxFormationStatus (unbounded) mit Referenzen auf die TRAINs und TRAIN ELEMENTs etc. -->
-   <xsd:element name="FormationStatus" type="FormationUpdateStructure" minOccurs="0">
+   <xsd:element name="FormationUpdate" type="FormationUpdateStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
@@ -1256,13 +1256,13 @@ More accurate data can be provided by the individual occupancies or capacities b
    <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="TrainElementCode" type="TrainElementCodeType" minOccurs="0">
+   <xsd:element name="TrainElementCode" type="TrainElementCodeType">
     <xsd:annotation>
      <xsd:documentation>Identifier for TRAIN ELEMENT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="VehicleTypeGroup"/>
    <xsd:group ref="TrainElementGroup"/>
+   <xsd:group ref="VehicleTypeGroup"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:group name="TrainElementGroup">
@@ -1331,6 +1331,11 @@ More accurate data can be provided by the individual occupancies or capacities b
     <xsd:element ref="TrainElementRef"/>
     <xsd:element ref="TrainElement"/>
    </xsd:choice>
+   <xsd:element name="OrientationOfTrainElement" type="OrientationEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Orientation of TRAIN ELEMENT within TRAIN, e.g. 'forwards' or 'backwards'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <!-- ===== NeTEx Train: corresponds to VDV454 FoFahrzeugGruppe. +SIRI v2.1 ============================================ --> 
@@ -1368,6 +1373,7 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Nature of Train Size., Short, long, normal. Default is normal.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:group ref="JourneyEndNamesGroup" minOccurs="0"/>
    <xsd:element name="Components" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Ordered collection of TRAIN COMPONENTs making up TRAIN.</xsd:documentation>
@@ -1409,6 +1415,11 @@ More accurate data can be provided by the individual occupancies or capacities b
      </xsd:choice>
     </xsd:complexType>
    </xsd:element>
+   <xsd:element name="FormationUpdate" type="FormationUpdateStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>xxx.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:element name="TrainInCompoundTrain" type="TrainInCompoundTrainStructure">
@@ -1431,8 +1442,7 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Order of TRAIN within COMPOUND TRAIN.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="TrainInCompoundTrainGroup">
-   </xsd:group>
+   <xsd:group ref="TrainInCompoundTrainGroup"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:group name="TrainInCompoundTrainGroup">
@@ -1440,17 +1450,18 @@ More accurate data can be provided by the individual occupancies or capacities b
    <xsd:documentation>Elements for a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
+   <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Label for TRAIN IN COMPOUND TRAIN.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Description of TRAIN IN COMPOUND TRAIN.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:choice>
-    <xsd:element name="TrainRef" type="TrainRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>Reference to a TRAIN. +SIRI v2.1</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    <xsd:element ref="TrainRef"/>
     <xsd:element ref="Train"/>
    </xsd:choice>
    <xsd:element name="ReversedOrientation" type="xsd:boolean" default="false" minOccurs="0">
@@ -1458,13 +1469,36 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Whether the component order of the TRAIN IN COMPOUND TRAIN is reversed compared to the order in the TRAIN.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
+   <xsd:element name="Passages" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Label for TRAIN IN COMPOUND TRAIN.</xsd:documentation>
+     <xsd:documentation>xxx.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+	 <xsd:sequence>
+      <xsd:element name="PassageToTrain" type="PassageToTrainStructure" maxOccurs="unbounded"/>
+	 </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="FormationUpdate" type="FormationUpdateStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>xxx.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
+ <xsd:complexType name="PassageToTrainStructure">
+  <xsd:annotation>
+   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="TrainRef"/>
+   <xsd:element name="PassageIsPossible" type="xsd:boolean">
+    <xsd:annotation>
+     <xsd:documentation>xxx.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <!-- ===== Various NeTEx property groups needed for the train formation model. +SIRI v2.1 ============================================ -->
  <xsd:group name="VehicleTypeGroup">
   <xsd:annotation>
