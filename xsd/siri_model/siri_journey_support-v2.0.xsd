@@ -786,4 +786,36 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- =============================================================================== -->
+ <xsd:simpleType name="VehicleStatusEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for VEHICLE STATUS CODE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="FacilityStatusEnumeration">
+   <xsd:enumeration value="defective"/>
+   <xsd:enumeration value="closed"/>
+   <xsd:enumeration value="booked"/>
+   <xsd:enumeration value="noRestaurantService"/>
+   <xsd:enumeration value="open"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =============================================================================== -->
+ <xsd:simpleType name="FormationUpdateEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for FORMATION UPDATE CODE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="changedFormation"/>
+   <xsd:enumeration value="reversedFormation"/>
+   <xsd:enumeration value="missingVehicles"/>
+   <xsd:enumeration value="extraVehicles"/>
+   <xsd:enumeration value="missingTrainInCompoundTrain"/>
+   <xsd:enumeration value="extraTrainInCompoundTrain"/>
+   <xsd:enumeration value="missingFamilyCoach"/>
+   <xsd:enumeration value="missingThroughCoach"/>
+   <xsd:enumeration value="missingLowFloorCoach"/>
+   <xsd:enumeration value="missingRestaurantCoach"/>
+   <xsd:enumeration value="missingWheelchairSpaces"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =============================================================================== -->
 </xsd:schema>
