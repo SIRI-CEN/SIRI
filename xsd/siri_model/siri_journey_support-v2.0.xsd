@@ -415,6 +415,19 @@ Rail transport, Roads and road transport
  	<xsd:documentation>Reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
+ <!-- ============================ -->
+ <xsd:group name="TrainFormationReferenceGroup">
+  <xsd:annotation>
+   <xsd:documentation>Goups together the relevant references needed in a formation. 
+Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. 
+If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is possible too.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="CompoundTrainRef" minOccurs="0"/>
+   <xsd:element ref="TrainRef" minOccurs="0"/>
+   <xsd:element ref="TrainElementRef" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
  <!-- =====MonitoredCallPoint============================================================ -->
  <xsd:simpleType name="BoardingActivityEnumeration">
   <xsd:annotation>
@@ -786,11 +799,17 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- =============================================================================== -->
- <xsd:simpleType name="VehicleStatusEnumeration">
+ <xsd:simpleType name="VehicleInFormationStatusEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for VEHICLE STATUS CODE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for VEHICLE IN FORMATION STATUS CODE. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
-  <xsd:restriction base="FacilityStatusEnumeration">
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="unknown"/>
+   <xsd:enumeration value="available"/>
+   <xsd:enumeration value="notAvailable"/>
+   <xsd:enumeration value="partiallyAvailable"/>
+   <xsd:enumeration value="added"/>
+   <xsd:enumeration value="removed"/>
    <xsd:enumeration value="defective"/>
    <xsd:enumeration value="closed"/>
    <xsd:enumeration value="booked"/>
@@ -799,9 +818,9 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- =============================================================================== -->
- <xsd:simpleType name="FormationUpdateEnumeration">
+ <xsd:simpleType name="FormationChangeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for FORMATION UPDATE CODE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for FORMATION CHANGE CODE. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="changedFormation"/>
