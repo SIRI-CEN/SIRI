@@ -75,6 +75,7 @@ Rail transport, Roads and road transport
  </xsd:annotation>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_facilities-v1.2.xsd"/>
+ <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_journey_support-v2.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment-v0.3.xsd"/>
@@ -562,9 +563,14 @@ Rail transport, Roads and road transport
    <xsd:documentation>Elements describing nature of disruption.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
+   <xsd:element ref="FormationCondition" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="FacilityConditionElement" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Information about a change of Equipment availabilti at stop or on vehicle that may affect access or use.</xsd:documentation>
+     <xsd:documentation>Information about a change of Equipment availabilty at stop or on vehicle that may affect access or use.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:sequence>
