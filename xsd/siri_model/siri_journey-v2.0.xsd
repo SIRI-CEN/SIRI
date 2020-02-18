@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -114,8 +114,14 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRI Common Journey Model.</xsd:documentation>
  </xsd:annotation>
  <!-- ======================================================================= -->
+ <xsd:include schemaLocation="siri_monitoredVehicleJourney-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_facility-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_model_discovery/siri_feature-v2.0.xsd"/>
  <!-- ======================================================================= -->
+ <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment-v0.3.xsd"/>
+ <!-- ======================================================================= -->
+ <!--Needed to work around import limitation in jaxb - all namespaces acsb needs to be after ifopt. -->
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility-v0.3.xsd"/>
  <!-- ==== VEHICLEJOURNEY ================================================================== -->
  <xsd:group name="JourneyInfoGroup">
   <xsd:annotation>
@@ -479,6 +485,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Assignments of a TRAIN formation to a physical QUAY. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="ArrivalOrientationRelativeToQuay" type="VehicleOrientationRelativeToQuay" minOccurs="0"/>
    <xsd:element name="ExpectedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
@@ -514,6 +521,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Assignments of a TRAIN formation to a physical QUAY. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="DepartureOrientationRelativeToQuay" type="VehicleOrientationRelativeToQuay" minOccurs="0"/>
    <xsd:element name="ExpectedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
@@ -970,52 +978,13 @@ Rail transport, Roads and road transport
   </xsd:sequence>
  </xsd:group>
  <!-- ===== New structures imbedded in the StopAssignmentStructure to mimic VDV454 "FoHalte" of the formation model ========================= -->
- <!-- remove ======================== -->
- <xsd:group name="FormationAssignmentGroup">
+ <xsd:complexType name="VehicleOrientationRelativeToQuay">
   <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Indication of the direction of travel of the vehicle or formation (e.g. TRAIN composition ) with respect to the platform or QUAY. For example "towards A", which means that the vehicle departs towards sector "A" of the QUAY. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
-  <xsd:sequence>
-	<xsd:element name="SectorPositionAssignment" type="SectorPositionAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
-	 <xsd:annotation>
-	  <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-	 </xsd:annotation>
-	</xsd:element>
-	<xsd:element name="VehicleOrientationRelativeToQuay" type="NaturalLanguageStringStructure" minOccurs="0">
-	 <xsd:annotation>
-	  <xsd:documentation>Orientation of a vehicle or vehicle formation/composition relative to a QUAY. Possible values might include 'towardsStartOfQuay', 'towardsEndOfQuay' or 'towards0'.
-The latter example would implicate that the vehicle will depart towards the reference point of the QUAY (reference for measurements such as the VehicleStoppingPosition of SectorPositionAssignments). +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ============================== -->
- <xsd:complexType name="SectorPositionAssignmentStructure">
-  <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="SectorName" type="NaturalLanguageStringStructure">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="VehicleStoppingPositionStart" type="xsd:nonNegativeInteger">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="VehicleStoppingPositionEnd" type="xsd:nonNegativeInteger">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
+  <xsd:simpleContent>
+   <xsd:restriction base="NaturalLanguageStringStructure"/>
+  </xsd:simpleContent>
  </xsd:complexType>
  <xsd:complexType name="FormationAssignmentStructure">
   <xsd:annotation>
@@ -1042,34 +1011,106 @@ The latter example would implicate that the vehicle will depart towards the refe
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <!-- remove? ================== 
-   <xsd:element name="VehicleStoppingPositionStart" type="xsd:nonNegativeInteger">
+   <xsd:element name="VehicleStatus" type="VehicleStatusStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="VehicleStoppingPositionEnd" type="xsd:nonNegativeInteger">
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- ========================================================================================== -->
+ <xsd:element name="FormationCondition" type="FormationConditionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="FormationConditionStructure">
+  <xsd:annotation>
+   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
+   <xsd:choice>
+    <xsd:element name="FormationStatus" type="FormationStatusStructure">
+     <xsd:annotation>
+      <xsd:documentation>Status of formation.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="VehicleStatus" type="VehicleStatusStructure">
+     <xsd:annotation>
+      <xsd:documentation>Status of a vehicle within formation.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
+   <xsd:element ref="SituationRef" minOccurs="0"/>
+   <xsd:element name="RecommendedAction" type="RecommendationStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Information on recommendations for passengers on how to deal with the formation change.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-    ================= -->
-   <!-- replace with +structure for  additional Status text
-        es braucht hier vermutlich FormationStatus und VehicleStatus oder so:
-		 1) FormationStatus entspricht FoAenderung und bezieht sich auf das ganze xxxFormationAssignment.
-		 2) VehicleStatus entspricht FoZustand und kann für jedes Fahrzeug innerhalb der Formation angegeben werden. 
-		Da wir uns ja aber für unbounded xxxFormationAssignment entschieden haben, können diese Stati evtl. auch einfach auf beiden (flat) vorhanden sein. 
-		Oder man mach ein eigenes Element dafür: xxxFormationStatus (unbounded) mit Referenzen auf die TRAINs und TRAIN ELEMENTs etc. -->
-   <xsd:element name="FormationUpdate" type="FormationUpdateStructure" minOccurs="0">
+   <xsd:element ref="Extensions" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="FormationStatusStructure">
+  <xsd:annotation>
+   <xsd:documentation>Description of the status of a monitored formation.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Status" type="FormationChangeEnumeration">
     <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Status of the formation.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="VehicleStatus" type="VehicleStatusStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:group ref="FormationStatusInfoGroup" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="VehicleStatusStructure">
+  <xsd:annotation>
+   <xsd:documentation>Description of the status of a monitored vehicle.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Status" type="VehicleInFormationStatusEnumeration">
     <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Status of vehicle.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:group ref="FormationStatusInfoGroup" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="FormationStatusInfoGroup">
+  <xsd:annotation>
+   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Description of the status of a formation or a vehicle within the formation.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Accessibility of the formation or a vehicle within the formation.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="Extensions" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:complexType name="RecommendationStructure">
+  <xsd:annotation>
+   <xsd:documentation>Description of the recommended action for passengers on how to deal with changes, for example of the TRAIN formation.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="TypeOfActionRef" type="TypeOfValueRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Type of the recommendation, e.g. 'unknown', 'replacement' or 'otherRoute'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Description of the recommended action in natural language.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ===== NeTEx PassengerCapacity ============================================ -->
@@ -1261,8 +1302,8 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Identifier for TRAIN ELEMENT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="TrainElementGroup"/>
    <xsd:group ref="VehicleTypeGroup"/>
+   <xsd:group ref="TrainElementGroup"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:group name="TrainElementGroup">
@@ -1415,11 +1456,6 @@ More accurate data can be provided by the individual occupancies or capacities b
      </xsd:choice>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element name="FormationUpdate" type="FormationUpdateStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>xxx.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:element name="TrainInCompoundTrain" type="TrainInCompoundTrainStructure">
@@ -1475,18 +1511,13 @@ More accurate data can be provided by the individual occupancies or capacities b
     </xsd:annotation>
     <xsd:complexType>
 	 <xsd:sequence>
-      <xsd:element name="PassageToTrain" type="PassageToTrainStructure" maxOccurs="unbounded"/>
+      <xsd:element name="PassageBetweenTrains" type="PassageBetweenTrainsStructure" maxOccurs="unbounded"/>
 	 </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element name="FormationUpdate" type="FormationUpdateStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>xxx.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <xsd:complexType name="PassageToTrainStructure">
+ <xsd:complexType name="PassageBetweenTrainsStructure">
   <xsd:annotation>
    <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
