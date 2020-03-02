@@ -1107,7 +1107,7 @@ Rail transport, Roads and road transport
       </xsd:annotation>
       <xsd:complexType>
        <xsd:sequence>
-        <xsd:element name="NavigationPathRef" type="ifopt:NavigationPathRefStructure" maxOccurs="unbounded"/>
+        <xsd:element name="NavigationPathRef" type="NavigationPathRefStructure" maxOccurs="unbounded"/>
        </xsd:sequence>
       </xsd:complexType>
      </xsd:element>
@@ -1123,7 +1123,7 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="AffectedStopPlaceElementStructure">
     <xsd:sequence>
-     <xsd:element name="ComponentRef" type="ifopt:StopPlaceComponentRefStructure">
+     <xsd:element name="ComponentRef" type="StopPlaceComponentRefStructure">
       <xsd:annotation>
        <xsd:documentation>Reference to a Stop Place.</xsd:documentation>
       </xsd:annotation>
@@ -1133,7 +1133,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>Name of component.  (Unbounded since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="ComponentType" type="ifopt:StopPlaceComponentTypeEnumeration" minOccurs="0">
+     <xsd:element name="ComponentType" type="StopPlaceComponentTypeEnumeration" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Type of Component.</xsd:documentation>
       </xsd:annotation>
@@ -1144,7 +1144,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>Further qualifcation of affected part of Link projection,</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="AccessFeatureType" type="ifopt:AccessibilityFeatureEnumeration" minOccurs="0">
+     <xsd:element name="AccessFeatureType" type="AccessibilityFeatureEnumeration" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Type of AccessFeature  (+SIRI.20)</xsd:documentation>
       </xsd:annotation>
