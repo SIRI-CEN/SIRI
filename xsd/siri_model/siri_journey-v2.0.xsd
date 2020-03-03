@@ -354,6 +354,15 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
+ <xsd:group name="DatedOperationalInfoGroup">
+  <xsd:annotation>
+   <xsd:documentation>Operational information about the monitored VEHICLE JOURNEY.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="OperationalBlockGroup"/>
+   <xsd:element ref="VehicleRef" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
  <xsd:group name="OperationalBlockGroup">
   <xsd:annotation>
    <xsd:documentation>Operational information about the monitored VEHICLE JOURNEY.</xsd:documentation>
@@ -418,9 +427,14 @@ Rail transport, Roads and road transport
    <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0"/>
-   <xsd:element name="ArrivalStopAssignment" type="PlannedStopAssignmentStructure" minOccurs="0">
+   <xsd:element name="ArrivalStopAssignment" type="PlannedStopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure. +SIRI v2.0.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ArrivalFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ArrivalOperatorRefs" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
@@ -438,7 +452,12 @@ Rail transport, Roads and road transport
    <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
    <xsd:element ref="DeparturePlatformName" minOccurs="0"/>
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0"/>
-   <xsd:element name="DepartureStopAssignment" type="PlannedStopAssignmentStructure" minOccurs="0"/>
+   <xsd:element name="DepartureStopAssignment" type="PlannedStopAssignmentStructure" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element name="DepartureFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="DepartureOperatorRefs" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>OPERATORs of of service for  departure and onwards.. May change from that for arrival. +SIRI v2.0.</xsd:documentation>
@@ -477,18 +496,18 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure. +SIRI v2.0.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ArrivalFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Assignments of a TRAIN formation to a physical QUAY. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ArrivalOrientationRelativeToQuay" type="VehicleOrientationRelativeToQuay" minOccurs="0"/>
    <xsd:element name="ExpectedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Real-time occupancies and capacities of a vehicle (by fare classes) when arriving at a given STOP POINT. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ArrivalOperatorRefs" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
@@ -513,18 +532,18 @@ Rail transport, Roads and road transport
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0"/>
    <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Assignments of departure platfiorm for Scheduled STOP POINT to a physical QUAY. +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Assignment of departure platfiorm for Scheduled STOP POINT to a physical QUAY. +SIRI v2.0.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DepartureFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Assignments of a TRAIN formation to a physical QUAY. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DepartureOrientationRelativeToQuay" type="VehicleOrientationRelativeToQuay" minOccurs="0"/>
    <xsd:element name="ExpectedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Real-time occupancies and capacities of a vehicle (by fare classes) after departing at a given STOP POINT. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DepartureOperatorRefs" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
@@ -742,11 +761,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Physical QUAY actually used. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="QuayType" type="QuayTypeEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element ref="QuayType" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ======================================================================= -->
@@ -765,11 +780,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Scheduled Platform name. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="QuayType" type="QuayTypeEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element ref="QuayType" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <!-- =====Arrival================================================================== -->
@@ -919,6 +930,13 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
+ <!-- =====Arrival and Departure================================================================= -->
+ <xsd:element name="QuayType" type="QuayTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Indicates the type of the referenced QUAY. In case of detailed STOP PLACE models, a QUAY may be a nested structure. 
+A QUAY may be part of a group of QUAYs, or may be divided into sectors, i.e., smaller sub-QUAYs. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <!-- =====Interval================================================================= -->
  <xsd:element name="AimedHeadwayInterval" type="PositiveDurationType">
   <xsd:annotation>
@@ -936,16 +954,14 @@ Rail transport, Roads and road transport
   </xsd:annotation>
  </xsd:element>
  <!-- ===== Train formation / composition model inspired by NeTEx and VDV454 ================================================================= -->
- <!-- ===== (NeTEx VehicleType?) ===== -->
  <xsd:group name="JourneyFormationGroup">
   <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Groups relevant elements of the formation model that are used on JOURNEY level. 
+The TRAIN Conceptual represents VEHICLE TYPE properties that are peculiar to TRAINs. A TRAIN may comprise not just a single VEHICLE but a chain of carriages, TRAIN ELEMENTS, assembled as TRAIN COMPONENTs. 
+Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN made up of multiple TRAIN IN COMPOUND TRAIN, for example in a train that joins or splits. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainElements" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1.</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexType>
      <xsd:choice maxOccurs="unbounded">
       <xsd:element ref="TrainElementRef"/>
@@ -954,9 +970,6 @@ Rail transport, Roads and road transport
     </xsd:complexType>
    </xsd:element>
    <xsd:element name="Trains" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexType>
      <xsd:choice maxOccurs="unbounded">
       <xsd:element name="TrainRef"/>
@@ -965,9 +978,6 @@ Rail transport, Roads and road transport
     </xsd:complexType>
    </xsd:element>
    <xsd:element name="CompoundTrains" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexType>
      <xsd:choice maxOccurs="unbounded">
       <xsd:element name="CompoundTrainRef"/>
@@ -980,7 +990,8 @@ Rail transport, Roads and road transport
  <!-- ===== New structures imbedded in the StopAssignmentStructure to mimic VDV454 "FoHalte" of the formation model ========================= -->
  <xsd:complexType name="VehicleOrientationRelativeToQuay">
   <xsd:annotation>
-   <xsd:documentation>Indication of the direction of travel of the vehicle or formation (e.g. TRAIN composition ) with respect to the platform or QUAY. For example "towards A", which means that the vehicle departs towards sector "A" of the QUAY. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Indication of the direction of travel of the vehicle or formation (e.g. TRAIN composition ) with respect to the platform, or more precisely the QUAY. 
+For example "towards A", which means that the vehicle departs towards sector "A" of the QUAY. It is advised to specify a reference point that is meaningful for passengers on location. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:restriction base="NaturalLanguageStringStructure"/>
@@ -988,17 +999,13 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="FormationAssignmentStructure">
   <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Assignment of the arrival/departure of a VEHICLE within a formation, e.g. carriage in a TRAIN composition, to a physical QUAY or nested QUAY (i.e. platform or sector of a platform). +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
-    <xsd:element name="VehicleRef" type="VehicleRefStructure" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    <xsd:element ref="VehicleRef"/>
     <xsd:sequence>
-     <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
+     <xsd:group ref="TrainFormationReferenceGroup"/>
     </xsd:sequence>
    </xsd:choice>
    <xsd:element name="PositionOfTrainElement" type="xsd:positiveInteger" minOccurs="0">
@@ -1008,12 +1015,13 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="QuayRef" type="QuayRefStructure" minOccurs="1" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Reference to the QUAY on which the particular VEHICLE of the formation arrives or departs from. 
+If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a VEHICLE stops in two sectors of the QUAY, the FORMATION ASSIGNMENT must reference both. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="VehicleStatus" type="VehicleStatusStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Information about a change of a VEHICLE within the formation, e.g., whether a VEHICLE is open, booked or has defective doors. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -1026,7 +1034,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:complexType name="FormationConditionStructure">
   <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for FORMATION CONDITION. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
@@ -1079,7 +1087,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="FormationStatusInfoGroup">
   <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for FormationStatus that further describe the status of the formation, e.g. whether the accessibility has changed. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1210,6 +1218,16 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Total number of passengers on-board after departing the STOP POINT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="SpecialPlacesOccupied" type="NumberOfPassengers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Total number of special places, e.g. seats for the disabled, that are occupied after departing the STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PushchairsOnboardCount" type="NumberOfPassengers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Total number of pushchairs on-board after departing the STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="WheelchairsOnboardCount" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Total number of wheelchairs on-board after departing the STOP POINT.</xsd:documentation>
@@ -1294,7 +1312,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:element>
  <xsd:complexType name="TrainElementStructure">
   <xsd:annotation>
-   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainElementCode" type="TrainElementCodeType">
@@ -1337,7 +1355,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:element>
  <xsd:complexType name="TrainComponentStructure">
   <xsd:annotation>
-   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainComponentCode" type="TrainComponentCodeType" minOccurs="0">
@@ -1372,9 +1390,9 @@ More accurate data can be provided by the individual occupancies or capacities b
     <xsd:element ref="TrainElementRef"/>
     <xsd:element ref="TrainElement"/>
    </xsd:choice>
-   <xsd:element name="OrientationOfTrainElement" type="OrientationEnumeration" minOccurs="0">
+   <xsd:element name="ReversedOrientation" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Orientation of TRAIN ELEMENT within TRAIN, e.g. 'forwards' or 'backwards'.</xsd:documentation>
+     <xsd:documentation>Whether orientation of TRAIN ELEMENT within TRAIN is reversed or not. Default is 'false', i.e., they have the same orientation (usually forward in the direction of travel).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -1387,7 +1405,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:element>
  <xsd:complexType name="TrainStructure">
   <xsd:annotation>
-   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs in a certain order, i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainCode" type="TrainCodeType" minOccurs="0">
@@ -1414,7 +1432,6 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Nature of Train Size., Short, long, normal. Default is normal.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="JourneyEndNamesGroup" minOccurs="0"/>
    <xsd:element name="Components" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Ordered collection of TRAIN COMPONENTs making up TRAIN.</xsd:documentation>
@@ -1431,12 +1448,12 @@ More accurate data can be provided by the individual occupancies or capacities b
  <!-- ===== NeTEx CompoundTrain: When combined with the CompoundTrainRef in JourneyPartInfo it corresonds to VDV454 FoFahrzeugGruppenFahrtAbschnitt. +SIRI v2.1 =========================== -->
  <xsd:element name="CompoundTrain" type="CompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>.... +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN, for example in a train that joins or splits. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="CompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="CompoundTrainCode" type="CompoundTrainCodeType" minOccurs="0">
@@ -1460,7 +1477,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:complexType>
  <xsd:element name="TrainInCompoundTrain" type="TrainInCompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>An instance of a TRAIN (that has a certain position within the formation) making up a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="TrainInCompoundTrainStructure">
@@ -1500,34 +1517,37 @@ More accurate data can be provided by the individual occupancies or capacities b
     <xsd:element ref="TrainRef"/>
     <xsd:element ref="Train"/>
    </xsd:choice>
+   <xsd:group ref="JourneyEndNamesGroup" minOccurs="0"/>
    <xsd:element name="ReversedOrientation" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the component order of the TRAIN IN COMPOUND TRAIN is reversed compared to the order in the TRAIN.</xsd:documentation>
+     <xsd:documentation>Whether orientation of TRAIN within COMPOUND TRAIN is reversed or not. Default is 'false', i.e., they have the same orientation (usually forward in the direction of travel).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Passages" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>xxx.</xsd:documentation>
+     <xsd:documentation>Specifies whether a passage from/to an adjacent VEHICLE is possible for passengers.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
 	 <xsd:sequence>
-      <xsd:element name="PassageBetweenTrains" type="PassageBetweenTrainsStructure" maxOccurs="unbounded"/>
+      <xsd:element name="PassageBetweenTrains" type="PassageBetweenVehiclesStructure" maxOccurs="2"/>
 	 </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <xsd:complexType name="PassageBetweenTrainsStructure">
+ <xsd:complexType name="PassageBetweenVehiclesStructure">
   <xsd:annotation>
-   <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Indicates whether passengers have access to adjacent VEHICLEs or carriages, i.e., whether passage between those VEHICLES is possible. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element ref="TrainRef"/>
-   <xsd:element name="PassageIsPossible" type="xsd:boolean">
-    <xsd:annotation>
-     <xsd:documentation>xxx.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:choice>
+    <xsd:element ref="VehicleRef"/>
+	<xsd:sequence>
+     <xsd:element ref="TrainRef"/>
+     <xsd:element ref="TrainElementRef" minOccurs="0"/>
+	</xsd:sequence>
+   </xsd:choice>
+   <xsd:element name="PassageIsPossible" type="xsd:boolean"/>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ===== Various NeTEx property groups needed for the train formation model. +SIRI v2.1 ============================================ -->
