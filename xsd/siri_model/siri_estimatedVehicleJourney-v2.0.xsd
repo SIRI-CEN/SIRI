@@ -393,6 +393,26 @@ the original journey and the nature of the difference.</xsd:documentation>
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element ref="ArrivalBoardingActivity" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Type of boarding and alighting at stop, e.g. alighting, noAlighting or passThru. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a physical QUAY (platform). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ArrivalFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Assignments of a TRAIN formation to a physical QUAY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RecordedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Target departure time of VEHICLE according to latest working timetable.</xsd:documentation>
@@ -411,6 +431,36 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DepartureStatus" type="CallStatusEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Classification of the timeliness of the departure part of the CALL, according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="DepartureCancellationReason" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Text annotation to be used in cases where DepartureStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="DepartureBoardingActivity" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Nature of boarding at stop, e.g. boarding, noBoarding or passThru. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Assignments of departure platform for Scheduled STOP POINT to a physical QUAY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DepartureFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Assignments of a TRAIN formation to a physical QUAY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RecordedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>xxx. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>
