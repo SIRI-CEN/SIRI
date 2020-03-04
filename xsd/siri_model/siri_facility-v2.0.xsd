@@ -74,6 +74,7 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRi Facility model elemenys</xsd:documentation>
  </xsd:annotation>
  <!-- ======================================================================= -->
+ <xsd:include schemaLocation="../siri_utility/siri_utility-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_facilities-v1.2.xsd"/>
  <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_journey_support-v2.0.xsd"/>
@@ -242,9 +243,14 @@ Rail transport, Roads and road transport
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
    <xsd:enumeration value="fixedEquipment"/>
+   <xsd:enumeration value="mobileEquipment"/>
    <xsd:enumeration value="serviceProvidedByIndividual"/>
    <xsd:enumeration value="serviceForPersonalDevice"/>
    <xsd:enumeration value="reservedArea"/>
+   <xsd:enumeration value="site"/>
+   <xsd:enumeration value="siteComponent"/>
+   <xsd:enumeration value="parkingBay"/>
+   <xsd:enumeration value="vehicle"/>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ======================================================================= -->
@@ -290,6 +296,71 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="removed"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <xsd:simpleType name="CountingTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for TypeOfCounting.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="availabilityCount"/>
+   <xsd:enumeration value="reservedCount"/>
+   <xsd:enumeration value="inUseCount"/>
+   <xsd:enumeration value="outOfOrderCount"/>
+   <xsd:enumeration value="presentCount"/>
+   <xsd:enumeration value="currentStateCount"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+  <xsd:simpleType name="CountingTrendEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for trend of a counting.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="decreasing"/>
+   <xsd:enumeration value="increasing"/>
+   <xsd:enumeration value="stable"/>
+   <xsd:enumeration value="unstable"/>
+   <xsd:enumeration value="increasingQuickly"/>
+   <xsd:enumeration value="increasingSlowly"/>
+   <xsd:enumeration value="decreasingQuickly"/>
+   <xsd:enumeration value="decreasingSlowly"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="CountedFeatureUnitEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for units of what is counted 
+   bay: Parking bay for cars, bicycle, scooter, etc
+   otherSpaces: any other kind of spaces: lockers, stading spaces, toilets, etc.
+   devices: electronic devices (audio guide, headphones, etc.) and physical devices (walking stick, wheel chair, etc.)
+   vehicles: any type of vehicles (cycle, car, scooter, overboard, motorbyke, etc.)
+   kW (kiloWatt) or kWh (kiloWatt per hour): means that an available (ore consummed) power is measured
+   litres and cubeMeters: means that a volume is measured
+   squareMeters: means that a surface is measured
+   meters: means that a distance is measured
+   kg (kilogram): means that a mass is measured
+   A (Amper): means that an electric intensity is measured
+   C (degree Celsius): means that a temperature is measured
+   other: use of "other" requires the additional open ended TypeOfCountedFeature (monitoredCountingStructure) to be filled
+   </xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="bays"/>
+   <xsd:enumeration value="seats"/>
+   <xsd:enumeration value="otherSpaces"/>
+   <xsd:enumeration value="devices"/>
+   <xsd:enumeration value="vehicles"/>
+   <xsd:enumeration value="persons"/>
+   <xsd:enumeration value="kW"/>
+   <xsd:enumeration value="litres"/>
+   <xsd:enumeration value="squarMeters"/>
+   <xsd:enumeration value="cubeMeters"/>
+   <xsd:enumeration value="meters"/>
+   <xsd:enumeration value="kWh"/>
+   <xsd:enumeration value="kW"/>
+   <xsd:enumeration value="kg"/>
+   <xsd:enumeration value="A"/>
+   <xsd:enumeration value="C"/>
+   <xsd:enumeration value="other"/>
+  </xsd:restriction>
+ </xsd:simpleType>
  <xsd:complexType name="FacilityStatusStructure">
   <xsd:annotation>
    <xsd:documentation>Descriprion of the status of a MONITORED FACILITY.</xsd:documentation>
@@ -331,6 +402,56 @@ Rail transport, Roads and road transport
    <xsd:group ref="ServiceInfoGroup"/>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:complexType name="MonitoredCountingStructure">
+  <xsd:annotation>
+   <xsd:documentation>Monitored counted values.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="CountingType" type="CountingTypeEnumeration">
+    <xsd:annotation>
+     <xsd:documentation>Nature of what is counted.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="CountedFeatureUnit" type="CountedFeatureUnitEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Unit of type for what is being counted </xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TypeOfCountedFeature" type="TypeOfValueStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Open ended type or refined classification of what is counted (complement to the infomation coming from the facility type itself) </xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:choice>
+    <xsd:element name="Count" type="xsd:integer">
+     <xsd:annotation>
+      <xsd:documentation>Counted value</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Percentage" type="xsd:decimal">
+     <xsd:annotation>
+      <xsd:documentation>Value as a percentage (0.0 to 1.0)</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
+   <xsd:element name="Trend" type="CountingTrendEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Trend of the count</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Accuracy" type="xsd:decimal" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Accuracy of the count, as a percentage (0.0 to 1.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Description of what is counted</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="Extensions" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
  <!-- ====FACILITY CONDITION========================================= -->
  <xsd:element name="FacilityConditionElement" type="FacilityConditionStructure">
   <xsd:annotation>
@@ -348,13 +469,25 @@ Rail transport, Roads and road transport
       <xsd:documentation>Facility affected by condition.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-    <xsd:element ref="FacilityRef"/>
+    <xsd:element ref="FacilityRef">
+     <xsd:annotation>
+      <xsd:documentation>Reference to a Facility (may refer an Equipment, Local Service, Site or Vehicle).</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
    </xsd:choice>
    <xsd:element name="FacilityStatus" type="FacilityStatusStructure">
     <xsd:annotation>
      <xsd:documentation>Status of Facility.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="MonitoredCounting" minOccurs="0" maxOccurs="unbounded">
+    <xsd:complexType>
+     <xsd:complexContent>
+      <xsd:extension base="MonitoredCountingStructure"/>
+     </xsd:complexContent>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="FacilityUpdatedPosition" type="LocationStructure" minOccurs="0"/>
    <xsd:element ref="SituationRef" minOccurs="0"/>
    <xsd:element name="Remedy" type="RemedyStructure" minOccurs="0">
     <xsd:annotation>
@@ -368,7 +501,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Period (duration) of the status change for the facility.</xsd:documentation>
+     <xsd:documentation>Period (duration) of the status change for the facility (validity period of the FacilityCondition).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
