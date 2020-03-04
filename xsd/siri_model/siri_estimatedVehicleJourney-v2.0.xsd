@@ -438,11 +438,6 @@ the original journey and the nature of the difference.</xsd:documentation>
      <xsd:documentation>Classification of the timeliness of the departure part of the CALL, according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element ref="DepartureCancellationReason" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Text annotation to be used in cases where DepartureStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Nature of boarding at stop, e.g. boarding, noBoarding or passThru. +SIRI v2.1</xsd:documentation>
