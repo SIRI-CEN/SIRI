@@ -144,7 +144,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
     <xsd:annotation>
-    <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey from the plan. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey from the plan. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="JourneyPatternInfoGroup"/>
@@ -253,25 +253,25 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
-    <xsd:element ref="InterchangeCode" type="InterchangeCodeType" minOccurs="0"/>
-    <xsd:element ref="InterchangeRef" type="InterchangeRefStructure" minOccurs="0"/>
+    <xsd:element ref="InterchangeCode" minOccurs="0"/>
+    <xsd:element ref="InterchangeRef" minOccurs="0"/>
    </xsd:choice>
-   <xsd:element ref="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0"/>
+   <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
    <xsd:choice>
-    <xsd:element ref="ExtraInterchange" type="xsd:boolean" default="false" minOccurs="0"/>
-    <xsd:element ref="Cancellation" type="xsd:boolean" default="false" minOccurs="0"/>
+    <xsd:element ref="ExtraInterchange" minOccurs="0"/>
+    <xsd:element ref="Cancellation" minOccurs="0"/>
    </xsd:choice>
-   <xsd:element ref="ReasonForRemoval" type="NaturalLanguageStringStructure"/>
-   <xsd:element ref="FeederRef" type="ConnectingJourneyRefStructure" minOccurs="0"/>
-   <xsd:element ref="FeederArrivalStopRef" type="StopPointRefStructure" minOccurs="0"/>
-   <xsd:element ref="FeederVisitNumber" type="VisitNumberType" minOccurs="0"/>
-   <xsd:element ref="FeederStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-   <xsd:element ref="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0"/>
-   <xsd:element ref="DistributorRef" type="ConnectingJourneyRefStructure" minOccurs="0"/>
-   <xsd:element ref="DistributorDepartureStopRef" type="StopPointRefStructure" minOccurs="0"/>
-   <xsd:element ref="DistributorVisitNumber" type="VisitNumberType" minOccurs="0"/>
-   <xsd:element ref="DistributorStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-   <xsd:element ref="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0"/>
+   <xsd:element ref="ReasonForRemoval" minOccurs="0"/>
+   <xsd:element ref="FeederRef" minOccurs="0"/>
+   <xsd:element ref="FeederArrivalStopRef" minOccurs="0"/>
+   <xsd:element ref="FeederVisitNumber" minOccurs="0"/>
+   <xsd:element ref="FeederStopOrder" minOccurs="0"/>
+   <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+   <xsd:element ref="DistributorRef" minOccurs="0"/>
+   <xsd:element ref="DistributorDepartureStopRef" minOccurs="0"/>
+   <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+   <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+   <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
    <xsd:group ref="InterchangePropertyGroup"/>
    <xsd:group ref="InterchangeTimesGroup"/>
    <xsd:element ref="Extensions" minOccurs="0"/>
@@ -285,18 +285,18 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
     <xsd:sequence>
-     <xsd:element ref="InterchangeCode" type="InterchangeCodeType" minOccurs="0"/>
-     <xsd:element ref="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0"/>
-     <xsd:element ref="FeederRef" type="ConnectingJourneyRefStructure"/>
-     <xsd:element ref="FeederArrivalStopRef" type="StopPointRefStructure"/>
-     <xsd:element ref="FeederVisitNumber" type="VisitNumberType" minOccurs="0"/>
-     <xsd:element ref="FeederStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-     <xsd:element ref="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0"/>
-     <xsd:element ref="DistributorRef" type="ConnectingJourneyRefStructure" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="DistributorDepartureStopRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="DistributorVisitNumber" type="VisitNumberType" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="DistributorStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-     <xsd:element ref="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0"/>
+     <xsd:element ref="InterchangeCode" minOccurs="0"/>
+     <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+     <xsd:element ref="FeederRef"/>
+     <xsd:element ref="FeederArrivalStopRef"/>
+     <xsd:element ref="FeederVisitNumber" minOccurs="0"/>
+     <xsd:element ref="FeederStopOrder" minOccurs="0"/>
+     <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+     <xsd:element ref="DistributorRef" minOccurs="0" maxOccurs="0"/>
+     <xsd:element ref="DistributorDepartureStopRef" minOccurs="0" maxOccurs="0"/>
+     <xsd:element ref="DistributorVisitNumber" minOccurs="0" maxOccurs="0"/>
+     <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+     <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
      <xsd:group ref="InterchangePropertyGroup"/>
      <xsd:group ref="InterchangeTimesGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
@@ -312,18 +312,18 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
     <xsd:sequence>
-     <xsd:element ref="InterchangeCode" type="InterchangeCodeType" minOccurs="0"/>
-     <xsd:element ref="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0"/>
-     <xsd:element ref="FeederRef" type="ConnectingJourneyRefStructure" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="FeederArrivalStopRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="FeederVisitNumber" type="VisitNumberType" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="FeederStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-     <xsd:element ref="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0"/>
-     <xsd:element ref="DistributorRef" type="ConnectingJourneyRefStructure"/>
-     <xsd:element ref="DistributorDepartureStopRef" type="StopPointRefStructure"/>
-     <xsd:element ref="DistributorVisitNumber" type="VisitNumberType" minOccurs="0"/>
-     <xsd:element ref="DistributorStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-     <xsd:element ref="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0"/>
+     <xsd:element ref="InterchangeCode" minOccurs="0"/>
+     <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+     <xsd:element ref="FeederRef" minOccurs="0" maxOccurs="0"/>
+     <xsd:element ref="FeederArrivalStopRef" minOccurs="0" maxOccurs="0"/>
+     <xsd:element ref="FeederVisitNumber" minOccurs="0" maxOccurs="0"/>
+     <xsd:element ref="FeederStopOrder" minOccurs="0"/>
+     <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+     <xsd:element ref="DistributorRef"/>
+     <xsd:element ref="DistributorDepartureStopRef"/>
+     <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+     <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+     <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
      <xsd:group ref="InterchangePropertyGroup"/>
      <xsd:group ref="InterchangeTimesGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
@@ -339,22 +339,22 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
     <xsd:sequence>
-     <xsd:element ref="InterchangeCode" type="InterchangeCodeType" minOccurs="0"/>
-     <xsd:element ref="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0"/>
-	 <xsd:choice>
-      <xsd:element ref="ExtraInterchange" type="xsd:boolean" default="false" minOccurs="0"/>
-      <xsd:element ref="Cancellation" type="xsd:boolean" default="false" minOccurs="0"/>
+     <xsd:element ref="InterchangeCode" minOccurs="0"/>
+     <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+     <xsd:choice>
+      <xsd:element ref="ExtraInterchange" minOccurs="0"/>
+      <xsd:element ref="Cancellation" minOccurs="0"/>
      </xsd:choice>
-     <xsd:element ref="FeederRef" type="ConnectingJourneyRefStructure"/>
-     <xsd:element ref="FeederArrivalStopRef" type="StopPointRefStructure"/>
-     <xsd:element ref="FeederVisitNumber" type="VisitNumberType" minOccurs="0"/>
-     <xsd:element ref="FeederStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-     <xsd:element ref="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0"/>
-     <xsd:element ref="DistributorRef" type="ConnectingJourneyRefStructure"/>
-     <xsd:element ref="DistributorDepartureStopRef" type="StopPointRefStructure"/>
-     <xsd:element ref="DistributorVisitNumber" type="VisitNumberType" minOccurs="0"/>
-     <xsd:element ref="DistributorStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-     <xsd:element ref="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0"/>
+     <xsd:element ref="FeederRef"/>
+     <xsd:element ref="FeederArrivalStopRef"/>
+     <xsd:element ref="FeederVisitNumber" minOccurs="0"/>
+     <xsd:element ref="FeederStopOrder" minOccurs="0"/>
+     <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+     <xsd:element ref="DistributorRef"/>
+     <xsd:element ref="DistributorDepartureStopRef"/>
+     <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+     <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+     <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
      <xsd:group ref="InterchangePropertyGroup"/>
      <xsd:group ref="InterchangeTimesGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
@@ -370,19 +370,19 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
     <xsd:sequence>
-     <xsd:element ref="InterchangeRef" type="InterchangeRefStructure"/>
-     <xsd:element ref="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0"/>
-	<xsd:element ref="ReasonForRemoval" type="NaturalLanguageStringStructure"/>
-     <xsd:element ref="FeederRef" type="ConnectingJourneyRefStructure"/>
-     <xsd:element ref="FeederArrivalStopRef" type="StopPointRefStructure"/>
-     <xsd:element ref="FeederVisitNumber" type="VisitNumberType" minOccurs="0"/>
-     <xsd:element ref="FeederStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-     <xsd:element ref="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0"/>
-     <xsd:element ref="DistributorRef" type="ConnectingJourneyRefStructure"/>
-     <xsd:element ref="DistributorDepartureStopRef" type="StopPointRefStructure"/>
-     <xsd:element ref="DistributorVisitNumber" type="VisitNumberType" minOccurs="0"/>
-     <xsd:element ref="DistributorStopOrder" type="xsd:positiveInteger" minOccurs="0"/>
-     <xsd:element ref="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0"/>
+     <xsd:element ref="InterchangeRef"/>
+     <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+     <xsd:element ref="ReasonForRemoval"/>
+     <xsd:element ref="FeederRef"/>
+     <xsd:element ref="FeederArrivalStopRef"/>
+     <xsd:element ref="FeederVisitNumber" minOccurs="0"/>
+     <xsd:element ref="FeederStopOrder" minOccurs="0"/>
+     <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+     <xsd:element ref="DistributorRef"/>
+     <xsd:element ref="DistributorDepartureStopRef"/>
+     <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+     <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+     <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
      <xsd:group ref="InterchangePropertyGroup"/>
      <xsd:group ref="InterchangeTimesGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
@@ -508,15 +508,15 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:sequence>
-    <xsd:element ref="InterchangeCode" type="InterchangeCodeType" minOccurs="0"/>
-    <xsd:element ref="DistributorVehicleJourneyRef" type="DatedVehicleJourneyRefStructure"/>
+    <xsd:element ref="InterchangeCode" minOccurs="0"/>
+    <xsd:element ref="DistributorVehicleJourneyRef"/>
     <xsd:choice>
-     <xsd:element ref="DistributorConnectionLinkRef" type="ConnectionLinkRefStructure"/>
-     <xsd:element ref="DistributorConnectionLink" type="ContextualisedConnectionLinkStructure"/>
+     <xsd:element ref="DistributorConnectionLinkRef"/>
+     <xsd:element ref="DistributorConnectionLink"/>
     </xsd:choice>
    </xsd:sequence>
-   <xsd:element ref="DistributorVisitNumber" type="VisitNumberType" minOccurs="0"/>
-   <xsd:element ref="DistributorOrder" type="xsd:positiveInteger" minOccurs="0"/>
+   <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+   <xsd:element ref="DistributorOrder" minOccurs="0"/>
    <xsd:group ref="InterchangePropertyGroup"/>
    <xsd:group ref="InterchangeTimesGroup"/>
   </xsd:sequence>
@@ -640,7 +640,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-  <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) an interchange from the plan. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) an interchange from the plan. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="FeederRef" type="ConnectingJourneyRefStructure">

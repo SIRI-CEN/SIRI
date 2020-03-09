@@ -295,7 +295,7 @@ If false each subscription response will contain the full information as specifi
        <xsd:documentation>Complete list of all planned VEHICLE JOURNEYs for this LINE and DIRECTION.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="RemovedDatedVehicleJourney" type="RemovedDatedVehicleJourneyStructure" minOccurs="0" maxOccurs="unbounded">
+     <xsd:element name="RemovedDatedVehicleJourney" type="RemovedDatedVehicleJourneyStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
        <xsd:documentation>List of all removed VEHICLE JOURNEYs for this LINE and DIRECTION. 
 A data producer may silently remove a journey from the plan if it was previously provided in error. Careful: Removal is different from Cancellation.
@@ -308,7 +308,7 @@ It is strongly advised to only use this feature in cases where a journey was sen
        <xsd:documentation>Connection paramters for a SERVICE JOURNEY INTERCHANGE between a feeder and distributor journey. SIRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	 <xsd:element name="RemovedServiceJourneyInterchange" type="RemovedServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
+     <xsd:element name="RemovedServiceJourneyInterchange" type="RemovedServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
        <xsd:documentation>List of all removed SERVICE JOURNEY INTERCHANGEs.
 A data producer may silently remove an interchange from the plan if it was previously provided in error. Careful: Removal is different from Cancellation.
