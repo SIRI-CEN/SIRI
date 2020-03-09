@@ -509,14 +509,30 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:sequence>
     <xsd:element ref="InterchangeCode" minOccurs="0"/>
-    <xsd:element ref="DistributorVehicleJourneyRef"/>
+    <xsd:element name="DistributorVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
+     <xsd:annotation>
+      <xsd:documentation>Reference to a (dated) distributor VEHICLE JOURNEY.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
     <xsd:choice>
-     <xsd:element ref="DistributorConnectionLinkRef"/>
-     <xsd:element ref="DistributorConnectionLink"/>
+     <xsd:element name="DistributorConnectionLinkRef" type="ConnectionLinkRefStructure">
+      <xsd:annotation>
+       <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="DistributorConnectionLink" type="ContextualisedConnectionLinkStructure">
+      <xsd:annotation>
+       <xsd:documentation>Link to Interchange stop from which the distributor journey departs. If omitted: the distributor journey stop is the same as the feeder journey stop, i.e. that of theh dated call.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
     </xsd:choice>
    </xsd:sequence>
    <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
-   <xsd:element ref="DistributorOrder" minOccurs="0"/>
+   <xsd:element name="DistributorOrder" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>For implementations for which Order is not used for VisitNumber, (i.e. if VisitNumberIsOrder is false) then Order can be used to associate the Order as well if useful for translation.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:group ref="InterchangePropertyGroup"/>
    <xsd:group ref="InterchangeTimesGroup"/>
   </xsd:sequence>
@@ -618,16 +634,6 @@ Rail transport, Roads and road transport
    <xsd:documentation>Identifier of SERVICE JOURNEY INTERCHANGE. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="InterchangeRef" type="InterchangeRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a SERVICE JOURNEY INTERCHANGE from a previous PT message or the long-term timetable. +SIRI v2.1</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place. +SIRI v2.0</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
  <xsd:element name="ExtraInterchange" type="xsd:boolean" default="false">
   <xsd:annotation>
    <xsd:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. +SIRI v2.1</xsd:documentation>
@@ -693,21 +699,6 @@ ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL i
  <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime">
   <xsd:annotation>
    <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="DistributorVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a (dated) distributor VEHICLE JOURNEY.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="DistributorConnectionLinkRef" type="ConnectionLinkRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="DistributorConnectionLink" type="ContextualisedConnectionLinkStructure">
-  <xsd:annotation>
-   <xsd:documentation>Link to Interchange stop from which the distributor journey departs. If omitted: the distributor journey stop is the same as the feeder journey stop, i.e. that of theh dated call.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->
