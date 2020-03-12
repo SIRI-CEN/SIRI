@@ -651,7 +651,7 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Publication Window for SITUATION if different from validity period.</xsd:documentation>
     </xsd:annotation>
