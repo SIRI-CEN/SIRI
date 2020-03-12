@@ -1119,7 +1119,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for disruption.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
     </xsd:annotation>
