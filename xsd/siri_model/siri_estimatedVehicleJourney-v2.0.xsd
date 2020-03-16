@@ -410,7 +410,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element name="RecordedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Recorded occupancies and capacities of a vehicle (by fare classes) after departing at a given STOP POINT. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Recorded occupancies and capacities of a vehicle (by fare classes) when arriving at a given STOP POINT. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
@@ -455,7 +455,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element name="RecordedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Recorded occupancies and capacities of a vehicle (by fare classes) after departing at a given STOP POINT. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Recorded occupancies and capacities of a vehicle (by fare classes) when departing at a given STOP POINT. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>

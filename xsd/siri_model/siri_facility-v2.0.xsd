@@ -703,7 +703,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element ref="FacilityConditionElement" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Information about a change of Equipment availabilty at stop or on vehicle that may affect access or use.</xsd:documentation>
+     <xsd:documentation>Information about a change of Equipment availability at stop or on vehicle that may affect access or use.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:sequence>

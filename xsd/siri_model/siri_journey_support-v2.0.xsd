@@ -418,7 +418,7 @@ Rail transport, Roads and road transport
  <!-- ============================ -->
  <xsd:group name="TrainFormationReferenceGroup">
   <xsd:annotation>
-   <xsd:documentation>Goups together the relevant references needed in a formation. 
+   <xsd:documentation>Groups together the relevant references needed in a formation. 
 Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. 
 If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is possible too.</xsd:documentation>
   </xsd:annotation>
@@ -734,7 +734,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
  <!-- =============================================================================== -->
  <xsd:simpleType name="TrainSizeEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for TYPE OF TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+			<xsd:documentation>Allowed values for TRAIN SIZE. +SIRI v2.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="normal"/>
@@ -744,7 +744,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
 	</xsd:simpleType>
 	<xsd:simpleType name="TypeOfFuelEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for type of fuel. +SIRI v2.1</xsd:documentation>
+			<xsd:documentation>Allowed values for TYPE OF FUEL. +SIRI v2.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="petrol"/>
@@ -752,6 +752,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
 			<xsd:enumeration value="naturalGas"/>
 			<xsd:enumeration value="biodiesel"/>
 			<xsd:enumeration value="electricity"/>
+			<xsd:enumeration value="hydrogen"/>
 			<xsd:enumeration value="other"/>
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -805,7 +806,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
 			</xsd:enumeration>
 			<xsd:enumeration value="businessClass">
 				<xsd:annotation>
-					<xsd:documentation>Busienss Class - pti23_10</xsd:documentation>
+					<xsd:documentation>Business Class - pti23_10</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="standardClass">
