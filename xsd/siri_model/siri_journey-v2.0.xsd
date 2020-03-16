@@ -602,15 +602,15 @@ Rail transport, Roads and road transport
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
-	<xsd:element name="ArrivalPredictionUnknown" type="EmptyType">
-     <xsd:annotation>
-      <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options to inform the consumer:
+    <xsd:element name="ArrivalPredictionUnknown" type="EmptyType">
+	 <xsd:annotation>
+      <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options (and combinations of them) to inform the consumer:
 (i) set Monitored to 'false'
-(ii) transmit ExpectedTime together with "PredictionInaccurate=true"
-(iii) drop/omit ExpectedTimes
+(ii) transmit ExpectedArrivalTime together with "PredictionInaccurate=true"
+(iii) drop/omit ExpectedArrivalTime
 (iv) set ArrivalStatus to 'noReport'
-However, option (iii) might introduce ambiguity: one consumer might interpret it as "on time" and another one as "indefinite delay". 
-To avoid this, the producer should transmit xxxPredictionUnknown instead of any ExpectedTimes. +SIRI v2.1</xsd:documentation>
+However, this might introduce ambiguity: e.g. option (iii) might be interpreted as "on time" by one consumer, but also as "indefinite delay" by another consumer. 
+To avoid this, the producer should transmit xxxPredictionUnknown instead of any expected times. +SIRI v2.1</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -651,13 +651,13 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
     </xsd:sequence>
 	<xsd:element name="DeparturePredictionUnknown" type="EmptyType">
      <xsd:annotation>
-      <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options to inform the consumer:
+      <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options (and combinations of them) to inform the consumer:
 (i) set Monitored to 'false'
-(ii) transmit ExpectedTime together with "PredictionInaccurate=true"
-(iii) drop/omit ExpectedTimes
-(iv) set ArrivalStatus to 'noReport'
-However, option (iii) might introduce ambiguity: one consumer might interpret it as "on time" and another one as "indefinite delay". 
-To avoid this, the producer should transmit xxxPredictionUnknown instead of any ExpectedTimes. +SIRI v2.1</xsd:documentation>
+(ii) transmit ExpectedDepartureTime together with "PredictionInaccurate=true"
+(iii) drop/omit ExpectedDepartureTime
+(iv) set DepartureStatus to 'noReport'
+However, this might introduce ambiguity: e.g. option (iii) might be interpreted as "on time" by one consumer, but also as "indefinite delay" by another consumer. 
+To avoid this, the producer should transmit xxxPredictionUnknown instead of any expected times. +SIRI v2.1</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
