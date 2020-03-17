@@ -139,37 +139,29 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
     <xsd:annotation>
-     <xsd:documentation>A reference to the dated VEHICLE JOURNEY from a previous PT delivery that is removed by the data producer.</xsd:documentation>
+     <xsd:documentation>A reference to the DATED VEHICLE JOURNEY from a previous PT delivery that is removed by the data producer.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
+   <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey from the plan. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Optionally identify the VEHICLE JOURNEY indirectly by origin and destination and the scheduled times at these stops.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="JourneyPatternInfoGroup"/>
-   <xsd:group ref="JourneyEndNamesGroup"/>
-   <xsd:group ref="ServiceInfoGroup"/>
-   <xsd:group ref="JourneyInfoGroup"/>
-   <xsd:group ref="DatedServiceInfoGroup"/>
-   <xsd:group ref="TimetableRealtimeInfoGroup"/>
-   <xsd:group ref="DatedTrainOperationalInfoGroup"/>
-   <xsd:element name="DatedCalls">
+   <xsd:element name="TrainNumbers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Complete sequence of stops along the route path, in calling order.</xsd:documentation>
+     <xsd:documentation>TRAIN NUMBERs for journey.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
-      <xsd:element ref="DatedCall" minOccurs="2" maxOccurs="unbounded"/>
+      <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>TRAIN NUMBER assigned to VEHICLE JOURNEY.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element name="JourneyRelations" type="JourneyRelationsStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Relations of the journey with other journeys, e.g., in case a joining/splitting takes place or the journey substitutes for another one etc.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
+   <xsd:element ref="ReasonForRemoval"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:group name="DatedServiceInfoGroup">
@@ -383,8 +375,6 @@ Rail transport, Roads and road transport
      <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
      <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
      <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
-     <xsd:group ref="InterchangePropertyGroup"/>
-     <xsd:group ref="InterchangeTimesGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
    </xsd:restriction>
@@ -646,7 +636,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) an interchange from the plan. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey or an interchange from the plan. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="FeederRef" type="ConnectingJourneyRefStructure">
