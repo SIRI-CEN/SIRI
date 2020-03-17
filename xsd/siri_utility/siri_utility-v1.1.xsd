@@ -54,6 +54,8 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRI Framework Utility Types.</xsd:documentation>
  </xsd:annotation>
  <!-- ======================================================================= -->
+ <xsd:include schemaLocation="siri_types-v2.0.xsd"/>
+ <!-- ======================================================================= -->
  <xsd:simpleType name="EmptyType">
   <xsd:annotation>
    <xsd:documentation>A type with no allowed content, used when simply the presence of an element is significant.</xsd:documentation>
@@ -111,12 +113,12 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for a Key List. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Key" type="xsd:normalizedString" maxOccurs="1">
+   <xsd:element name="Key" type="xsd:normalizedString">
     <xsd:annotation>
      <xsd:documentation>Identifier of value e.g. System.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Value" type="xsd:normalizedString" maxOccurs="1">
+   <xsd:element name="Value" type="xsd:normalizedString">
     <xsd:annotation>
      <xsd:documentation>Value for alternative key.</xsd:documentation>
     </xsd:annotation>
@@ -167,7 +169,7 @@ such as the description and allowed values for codes. +SIRI v2.1</xsd:documentat
      <xsd:documentation>Identifier of a TYPE OF VALUE.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="NameOfClass" type="NameOfClassType" minOccurs="0">
+   <xsd:element name="NameOfClass" type="NameOfClassType">
     <xsd:annotation>
      <xsd:documentation>Name of class of which TypeOfValue is an instance.</xsd:documentation>
     </xsd:annotation>
