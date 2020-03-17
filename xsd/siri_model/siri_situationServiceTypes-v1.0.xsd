@@ -118,69 +118,88 @@ Rail transport, Roads and road transport
    <xsd:documentation>Values for Interchange Status TPEG cross reference pti_table 31.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="planned">
+   <xsd:enumeration value="unknown">
     <xsd:annotation>
-     <xsd:documentation>Interchange is planned.</xsd:documentation>
+     <xsd:documentation>TPEG Pti31_0, unknown</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="changed">
+   <xsd:enumeration value="connection">
     <xsd:annotation>
-     <xsd:documentation>Interchange is planned but was updated as a result of changes in the QUAYs or arrival/departure times.</xsd:documentation>
+     <xsd:documentation>TPEG Pti31_1, connection</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="replacement">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti31_2, replacement</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="alternative">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti31_3, alternative</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="connectionNotHeld">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti31_4, connection not held</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="connectionHeld">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti31_5, connection held</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="statusOfConnectionUndecided">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti31_6, status of connection undecided</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefinedCrossReferenceInformation">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti31_255, undefined cross reference information</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="statusOfConenctionUndecided">
+    <xsd:annotation>
+     <xsd:documentation>deprecated (SIRI 2.1) - use statusOfConnectionUndecided</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="connectionChanged">
+    <xsd:annotation>
+     <xsd:documentation>Interchange is planned but was updated as a result of changes in the QUAYs or arrival/departure times. Can be used if the status is a combination of the other values. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="distributorWaitProlonged">
     <xsd:annotation>
-     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) 
-to allow passengers to transfer from delayed feeders. To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform
-the passengers about the new departure time of the distributor or even a willWait guarantee.</xsd:documentation>
+     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders. 
+To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="departurePlatformChanged">
     <xsd:annotation>
-     <xsd:documentation>Interchange is planned but was updated as a result of changes in the QUAYs or arrival/departure times.</xsd:documentation>
+     <xsd:documentation>Used to provide the passengers with information about a new departure platform of the distributor VEHICLE if the distributor changes its planned stopping position. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="extra">
+   <xsd:enumeration value="extraInterchange">
     <xsd:annotation>
-     <xsd:documentation>Interchange is an addition to the plan.</xsd:documentation>
+     <xsd:documentation>Interchange is an addition to the plan. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="cancelled">
     <xsd:annotation>
-     <xsd:documentation>Interchange is a cancellation of an interchange in the plan.</xsd:documentation>
+     <xsd:documentation>Interchange is a cancellation of an interchange in the plan. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="feederArrivalCancellation">
     <xsd:annotation>
-     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. 
-This can lead to the distributor VEHICLE abandoning the connection. There are several possible reasons for the loss of a feeder, e.g. loss/cancellation of the feeder VEHICLE, diversion of the feeder LINE/DIRECTION, disruption of a LINE section etc.</xsd:documentation>
+     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. 
+There are several possible reasons for the loss of a feeder, e.g. loss/cancellation of the feeder VEHICLE, diversion of the feeder LINE/DIRECTION, disruption of a LINE section etc. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="distributorDepartureCancellation">
     <xsd:annotation>
-     <xsd:documentation>Indicates the loss of an outbound connection, i.e., is used to signal the cancellation of the onward connection to the passengers in the feeder VEHICLEs.</xsd:documentation>
+     <xsd:documentation>Indicates the loss of an outbound connection, i.e., is used to signal the cancellation of the onward connection to the passengers in the feeder VEHICLEs. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>There is no data available on the interchange status.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti31_0"/>
-   <xsd:enumeration value="pti31_1"/>
-   <xsd:enumeration value="connection"/>
-   <xsd:enumeration value="pti31_2"/>
-   <xsd:enumeration value="replacement"/>
-   <xsd:enumeration value="pti31_3"/>
-   <xsd:enumeration value="alternative"/>
-   <xsd:enumeration value="pti31_4"/>
-   <xsd:enumeration value="connectionNotHeld"/>
-   <xsd:enumeration value="pti31_5"/>
-   <xsd:enumeration value="connectionHeld"/>
-   <xsd:enumeration value="pti31_6"/>
-   <xsd:enumeration value="statusOfConenctionUndecided"/>
-   <xsd:enumeration value="pti31_255"/>
-   <xsd:enumeration value="undefinedCrossReferenceInformation"/>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ==Ticket Restriction Type================================= -->
