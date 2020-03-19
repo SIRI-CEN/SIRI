@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" id="siri_time">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_time">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -36,7 +36,7 @@
       -->
     </Date>
     <Description>
-     <p>SIRI is a European CEN standard for the exchange of real-time information .</p>
+     <p>SIRI is a European CEN standard for the exchange of real-time information.</p>
     </Description>
     <Format>
      <MediaType>text/xml</MediaType>
@@ -45,7 +45,7 @@
     </Format>
     <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_time-v2.0.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+    <Publisher>CEN</Publisher>
     <Rights>Unclassified
      <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
     </Rights>
@@ -168,7 +168,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="EndTimeStatus" type="EndTimeStatusEnumeration" default="undefined" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>If end time not provided, whethhr to interpret range as long, term, short term or unknown length of situation.  Default is unknown. (Siri 2.0++)</xsd:documentation>
+     <xsd:documentation>If end time not provided, whethhr to interpret range as long, term, short term or unknown length of situation. Default is unknown. (Siri 2.0++)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -227,7 +227,7 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="thursday">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti34_4, Thusrday</xsd:documentation>
+     <xsd:documentation>TPEG Pti34_4, Thursday</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="friday">

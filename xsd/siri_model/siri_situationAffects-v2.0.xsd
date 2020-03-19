@@ -75,7 +75,7 @@
     </Format>
     <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_model/siri_situationAffects-v2.0.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+    <Publisher>CEN</Publisher>
     <Relation>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situationServiceTypes-v1.0.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modes-v1.1.xsd</Requires>
@@ -1107,7 +1107,7 @@ Rail transport, Roads and road transport
       </xsd:annotation>
       <xsd:complexType>
        <xsd:sequence>
-        <xsd:element name="NavigationPathRef" type="NavigationPathRefStructure" maxOccurs="unbounded"/>
+        <xsd:element name="NavigationPathRef" type="ifopt:NavigationPathRefStructure" maxOccurs="unbounded"/>
        </xsd:sequence>
       </xsd:complexType>
      </xsd:element>
@@ -1123,7 +1123,7 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="AffectedStopPlaceElementStructure">
     <xsd:sequence>
-     <xsd:element name="ComponentRef" type="StopPlaceComponentRefStructure">
+     <xsd:element name="ComponentRef" type="ifopt:StopPlaceComponentRefStructure">
       <xsd:annotation>
        <xsd:documentation>Reference to a Stop Place.</xsd:documentation>
       </xsd:annotation>
@@ -1133,7 +1133,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>Name of component.  (Unbounded since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="ComponentType" type="StopPlaceComponentTypeEnumeration" minOccurs="0">
+     <xsd:element name="ComponentType" type="ifopt:StopPlaceComponentTypeEnumeration" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Type of Component.</xsd:documentation>
       </xsd:annotation>
@@ -1157,7 +1157,7 @@ Rail transport, Roads and road transport
        <xsd:sequence>
         <xsd:element name="AffectedFacility" type="AffectedFacilityStructure" maxOccurs="unbounded">
          <xsd:annotation>
-          <xsd:documentation>Facililitiy available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
+          <xsd:documentation>Facility available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
        </xsd:sequence>
