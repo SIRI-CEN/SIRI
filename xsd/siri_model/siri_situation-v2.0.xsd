@@ -741,13 +741,13 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:group name="ReasonGroup">
   <xsd:annotation>
-   <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to create standardized messages describing the SITUATION. If no enumerated values are given, ReasonName is used instead. 
+   <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ReasonName is used instead. 
 Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="TpegReasonGroup">
     <xsd:annotation>
-     <xsd:documentation>Structured explanation of SITUATION reason, from which a standardized message can be created.</xsd:documentation>
+     <xsd:documentation>Structured classifier of nature of SITUATION, from which a standardized message can be generated.</xsd:documentation>
     </xsd:annotation>
    </xsd:group>
    <xsd:group ref="TpegSubReasonGroup" minOccurs="0">
@@ -757,12 +757,12 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:group>
    <xsd:element name="PublicEventReason" type="D2LogicalModel:PublicEventTypeEnum" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Structured classifier of Public Event, from which a standardized message can be created.</xsd:documentation>
+     <xsd:documentation>Structured classifier of Public Event, from which a standardized message can be generated.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ReasonName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Text description of SITUATION reason, from which a standardized message can be created. Not normally needed, except when TpegReason and PublicEventReason are absent.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Text explanation of nature of SITUATION, from which a standardized message can be generated. Not normally needed, except when TpegReason and PublicEventReason are absent.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -1211,18 +1211,18 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
  </xsd:complexType>
  <xsd:group name="ConditionGroup">
   <xsd:annotation>
-   <xsd:documentation>Structured elements of a SITUATION condition. The Condition enumerated value(s) can be used to create standardized messages describing the SITUATION. If no enumerated values are given, ConditionName is used instead. 
+   <xsd:documentation>Structured elements of a SITUATION condition. The Condition enumerated value(s) can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ConditionName is used instead. 
 Note: this means that ConditionName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="Condition" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Structured Condition(s) of the SITUATION, from which a standardized message can be created.</xsd:documentation>
+     <xsd:documentation>Structured classification(s) of effect on service, from which a standardized message can be generated.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ConditionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Text description of advice, from which a standardized message can be created. Not normally needed, except when Condition is absent.</xsd:documentation>
+     <xsd:documentation>Text classification of effect on service, from which a standardized message can be generated. Not normally needed, except when Condition is absent.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -1246,7 +1246,7 @@ Note: this means that ConditionName is NOT a complete message, but only a (few) 
  </xsd:complexType>
  <xsd:complexType name="PtAdviceStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for (structured) advice. The AdviceType enumerated value can be used to create standardized messages describing the SITUATION. If no enumerated value is given, AdviceName is used instead. 
+   <xsd:documentation>Type for (structured) advice. The AdviceType enumerated value can be used to generate standardized messages describing the SITUATION. If no enumerated value is given, AdviceName is used instead. 
 Note: this means that AdviceName is NOT a complete message, but only a (few) word(s) to be included in the message!
 Alternatively, AdviceRef van be used to reference a (complete) standardised advisory message.
    </xsd:documentation>
@@ -1259,12 +1259,12 @@ Alternatively, AdviceRef van be used to reference a (complete) standardised advi
    </xsd:element>
    <xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Structured advice for passengers in the given SITUATION, from which a standardized message can be created.</xsd:documentation>
+     <xsd:documentation>Structured advice for passengers in the given SITUATION, from which a standardized message can be generated.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AdviceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Text description of advice, from which a standardized message can be created. Not normally needed, except when AdviceType is absent.</xsd:documentation>
+     <xsd:documentation>Text description of advice, from which a standardized message can be generated. Not normally needed, except when AdviceType is absent.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Details" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
