@@ -326,13 +326,13 @@ Rail transport, Roads and road transport
    bay: Parking bay for cars, bicycle, scooter, etc
    otherSpaces: any other kind of spaces: lockers, stading spaces, toilets, etc.
    devices: electronic devices (audio guide, headphones, etc.) and physical devices (walking stick, wheel chair, etc.)
-   vehicles: any type of vehicles (cycle, car, scooter, overboard, motorbyke, etc.)
-   kW (kiloWatt) or kWh (kiloWatt per hour): means that an available (ore consummed) power is measured
-   litres and cubeMeters: means that a volume is measured
+   vehicles: any type of vehicles (cycle, car, scooter, hoverboard, motorbike, etc.)
+   kW (kiloWatt) or kWh (kiloWatt per hour): means that an available (or consumed) power is measured
+   litres and cubicMeters: means that a volume is measured
    squareMeters: means that a surface is measured
    meters: means that a distance is measured
    kg (kilogram): means that a mass is measured
-   A (Amper): means that an electric intensity is measured
+   A (Ampere): means that an electric intensity is measured
    C (degree Celsius): means that a temperature is measured
    other: use of "other" requires the additional open ended TypeOfCountedFeature (monitoredCountingStructure) to be filled
    </xsd:documentation>
@@ -346,8 +346,8 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="persons"/>
    <xsd:enumeration value="kW"/>
    <xsd:enumeration value="litres"/>
-   <xsd:enumeration value="squarMeters"/>
-   <xsd:enumeration value="cubeMeters"/>
+   <xsd:enumeration value="squareMeters"/>
+   <xsd:enumeration value="cubicMeters"/>
    <xsd:enumeration value="meters"/>
    <xsd:enumeration value="kWh"/>
    <xsd:enumeration value="kW"/>
@@ -677,7 +677,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="MobilityImpairedAccess" type="xsd:boolean">
     <xsd:annotation>
-     <xsd:documentation>Whether stop or service is accessible to mobility impaired users. This may be further qualified by one ore more MobilityFacility instances to specify which types of mobility access are available (true) or not available (false). For example suitableForWheelChair, or 'tepFreeAccess.</xsd:documentation>
+     <xsd:documentation>Whether stop or service is accessible to mobility impaired users. This may be further qualified by one or more MobilityFacility instances to specify which types of mobility access are available (true) or not available (false). For example suitableForWheelChair, or 'tepFreeAccess.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AccessFacility" minOccurs="0" maxOccurs="unbounded">
