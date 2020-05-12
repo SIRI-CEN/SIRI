@@ -424,9 +424,9 @@ Rail transport, Roads and road transport
       <xsd:documentation>Counted value</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-    <xsd:element name="Percentage" type="xsd:decimal">
+    <xsd:element name="Percentage" type="PercentageType">
      <xsd:annotation>
-      <xsd:documentation>Value as a percentage (0.0 to 1.0)</xsd:documentation>
+      <xsd:documentation>Value as a percentage (0.0 to 100.0) of the maximum possible value</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -435,9 +435,9 @@ Rail transport, Roads and road transport
      <xsd:documentation>Trend of the count</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Accuracy" type="xsd:decimal" minOccurs="0">
+   <xsd:element name="Accuracy" type="PercentageType" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Accuracy of the count, as a percentage (0.0 to 1.0)</xsd:documentation>
+     <xsd:documentation>Accuracy of the count, as a percentage (0.0 to 100.0), the percentage being a + or - maximum deviation from the provided value</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
