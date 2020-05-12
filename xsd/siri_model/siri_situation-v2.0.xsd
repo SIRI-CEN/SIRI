@@ -57,7 +57,7 @@
        D2 trafficResstrictionType renamed to  trafficConstrictionType
        Correct type on easementref to normalized string. 
        Allow transalatiobs of NLString elements
-	  -->
+      -->
     </Date>
     <Date>
      <Modified>2013-02-11</Modified>
@@ -1314,7 +1314,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Reference to a standard advisory NOTICE to be given to passengers if a particular condition arises.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="TpegAdvice" type="AdviceTypeEnumeration" minOccurs="0"/>
+   <xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0"/>
    <xsd:element name="Details" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Further Textual advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
