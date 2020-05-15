@@ -321,6 +321,7 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="increasingSlowly"/>
    <xsd:enumeration value="decreasingQuickly"/>
    <xsd:enumeration value="decreasingSlowly"/>
+   <xsd:enumeration value="unknown"/>
   </xsd:restriction>
  </xsd:simpleType>
  <xsd:simpleType name="CountedFeatureUnitEnumeration">
