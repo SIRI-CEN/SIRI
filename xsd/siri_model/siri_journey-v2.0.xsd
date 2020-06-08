@@ -932,7 +932,7 @@ Rail transport, Roads and road transport
      <xsd:annotation>
       <xsd:documentation>Information about the JOURNEY PARTs for which the JOURNEY has a JOURNEY RELATION. +SIRI v2.1</xsd:documentation>
      </xsd:annotation>
-	 <xsd:complexType>
+     <xsd:complexType>
       <xsd:sequence>
        <xsd:element name="JourneyPartInfo" type="RelatedJourneyPartStructure" maxOccurs="unbounded">
         <xsd:annotation>
