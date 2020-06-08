@@ -99,7 +99,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:choice>
     <xsd:sequence>
-	 <xsd:choice>
+     <xsd:choice>
       <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
        <xsd:annotation>
         <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
@@ -112,12 +112,12 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:choice>
-	 <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
+     <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Additionally, identify the VEHICLE JOURNEY by origin and destination and the scheduled times at these stops.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-	</xsd:sequence>
+    </xsd:sequence>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
       <xsd:documentation>If this is the first message for an unplanned 'extra' VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'.
