@@ -107,7 +107,7 @@ Rail transport, Roads and road transport
      <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
       <xsd:annotation>
        <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' ie be with the data context of the ESTIMATED Timetable. 
-DEPRECATED from SRI 2.0</xsd:documentation>
+DEPRECATED from SIRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:choice>
@@ -119,7 +119,7 @@ DEPRECATED from SRI 2.0</xsd:documentation>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
       <xsd:documentation>If this is the first message about an extra unplanned VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'. 
-DEPRECATED from SRI 2.0</xsd:documentation>
+DEPRECATED from SIRI 2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -296,7 +296,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:sequence>
     <xsd:element name="RecordedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Observed call tmes for that art of teh journey that has already been completed.  (+ SIRI 2..0)</xsd:documentation>
+      <xsd:documentation>Complete sequence of stops already visited along the route path, in calling order. Only used if observed stop data is being recorded. (SIRI 2.0)</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
@@ -306,7 +306,7 @@ the original journey and the nature of the difference.</xsd:documentation>
     </xsd:element>
     <xsd:element name="EstimatedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Estimated call tmes for journey</xsd:documentation>
+      <xsd:documentation>Complete sequence of stops along the route path, in calling order. Normally this is only the onwards stops from the vehicle's current position.</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
@@ -330,12 +330,12 @@ the original journey and the nature of the difference.</xsd:documentation>
  </xsd:complexType>
  <xsd:element name="EstimatedCall" type="EstimatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
+   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY. If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="EstimatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Rea-ltime info about a VEHICLE JOURNEY Stop.</xsd:documentation>
+   <xsd:documentation>Type for real-time info about a VEHICLE JOURNEY Stop.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="StopPointInSequenceGroup"/>
@@ -379,7 +379,7 @@ the original journey and the nature of the difference.</xsd:documentation>
  <!-- ======================================================================= -->
  <xsd:element name="RecordedCall" type="RecordedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
+   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY. Only used if observed stop data is being recorded. (SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:group name="RecordedCallGroup">
@@ -392,10 +392,15 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="ActualArrivalTime" minOccurs="0"/>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicel to arrive at.Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is
+     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicle to arrive at. Inheritable property. Can be omitted if the same as the DeparturePlatformName. If there is no arrival platform name separate from the departure platform name, the precedence is
 (i) any arrival platform on any related dated timetable element, 
 (ii) any departure platform name on this estimated element;
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a physical QUAY (platform). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
@@ -410,12 +415,17 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element ref="DeparturePlatformName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Departure QUAY ( Bay or platform) name. Defaulted taken from  from planned timetable..</xsd:documentation>
+     <xsd:documentation>Bay or platform (QUAY) name from which VEHICLE will depart. Inherited property.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Assignments of departure platform for Scheduled STOP POINT to a physical QUAY. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>
