@@ -192,6 +192,16 @@ Rail transport, Roads and road transport
      <xsd:documentation>LINE Reference.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>TRAIN NUMBER Reference.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>OPERATOR Reference.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
@@ -571,6 +581,66 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    <xsd:enumeration value="otherService"/>
    <xsd:enumeration value="lastServiceOfDay"/>
    <xsd:enumeration value="unspecified"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =====JourneyRelation============================================================ -->
+ <xsd:simpleType name="JourneyRelationTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed types of relation between JOURNEYs.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="ContinuationOfJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is a continuation of the specified RelatedJourney at the stop point given in CallInfo.
+Passengers don't need to change vehicles. The new journey is not communicated as an interchange.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ContinuedByJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is continued by the specified RelatedJourney at the stop point given in CallInfo.
+Passengers don't need to change vehicles. The new journey is not communicated as an interchange.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="SplitsIntoJourneys">
+    <xsd:annotation>
+     <xsd:documentation>The journey splits into multiple RelatedJourneys at the stop point given in CallInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ContinuationOfSplitJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is a continuation of a single RelatedJourney splitting into multiple journeys at the stop point given in CallInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="JoiningOfJourneys">
+    <xsd:annotation>
+     <xsd:documentation>The journey is the continuation of multiple RelatedJourneys joining together at the stop point given in CallInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ContinuedByJoinedJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is continued by a single RelatedJourney after joining other journeys at the stop point given in CallInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ReplacementOfJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey replaces one or more partially or fully cancelled RelatedJourneys during the JourneyPart defined or referenced in JourneyPartInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ReplacedByJourney">
+    <xsd:annotation>
+     <xsd:documentation>The partially or fully cancelled journey is replaced by one or more RelatedJourneys during the JourneyPart defined or referenced in JourneyPartInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="SupportOfJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey partially or fully supports one or more RelatedJourneys during the JourneyPart defined or referenced in JourneyPartInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="SupportedByJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is partially or fully supported by one or more RelatedJourneys during the JourneyPart defined or referenced in JourneyPartInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
 </xsd:schema>
