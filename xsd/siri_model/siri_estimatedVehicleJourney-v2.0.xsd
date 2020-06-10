@@ -86,6 +86,8 @@ Rail transport, Roads and road transport
  </xsd:annotation>
  <!-- ==== Dependencies=========================================-->
  <xsd:include schemaLocation="siri_monitoredVehicleJourney-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_datedVehicleJourney-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_situationServiceTypes-v1.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:element name="EstimatedVehicleJourney" type="EstimatedVehicleJourneyStructure">
   <xsd:annotation>
@@ -220,9 +222,44 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
    <xsd:choice>
     <xsd:element ref="InterchangeRef"/>
     <xsd:sequence>
+     <xsd:element name="InterchangeCode" type="InterchangeCodeType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Identifier of ESTIMATED SERVICE JOURNEY INTERCHANGE in case it is an addition to the plan. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place. +SIRI v2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
      <xsd:element name="FeederJourneyRef" type="ConnectingJourneyRefStructure">
       <xsd:annotation>
-       <xsd:documentation>Reference to a connecting distributor VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Reference to a connecting feeder VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="FeederArrivalStopRef" type="StopPointRefStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>SCHEDULED STOP POINT at which feeder journey arrives. 
+Assuming, for example, that the feeder is redirected to another QUAY by a dispositive measure in order to shorten the transfer time, 
+how do we communicate this change in the interchange? If the STOP POINTs are modelled QUAY accurate, FeederArrivalStopRef should always 
+reference the STOP POINT of the new/expected QUAY (which was transmitted in the ESTIMATED VEHICLE JOURNEY). +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="FeederVisitNumber" type="VisitNumberType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Sequence of visit to Feeder stop within Feeder JOURNEY PATTERN.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="FeederStopOrder" type="xsd:positiveInteger" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, 
+ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of 
+despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="DistributorJourneyRef" type="ConnectingJourneyRefStructure">
@@ -230,8 +267,44 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
        <xsd:documentation>Reference to a connecting distributor VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
+     <xsd:element name="DistributorDepartureStopRef" type="StopPointRefStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>SCHEDULED STOP POINT at which distributor journey departs. 
+Assuming that the distributor is directed to another QUAY (and that STOP POINTs are modelled QUAY accurate), DistributorDepartureStopRef 
+should always reference the STOP POINT of the new/expected QUAY (which was transmitted in the ESTIMATED VEHICLE JOURNEY). +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Sequence of visit to Distributor stop within Distributor JOURNEY PATTERN.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="DistributorStopOrder" type="xsd:positiveInteger" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, 
+ORDER can be used to associate the stop order instead. ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of 
+despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:group ref="InterchangePropertyGroup" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Properties of SERVICE JOURNEY INTERCHANGE. It is important to note that the InterchangePropertyGroup displays planning data whereas, for example, 
+InterchangeStatus or Will(Not)Wait contain the real-time data. A SERVICE JOURNEY INTERCHANGE may be transmitted with "Guaranteed=true", but also WillNotWait due to major despatching alterations.
+However, Will(Not)Wait will always take precedence over the property Guaranteed, which means that WillNotWait breaks the connection regardless of whether Guarateed was transmitted. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:group>
     </xsd:sequence>
    </xsd:choice>
+   <xsd:element name="InterchangeStatus" type="InterchangeStatusEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether this interchange is planned, updated, additional or cancelled. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:choice>
     <xsd:element name="WillNotWait" type="EmptyType">
      <xsd:annotation>
@@ -244,6 +317,11 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
+   <xsd:element name="ExpectedArrivalTimeOfFeeder" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Time at which feeder VEHICLE is expected to arrive. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="ExpectedDepartureTimeOfDistributor" type="xsd:dateTime" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Time at which distributor VEHICLE is expected to depart. +SIRI v2.0</xsd:documentation>
@@ -254,6 +332,14 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
      <xsd:documentation>Whether connection monitoring is active or not for this connection. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:group ref="InterchangeTimesGroup" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Contains various types of transfer and wait times of a SERVICE JOURNEY INTERCHANGE. 
+Implementation Note: what happens if, for example, the interchange times and a QUAY change in xxxStopAssignment of the ESTIMATED VEHICLE JOURNEY suggest contradictory transfer/wait times? 
+In case of doubt, the interchange times are to be favoured because they are transmitted explicitly. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:group>
+   <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="WillWaitStructure">
@@ -266,11 +352,19 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
      <xsd:documentation>Time up until which the distributor will wait. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="DriverHasAcknowledgeWIllWait" type="xsd:boolean" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether an acknowledgement has been received that the driver will wait. +SIRI v2.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:choice minOccurs="0">
+    <xsd:element name="DriverHasAcknowledgeWIllWait" type="xsd:boolean" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Whether an acknowledgement has been received that the driver will wait. 
+DEPRECATED since SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="DriverHasAcknowledgedWillWait" type="xsd:boolean" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Whether an acknowledgement has been received that the driver will wait. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ======================================================================= -->
