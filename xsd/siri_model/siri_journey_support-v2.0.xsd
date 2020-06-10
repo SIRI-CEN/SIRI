@@ -194,7 +194,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>LINE Reference.</xsd:documentation>
+     <xsd:documentation>Reference to LINE.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
