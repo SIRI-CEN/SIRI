@@ -98,28 +98,30 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
-    <xsd:choice>
-     <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+    <xsd:sequence>
+     <xsd:choice>
+      <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+       <xsd:annotation>
+        <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
+       <xsd:annotation>
+        <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' i.e. be with the data context of the ESTIMATED Timetable.
+DEPRECATED from SIRI 2.0</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:choice>
+     <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
+       <xsd:documentation>Additionally, identify the VEHICLE JOURNEY by origin and destination and the scheduled times at these stops.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' ie be with the data context of the ESTIMATED Timetable. 
-DEPRECATED from SRI 2.0</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:choice>
-    <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>If no VEHICLE JOURNEY reference is available, identify it by origin and destination and the scheduled times at these stops.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    </xsd:sequence>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
-      <xsd:documentation>If this is the first message about an extra unplanned VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'. 
-DEPRECATED from SRI 2.0</xsd:documentation>
+      <xsd:documentation>If this is the first message for an unplanned 'extra' VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'.
+DEPRECATED from SIRI 2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -202,7 +204,7 @@ DEPRECATED from SRI 2.0</xsd:documentation>
  <!-- ======================================================================= -->
  <xsd:element name="EstimatedServiceJourneyInterchange" type="EstimatedServiceJourneyInterchangeStructure">
   <xsd:annotation>
-   <xsd:documentation>A VEHICLE JOURNEY taking place on a particular date that will be managed by an AVMs.</xsd:documentation>
+   <xsd:documentation>A real-time SERVICE JOURNEY INTERCHANGE that may be made between the stops of two monitored journeys. It includes the current real-time predicted transfer and wait times. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="EstimatedServiceJourneyInterchangeStructure">
@@ -228,12 +230,12 @@ DEPRECATED from SRI 2.0</xsd:documentation>
    <xsd:choice>
     <xsd:element name="WillNotWait" type="EmptyType">
      <xsd:annotation>
-      <xsd:documentation>Distributor will not wait (i.e. connection broken) SIRI w.0</xsd:documentation>
+      <xsd:documentation>Distributor will not wait, i.e., connection is not guaranteed or broken. SIRI 2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="WillWait" type="WillWaitStructure">
      <xsd:annotation>
-      <xsd:documentation>Nature of wait that distributer will make. +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Details about how (long) the distributor services may be held in order to guarantee the connection. +SIRI v2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -244,7 +246,7 @@ DEPRECATED from SRI 2.0</xsd:documentation>
    </xsd:element>
    <xsd:element name="ConnectionMonitoring" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether connection monitoring is active or not for this connection +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Whether connection monitoring is active or not for this connection. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -296,7 +298,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:sequence>
     <xsd:element name="RecordedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Observed call tmes for that art of teh journey that has already been completed.  (+ SIRI 2..0)</xsd:documentation>
+      <xsd:documentation>Complete sequence of stops already visited along the route path, in calling order. Only used if observed stop data is being recorded. (SIRI 2.0)</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
@@ -306,7 +308,7 @@ the original journey and the nature of the difference.</xsd:documentation>
     </xsd:element>
     <xsd:element name="EstimatedCalls" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Estimated call tmes for journey</xsd:documentation>
+      <xsd:documentation>Complete sequence of stops along the route path, in calling order. Normally this is only the onwards stops from the vehicle's current position.</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
@@ -320,17 +322,22 @@ the original journey and the nature of the difference.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:sequence>
+   <xsd:element name="JourneyRelations" type="JourneyRelationsStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Relations of the journey with other journeys, e.g., in case a joining/splitting takes place or the journey substitutes for another one etc.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:element name="EstimatedCall" type="EstimatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
+   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY. If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="EstimatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Rea-ltime info about a VEHICLE JOURNEY Stop.</xsd:documentation>
+   <xsd:documentation>Type for real-time info about a VEHICLE JOURNEY Stop.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="StopPointInSequenceGroup"/>
@@ -374,7 +381,7 @@ the original journey and the nature of the difference.</xsd:documentation>
  <!-- ======================================================================= -->
  <xsd:element name="RecordedCall" type="RecordedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
+   <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY. Only used if observed stop data is being recorded. (SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:group name="RecordedCallGroup">
@@ -385,12 +392,32 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
    <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
    <xsd:element ref="ActualArrivalTime" minOccurs="0"/>
+   <xsd:element name="ArrivalStatus" type="CallStatusEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Classification of the timeliness of the visit according to a fixed list of values. If not specified, same as DepartureStatus. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="ArrivalCancellationReason" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Text annotation to be used in cases where ArrivalStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicel to arrive at.Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is
+     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicle to arrive at. Inheritable property. Can be omitted if the same as the DeparturePlatformName. If there is no arrival platform name separate from the departure platform name, the precedence is
 (i) any arrival platform on any related dated timetable element, 
 (ii) any departure platform name on this estimated element;
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="ArrivalBoardingActivity" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Type of boarding and alighting at stop, e.g. alighting, noAlighting or passThru. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a physical QUAY (platform). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
@@ -405,12 +432,32 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element ref="DeparturePlatformName" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Departure QUAY ( Bay or platform) name. Defaulted taken from  from planned timetable..</xsd:documentation>
+     <xsd:documentation>Bay or platform (QUAY) name from which VEHICLE will depart. Inherited property.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="ActualDepartureTime" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DepartureStatus" type="CallStatusEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Classification of the timeliness of the departure part of the CALL, according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="DepartureCancellationReason" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Text annotation to be used in cases where DepartureStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="DepartureBoardingActivity" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Nature of boarding at stop, e.g. boarding, noBoarding or passThru. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Assignments of departure platform for Scheduled STOP POINT to a physical QUAY. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>
