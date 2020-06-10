@@ -195,9 +195,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:boolean" default="false" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values.</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
