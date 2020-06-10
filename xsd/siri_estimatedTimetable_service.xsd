@@ -190,9 +190,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of messages exchanged.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values.</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
@@ -257,6 +257,26 @@ If false each subscription response will contain the full information as specifi
    <xsd:element name="ChangeBeforeUpdates" type="DurationType" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>The amount of change to the arrival or departure time that can happen before an update is sent (i.e. if ChangeBeforeUpdate is set to 2 minutes, the subscriber will not be told that a timetable is changed by 30 seconds - an update will only be sent when the timetable is changed by at least least 2 minutes. (OPtional from SIRI 2.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="SkipRecordedCallUpdates" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Indicates whether actual arrival-/departure times should be delivered as incremental updates, i.e. whether RECORDED CALL updates are transmitted immediately after an event occurs. +SIRI v2.1
+- 'false': Specifies that the data producer should transmit RECORDED CALL data, in particular actual arrival-/departure information as an incremental update immediately after an event occurs (with hysteresis taken into account) as it is generally the case. 
+The server will automatically proceed with 'false' if capability is not supported.
+- 'true': Can be requested if the data traffic is to be reduced and an immediate transmissions is not required in any of the consumer systems.
+'true' specifies that the data producer should skip RECORDED CALL updates (if capability is supported after all), i.e., deliver them with the next update instead.  
+- No specification: Default value 'false' applies (don't skip updates of recorded data).</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="IncludeOnlyRecordedCallUpdates" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Indicates whether ONLY actual arrival-/departure times should be delivered. In other words, whether all updates related to ESTIMATED CALL should be skipped. +SIRI v2.1
+- 'false': Specifies that the data producer should transmit ESTIMATED and RECORDED CALL data as an incremental update immediately after an event occurs (with hysteresis taken into account) as it is generally the case. 
+The server will automatically proceed with 'false' if capability is not supported.
+- 'true': Can be requested if a consumer system is only interested in the actual times / recorded events because it only wants to check the performance for example.
+'true' specifies that the data producer should only deliver RECORDED CALL udpates and skip ESTIMATED CALL updates (if capability is supported after all), i.e., deliver ESTIMATED CALL updates only with the next RECORDED CALL update.  
+- No specification: Default value 'false' applies (don't skip updates of estimated data).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

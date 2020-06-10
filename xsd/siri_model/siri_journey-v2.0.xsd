@@ -455,6 +455,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="ArrivalStatus" minOccurs="0"/>
+   <xsd:element ref="ArrivalCancellationReason" minOccurs="0"/>
    <xsd:element ref="ArrivalProximityText" minOccurs="0"/>
    <xsd:element ref="ArrivalPlatformName" minOccurs="0">
     <xsd:annotation>
@@ -487,6 +488,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="DepartureStatus" minOccurs="0"/>
+   <xsd:element ref="DepartureCancellationReason" minOccurs="0"/>
    <xsd:element ref="DepartureProximityText" minOccurs="0"/>
    <xsd:element ref="DeparturePlatformName" minOccurs="0">
     <xsd:annotation>
@@ -594,9 +596,14 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
    <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
+   <xsd:element name="LatestExpectedArrivalTime" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Latest time at which a VEHICLE will arrive at stop. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="ExpectedArrivalPredictionQuality" type="PredictionQualityStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Prediction quality, either as approximate level, or more quantitayive percentile range of   predictions will  fall within a given range of times.  +SIRI v2.0 </xsd:documentation>
+     <xsd:documentation>Prediction quality, either as approximate level, or more quantitative percentile range of predictions that will fall within a given range of times. +SIRI v2.0 </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -755,6 +762,11 @@ Rail transport, Roads and road transport
    <xsd:documentation>Classification of the timeliness of the visit according to a fixed list of values. If not specified, same as DepartureStatus.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
+ <xsd:element name="ArrivalCancellationReason" type="NaturalLanguageStringStructure">
+  <xsd:annotation>
+   <xsd:documentation>Text annotation to be used in cases where ArrivalStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <xsd:element name="ArrivalProximityText" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>Arbitrary text string to show to indicate the status of the departure of the VEHICLE for example, “Enroute”, “5 Km”, “Approaching”. May depend on the policy of the OPERATOR, for example show “Approaching” if less than 200metres away from stop. +SIRI v2.0</xsd:documentation>
@@ -823,6 +835,11 @@ Rail transport, Roads and road transport
  <xsd:element name="DepartureStatus" type="CallStatusEnumeration">
   <xsd:annotation>
    <xsd:documentation>Classification of the timeliness of the departure part of the CALL, according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="DepartureCancellationReason" type="NaturalLanguageStringStructure">
+  <xsd:annotation>
+   <xsd:documentation>Text annotation to be used in cases where DepartureStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DepartureProximityText" type="NaturalLanguageStringStructure">
@@ -897,5 +914,88 @@ Rail transport, Roads and road transport
    <xsd:documentation>For frequency based services, observed interval between vehicles at stop.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
+ <!-- =====JourneyRelation================================================== -->
+ <xsd:complexType name="JourneyRelationsStructure">
+  <xsd:annotation>
+   <xsd:documentation>Provides information about relations to other journeys. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="JourneyRelation" type="JourneyRelationStructure" maxOccurs="unbounded"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="JourneyRelationStructure">
+  <xsd:sequence>
+   <xsd:element name="JourneyRelationType" type="JourneyRelationTypeEnumeration">
+    <xsd:annotation>
+     <xsd:documentation>Specifies the type of the relation, e.g., joining, splitting, replacement etc. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="JourneyRelationInfoGroup"/>
+   <xsd:element ref="RelatedJourney" maxOccurs="unbounded"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="JourneyRelationInfoGroup">
+  <xsd:annotation>
+   <xsd:documentation>Specifies which CALL or JOURNEY PART of the JOURNEY has a JOURNEY RELATION. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:choice>
+    <xsd:element name="CallInfo" type="RelatedCallStructure">
+     <xsd:annotation>
+      <xsd:documentation>Information about the stop at which the JOURNEY is related to another JOURNEY. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="JourneyParts">
+     <xsd:annotation>
+      <xsd:documentation>Information about the JOURNEY PARTs for which the JOURNEY has a JOURNEY RELATION. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="JourneyPartInfo" type="RelatedJourneyPartStructure" maxOccurs="unbounded">
+        <xsd:annotation>
+         <xsd:documentation>Information about related parts of JOURNEY. +SIRI v2.1</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:choice>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:complexType name="RelatedCallStructure">
+  <xsd:annotation>
+   <xsd:documentation>The JOURNEY RELATION refers to this CALL. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="AbstractCallStructure">
+    <xsd:sequence>
+     <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
+     <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="RelatedJourneyPartStructure">
+  <xsd:annotation>
+   <xsd:documentation>The JOURNEY RELATION refers to this JOURNEY PART. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="JourneyPartInfoStructure"/>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="RelatedJourney" type="RelatedJourneyStructure">
+  <xsd:annotation>
+   <xsd:documentation>Refers to the JOURNEY to which the current JOURNEY is related. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="RelatedJourneyStructure">
+  <xsd:complexContent>
+   <xsd:extension base="ConnectingJourneyRefStructure">
+    <xsd:sequence>
+     <xsd:group ref="JourneyRelationInfoGroup" minOccurs="0"/>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
  <!-- ====================================================================== -->
 </xsd:schema>
