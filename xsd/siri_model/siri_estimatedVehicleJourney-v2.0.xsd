@@ -98,24 +98,26 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
-    <xsd:choice>
-     <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' i.e. be with the data context of the ESTIMATED Timetable.
+    <xsd:sequence>
+     <xsd:choice>
+      <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+       <xsd:annotation>
+        <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
+       <xsd:annotation>
+        <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' i.e. be with the data context of the ESTIMATED Timetable.
 DEPRECATED from SIRI 2.0</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:choice>
+     <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Additionally, identify the VEHICLE JOURNEY by origin and destination and the scheduled times at these stops.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-    </xsd:choice>
-    <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>If no VEHICLE JOURNEY reference is available, identify it by origin and destination and the scheduled times at these stops.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    </xsd:sequence>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
       <xsd:documentation>If this is the first message for an unplanned 'extra' VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'.
@@ -320,6 +322,11 @@ the original journey and the nature of the difference.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:sequence>
+   <xsd:element name="JourneyRelations" type="JourneyRelationsStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Relations of the journey with other journeys, e.g., in case a joining/splitting takes place or the journey substitutes for another one etc.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
