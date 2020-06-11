@@ -656,7 +656,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
-	<xsd:element name="DeparturePredictionUnknown" type="EmptyType">
+    <xsd:element name="DeparturePredictionUnknown" type="EmptyType">
      <xsd:annotation>
       <xsd:documentation>If the producer is (temporarily) not able to deliver real-time predictions (e.g. because of a connection loss), he has various options (and combinations of them) to inform the consumer:
 (i) set Monitored to 'false'
