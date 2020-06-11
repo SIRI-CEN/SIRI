@@ -506,11 +506,14 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="ArrivalOrientationRelativeToQuay" type="VehicleOrientationRelativeToQuay" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Indication of the direction of travel of the vehicle or formation (e.g. TRAIN composition ) with respect to the platform, or more precisely the QUAY. 
-For example "towards A", which means that the vehicle departs towards sector "A" of the QUAY. It is advised to specify a reference point that is meaningful for passengers on location. 
-Unbounded to allow multiple languages. +SIRI v2.1</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+     <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. Unbounded to allow multiple languages. +SIRI v2.1
+Examples:
+- "towards A" or "towards sector A" if the QUAY is separated into sub-QUAYs or so called sectors. This would be equivalent to the vehicle arriving at sector A first when approaching the QUAY with sectors A-B-C-D. If the arriving vehicle is represented as an arrow, "towards A" would be abstracted as "=&gt; A-B-C-D".
+- "towards 0" or "towards reference point 0" if sectors are not available or the QUAY has a reference point, e.g. for measuring the length of the QUAY, identified by "0". This would be equivalent to the vehicle arriving at this reference point first when approaching the QUAY. If the arriving vehicle is represented as an arrow, "towards 0" would be abstracted as "=&gt; 0...100". "100" (as in percent) could denote the opposite side of the QUAY (measured at the full length of the QUAY with respect to the reference point).
+It is advised to specify a reference point that is meaningful for passengers on location.
+     </xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="ExpectedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Real-time occupancies and capacities of a vehicle (by fare classes) when arriving at a given STOP POINT. +SIRI v2.1</xsd:documentation>
@@ -548,9 +551,12 @@ Unbounded to allow multiple languages. +SIRI v2.1</xsd:documentation>
    </xsd:element>
    <xsd:element name="DepartureOrientationRelativeToQuay" type="VehicleOrientationRelativeToQuay" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Indication of the direction of travel of the vehicle or formation (e.g. TRAIN composition ) with respect to the platform, or more precisely the QUAY. 
-For example "towards A", which means that the vehicle departs towards sector "A" of the QUAY. It is advised to specify a reference point that is meaningful for passengers on location. 
-Unbounded to allow multiple languages. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. Unbounded to allow multiple languages. +SIRI v2.1
+Examples:
+- "towards A" or "towards sector A" if the QUAY is separated into sub-QUAYs or so called sectors. This would be equivalent to the vehicle departing in the direction of sector A on a QUAY with sectors A-B-C-D. If the departing vehicle is represented as an arrow, "towards A" would be abstracted as "&lt;= A-B-C-D".
+- "towards 0" or "towards reference point 0" if sectors are not available or the QUAY has a reference point, e.g. for measuring the length of the QUAY, identified by "0". This would be equivalent to the vehicle departing in the direction of this reference point. If the arriving vehicle is represented as an arrow, "towards 0" would be abstracted as "&lt;= 0...100". "100" (as in percent) could denote the opposite side of the QUAY (measured at the full length of the QUAY with respect to the reference point).
+It is advised to specify a reference point that is meaningful for passengers on location.
+      </xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    <xsd:element name="ExpectedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">

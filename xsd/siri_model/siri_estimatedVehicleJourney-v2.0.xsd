@@ -395,7 +395,7 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Type of boarding and alighting at stop, e.g. alighting, noAlighting or passThru. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Type of alighting at stop, e.g. alighting, noAlighting or passThru. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
