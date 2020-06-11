@@ -77,7 +77,6 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRi Facility model elemenys</xsd:documentation>
  </xsd:annotation>
  <!-- ======================================================================= -->
- <xsd:include schemaLocation="../siri_utility/siri_utility-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_facilities-v1.2.xsd"/>
  <xsd:include schemaLocation="siri_journey_support-v2.0.xsd"/>
  <!-- ======================================================================= -->
@@ -242,14 +241,9 @@ Rail transport, Roads and road transport
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
    <xsd:enumeration value="fixedEquipment"/>
-   <xsd:enumeration value="mobileEquipment"/>
    <xsd:enumeration value="serviceProvidedByIndividual"/>
    <xsd:enumeration value="serviceForPersonalDevice"/>
    <xsd:enumeration value="reservedArea"/>
-   <xsd:enumeration value="site"/>
-   <xsd:enumeration value="siteComponent"/>
-   <xsd:enumeration value="parkingBay"/>
-   <xsd:enumeration value="vehicle"/>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ======================================================================= -->
@@ -348,7 +342,6 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="devices"/>
    <xsd:enumeration value="vehicles"/>
    <xsd:enumeration value="persons"/>
-								
    <xsd:enumeration value="litres"/>
    <xsd:enumeration value="squareMeters"/>
    <xsd:enumeration value="cubicMeters"/>
@@ -469,11 +462,7 @@ Rail transport, Roads and road transport
       <xsd:documentation>Facility affected by condition.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-    <xsd:element ref="FacilityRef">
-     <xsd:annotation>
-      <xsd:documentation>Reference to a Facility (may refer an Equipment, Local Service, Site or Vehicle).</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    <xsd:element ref="FacilityRef"/>
    </xsd:choice>
    <xsd:element name="FacilityStatus" type="FacilityStatusStructure">
     <xsd:annotation>
@@ -505,7 +494,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Period (duration) of the status change for the facility (validity period of the FacilityCondition).</xsd:documentation>
+     <xsd:documentation>Period (duration) of the status change for the facility.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
