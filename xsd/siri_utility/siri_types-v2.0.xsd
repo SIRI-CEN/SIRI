@@ -155,11 +155,11 @@ A string containing a phrase in a natural language name that requires at least o
  </xsd:simpleType>
  <xsd:simpleType name="PercentageType">
   <xsd:annotation>
-   <xsd:documentation>Specifies a percentage from 0 to 100.</xsd:documentation>
+   <xsd:documentation>Specifies a percentage from 0 to 100.
+The value range is normally 0-100, but could in some circumstances go beyond 100%, e.g. when representing the OccupancyPercentage of an over-crowded vehicle or in similar cases.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:decimal">
    <xsd:minInclusive value="0"/>
-   <xsd:maxInclusive value="100"/>
   </xsd:restriction>
  </xsd:simpleType>
 </xsd:schema>
