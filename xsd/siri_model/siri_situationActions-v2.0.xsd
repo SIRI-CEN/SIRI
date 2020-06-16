@@ -40,6 +40,7 @@
  <xsd:include schemaLocation="siri_feature_support-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
  <xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_location-v2.0.xsd" />
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
