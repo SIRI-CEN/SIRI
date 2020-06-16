@@ -69,12 +69,12 @@ Rail transport, Roads and road transport
  <!-- ===INCIDENT SEVERITIES================================================== -->
  <xsd:element name="Severity" type="SeverityEnumeration" default="normal">
   <xsd:annotation>
-   <xsd:documentation>Severity of Incident - TPEG Pti26. Default is 'normal'.</xsd:documentation>
+   <xsd:documentation>Severity of Incident. Corresponds to TPEG Pti26 severities. Defautl is 'normal'.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="SeverityEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti26 - Severity</xsd:documentation>
+   <xsd:documentation>Values for Severity. Correspond to TPEG Pti26 Severity values.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown">
@@ -122,7 +122,7 @@ Rail transport, Roads and road transport
  <!-- ===INCIDENT CONDITIONS================================= -->
  <xsd:element name="Condition" type="ServiceConditionEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Classification of effect on service - TPEG Pts43</xsd:documentation>
+   <xsd:documentation>Classification of effect on service. TPEG PTS043 ServiceStatus</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="ServiceConditionEnumeration">
