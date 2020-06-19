@@ -80,6 +80,13 @@ siri_model\siri_situation-v2.0.xsd:
     <Date><Modified>2014-06-20</Modified>
           - [fr] Add additional small delay bands
         </Date>
+    <Date>
+    <Modified>2019-09-01</Modified>
+    <!-- SIRI v2.1
+		 Align with TPEG2
+		 Removed SubReason
+	  -->
+   </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs </p>
     </Description>
@@ -585,7 +592,7 @@ Rail transport, Roads and road transport
      <xsd:restriction base="VerificationStatusEnumeration"/>
     </xsd:simpleType>
    </xsd:element>
-   <xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open">
+   <xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>ProgressStatus. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION.</xsd:documentation>
     </xsd:annotation>
@@ -1071,8 +1078,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for a text that may be overridden.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
-   <xsd:extension base="PopulatedStringType">
-    <xsd:attribute ref="xml:lang" use="required"/>
+   <xsd:extension base="NaturalLanguageStringStructure">
     <xsd:attribute name="overridden" type="xsd:boolean" use="optional" default="true">
      <xsd:annotation>
       <xsd:documentation>Whether the text value has been overridden from the generated default. Default is 'true'.</xsd:documentation>
@@ -1229,7 +1235,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="AdviceRef" type="AdviceRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a standardis advisory NOTICE to be given to passengers if a particular condition arises .</xsd:documentation>
+     <xsd:documentation>Reference to a standard advisory NOTICE to be given to passengers if a particular condition arises.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0"/>
