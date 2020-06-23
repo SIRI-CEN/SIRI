@@ -113,7 +113,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:choice>
    <xsd:element ref="UnknownReason"/>
-   <xsd:element ref="TpegReason">
+   <xsd:element ref="AlertCause">
     <xsd:annotation>
      <xsd:documentation>Classification corresponding to TPEG Pts38 - AlertCause</xsd:documentation>
     </xsd:annotation>
@@ -165,7 +165,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
  </xsd:element>
  <!-- ===================================================== -->
- <xsd:element name="TpegReason" type="AlertCauseEnumeration">
+ <xsd:element name="AlertCause" type="AlertCauseEnumeration">
   <xsd:annotation>
    <xsd:documentation>TPEG Pts38 - AlertCause</xsd:documentation>
   </xsd:annotation>

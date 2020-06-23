@@ -81,12 +81,12 @@ siri_model\siri_situation-v2.0.xsd:
           - [fr] Add additional small delay bands
         </Date>
     <Date>
-    <Modified>2019-09-01</Modified>
-    <!-- SIRI v2.1
+     <Modified>2019-09-01</Modified>
+     <!-- SIRI v2.1
 		 Align with TPEG2
 		 Removed SubReason
 	  -->
-   </Date>
+    </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs </p>
     </Description>
@@ -947,6 +947,20 @@ Rail transport, Roads and road transport
     <xsd:annotation>
      <xsd:documentation>Roads affected by.</xsd:documentation>
     </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Routes" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>ROUTEs affected</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedRoute" type="AffectedRouteStructure" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>Route.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
    </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
