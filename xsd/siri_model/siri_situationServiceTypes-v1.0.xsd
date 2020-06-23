@@ -55,12 +55,12 @@
     <Status>Version 2.0</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
-Air transport, Airports,
-Ports and maritime transport, Ferries (marine),
-Public transport, Bus services, Coach services, Bus stops and stations,
-Rail transport, Railway stations and track, Train services, Underground trains,
-Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
-Rail transport, Roads and road transport
+      Air transport, Airports,
+      Ports and maritime transport, Ferries (marine),
+      Public transport, Bus services, Coach services, Bus stops and stations,
+      Rail transport, Railway stations and track, Train services, Underground trains,
+      Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
+      Rail transport, Roads and road transport
      </Category>
      <Project>CEN TC278 WG3 SG7</Project>
     </Subject>
@@ -201,8 +201,8 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="distributorWaitProlonged">
     <xsd:annotation>
-     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders. 
-To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders.
+      To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="departurePlatformChanged">
@@ -222,8 +222,8 @@ To achieve this a distributorWaitProlonged status shall be communicated back to 
    </xsd:enumeration>
    <xsd:enumeration value="feederArrivalCancellation">
     <xsd:annotation>
-     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. 
-There are several possible reasons for the loss of a feeder, e.g. loss/cancellation of the feeder VEHICLE, diversion of the feeder LINE/DIRECTION, disruption of a LINE section etc. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection.
+      There are several possible reasons for the loss of a feeder, e.g. loss/cancellation of the feeder VEHICLE, diversion of the feeder LINE/DIRECTION, disruption of a LINE section etc. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="distributorDepartureCancellation">
@@ -448,7 +448,7 @@ There are several possible reasons for the loss of a feeder, e.g. loss/cancellat
      <xsd:documentation>TPEG Pti15_0, unknown</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="startPoint">
+   <xsd:enumeration value="origin">
     <xsd:annotation>
      <xsd:documentation>TPEG Pti15_1, start point</xsd:documentation>
     </xsd:annotation>
@@ -531,6 +531,26 @@ There are several possible reasons for the loss of a feeder, e.g. loss/cancellat
    <xsd:enumeration value="undefinedRoutePoint">
     <xsd:annotation>
      <xsd:documentation>TPEG Pti15_255, undefined route point</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="affectedStopplace">
+    <xsd:annotation>
+     <xsd:documentation>PTS044, first route point</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefinedStopplaceUsage">
+    <xsd:annotation>
+     <xsd:documentation>PTS044, first route point</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="firstRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>PTS044, first route point</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="lastRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>PTS044, last route point</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
