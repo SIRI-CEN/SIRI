@@ -112,7 +112,11 @@ Rail transport, Roads and road transport
    <xsd:documentation>Structured Classification Elements.</xsd:documentation>
   </xsd:annotation>
   <xsd:choice>
-   <xsd:element ref="UnknownReason"/>
+   <xsd:element ref="UnknownReason">
+    <xsd:annotation>
+     <xsd:documentation>Deprecated (SIRI 2.1) - use only TpegReason.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="AlertCause">
     <xsd:annotation>
      <xsd:documentation>Classification corresponding to TPEG Pts38 - AlertCause</xsd:documentation>

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" id="siri_situationIdentity">
- <!--
-12.06.2018 D. Rubli, Siri_XML-2.0p_a0.5:
-- ParticipantRef changed from optional to mandatory
--->
- <xsd:annotation>
+<xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
     <Aggregation>main schema</Aggregation>

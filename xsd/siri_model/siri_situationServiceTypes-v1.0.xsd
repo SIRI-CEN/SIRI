@@ -440,7 +440,6 @@
  </xsd:element>
  <xsd:simpleType name="RoutePointTypeEnumeration">
   <xsd:annotation>
-   <xsd:appinfo>vdv20200626-01</xsd:appinfo>
    <xsd:documentation>Values for TPEG Pti015 / PTS044 - RoutePointType</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
