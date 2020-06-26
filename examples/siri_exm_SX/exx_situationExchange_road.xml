@@ -24,6 +24,7 @@
  <siri:QualityIndex>certain</siri:QualityIndex>
  <siri:ValidityPeriod>
   <siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
+  <siri:EndTime>2001-12-17T19:30:47.0Z</siri:EndTime>
  </siri:ValidityPeriod>
  <siri:MiscellaneousReason>bombExplosion</siri:MiscellaneousReason>
  <siri:Severity>severe</siri:Severity>
@@ -63,6 +64,7 @@
   <siri:Consequence>
    <siri:Period>
     <siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
+    <siri:EndTime>2001-12-17T10:30:47.0Z</siri:EndTime>
    </siri:Period>
    <siri:Condition>delayed</siri:Condition>
    <siri:Severity>severe</siri:Severity>
