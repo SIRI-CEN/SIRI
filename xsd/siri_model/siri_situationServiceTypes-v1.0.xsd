@@ -440,7 +440,8 @@
  </xsd:element>
  <xsd:simpleType name="RoutePointTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti015 - RoutePointType</xsd:documentation>
+   <xsd:appinfo>vdv20200626-01</xsd:appinfo>
+   <xsd:documentation>Values for TPEG Pti015 / PTS044 - RoutePointType</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown">
@@ -450,7 +451,7 @@
    </xsd:enumeration>
    <xsd:enumeration value="origin">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_1, start point</xsd:documentation>
+     <xsd:documentation>PTS044, in TPEG Pti15_1 start point</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="destination">
