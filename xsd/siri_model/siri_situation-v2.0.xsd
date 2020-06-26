@@ -86,6 +86,12 @@ siri_model\siri_situation-v2.0.xsd:
 		 Removed SubReason
 	  -->
     </Date>
+    <Date>
+	<Modified>2020-06-26</Modified>
+	<!-- SIRI v2.1
+	- ConditionGroup gelöscht 
+	-->
+    </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs </p>
     </Description>
@@ -1216,14 +1222,6 @@ Rail transport, Roads and road transport
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:group name="ConditionGroup">
-  <xsd:annotation>
-   <xsd:documentation>Structured Condition Elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="Condition" minOccurs="0" maxOccurs="unbounded"/>
-  </xsd:sequence>
- </xsd:group>
  <xsd:complexType name="BoardingStructure">
   <xsd:annotation>
    <xsd:documentation>Type for boarding restrictions.</xsd:documentation>
