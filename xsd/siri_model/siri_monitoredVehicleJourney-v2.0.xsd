@@ -328,7 +328,6 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
 A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs in which the train composition remains unchanged. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="DisruptionGroup"/>
    <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
