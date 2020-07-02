@@ -82,7 +82,7 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey-v2.0.xsd</Requires>
     </Relation>
     <Rights>Unclassified
-       <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
+     <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
     </Rights>
     <Source>
      <ul>
@@ -92,13 +92,13 @@
     <Status>Version 2.0</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
-Air transport, Airports,
-Ports and maritime transport, Ferries (marine),
-Public transport, Bus services, Coach services, Bus stops and stations,
-Rail transport, Railway stations and track, Train services, Underground trains,
-Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
-Rail transport, Roads and road transport
-</Category>
+      Air transport, Airports,
+      Ports and maritime transport, Ferries (marine),
+      Public transport, Bus services, Coach services, Bus stops and stations,
+      Rail transport, Railway stations and track, Train services, Underground trains,
+      Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
+      Rail transport, Roads and road transport
+     </Category>
      <Project>CEN TC278 WG3 SG7</Project>
     </Subject>
     <Title>SIRI-SX Xml Schema for PT Incidents. Common affects element subschema</Title>
@@ -132,6 +132,17 @@ Rail transport, Roads and road transport
    <xsd:element name="Location" type="LocationStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Spatial coordinates of STOP POINT. Derivable from StopRef.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference of Stop Place related to this affected StopPoint.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StopPlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200626-02</xsd:appinfo>
+     <xsd:documentation>Name of Stop Place related to this affected StopPoint.  (Unbounded to allow a text for every language)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AffectedModes" type="AffectedModesStructure" minOccurs="0">
@@ -173,7 +184,21 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
+   <xsd:element name="Lines" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Used to restrict stop points to some lines</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element ref="Extensions" minOccurs="0">
+    <xsd:annotation>
+     <xsd:appinfo source="ch-doc">ignore</xsd:appinfo>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="AffectedModesStructure">
