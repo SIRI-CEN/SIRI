@@ -686,7 +686,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="ReasonGroup"/>
    <xsd:element ref="Severity" minOccurs="0"/>
-   <xsd:element name="Priority" type="PriorityEnumeration" minOccurs="0">
+   <xsd:element name="Priority" type="xsd:nonNegativeInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Arbitrary rating of priority 1-High.</xsd:documentation>
     </xsd:annotation>
@@ -764,19 +764,6 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
-
- <xsd:simpleType name="PriorityEnumeration">
-  <xsd:annotation>
-   <xsd:appinfo>vdv20200623-07</xsd:appinfo>
-   <xsd:documentation>Values for Priority.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:integer">
-   <xsd:enumeration value="1"/>
-   <xsd:enumeration value="2"/>
-   <xsd:enumeration value="3"/>
-   <xsd:enumeration value="4"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <xsd:simpleType name="SensitivityEnumeration">
   <xsd:annotation>
    <xsd:documentation>Values for Sensitivity.</xsd:documentation>
