@@ -1008,8 +1008,11 @@ Groups of carriages may be managed as sections by composing TRAINs into a COMPOU
  <!-- ===== New structures imbedded in the StopAssignmentStructure to mimic VDV454 "FoHalte" of the formation model ========================= -->
  <xsd:complexType name="VehicleOrientationRelativeToQuay">
   <xsd:annotation>
-   <xsd:documentation>Indication of the direction of travel of the vehicle or formation (e.g. TRAIN composition ) with respect to the platform, or more precisely the QUAY. 
-For example "towards A", which means that the vehicle departs towards sector "A" of the QUAY. It is advised to specify a reference point that is meaningful for passengers on location. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. +SIRI v2.1
+Examples:
+- "towards A" or "towards sector A" if the QUAY is separated into sub-QUAYs or so called sectors. This would be equivalent to the vehicle arriving or departing in the direction of sector A on a QUAY with sectors A-B-C-D. If the arriving vehicle is represented as an arrow, "towards A" would be abstracted as "=&gt; A-B-C-D". If the departing vehicle is represented as an arrow, "towards A" would be abstracted as "&lt;= A-B-C-D".
+- "towards 0" or "towards reference point 0" if sectors are not available or the QUAY has a reference point, e.g. for measuring the length of the QUAY, identified by "0". This would be equivalent to the vehicle arriving or departing in the direction of this reference point. If the arriving vehicle is represented as an arrow, "towards 0" would be abstracted as "=&gt; 0...100". "100" (as in percent) could denote the opposite side of the QUAY (measured at the full length of the QUAY with respect to the reference point). If the departing vehicle is represented as an arrow, "towards 0" would be abstracted as "&lt;= 0...100".
+It is advised to specify a reference point that is meaningful for passengers on location.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:restriction base="NaturalLanguageStringStructure"/>
@@ -1020,26 +1023,21 @@ For example "towards A", which means that the vehicle departs towards sector "A"
    <xsd:documentation>Assignment of the arrival/departure of a VEHICLE within a formation, e.g. carriage in a TRAIN composition, to a physical QUAY or nested QUAY (i.e. platform or sector of a platform). +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:choice>
-    <xsd:element ref="VehicleRef"/>
-    <xsd:sequence>
-     <xsd:group ref="TrainFormationReferenceGroup"/>
-    </xsd:sequence>
-   </xsd:choice>
+   <xsd:group ref="TrainFormationReferenceGroup"/>
    <xsd:element name="PositionOfTrainElement" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Relative position of TRAIN ELEMENT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="QuayRef" type="QuayRefStructure" minOccurs="1" maxOccurs="unbounded">
+   <xsd:element name="QuayRef" type="QuayRefStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Reference to the QUAY on which the particular VEHICLE of the formation arrives or departs from. 
-If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a VEHICLE stops in two sectors of the QUAY, the FORMATION ASSIGNMENT must reference both. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Reference to the QUAY on which the particular VEHICLE, i.e., component of the formation, arrives or departs from. 
+If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a wagon/coach, or TRAIN COMPONENT respectively, stops in two sectors of the QUAY, the FORMATION ASSIGNMENT must reference both.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="VehicleStatus" type="VehicleStatusStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Information about a change of a VEHICLE within the formation, e.g., whether a VEHICLE is open, booked or has defective doors. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Information about a change of a VEHICLE within the formation, e.g., whether a VEHICLE is open, booked or has defective doors.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -1059,12 +1057,12 @@ If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a VEH
    <xsd:choice>
     <xsd:element name="FormationStatus" type="FormationStatusStructure">
      <xsd:annotation>
-      <xsd:documentation>Status of formation.</xsd:documentation>
+      <xsd:documentation>Status of formation, e.g., whether it has changed compared to the plan, certain VEHICLEs or features are missing or extra VEHICLEs are added.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
 	<xsd:element name="VehicleStatus" type="VehicleStatusStructure">
      <xsd:annotation>
-      <xsd:documentation>Status of a vehicle within formation.</xsd:documentation>
+      <xsd:documentation>Status of a VEHICLE within formation, e.g., whether a VEHICLE is open, booked or has defective doors.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -1338,8 +1336,8 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Identifier for TRAIN ELEMENT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="VehicleTypeGroup"/>
    <xsd:group ref="TrainElementGroup"/>
+   <xsd:group ref="VehicleTypeGroup"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:group name="TrainElementGroup">
@@ -1352,14 +1350,10 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Type of TRAIN ELEMENT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ForProductionNumber" type="TrainElementTypeEnumeration" minOccurs="0">
+   <!-- Muss gemäss MENTZ geändert werden da nicht dieselbe Bedeutung wie in VDV -->
+   <xsd:element name="VehicleNumber" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Denotes the official "registration number" of the vehicle. Mainly for production purposes.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ForAdvertisementNumber" type="TrainElementTypeEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Advertised serial number of the vehicle for seat reservations and passenger orientation.</xsd:documentation>
+     <xsd:documentation>Denotes the official "registration number" of the vehicle or wagon/coach. In rail transport VEHICLE NUMBER would be equal to the 12 digit UIC wagon/coach number, possibly followed by other combinations of letters, e.g. by the UIC classification of railway coaches.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="FareClasses" minOccurs="0"/>
@@ -1368,7 +1362,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  <!-- ===== NeTEx TrainComponent: corresponds to VDV454 FoFahrzeugPosition. +SIRI v2.1 ============================================ -->
  <xsd:element name="TrainComponent" type="TrainComponentStructure">
   <xsd:annotation>
-   <xsd:documentation>An assembled TRAIN ELEMENT as part of a TRAIN, i.e., a TRAIN ELEMENT with a certain position or order within a TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Specifies the order of a certain TRAIN ELEMENT within a TRAIN and how the TRAIN ELEMENT is labeled in that context. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="TrainComponentStructure">
@@ -1383,7 +1377,7 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
    <xsd:element name="Order" type="xsd:positiveInteger">
     <xsd:annotation>
-     <xsd:documentation>Order of the TRAIN COMPONENT (or more precisely the referenced TRAIN ELEMENT) within the TRAIN.</xsd:documentation>
+     <xsd:documentation>Specifies the order of the TRAIN ELEMENT within the TRAIN. The locomotive would ideally have ORDER '1', the first wagon/coach attached to the locomotive ORDER '2' and so on.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="TrainComponentGroup"/>
@@ -1396,12 +1390,12 @@ More accurate data can be provided by the individual occupancies or capacities b
   <xsd:sequence>
    <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Label for TRAIN COMPONENT.</xsd:documentation>
+     <xsd:documentation>Specifies how the TRAIN ELEMENT is labeled within the context of the TRAIN. This advertised label or number, e.g. "Carriage B" or "23", can be used for seat reservations and passenger orientation.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Description of TRAIN COMPONENT.</xsd:documentation>
+     <xsd:documentation>Description of TRAIN COMPONENT, e.g. "Front Carriage 1st Class".</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:choice>
@@ -1418,7 +1412,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  <!-- ===== NeTEx Train: corresponds to VDV454 FoFahrzeugGruppe. +SIRI v2.1 ============================================ --> 
  <xsd:element name="Train" type="TrainStructure">
   <xsd:annotation>
-   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs assembled in a certain order (so called TRAIN COMPONENTs), i.e. of wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs assembled in a certain order (so called TRAIN COMPONENTs), i.e. wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="TrainStructure">
@@ -1447,12 +1441,12 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
    <xsd:element name="TrainSizeType" type="TrainSizeEnumeration" default="normal" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Nature of Train Size., Short, long, normal. Default is normal.</xsd:documentation>
+     <xsd:documentation>Nature of TRAIN size, e.g "short", "long", "normal". Default is "normal".</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Components" minOccurs="0">
+   <xsd:element name="TrainComponents" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Ordered collection of TRAIN COMPONENTs making up TRAIN.</xsd:documentation>
+     <xsd:documentation>Ordered collection of TRAIN COMPONENTs making up the TRAIN.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:choice maxOccurs="unbounded">
@@ -1466,7 +1460,8 @@ More accurate data can be provided by the individual occupancies or capacities b
  <!-- ===== NeTEx CompoundTrain: When combined with the CompoundTrainRef in JourneyPartInfo it corresonds to VDV454 FoFahrzeugGruppenFahrtAbschnitt. +SIRI v2.1 =========================== -->
  <xsd:element name="CompoundTrain" type="CompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN, for example if a train joins (or splits from) another train. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN, for example if a TRAIN joins (or splits from) another TRAIN. +SIRI v2.1
+TRAINs within a COMPOUND TRAIN may have different origins and destinations due to joining/splitting. A COMPOUND TRAIN may be stable for one or multiple JOURNEY PARTs and change at a certain STOP POINT due to planned joining/splitting, despatching alterations or a situation.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="CompoundTrainStructure">
@@ -1480,9 +1475,9 @@ More accurate data can be provided by the individual occupancies or capacities b
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="VehicleTypeGroup"/>
-   <xsd:element name="Components" minOccurs="0">
+   <xsd:element name="CompoundTrainComponents" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Ordered collection of TRAINs making up a COMPOUND TRAIN. Each of those components is or references a TRAIN.</xsd:documentation>
+     <xsd:documentation>Ordered collection of TRAINs making up the COMPOUND TRAIN.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:choice maxOccurs="unbounded">
@@ -1495,7 +1490,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:complexType>
  <xsd:element name="TrainInCompoundTrain" type="TrainInCompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>An instance of a TRAIN (that has a certain position within the formation) making up a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Specifies the order of a certain TRAIN within a COMPOUND TRAIN and how the TRAIN is labeled in that context. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="TrainInCompoundTrainStructure">
@@ -1510,7 +1505,7 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
    <xsd:element name="Order" type="xsd:positiveInteger">
     <xsd:annotation>
-     <xsd:documentation>Order of TRAIN within COMPOUND TRAIN.</xsd:documentation>
+     <xsd:documentation>Specifies the order of the TRAIN within the COMPOUND TRAIN.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="TrainInCompoundTrainGroup"/>
@@ -1523,7 +1518,7 @@ More accurate data can be provided by the individual occupancies or capacities b
   <xsd:sequence>
    <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Label for TRAIN IN COMPOUND TRAIN.</xsd:documentation>
+     <xsd:documentation>Specifies how the TRAIN is labeled within the context of the COMPOUND TRAIN. This advertised label or number, e.g. the individual TRAIN NUMBER, can be used for seat reservations and passenger orientation.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
@@ -1543,28 +1538,23 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
    <xsd:element name="Passages" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Specifies whether a passage from/to an adjacent VEHICLE is possible for passengers.</xsd:documentation>
+     <xsd:documentation>Specifies whether a passage from/to an adjacent TRAIN is possible for passengers.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
 	 <xsd:sequence>
-      <xsd:element name="PassageBetweenTrains" type="PassageBetweenVehiclesStructure" maxOccurs="2"/>
+      <xsd:element name="PassageBetweenTrains" type="PassageBetweenTrainsStructure" maxOccurs="2"/>
 	 </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <xsd:complexType name="PassageBetweenVehiclesStructure">
+ <xsd:complexType name="PassageBetweenTrainsStructure">
   <xsd:annotation>
-   <xsd:documentation>Indicates whether passengers have access to adjacent VEHICLEs or carriages, i.e., whether passage between those VEHICLES is possible. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Indicates whether passengers have access to adjacent TRAINs or TRAIN COMPONENTs within a COMPOUND TRAIN, i.e., whether passage between those wagons/coaches is possible. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:choice>
-    <xsd:element ref="VehicleRef"/>
-	<xsd:sequence>
-     <xsd:element ref="TrainRef"/>
-     <xsd:element ref="TrainElementRef" minOccurs="0"/>
-	</xsd:sequence>
-   </xsd:choice>
+   <xsd:element ref="TrainRef"/>
+   <xsd:element ref="TrainComponentRef" minOccurs="0"/>
    <xsd:element name="PassageIsPossible" type="xsd:boolean"/>
   </xsd:sequence>
  </xsd:complexType>
