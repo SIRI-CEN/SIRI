@@ -341,7 +341,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:simpleType name="TrainComponentCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a TRAIN COMPONENT. A TRAIN ELEMENT with a specific order in a TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a TRAIN COMPONENT. A TRAIN ELEMENT with a specific order within a TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
@@ -379,7 +379,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:simpleType name="CompoundTrainCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a COMPOUND TRAIN. An ordered sequence of TRAINs. A journey does always have one or more JOURNEY PARTs in which the TRAIN composition remains unchanged. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a COMPOUND TRAIN. An ordered sequence of TRAINs or TRAIN IN COMPOUND TRAINs respectively. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
@@ -398,7 +398,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:simpleType name="TrainInCompoundTrainCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a TRAIN IN COMPOUND TRAIN. A TRAIN with a specific order in a COMPOUND TRAIN (the train formation as a whole). +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a TRAIN IN COMPOUND TRAIN. A TRAIN with a specific order within a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
@@ -415,17 +415,40 @@ Rail transport, Roads and road transport
  	<xsd:documentation>Reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
+ <xsd:simpleType name="EntranceToVehicleCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of an ENTRANCE TO VEHICLE, e.g. a door of a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="EntranceToVehicleRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to an ENTRANCE TO VEHICLE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="EntranceToVehicleCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="EntranceToVehicleRef" type="EntranceToVehicleRefStructure">
+  <xsd:annotation>
+ 	<xsd:documentation>Reference to an ENTRANCE TO VEHICLE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <!-- ============================ -->
  <xsd:group name="TrainFormationReferenceGroup">
   <xsd:annotation>
-   <xsd:documentation>Groups together the relevant references needed in a formation. 
-Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. 
-If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is possible too.</xsd:documentation>
+   <xsd:documentation>Groups together the relevant references needed in a formation. +SIRI v2.1
+Has the following uses:
+- Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. The former is ideally used in a FORMATION ASSIGNMENT, i.e. QUAY (sector) assignment, to provide the highest level of detail for passenger orientation. 
+- If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is also possible. This might be used in a FORMATION CONDITION to signal a change of the train composition.
+- In case alighting/boarding data from an automatic passenger counting system is available, the respective vehicle entrances may be referenced.
+</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="CompoundTrainRef" minOccurs="0"/>
    <xsd:element ref="TrainRef" minOccurs="0"/>
-   <xsd:element ref="TrainElementRef" minOccurs="0"/>
+   <xsd:element ref="TrainComponentRef" minOccurs="0"/>
+   <xsd:element ref="EntranceToVehicleRef" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
  <!-- =====MonitoredCallPoint============================================================ -->
