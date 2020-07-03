@@ -324,8 +324,8 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
    </xsd:element>
    <xsd:element ref="CompoundTrainRef" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a COMPOUND TRAIN which represents the train formation/composition as a whole. 
-A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs in which the train composition remains unchanged. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Reference to COMPOUND TRAIN that represents the train formation/composition as a whole (for this JOURNEY PART). +SIRI v2.1
+A journey does always have one or more JOURNEY PARTs for which the train formation/composition remains unchanged.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
@@ -353,8 +353,9 @@ A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs 
    </xsd:element>
    <xsd:element ref="CompoundTrainRef" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a COMPOUND TRAIN which represents the train formation/composition as a whole. 
-A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs in which the train composition remains unchanged.</xsd:documentation>
+     <xsd:documentation>Reference to COMPOUND TRAIN that represents the train formation/composition as a whole (for this JOURNEY PART). +SIRI v2.1
+A journey does always have one or more JOURNEY PARTs for which the train formation/composition remains unchanged.
+</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
@@ -362,7 +363,7 @@ A journey (with VEHICLE TYPE 'rail') does always have one or more JOURNEY PARTs 
  </xsd:complexType>
  <xsd:group name="JourneyPartViewGroup">
   <xsd:annotation>
-  	<xsd:documentation>JourneyPart information instead of or in addition to the JourneyPartRef. +SIRI v2.0</xsd:documentation>
+  	<xsd:documentation>If no JOURNEY PART reference is available (or in addition to the reference), identify it indirectly by From-/ToStopPointRef and Start-/EndTime (i.e. the scheduled times at these stops). +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
   	<xsd:element name="FromStopPointRef" type="StopPointRefStructure">
