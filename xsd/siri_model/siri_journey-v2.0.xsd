@@ -1124,7 +1124,7 @@ If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a wag
    <xsd:documentation>Description of the recommended action for passengers on how to deal with changes, for example of the TRAIN formation.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="TypeOfActionRef" type="TypeOfValueRefStructure" minOccurs="0">
+   <xsd:element name="TypeOfActionRef" type="TypeOfValueRefStructure">
     <xsd:annotation>
      <xsd:documentation>Type of the recommendation, e.g. 'unknown', 'replacement' or 'otherRoute'.</xsd:documentation>
     </xsd:annotation>
