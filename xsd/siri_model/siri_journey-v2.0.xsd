@@ -1035,7 +1035,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
 If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a wagon/coach, or TRAIN COMPONENT respectively, stops in two sectors of the QUAY, the FORMATION ASSIGNMENT must reference both.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="VehicleStatus" type="VehicleStatusStructure" minOccurs="0">
+   <xsd:element name="VehicleInFormationStatus" type="VehicleInFormationStatusStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Information about a change of a VEHICLE within the formation, e.g., whether a VEHICLE is open, booked or has defective doors.</xsd:documentation>
     </xsd:annotation>
