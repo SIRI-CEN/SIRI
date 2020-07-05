@@ -1060,7 +1060,7 @@ If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a wag
       <xsd:documentation>Status of formation, e.g., whether it has changed compared to the plan, certain VEHICLEs or features are missing or extra VEHICLEs are added.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-	<xsd:element name="VehicleStatus" type="VehicleStatusStructure">
+	<xsd:element name="VehicleInFormationStatus" type="VehicleInFormationStatusStructure">
      <xsd:annotation>
       <xsd:documentation>Status of a VEHICLE within formation, e.g., whether a VEHICLE is open, booked or has defective doors.</xsd:documentation>
      </xsd:annotation>
@@ -1088,7 +1088,7 @@ If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a wag
    <xsd:group ref="FormationStatusInfoGroup" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:complexType name="VehicleStatusStructure">
+ <xsd:complexType name="VehicleInFormationStatusStructure">
   <xsd:annotation>
    <xsd:documentation>Description of the status of a monitored vehicle.</xsd:documentation>
   </xsd:annotation>
@@ -1353,7 +1353,7 @@ More accurate data can be provided by the individual occupancies or capacities b
    <!-- Muss gemäss MENTZ geändert werden da nicht dieselbe Bedeutung wie in VDV -->
    <xsd:element name="VehicleNumber" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Denotes the official "registration number" of the vehicle or wagon/coach. In rail transport VEHICLE NUMBER would be equal to the 12 digit UIC wagon/coach number, possibly followed by other combinations of letters, e.g. by the UIC classification of railway coaches.</xsd:documentation>
+     <xsd:documentation>Denotes the official "registration number" of the vehicle or wagon/coach. In rail transport VEHICLE NUMBER would be equal to the 12-digit UIC wagon/coach number, possibly followed by other combinations of letters, e.g. by the UIC classification of railway coaches.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="FareClasses" minOccurs="0"/>
