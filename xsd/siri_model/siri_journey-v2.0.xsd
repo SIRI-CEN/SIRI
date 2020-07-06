@@ -756,7 +756,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
  <!-- ======================================================================= -->
  <xsd:complexType name="StopAssignmentStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a specific QUAY or platform +SIRI v2.0.</xsd:documentation>
+   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a specific QUAY or platform. +SIRI v2.0.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AimedQuayRef" type="QuayRefStructure" minOccurs="0">
@@ -771,12 +771,22 @@ It is advised to specify a reference point that is meaningful for passengers on 
    </xsd:element>
    <xsd:element name="ExpectedQuayRef" type="QuayRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Physical QUAY to use accoring to the real-time prediction. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Physical QUAY to use according to the real-time prediction. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ExpectedQuayName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Expected Platform name. Can be used to indicate real-time prediction. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ActualQuayRef" type="QuayRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Physical QUAY actually used. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ActualQuayName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Actual Platform name. Can be used to indicate recorded platform. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="QuayType" minOccurs="0"/>
@@ -1029,15 +1039,15 @@ It is advised to specify a reference point that is meaningful for passengers on 
      <xsd:documentation>Relative position of TRAIN ELEMENT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="QuayRef" type="QuayRefStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Reference to the QUAY on which the particular VEHICLE, i.e., component of the formation, arrives or departs from. 
-If a QUAY is divided into sectors (with the help of STOP ASSIGNMENTs), and a wagon/coach, or TRAIN COMPONENT respectively, stops in two sectors of the QUAY, the FORMATION ASSIGNMENT must reference both.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
    <xsd:element name="VehicleInFormationStatus" type="VehicleInFormationStatusStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Information about a change of a VEHICLE within the formation, e.g., whether a VEHICLE is open, booked or has defective doors.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TrainStopAssignment" type="StopAssignmentStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>References to the QUAY on which the particular VEHICLE, i.e., component of the formation, arrives or departs from. 
+If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENTs), and a TRAIN COMPONENT spans over multiple sectors of the QUAY, the FORMATION ASSIGNMENT must reference all of them (in multiple STOP ASSIGNMENTs).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
