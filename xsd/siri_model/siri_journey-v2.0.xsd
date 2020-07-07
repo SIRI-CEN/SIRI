@@ -514,11 +514,6 @@ It is advised to specify a reference point that is meaningful for passengers on 
      </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ExpectedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Real-time occupancies and capacities of a vehicle (by fare classes) when arriving at a given STOP POINT. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
    <xsd:element name="ArrivalOperatorRefs" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>OPERATORs of of servcie up until arrival.. May change for departure. +SIRI v2.0.</xsd:documentation>
@@ -561,7 +556,12 @@ It is advised to specify a reference point that is meaningful for passengers on 
     </xsd:element>
    <xsd:element name="ExpectedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Real-time occupancies and capacities of a vehicle (by fare classes) when departing at a given STOP POINT. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Real-time occupancies of a VEHICLE and reservations after departing from a given stop. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ExpectedDepartureCapacities" type="PassengerCapacityStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Real-time capacities (number of available seats) of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DepartureOperatorRefs" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1150,7 +1150,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
  <!-- ===== NeTEx PassengerCapacity ============================================ -->
  <xsd:group name="PassengerCapacityGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for a PASSENGER CAPACITY. Used to indicate the maximum capacities of a TRAIN ELEMENT or the estimated/recorded capacities of a TRAIN ELEMENT at a specific stop (in number of passengers). +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for a PASSENGER CAPACITY. Used to indicate the maximum capacities of a TRAIN ELEMENT or the estimated/recorded capacities of a VEHICLE at a given stop, i.e., the number of seats available. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TotalCapacity" type="NumberOfPassengers" minOccurs="0">
@@ -1170,7 +1170,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
    </xsd:element>
    <xsd:element name="SpecialPlaceCapacity" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The number of special places on the vehicle, e.g. seats for the disabled.</xsd:documentation>
+     <xsd:documentation>The number of special places on the vehicle, e.g. seats for the disabled or lounge seats.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="PushchairCapacity" type="NumberOfPassengers" minOccurs="0">
@@ -1203,7 +1203,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
    <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
    <xsd:element name="FareClass" type="FareClassEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Fare class in VEHICLE for which occupancy and capacities are specified.</xsd:documentation>
+     <xsd:documentation>Fare class in VEHICLE for which occupancy or capacities are specified.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="PassengerCategory" type="NaturalLanguageStringStructure" minOccurs="0">
@@ -1220,7 +1220,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
   <xsd:sequence>
    <xsd:element name="OccupancyLevel" type="OccupancyEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>An approximate figure of how occupied or full the VEHICLE is, e.g. manySeatsAvailable or standingRoomOnly. 
+     <xsd:documentation>An approximate figure of how occupied or full a VEHICLE and its parts are, e.g. 'manySeatsAvailable' or 'standingRoomOnly'.  
 More accurate data can be provided by the individual occupancies or capacities below.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -1246,7 +1246,7 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
    <xsd:element name="SpecialPlacesOccupied" type="NumberOfPassengers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Total number of special places, e.g. seats for the disabled, that are occupied after departing the STOP POINT.</xsd:documentation>
+     <xsd:documentation>Total number of special places, e.g. seats for the disabled or lounge seats, that are occupied after departing the STOP POINT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="PushchairsOnboardCount" type="NumberOfPassengers" minOccurs="0">
@@ -1281,7 +1281,7 @@ More accurate data can be provided by the individual occupancies or capacities b
      <xsd:documentation>Name for which the travel group has made the reservation.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="NumberOfSeats" type="NumberOfPassengers">
+   <xsd:element name="NumberOfReservedSeats" type="NumberOfPassengers">
     <xsd:annotation>
      <xsd:documentation>Number of seats that the group has booked.</xsd:documentation>
     </xsd:annotation>
@@ -1291,23 +1291,16 @@ More accurate data can be provided by the individual occupancies or capacities b
  <!-- Occupancy/Capacity model for use on CALL level -->
  <xsd:complexType name="VehicleOccupancyStructure">
   <xsd:annotation>
-   <xsd:documentation>Occupancies and real-time capacities of a vehicle (by fare classes). +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Real-time occupancies of a VEHICLE (by fare class). Could be feedback from an automatic passenger counting system (APC) or estimated values from statistics. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="OccupancyScopeFilterGroup"/>
    <xsd:group ref="OccupancyValuesGroup"/>
-   <xsd:element name="EstimatedCapacities" minOccurs="0">
+   <xsd:element name="TotalNumberOfReservedSeats" type="NumberOfPassengers">
     <xsd:annotation>
-     <xsd:documentation>Provides capacity information relevant for the used occupancy scope filter.</xsd:documentation>
+     <xsd:documentation>Total number of booked seats from individual and group reservations.</xsd:documentation>
     </xsd:annotation>
-   	<xsd:complexType>
-	 <xsd:sequence>
-      <xsd:group ref="PassengerCapacityGroup"/>
-	 </xsd:sequence>
-   	</xsd:complexType>
    </xsd:element>
-   <!-- Here and in JourneyPartInfo or only in one of the two? Or just allow a JourneyPartRef here? 
-        Do we actually need to indicate it for every stop? But if we only indicate it in JourneyPartInfo, it becomees independent from the Occupancy model.. -->
    <xsd:element name="GroupReservation" type="GroupReservationStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Reservations of travel groups, i.e., name of group and number of seats booked.</xsd:documentation>
@@ -1315,21 +1308,15 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <!-- Capacity model for use on JOURNEY level to indicate maximum capacities of a TRAIN ELEMENT -->
  <xsd:complexType name="PassengerCapacityStructure">
   <xsd:annotation>
-   <xsd:documentation>Maximum capacities of a vehicle, e.g. TRAIN ELEMENT, by its fare classes. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Real-time capacities of a VEHICLE (by fare class), i.e., number of available seats. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="OccupancyScopeFilterGroup"/>
    <xsd:group ref="PassengerCapacityGroup"/>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:element name="PassengerCapacity" type="PassengerCapacityStructure">
-  <xsd:annotation>
-   <xsd:documentation>Maximum number of passengers that can be carried by a vehicle of given type.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
  <!-- ===== NeTEx TrainElement: corresponds to VDV454 FoFahrzeuge. +SIRI v2.1 ============================================ -->
  <xsd:element name="TrainElement" type="TrainElementStructure">
   <xsd:annotation>
@@ -1485,7 +1472,7 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="VehicleTypeGroup"/>
-   <xsd:element name="CompoundTrainComponents" minOccurs="0">
+   <xsd:element name="TrainsInCompoundTrain" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Ordered collection of TRAINs making up the COMPOUND TRAIN.</xsd:documentation>
     </xsd:annotation>
@@ -1629,16 +1616,16 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
    </xsd:element>
    <xsd:element name="EuroClass" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Euroclass of the vehicle type.</xsd:documentation>
+     <xsd:documentation>Euroclass of the vehicle type. Corresponds to the 12-digit European Identification Number (EIN).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="MaximumCapacities" minOccurs="0">
+   <xsd:element name="MaximumPassengerCapacities" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Break down of capacities by FARE CLASS (number of passengers that TRAIN ELEMENT can carry).</xsd:documentation>
+     <xsd:documentation>Break down of capacities by FARE CLASS, i.e., maximum number of passengers that TRAIN ELEMENT can carry.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
-      <xsd:element ref="PassengerCapacity" maxOccurs="unbounded"/>
+	  <xsd:element name="MaximumPassengerCapacity" type="PassengerCapacityStructure" maxOccurs="unbounded"/>
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>

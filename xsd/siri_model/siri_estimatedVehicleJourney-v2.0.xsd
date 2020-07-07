@@ -167,7 +167,8 @@ DEPRECATED from SRI 2.0</xsd:documentation>
    </xsd:element>
    <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>How full the bus is. If omitted: Passenger load is unknown.</xsd:documentation>
+     <xsd:documentation>An approximate figure of how occupied the journey is after departing from a given stop, e.g. 'manySeatsAvailable' or 'standingRoomOnly'. If omitted: Passenger load is unknown.
+Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRAIN, can also be specified in more detail for the departure on CALL level.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -366,7 +367,8 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>How full the bus is at the stop. If omitted: Passenger load is unknown.</xsd:documentation>
+     <xsd:documentation>An approximate figure of how occupied the journey is after departing from a given stop, e.g. 'manySeatsAvailable' or 'standingRoomOnly'. If omitted: Passenger load is unknown.
+Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRAIN, can also be specified in more detail for the departure on CALL level.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -406,11 +408,6 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element name="ArrivalFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="RecordedArrivalOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Recorded occupancies and capacities of a vehicle (by fare classes) when arriving at a given STOP POINT. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedDepartureTime" minOccurs="0">
@@ -455,7 +452,12 @@ the original journey and the nature of the difference.</xsd:documentation>
    </xsd:element>
    <xsd:element name="RecordedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Recorded occupancies and capacities of a vehicle (by fare classes) when departing at a given STOP POINT. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Recorded occupancies of a VEHICLE and reserved seats after departing from a given stop. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RecordedDepartureCapacities" type="PassengerCapacityStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Recorded capacities of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>

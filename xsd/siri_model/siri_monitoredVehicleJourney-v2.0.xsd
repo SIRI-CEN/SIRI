@@ -207,7 +207,8 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>How full the VEHICLE is.  If omitted, not known.</xsd:documentation>
+     <xsd:documentation>An approximate figure of how occupied the journey is across all of its stops, e.g. 'manySeatsAvailable' or 'standingRoomOnly'. If omitted: Passenger load is unknown.
+Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRAIN, can also be specified in more detail for the departure on CALL level.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Delay" type="DurationType" minOccurs="0">
