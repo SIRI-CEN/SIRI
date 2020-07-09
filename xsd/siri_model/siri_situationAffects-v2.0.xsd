@@ -134,6 +134,17 @@ Rail transport, Roads and road transport
      <xsd:documentation>Spatial coordinates of STOP POINT. Derivable from StopRef.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference of Stop Place related to this affected StopPoint.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StopPlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200626-02</xsd:appinfo>
+     <xsd:documentation>Name of Stop Place related to this affected StopPoint.  (Unbounded to allow a text for every language)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="AffectedModes" type="AffectedModesStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Modes within station/stop affected by the SITUATION. If not specified, assume all modes of that station.</xsd:documentation>
@@ -170,6 +181,16 @@ Rail transport, Roads and road transport
         <xsd:documentation>CONNECTION LINKs from stop that are affected by the SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Lines" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Used to restrict stop points to some lines</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded"/>
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
@@ -590,6 +611,26 @@ Rail transport, Roads and road transport
     <xsd:complexType>
      <xsd:sequence>
       <xsd:element name="AffectedSection" type="AffectedSectionStructure" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="StopPoints" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Used to restrict lines to some stop points</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure" maxOccurs="unbounded"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="StopPlaces" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Used to restrict lines to some stop places</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded"/>
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
