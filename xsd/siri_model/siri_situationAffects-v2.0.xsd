@@ -141,7 +141,6 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:appinfo source="vdv-id">vdv20200626-02</xsd:appinfo>
      <xsd:documentation>Name of Stop Place related to this affected StopPoint.  (Unbounded to allow a text for every language)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
