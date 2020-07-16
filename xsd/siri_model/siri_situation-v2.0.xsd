@@ -1052,6 +1052,23 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
   </xsd:sequence>
  </xsd:complexType>
  <!-- ====Text Descriptions======================================= -->
+ <xsd:complexType name="ImagesStructure">
+  <xsd:annotation>
+   <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Image" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Image description.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:complexContent>
+      <xsd:extension base="ImageStructure"/>
+     </xsd:complexContent>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <xsd:complexType name="ImageStructure">
   <xsd:annotation>
    <xsd:documentation>Type for image.</xsd:documentation>
@@ -1106,43 +1123,20 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:documentation>Further advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Internal" type="DefaultedTextStructure" minOccurs="0">
+   <xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Further advice to passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Images" minOccurs="0">
+   <xsd:element name="Images" type="ImagesStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Image" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Image description.</xsd:documentation>
-       </xsd:annotation>
-       <xsd:complexType>
-        <xsd:complexContent>
-         <xsd:extension base="ImageStructure"/>
-        </xsd:complexContent>
-       </xsd:complexType>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
-   <xsd:element name="InfoLinks" minOccurs="0">
+   <xsd:element name="InfoLinks" type="InfoLinksStructure" minOccurs="0" >
     <xsd:annotation>
      <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="InfoLink" type="InfoLinkStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Hyperlink description.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
@@ -1182,6 +1176,18 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    <xsd:enumeration value="other"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <xsd:complexType name="InfoLinksStructure" >
+ <xsd:annotation>
+  <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
+ </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="InfoLink" type="InfoLinkStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Hyperlink description.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <xsd:complexType name="InfoLinkStructure">
   <xsd:annotation>
    <xsd:documentation>Type for a general hyperlink.</xsd:documentation>
