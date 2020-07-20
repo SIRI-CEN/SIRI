@@ -609,12 +609,6 @@ Rail transport, Roads and road transport
      <xsd:documentation>Further remark to passengers, e,g, "For more information call xy".</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="RemarkPriority" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Prioritises a remark from the information owner's point of view, e.g. usable for sorting or hiding individual remarks.
-      1 = highest priority.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="SummaryContentStructure">
@@ -677,9 +671,9 @@ Rail transport, Roads and road transport
      <xsd:documentation>Content for n remarks of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="InfoLinks" type="InfoLinksStructure" minOccurs="0">
+   <xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
+     <xsd:documentation>for internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Images" type="ImagesStructure" minOccurs="0">
@@ -687,9 +681,9 @@ Rail transport, Roads and road transport
      <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="InternalContent" type="InternalContentStructure" minOccurs="0">
+   <xsd:element name="InfoLinks" type="InfoLinksStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>for internal information only, not passenger relevant</xsd:documentation>
+     <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
