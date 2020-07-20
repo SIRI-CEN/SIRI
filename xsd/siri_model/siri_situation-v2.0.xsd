@@ -1125,7 +1125,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:element>
    <xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Further advice to passengers.</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Images" type="ImagesStructure" minOccurs="0">
