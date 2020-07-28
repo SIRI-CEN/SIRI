@@ -5,7 +5,7 @@
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
     <Aggregation>main schema</Aggregation>
     <Audience>e-service developers</Audience>
-    <Contributor>Add names </Contributor>
+    <Contributor>Add names</Contributor>
     <Coverage>Europe</Coverage>
     <Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
     <Date>
@@ -20,15 +20,15 @@
     <Date>
      <Modified>2007-05-14</Modified>
      <!-- [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_2" changed to "27_1_Alias_2" according to recommendation document
-          [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_3" changed to "27_1_Alias_3" according to recommendation document
-      -->
+																 [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_3" changed to "27_1_Alias_3" according to recommendation document
+															 -->
     </Date>
     <Date>
      <Modified>2020-01-10</Modified>
      <!-- +SIRI v2.1
-       Align with TPEG2 PTS
-       Remove numerical values ("Pti25_0") from enumerations
-      -->
+															  Align with TPEG2 PTS
+															  Remove numerical values ("Pti25_0") from enumerations
+															 -->
     </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes service types.</p>
@@ -41,27 +41,20 @@
     <Identifier>{http://www.siri.org.uk/standards/siri/schema/2.0/xsd/siri_model/}siri_situationServiceTypes-v1.0.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>CEN</Publisher>
-    <Relation>
-    </Relation>
+    <Relation/>
     <Rights>Unclassified
-     <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
-    </Rights>
+										<Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
+								</Rights>
     <Source>
      <ul>
-      <li>Schema derived Derived from the Kizoom XTIS schema </li>
-      <li>Derived from the TPEG2 PTS schemas </li>
+      <li>Schema derived Derived from the Kizoom XTIS schema</li>
+      <li>Derived from the TPEG2 PTS schemas</li>
      </ul>
     </Source>
     <Status>Version 2.0</Status>
     <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
-Air transport, Airports,
-Ports and maritime transport, Ferries (marine),
-Public transport, Bus services, Coach services, Bus stops and stations,
-Rail transport, Railway stations and track, Train services, Underground trains,
-Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
-Rail transport, Roads and road transport
-     </Category>
+     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport, Air transport, Airports, Ports and maritime transport, Ferries (marine), Public transport, Bus services, Coach services, Bus stops and stations, Rail transport, Railway stations and track, Train services, Underground trains, Business and industry, Transport, Air transport, Ports and maritime transport, Public transport, Rail transport, Roads and road transport
+										</Category>
      <Project>CEN TC278 WG3 SG7</Project>
     </Subject>
     <Title>Xml Schema for PT Incidents. Service subschema</Title>
@@ -146,7 +139,7 @@ Rail transport, Roads and road transport
  <!-- ==Interchange Status Type================================= -->
  <xsd:element name="InterchangeStatusType" type="InterchangeStatusEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation> Status of a SERVICE JOURNEY INTERCHANGE - TPEG Pti31 InterchangeStatus</xsd:documentation>
+   <xsd:documentation>Status of a SERVICE JOURNEY INTERCHANGE - TPEG Pti31 InterchangeStatus</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="InterchangeStatusEnumeration">
@@ -201,8 +194,7 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="distributorWaitProlonged">
     <xsd:annotation>
-     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders. 
-To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders. To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="departurePlatformChanged">
@@ -222,8 +214,7 @@ To achieve this a distributorWaitProlonged status shall be communicated back to 
    </xsd:enumeration>
    <xsd:enumeration value="feederArrivalCancellation">
     <xsd:annotation>
-     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. 
-There are several possible reasons for the loss of a feeder, e.g. loss/cancellation of the feeder VEHICLE, diversion of the feeder LINE/DIRECTION, disruption of a LINE section etc. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. There are several possible reasons for the loss of a feeder, e.g. loss/cancellation of the feeder VEHICLE, diversion of the feeder LINE/DIRECTION, disruption of a LINE section etc. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="distributorDepartureCancellation">
@@ -450,8 +441,7 @@ There are several possible reasons for the loss of a feeder, e.g. loss/cancellat
    </xsd:enumeration>
    <xsd:enumeration value="startPoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_1, start point
-      Deprecated since SIRI v2.1. Use the PTS value 'origin' (PTS044_1) instead.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_1, start point Deprecated since SIRI v2.1. Use the PTS value 'origin' (PTS044_1) instead.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="origin">
@@ -471,8 +461,7 @@ There are several possible reasons for the loss of a feeder, e.g. loss/cancellat
    </xsd:enumeration>
    <xsd:enumeration value="via">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_4, via
-      Deprecated since SIRI v2.1. Use the PTS value 'intermediate' (PTS044_3) instead.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_4, via Deprecated since SIRI v2.1. Use the PTS value 'intermediate' (PTS044_3) instead.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="intermediate">
@@ -532,26 +521,23 @@ There are several possible reasons for the loss of a feeder, e.g. loss/cancellat
    </xsd:enumeration>
    <xsd:enumeration value="alteredStartPoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_15, altered start point
-      Deprecated since SIRI v2.1. Use the PTS value 'firstRoutePoint' (PTS044_7) instead.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_15, altered start point Deprecated since SIRI v2.1. Use the PTS value 'firstRoutePoint' (PTS044_7) instead.</xsd:documentation>
     </xsd:annotation>
-    <xsd:enumeration value="firstRoutePoint">
-     <xsd:annotation>
-      <xsd:documentation>TPEG PTS044_7, first route point</xsd:documentation>
-     </xsd:annotation>
-    </xsd:enumeration>
+   </xsd:enumeration>
+   <xsd:enumeration value="firstRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTS044_7, first route point</xsd:documentation>
+    </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="alteredDestination">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_16, altered destination
-      Deprecated since SIRI v2.1. Use the PTS value 'lastRoutePoint' (PTS044_8) instead.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_16, altered destination Deprecated since SIRI v2.1. Use the PTS value 'lastRoutePoint' (PTS044_8) instead.</xsd:documentation>
     </xsd:annotation>
-    
-    <xsd:enumeration value="lastRoutePoint">
-     <xsd:annotation>
-      <xsd:documentation>TPEG PTS044_8, last route point</xsd:documentation>
-     </xsd:annotation>
-    </xsd:enumeration>
+   </xsd:enumeration>
+   <xsd:enumeration value="lastRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTS044_8, last route point</xsd:documentation>
+    </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedRoutePoint">
     <xsd:annotation>
