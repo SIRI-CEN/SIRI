@@ -441,7 +441,7 @@
    </xsd:enumeration>
    <xsd:enumeration value="startPoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_1, start point Deprecated since SIRI v2.1. Use the PTS value 'origin' (PTS044_1) instead.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_1, start point <br/>Deprecated since SIRI v2.1. Use the PTS value 'origin' (PTS044_1) instead.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="origin">
@@ -461,7 +461,7 @@
    </xsd:enumeration>
    <xsd:enumeration value="via">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_4, via Deprecated since SIRI v2.1. Use the PTS value 'intermediate' (PTS044_3) instead.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_4, via<br/>Deprecated since SIRI v2.1. Use the PTS value 'intermediate' (PTS044_3) instead.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="intermediate">
@@ -521,7 +521,7 @@
    </xsd:enumeration>
    <xsd:enumeration value="alteredStartPoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_15, altered start point Deprecated since SIRI v2.1. Use the PTS value 'firstRoutePoint' (PTS044_7) instead.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_15, altered start point <br/> Deprecated since SIRI v2.1. Use the PTS value 'firstRoutePoint' (PTS044_7) instead.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="firstRoutePoint">
@@ -531,7 +531,7 @@
    </xsd:enumeration>
    <xsd:enumeration value="alteredDestination">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_16, altered destination Deprecated since SIRI v2.1. Use the PTS value 'lastRoutePoint' (PTS044_8) instead.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_16, altered destination<br/>Deprecated since SIRI v2.1. Use the PTS value 'lastRoutePoint' (PTS044_8) instead.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="lastRoutePoint">
