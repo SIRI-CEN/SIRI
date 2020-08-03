@@ -6731,9 +6731,14 @@
  </xs:complexType>
  <xs:simpleType name="PublicEventTypeEnum">
   <xs:annotation>
-   <xs:documentation>Types of public events.</xs:documentation>
+   <xs:documentation>Type of public event (Datex2 PublicEventTypeEnum and PublicEventType2Enum combined)</xs:documentation>
   </xs:annotation>
   <xs:restriction base="xs:string">
+   <xs:enumeration value="unknown">
+    <xs:annotation>
+     <xs:documentation>Unknown</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="agriculturalShow">
     <xs:annotation>
      <xs:documentation>Agricultural show or event which could disrupt traffic.</xs:documentation>
@@ -6744,19 +6749,19 @@
      <xs:documentation>Air show or other aeronautical event which could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
+   <xs:enumeration value="artEvent">
+    <xs:annotation>
+     <xs:documentation>Art event that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="athleticsMeeting">
     <xs:annotation>
      <xs:documentation>Athletics event that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
-   <xs:enumeration value="commercialEvent">
+   <xs:enumeration value="beerFestival">
     <xs:annotation>
-     <xs:documentation>Commercial event which could disrupt traffic.</xs:documentation>
-    </xs:annotation>
-   </xs:enumeration>
-   <xs:enumeration value="culturalEvent">
-    <xs:annotation>
-     <xs:documentation>Cultural event which could disrupt traffic.</xs:documentation>
+     <xs:documentation>Beer festival that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="ballGame">
@@ -6804,6 +6809,11 @@
      <xs:documentation>Formal or religious act, rite or ceremony that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
+   <xs:enumeration value="commercialEvent">
+    <xs:annotation>
+     <xs:documentation>Commercial event which could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="concert">
     <xs:annotation>
      <xs:documentation>Concert event that could disrupt traffic.</xs:documentation>
@@ -6812,6 +6822,11 @@
    <xs:enumeration value="cricketMatch">
     <xs:annotation>
      <xs:documentation>Cricket match that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="culturalEvent">
+    <xs:annotation>
+     <xs:documentation>Cultural event which could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="exhibition">
@@ -6829,9 +6844,29 @@
      <xs:documentation>Celebratory event or series of events which could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
+   <xs:enumeration value="filmFestival">
+    <xs:annotation>
+     <xs:documentation>Film festival that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="filmTVMaking">
     <xs:annotation>
      <xs:documentation>Film or TV making event which could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="fireworkDisplay">
+    <xs:annotation>
+     <xs:documentation>Fireworks display that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="flowerEvent">
+    <xs:annotation>
+     <xs:documentation>Flower event that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="foodFestival">
+    <xs:annotation>
+     <xs:documentation>Food festival that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="footballMatch">
@@ -6899,6 +6934,11 @@
      <xs:documentation>Motor sport race meeting that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
+   <xs:enumeration value="openAirConcert">
+    <xs:annotation>
+     <xs:documentation>Open air concert that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="parade">
     <xs:annotation>
      <xs:documentation>Formal display or organised procession which could disrupt traffic.</xs:documentation>
@@ -6934,6 +6974,11 @@
      <xs:documentation>Horse showing jumping and tournament event that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
+   <xs:enumeration value="soundAndLightShow">
+    <xs:annotation>
+     <xs:documentation>Sound and light show that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="sportsMeeting">
     <xs:annotation>
      <xs:documentation>Sports event of unspecified type that could disrupt traffic.</xs:documentation>
@@ -6944,9 +6989,19 @@
      <xs:documentation>Public ceremony or visit of national or international significance which could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
+   <xs:enumeration value="streetFestival">
+    <xs:annotation>
+     <xs:documentation>Street festival that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="tennisTournament">
     <xs:annotation>
      <xs:documentation>Tennis tournament that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="theatricalEvent">
+    <xs:annotation>
+     <xs:documentation>Theatrical event that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="tournament">
@@ -6962,6 +7017,11 @@
    <xs:enumeration value="waterSportsMeeting">
     <xs:annotation>
      <xs:documentation>Water sports meeting that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="wineFestival">
+    <xs:annotation>
+     <xs:documentation>Wine festival that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="winterSportsMeeting">
