@@ -337,7 +337,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
-  <xsd:complexType name="DatedJourneyPartInfoStructure">
+ <xsd:complexType name="DatedJourneyPartInfoStructure">
   <xsd:annotation>
    <xsd:documentation>Type for a reference to JOURNEY PART. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
@@ -369,29 +369,29 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
  </xsd:complexType>
  <xsd:group name="JourneyPartViewGroup">
   <xsd:annotation>
-  	<xsd:documentation>If no JOURNEY PART reference is available (or in addition to the reference), identify it indirectly by From-/ToStopPointRef and Start-/EndTime (i.e. the scheduled times at these stops). +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>If no JOURNEY PART reference is available (or in addition to the reference), identify it indirectly by From-/ToStopPointRef and Start-/EndTime (i.e. the scheduled times at these stops). +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-  	<xsd:element name="FromStopPointRef" type="StopPointRefStructure">
-  	 <xsd:annotation>
-  	  <xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related JOURNEY PART begins.</xsd:documentation>
-  	 </xsd:annotation>
-  	</xsd:element>
-  	<xsd:element name="ToStopPointRef" type="StopPointRefStructure">
-  	 <xsd:annotation>
-  	  <xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related JOURNEY PART ends.</xsd:documentation>
-  	 </xsd:annotation>
-  	</xsd:element>
-  	<xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
-  	 <xsd:annotation>
-  	  <xsd:documentation>Time at which the related JOURNEY PART begins.</xsd:documentation>
-  	 </xsd:annotation>
-  	</xsd:element>
-  	<xsd:element name="EndTime" type="xsd:dateTime" minOccurs="0">
-  	 <xsd:annotation>
-  	  <xsd:documentation>Time at which the related JOURNEY PART ends.</xsd:documentation>
-  	 </xsd:annotation>
-  	</xsd:element>
+   <xsd:element name="FromStopPointRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related JOURNEY PART begins.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ToStopPointRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related JOURNEY PART ends.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Time at which the related JOURNEY PART begins.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="EndTime" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Time at which the related JOURNEY PART ends.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <!-- ======================================================================= -->

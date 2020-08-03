@@ -554,8 +554,8 @@ Examples:
 - "towards 0" or "towards reference point 0" if sectors are not available or the QUAY has a reference point, e.g. for measuring the length of the QUAY, identified by "0". This would be equivalent to the vehicle departing in the direction of this reference point. If the departing vehicle is represented as an arrow, "towards 0" would be abstracted as "&lt;= 0...100". "100" (as in percent) could denote the opposite side of the QUAY (measured at the full length of the QUAY with respect to the reference point).
 It is advised to specify a reference point that is meaningful for passengers on location.
       </xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="ExpectedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Real-time occupancies of a VEHICLE and reservations after departing from a given stop. +SIRI v2.1</xsd:documentation>
@@ -1198,7 +1198,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
       <xsd:documentation>Status of formation, e.g., whether it has changed compared to the plan, certain VEHICLEs or features are missing or extra VEHICLEs are added.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-	<xsd:element name="VehicleInFormationStatus" type="VehicleInFormationStatusStructure">
+    <xsd:element name="VehicleInFormationStatus" type="VehicleInFormationStatusStructure">
      <xsd:annotation>
       <xsd:documentation>Status of a VEHICLE within formation, e.g., whether a VEHICLE is open, booked or has defective doors.</xsd:documentation>
      </xsd:annotation>
@@ -1532,7 +1532,7 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <!-- ===== NeTEx Train: corresponds to VDV454 FoFahrzeugGruppe. +SIRI v2.1 ============================================ --> 
+ <!-- ===== NeTEx Train: corresponds to VDV454 FoFahrzeugGruppe. +SIRI v2.1 ============================================ -->
  <xsd:element name="Train" type="TrainStructure">
   <xsd:annotation>
    <xsd:documentation>A vehicle composed of TRAIN ELEMENTs assembled in a certain order (so called TRAIN COMPONENTs), i.e. wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
@@ -1664,9 +1664,9 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
      <xsd:documentation>Specifies whether a passage from/to an adjacent TRAIN is possible for passengers.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
-	 <xsd:sequence>
+     <xsd:sequence>
       <xsd:element name="PassageBetweenTrains" type="PassageBetweenTrainsStructure" maxOccurs="2"/>
-	 </xsd:sequence>
+     </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
@@ -1708,10 +1708,10 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
     <xsd:annotation>
      <xsd:documentation>Facilities of VEHICLE TYPE.</xsd:documentation>
     </xsd:annotation>
-	<xsd:complexType>
+    <xsd:complexType>
      <xsd:sequence>
       <xsd:choice maxOccurs="unbounded">
-	   <xsd:element ref="VehicleFeature"/>
+       <xsd:element ref="VehicleFeature"/>
        <xsd:element name="Facility" type="FacilityStructure"/>
        <xsd:element ref="FacilityRef"/>
       </xsd:choice>
@@ -1751,7 +1751,7 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
-	  <xsd:element name="MaximumPassengerCapacity" type="PassengerCapacityStructure" maxOccurs="unbounded"/>
+      <xsd:element name="MaximumPassengerCapacity" type="PassengerCapacityStructure" maxOccurs="unbounded"/>
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
