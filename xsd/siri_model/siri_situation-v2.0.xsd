@@ -33,7 +33,7 @@
     </Date>
     <Date>
      <Modified>2008-07-05</Modified>
-	 <!-- 
+     <!-- 
        1) correct data type to be participant ref not participant pair.
        2) add missing scopeType to classifier.
 	  -->
@@ -41,7 +41,7 @@
     <Date>
      <Modified>2011-04-18</Modified>
      <!-- AffectedVehicleJourney should allow multiple journeys. Brian Ferris onebusaway.org -->
-				</Date>
+    </Date>
     <Date>
      <Modified>2012-03-23</Modified>
      <!-- +SIRI v2.0
@@ -79,7 +79,7 @@
           Removed SubReason
           Added AdviceType, AdviceName, ConditionName, ConditionGroup
        -->
-        </Date>
+    </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs </p>
     </Description>
@@ -665,7 +665,7 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Publication Window for SITUATION if different from validity period.</xsd:documentation>
     </xsd:annotation>
@@ -1227,7 +1227,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    <xsd:documentation>Type for disruption.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
     </xsd:annotation>
