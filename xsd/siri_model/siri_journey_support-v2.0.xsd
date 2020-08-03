@@ -187,9 +187,24 @@ Rail transport, Roads and road transport
      <xsd:documentation>A reference to the DATE VEHICLE JOURNEY that the VEHICLE is making, unique with the data horizon of the service.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Optionally identify the VEHICLE JOURNEY indirectly by origin and destination and the scheduled times at these stops.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>LINE Reference.</xsd:documentation>
+     <xsd:documentation>Reference to LINE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>TRAIN NUMBER Reference.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>OPERATOR Reference.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0"/>
