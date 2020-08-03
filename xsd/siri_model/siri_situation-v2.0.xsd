@@ -33,9 +33,9 @@
     </Date>
     <Date>
      <Modified>2008-07-05</Modified>
-	 <!-- 
-       - correct data tupe to be particpant ref not participant pair 
-       - add missing scopeType to classifier 
+     <!-- 
+       1) correct data type to be participant ref not participant pair.
+       2) add missing scopeType to classifier.
 	  -->
     </Date>
     <Date>
@@ -57,7 +57,7 @@
        D2LogicalModel:Imppact ImpactDetails wrapper tag dropped. 
        D2 trafficResstrictionType renamed to  trafficConstrictionType
        Correct type on easementref to normalized string. 
-       Allow transalatiobs of NLString elements
+       Allow translations of NLString elements
       -->
     </Date>
     <Date>
@@ -77,6 +77,7 @@
      <!-- SIRI v2.1
           Align with TPEG2
           Removed SubReason
+          Added AdviceType, AdviceName, ConditionName, ConditionGroup
        -->
     </Date>
     <Description>
@@ -97,7 +98,7 @@
     </Relation>
     <Rights>Unclassified
        <Copyright>Kizoom 2000-2005, CEN 2009-2020</Copyright>
-    </Rights>
+				</Rights>
     <Source>
      <ul>
       <li>Schema Derived from the Kizoom XTIS schema </li>
@@ -664,7 +665,7 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Publication Window for SITUATION if different from validity period.</xsd:documentation>
     </xsd:annotation>
@@ -736,10 +737,15 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:group name="ReasonGroup">
   <xsd:annotation>
-   <xsd:documentation>StructuredReason Elements.</xsd:documentation>
+   <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ReasonName is used instead. 
+Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:group ref="TpegReasonGroup"/>
+   <xsd:group ref="TpegReasonGroup">
+    <xsd:annotation>
+     <xsd:documentation>Structured classification of nature of SITUATION, from which a standardized message can be generated.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:group>
    <xsd:group ref="TpegSubReasonGroup" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Deprecated (SIRI 2.1) - use only TpegReasonGroup and PublicEventReason.</xsd:documentation>
@@ -747,12 +753,12 @@ Rail transport, Roads and road transport
    </xsd:group>
    <xsd:element name="PublicEventReason" type="D2LogicalModel:PublicEventTypeEnum" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Classifier of Public Event.</xsd:documentation>
+     <xsd:documentation>Structured classification of Public Event, from which a standardized message can be generated.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ReasonName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Text explanation of SITUATION reason. Not normally needed.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Textual classification of nature of SITUATION, from which a standardized message can be generated. Not normally needed, except when TpegReason and PublicEventReason are absent.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -1221,12 +1227,16 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for disruption.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="ConditionGroup"/>
+   <xsd:group ref="ConditionGroup">
+    <xsd:annotation>
+     <xsd:documentation>Condition(s) of effect of disruptione.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:group>
    <xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Severity of disruption if different from that of SITUATION. TPEG pti26</xsd:documentation>
@@ -1282,10 +1292,20 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="ConditionGroup">
   <xsd:annotation>
-   <xsd:documentation>Structured Condition Elements.</xsd:documentation>
+   <xsd:documentation>Structured elements of a SITUATION condition. The Condition enumerated value(s) can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ConditionName is used instead. 
+Note: this means that ConditionName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element ref="Condition" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="Condition" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Structured classification(s) of effect on service, from which a standardized message can be generated.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ConditionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Textual classification of effect on service, from which a standardized message can be generated. Not normally needed, except when Condition is absent.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:complexType name="BoardingStructure">
@@ -1307,7 +1327,10 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="PtAdviceStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for advice.</xsd:documentation>
+   <xsd:documentation>Type for (structured) advice. The AdviceType enumerated value can be used to generate standardized messages describing the SITUATION. If no enumerated value is given, AdviceName is used instead. 
+Note: this means that AdviceName is NOT a complete message, but only a (few) word(s) to be included in the message!
+Alternatively, AdviceRef can be used to reference a (complete) standardised advisory message.
+   </xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AdviceRef" type="AdviceRefStructure" minOccurs="0">
@@ -1315,10 +1338,19 @@ Rail transport, Roads and road transport
      <xsd:documentation>Reference to a standard advisory NOTICE to be given to passengers if a particular condition arises.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0"/>
+   <xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Structured classification of advice for passengers in the given SITUATION, from which a standardized message can be generated.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AdviceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Textual classification of advice, from which a standardized message can be generated. Not normally needed, except when AdviceType is absent.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="Details" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Further Textual advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Further textual advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

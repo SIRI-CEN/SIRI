@@ -202,6 +202,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
    <xsd:element ref="IncludeInterchanges" minOccurs="0"/>
    <xsd:element ref="IncludeJourneyRelations" minOccurs="0"/>
+   <xsd:element ref="IncludeTrainFormations" minOccurs="0"/>
    <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Whether to return the whole timetable, or just differences from the inidicated version. Default is 'false'.</xsd:documentation>

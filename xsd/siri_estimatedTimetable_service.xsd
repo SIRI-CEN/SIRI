@@ -198,6 +198,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
    <xsd:element ref="IncludeInterchanges" minOccurs="0"/>
    <xsd:element ref="IncludeJourneyRelations" minOccurs="0"/>
+   <xsd:element ref="IncludeTrainFormations" minOccurs="0"/>
    <xsd:element name="EstimatedTimetableDetailLevel" type="EstimatedTimetableDetailEnumeration" default="calls" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Level of detail to include in response. Default is 'normal'. (SIRI 2.0)</xsd:documentation>
