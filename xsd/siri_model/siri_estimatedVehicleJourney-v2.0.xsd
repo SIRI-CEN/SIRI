@@ -25,19 +25,24 @@
     <Date>
      <Modified>2005-05-11</Modified>
     </Date>
-    <Date><Modified>2007-04-17</Modified>
+    <Date>
+     <Modified>2007-04-17</Modified>
 				 Name Space changes 
 				</Date>
-    <Date><Modified>2008-03-26</Modified>
+    <Date>
+     <Modified>2008-03-26</Modified>
 				 Add wrapper tag for Line DIRECTION to help binding to Axis 
 				</Date>
-    <Date><Modified>2008-11-17</Modified>
+    <Date>
+     <Modified>2008-11-17</Modified>
 					 Revise to support substitution groups 
 				</Date>
-    <Date><Modified>2011-01-19</Modified>
+    <Date>
+     <Modified>2011-01-19</Modified>
 				 Drop use of As Flat Groups for EstimatedCalls 
 				</Date>
-    <Date><Modified>2012-03-23</Modified>
+    <Date>
+     <Modified>2012-03-23</Modified>
 					 +SIRI v2.0
 					  Factored out of estimatedTimetableService
 					  Add EstimatedServiceJourneyInterchange (i.e. Estimated Connection of VEHICLE) to EstimatedTimetableDelivery
@@ -60,7 +65,7 @@
     </Relation>
     <Rights>Unclassified
        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
-				</Rights>
+    </Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
@@ -182,33 +187,6 @@ Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRA
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <xsd:complexType name="DatedVehicleJourneyIndirectRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Origin and Destination stop of a VEHICLE JOURNEY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="OriginRef" type="StopPointRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>The origin is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AimedDepartureTime" type="xsd:dateTime">
-    <xsd:annotation>
-     <xsd:documentation>Departure time from origin SCHEDULED STOP POINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DestinationRef" type="StopPointRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>The destination is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AimedArrivalTime" type="xsd:dateTime">
-    <xsd:annotation>
-     <xsd:documentation>Arrival time at destination SCHEDULED STOP POINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
  <!-- ======================================================================= -->
  <xsd:element name="EstimatedServiceJourneyInterchange" type="EstimatedServiceJourneyInterchangeStructure">
   <xsd:annotation>
