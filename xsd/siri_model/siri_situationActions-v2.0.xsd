@@ -1,700 +1,716 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situationActions">
-		<xsd:include schemaLocation="siri_situation-v2.0.xsd"/>
-		<xsd:include schemaLocation="siri_feature_support-v2.0.xsd"/>
-		<xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
-		<xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
-		<xsd:include schemaLocation="../siri_utility/siri_location-v2.0.xsd"/>
-		<xsd:annotation>
-				<xsd:appinfo>
-						<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-								<Aggregation>main schema</Aggregation>
-								<Audience>e-service developers</Audience>
-								<Contributor>Add names</Contributor>
-								<Coverage>Europe</Coverage>
-								<Creator>&gt;Drafted for version 1.0 Kizoom SITUATION Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
-								<Date>
-										<Created>2006-09-29</Created>
-								</Date>
-								<Date>
-										<Modified>2007-04-17</Modified>
-								</Date>
-								<Date>
-										<Modified>2013-10-01</Modified>
+ <xsd:include schemaLocation="siri_situation-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_feature_support-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_location-v2.0.xsd"/>
+ <xsd:annotation>
+  <xsd:appinfo>
+   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+    <Aggregation>main schema</Aggregation>
+    <Audience>e-service developers</Audience>
+    <Contributor>Add names</Contributor>
+    <Coverage>Europe</Coverage>
+    <Creator>&gt;Drafted for version 1.0 Kizoom SITUATION Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
+    <Date>
+     <Created>2006-09-29</Created>
+    </Date>
+    <Date>
+     <Modified>2007-04-17</Modified>
+    </Date>
+    <Date>
+     <Modified>2013-10-01</Modified>
 										(a) Added PublishToDisplayAction element definition (b) Corrected default values for string fields
 								</Date>
-								<Date>
-										<Modified>2013-05-01</Modified>
+    <Date>
+     <Modified>2013-05-01</Modified>
 										[de] Add SocialNetworks to PublishToWeb action
 								</Date>
-								<Date>
-										<Modified>2018-11-13</Modified>
+    <Date>
+     <Modified>2018-11-13</Modified>
 										[vdv] ActionsStructure.ActionsGroup.PublishToTvAction changed to unbounded [vdv] ActionsStructure.ActionsGroup.NotifyBySmsAction changed to unbounded [vdv] PublishToDisplayAction added to ActionsGroup [vdv] ActionsStructure.ActionsGroup.PublishToTvAction.Ceefax and Teletext: annotation switched
 								</Date>
-								<Date>
-										<Modified>2020-07-14</Modified>
+    <Date>
+     <Modified>2020-07-14</Modified>
 										[vdv] New elements added to the ParameterisedActionStructure
 								</Date>
-								<Description>
-										<p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs. This subschema describes publishing actions</p>
-								</Description>
-								<Format>
-										<MediaType>text/xml</MediaType>
-										<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-										<Description>XML schema, W3C Recommendation 2001</Description>
-								</Format>
-								<Identifier>{http://www.siri.org.uk/schema/schema/2.0/xsd/siri_model}/siri_situationActions-v1.0.xsd</Identifier>
-								<Language>[ISO 639-2/B] ENG</Language>
-								<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
-								<Relation>
-										<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types-v2.0.xsd</Requires>
-								</Relation>
-								<Rights>Unclassified
+    <Description>
+     <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs. This subschema describes publishing actions</p>
+    </Description>
+    <Format>
+     <MediaType>text/xml</MediaType>
+     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+     <Description>XML schema, W3C Recommendation 2001</Description>
+    </Format>
+    <Identifier>{http://www.siri.org.uk/schema/schema/2.0/xsd/siri_model}/siri_situationActions-v1.0.xsd</Identifier>
+    <Language>[ISO 639-2/B] ENG</Language>
+    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+    <Relation>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types-v2.0.xsd</Requires>
+    </Relation>
+    <Rights>Unclassified
 										
 										<Copyright>Kizoom 2000-2007, CEN 2009-2014</Copyright>
-								</Rights>
-								<Source>
-										<ul>
-												<li>Schema derived Derived from the Kizoom XTIS schema</li>
-										</ul>
-								</Source>
-								<Status>Version 2.0 Draft</Status>
-								<Subject>
-										<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport, Air transport, Airports, Ports and maritime transport, Ferries (marine), Public transport, Bus services, Coach services, Bus stops and stations, Rail transport, Railway stations and track, Train services, Underground trains, Business and industry, Transport, Air transport, Ports and maritime transport, Public transport, Rail transport, Roads and road transport
+    </Rights>
+    <Source>
+     <ul>
+      <li>Schema derived Derived from the Kizoom XTIS schema</li>
+     </ul>
+    </Source>
+    <Status>Version 2.0 Draft</Status>
+    <Subject>
+     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport, Air transport, Airports, Ports and maritime transport, Ferries (marine), Public transport, Bus services, Coach services, Bus stops and stations, Rail transport, Railway stations and track, Train services, Underground trains, Business and industry, Transport, Air transport, Ports and maritime transport, Public transport, Rail transport, Roads and road transport
 										</Category>
-										<Project>CEN TC278 WG3 SG7</Project>
-								</Subject>
-								<Title>SIRI-SX XML Schema for PT SITUATIONs. Actions subschema</Title>
-								<Type>Standard</Type>
-						</Metadata>
-				</xsd:appinfo>
-				<xsd:documentation>SIRI-SX Situation Actions.</xsd:documentation>
-		</xsd:annotation>
-		<!-- ======================================================================= -->
-		<!-- ===Overall action====================================== -->
-		<xsd:complexType name="ActionsStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for list of actions.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:sequence minOccurs="0">
-						<xsd:group ref="ActionsGroup"/>
-						<xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Extension point.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<!-- ===Actions================================================== -->
-		<xsd:complexType name="SimpleActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for list of SITUATIONs.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:sequence>
-						<xsd:element name="ActionStatus" type="ActionStatusEnumeration" default="open" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Processing Status of action at time of SITUATION publication.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<!-- ======================================================================= -->
-		<xsd:element name="PassengerInformationAction" type="PassengerInformationActionStructure"/>
-		<xsd:complexType name="PassengerInformationActionStructure">
-				<xsd:sequence>
-						<xsd:element name="ActionRef" type="EntryQualifierStructure">
-								<xsd:annotation>
-										<xsd:documentation>Reference to the action number within the incident concept.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="RecordedAtTime" type="xsd:dateTime">
-								<xsd:annotation>
-										<xsd:documentation>The time of the last update</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="Version" type="SituationVersion" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>The monotonically increasing version of the passenger information instance. If absent, is the same version as the enclosing Situation</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="SourceRef" type="ParticipantRefStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>The system which created this passenger information. If absent, is the same version as the enclosing Situation</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="OwnerRef" type="OrganisationRefStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>The organisation which owns this passenger information.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="Perspective" type="PerspectiveEnumeration" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Perspective of the passenger, e.g. general, vehicleJourney, stopPoint.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="ActionPriority" type="xsd:positiveInteger" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Prioritises a passenger information action from the information owner's point of view, e.g. suitable for sorting or hiding individual passenger information actions. 1 = highest priority.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>All texts of the passenger information.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		
-		</xsd:complexType>
-		<xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
-		<xsd:complexType name="PublicationScopeStructure">
-				<xsd:annotation>
-						<xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:sequence>
-						<xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
-						<xsd:element name="Affects" type="AffectsScopeStructure"/>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="PublishingActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for description of the whole action to be published.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:sequence>
-						<xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
-						<xsd:element ref="PassengerInformationAction" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Description of the whole passenger information of one action.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="ParameterisedActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for parameterised, i.e. user definable, actions.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="SimpleActionStructure">
-								<xsd:sequence>
-										<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Description of action.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:choice>
-												<xsd:element name="ActionData" type="ActionDataStructure" minOccurs="0" maxOccurs="unbounded">
-														<xsd:annotation>
-																<xsd:documentation>Data associated with action.</xsd:documentation>
-														</xsd:annotation>
-												</xsd:element>
-												<xsd:element name="PublishingAction" type="PublishingActionStructure" minOccurs="0" maxOccurs="unbounded">
-														<xsd:annotation>
-																<xsd:documentation>Type for description of the whole action to be published.</xsd:documentation>
-														</xsd:annotation>
-												</xsd:element>
-										</xsd:choice>
-										<xsd:element name="PublicationWindow" type="ClosedTimestampRangeStructure" minOccurs="0" maxOccurs="unbounded">
-												<xsd:annotation>
-														<xsd:documentation>Defines a number of validity periods. When not sent, then the validity periods of higher level are valid. Can be overwritten by deeper level.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:complexType name="PushedActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for publication action.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="ParameterisedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="BeforeNotices" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Whether reminders should be sent.</xsd:documentation>
-												</xsd:annotation>
-												<xsd:complexType>
-														<xsd:sequence>
-																<xsd:element name="Interval" type="DurationType" minOccurs="0" maxOccurs="unbounded">
-																		<xsd:annotation>
-																				<xsd:documentation>Intervals before validity start date to send reminders.</xsd:documentation>
-																		</xsd:annotation>
-																</xsd:element>
-														</xsd:sequence>
-												</xsd:complexType>
-										</xsd:element>
-										<xsd:element name="ClearNotice" type="xsd:boolean" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Whether a clearing notice should be displayed.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:simpleType name="ActionStatusEnumeration">
-				<xsd:annotation>
-						<xsd:documentation>Values for Progress Status.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:restriction base="xsd:NMTOKEN">
-						<xsd:enumeration value="open"/>
-						<xsd:enumeration value="published"/>
-						<xsd:enumeration value="closed"/>
-				</xsd:restriction>
-		</xsd:simpleType>
-		<xsd:complexType name="ActionDataStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for list of SITUATIONs.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:sequence>
-						<xsd:element name="Name" type="xsd:NMTOKEN">
-								<xsd:annotation>
-										<xsd:documentation>Name of action data Element.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="Type" type="xsd:NMTOKEN">
-								<xsd:annotation>
-										<xsd:documentation>Data type of action data.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="Value" type="xsd:anyType" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Value for action.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="Prompt" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Display prompt for presenting action to user. (Unbounded since SIRI 2.0)</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="PublicationScope" type="PublicationScopeStructure">
-								<xsd:annotation>
-										<xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<!-- ======================================================================= -->
-		<xsd:group name="ActionsGroup">
-				<xsd:annotation>
-						<xsd:documentation>Allowed actions to perform to distribute SITUATION.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:sequence>
-						<xsd:element ref="PublishToWebAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="PublishToMobileAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="PublishToTvAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="PublishToAlertsAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="PublishToDisplayAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="ManualAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="NotifyByEmailAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="NotifyBySmsAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="NotifyByPagerAction" minOccurs="0" maxOccurs="unbounded"/>
-						<xsd:element ref="NotifyUserAction" minOccurs="0" maxOccurs="unbounded"/>
-				</xsd:sequence>
-		</xsd:group>
-		<xsd:element name="PublishToWebAction" type="PublishToWebActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION To Web.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="PublishToWebActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Action Publish SITUATION To Web.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="ParameterisedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="Incidents" type="xsd:boolean" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Include in SITUATION lists on web site. Default is 'true'.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="HomePage" type="xsd:boolean" default="false" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Include on home page on web site. Default is 'false'.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="Ticker" type="xsd:boolean" default="false" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Include in moving ticker band. Default is 'false'.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="SocialNetwork" type="xsd:normalizedString" default="false" minOccurs="0" maxOccurs="unbounded">
-												<xsd:annotation>
-														<xsd:documentation>Include in social NETWORK indicated by this name. Possible value could be "twitter.com", "facebook.com", "vk.com" and so on. Parameters may be specifed as Action data. (SIRIv 2.10)</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:element name="PublishToMobileAction" type="PublishToMobileActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION To WAP and PDA.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="PublishToMobileActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Action Publish SITUATION To Displays.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="ParameterisedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="Incidents" type="xsd:boolean" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Include in SITUATION lists on mobile site. Default is 'true'.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="HomePage" type="xsd:boolean" default="false" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Include in home page on mobile site. Default is 'false'.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:element name="PublishToDisplayAction" type="PublishToDisplayActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION To Displays.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="PublishToDisplayActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Action Publish SITUATION To Web.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="ParameterisedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="OnPlace" type="xsd:boolean" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Include in SITUATION lists on station displays.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="OnBoard" type="xsd:boolean" default="false" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Include onboard displays.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:element name="PublishToAlertsAction" type="PublishToAlertsActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION To Alert Service.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="PublishToAlertsActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Action Publish SITUATION To Alert Service.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="PushedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="ByEmail" type="xsd:boolean" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Send as email alert.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="ByMobile" type="xsd:boolean" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Send as mobile alert by SMS or WAP push.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:element name="PublishToTvAction" type="PublishToTvActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION To TvService.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="PublishToTvActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Notify SITUATION to Tv.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="ParameterisedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="Ceefax" type="xsd:boolean" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Publish to Ceefax. Default is 'true'.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="Teletext" type="xsd:boolean" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Publish to Teletext. Default is 'true'.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<!-- ======================================================================= -->
-		<xsd:element name="ManualAction">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION Manually. i.e. a procedure must be carried out.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-						<xsd:complexContent>
-								<xsd:extension base="ManualActionStructure"/>
-						</xsd:complexContent>
-				</xsd:complexType>
-		</xsd:element>
-		<xsd:complexType name="ManualActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Action Publish SITUATION Manual process.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="ParameterisedActionStructure"/>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:element name="NotifyBySmsAction" type="NotifyBySmsActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION to an individual by SMS.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="NotifyBySmsActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Notify user by SMS.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="PushedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="Phone" type="PhoneType" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>MSISDN of user to which to send messages.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="Premium" type="xsd:boolean" default="false" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Whether content is flagged as subject to premium charge.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:element name="NotifyByEmailAction" type="NotifyByEmailActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION to a named workgroup or individual by email.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="NotifyByEmailActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Notify user by Email.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="PushedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="email" type="EmailAddressType" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Email address to which notice should be sent.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:element name="NotifyByPagerAction" type="NotifyByPagerActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION To pager.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="NotifyByPagerActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Notify user by Pager.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="PushedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="PagerGroupRef" type="xsd:string" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Reference to a pager group to be notfied.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="Pager" type="xsd:NMTOKEN" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Pager number of pager to be notfied.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<xsd:element name="NotifyUserAction" type="NotifyUserActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION To User.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="NotifyUserActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Notify user by other means.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="PushedActionStructure">
-								<xsd:sequence>
-										<xsd:element name="WorkgroupRef" type="xsd:string" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Workgroup of user to be notified.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="UserName" type="xsd:string" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Name of user to be notified.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-										<xsd:element name="UserRef" type="xsd:string" default="true" minOccurs="0">
-												<xsd:annotation>
-														<xsd:documentation>Reference to a user to be notified.</xsd:documentation>
-												</xsd:annotation>
-										</xsd:element>
-								</xsd:sequence>
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
-		<!-- ===Extentions for SIRI-SX v2.0p-a0.x================================================== -->
-		<xsd:complexType name="DescriptionContentStructure">
-				<xsd:sequence>
-						<xsd:element name="DescriptionText" type="DefaultedTextStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary. (Unbounded since SIRI 2.0)</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="ConsequenceContentStructure">
-				<xsd:sequence>
-						<xsd:element name="ConsequenceText" type="DefaultedTextStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Further consequence to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="DurationContentStructure">
-				<xsd:sequence>
-						<xsd:element name="DurationText" type="DefaultedTextStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Further information about the duration to passengers.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="ReasonNameContentStructure">
-				<xsd:sequence>
-						<xsd:element name="ReasonText" type="DefaultedTextStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>ReasonName of passenger information action.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="AdviceContentStructure">
-				<xsd:sequence>
-						<xsd:element name="AdviceText" type="DefaultedTextStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Further recommendation to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="RemarkContentStructure">
-				<xsd:sequence>
-						<xsd:element name="Remark" type="DefaultedTextStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Further remark to passengers, e,g, "For more information call xy".</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="SummaryContentStructure">
-				<xsd:sequence>
-						<xsd:element name="SummaryText" type="DefaultedTextStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Summary of passenger information action.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="InternalContentStructure">
-				<xsd:sequence>
-						<xsd:element name="InternalText" type="DefaultedTextStructure" maxOccurs="unbounded">
-								<xsd:annotation>
-										<xsd:documentation>Summary of passenger information action.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:complexType name="TextualContentStructure">
-				<xsd:sequence>
-						<xsd:element name="TextualContentSize" type="xsd:NMTOKENS" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Class of size, e.g. L (large), M (medium), S (small)</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="SummaryContent" type="SummaryContentStructure">
-								<xsd:annotation>
-										<xsd:documentation>Content for summary of a passenger information action</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="ReasonContent" type="ReasonNameContentStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Content for the reason of a passenger information action</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="DescriptionContent" type="DescriptionContentStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Content for the description of a passenger information action</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="ConsequenceContent" type="ConsequenceContentStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Content for the consequence of a passenger information action</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="AdviceContent" type="AdviceContentStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Content for the advice of a passenger information action</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="DurationContent" type="DurationContentStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Content for the duration of a passenger information action.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="RemarkContent" type="RemarkContentStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Content for the remark of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>for internal information only, not passenger relevant</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="Images" type="ImagesStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-						<xsd:element name="InfoLinks" type="InfoLinksStructure" minOccurs="0">
-								<xsd:annotation>
-										<xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
-								</xsd:annotation>
-						</xsd:element>
-				</xsd:sequence>
-		</xsd:complexType>
-		<xsd:simpleType name="PerspectiveEnumeration">
-				<xsd:annotation>
-						<xsd:documentation>Values for perspectives.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:restriction base="xsd:NMTOKEN">
-						<xsd:enumeration value="general"/>
-						<xsd:enumeration value="stopPoint"/>
-						<xsd:enumeration value="vehicleJourney"/>
-				</xsd:restriction>
-		</xsd:simpleType>
+     <Project>CEN TC278 WG3 SG7</Project>
+    </Subject>
+    <Title>SIRI-SX XML Schema for PT SITUATIONs. Actions subschema</Title>
+    <Type>Standard</Type>
+   </Metadata>
+  </xsd:appinfo>
+  <xsd:documentation>SIRI-SX Situation Actions.</xsd:documentation>
+ </xsd:annotation>
+ <!-- ======================================================================= -->
+ <!-- ===Overall action====================================== -->
+ <xsd:complexType name="ActionsStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for list of actions.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence minOccurs="0">
+   <xsd:group ref="ActionsGroup"/>
+   <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Extension point.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- ===Actions================================================== -->
+ <xsd:complexType name="SimpleActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for list of SITUATIONs.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="ActionStatus" type="ActionStatusEnumeration" default="open" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Processing Status of action at time of SITUATION publication.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- ======================================================================= -->
+ <xsd:element name="PassengerInformationAction" type="PassengerInformationActionStructure"/>
+ <xsd:complexType name="PassengerInformationActionStructure">
+  <xsd:sequence>
+   <xsd:element name="ActionRef" type="EntryQualifierStructure">
+    <xsd:annotation>
+     <xsd:documentation>Reference to the action number within the incident concept.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RecordedAtTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>The time of the last update</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Version" type="SituationVersion" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The monotonically increasing version of the passenger information instance. If absent, is the same version as the enclosing Situation</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="SourceRef" type="ParticipantRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The system which created this passenger information. If absent, is the same version as the enclosing Situation</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OwnerRef" type="OrganisationRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The organisation which owns this passenger information.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Perspective" type="PerspectiveEnumeration" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Perspective of the passenger, e.g. general, vehicleJourney, stopPoint.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ActionPriority" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Prioritises a passenger information action from the information owner's point of view, e.g. suitable for sorting or hiding individual passenger information actions. 1 = highest priority.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>All texts of the passenger information.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Classification" minOccurs="0">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:group ref="ReasonGroup">
+        <xsd:annotation>
+          <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, ReasonName is used instead. 
+Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
+        </xsd:annotation>
+      </xsd:group>
+      <xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Structured elements describing the effect of disruption and the advice to passengers. The enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, the xxxxName is used instead.
+Note: this means that a xxxxName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
+ <xsd:complexType name="PublicationScopeStructure">
+  <xsd:annotation>
+   <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
+   <xsd:element name="Affects" type="AffectsScopeStructure"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="PublishingActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for description of the whole action to be published.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
+   <xsd:element ref="PassengerInformationAction" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Description of the whole passenger information of one action.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ParameterisedActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for parameterised, i.e. user definable, actions.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="SimpleActionStructure">
+    <xsd:sequence>
+     <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Description of action.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:choice>
+      <xsd:element name="ActionData" type="ActionDataStructure" minOccurs="0" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>Data associated with action.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PublishingAction" type="PublishingActionStructure" minOccurs="0" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>Type for description of the whole action to be published.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:choice>
+     <xsd:element name="PublicationWindow" type="ClosedTimestampRangeStructure" minOccurs="0" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Defines a number of validity periods. When not sent, then the validity periods of higher level are valid. Can be overwritten by deeper level.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="PushedActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for publication action.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ParameterisedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="BeforeNotices" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Whether reminders should be sent.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="Interval" type="DurationType" minOccurs="0" maxOccurs="unbounded">
+         <xsd:annotation>
+          <xsd:documentation>Intervals before validity start date to send reminders.</xsd:documentation>
+         </xsd:annotation>
+        </xsd:element>
+       </xsd:sequence>
+      </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="ClearNotice" type="xsd:boolean" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Whether a clearing notice should be displayed.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:simpleType name="ActionStatusEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Values for Progress Status.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="open"/>
+   <xsd:enumeration value="published"/>
+   <xsd:enumeration value="closed"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:complexType name="ActionDataStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for list of SITUATIONs.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Name" type="xsd:NMTOKEN">
+    <xsd:annotation>
+     <xsd:documentation>Name of action data Element.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Type" type="xsd:NMTOKEN">
+    <xsd:annotation>
+     <xsd:documentation>Data type of action data.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Value" type="xsd:anyType" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Value for action.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Prompt" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Display prompt for presenting action to user. (Unbounded since SIRI 2.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PublicationScope" type="PublicationScopeStructure">
+    <xsd:annotation>
+     <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <!-- ======================================================================= -->
+ <xsd:group name="ActionsGroup">
+  <xsd:annotation>
+   <xsd:documentation>Allowed actions to perform to distribute SITUATION.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="PublishToWebAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="PublishToMobileAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="PublishToTvAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="PublishToAlertsAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="PublishToDisplayAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="ManualAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="NotifyByEmailAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="NotifyBySmsAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="NotifyByPagerAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="NotifyUserAction" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:element name="PublishToWebAction" type="PublishToWebActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To Web.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="PublishToWebActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Action Publish SITUATION To Web.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ParameterisedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="Incidents" type="xsd:boolean" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Include in SITUATION lists on web site. Default is 'true'.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="HomePage" type="xsd:boolean" default="false" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Include on home page on web site. Default is 'false'.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="Ticker" type="xsd:boolean" default="false" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Include in moving ticker band. Default is 'false'.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="SocialNetwork" type="xsd:normalizedString" default="false" minOccurs="0" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Include in social NETWORK indicated by this name. Possible value could be "twitter.com", "facebook.com", "vk.com" and so on. Parameters may be specifed as Action data. (SIRIv 2.10)</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="PublishToMobileAction" type="PublishToMobileActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To WAP and PDA.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="PublishToMobileActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Action Publish SITUATION To Displays.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ParameterisedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="Incidents" type="xsd:boolean" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Include in SITUATION lists on mobile site. Default is 'true'.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="HomePage" type="xsd:boolean" default="false" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Include in home page on mobile site. Default is 'false'.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="PublishToDisplayAction" type="PublishToDisplayActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To Displays.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="PublishToDisplayActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Action Publish SITUATION To Web.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ParameterisedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="OnPlace" type="xsd:boolean" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Include in SITUATION lists on station displays.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="OnBoard" type="xsd:boolean" default="false" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Include onboard displays.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="PublishToAlertsAction" type="PublishToAlertsActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To Alert Service.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="PublishToAlertsActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Action Publish SITUATION To Alert Service.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="PushedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="ByEmail" type="xsd:boolean" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Send as email alert.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="ByMobile" type="xsd:boolean" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Send as mobile alert by SMS or WAP push.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="PublishToTvAction" type="PublishToTvActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To TvService.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="PublishToTvActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Notify SITUATION to Tv.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ParameterisedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="Ceefax" type="xsd:boolean" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Publish to Ceefax. Default is 'true'.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="Teletext" type="xsd:boolean" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Publish to Teletext. Default is 'true'.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <!-- ======================================================================= -->
+ <xsd:element name="ManualAction">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION Manually. i.e. a procedure must be carried out.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType>
+   <xsd:complexContent>
+    <xsd:extension base="ManualActionStructure"/>
+   </xsd:complexContent>
+  </xsd:complexType>
+ </xsd:element>
+ <xsd:complexType name="ManualActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Action Publish SITUATION Manual process.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ParameterisedActionStructure"/>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="NotifyBySmsAction" type="NotifyBySmsActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION to an individual by SMS.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="NotifyBySmsActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Notify user by SMS.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="PushedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="Phone" type="PhoneType" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>MSISDN of user to which to send messages.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="Premium" type="xsd:boolean" default="false" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Whether content is flagged as subject to premium charge.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="NotifyByEmailAction" type="NotifyByEmailActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION to a named workgroup or individual by email.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="NotifyByEmailActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Notify user by Email.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="PushedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="email" type="EmailAddressType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Email address to which notice should be sent.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="NotifyByPagerAction" type="NotifyByPagerActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To pager.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="NotifyByPagerActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Notify user by Pager.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="PushedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="PagerGroupRef" type="xsd:string" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Reference to a pager group to be notfied.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="Pager" type="xsd:NMTOKEN" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Pager number of pager to be notfied.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:element name="NotifyUserAction" type="NotifyUserActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To User.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="NotifyUserActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Notify user by other means.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="PushedActionStructure">
+    <xsd:sequence>
+     <xsd:element name="WorkgroupRef" type="xsd:string" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Workgroup of user to be notified.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="UserName" type="xsd:string" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Name of user to be notified.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="UserRef" type="xsd:string" default="true" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Reference to a user to be notified.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <!-- ===Extentions for SIRI-SX v2.0p-a0.x================================================== -->
+ <xsd:complexType name="DescriptionContentStructure">
+  <xsd:sequence>
+   <xsd:element name="DescriptionText" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary. (Unbounded since SIRI 2.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ConsequenceContentStructure">
+  <xsd:sequence>
+   <xsd:element name="ConsequenceText" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Further consequence to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="DurationContentStructure">
+  <xsd:sequence>
+   <xsd:element name="DurationText" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Further information about the duration to passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="ReasonNameContentStructure">
+  <xsd:sequence>
+   <xsd:element name="ReasonText" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>ReasonName of passenger information action.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="AdviceContentStructure">
+  <xsd:sequence>
+   <xsd:element name="AdviceText" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Further recommendation to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="RemarkContentStructure">
+  <xsd:sequence>
+   <xsd:element name="Remark" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Further remark to passengers, e,g, "For more information call xy".</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="SummaryContentStructure">
+  <xsd:sequence>
+   <xsd:element name="SummaryText" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Summary of passenger information action.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="InternalContentStructure">
+  <xsd:sequence>
+   <xsd:element name="InternalText" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Summary of passenger information action.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="TextualContentStructure">
+  <xsd:sequence>
+   <xsd:element name="TextualContentSize" type="xsd:NMTOKENS" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="SummaryContent" type="SummaryContentStructure">
+    <xsd:annotation>
+     <xsd:documentation>Content for summary of a passenger information action</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ReasonContent" type="ReasonNameContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for the reason of a passenger information action</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DescriptionContent" type="DescriptionContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for the description of a passenger information action</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ConsequenceContent" type="ConsequenceContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for the consequence of a passenger information action</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AdviceContent" type="AdviceContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for the advice of a passenger information action</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DurationContent" type="DurationContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for the duration of a passenger information action.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RemarkContent" type="RemarkContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for the remark of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>for internal information only, not passenger relevant</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Images" type="ImagesStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="InfoLinks" type="InfoLinksStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:simpleType name="PerspectiveEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Values for perspectives.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="general"/>
+   <xsd:enumeration value="stopPoint"/>
+   <xsd:enumeration value="vehicleJourney"/>
+  </xsd:restriction>
+ </xsd:simpleType>
 </xsd:schema>
-
