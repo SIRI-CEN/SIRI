@@ -23,21 +23,25 @@
     <Date>
      <Modified>2007-03-29</Modified>
     </Date>
-    <Date><Modified>2008-11-13</Modified>
+    <Date>
+     <Modified>2008-11-13</Modified>
 				 Correct Cardinalities on SIRI DESTINATION REF Structure 
 				</Date>
-    <Date><Modified>2011-04-18</Modified>
+    <Date>
+     <Modified>2011-04-18</Modified>
 				 siri_journey-v2.0.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com
  
 				</Date>
-    <Date><Modified>2012-03-22</Modified>
+    <Date>
+     <Modified>2012-03-22</Modified>
 				SIRI 2.0 
 					Create from siri_journey
 					Add TrainNumber
 					Add departed, missed states to ProgressStatusEnum (arrivalStatus and  DepartureStatus)
 					Add VehicleStatusEnum
 				</Date>
-    <Date><Modified>2013-02-11</Modified>
+    <Date>
+     <Modified>2013-02-11</Modified>
 				SIRI 2.0 
 					Add notExpected state to ProgressStatusEnum
 					Corrected enumeration value cancellled in VehicleStatusEnum
@@ -60,7 +64,7 @@
     <Rights>Unclassified
 
        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
-				</Rights>
+    </Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG CML and Trident standards.</li>
@@ -176,6 +180,33 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
+ <xsd:complexType name="DatedVehicleJourneyIndirectRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Origin and Destination stop of a VEHICLE JOURNEY.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="OriginRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>The origin is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedDepartureTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>Departure time from origin SCHEDULED STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DestinationRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>The destination is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedArrivalTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>Arrival time at destination SCHEDULED STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <!-- =====VEHICLE JOURNEY identfiers=============================================================== -->
  <xsd:complexType name="ConnectingJourneyRefStructure">
   <xsd:annotation>
@@ -189,37 +220,41 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Optionally identify the VEHICLE JOURNEY indirectly by origin and destination and the scheduled times at these stops.</xsd:documentation>
+     <xsd:documentation>Identify a VEHICLE JOURNEY indirectly by origin and destination as well as the scheduled times at these stops.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to LINE.</xsd:documentation>
+     <xsd:documentation>Reference to LINE of journey.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>TRAIN NUMBER Reference.</xsd:documentation>
+     <xsd:documentation>Reference to TRAIN NUMBER of journey.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>OPERATOR Reference.</xsd:documentation>
+     <xsd:documentation>Reference to OPERATOR of journey.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0"/>
+   <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>PARTICIPANT reference that identifies data producer of journey.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ===== INTERCHANGE identfiers=============================================================== -->
  <xsd:simpleType name="InterchangeCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifer of a SERVCIE JOURNEY INTERCHANGE.</xsd:documentation>
+   <xsd:documentation>Type for identifer of a SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="InterchangeRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a SERVCIE JOURNEY INTERCHANGE.</xsd:documentation>
+   <xsd:documentation>Type for reference to a SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="InterchangeCodeType"/>
@@ -227,7 +262,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="InterchangeRef" type="InterchangeRefStructure">
   <xsd:annotation>
-   <xsd:documentation> Reference to a SERVCIE JOURNEY  INTERCHANGE.</xsd:documentation>
+   <xsd:documentation> Reference to a SERVICE JOURNEY  INTERCHANGE.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->
@@ -639,7 +674,7 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
  </xsd:simpleType>
  <xsd:simpleType name="VehicleStatusEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Classification of the State of the VEHICLE JORUNEY according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times.</xsd:documentation>
+   <xsd:documentation>Classification of the State of the VEHICLE JOURNEY according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="expected">
