@@ -24,32 +24,49 @@
     <Date>
      <Modified>2005-05-11</Modified>
     </Date>
-    <Date><Modified>2007-04-17</Modified>
-					 Name Space changes 
-				</Date>
-    <Date><Modified>2008-03-26</Modified>
-					 Add wrapper tag for Line DIRECTION to help binding to Axis 
-				</Date>
-    <Date><Modified>2008-11-17</Modified>
-					 Revise to support substitution groups 
-				</Date>
-    <Date><Modified>2011-04-18</Modified>
-					 - siri_productionTimetable_service.xsd Type on request ValidiyPeriod start and end should be datetime not time ..
+    <Date>
+     <Modified>2007-04-17</Modified>
+     <!--
+						 Name Space changes 
+					-->
+    </Date>
+    <Date>
+     <Modified>2008-03-26</Modified>
+     <!-- 
+						Add wrapper tag for Line DIRECTION to help binding to Axis 
+					-->
+    </Date>
+    <Date>
+     <Modified>2008-11-17</Modified>
+     <!-- 
+						Revise to support substitution groups 
+					-->
+    </Date>
+    <Date>
+     <Modified>2011-04-18</Modified>
+     <!--
+						- siri_productionTimetable_service.xsd Type on request ValidiyPeriod start and end should be datetime not time ..
 						- Change to ClosedTimestampRange instead of ClosedTimeRange.
       Fix Subscription request to be an element and have extensions .
-				</Date>
-    <Date><Modified>2011-01-19</Modified>
-					 SIRI 1.3 Drop use of As Flat Groups for DatedCalls. 
-				</Date>
-    <Date><Modified>2012-03-23</Modified>
+					-->
+    </Date>
+    <Date>
+     <Modified>2011-01-19</Modified>
+     <!--
+						 SIRI 1.3 Drop use of As Flat Groups for DatedCalls. 
+					-->
+    </Date>
+    <Date>
+     <Modified>2012-03-23</Modified>
+     <!--
 					 +SIRI v2.0 Add ServiceJourneyInterchange (i.e. Monitored Connection)
 					 Add additional times to TargetedServiceInterchange MinimumTransferTime, MaximimTransferTime, StandardTransferTime, MaximumAUtomaticWaitTime, StandardWiatTime.
 					 
 					Add Public and Contact Details to JourneyInfo 
 				
 					Add AimedLatestPassengerAccessTime to TargetedCall 
-					 
-				</Date>
+					-->
+    </Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
      <p>This sub-schema describes the DATED JOUNEY used in the SIRI Production Timetable Service.</p>
@@ -75,7 +92,7 @@
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.0</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -202,6 +219,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
    <xsd:element ref="IncludeInterchanges" minOccurs="0"/>
    <xsd:element ref="IncludeJourneyRelations" minOccurs="0"/>
+   <xsd:element ref="IncludeTrainFormations" minOccurs="0"/>
    <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Whether to return the whole timetable, or just differences from the inidicated version. Default is 'false'.</xsd:documentation>
