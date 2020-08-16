@@ -602,7 +602,7 @@
 		</xsd:complexType>
 		<xsd:complexType name="RemarkContentStructure">
 				<xsd:sequence>
-						<xsd:element name="Remark" type="DefaultedTextStructure" maxOccurs="unbounded">
+						<xsd:element name="RemarkText" type="DefaultedTextStructure" maxOccurs="unbounded">
 								<xsd:annotation>
 										<xsd:documentation>Further remark to passengers, e,g, "For more information call xy".</xsd:documentation>
 								</xsd:annotation>
