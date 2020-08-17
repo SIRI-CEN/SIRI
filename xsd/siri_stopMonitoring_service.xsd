@@ -228,7 +228,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Level of detail to include in response. Default is 'normal'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0">
+   <xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0" default="false">
     <xsd:annotation>
      <xsd:documentation>Whether any related SITUATIONs should be included in the ServiceDelivery. Default is 'false'. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
@@ -357,7 +357,7 @@ Rail transport, Roads and road transport
 If false each subscription response will contain the full information as specified in this request.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ChangeBeforeUpdates" type="PositiveDurationType" minOccurs="0">
+   <xsd:element name="ChangeBeforeUpdates" type="PositiveDurationType" minOccurs="0" default="0">
     <xsd:annotation>
      <xsd:documentation>The amount of change to the arrival or departure time that can happen before an update is sent (i.e. if ChangeBeforeUpdate is set to 2 minutes, the subscriber will not be told that a bus is 30 seconds delayed - an update will only be sent when the bus is at least 2 minutes delayed). Default is zero - all changes will be sent regardless.</xsd:documentation>
     </xsd:annotation>
@@ -874,7 +874,7 @@ If false each subscription response will contain the full information as specifi
         </xsd:element>
         <xsd:element name="ByStartTime" type="xsd:boolean" default="true" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'truet.</xsd:documentation>
+          <xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'true'.</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element ref="FilterByMonitoringRef"/>

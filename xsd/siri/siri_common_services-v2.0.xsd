@@ -467,7 +467,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="ResponseTimestamp" minOccurs="0"/>
    <xsd:group ref="ContextualisedResponseEndpointGroup"/>
    <xsd:group ref="SubscriptionIdentifierResourcePropertyGroup" minOccurs="0"/>
-   <xsd:element ref="Status"/>
+   <xsd:element ref="Status" minOccurs="0"/>
    <xsd:element name="ErrorCondition" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Description of any error or warning condition.</xsd:documentation>
@@ -704,7 +704,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Data received Acknowledgement content.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element ref="Status"/>
+   <xsd:element ref="Status" minOccurs="0"/>
    <xsd:element name="ErrorCondition" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Description of any error or warning condition.</xsd:documentation>
