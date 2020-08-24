@@ -78,14 +78,14 @@ Rail transport, Roads and road transport.
  <xsd:complexType name="WsSubscriptionAnswerStructure">
   <xsd:sequence>
    <xsd:element name="SubscriptionAnswerInfo" type="siri:ResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:SubscriptionResponseBodyStructure" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="Answer" type="siri:SubscriptionResponseStructure" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="WsDeleteSubscriptionRequestStructure">
   <xsd:sequence>
    <xsd:element name="DeleteSubscriptionInfo" type="siri:RequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:TerminateSubscriptionRequestBodyStructure" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="Request" type="siri:TerminateSubscriptionRequestStructure" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
   </xsd:sequence>
  </xsd:complexType>
@@ -110,7 +110,7 @@ Rail transport, Roads and road transport.
  <xsd:complexType name="WsCheckStatusResponseStructure">
   <xsd:sequence>
    <xsd:element name="CheckStatusAnswerInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:CheckStatusResponseBodyStructure" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="Answer" type="siri:CheckStatusResponseStructure" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
   </xsd:sequence>
  </xsd:complexType>
@@ -120,7 +120,7 @@ Rail transport, Roads and road transport.
  <xsd:complexType name="WsDataSupplyRequestStructure">
   <xsd:sequence>
    <xsd:element name="DataSupplyRequestInfo" type="siri:ConsumerRequestEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:DataSupplyRequestBodyStructure" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="Request" type="siri:DataSupplyRequestStructure" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
   </xsd:sequence>
  </xsd:complexType>

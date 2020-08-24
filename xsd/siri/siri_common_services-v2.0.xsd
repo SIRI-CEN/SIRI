@@ -854,48 +854,4 @@ Rail transport, Roads and road transport
   </xsd:complexContent>
  </xsd:complexType>
  <!-- ======================================================================= -->
- <!-- ===WSDL=============================================================== -->
- <xsd:complexType name="SubscriptionResponseBodyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Body of Subscription Response. Used in WSDL.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="ResponseStatus" maxOccurs="unbounded"/>
-   <xsd:element name="SubscriptionManagerAddress" type="EndpointAddress" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Endpoint address of subscription manager if different from that of the Producer or known default.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ServiceStartedTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Time at which service providing the subscription was last started. Can be used to detect restarts. If absent, unknown.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="TerminateSubscriptionRequestBodyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Body of Terminate Subscription Request content. Used in WSDL.  </xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="TerminateSubscriptionTopicGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="DataSupplyRequestBodyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Body of Data Supply Request. Used in WSDL.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="DataSupplyTopicGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="CheckStatusResponseBodyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Body of Service Status Check Response. Used in WSDL.</xsd:documentation>
-   <xsd:documentation>Same as CheckStatusResponseStructure, but without extension to be consistent with the other operation definition.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="CheckStatusPayloadGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
 </xsd:schema>
