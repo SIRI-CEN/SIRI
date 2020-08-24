@@ -229,9 +229,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPointsDetailLevel" type="StopPointsDetailEnumeration" default="normal" minOccurs="0">
@@ -356,9 +356,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Linesreturned. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="LinesDetailLevel" type="LinesDetailEnumeration" default="normal" minOccurs="0">
@@ -446,9 +446,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -508,9 +508,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -649,9 +649,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="FacilityDetailLevel" type="FacilityDetailEnumeration" default="normal" minOccurs="0">
@@ -832,9 +832,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of ConnectionLinks returned. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ConnectionLinksDetailLevel" type="ConnectionLinksDetailEnumeration" default="normal" minOccurs="0">
