@@ -13,6 +13,7 @@
  <xsd:include schemaLocation="siri_situationReasons-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationAffects-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationActions-v2.0.xsd"/>
+		<xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:annotation>
   <xsd:appinfo>
@@ -1104,7 +1105,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    <xsd:documentation>Text description of SITUATION. Some or all of this may have been generated from the other structured content elements. Where text has been overriden this is indicated.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:NMTOKEN" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Default language.</xsd:documentation>
     </xsd:annotation>
@@ -1232,6 +1233,39 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:documentation>Nature of the effect to disrupt (or restore) service, and further details.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="PtConsequenceFilterStructure">
+  <xsd:annotation>
+   <xsd:documentation>Filter matching consequences </xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Condition" type="ServiceConditionEnumeration" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Classification of effect on service - TPEG Pts43</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Parts of transport network affected by disruption if different from that of SITUATION.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AdviceRef" type="AdviceRefStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Reference to a standard advisory NOTICE to be given to passengers if a particular condition arises.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Structured classification of advice for passengers in the given SITUATION, from which a standardized message can be generated.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="PtConsequenceStructure">

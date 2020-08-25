@@ -142,22 +142,6 @@
      <xsd:documentation>All texts of the passenger information.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Classification" minOccurs="0">
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:group ref="ReasonGroup">
-       <xsd:annotation>
-        <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, ReasonName is used instead. Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
-       </xsd:annotation>
-      </xsd:group>
-      <xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Structured elements describing the effect of disruption and the advice to passengers. The enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, the xxxxName is used instead. Note: this means that a xxxxName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
@@ -180,6 +164,22 @@
     <xsd:annotation>
      <xsd:documentation>Description of the whole passenger information of one action.</xsd:documentation>
     </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Classification" minOccurs="0">
+    <xsd:complexType>
+     <xsd:sequence>
+      <!--<xsd:group ref="ReasonGroup">
+       <xsd:annotation>
+        <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, ReasonName is used instead. Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
+       </xsd:annotation>
+      </xsd:group>-->
+      <xsd:element name="ConsequenceFilter" type="PtConsequenceFilterStructure" minOccurs="0" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>Structured elements describing the effect of disruption and the advice to passengers. The enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, the xxxxName is used instead. Note: this means that a xxxxName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
@@ -299,6 +299,7 @@
    <xsd:element ref="PublishToTvAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="PublishToAlertsAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="PublishToDisplayAction" minOccurs="0" maxOccurs="unbounded"/>
+		  <xsd:element ref="PublishByPerspectiveAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="ManualAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyByEmailAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyBySmsAction" minOccurs="0" maxOccurs="unbounded"/>
@@ -306,6 +307,20 @@
    <xsd:element ref="NotifyUserAction" minOccurs="0" maxOccurs="unbounded"/>
   </xsd:sequence>
  </xsd:group>
+		<xsd:element name="PublishByPerspectiveAction" type="PublishByPerspectiveActionStructure">
+				<xsd:annotation>
+						<xsd:documentation>Action: Publish SITUATION To one or more passenger perspectives.</xsd:documentation>
+				</xsd:annotation>
+		</xsd:element>
+		<xsd:complexType name="PublishByPerspectiveActionStructure">
+				<xsd:annotation>
+						<xsd:documentation>Type for Action Publish SITUATION To one or more passenger perspectives.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexContent>
+						<xsd:extension base="ParameterisedActionStructure">
+						</xsd:extension>
+				</xsd:complexContent>
+		</xsd:complexType>
  <xsd:element name="PublishToWebAction" type="PublishToWebActionStructure">
   <xsd:annotation>
    <xsd:documentation>Action: Publish SITUATION To Web.</xsd:documentation>
