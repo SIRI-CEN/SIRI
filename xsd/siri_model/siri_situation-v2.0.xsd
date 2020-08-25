@@ -985,7 +985,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Place other than STOP POINTs affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>STOP PLACE affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
