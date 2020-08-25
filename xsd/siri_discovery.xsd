@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_discovery">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_discovery">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -187,7 +187,7 @@ Rail transport, Roads and road transport
      </xsd:group>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -285,7 +285,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="AnnotatedStopPointRef" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -312,7 +312,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="LinesDiscoveryRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -413,7 +413,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="AnnotatedLineRef" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -438,7 +438,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ProductCategoriesRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -475,7 +475,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="ProductCategory" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -500,7 +500,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="VehicleFeaturesRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -537,7 +537,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="VehicleFeature" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -561,7 +561,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -586,7 +586,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="InfoChannel" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -612,7 +612,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="FacilityRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -709,7 +709,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -739,7 +739,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -763,7 +763,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="ServiceFeature" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -789,7 +789,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionLinksDiscoveryRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.0">
+    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed </xsd:documentation>
      </xsd:annotation>
@@ -888,7 +888,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="AnnotatedConnectionLinkRef" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.0">
+    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
