@@ -172,7 +172,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="FacilityRef" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="FeatureRef" minOccurs="0"/>
+   <xsd:element ref="FeatureRef" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="LineRef" minOccurs="0"/>
    <xsd:element ref="StopPointRef" minOccurs="0"/>
    <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
