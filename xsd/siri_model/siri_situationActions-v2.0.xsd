@@ -281,7 +281,7 @@
      <xsd:documentation>Display prompt for presenting action to user. (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="PublicationScope" type="PublicationScopeStructure">
+   <xsd:element name="PublicationScope" type="PublicationScopeStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
     </xsd:annotation>
@@ -299,7 +299,7 @@
    <xsd:element ref="PublishToTvAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="PublishToAlertsAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="PublishToDisplayAction" minOccurs="0" maxOccurs="unbounded"/>
-		  <xsd:element ref="PublishByPerspectiveAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="PublishByPerspectiveAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="ManualAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyByEmailAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyBySmsAction" minOccurs="0" maxOccurs="unbounded"/>
@@ -307,20 +307,20 @@
    <xsd:element ref="NotifyUserAction" minOccurs="0" maxOccurs="unbounded"/>
   </xsd:sequence>
  </xsd:group>
-		<xsd:element name="PublishByPerspectiveAction" type="PublishByPerspectiveActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Action: Publish SITUATION To one or more passenger perspectives.</xsd:documentation>
-				</xsd:annotation>
-		</xsd:element>
-		<xsd:complexType name="PublishByPerspectiveActionStructure">
-				<xsd:annotation>
-						<xsd:documentation>Type for Action Publish SITUATION To one or more passenger perspectives.</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexContent>
-						<xsd:extension base="ParameterisedActionStructure">
-						</xsd:extension>
-				</xsd:complexContent>
-		</xsd:complexType>
+ <xsd:element name="PublishByPerspectiveAction" type="PublishByPerspectiveActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To one or more passenger perspectives.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="PublishByPerspectiveActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Action Publish SITUATION To one or more passenger perspectives.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ParameterisedActionStructure">
+           </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
  <xsd:element name="PublishToWebAction" type="PublishToWebActionStructure">
   <xsd:annotation>
    <xsd:documentation>Action: Publish SITUATION To Web.</xsd:documentation>
