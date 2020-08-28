@@ -439,11 +439,6 @@
      <xsd:documentation>TPEG Pti15_0, PTS044_0 unknown</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="startPoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_1, start point <br/>Deprecated since SIRI v2.1. Use the PTS value 'origin' (PTS044_1) instead.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
    <xsd:enumeration value="origin">
     <xsd:annotation>
      <xsd:documentation>TPEG PTS044_1, origin</xsd:documentation>
@@ -454,6 +449,56 @@
      <xsd:documentation>TPEG Pti15_2, PTS044_2 destination</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
+   <xsd:enumeration value="intermediate">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTS044_3, intermediate.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="legBoard">
+    <xsd:annotation>
+     <xsd:documentation>PTS044_4, leg board</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="legIntermediate">
+    <xsd:annotation>
+     <xsd:documentation>PTS044_5, leg intermediate</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="legAlight">
+    <xsd:annotation>
+     <xsd:documentation>PTS044_6, leg alight</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="firstRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTS044_7, first route point</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="lastRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTS044_8, last route point</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="affectedStopplace">
+    <xsd:annotation>
+     <xsd:documentation>PTS044_9, affected stop place</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="presentedStopplace">
+    <xsd:annotation>
+     <xsd:documentation>PTS044_10, presented stop place</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefinedStopplaceUsage">
+    <xsd:annotation>
+     <xsd:documentation>PTS044_255, undefined stop place usage<br/>Deprecated since SIRI v2.1. Use the PTS value 'undefined' instead.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="startPoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_1, start point <br/>Deprecated since SIRI v2.1. Use the PTS value 'origin' (PTS044_1) instead.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
    <xsd:enumeration value="stop">
     <xsd:annotation>
      <xsd:documentation>TPEG Pti15_3, stop</xsd:documentation>
@@ -461,12 +506,7 @@
    </xsd:enumeration>
    <xsd:enumeration value="via">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_4, via<br/>Deprecated since SIRI v2.1. Use the PTS value 'intermediate' (PTS044_3) instead.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="intermediate">
-    <xsd:annotation>
-     <xsd:documentation>TPEG PTS044_3, intermediate.</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_4, via</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="notStopping">
@@ -521,57 +561,22 @@
    </xsd:enumeration>
    <xsd:enumeration value="alteredStartPoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_15, altered start point <br/> Deprecated since SIRI v2.1. Use the PTS value 'firstRoutePoint' (PTS044_7) instead.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="firstRoutePoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG PTS044_7, first route point</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_15, altered start point</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="alteredDestination">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_16, altered destination<br/>Deprecated since SIRI v2.1. Use the PTS value 'lastRoutePoint' (PTS044_8) instead.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lastRoutePoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG PTS044_8, last route point</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_16, altered destination</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedRoutePoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_255, undefined route point</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_255, undefined route point<br/>Deprecated since SIRI v2.1. Use the PTS value 'undefined' instead.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="legBoard">
+   <xsd:enumeration value="undefined">
     <xsd:annotation>
-     <xsd:documentation>PTS044_4, leg board</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="legIntermediate">
-    <xsd:annotation>
-     <xsd:documentation>PTS044_5, leg intermediate</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="legAlight">
-    <xsd:annotation>
-     <xsd:documentation>PTS044_6, leg alight</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="affectedStopplace">
-    <xsd:annotation>
-     <xsd:documentation>PTS044_9, affected stop place</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="presentedStopplace">
-    <xsd:annotation>
-     <xsd:documentation>PTS044_10, presented stop place</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedStopplaceUsage">
-    <xsd:annotation>
-     <xsd:documentation>PTS044_255, undefined stop place usage</xsd:documentation>
+     <xsd:documentation>TPEG Pti15_255, PTS044_255 undefined</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
