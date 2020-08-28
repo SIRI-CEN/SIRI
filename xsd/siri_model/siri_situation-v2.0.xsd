@@ -1237,7 +1237,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
  </xsd:complexType>
  <xsd:complexType name="PtConsequenceFilterStructure">
   <xsd:annotation>
-   <xsd:documentation>Filter matching consequences </xsd:documentation>
+   <xsd:documentation>Filter for matching consequences. Can be used to construct generated messages.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1245,26 +1245,22 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Condition" type="ServiceConditionEnumeration" minOccurs="0" maxOccurs="unbounded">
+   <xsd:group ref="ConditionGroup">
     <xsd:annotation>
-     <xsd:documentation>Classification of effect on service - TPEG Pts43</xsd:documentation>
+     <xsd:documentation>Condition(s) of effect of disruptione.</xsd:documentation>
     </xsd:annotation>
-   </xsd:element>
+   </xsd:group>
    <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Parts of transport network affected by disruption if different from that of SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="AdviceRef" type="AdviceRefStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="Advice" type="PtAdviceStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a standard advisory NOTICE to be given to passengers if a particular condition arises.</xsd:documentation>
+     <xsd:documentation>Advice to passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Structured classification of advice for passengers in the given SITUATION, from which a standardized message can be generated.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element name="Delays" type="DelaysStructure" minOccurs="0"/>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>

@@ -142,6 +142,22 @@
      <xsd:documentation>All texts of the passenger information.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="Classification" minOccurs="0">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:group ref="ReasonGroup">
+       <xsd:annotation>
+        <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, ReasonName is used instead. Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
+       </xsd:annotation>
+      </xsd:group>
+      <xsd:element name="ConsequenceFilter" type="PtConsequenceFilterStructure" minOccurs="0" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>Filter for matching consequences. Can be used to construct generated messages.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
@@ -164,22 +180,6 @@
     <xsd:annotation>
      <xsd:documentation>Description of the whole passenger information of one action.</xsd:documentation>
     </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Classification" minOccurs="0">
-    <xsd:complexType>
-     <xsd:sequence>
-      <!--<xsd:group ref="ReasonGroup">
-       <xsd:annotation>
-        <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, ReasonName is used instead. Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
-       </xsd:annotation>
-      </xsd:group>-->
-      <xsd:element name="ConsequenceFilter" type="PtConsequenceFilterStructure" minOccurs="0" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Structured elements describing the effect of disruption and the advice to passengers. The enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, the xxxxName is used instead. Note: this means that a xxxxName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
@@ -661,7 +661,7 @@
   <xsd:sequence>
    <xsd:element name="TextualContentSize" type="xsd:NMTOKENS" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small)</xsd:documentation>
+     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small).<br/> If text length for a class size varies on perspective and a PassengerInformationAction applies to several perspectives, take the smallest class</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="SummaryContent" type="SummaryContentStructure">
