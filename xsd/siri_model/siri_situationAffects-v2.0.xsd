@@ -552,10 +552,19 @@ Rail transport, Roads and road transport
       <xsd:documentation>All LINEs in the network are affected.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-    <xsd:element name="SelectedRoutes" type="EmptyType">
+    <xsd:element name="SelectedRoutes" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Only some ROUTEs are affected,  LINE level information not available. See the AffectedRoutes element for textual description.</xsd:documentation>
+      <xsd:documentation>Only some ROUTEs are affected,  LINE level information not available. See the RoutesAffected element for textual description.</xsd:documentation>
      </xsd:annotation>
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="AffectedRoute" type="AffectedRouteStructure" maxOccurs="unbounded">
+        <xsd:annotation>
+         <xsd:documentation>An ordered list of MAPPING POINTs defining one single path through the road (or rail) Network. A ROUTE may pass through the same MAPPING POINT more than once.</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
     </xsd:element>
     <xsd:sequence>
      <xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded">
