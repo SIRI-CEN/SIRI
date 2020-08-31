@@ -592,6 +592,12 @@
      <xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary. (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="DescriptionPriority" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Prioritises a description from the information owner's point of view, e.g. usable for sorting or hiding individual descriptions.
+      1 = highest priority.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="ConsequenceContentStructure">
@@ -599,6 +605,12 @@
    <xsd:element name="ConsequenceText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Further consequence to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ConsequencePriority" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Prioritises a consequence from the information owner's point of view, e.g. usable for sorting or hiding individual consequences.
+      1 = highest priority.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -628,6 +640,12 @@
      <xsd:documentation>Further recommendation to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="RecommendationPriority" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Prioritises a recommendation from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations.
+      1 = highest priority.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="RemarkContentStructure">
@@ -635,6 +653,12 @@
    <xsd:element name="RemarkText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Further remark to passengers, e,g, "For more information call xy".</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RemarkPriority" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Prioritises a remark from the information owner's point of view, e.g. usable for sorting or hiding individual remarks.
+      1 = highest priority.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -674,17 +698,17 @@
      <xsd:documentation>Content for the reason of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="DescriptionContent" type="DescriptionContentStructure" minOccurs="0">
+   <xsd:element name="DescriptionContent" type="DescriptionContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Content for the description of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ConsequenceContent" type="ConsequenceContentStructure" minOccurs="0">
+   <xsd:element name="ConsequenceContent" type="ConsequenceContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Content for the consequence of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="AdviceContent" type="AdviceContentStructure" minOccurs="0">
+   <xsd:element name="AdviceContent" type="AdviceContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Content for the advice of a passenger information action</xsd:documentation>
     </xsd:annotation>
@@ -694,7 +718,7 @@
      <xsd:documentation>Content for the duration of a passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="RemarkContent" type="RemarkContentStructure" minOccurs="0">
+   <xsd:element name="RemarkContent" type="RemarkContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Content for the remark of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
     </xsd:annotation>
