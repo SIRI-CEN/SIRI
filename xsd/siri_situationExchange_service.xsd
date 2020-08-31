@@ -430,7 +430,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the subscription publishing and notification processing.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
+   <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="true" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Whether the producer will return the complete set of current data, or only provide updates to this data, i.e. additions, modifications and deletions.
 If false or omitted, each subscription response will contain the full information as specified in this request.</xsd:documentation>
