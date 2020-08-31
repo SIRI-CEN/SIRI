@@ -145,7 +145,7 @@
    <xsd:element name="Classification" minOccurs="0">
     <xsd:complexType>
      <xsd:sequence>
-      <xsd:group ref="ReasonGroup">
+      <xsd:group ref="ReasonGroup" minOccurs="0">
        <xsd:annotation>
         <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, ReasonName is used instead. Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
        </xsd:annotation>
