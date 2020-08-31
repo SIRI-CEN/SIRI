@@ -1266,27 +1266,27 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
  </xsd:complexType>
  <xsd:complexType name="PtConsequenceStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for disruption.</xsd:documentation>
+   <xsd:documentation>Describes effects on parts of the network identified by Affects. Corresponds control actions in Transmodel. </xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
+     <xsd:documentation>Period of effect on network, if different from that of SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="ConditionGroup">
     <xsd:annotation>
-     <xsd:documentation>Condition(s) of effect of disruptione.</xsd:documentation>
+     <xsd:documentation>Condition(s) of effect on network</xsd:documentation>
     </xsd:annotation>
    </xsd:group>
    <xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Severity of disruption if different from that of SITUATION. TPEG pti26</xsd:documentation>
+     <xsd:documentation>Severity of effect if different from that of SITUATION. TPEG pti26</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Parts of transport network affected by disruption if different from that of SITUATION.</xsd:documentation>
+     <xsd:documentation>Parts of transport network affected if different from that of SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Suitabilities" minOccurs="0">
@@ -1308,9 +1308,14 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:documentation>Advice to passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="ConsequenceType" type="ConsequenceTypeEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Classifies the interpretation of a consequence</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="Blocking" type="BlockingStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>How Disruption should be handled in Info systems.</xsd:documentation>
+     <xsd:documentation>How effects should be handled in Info systems.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Boarding" type="BoardingStructure" minOccurs="0">
@@ -1326,7 +1331,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:element>
    <xsd:element name="Easements" type="EasementsStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Description of fare exceptions allowed because of disruption.</xsd:documentation>
+     <xsd:documentation>Description of fare exceptions allowed because of effect.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
@@ -1397,6 +1402,23 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:simpleType name="ConsequenceTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Classifies the interpretation of a consequence</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="impactOnTimetable">
+    <xsd:annotation>
+     <xsd:documentation>Information in consequence can be used to update timetable information</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="noTimetableImpact">
+    <xsd:annotation>
+     <xsd:documentation>Information in consequence doesn't have to be used to update timetable information</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
  <xsd:simpleType name="AdviceTypeEnumeration">
   <xsd:annotation>
    <xsd:documentation>Values for TPEG Pts039 - AdviceType, with some additional values</xsd:documentation>
