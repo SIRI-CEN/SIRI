@@ -798,7 +798,7 @@ Values for these elements can be specified on an annual schedule and will be inh
 	</xsd:annotation>
 	<xsd:restriction base="xsd:NMTOKEN"/>
 </xsd:simpleType>
-<xsd:complexType name="siteRefStructure">
+<xsd:complexType name="SiteRefStructure">
 	<xsd:annotation>
 		<xsd:documentation>Reference to a SITE</xsd:documentation>
 	</xsd:annotation>
