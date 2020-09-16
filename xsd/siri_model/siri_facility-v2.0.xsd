@@ -742,7 +742,7 @@ Rail transport, Roads and road transport
 </xsd:complexType>
 <xsd:simpleType name="TypeOfVehicleFuelEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Values for Vehicle fuel type. Use of "other" requires the additional open ended FuelTypeOther to be filled</xsd:documentation>
+			<xsd:documentation>Values for Vehicle fuel type. Use of "other" requires the additional open ended VehicleFuelTypeOther to be filled</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="unknown"/>
