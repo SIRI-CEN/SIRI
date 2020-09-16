@@ -566,6 +566,16 @@ Rail transport, Roads and road transport
       </xsd:sequence>
      </xsd:complexType>
     </xsd:element>
+    <xsd:element name="SelectedSections" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Only some Sections are affected, LINE level information not available. </xsd:documentation>
+     </xsd:annotation>
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="AffectedSection" type="AffectedSectionStructure" maxOccurs="unbounded"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
     <xsd:sequence>
      <xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded">
       <xsd:annotation>
@@ -654,6 +664,32 @@ Rail transport, Roads and road transport
     <xsd:annotation>
      <xsd:documentation>Reference to a section of ROUTE affected by a SITUATION.</xsd:documentation>
     </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StopPoints" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Stop Poins of the SECTION. Can be either all or only affected by SITUATION.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="AffectedOnly" type="xsd:boolean" default="false" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>Indicates whether the list of STOP POINTS contains all STOP POINTS of SECTION or only affected by SITUATION.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:sequence maxOccurs="unbounded">
+       <xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure">
+        <xsd:annotation>
+         <xsd:documentation>Stop Point of the SECTION</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+       <xsd:element name="LinkProjectionToNextStopPoint" type="ifopt:LinkProjectionStructure" minOccurs="0">
+        <xsd:annotation>
+         <xsd:documentation>GIs projection of Link to the next provided StopPoint. NB Line here means Geometry Polyline, not Transmodel Transport Line.</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:sequence>
+    </xsd:complexType>
    </xsd:element>
    <xsd:group ref="ProjectionGroup">
     <xsd:annotation>
