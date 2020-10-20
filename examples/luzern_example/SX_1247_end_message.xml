@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <!--
   ~ Copyright (C) Schweizerische Bundesbahnen SBB, 2020.
   -->
 
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+=======
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0_VDV1.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+>>>>>>> upstream/integration
  <ServiceDelivery>
   <ResponseTimestamp>2018-10-04T12:22:00+00:00</ResponseTimestamp>
   <ProducerRef>ch:VBL</ProducerRef>
@@ -18,12 +22,18 @@
    <Situations>
     <PtSituationElement>
      <CreationTime>2017-05-28T12:22:00+02:00</CreationTime>
+<<<<<<< HEAD
      <CountryRef>ch</CountryRef>
+=======
+>>>>>>> upstream/integration
      <ParticipantRef>VBL</ParticipantRef>
      <SituationNumber>1</SituationNumber>
      <Version>5</Version>
      <Source>
+<<<<<<< HEAD
       <Country>ch</Country>
+=======
+>>>>>>> upstream/integration
       <SourceType>feed</SourceType>
       <Name>VBL</Name>
      </Source>
@@ -77,9 +87,14 @@
       </Consequence>
      </Consequences>
      <PublishingActions>
+<<<<<<< HEAD
       <PublishByPerspectiveAction>
       <PublishingAction>
        <PublicationScope>
+=======
+      <PublishingAction>
+       <PublishAtScope>
+>>>>>>> upstream/integration
         <ScopeType>line</ScopeType>
         <Affects>
          <Networks>
@@ -93,7 +108,11 @@
             <PublishedLineName>8</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
+<<<<<<< HEAD
             <LineRef>ch:vbl:VBL014</LineRef>
+=======
+            <LineRef>ch:vbl:VBL024</LineRef>
+>>>>>>> upstream/integration
             <PublishedLineName>14</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
@@ -101,15 +120,25 @@
             <PublishedLineName>24</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
+<<<<<<< HEAD
             <LineRef>ch:pb:PB073</LineRef>
+=======
+            <LineRef>ch:vbl:VBL024</LineRef>
+>>>>>>> upstream/integration
             <PublishedLineName>73</PublishedLineName>
            </AffectedLine>
           </AffectedNetwork>
          </Networks>
         </Affects>
+<<<<<<< HEAD
        </PublicationScope>
        <PassengerInformationAction>
         
+=======
+       </PublishAtScope>
+       <PassengerInformationAction>
+        <ActionStatus>open</ActionStatus>
+>>>>>>> upstream/integration
         <ActionRef>0510</ActionRef>
         <RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
         <Version>1</Version>
@@ -127,6 +156,7 @@
           <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
          </DescriptionContent>
          <RemarkContent>
+<<<<<<< HEAD
           <RemarkText xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</RemarkText>
           <RemarkText xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</RemarkText>
          </RemarkContent>
@@ -158,6 +188,16 @@
       </PublishingAction>
       <PublishingAction>
        <PublicationScope>
+=======
+          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+         </RemarkContent>
+        </TextualContent>
+       </PassengerInformationAction>
+      </PublishingAction>
+      <PublishingAction>
+       <PublishAtScope>
+>>>>>>> upstream/integration
         <ScopeType>line</ScopeType>
         <Affects>
          <Networks>
@@ -171,7 +211,11 @@
             <PublishedLineName>8</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
+<<<<<<< HEAD
             <LineRef>ch:vbl:VBL014</LineRef>
+=======
+            <LineRef>ch:vbl:VBL024</LineRef>
+>>>>>>> upstream/integration
             <PublishedLineName>14</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
@@ -179,15 +223,25 @@
             <PublishedLineName>24</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
+<<<<<<< HEAD
             <LineRef>ch:pb:PB073</LineRef>
+=======
+            <LineRef>ch:vbl:VBL024</LineRef>
+>>>>>>> upstream/integration
             <PublishedLineName>73</PublishedLineName>
            </AffectedLine>
           </AffectedNetwork>
          </Networks>
         </Affects>
+<<<<<<< HEAD
        </PublicationScope>
        <PassengerInformationAction>
         
+=======
+       </PublishAtScope>
+       <PassengerInformationAction>
+        <ActionStatus>open</ActionStatus>
+>>>>>>> upstream/integration
         <ActionRef>0510</ActionRef>
         <RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
         <Version>1</Version>
@@ -205,6 +259,7 @@
           <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
          </DescriptionContent>
          <RemarkContent>
+<<<<<<< HEAD
           <RemarkText xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</RemarkText>
           <RemarkText xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</RemarkText>
          </RemarkContent>
@@ -236,6 +291,16 @@
       </PublishingAction>
       <PublishingAction>
        <PublicationScope>
+=======
+          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+         </RemarkContent>
+        </TextualContent>
+       </PassengerInformationAction>
+      </PublishingAction>
+      <PublishingAction>
+       <PublishAtScope>
+>>>>>>> upstream/integration
         <ScopeType>line</ScopeType>
         <Affects>
          <Networks>
@@ -249,7 +314,11 @@
             <PublishedLineName>8</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
+<<<<<<< HEAD
             <LineRef>ch:vbl:VBL014</LineRef>
+=======
+            <LineRef>ch:vbl:VBL024</LineRef>
+>>>>>>> upstream/integration
             <PublishedLineName>14</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
@@ -257,15 +326,25 @@
             <PublishedLineName>24</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
+<<<<<<< HEAD
             <LineRef>ch:pb:PB073</LineRef>
+=======
+            <LineRef>ch:vbl:VBL024</LineRef>
+>>>>>>> upstream/integration
             <PublishedLineName>73</PublishedLineName>
            </AffectedLine>
           </AffectedNetwork>
          </Networks>
         </Affects>
+<<<<<<< HEAD
        </PublicationScope>
        <PassengerInformationAction>
         
+=======
+       </PublishAtScope>
+       <PassengerInformationAction>
+        <ActionStatus>open</ActionStatus>
+>>>>>>> upstream/integration
         <ActionRef>0510</ActionRef>
         <RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
         <Version>1</Version>
@@ -283,6 +362,7 @@
           <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
          </DescriptionContent>
          <RemarkContent>
+<<<<<<< HEAD
           <RemarkText xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</RemarkText>
           <RemarkText xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</RemarkText>
          </RemarkContent>
@@ -316,6 +396,16 @@
       <PublishByPerspectiveAction>
       <PublishingAction>
        <PublicationScope>
+=======
+          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+         </RemarkContent>
+        </TextualContent>
+       </PassengerInformationAction>
+      </PublishingAction>
+      <PublishingAction>
+       <PublishAtScope>
+>>>>>>> upstream/integration
         <ScopeType>line</ScopeType>
         <Affects>
          <Networks>
@@ -335,8 +425,18 @@
           </AffectedNetwork>
          </Networks>
         </Affects>
+<<<<<<< HEAD
        </PublicationScope>
        <PassengerInformationAction>
+=======
+       </PublishAtScope>
+       <PassengerInformationAction>
+        <ActionStatus>open</ActionStatus>
+        <PublicationWindow>
+         <StartTime>2017-05-28T12:47:00+02:00</StartTime>
+         <EndTime>2017-05-28T13:15:00+02:00</EndTime>
+        </PublicationWindow>
+>>>>>>> upstream/integration
         <ActionRef>0510</ActionRef>
         <RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
         <Version>1</Version>
@@ -354,6 +454,7 @@
           <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
          </DescriptionContent>
          <RemarkContent>
+<<<<<<< HEAD
           <RemarkText xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</RemarkText>
           <RemarkText xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</RemarkText>
          </RemarkContent>
@@ -391,6 +492,16 @@
       <PublishByPerspectiveAction>
       <PublishingAction>
        <PublicationScope>
+=======
+          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+         </RemarkContent>
+        </TextualContent>
+       </PassengerInformationAction>
+      </PublishingAction>
+      <PublishingAction>
+       <PublishAtScope>
+>>>>>>> upstream/integration
         <ScopeType>line</ScopeType>
         <Affects>
          <Networks>
@@ -410,8 +521,18 @@
           </AffectedNetwork>
          </Networks>
         </Affects>
+<<<<<<< HEAD
        </PublicationScope>
        <PassengerInformationAction>
+=======
+       </PublishAtScope>
+       <PassengerInformationAction>
+        <ActionStatus>open</ActionStatus>
+        <PublicationWindow>
+         <StartTime>2017-05-28T12:47:00+02:00</StartTime>
+         <EndTime>2017-05-28T13:15:00+02:00</EndTime>
+        </PublicationWindow>
+>>>>>>> upstream/integration
         <ActionRef>0510</ActionRef>
         <RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
         <Version>1</Version>
@@ -429,6 +550,7 @@
           <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
          </DescriptionContent>
          <RemarkContent>
+<<<<<<< HEAD
           <RemarkText xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</RemarkText>
           <RemarkText xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</RemarkText>
          </RemarkContent>
@@ -466,6 +588,16 @@
       <PublishByPerspectiveAction>
       <PublishingAction>
        <PublicationScope>
+=======
+          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+         </RemarkContent>
+        </TextualContent>
+       </PassengerInformationAction>
+      </PublishingAction>
+      <PublishingAction>
+       <PublishAtScope>
+>>>>>>> upstream/integration
         <ScopeType>line</ScopeType>
         <Affects>
          <Networks>
@@ -485,8 +617,18 @@
           </AffectedNetwork>
          </Networks>
         </Affects>
+<<<<<<< HEAD
        </PublicationScope>
        <PassengerInformationAction>
+=======
+       </PublishAtScope>
+       <PassengerInformationAction>
+        <ActionStatus>open</ActionStatus>
+        <PublicationWindow>
+         <StartTime>2017-05-28T12:47:00+02:00</StartTime>
+         <EndTime>2017-05-28T13:15:00+02:00</EndTime>
+        </PublicationWindow>
+>>>>>>> upstream/integration
         <ActionRef>0510</ActionRef>
         <RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
         <Version>1</Version>
@@ -504,6 +646,7 @@
           <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
          </DescriptionContent>
          <RemarkContent>
+<<<<<<< HEAD
           <RemarkText xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</RemarkText>
           <RemarkText xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</RemarkText>
          </RemarkContent>
@@ -538,6 +681,14 @@
         <EndTime>2017-05-28T13:15:00+02:00</EndTime>
        </PublicationWindow>
       </PublishByPerspectiveAction>
+=======
+          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+         </RemarkContent>
+        </TextualContent>
+       </PassengerInformationAction>
+      </PublishingAction>
+>>>>>>> upstream/integration
      </PublishingActions>
     </PtSituationElement>
    </Situations>
