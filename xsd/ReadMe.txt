@@ -29,13 +29,13 @@ Changes to  SIRI schema v2.0   since v1.4
 	* siri_situationExchange_service.xsd: addition of IncludedSituationExchangeDelivery element
 
  2015.05.11 Bug fix (from SG7 skype meeting on May 11th 2015) SIRI 2.0o
- 	* Allow multiple tags within an extension (reapply lost chnage from 2012.06.18 SIRI 2.0d) - siri_utility-v1.1.xsd
-	* siri_estimatedVehicleJourney-v2.0.xsd : in EstimatedTimetableAlterationGroup, addition of FramedVehicleJourneyRef as an alternative to DatedVehicleJourneyRef (choice) and deprecation of DatedVehicleJourneyRef and EstimatedVehicleJourneyCode
-	* siri_datedVehicleJourney-v2.0.xsd : DatedVehicleJourneyCode is now optional
+ 	* Allow multiple tags within an extension (reapply lost chnage from 2012.06.18 SIRI 2.0d) - siri_utility.xsd
+	* siri_estimatedVehicleJourney.xsd : in EstimatedTimetableAlterationGroup, addition of FramedVehicleJourneyRef as an alternative to DatedVehicleJourneyRef (choice) and deprecation of DatedVehicleJourneyRef and EstimatedVehicleJourneyCode
+	* siri_datedVehicleJourney.xsd : DatedVehicleJourneyCode is now optional
 	* siri.xsd: SituationExchangeDelivery now can be provided as a complement to any other Service delivery (and can still be provided standalone)... note that the SituationExchangeDelivery must be after the other Delivery to get a validating, non-ambiguous XSD.
-	* siri_estimatedVehicleJourney-v2.0.xsd : EstimatedVehicleJourneyStructure brought back to SIRI 2.0k situation
+	* siri_estimatedVehicleJourney.xsd : EstimatedVehicleJourneyStructure brought back to SIRI 2.0k situation
 		* Replacement of EstimatedJourneyInfoGroup by JourneyEndTimesGroup 
-		* Replacement of inclusion of siri_journey-v2.0.xsd by siri_monitoredVehicleJourney-v2.0.xsd
+		* Replacement of inclusion of siri_journey.xsd by siri_monitoredVehicleJourney.xsd
 		* Replacement of EstimatedRealtimeInfoGroup by journeyProgressGroup
 		* Replacement of OperationalInfoGroup by TrainOperationalInfoGroup
 
@@ -52,25 +52,25 @@ Changes to  SIRI schema v2.0   since v1.4
 
  2014.06.20 Correction and revisions from Stenungsund 
        [Part2]
-        * [fx] Document SubscriptionTerminatedNotification and add error code. (siri-requests-v2.0.xsd)
-        * [fx] StopDiscovery response. Add RouteDirection. Rename JourneyPattern/Stops to JourneyPattern/StopsInPattern  SubscriptionTerminatedNotification and add error code. (siri-requests-v2.0.xsd)
-        * [de] Add Extensions to discovery requests. (siri_discovery-v2.0.xsd)
+        * [fx] Document SubscriptionTerminatedNotification and add error code. (siri-requests.xsd)
+        * [fx] StopDiscovery response. Add RouteDirection. Rename JourneyPattern/Stops to JourneyPattern/StopsInPattern  SubscriptionTerminatedNotification and add error code. (siri-requests.xsd)
+        * [de] Add Extensions to discovery requests. (siri_discovery.xsd)
 
        [Part3]
-        * [ch] Add origin display whereever destination display as per Cologne meeting (siri-Journey-v2.0.xsd,   siri-DatedVehicleJourney-v2.0.xsd, 
-        * [xh[ Add OriginAtDestination    wherever destination display as per Cologne meeting (siri-Journey-v2.0.xsd) 
-        * [fx] Set default on new DetailLevels on ConnectionMonitoring and EstimatedJourney for backwards compatability. (siri_connectionMonitoring_ervice-v2.0.xsd siri_EstimatedTimetable_service-v2.0.xsd
-        * [ch] Add recordedCall to Estimated jouernesy to allow times for passed stops to be included.  iri_EstimatedVehicleJourney-v2.0.xsd
+        * [ch] Add origin display whereever destination display as per Cologne meeting (siri-Journey.xsd,   siri-DatedVehicleJourney.xsd, 
+        * [xh[ Add OriginAtDestination    wherever destination display as per Cologne meeting (siri-Journey.xsd) 
+        * [fx] Set default on new DetailLevels on ConnectionMonitoring and EstimatedJourney for backwards compatability. (siri_connectionMonitoring_ervice.xsd siri_EstimatedTimetable_service.xsd
+        * [ch] Add recordedCall to Estimated jouernesy to allow times for passed stops to be included.  iri_EstimatedVehicleJourney.xsd
        [Part5 SituationExchange]
-        * [de] Add missing AffectedFacility that was in document but missing from schema. VehicleJourney, STop & StopComponent siri_situationAffects-v2.0.xsd.
+        * [de] Add missing AffectedFacility that was in document but missing from schema. VehicleJourney, STop & StopComponent siri_situationAffects.xsd.
 emporal filter siri_situationExchaneg_service.xsd.
         * [de] Add temporal filter to request with ValidityPeriod in   siri_situationExchange_service.xsd.  
-	* [se] Add end time precision to halfopen time rangefor  input a siri_time-v2.0.xsd.
-	* [se] Add end time status  to halfopen time range output  siri_time-v2.0.xsd.
-        * [fr] Add additional small delay bands siri_situation-v2.0.xsd
+	* [se] Add end time precision to halfopen time rangefor  input a siri_time.xsd.
+	* [se] Add end time status  to halfopen time range output  siri_time.xsd.
+        * [fr] Add additional small delay bands siri_situation.xsd
         * [de] Add IncludeOnly-IfInPublicationWindow to situation request temporal filter siri_situationExchange_service.xsd.
         * [fx] StopPlaceFilterGroup: add missing component ref and facility that was in doc but missing from schema  siri_situationExchange_service.xsd.
-        * [fx] Add missing AccessFeature type to AFfectedStopPlaceComponent   siri_situationAffects-v2.0.xsd.
+        * [fx] Add missing AccessFeature type to AFfectedStopPlaceComponent   siri_situationAffects.xsd.
         * [fx] Correct cardinality on FacilitRef on request to match doc siri_situationExchaneg_service.xsd.
         * [fx] Correct spec to include projection attributes for AFfectedStopPlaceComponent  doc.
         * [doc] Document FacilityRef as part of request doc
@@ -79,19 +79,19 @@ emporal filter siri_situationExchaneg_service.xsd.
         * [doc] Document RoadFilter and Accessibility need filter  as part of request doc
         * [doc] Correct Documentation of AfFfectedRoads as part of Delivery doc
         * [doc/fx] Correct Documentation of capability Matrix and update in schemas well siri_situationExchange_service.xsd.
-        * [doc/fx] Correct Documentation of Reason codes and correct in schemas siri_reasons-v2.0.xml
+        * [doc/fx] Correct Documentation of Reason codes and correct in schema siri_reasons.xsd
         * [doc] Add Annex D to Doc on GTFS real-time mapping
         
  2014.05.26 Changes to answer comment from the EU ballot
 	* [fr]  Addition of SubscriptionTerminatedNotification (XSD and WSDL SOAP Web Services(RPC/Document & WSDL2))
-			- File siri_common_services-v2.0.xsd: Addition of SubscriptionTerminatedNotification (SubscriptionTerminatedNotification element + SubscriptionTerminatedNotificationStructure )
+			- File siri_common_services.xsd: Addition of SubscriptionTerminatedNotification (SubscriptionTerminatedNotification element + SubscriptionTerminatedNotificationStructure )
 			- File siri.xsd: addition of SubscriptionTerminatedNotification in servicesResponseGroup
 			- Update of siri_wsConsumer-Document.wsdl, siri_wsConsumer.wsdl, siri_wsConsumer-WSDL2.wsdl to add a NotifyTerminateSubscription
 			- File siri_wsConsumer-Framework.xsd: Addition of  WsSubscriptionTerminatedNotificationStructure and NotifySubscriptionTerminated
-	* [fr]  Added ParameterName [0..*] to ParametersIgnoredErrorStructure (siri_request_errorConditions-v2.0.xsd)
-	* [fr]  Added ExtensionName [0..*] to UnknownExtensionsErrorStructure (siri_request_errorConditions-v2.0.xsd)
-	* [fr]  Added InvalidRef [0..*] to InvalidDataReferencesErrorStructure (siri_request_errorConditions-v2.0.xsd)
-	* [fr]  Added Vesion attribute (non mandatory) to CheckStatus request (siri_common_services-v2.0.xsd)
+	* [fr]  Added ParameterName [0..*] to ParametersIgnoredErrorStructure (siri_request_errorConditions.xsd)
+	* [fr]  Added ExtensionName [0..*] to UnknownExtensionsErrorStructure (siri_request_errorConditions.xsd)
+	* [fr]  Added InvalidRef [0..*] to InvalidDataReferencesErrorStructure (siri_request_errorConditions.xsd)
+	* [fr]  Added Vesion attribute (non mandatory) to CheckStatus request (siri_common_services.xsd)
 	* [fr]  ChangeBeforeUpdates not anymore mandatory in EstimatedTimetableSubscriptionPolicyGroup
 	* [fr]  added optional RecordedAtTime to EstimatedVehicleJourney
 	* [fr]  added ConnectionLinksDiscovery service to WSDL (RPC/Document & WSDL2) (and siri_wsProducerDicoveryCapability.xsd)
@@ -300,19 +300,19 @@ Changes to SIRI schema v1.4a   since v1.3
            (ii)  and siri_generalMessage_service.xsd subscription structure  x
            (iii) Missing type: Assign a type of normalizedString to formatRef x dx
            
-     (b) siri_requests-v1.2.xsd  (line 814) ErrorConditionStructure  should not be abstract . Fix from RV ixxi.biz- 
+     (b) siri_requests.xsd  (line 814) ErrorConditionStructure  should not be abstract . Fix from RV ixxi.biz- 
           made abstract x
           
-     (c) siri_journey-v1.2.xsd (l.1015).  FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer  according to CEN TS (prCEN/TS 15531-3:2006 (E)  p.56). Make optional.  RV  ixxx.com
+     (c) siri_journey.xsd (l.1015).  FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer  according to CEN TS (prCEN/TS 15531-3:2006 (E)  p.56). Make optional.  RV  ixxx.com
           made optional Fix from RV ixxi.biz x ??
           
      (d) siri_productionTimetable_service.xsd Type on request ValidityPeriod start and end should be datetime not time 
 		 - Change to ClosedTimestampRange instead of ClosedDateeRange x tx.
                  - Fix  Subscription request to be an element and to have IncrementalUpdate parameter Extensions x
                  
-     (e) siri_situation-v1.0.xsd AffectedVehicleJourney should allow multiple journeys. Brian Ferris onebusaway.org>, x
+     (e) siri_situation.xsd AffectedVehicleJourney should allow multiple journeys. Brian Ferris onebusaway.org>, x
      
-     (f) ifopt_location-v0.3.xsd Correct  siri: namespace  x
+     (f) ifopt_location.xsd Correct  siri: namespace  x
      
      (g) Fix up examples 
 		(i) correct estimated timetable request, production timetable request, stop monitoring request, stop monitoring eprmissions. drop flat examples tx.
@@ -324,10 +324,10 @@ Changes to SIRI schema v1.4a   since v1.3
 		siri_productionTimetable_service.xsd	  DatedCalls --> x tx
 		
      (i) Add missing type
-		siri_requests-v1.3.xsd	formatRef x
+		siri_requests.xsd	formatRef x
 	  	DATEXIISchema_1_0_1_0.xsd modelBaseversion
 	  	
-     (j)siri_facility-v1.3.xsd TidyUp empty ValidityConditionGroup x
+     (j)siri_facility.xsd TidyUp empty ValidityConditionGroup x
      
      (g) Add xmlSPy project spp. x
 
@@ -362,15 +362,15 @@ ___________________________________________________________________________
     (a) Relax mandatory on  in siri_common x
     
 2008-11-18  Revise FM servics 
-    (a) Revise daytypes in siri_time-v1.2 x
+    (a) Revise daytypes in siri_time.xsd x
     
 2008-11-17  Revise to support substitution groups
     (a) Make all requests subtypes of abstract request.  Add Subst elements x
     
     (b) Introduce  AbstractFunctionalServiceRequest, AbstractCapabilityServiceRequest, AbstractDiscoveryRequest
-    as common supertypes. revised versiosn of siri_requests-v1.2.xsd,  siri_journey-v1.2.xsd and siri_permissions-v1.1.xsd, siri-All and siribase
+    as common supertypes. revised versiosn of siri_requests.xsd,  siri_journey.xsd and siri_permissions.xsd, siri-All and siribase
     
-    (c) add SiriSg and Siri_base-v1.3.xsd packages
+    (c) add SiriSg and Siri_base.xsd packages
 2008-11-12  Corrections to the Caridnailities on the siri_discovery services  x
 
     (a) Change min maxes on >LineRef, StopPoints, Features etc etc x
@@ -437,7 +437,7 @@ ___________________________________________________________________________
 =====================================
 2007 10  17 
       Add Situation Exchange & Facility Exchange services. x tx
-      Added a  siri_all-v1.2.xsd, ifopt_allStopPlace-v0.3.xsd, acsp_all.xsd packages to force explicit declaration of all elements in an imported namespace on the first reference. This overcomes a limitation of some XML tools that only pick up thos elements on the first import and ignotre all subsequent imports.  
+      Added a  siri_all.xsd, ifopt_allStopPlace.xsd, acsp_all.xsd packages to force explicit declaration of all elements in an imported namespace on the first reference. This overcomes a limitation of some XML tools that only pick up thos elements on the first import and ignotre all subsequent imports.  
 
 
 2007 04 17 
