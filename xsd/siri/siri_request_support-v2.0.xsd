@@ -72,7 +72,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="MessageRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for message ref.</xsd:documentation>
+   <xsd:documentation>Type for reference to a message.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="MessageQualifierStructure"/>
@@ -80,15 +80,23 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="SubscriptionQualifierStructure">
   <xsd:annotation>
-   <xsd:documentation>Type Unique identifier of Subscription within Participant.</xsd:documentation>
+   <xsd:documentation>Type for unique identifier of Subscription within Participant.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="xsd:NMTOKEN"/>
   </xsd:simpleContent>
  </xsd:complexType>
+ <xsd:complexType name="SubscriptionRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a subscription.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="SubscriptionQualifierStructure"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
  <xsd:complexType name="SubscriptionFilterStructure">
   <xsd:annotation>
-   <xsd:documentation>Type Unique identifier of Subscription Filter within Participant.</xsd:documentation>
+   <xsd:documentation>Type for unique identifier of Subscription filter within Participant.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="xsd:NMTOKEN"/>
@@ -96,7 +104,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="SubscriptionFilterRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type Unique identifier of Subscription Filter within Participant.</xsd:documentation>
+   <xsd:documentation>Type for unique identifier of Subscription filter within Participant.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="xsd:NMTOKEN"/>
