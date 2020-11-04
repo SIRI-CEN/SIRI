@@ -411,7 +411,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element ref="IncludeTranslations" default="false" minOccurs="0"/>
+   <xsd:element ref="IncludeTranslations" minOccurs="0"/>
    <xsd:element name="MaximumNumberOfSituationElements" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>The maximum number of SITUATION elements to return in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
