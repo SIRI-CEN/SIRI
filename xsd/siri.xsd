@@ -418,7 +418,11 @@ Rail transport, Roads and road transport.
      <xsd:element ref="FacilityMonitoringDelivery" maxOccurs="unbounded"/>
     </xsd:choice>
    </xsd:sequence>
-   <xsd:element ref="SituationExchangeDelivery" maxOccurs="unbounded"/>
+   <xsd:element ref="SituationExchangeDelivery">
+    <xsd:annotation>
+     <xsd:appinfo source="ch-id">ch20200623-01</xsd:appinfo>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:choice>
  </xsd:group>
  <!-- ===Discovery==================================================================== -->

@@ -109,7 +109,11 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for an SCHEDUELD STOP POINT affected by a SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element ref="StopPointRef" minOccurs="0"/>
+   <xsd:element ref="StopPointRef">
+    <xsd:annotation>
+     <xsd:appinfo source="ch-id">ch20200626-01</xsd:appinfo>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="PrivateRef" type="xsd:string" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Alternative private code of stop.</xsd:documentation>
@@ -132,11 +136,13 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200626-02</xsd:appinfo>
      <xsd:documentation>Reference of Stop Place related to this affected StopPoint.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200626-02</xsd:appinfo>
      <xsd:documentation>Name of Stop Place related to this affected StopPoint.  (Unbounded to allow a text for every language)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -181,6 +187,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Lines" minOccurs="0">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200630-02</xsd:appinfo>
      <xsd:documentation>Used to restrict stop points to some lines</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
@@ -417,8 +424,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for Annotated reference to an OPERATOR affected by a SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+   <xsd:element name="OperatorRef" type="OperatorRefStructure">
     <xsd:annotation>
+     <xsd:appinfo source="ch-id">ch20200626-02</xsd:appinfo>
      <xsd:documentation>Reference to an OPERATOR.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -624,6 +632,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPoints" minOccurs="0">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200630-03</xsd:appinfo>
      <xsd:documentation>Used to restrict lines to some stop points</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
@@ -634,6 +643,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPlaces" minOccurs="0">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200630-03</xsd:appinfo>
      <xsd:documentation>Used to restrict lines to some stop places</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>

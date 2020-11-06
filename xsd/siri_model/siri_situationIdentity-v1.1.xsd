@@ -145,13 +145,15 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="CountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
+   <xsd:element name="CountryRef" type="ifopt:CountryRefStructure">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200623-01</xsd:appinfo>
      <xsd:documentation>Unique identifier of a Country of a Participant who created SITUATION. Provides namespace for Participant If absent proided from context.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ParticipantRef" type="ParticipantRefStructure">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200623-01</xsd:appinfo>
      <xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION. If absent provdied from context.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -177,8 +179,9 @@ Rail transport, Roads and road transport
      <xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION. If absent provdied from context.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Version" type="SituationVersion" minOccurs="0">
+   <xsd:element name="Version" type="SituationVersion">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200630-05</xsd:appinfo>
      <xsd:documentation>Unique identifier of update version within a SITUATION Number Omit if reference to the base SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>

@@ -19,6 +19,7 @@ siri_model\siri_situation-v2.0.xsd:
  <!--Needed to work around import limitation in JAXB - all namespaces. -->
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all-v0.3.xsd"/>
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility-v0.3.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries-v0.2.xsd"/>
  <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema_2_0RC1_2_0.xsd"/>
  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../xml/xml.xsd"/>
  <!-- ======================================================================= -->
@@ -487,8 +488,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for a source, i.e. provider of information.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="CountryRef" type="xsd:NMTOKEN" minOccurs="0">
+   <xsd:element name="CountryRef" type="xsd:NMTOKEN">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200623-02</xsd:appinfo>
      <xsd:documentation>Country of origin of source element.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -586,8 +588,9 @@ Rail transport, Roads and road transport
      <xsd:restriction base="VerificationStatusEnumeration"/>
     </xsd:simpleType>
    </xsd:element>
-   <xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open">
+   <xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open" minOccurs="0">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200623-03</xsd:appinfo>
      <xsd:documentation>ProgressStatus. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -681,8 +684,9 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="ReasonGroup"/>
    <xsd:element ref="Severity" minOccurs="0"/>
-   <xsd:element name="Priority" type="xsd:nonNegativeInteger" minOccurs="0">
+   <xsd:element name="Priority" type="xsd:nonNegativeInteger">
     <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200703-01</xsd:appinfo>
      <xsd:documentation>Arbitrary rating of priority 1-High.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -1068,8 +1072,10 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for a text that may be overridden.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
-   <xsd:extension base="PopulatedStringType">
-    <xsd:attribute ref="xml:lang" use="required"/>
+   <xsd:extension base="NaturalLanguageStringStructure">
+    <xsd:annotation>
+     <xsd:appinfo source="vdv-id">vdv20200630-06</xsd:appinfo>
+    </xsd:annotation>
     <xsd:attribute name="overridden" type="xsd:boolean" use="optional" default="true">
      <xsd:annotation>
       <xsd:documentation>Whether the text value has been overridden from the generated default. Default is 'true'.</xsd:documentation>

@@ -13,18 +13,21 @@
    <Situations>
     <PtSituationElement>
      <CreationTime>2001-12-17T09:30:47.0Z</CreationTime>
+     <CountryRef>de</CountryRef>
      <ParticipantRef>RAILCO01</ParticipantRef>
      <SituationNumber>000354</SituationNumber>
      <Version>0</Version>
      <References>
       <RelatedToRef>
        <CreationTime>2001-12-17T09:30:47.0Z</CreationTime>
+       <CountryRef>de</CountryRef>
        <ParticipantRef>RAILCO01</ParticipantRef>
        <SituationNumber>000354</SituationNumber>
        <Version>0</Version>
       </RelatedToRef>
      </References>
      <Source>
+      <CountryRef>de</CountryRef>
       <SourceType>phone</SourceType>
       <Phone>01223333337654</Phone>
       <AgentReference>03274</AgentReference>
@@ -35,9 +38,11 @@
      <QualityIndex>certain</QualityIndex>
      <ValidityPeriod>
       <StartTime>2001-12-17T09:30:47.0Z</StartTime>
+      <EndTime>2001-12-17T10:30:47.0Z</EndTime>
      </ValidityPeriod>
      <MiscellaneousReason>bombExplosion</MiscellaneousReason>
      <Severity>severe</Severity>
+     <Priority>3</Priority>
      <Audience>public</Audience>
      <ReportType>point</ReportType>
      <Summary overridden="true" xml:lang="EN">Bomb at Barchester station</Summary>
@@ -74,6 +79,7 @@
       <Consequence>
        <Period>
         <StartTime>2001-12-17T09:30:47.0Z</StartTime>
+        <EndTime>2001-12-17T10:30:47.0Z</EndTime>
        </Period>
        <Condition>unknown</Condition>
        <Severity>pti26_0</Severity>
@@ -107,18 +113,21 @@
     <!-- =============ROAD SITUATION ============ -->
     <RoadSituationElement>
      <CreationTime>2001-12-17T09:30:47.0Z</CreationTime>
+     <CountryRef>de</CountryRef>
      <ParticipantRef>RAILCO01</ParticipantRef>
      <SituationNumber>000354</SituationNumber>
      <Version>0</Version>
      <References>
       <RelatedToRef>
        <CreationTime>2001-12-17T09:30:47.0Z</CreationTime>
+       <CountryRef>de</CountryRef>
        <ParticipantRef>RAILCO01</ParticipantRef>
        <SituationNumber>000354</SituationNumber>
        <Version>0</Version>
       </RelatedToRef>
      </References>
      <Source>
+      <CountryRef>de</CountryRef>
       <SourceType>phone</SourceType>
       <Phone>01223333337654</Phone>
       <AgentReference>03274</AgentReference>
@@ -129,9 +138,11 @@
      <QualityIndex>certain</QualityIndex>
      <ValidityPeriod>
       <StartTime>2001-12-17T09:30:47.0Z</StartTime>
+      <EndTime>2001-12-17T10:30:47.0Z</EndTime>
      </ValidityPeriod>
      <MiscellaneousReason>bombExplosion</MiscellaneousReason>
      <Severity>severe</Severity>
+     <Priority>3</Priority>
      <Audience>public</Audience>
      <ReportType>point</ReportType>
      <Summary overridden="true" xml:lang="EN">Jam on the access road to Barchester Station</Summary>
@@ -168,6 +179,7 @@
       <Consequence>
        <Period>
         <StartTime>2001-12-17T09:30:47.0Z</StartTime>
+        <EndTime>2001-12-17T10:30:47.0Z</EndTime>
        </Period>
        <Condition>delay</Condition>
        <Severity>severe</Severity>

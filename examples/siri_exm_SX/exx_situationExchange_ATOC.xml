@@ -2,18 +2,21 @@
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <siri:PtSituationElement xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
  <siri:CreationTime>2001-12-17T09:30:47.0Z</siri:CreationTime>
+ <siri:CountryRef>de</siri:CountryRef>
  <siri:ParticipantRef>RAILCO01</siri:ParticipantRef>
  <siri:SituationNumber>000354</siri:SituationNumber>
  <siri:Version>0</siri:Version>
  <siri:References>
   <siri:RelatedToRef>
    <siri:CreationTime>2001-12-17T09:30:47.0Z</siri:CreationTime>
+   <siri:CountryRef>de</siri:CountryRef>
    <siri:ParticipantRef>RAILCO01</siri:ParticipantRef>
    <siri:SituationNumber>000354</siri:SituationNumber>
    <siri:Version>0</siri:Version>
   </siri:RelatedToRef>
  </siri:References>
  <siri:Source>
+  <siri:CountryRef>de</siri:CountryRef>
   <siri:SourceType>phone</siri:SourceType>
   <siri:Phone>01223333337654</siri:Phone>
   <siri:AgentReference>03274</siri:AgentReference>
@@ -24,9 +27,11 @@
  <siri:QualityIndex>certain</siri:QualityIndex>
  <siri:ValidityPeriod>
   <siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
+  <siri:EndTime>2001-12-17T10:30:47.0Z</siri:EndTime>
  </siri:ValidityPeriod>
  <siri:MiscellaneousReason>bombExplosion</siri:MiscellaneousReason>
  <siri:Severity>severe</siri:Severity>
+ <siri:Priority>3</siri:Priority>
  <siri:Audience>public</siri:Audience>
  <siri:ReportType>point</siri:ReportType>
  <siri:Summary overridden="true" xml:lang="EN">Bomb at Barchester station</siri:Summary>
@@ -63,6 +68,7 @@
   <siri:Consequence>
    <siri:Period>
     <siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
+    <siri:EndTime>2001-12-17T10:30:47.0Z</siri:EndTime>
    </siri:Period>
    <siri:Condition>delay</siri:Condition>
    <siri:Severity>severe</siri:Severity>
