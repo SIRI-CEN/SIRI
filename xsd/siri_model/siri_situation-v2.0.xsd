@@ -681,9 +681,8 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="ReasonGroup"/>
    <xsd:element ref="Severity" minOccurs="0"/>
-   <xsd:element name="Priority" type="xsd:nonNegativeInteger">
+   <xsd:element name="Priority" type="xsd:nonNegativeInteger" minOccurs="0">
     <xsd:annotation>
-     <xsd:appinfo source="vdv-id">vdv20200703-01</xsd:appinfo>
      <xsd:documentation>Arbitrary rating of priority 1-High.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -1069,10 +1068,8 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for a text that may be overridden.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
-   <xsd:extension base="NaturalLanguageStringStructure">
-    <xsd:annotation>
-     <xsd:appinfo source="vdv-id">vdv20200630-06</xsd:appinfo>
-    </xsd:annotation>
+   <xsd:extension base="PopulatedStringType">
+    <xsd:attribute ref="xml:lang" use="required"/>
     <xsd:attribute name="overridden" type="xsd:boolean" use="optional" default="true">
      <xsd:annotation>
       <xsd:documentation>Whether the text value has been overridden from the generated default. Default is 'true'.</xsd:documentation>
