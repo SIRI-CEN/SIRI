@@ -153,9 +153,8 @@ Rail transport, Roads and road transport
      <xsd:documentation>The (inclusive) start time stamp.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="EndTime" type="xsd:dateTime">
+   <xsd:element name="EndTime" type="xsd:dateTime" minOccurs="0">
     <xsd:annotation>
-     <xsd:appinfo source="ch-id">ch20200623-07</xsd:appinfo>
      <xsd:documentation>The (inclusive) end time stamp. If omitted, the range end is open-ended, that is, it should be interpreted as defined by end time status.  </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
