@@ -586,9 +586,8 @@ Rail transport, Roads and road transport
      <xsd:restriction base="VerificationStatusEnumeration"/>
     </xsd:simpleType>
    </xsd:element>
-   <xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open" minOccurs="0">
+   <xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open">
     <xsd:annotation>
-     <xsd:appinfo source="vdv-id">vdv20200623-03</xsd:appinfo>
      <xsd:documentation>ProgressStatus. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
