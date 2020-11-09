@@ -143,11 +143,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="ValidityPeriod" type="ClosedTimestampRangeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Start and end of timetable validity (time window) of journeys for which schedules are to be returned. Refers to the departure time at the first stop of each VEHICLE JOURNEY If blank the configured data horizon will be used.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
    <xsd:element name="TimetableVersionRef" type="VersionRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Communicate only differences to the timetable specified by this VERSION of the TIMETABLe.</xsd:documentation>
@@ -303,6 +299,12 @@ If false each subscription response will contain the full information as specifi
        <xsd:documentation>Timetable Version.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
+     <xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
+     <xsd:element name="ShortestPossibleCycle" type="PositiveDurationType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Minimum interval at which updates for this DATED TIMETABLE VERSION FRAME can be sent. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
      <xsd:group ref="LineIdentityGroup"/>
      <xsd:group ref="JourneyPatternInfoGroup"/>
      <xsd:group ref="ServiceInfoGroup" minOccurs="0"/>
@@ -340,6 +342,26 @@ It is strongly advised to only use this feature in cases where an interchange wa
   </xsd:complexContent>
  </xsd:complexType>
  <!-- ======================================================================= -->
+ <xsd:complexType name="TimetableValidityPeriod">
+  <xsd:annotation>
+   <xsd:documentation>Start and end of timetable validity (time window) of journeys for which schedules are to be returned by the data producer.
+The ValidityPeriod of the timetable must not exceed the ValidityPeriod requested by the subscriber.
+If omitted, then the full - by the subscriber requested - ValidityPeriod or configured data horizon applies.
+
+Since the end of an OPERATING DAY of one ITCS does not usually coincide with the end of another ITCS, it may happen that data cannot be provided for the complete time frame requested by a subscriber. 
+In order for the data consumer to be aware of this situation, the data producer should confirm - in each returned timetable - for which part of the requested ValidityPeriod he can actually deliver journey schedules.
+If the requested period is so far in the past that the data producer does no longer have any data, he should reject the subscription with "Status=false" and a BeyondDataHorizon ErrorCondition.
+If the requested period is so far in the future that the data producer does not yet have any data, he will deliver data as soon as it is available.
+
+A timetable falls inside the ValidityPeriod if all of its journeys fall inside it.
+A journey falls inside the ValidityPeriod if the AimedDepartureTime or AimedArrivalTime at any CALL lies between the Start- and EndTime of the ValidityPeriod (regardless of whether the aimed times at a previous or subsequent CALL fall ouside of the ValidityPeriod).
+Careful: Journeys which themselves fall outside the ValidityPeriod, but which are linked to a journey within the ValidityPeriod by a JOURNEY RELATION, are also regarded as falling inside the ValidityPeriod. Examples are journeys where the vehicle is split or joins with or is replaced by another vehicle.
+   </xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ClosedTimestampRangeStructure"/>
+  </xsd:complexContent>
+ </xsd:complexType>
  <!-- ==== WSDL=========================================-->
  <xsd:complexType name="ProductionTimetableDeliveriesStructure">
   <xsd:annotation>

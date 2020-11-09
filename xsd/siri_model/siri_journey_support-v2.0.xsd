@@ -23,25 +23,21 @@
     <Date>
      <Modified>2007-03-29</Modified>
     </Date>
-    <Date>
-     <Modified>2008-11-13</Modified>
+    <Date><Modified>2008-11-13</Modified>
 				 Correct Cardinalities on SIRI DESTINATION REF Structure 
 				</Date>
-    <Date>
-     <Modified>2011-04-18</Modified>
+    <Date><Modified>2011-04-18</Modified>
 				 siri_journey-v2.0.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com
  
 				</Date>
-    <Date>
-     <Modified>2012-03-22</Modified>
+    <Date><Modified>2012-03-22</Modified>
 				SIRI 2.0 
 					Create from siri_journey
 					Add TrainNumber
 					Add departed, missed states to ProgressStatusEnum (arrivalStatus and  DepartureStatus)
 					Add VehicleStatusEnum
 				</Date>
-    <Date>
-     <Modified>2013-02-11</Modified>
+    <Date><Modified>2013-02-11</Modified>
 				SIRI 2.0 
 					Add notExpected state to ProgressStatusEnum
 					Corrected enumeration value cancellled in VehicleStatusEnum
