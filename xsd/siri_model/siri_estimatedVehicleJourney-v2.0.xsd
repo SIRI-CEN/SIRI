@@ -25,24 +25,19 @@
     <Date>
      <Modified>2005-05-11</Modified>
     </Date>
-    <Date>
-     <Modified>2007-04-17</Modified>
+    <Date><Modified>2007-04-17</Modified>
 				 Name Space changes 
 				</Date>
-    <Date>
-     <Modified>2008-03-26</Modified>
+    <Date><Modified>2008-03-26</Modified>
 				 Add wrapper tag for Line DIRECTION to help binding to Axis 
 				</Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
+    <Date><Modified>2008-11-17</Modified>
 					 Revise to support substitution groups 
 				</Date>
-    <Date>
-     <Modified>2011-01-19</Modified>
+    <Date><Modified>2011-01-19</Modified>
 				 Drop use of As Flat Groups for EstimatedCalls 
 				</Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
+    <Date><Modified>2012-03-23</Modified>
 					 +SIRI v2.0
 					  Factored out of estimatedTimetableService
 					  Add EstimatedServiceJourneyInterchange (i.e. Estimated Connection of VEHICLE) to EstimatedTimetableDelivery
