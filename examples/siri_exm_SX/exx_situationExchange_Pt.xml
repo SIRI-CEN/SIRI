@@ -39,7 +39,7 @@
    <siri:AffectedStopPoint>
     <siri:StopPointRef>BAAR0003</siri:StopPointRef>
     <siri:StopPointName>Barchester Station</siri:StopPointName>
-    <siri:StopPointType>pti17_0</siri:StopPointType>
+    <siri:StopPointType>unknown</siri:StopPointType>
     <siri:Location id="NMTOKEN" srsName="String">
      <siri:Longitude>-180</siri:Longitude>
      <siri:Latitude>-90</siri:Latitude>
@@ -64,7 +64,7 @@
    <siri:Period>
     <siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
    </siri:Period>
-   <siri:Condition>delay</siri:Condition>
+   <siri:Condition>delayed</siri:Condition>
    <siri:Severity>severe</siri:Severity>
    <siri:Blocking>
     <siri:JourneyPlanner>true</siri:JourneyPlanner>
