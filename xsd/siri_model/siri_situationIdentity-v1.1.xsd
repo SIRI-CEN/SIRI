@@ -34,14 +34,14 @@
     </Relation>
     <Rights>Unclassified
 
-       <Copyright>Kizoom CEN, VDV, RTIG 2004,2007</Copyright>
+       <Copyright>Kizoom CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG CML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -116,7 +116,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="SituationNumber" type="EntryQualifierStructure">
   <xsd:annotation>
-   <xsd:documentation>Identifier of SITUATION within a Participant. Excldue versionr.</xsd:documentation>
+   <xsd:documentation>Identifier of SITUATION within a Participant. Exclude versionr.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="EntryQualifierStructure">

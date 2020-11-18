@@ -6731,9 +6731,14 @@
  </xs:complexType>
  <xs:simpleType name="PublicEventTypeEnum">
   <xs:annotation>
-   <xs:documentation>Types of public events.</xs:documentation>
+   <xs:documentation>Type of public event (Datex2 PublicEventTypeEnum and PublicEventType2Enum combined)</xs:documentation>
   </xs:annotation>
   <xs:restriction base="xs:string">
+   <xs:enumeration value="unknown">
+    <xs:annotation>
+     <xs:documentation>Unknown</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="agriculturalShow">
     <xs:annotation>
      <xs:documentation>Agricultural show or event which could disrupt traffic.</xs:documentation>
@@ -6744,19 +6749,19 @@
      <xs:documentation>Air show or other aeronautical event which could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
+   <xs:enumeration value="artEvent">
+    <xs:annotation>
+     <xs:documentation>Art event that could disrupt traffic.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="athleticsMeeting">
     <xs:annotation>
      <xs:documentation>Athletics event that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
-   <xs:enumeration value="commercialEvent">
+   <xs:enumeration value="beerFestival">
     <xs:annotation>
-     <xs:documentation>Commercial event which could disrupt traffic.</xs:documentation>
-    </xs:annotation>
-   </xs:enumeration>
-   <xs:enumeration value="culturalEvent">
-    <xs:annotation>
-     <xs:documentation>Cultural event which could disrupt traffic.</xs:documentation>
+     <xs:documentation>Beer festival that could disrupt traffic.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="ballGame">

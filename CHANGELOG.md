@@ -1,6 +1,7 @@
 # Changelog
 
-## 20201117 - Sync CEN Integration
+## 20201117 - Sync CEN Integration 
+(https://github.com/SIRI-CEN/SIRI/commit/ad55f2c45f97e67ac6abf00a00020e6ec149565c)
 * SituationExchangeRequestPolicyGroup:Language unbounded
 * ProductionTimetableServiceCapabilitiesStructure:ProductionTimetableServiceCapabilitiesStructure new Filters added
 * DatedTimetableVersionFrameStructure: new elements added
@@ -60,20 +61,35 @@
 * ReferenceContextGroup:Language: set unbounded
 * remove used element: AreaOfInterestEnumeration
              
- 
+## 20201117 - Sync CEN Integration CR69
+(https://github.com/SIRI-CEN/SIRI/commit/6929d799588e5f62fd6342f07882c8cfa9353e71)
+* DescriptionGroup:Language type set xsd:language
+* ImagesStructure new element
+* DescriptionGroup:Internal new type InternalContentStructure
+* DescriptionGroup:Images new type ImagesStructure
+* DescriptionGroup:InfoLinksStructure new element InfoLinksStructure
+* PublishingAction moved from ActionsStructure to ParameterisedActionStructure as a choice to ActionData
+* PublishAtScope renamed to PublicationScope
+* new element Classification in PassengerInformationActionStructure
+* ActionsGroup:PublishByPerspectiveAction new element as a wrapper element for PublishingActions
+* Delete unused elements in UmS ActionPeriodStructure, AffectsSegmentStructure, Duration235959
+* TextualContentStructure: ActionsGroup deleted
+* Element RemarkContent:Remark renamed to RemarkText
+* TextualContentStructure:Internal moved after RemarkContent
+* TextualContentStructure:Images new type ImagesStructure, moved after Internal
+* TextualContentStructure:InfoLinks new type InfoLinksStructureStructure, moved after Images
+* PublicEventTypeEnum: clean up 
+
 ## TODOs
-Remaining DIFFS with CEN
+### Remaining DIFFS with CEN
 * AffectedStopDepartureGroup:DeparturePlatformName unbounded 
 * AffectedStopPlaceStructure: new Lines element
 * AffectedLineStructure: new elements StopPoints, StopPlaces
 * AffectedStopPointStructure:StopPlaceRef / StopPlaceName / Lines
 * PublishingAction subelements / PublicationWindow in ParameterisedActionStructure
-* PublicEventTypeEnum and siri-modes-v1.1.xsd
+* siri-modes-v1.1.xsd
 * SX examples 
 
-Undo in UmS
-* Delete unused new elements such as ActionPeriodStructure, AffectsSegmentStructure
-
-TODO in CEN
+### TODO in CEN
 * Delete zrescue
 * integrate *cloze-elements
