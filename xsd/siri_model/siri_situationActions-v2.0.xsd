@@ -719,7 +719,7 @@ Rail transport, Roads and road transport
     <xsd:annotation>
      <xsd:documentation>Further recommendation to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
-   </xsd:element>
+   </xsd:element><!--TODO RecommendationStructure cannot be defined because already exists in same namespace (shee siri_journey-v.2.0)
    <xsd:element name="RecommendationCloze" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>TBD</xsd:documentation>
@@ -734,7 +734,7 @@ Rail transport, Roads and road transport
       </xsd:element>
      </xsd:sequence>
     </xsd:complexType>
-   </xsd:element>
+   </xsd:element>-->
    <xsd:element name="RecommendationPriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Prioritises a recommendation from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations. 
@@ -742,7 +742,7 @@ Rail transport, Roads and road transport
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
- </xsd:complexType>
+ </xsd:complexType><!--TODO RecommendationStructure cannot be defined because already exists in same namespace (shee siri_journey-v.2.0)
  <xsd:complexType name="RecommendationStructure">
   <xsd:sequence>
    <xsd:element name="Option" type="RecommendationOptionEnumeration"/>
@@ -759,7 +759,7 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="normal"/>
    <xsd:enumeration value="Zusatz"/>
   </xsd:restriction>
- </xsd:simpleType>
+ </xsd:simpleType>-->
  <xsd:complexType name="RemarkContentStructure">
   <xsd:sequence>
    <xsd:element name="Remark" type="DefaultedTextStructure" maxOccurs="unbounded">

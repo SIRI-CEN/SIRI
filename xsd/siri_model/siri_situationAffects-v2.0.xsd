@@ -214,19 +214,6 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:choice>
  </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="AreaOfInterestEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Area Of Interest.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="continentWide"/>
-   <xsd:enumeration value="national"/>
-   <xsd:enumeration value="neighboroughingCountries"/>
-   <xsd:enumeration value="regional"/>
-   <xsd:enumeration value="notSpecified"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <!-- ===Connections============================================================== -->
  <xsd:simpleType name="ZoneCodeType">
   <xsd:annotation>
