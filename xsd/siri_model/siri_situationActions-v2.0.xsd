@@ -637,12 +637,12 @@
   <xsd:sequence>
    <xsd:element name="AdviceText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Further recommendation to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Further advice to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="RecommendationPriority" type="xsd:positiveInteger" minOccurs="0">
+   <xsd:element name="AdvicePriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Prioritises a recommendation from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations.
+     <xsd:documentation>Prioritises an advice from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations.
       1 = highest priority.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
