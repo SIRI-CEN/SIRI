@@ -150,9 +150,9 @@
         <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, ReasonName is used instead. Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
        </xsd:annotation>
       </xsd:group>
-      <xsd:element name="ConsequenceFilter" type="PtConsequenceFilterStructure" minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Filter for matching consequences. Can be used to construct generated messages.</xsd:documentation>
+        <xsd:documentation>Reference to effects caused by situation </xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
