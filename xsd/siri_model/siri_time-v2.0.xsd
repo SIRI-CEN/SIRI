@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2" id="siri_time">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_time">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -20,11 +20,18 @@
      <Modified>2007-03-29</Modified>
     </Date>
     <Date><Modified>2008-11-10</Modified>
-						 refine day types  
+     <!-- refine day types -->
 				</Date>
     <Date><Modified>2014-06-20</Modified>
-					* [se] Add end time precision to halfopen time rangefor  input a siri_time-v2.0.xsd.
-					* [se] Add end time status  to halfopen time range output  siri_time-v2.0.xsd.
+     <!-- [se] Add end time precision to halfopen time rangefor  input a siri_time-v2.0.xsd.
+          [se] Add end time status  to halfopen time range output  siri_time-v2.0.xsd.
+      -->
+    </Date>
+    <Date>
+     <Modified>2020-01-24</Modified>
+     <!-- +SIRI v2.1
+       Removed numerical values in DayTypeEnumeration
+      -->
 				</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information .</p>
@@ -34,19 +41,18 @@
      <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
      <Description>XML schema, W3C Recommendation 2001</Description>
     </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_time-v1.2.xsd</Identifier>
+    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_time-v2.0.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+    <Publisher>CEN</Publisher>
     <Rights>Unclassified
-
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+     <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG CML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.0</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -189,63 +195,129 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="DayType" type="DayTypeEnumeration" default="everyDay">
   <xsd:annotation>
-   <xsd:documentation>Tpeg DAY TYPE pti_table 34</xsd:documentation>
+   <xsd:documentation>Day on which a SITUATION may apply - TPEG Pti34 DayType</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="DayTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Day Type TPEG pti_table 34</xsd:documentation>
+   <xsd:documentation>Values for TPEG Pti34 - DayType</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="pti34_0"/>
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="pti34_1"/>
-   <xsd:enumeration value="monday"/>
-   <xsd:enumeration value="pti34_2"/>
-   <xsd:enumeration value="tuesday"/>
-   <xsd:enumeration value="pti34_3"/>
-   <xsd:enumeration value="wednesday"/>
-   <xsd:enumeration value="pti34_4"/>
-   <xsd:enumeration value="thursday"/>
-   <xsd:enumeration value="pti34_5"/>
-   <xsd:enumeration value="friday"/>
-   <xsd:enumeration value="pti34_6"/>
-   <xsd:enumeration value="saturday"/>
-   <xsd:enumeration value="pti34_7"/>
-   <xsd:enumeration value="sunday"/>
-   <xsd:enumeration value="pti34_8"/>
-   <xsd:enumeration value="weekdays"/>
-   <xsd:enumeration value="pti34_9"/>
-   <xsd:enumeration value="weekends"/>
-   <xsd:enumeration value="pti34_10"/>
-   <xsd:enumeration value="holiday"/>
-   <xsd:enumeration value="pti34_11"/>
-   <xsd:enumeration value="publicHoliday"/>
-   <xsd:enumeration value="pti34_12"/>
-   <xsd:enumeration value="religiousHoliday"/>
-   <xsd:enumeration value="pti34_13"/>
-   <xsd:enumeration value="federalHoliday"/>
-   <xsd:enumeration value="pti34_14"/>
-   <xsd:enumeration value="regionalHoliday"/>
-   <xsd:enumeration value="pti34_15"/>
-   <xsd:enumeration value="nationalHoliday"/>
-   <xsd:enumeration value="pti34_16"/>
-   <xsd:enumeration value="mondayToFriday"/>
-   <xsd:enumeration value="pti34_17"/>
-   <xsd:enumeration value="mondayToSaturday"/>
-   <xsd:enumeration value="pti34_18"/>
-   <xsd:enumeration value="sundaysAndPublicHolidays"/>
-   <xsd:enumeration value="pti34_19"/>
-   <xsd:enumeration value="schoolDays"/>
-   <xsd:enumeration value="pti34_20"/>
-   <xsd:enumeration value="everyDay"/>
-   <xsd:enumeration value="pti34_255"/>
-   <xsd:enumeration value="undefinedDayType"/>
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_0, unknown</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="monday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_1, Monday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="tuesday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_2, Tuesday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="wednesday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_3, Wednesday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="thursday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_4, Thursday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="friday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_5, Friday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="saturday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_6, Saturday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="sunday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_7, Sunday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="weekdays">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_8, weekdays</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="weekends">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_9, weekends</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="holiday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_10, holiday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="publicHoliday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_11, public holiday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="religiousHoliday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_12, religious holiday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="federalHoliday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_13, federal holiday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="regionalHoliday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_14, regional holiday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="nationalHoliday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_15, national holiday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="mondayToFriday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_16, Monday to Friday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="mondayToSaturday">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_17, Monday to Saturday</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="sundaysAndPublicHolidays">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_18, Sundays and public holidays</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="schoolDays">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_19, school days</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="everyDay">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_20, every day</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefinedDayType">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti34_255, undefined day type</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
  <xsd:simpleType name="DaysOfWeekEnumerationx">
   <xsd:annotation>
-   <xsd:documentation>Values for Day Type TPEG pti_table 34</xsd:documentation>
+   <xsd:documentation>Subset of TPEG Pti34 - DayType</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="DayTypeEnumeration">
    <xsd:enumeration value="unknown"/>
@@ -264,7 +336,7 @@ Rail transport, Roads and road transport
  </xsd:simpleType>
  <xsd:simpleType name="HolidayTypeEnumerationx">
   <xsd:annotation>
-   <xsd:documentation>Values for Day Type TPEG pti_table 34</xsd:documentation>
+   <xsd:documentation>Subset of TPEG Pti34 - DayType</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="DayTypeEnumeration">
    <xsd:enumeration value="holiday"/>

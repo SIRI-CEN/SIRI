@@ -30,22 +30,31 @@
      <Modified>2007-03-29</Modified>
     </Date>
     <Date><Modified>2012-03-22</Modified>
-				 SIRI 2.0 
+     <!-- SIRI 2.0
 					 Refactor Monitoring code 
 					 Add QUAY Ref
+      -->
 				</Date>
     <Date><Modified>2012-06-22</Modified>
-				SIRI 2.0  
+     <!-- SIRI 2.0
 					Add Group of Lines to JourneyPatternInfoGroup
 					[CH] Set explicit  default value for VehicleAtStop to be false  
 					[DE] Add Driver Ref
+      -->
 				</Date>
     <Date><Modified>2013-02-11</Modified>
-					Correction: PlaceName unbounded to allow multiple languages
+     <!-- Correction: PlaceName unbounded to allow multiple languages -->
 				</Date>
     <Date><Modified>2018-11-08</Modified>
-          [vdv] "PublishedLineName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+     <!-- [vdv] "PublishedLineName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
           [vdv] "DestinationName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+      -->
+    </Date>
+    <Date>
+     <Modified>2020-01-29</Modified>
+     <!-- SIRI 2.1
+       Extra values for OccupancyEnumeration
+      -->
 				</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information .</p>
@@ -63,14 +72,14 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types-v2.0.xsd</Requires>
     </Relation>
     <Rights>Unclassified
-					<Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+     <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG CML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.0</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -89,6 +98,7 @@ Rail transport, Roads and road transport
  </xsd:annotation>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_utility-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_operator_support-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_time-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationIdentity-v1.1.xsd"/>
@@ -426,6 +436,18 @@ Values for these elements can be specified on an annual schedule and will be inh
      <xsd:documentation>Alternative identifier of LINE that an external system may associate with journey.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:choice>
+    <xsd:element name="BrandingRef" type="BrandingRefStructure" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Reference to a BRANDING. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Branding" type="BrandingStructure" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>An arbitrary marketing classification. +SIRI v2.1</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="LineIdentityGroup">
@@ -626,12 +648,70 @@ Values for these elements can be specified on an annual schedule and will be inh
  </xsd:element>
  <xsd:simpleType name="OccupancyEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Passenger load status of a VEHICLE.</xsd:documentation>
+   <xsd:documentation>Passenger load status of a VEHICLE - GTFS-R / TPEG Pts045</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="full"/>
-   <xsd:enumeration value="seatsAvailable"/>
-   <xsd:enumeration value="standingAvailable"/>
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts45_0, unknown</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="empty">
+    <xsd:annotation>
+     <xsd:documentation>GTFS-R "EMPTY"
+       The vehicle is considered empty by most measures, and has few or no passengers onboard, but is still accepting passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="manySeatsAvailable">
+    <xsd:annotation>
+     <xsd:documentation>GTFS-R "MANY_SEATS_AVAILABLE" / TPEG Pts45_1, many seats available
+       The vehicle has a large percentage of seats available. What percentage of free seats out of the total seats available is to be considered large enough to fall into this category is determined at the discretion of the producer.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="fewSeatsAvailable">
+    <xsd:annotation>
+     <xsd:documentation>GTFS-R "FEW_SEATS_AVAILABLE" / TPEG Pts45_2, few seats available
+       The vehicle has a small percentage of seats available. What percentage of free seats out of the total seats available is to be considered small enough to fall into this category is determined at the discretion of the producer.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="standingRoomOnly">
+    <xsd:annotation>
+     <xsd:documentation>GTFS-R "STANDING_ROOM_ONLY" / TPEG Pts45_4, standing room only (and TPEG Pts45_3, no seats available)
+       The vehicle can currently accommodate only standing passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="crushedStandingRoomOnly">
+    <xsd:annotation>
+     <xsd:documentation>GTFS-R "CRUSHED_STANDING_ROOM_ONLY"
+       The vehicle can currently accommodate only standing passengers and has limited space for them.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="full">
+    <xsd:annotation>
+     <xsd:documentation>GTFS-R "FULL" / TPEG Pts45_5, full</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="notAcceptingPassengers">
+    <xsd:annotation>
+     <xsd:documentation>GTFS-R "NOT_ACCEPTING_PASSENGERS"
+       The vehicle cannot accept passengers.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefined">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts45_255, undefined occupancy</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="seatsAvailable">
+    <xsd:annotation>
+     <xsd:documentation>(SIRI 2.1) deprecated - use a more specific value</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="standingAvailable">
+    <xsd:annotation>
+     <xsd:documentation>(SIRI 2.1) deprecated - use a more specific value</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
  <xsd:simpleType name="DriverCodeType">
@@ -678,6 +758,34 @@ Values for these elements can be specified on an annual schedule and will be inh
   <xsd:simpleContent>
    <xsd:extension base="InfoChannelCodeType"/>
   </xsd:simpleContent>
+ </xsd:complexType>
+ <!-- ======================================================================= -->
+ <xsd:simpleType name="BrandingCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a BRANDING. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="BrandingRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a BRANDING. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="BrandingCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:complexType name="BrandingStructure">
+  <xsd:annotation>
+   <xsd:documentation>An arbitrary marketing classification. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="BrandingCode" type="xsd:NMTOKEN">
+    <xsd:annotation>
+     <xsd:documentation>Identity of BRANDING.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="TypeOfValueGroup" minOccurs="0"/>
+  </xsd:sequence>
  </xsd:complexType>
  <!-- ======================================================================= -->
 </xsd:schema>

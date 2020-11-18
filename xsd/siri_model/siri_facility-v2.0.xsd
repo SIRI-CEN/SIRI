@@ -21,14 +21,13 @@
      <Modified>2008-01-11</Modified>
     </Date>
     <Date><Modified>2008-07-05</Modified>
-					 USe Accessibility assessment from ifopt 
+     <!-- Use Accessibility assessment from ifopt -->
 				</Date>
     <Date><Modified>2011-01-19</Modified>
-					 TidyUp empty ValidtyConditionGroup 
+     <!-- TidyUp empty ValidityConditionGroup -->
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
-					 remove unecesasry dependencies
+     <!-- +SIRI v2.0: remove unnecessary dependencies -->
 				</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information .
@@ -48,14 +47,14 @@
     </Relation>
     <Rights>Unclassified
 
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+     <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from TransModel and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.0</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -75,6 +74,7 @@ Rail transport, Roads and road transport
  </xsd:annotation>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_facilities-v1.2.xsd"/>
+ <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_journey_support-v2.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment-v0.3.xsd"/>
@@ -108,7 +108,7 @@ Rail transport, Roads and road transport
  <!-- = Definitions for with SIRI 1.1 - Facility Management Service ======================= -->
  <xsd:complexType name="FacilityStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for sescription the MONITORED FACILITY itself.</xsd:documentation>
+   <xsd:documentation>Type for description of the MONITORED FACILITY itself.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="FacilityCode" type="FacilityCodeType" minOccurs="0">
@@ -177,6 +177,9 @@ Rail transport, Roads and road transport
    <xsd:element ref="LineRef" minOccurs="0"/>
    <xsd:element ref="StopPointRef" minOccurs="0"/>
    <xsd:element ref="VehicleRef" minOccurs="0"/>
+   <xsd:sequence>
+    <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
+   </xsd:sequence>
    <xsd:element ref="DatedVehicleJourneyRef" minOccurs="0"/>
    <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
    <xsd:element ref="InterchangeRef" minOccurs="0"/>
@@ -233,20 +236,25 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:simpleType name="FacilityCategoryEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Generic catégory of a facility.</xsd:documentation>
+   <xsd:documentation>Generic category of a facility.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
    <xsd:enumeration value="fixedEquipment"/>
+   <xsd:enumeration value="mobileEquipment"/>
    <xsd:enumeration value="serviceProvidedByIndividual"/>
    <xsd:enumeration value="serviceForPersonalDevice"/>
    <xsd:enumeration value="reservedArea"/>
+   <xsd:enumeration value="site"/>
+   <xsd:enumeration value="siteComponent"/>
+   <xsd:enumeration value="parkingBay"/>
+   <xsd:enumeration value="vehicle"/>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ======================================================================= -->
  <xsd:complexType name="AnnotatedFacilityStructure">
   <xsd:annotation>
-   <xsd:documentation>Summary information about  Facility. Used in DISCOVERY used </xsd:documentation>
+   <xsd:documentation>Summary information about Facility. Used in DISCOVERY.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="FacilityRef"/>
@@ -286,9 +294,74 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="removed"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <xsd:simpleType name="CountingTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for TypeOfCounting.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="availabilityCount"/>
+   <xsd:enumeration value="reservedCount"/>
+   <xsd:enumeration value="inUseCount"/>
+   <xsd:enumeration value="outOfOrderCount"/>
+   <xsd:enumeration value="presentCount"/>
+   <xsd:enumeration value="currentStateCount"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="CountingTrendEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for trend of a counting.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="decreasing"/>
+   <xsd:enumeration value="increasing"/>
+   <xsd:enumeration value="stable"/>
+   <xsd:enumeration value="unstable"/>
+   <xsd:enumeration value="increasingQuickly"/>
+   <xsd:enumeration value="increasingSlowly"/>
+   <xsd:enumeration value="decreasingQuickly"/>
+   <xsd:enumeration value="decreasingSlowly"/>
+   <xsd:enumeration value="unknown"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="CountedFeatureUnitEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for units of what is counted
+   bay: parking bay for cars, bicycle, scooter, etc
+   otherSpaces: any other kind of spaces: lockers, standing spaces, toilets, etc.
+   devices: electronic devices (audio guide, headphones, etc.) and physical devices (walking stick, wheelchair, etc.)
+   vehicles: any type of vehicles (cycle, car, scooter, hoverboard, motorbike, etc.)
+   kW (kiloWatt) or kWh (kiloWatt-hour): means that an available or consumed power is measured
+   litres and cubicMeters: means that a volume is measured
+   squareMeters: means that a surface is measured
+   meters: means that a distance is measured
+   kg (kilogram): means that a mass is measured
+   A (Ampere): means that an electric current is measured
+   C (degree Celsius): means that a temperature is measured
+   other: use of "other" requires the additional open ended TypeOfCountedFeature (monitoredCountingStructure) to be filled
+   </xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="bays"/>
+   <xsd:enumeration value="seats"/>
+   <xsd:enumeration value="otherSpaces"/>
+   <xsd:enumeration value="devices"/>
+   <xsd:enumeration value="vehicles"/>
+   <xsd:enumeration value="persons"/>
+   <xsd:enumeration value="litres"/>
+   <xsd:enumeration value="squareMeters"/>
+   <xsd:enumeration value="cubicMeters"/>
+   <xsd:enumeration value="meters"/>
+   <xsd:enumeration value="kWh"/>
+   <xsd:enumeration value="kW"/>
+   <xsd:enumeration value="kg"/>
+   <xsd:enumeration value="A"/>
+   <xsd:enumeration value="C"/>
+   <xsd:enumeration value="other"/>
+  </xsd:restriction>
+ </xsd:simpleType>
  <xsd:complexType name="FacilityStatusStructure">
   <xsd:annotation>
-   <xsd:documentation>Descriprion of the status of a MONITORED FACILITY.</xsd:documentation>
+   <xsd:documentation>Description of the status of a MONITORED FACILITY.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Status" type="FacilityStatusEnumeration">
@@ -327,6 +400,56 @@ Rail transport, Roads and road transport
    <xsd:group ref="ServiceInfoGroup"/>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:complexType name="MonitoredCountingStructure">
+  <xsd:annotation>
+   <xsd:documentation>Monitored counted values.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="CountingType" type="CountingTypeEnumeration">
+    <xsd:annotation>
+     <xsd:documentation>Nature of what is counted.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="CountedFeatureUnit" type="CountedFeatureUnitEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Unit of type for what is being counted </xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TypeOfCountedFeature" type="TypeOfValueStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Open ended type or refined classification of what is counted (complement to the information coming from the facility type itself) </xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:choice>
+    <xsd:element name="Count" type="xsd:integer">
+     <xsd:annotation>
+      <xsd:documentation>Counted value</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Percentage" type="PercentageType">
+     <xsd:annotation>
+      <xsd:documentation>Value as a percentage (0.0 to 100.0) of the maximum possible value</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:choice>
+   <xsd:element name="Trend" type="CountingTrendEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Trend of the count</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Accuracy" type="PercentageType" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Accuracy of the count, as a percentage (0.0 to 100.0), the percentage being a + or - maximum deviation from the provided value</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Description of what is counted</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="Extensions" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
  <!-- ====FACILITY CONDITION========================================= -->
  <xsd:element name="FacilityConditionElement" type="FacilityConditionStructure">
   <xsd:annotation>
@@ -335,7 +458,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:complexType name="FacilityConditionStructure">
   <xsd:annotation>
-   <xsd:documentation>Description of any change concerning a MONITORED FACILITY New structure defined in SIRI XSD 1.1 for Faclities Management.</xsd:documentation>
+   <xsd:documentation>Description of any change concerning a MONITORED FACILITY New structure defined in SIRI XSD 1.1 for Facilities Management.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
@@ -349,6 +472,18 @@ Rail transport, Roads and road transport
    <xsd:element name="FacilityStatus" type="FacilityStatusStructure">
     <xsd:annotation>
      <xsd:documentation>Status of Facility.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="MonitoredCounting" minOccurs="0" maxOccurs="unbounded">
+    <xsd:complexType>
+     <xsd:complexContent>
+      <xsd:extension base="MonitoredCountingStructure"/>
+     </xsd:complexContent>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="FacilityUpdatedPosition" type="LocationStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>New position of the Facility referenced by the FacilityRef or described in the FacilityStructure</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="SituationRef" minOccurs="0"/>
@@ -373,7 +508,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:simpleType name="RemedyTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for actions to remedy a faclity change.</xsd:documentation>
+   <xsd:documentation>Allowed values for actions to remedy a facility change.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -399,6 +534,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Description of the set up remedy in natural language.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="RemedyPeriod" type="HalfOpenTimestampInputRangeStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Validity period for the remedy</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
@@ -406,7 +546,7 @@ Rail transport, Roads and road transport
  <!--= First used by Facility Management service, but may be used by other services later, and then may be moved to a more generic file in the future-->
  <xsd:complexType name="MonitoringInformationStructure">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for the monitoring conditions (frequency of mesurement, etc): an automatic monitoring of the satus of a lift with pushed alert in case of incident is very different from a daily manual/visual check.</xsd:documentation>
+   <xsd:documentation>Allowed values for the monitoring conditions (frequency of measurement, etc): an automatic monitoring of the status of a lift with pushed alert in case of incident is very different from a daily manual/visual check.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="MonitoringInterval" type="xsd:duration" minOccurs="0">
@@ -416,7 +556,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="MonitoringType" type="MonitoringTypeEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>How monitoring is automatic, manual, etc..</xsd:documentation>
+     <xsd:documentation>How monitoring is automatic, manual, etc.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="MonitoringPeriod" type="MonitoringValidityConditionStructure" minOccurs="0">
@@ -429,7 +569,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:simpleType name="MonitoringTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for the types of monitoring: automatic or manual - describing the hardware transducer (video, GPS/Radio, in-road sensors, etc.) doesn't seeme useful for SIRi.</xsd:documentation>
+   <xsd:documentation>Allowed values for the types of monitoring: automatic or manual - describing the hardware transducer (video, GPS/Radio, in-road sensors, etc.) doesn't seeme useful for SIRI.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -439,7 +579,7 @@ Rail transport, Roads and road transport
  </xsd:simpleType>
  <xsd:complexType name="MonitoringValidityConditionStructure">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for the type for Description of the monitoring conditions (frequency of mesurement, etc): an automatic monitoring of the satus of a lift with pushed alert in case of incident is very different from a daily manual/visual check.</xsd:documentation>
+   <xsd:documentation>Allowed values for the type for Description of the monitoring conditions (frequency of mesurement, etc): an automatic monitoring of the status of a lift with pushed alert in case of incident is very different from a daily manual/visual check.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
@@ -487,7 +627,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="EquipmentTypeRef" type="ifopt:EquipmentTypeRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a TYPE OF EQUIPMENT.r.</xsd:documentation>
+     <xsd:documentation>Reference to a TYPE OF EQUIPMENT.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
@@ -544,7 +684,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="MobilityImpairedAccess" type="xsd:boolean">
     <xsd:annotation>
-     <xsd:documentation>Whether stop or service is accessible to mobility impaired users. This may be further qualified by one ore more MobilityFacility instances to specify which types of mobility access are available (true) or not available (false). For example suitableForWheelChair, or 'tepFreeAccess.</xsd:documentation>
+     <xsd:documentation>Whether stop or service is accessible to mobility impaired users. This may be further qualified by one or more MobilityFacility instances to specify which types of mobility access are available (true) or not available (false). For example suitableForWheelChair, or stepFreeAccess.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="AccessFacility" minOccurs="0" maxOccurs="unbounded">
@@ -559,9 +699,14 @@ Rail transport, Roads and road transport
    <xsd:documentation>Elements describing nature of disruption.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
+   <xsd:element ref="FormationCondition" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="FacilityConditionElement" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Information about a change of Equipment availabilti at stop or on vehicle that may affect access or use.</xsd:documentation>
+     <xsd:documentation>Information about a change of Equipment availability at stop or on vehicle that may affect access or use.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:sequence>

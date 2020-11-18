@@ -143,11 +143,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="ValidityPeriod" type="ClosedTimestampRangeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Start and end of timetable validity (time window) of journeys for which schedules are to be returned. Refers to the departure time at the first stop of each VEHICLE JOURNEY If blank the configured data horizon will be used.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
    <xsd:element name="TimetableVersionRef" type="VersionRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Communicate only differences to the timetable specified by this VERSION of the TIMETABLe.</xsd:documentation>
@@ -172,6 +168,21 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
+   <xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys of the specified VEHICLE MODE. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ProductCategoryRef" type="ProductCategoryRefStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys of the specified TYPE OF PRODUCT CATEGORY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys with a CALL at the specified STOP POINT. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="ProductionTimetableRequestPolicyGroup">
@@ -179,12 +190,15 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of messages exchanged.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values.</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
+   <xsd:element ref="IncludeInterchanges" minOccurs="0"/>
+   <xsd:element ref="IncludeJourneyRelations" minOccurs="0"/>
+   <xsd:element ref="IncludeTrainFormations" minOccurs="0"/>
    <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Whether to return the whole timetable, or just differences from the inidicated version. Default is 'false'.</xsd:documentation>
@@ -285,6 +299,12 @@ If false each subscription response will contain the full information as specifi
        <xsd:documentation>Timetable Version.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
+     <xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
+     <xsd:element name="ShortestPossibleCycle" type="PositiveDurationType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Minimum interval at which updates for this DATED TIMETABLE VERSION FRAME can be sent. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
      <xsd:group ref="LineIdentityGroup"/>
      <xsd:group ref="JourneyPatternInfoGroup"/>
      <xsd:group ref="ServiceInfoGroup" minOccurs="0"/>
@@ -295,9 +315,25 @@ If false each subscription response will contain the full information as specifi
        <xsd:documentation>Complete list of all planned VEHICLE JOURNEYs for this LINE and DIRECTION.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
+     <xsd:element name="RemovedDatedVehicleJourney" type="RemovedDatedVehicleJourneyStructure" minOccurs="0" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>List of all removed VEHICLE JOURNEYs for this LINE and DIRECTION.
+A data producer may silently remove a journey from the plan if it was previously provided in error. Careful: Removal is different from Cancellation.
+Minimal information, or no information at all, of a RemovedDatedVehicleJourney or the removal itself must be communicated to the passengers, i.e., it is "silently" removed. A Cancellation, on the other hand, is possibly the most important information to provide to the passengers.
+It is strongly advised to only use this feature in cases where a journey was sent in error and it can be assumed that as few passengers as possible have seen the erroneous information to avoid confusion. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
      <xsd:element name="ServiceJourneyInterchange" type="ServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
        <xsd:documentation>Connection paramters for a SERVICE JOURNEY INTERCHANGE between a feeder and distributor journey. SIRI 2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="RemovedServiceJourneyInterchange" type="RemovedServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>List of all removed SERVICE JOURNEY INTERCHANGEs.
+A data producer may silently remove an interchange from the plan if it was previously provided in error. Careful: Removal is different from Cancellation.
+Minimal information, or no information at all, of a RemovedServiceJourneyInterchange or the removal itself must be communicated to the passengers, i.e., it is "silently" removed. A Cancellation, on the other hand, is possibly the most important information to provide to the passengers.
+It is strongly advised to only use this feature in cases where an interchange was sent in error and it can be assumed that as few passengers as possible have seen the erroneous information to avoid confusion. +SIRI v2.1</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
@@ -306,6 +342,26 @@ If false each subscription response will contain the full information as specifi
   </xsd:complexContent>
  </xsd:complexType>
  <!-- ======================================================================= -->
+ <xsd:complexType name="TimetableValidityPeriod">
+  <xsd:annotation>
+   <xsd:documentation>Start and end of timetable validity (time window) of journeys for which schedules are to be returned by the data producer.
+The ValidityPeriod of the timetable must not exceed the ValidityPeriod requested by the subscriber.
+If omitted, then the full - by the subscriber requested - ValidityPeriod or configured data horizon applies.
+
+Since the end of an OPERATING DAY of one ITCS does not usually coincide with the end of another ITCS, it may happen that data cannot be provided for the complete time frame requested by a subscriber.
+In order for the data consumer to be aware of this situation, the data producer should confirm - in each returned timetable - for which part of the requested ValidityPeriod he can actually deliver journey schedules.
+If the requested period is so far in the past that the data producer does no longer have any data, he should reject the subscription with "Status=false" and a BeyondDataHorizon ErrorCondition.
+If the requested period is so far in the future that the data producer does not yet have any data, he will deliver data as soon as it is available.
+
+A timetable falls inside the ValidityPeriod if all of its journeys fall inside it.
+A journey falls inside the ValidityPeriod if the AimedDepartureTime or AimedArrivalTime at any CALL lies between the Start- and EndTime of the ValidityPeriod (regardless of whether the aimed times at a previous or subsequent CALL fall ouside of the ValidityPeriod).
+Careful: Journeys which themselves fall outside the ValidityPeriod, but which are linked to a journey within the ValidityPeriod by a JOURNEY RELATION, are also regarded as falling inside the ValidityPeriod. Examples are journeys where the vehicle is split or joins with or is replaced by another vehicle.
+   </xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ClosedTimestampRangeStructure"/>
+  </xsd:complexContent>
+ </xsd:complexType>
  <!-- ==== WSDL=========================================-->
  <xsd:complexType name="ProductionTimetableDeliveriesStructure">
   <xsd:annotation>
@@ -389,6 +445,9 @@ If false each subscription response will contain the full information as specifi
         <xsd:element ref="FilterByValidityPeriod"/>
         <xsd:element ref="FilterByOperatorRef"/>
         <xsd:element ref="FilterByLineRef"/>
+        <xsd:element ref="FilterByVehicleMode" minOccurs="0"/>
+        <xsd:element ref="FilterByProductCategoryRef" minOccurs="0"/>
+        <xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
         <xsd:element name="FilterByVersionRef" type="xsd:boolean" default="true">
          <xsd:annotation>
           <xsd:documentation>Whether results can be filtered by TIMETABLE VERSION Default is 'true'.</xsd:documentation>

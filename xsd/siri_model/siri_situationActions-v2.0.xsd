@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von David Sielaff (Verkehrsverbund Rhein-Sieg GmbH) bearbeitet -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situationActions">
  <!--
 10.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
@@ -62,6 +61,12 @@
     <Date><Modified>2013-05-01</Modified>
          [de] Add SocialNetworks to PublishToWeb action
         </Date>
+    <Date><Modified>2018-11-13</Modified>
+          [vdv] ActionsStructure.ActionsGroup.PublishToTvAction changed to unbounded
+          [vdv] ActionsStructure.ActionsGroup.NotifyBySmsAction changed to unbounded
+          [vdv] PublishToDisplayAction added to ActionsGroup
+          [vdv] ActionsStructure.ActionsGroup.PublishToTvAction.Ceefax and Teletext: annotation switched
+				</Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs. This subschema describes publishing actions </p>
     </Description>
