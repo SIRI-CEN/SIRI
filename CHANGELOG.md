@@ -54,7 +54,7 @@
 * RemovedServiceJourneyInterchangeStructure/RemovedDatedVehicleJourneyStructure: new element
 * ToServiceJourneyInterchangeStructure/AbstractServiceJourneyInterchangeStructure: some elements removed, new elements added
 * RequestMessageRef: type changed to MessageQualifierStructure
-* SubscriptionRef: type changed to SubscriptionRefStructure
+* SubscriptionRef: type changed to SubscriptionQualifierStructure
 * SubscriptionRenewal: new element added
 * MessageRef: type changed to MessageRefStructure
 * DataReceivedAcknowledgement/TerminationResponseStatusStructure:Status: cardinality changed to optional
@@ -75,10 +75,11 @@
 * Delete unused elements in UmS ActionPeriodStructure, AffectsSegmentStructure, Duration235959
 * TextualContentStructure: ActionsGroup deleted
 * Element RemarkContent:Remark renamed to RemarkText
+* Element ReasonContentStructure renamed to ReasonNameContentStructure
 * TextualContentStructure:Internal moved after RemarkContent
 * TextualContentStructure:Images new type ImagesStructure, moved after Internal
 * TextualContentStructure:InfoLinks new type InfoLinksStructureStructure, moved after Images
-* PublicEventTypeEnum: clean up 
+* PublicEventTypeEnum, FacilityCategoryEnumeration, RemedyStructure: clean up 
 
 ## TODOs
 ### Remaining DIFFS with CEN

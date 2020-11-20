@@ -686,15 +686,6 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:simpleType name="Duration235959">
-  <xsd:annotation>
-   <xsd:documentation>Duration of specific time range (smaller than 24h). StartTime plus Duration can result in a time on the next day, smaller than the StartTime.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:duration">
-   <xsd:minInclusive value="P0Y0M0DT0H0M1S"/>
-   <xsd:maxInclusive value="P0Y0M0DT23H59M59S"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <xsd:complexType name="DurationContentStructure">
   <xsd:sequence>
    <xsd:element name="DurationText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -711,22 +702,25 @@ Rail transport, Roads and road transport
      <xsd:documentation>ReasonName of passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <!--TODO integrate in CEN -->
- <xsd:element name="ReasonNameCloze" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:group ref="ReasonGroup"/>
-      <xsd:element name="Location" type="LocationStructure"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
+      <!--TODO integrate in CEN -->
+    <xsd:element name="ReasonCloze" minOccurs="0">
        <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
+        <xsd:documentation>TBD</xsd:documentation>
        </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
+       <xsd:complexType>
+        <xsd:sequence>
+         <xsd:group ref="ReasonGroup"/>
+         <xsd:element name="Location" type="LocationStructure"/>
+         <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
+          <xsd:annotation>
+           <xsd:documentation>Extension point.</xsd:documentation>
+          </xsd:annotation>
+         </xsd:element>
+        </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <xsd:complexType name="AdviceContentStructure">
   <xsd:sequence>
    <xsd:element name="AdviceText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -734,6 +728,22 @@ Rail transport, Roads and road transport
      <xsd:documentation>Further advice to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
+   <xsd:element name="RecommendationCloze" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>TBD</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <!-- TODO RecommendationStructure cannot be defined because already exists in same namespace (shee siri_journey-v.2.0)
+      <xsd:element name="Recommendation" type="RecommendationStructure" minOccurs="0" maxOccurs="unbounded"/> -->
+      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
+       <xsd:annotation>
+        <xsd:documentation>Extension point.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
    <xsd:element name="AdvicePriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Prioritises an advice from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations.
@@ -880,7 +890,6 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="general"/>
    <xsd:enumeration value="stopPoint"/>
    <xsd:enumeration value="vehicleJourney"/>
-   <xsd:enumeration value="socialNetwork"/>
   </xsd:restriction>
  </xsd:simpleType>
 </xsd:schema>

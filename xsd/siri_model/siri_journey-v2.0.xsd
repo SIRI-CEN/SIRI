@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_journey">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -25,7 +25,7 @@
      <Modified>2007-03-29</Modified>
     </Date>
     <Date><Modified>2008-11-13</Modified>
-				 Correct Cardinalities on SIRI DESTINATION REF Structure 
+     <!-- Correct Cardinalities on SIRI DESTINATION REF Structure -->
 				</Date>
     <Date><Modified>2011-04-18</Modified>
 				 siri_journey-v2.0.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com

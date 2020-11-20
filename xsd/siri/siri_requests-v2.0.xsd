@@ -30,7 +30,7 @@
      <Modified>2007-03-29</Modified>
     </Date>
     <Date><Modified>2008-11-11</Modified>
-					 -- add substitution groups for 
+     <!-- add substitution groups for
      AbstractRequest
      AbstractResponse
      AbstractFunctionalServiceRequest
@@ -40,36 +40,43 @@
      AbstractFunctionalServiceCapabilityDelivery
      AbstractDiscoveryDelivery
      ErrorCode
-     
+									 -->
 				</Date>
     <Date><Modified>2008-11-13</Modified>
-					 Move abstract discovery deliveries to here from siri_discoveries 
+     <!-- Move abstract discovery deliveries to here from siri_discoveries -->
 				</Date>
     <Date><Modified>2008-11-17</Modified>
-					 -- Add abstract discovery request 
-       Make request and response descendent of Request and Response Types 
+     <!-- Add abstract discovery request
+						  Make request and response descendent of Request and Response Types -->
 				</Date>
     <Date><Modified>2009-03-31</Modified>
-					 - Add ErrorConditionelement to enable WSDL axis binding 
+     <!-- Add ErrorConditionelement to enable WSDL axis binding -->
 				</Date>
-    <Date><Modified>2011-04-18</Modified>
-					 - ErrorConditionStructure Line 841 should not be abstract. Fix from RV ixxi.biz
-						 Also Add ServiceConditionErrorConditionElement 
+    <Date>
+     <Modified>2011-04-18</Modified>
+     <!--
+										 ErrorConditionStructure Line 841 should not be abstract. Fix from RV ixxi.biz
+											Also Add ServiceConditionErrorConditionElement -->
 				</Date>
-    <Date><Modified>2012-03-23</Modified>
+    <Date>
+     <Modified>2012-03-23</Modified>
+     <!--
 					 +SIRI v2.0
 					  Add error number to Error structure
 					  factor out base identifier defintiiosn so can be share dwith error codes
 					  Factor out error codes
-					  Factor our Permission model to separate package siri_permissions
+										 Factor our Permission model to separate package siri_permissions -->
 				</Date>
     <Date><Modified>2012-06-17</Modified>
-					 +SIRI v2.0 x
-					  Add delegator endpoint group to ServiceRequest and FunctionalServcieResponse
+     <!-- +SIRI v2.0 x
+										 Add delegator endpoint group to ServiceRequest and FunctionalServcieResponse -->
 				</Date>
-    <Date><Modified>2013-02-11</Modified>
+    <Date>
+     <Modified>2013-02-11</Modified>
+     <!--
 					Added AbstractRequiredIdentifiedItemStructure
 					Added AbstractRequiredReferencingItemStructure
+										-->
 				</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines common request processing elements</p>
@@ -87,14 +94,14 @@
     </Relation>
     <Rights>Unclassified
 
-        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+										<Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIGXML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -497,7 +504,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:documentation>Unique identifier of Subscription filter to which this subscription is assigned. If there is onlya single filter, then can be omitted.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="SubscriptionRef" type="SubscriptionRefStructure">
+   <xsd:element name="SubscriptionRef" type="SubscriptionQualifierStructure">
     <xsd:annotation>
      <xsd:documentation>Reference to a service subscription: unique within Service and Subscriber.</xsd:documentation>
     </xsd:annotation>
@@ -514,7 +521,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:documentation>If Delivery is for a Subscription, Participant reference of Subscriber.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="SubscriptionRef" type="SubscriptionRefStructure" minOccurs="0">
+   <xsd:element name="SubscriptionRef" type="SubscriptionQualifierStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>If Delivery is for a Subscription, unique identifier of service subscription request within Service and subscriber - a Timestamp.</xsd:documentation>
     </xsd:annotation>
@@ -526,7 +533,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
    <xsd:documentation>Endpoint reference proprerties for response message: participant and SIRI service type are given by context.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="RequestMessageRef" type="MessageRefStructure" minOccurs="0">
+   <xsd:element name="RequestMessageRef" type="MessageQualifierStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Arbitrary unique reference to the request which gave rise to this message.</xsd:documentation>
     </xsd:annotation>
@@ -668,7 +675,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:documentation>Participant reference that identifies responder.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="RequestMessageRef" type="MessageRefStructure" minOccurs="0">
+   <xsd:element name="RequestMessageRef" type="MessageQualifierStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Reference to an arbitrary unique reference associated with the request which gave rise to this response.</xsd:documentation>
     </xsd:annotation>
@@ -831,7 +838,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed.</xsd:documentation>
      </xsd:annotation>
