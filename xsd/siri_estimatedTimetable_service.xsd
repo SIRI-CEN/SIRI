@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_estimatedTimetable_service">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_estimatedTimetable_service">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -62,14 +62,14 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions-v2.0.xsd</Requires>
     </Relation>
     <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -125,7 +125,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="EstimatedTimetableRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -168,6 +168,21 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
+   <xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys of the specified VEHICLE MODE. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ProductCategoryRef" type="ProductCategoryRefStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys of the specified TYPE OF PRODUCT CATEGORY. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Filter the results to include only journeys with a CALL at the specified STOP POINT. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="EstimatedTimetableRequestPolicyGroup">
@@ -175,12 +190,15 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of messages exchanged.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values.</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
+   <xsd:element ref="IncludeInterchanges" minOccurs="0"/>
+   <xsd:element ref="IncludeJourneyRelations" minOccurs="0"/>
+   <xsd:element ref="IncludeTrainFormations" minOccurs="0"/>
    <xsd:element name="EstimatedTimetableDetailLevel" type="EstimatedTimetableDetailEnumeration" default="calls" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Level of detail to include in response. Default is 'normal'. (SIRI 2.0)</xsd:documentation>
@@ -242,6 +260,26 @@ If false each subscription response will contain the full information as specifi
      <xsd:documentation>The amount of change to the arrival or departure time that can happen before an update is sent (i.e. if ChangeBeforeUpdate is set to 2 minutes, the subscriber will not be told that a timetable is changed by 30 seconds - an update will only be sent when the timetable is changed by at least least 2 minutes. (OPtional from SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="SkipRecordedCallUpdates" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Indicates whether actual arrival-/departure times should be delivered as incremental updates, i.e. whether RECORDED CALL updates are transmitted immediately after an event occurs. +SIRI v2.1
+- 'false': Specifies that the data producer should transmit RECORDED CALL data, in particular actual arrival-/departure information as an incremental update immediately after an event occurs (with hysteresis taken into account) as it is generally the case.
+The server will automatically proceed with 'false' if capability is not supported.
+- 'true': Can be requested if the data traffic is to be reduced and an immediate transmissions is not required in any of the consumer systems.
+'true' specifies that the data producer should skip RECORDED CALL updates (if capability is supported after all), i.e., deliver them with the next update instead.
+- No specification: Default value 'false' applies (don't skip updates of recorded data).</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="IncludeOnlyRecordedCallUpdates" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Indicates whether ONLY actual arrival-/departure times should be delivered. In other words, whether all updates related to ESTIMATED CALL should be skipped. +SIRI v2.1
+- 'false': Specifies that the data producer should transmit ESTIMATED and RECORDED CALL data as an incremental update immediately after an event occurs (with hysteresis taken into account) as it is generally the case.
+The server will automatically proceed with 'false' if capability is not supported.
+- 'true': Can be requested if a consumer system is only interested in the actual times / recorded events because it only wants to check the performance for example.
+'true' specifies that the data producer should only deliver RECORDED CALL udpates and skip ESTIMATED CALL updates (if capability is supported after all), i.e., deliver ESTIMATED CALL updates only with the next RECORDED CALL update.
+- No specification: Default value 'false' applies (don't skip updates of estimated data).</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:complexType name="EstimatedTimetableSubscriptionStructure">
@@ -276,7 +314,7 @@ If false each subscription response will contain the full information as specifi
     <xsd:sequence>
      <xsd:group ref="EstimatedTimetablePayloadGroup"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -350,7 +388,7 @@ If false each subscription response will contain the full information as specifi
      <xsd:element ref="EstimatedTimetablePermissions" minOccurs="0"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="optional" default="2.0"/>
+    <xsd:attribute name="version" type="VersionString" use="optional" default="2.1"/>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
@@ -395,6 +433,9 @@ If false each subscription response will contain the full information as specifi
         </xsd:element>
         <xsd:element ref="FilterByOperatorRef"/>
         <xsd:element ref="FilterByLineRef"/>
+        <xsd:element ref="FilterByVehicleMode" minOccurs="0"/>
+        <xsd:element ref="FilterByProductCategoryRef" minOccurs="0"/>
+        <xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
         <xsd:element name="FilterByVersionRef" type="xsd:boolean" default="true" minOccurs="0">
          <xsd:annotation>
           <xsd:documentation>Whether results can be filtered by TIMETABLE VERSION Default is 'true'.</xsd:documentation>

@@ -287,6 +287,13 @@ Rail transport, Roads and road transport
      <xsd:documentation>Requested end time for subscription.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="SubscriptionRenewal" type="xsd:boolean" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>By using this element, the subscriber asks the data provider for an extension of the InitialTerminationTime of the subscription.
+If SubscriptionRenewal is omitted, this request is to be treated as a re-subscription and therefore all data corresponding to the SubscriptionRequest must
+be sent in the initial response (or a portion of the data if MoreData is set to 'true'). +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:group name="SubscriptionIdentityGroup">
@@ -490,7 +497,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Unique identifier of Subscription filter to which this subscription is assigned. If there is onlya single filter, then can be omitted.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="SubscriptionRef" type="SubscriptionQualifierStructure">
+   <xsd:element name="SubscriptionRef" type="SubscriptionRefStructure">
     <xsd:annotation>
      <xsd:documentation>Reference to a service subscription: unique within Service and Subscriber.</xsd:documentation>
     </xsd:annotation>
@@ -507,7 +514,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>If Delivery is for a Subscription, Participant reference of Subscriber.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="SubscriptionRef" type="SubscriptionQualifierStructure" minOccurs="0">
+   <xsd:element name="SubscriptionRef" type="SubscriptionRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>If Delivery is for a Subscription, unique identifier of service subscription request within Service and subscriber - a Timestamp.</xsd:documentation>
     </xsd:annotation>
@@ -519,7 +526,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Endpoint reference proprerties for response message: participant and SIRI service type are given by context.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="RequestMessageRef" type="MessageQualifierStructure" minOccurs="0">
+   <xsd:element name="RequestMessageRef" type="MessageRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Arbitrary unique reference to the request which gave rise to this message.</xsd:documentation>
     </xsd:annotation>
@@ -661,7 +668,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Participant reference that identifies responder.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="RequestMessageRef" type="MessageQualifierStructure" minOccurs="0">
+   <xsd:element name="RequestMessageRef" type="MessageRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Reference to an arbitrary unique reference associated with the request which gave rise to this response.</xsd:documentation>
     </xsd:annotation>

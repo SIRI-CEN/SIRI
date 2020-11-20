@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_journey">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -158,6 +158,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Whether the prediction should be judged as inaccurate.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="PredictionInaccurateReason" type="PredictionInaccurateReasonEnumeration" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. +SIRI v2.1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="DataSource" type="xsd:string" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>System originating real-time data. Can be used to make judgements of relative quality and accuracy compared to other feeds.</xsd:documentation>
@@ -207,7 +212,8 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>How full the VEHICLE is.  If omitted, not known.</xsd:documentation>
+     <xsd:documentation>An approximate figure of how occupied the journey is across all of its stops, e.g. 'manySeatsAvailable' or 'standingRoomOnly'. If omitted: Passenger load is unknown.
+Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRAIN, can also be specified in more detail for the departure on CALL level.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Delay" type="DurationType" minOccurs="0">
@@ -304,12 +310,12 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
  <!-- ==== LINE ROUTE and destination elements======================================================== -->
  <xsd:complexType name="JourneyPartInfoStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for a refernces to  JOURNEY PARTs. +SIRI v2.0  </xsd:documentation>
+   <xsd:documentation>Type for a reference to JOURNEY PART. +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="JourneyPartRef" type="xsd:normalizedString">
+   <xsd:element name="JourneyPartRef" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Refrence to a JOURNEY part. +SIRI v2.0 </xsd:documentation>
+     <xsd:documentation>Reference to a JOURNEY part. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
@@ -322,8 +328,72 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
      <xsd:documentation>Operator of JOURNEY PART. +SIRI v2.0 </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element ref="CompoundTrainRef" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to COMPOUND TRAIN that represents the train formation/composition as a whole (for this JOURNEY PART). +SIRI v2.1
+A journey does always have one or more JOURNEY PARTs for which the train formation/composition remains unchanged.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:complexType name="DatedJourneyPartInfoStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for a reference to JOURNEY PART. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="JourneyPartRef" type="xsd:normalizedString" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to a JOURNEY part.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Train Number for JOURNEY PART.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Operator of JOURNEY PART.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="CompoundTrainRef" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to COMPOUND TRAIN that represents the train formation/composition as a whole (for this JOURNEY PART). +SIRI v2.1
+A journey does always have one or more JOURNEY PARTs for which the train formation/composition remains unchanged.
+</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="JourneyPartViewGroup" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="JourneyPartViewGroup">
+  <xsd:annotation>
+   <xsd:documentation>If no JOURNEY PART reference is available (or in addition to the reference), identify it indirectly by From-/ToStopPointRef and Start-/EndTime (i.e. the scheduled times at these stops). +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="FromStopPointRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related JOURNEY PART begins.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ToStopPointRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related JOURNEY PART ends.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Time at which the related JOURNEY PART begins.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="EndTime" type="xsd:dateTime" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Time at which the related JOURNEY PART ends.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
  <!-- ======================================================================= -->
  <xsd:complexType name="TrainBlockPartStructure">
   <xsd:annotation>
@@ -386,6 +456,49 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
+   <xsd:group ref="JourneyFormationGroup"/>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:group name="DatedTrainOperationalInfoGroup">
+  <xsd:annotation>
+   <xsd:documentation>Operational information about the monitored VEHICLE JOURNEY.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="TrainBlockPart" type="TrainBlockPartStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>If a VEHICLE JOURNEY is a coupled journey, i.e. comprises several coupled BLOCKparts, there will be a separate delivery for each BLOCKp art and this element will indicate the vehicles that the journey part uses.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="DatedOperationalInfoGroup"/>
+   <xsd:element name="TrainNumbers" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>TRAIN NUMBERs for journey. +SIRI v2.0</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>TRAIN NUMBER  assigned to VEHICLE JOURNEY.  +SIRI  2.0</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="JourneyParts" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>JOURNEY PARTs making up JOURNEY +SIRIv2.0 e.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="JourneyPartInfo" type="DatedJourneyPartInfoStructure" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>Information about Parts of JOURNEY  +SIRI v2.0</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:group ref="JourneyFormationGroup"/>
   </xsd:sequence>
  </xsd:group>
  <!-- ======================================================================= -->

@@ -4,4 +4,7 @@ before_script:
   - sudo apt-get install -qq libxml2-utils
 
 script:
-  - bash xmllint-check.sh
+  - bash .travis/xmllint-check.sh
+
+after_script:
+  - bash .travis/travis-ci_git-commit.sh

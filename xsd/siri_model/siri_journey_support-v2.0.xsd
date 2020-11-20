@@ -176,6 +176,33 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
+ <xsd:complexType name="DatedVehicleJourneyIndirectRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Origin and Destination stop of a VEHICLE JOURNEY.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="OriginRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>The origin is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedDepartureTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>Departure time from origin SCHEDULED STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DestinationRef" type="StopPointRefStructure">
+    <xsd:annotation>
+     <xsd:documentation>The destination is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedArrivalTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>Arrival time at destination SCHEDULED STOP POINT.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <!-- =====VEHICLE JOURNEY identfiers=============================================================== -->
  <xsd:complexType name="ConnectingJourneyRefStructure">
   <xsd:annotation>
@@ -187,24 +214,43 @@ Rail transport, Roads and road transport
      <xsd:documentation>A reference to the DATE VEHICLE JOURNEY that the VEHICLE is making, unique with the data horizon of the service.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
+   <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>LINE Reference.</xsd:documentation>
+     <xsd:documentation>Identify a VEHICLE JOURNEY indirectly by origin and destination as well as the scheduled times at these stops.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0"/>
+   <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to LINE of journey.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to TRAIN NUMBER of journey.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to OPERATOR of journey.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>PARTICIPANT reference that identifies data producer of journey.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ===== INTERCHANGE identfiers=============================================================== -->
  <xsd:simpleType name="InterchangeCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifer of a SERVCIE JOURNEY INTERCHANGE.</xsd:documentation>
+   <xsd:documentation>Type for identifer of a SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="InterchangeRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a SERVCIE JOURNEY INTERCHANGE.</xsd:documentation>
+   <xsd:documentation>Type for reference to a SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="InterchangeCodeType"/>
@@ -212,7 +258,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="InterchangeRef" type="InterchangeRefStructure">
   <xsd:annotation>
-   <xsd:documentation> Reference to a SERVCIE JOURNEY  INTERCHANGE.</xsd:documentation>
+   <xsd:documentation> Reference to a SERVICE JOURNEY  INTERCHANGE.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->
@@ -320,6 +366,137 @@ Rail transport, Roads and road transport
    <xsd:extension base="TrainNumber"/>
   </xsd:simpleContent>
  </xsd:complexType>
+ <xsd:simpleType name="TrainElementCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a TRAIN ELEMENT. An elementary component of a TRAIN (e.g. wagon, locomotive etc.). +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="TrainElementRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="TrainElementCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="TrainElementRef" type="TrainElementRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Reference to a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="TrainComponentCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a TRAIN COMPONENT. A TRAIN ELEMENT with a specific order within a TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="TrainComponentRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="TrainComponentCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="TrainComponentRef" type="TrainComponentRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Reference to a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="TrainCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a TRAIN. An ordered sequence of TRAIN ELEMENTs or TRAIN COMPONENTs respectively. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="TrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="TrainCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="TrainRef" type="TrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Reference to a TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="CompoundTrainCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a COMPOUND TRAIN. An ordered sequence of TRAINs or TRAIN IN COMPOUND TRAINs respectively. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="CompoundTrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="CompoundTrainCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="CompoundTrainRef" type="CompoundTrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Reference to a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="TrainInCompoundTrainCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a TRAIN IN COMPOUND TRAIN. A TRAIN with a specific order within a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="TrainInCompoundTrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="TrainInCompoundTrainCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="TrainInCompoundTrainRef" type="TrainInCompoundTrainRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="EntranceToVehicleCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of an ENTRANCE TO VEHICLE, e.g. a door of a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="EntranceToVehicleRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to an ENTRANCE TO VEHICLE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="EntranceToVehicleCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <xsd:element name="EntranceToVehicleRef" type="EntranceToVehicleRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Reference to an ENTRANCE TO VEHICLE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <!-- ============================ -->
+ <xsd:group name="TrainFormationReferenceGroup">
+  <xsd:annotation>
+   <xsd:documentation>Groups together the relevant references needed in a formation. +SIRI v2.1
+Has the following uses:
+- Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. The former is ideally used in a FORMATION ASSIGNMENT, i.e. QUAY (sector) assignment, to provide the highest level of detail for passenger orientation.
+- If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is also possible. This might be used in a FORMATION CONDITION to signal a change of the train composition.
+- In case alighting/boarding data from an automatic passenger counting system is available, the respective vehicle entrances may be referenced.
+</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="CompoundTrainRef" minOccurs="0"/>
+   <xsd:element ref="TrainRef" minOccurs="0"/>
+   <xsd:element ref="TrainComponentRef" minOccurs="0"/>
+   <xsd:element ref="EntranceToVehicleRef" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
  <!-- =====MonitoredCallPoint============================================================ -->
  <xsd:simpleType name="BoardingActivityEnumeration">
   <xsd:annotation>
@@ -493,7 +670,7 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
  </xsd:simpleType>
  <xsd:simpleType name="VehicleStatusEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Classification of the State of the VEHICLE JORUNEY according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times.</xsd:documentation>
+   <xsd:documentation>Classification of the State of the VEHICLE JOURNEY according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="expected">
@@ -573,4 +750,274 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    <xsd:enumeration value="unspecified"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <!-- =====PredictionInaccuracy============================================================ -->
+ <xsd:simpleType name="PredictionInaccurateReasonEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for PredictionInaccurateReason, i.e., possible reasons for a change in prediction (in)accuracy.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="vehicleInTrafficJam">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate because of a traffic jam.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="technicalProblem">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate because of technical problems.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="dispatchAction">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate because of a despatching alteration.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="missingUpdate">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate because communication errors have prevented any updates.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>Prediction is inaccurate but the reason for an inaccurate prediction is unknown.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =====JourneyRelation============================================================ -->
+ <xsd:simpleType name="JourneyRelationTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed types of relation between JOURNEYs.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="ContinuationOfJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is a continuation of the specified RelatedJourney at the stop point given in CallInfo.
+Passengers don't need to change vehicles. The new journey is not communicated as an interchange.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ContinuedByJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is continued by the specified RelatedJourney at the stop point given in CallInfo.
+Passengers don't need to change vehicles. The new journey is not communicated as an interchange.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="SplitsIntoJourneys">
+    <xsd:annotation>
+     <xsd:documentation>The journey splits into multiple RelatedJourneys at the stop point given in CallInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ContinuationOfSplitJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is a continuation of a single RelatedJourney splitting into multiple journeys at the stop point given in CallInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="JoiningOfJourneys">
+    <xsd:annotation>
+     <xsd:documentation>The journey is the continuation of multiple RelatedJourneys joining together at the stop point given in CallInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ContinuedByJoinedJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is continued by a single RelatedJourney after joining other journeys at the stop point given in CallInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ReplacementOfJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey replaces one or more partially or fully cancelled RelatedJourneys during the JourneyPart defined or referenced in JourneyPartInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ReplacedByJourney">
+    <xsd:annotation>
+     <xsd:documentation>The partially or fully cancelled journey is replaced by one or more RelatedJourneys during the JourneyPart defined or referenced in JourneyPartInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="SupportOfJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey partially or fully supports one or more RelatedJourneys during the JourneyPart defined or referenced in JourneyPartInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="SupportedByJourney">
+    <xsd:annotation>
+     <xsd:documentation>The journey is partially or fully supported by one or more RelatedJourneys during the JourneyPart defined or referenced in JourneyPartInfo.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =====StopAssignment============================================================ -->
+ <xsd:simpleType name="QuayTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for QuayType which is used to characterise the STOP ASSIGNMENTs. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="platformGroup">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY that consists of multiple QUAYs of type 'platform'. Examples of such groups would be the lower and upper level of a station.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platform">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY that consists of at least two child QUAYs of type 'platformEdge'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platformEdge">
+    <xsd:annotation>
+     <xsd:documentation>A type of QUAY which allows direct access to a VEHICLE, e.g. an on-street bus stop, or consists of multiple child QUAYs of type 'platformSector'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="platformSector">
+    <xsd:annotation>
+     <xsd:documentation>A QUAY of type 'platformEdge' may be divided into multiple sectors, e.g. "A", "B", "C" etc., to help passengers find a specific part of a vehicle.
+The first class carriage of a TRAIN might, for example, be assigned to sector "A" of a QUAY.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="boardingPosition">
+    <xsd:annotation>
+     <xsd:documentation>A location within a QUAY from which passengers may directly board, or onto which passengers may directly alight from a VEHICLE.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =====Train Formation/Composition============================================================ -->
+ <xsd:simpleType name="TrainElementTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for TYPE OF TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="buffetCar"/>
+   <xsd:enumeration value="carriage"/>
+   <xsd:enumeration value="engine"/>
+   <xsd:enumeration value="carTransporter"/>
+   <xsd:enumeration value="sleeperCarriage"/>
+   <xsd:enumeration value="luggageVan"/>
+   <xsd:enumeration value="restaurantCarriage"/>
+   <xsd:enumeration value="other"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="TrainSizeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for TRAIN SIZE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="normal"/>
+   <xsd:enumeration value="short"/>
+   <xsd:enumeration value="long"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="TypeOfFuelEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for TYPE OF FUEL. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:normalizedString">
+   <xsd:enumeration value="petrol"/>
+   <xsd:enumeration value="diesel"/>
+   <xsd:enumeration value="naturalGas"/>
+   <xsd:enumeration value="biodiesel"/>
+   <xsd:enumeration value="electricity"/>
+   <xsd:enumeration value="hydrogen"/>
+   <xsd:enumeration value="other"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:element name="FareClass" type="FareClassEnumeration" default="unknown">
+  <xsd:annotation>
+   <xsd:documentation>Classification of FARE CLASSes. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="FareClasses" type="FareClassListOfEnumerations">
+  <xsd:annotation>
+   <xsd:documentation>List of FARE CLASSes. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="FareClassListOfEnumerations">
+  <xsd:annotation>
+   <xsd:documentation>List of values for FARE CLASSes. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:list itemType="FareClassEnumeration"/>
+ </xsd:simpleType>
+ <xsd:simpleType name="FareClassEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Values for Fare Class Facility. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>pti23_0</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="firstClass">
+    <xsd:annotation>
+     <xsd:documentation>pti23_6</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="secondClass ">
+    <xsd:annotation>
+     <xsd:documentation>pti23_7</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="thirdClass">
+    <xsd:annotation>
+     <xsd:documentation>pti23_8</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="preferente"/>
+   <xsd:enumeration value="premiumClass">
+    <xsd:annotation>
+     <xsd:documentation>pti23_6_1</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="businessClass">
+    <xsd:annotation>
+     <xsd:documentation>Business Class - pti23_10</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="standardClass">
+    <xsd:annotation>
+     <xsd:documentation>Standard class Add pti23_7</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="turista"/>
+   <xsd:enumeration value="economyClass">
+    <xsd:annotation>
+     <xsd:documentation>pti23_9</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="any"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="VehicleInFormationStatusEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for VEHICLE IN FORMATION STATUS CODE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="unknown"/>
+   <xsd:enumeration value="available"/>
+   <xsd:enumeration value="notAvailable"/>
+   <xsd:enumeration value="partiallyAvailable"/>
+   <xsd:enumeration value="added"/>
+   <xsd:enumeration value="removed"/>
+   <xsd:enumeration value="defective"/>
+   <xsd:enumeration value="closed"/>
+   <xsd:enumeration value="booked"/>
+   <xsd:enumeration value="noRestaurantService"/>
+   <xsd:enumeration value="open"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="FormationChangeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed values for FORMATION CHANGE CODE. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN">
+   <xsd:enumeration value="changedFormation"/>
+   <xsd:enumeration value="reversedFormation"/>
+   <xsd:enumeration value="missingVehicles"/>
+   <xsd:enumeration value="extraVehicles"/>
+   <xsd:enumeration value="missingTrainInCompoundTrain"/>
+   <xsd:enumeration value="extraTrainInCompoundTrain"/>
+   <xsd:enumeration value="missingFamilyCoach"/>
+   <xsd:enumeration value="missingThroughCoach"/>
+   <xsd:enumeration value="missingLowFloorCoach"/>
+   <xsd:enumeration value="missingRestaurantCoach"/>
+   <xsd:enumeration value="missingWheelchairSpaces"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <!-- =============================================================================== -->
 </xsd:schema>
