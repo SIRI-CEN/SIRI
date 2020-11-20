@@ -60,7 +60,7 @@
     </Relation>
     <Rights>Unclassified
        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
-				</Rights>
+    </Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
@@ -182,33 +182,6 @@ Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRA
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <xsd:complexType name="DatedVehicleJourneyIndirectRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Origin and Destination stop of a VEHICLE JOURNEY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="OriginRef" type="StopPointRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>The origin is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AimedDepartureTime" type="xsd:dateTime">
-    <xsd:annotation>
-     <xsd:documentation>Departure time from origin SCHEDULED STOP POINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DestinationRef" type="StopPointRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>The destination is used to help identify the VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AimedArrivalTime" type="xsd:dateTime">
-    <xsd:annotation>
-     <xsd:documentation>Arrival time at destination SCHEDULED STOP POINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
  <!-- ======================================================================= -->
  <xsd:element name="EstimatedServiceJourneyInterchange" type="EstimatedServiceJourneyInterchangeStructure">
   <xsd:annotation>
