@@ -89,7 +89,7 @@
       <li>Schema derived Derived from the Kizoom XTIS schema </li>
      </ul>
     </Source>
-    <Status>Version 2.1</Status>
+    <Status>Version 2.0</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -1179,6 +1179,16 @@ Rail transport, Roads and road transport
       <xsd:complexType>
        <xsd:sequence>
         <xsd:element name="NavigationPathRef" type="ifopt:NavigationPathRefStructure" maxOccurs="unbounded"/>
+       </xsd:sequence>
+      </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="Lines" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Used to restrict stop places to some lines</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexType>
+       <xsd:sequence>
+        <xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded"/>
        </xsd:sequence>
       </xsd:complexType>
      </xsd:element>
