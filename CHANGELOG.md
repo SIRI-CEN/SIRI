@@ -61,7 +61,7 @@
 * ReferenceContextGroup:Language: set unbounded
 * remove used element: AreaOfInterestEnumeration
              
-## 20201117 - Sync CEN Integration CR69
+## 20201120 - Sync CEN Integration CR69
 (https://github.com/SIRI-CEN/SIRI/commit/6929d799588e5f62fd6342f07882c8cfa9353e71)
 * DescriptionGroup:Language type set xsd:language
 * ImagesStructure new element
@@ -80,6 +80,8 @@
 * TextualContentStructure:Images new type ImagesStructure, moved after Internal
 * TextualContentStructure:InfoLinks new type InfoLinksStructureStructure, moved after Images
 * PublicEventTypeEnum, FacilityCategoryEnumeration, RemedyStructure: clean up 
+
+## 20201124 - clean up SX examples
 
 ## TODOs
 ### Remaining DIFFS with CEN
