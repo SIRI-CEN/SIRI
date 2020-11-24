@@ -83,14 +83,15 @@
 
 ## TODOs
 ### Remaining DIFFS with CEN
-* AffectedStopDepartureGroup:DeparturePlatformName unbounded 
+#### CEN_CR-079
 * AffectedStopPlaceStructure: new Lines element
 * AffectedLineStructure: new elements StopPoints, StopPlaces
 * AffectedStopPointStructure:StopPlaceRef / StopPlaceName / Lines
-* PublishingAction subelements / PublicationWindow in ParameterisedActionStructure
+* RoutePointTypeEnumeration
+* XML Schema upgrade
+### TBD
+* AffectedStopDepartureGroup:DeparturePlatformName unbounded
 * siri-modes-v1.1.xsd
-* SX examples 
-
-### TODO in CEN
+* SX examples
 * Delete zrescue
 * integrate *cloze-elements

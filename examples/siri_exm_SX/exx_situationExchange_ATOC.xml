@@ -16,7 +16,7 @@
   </siri:RelatedToRef>
  </siri:References>
  <siri:Source>
-  <siri:CountryRef>de</siri:CountryRef>
+  <siri:Country>de</siri:Country>
   <siri:SourceType>phone</siri:SourceType>
   <siri:Phone>01223333337654</siri:Phone>
   <siri:AgentReference>03274</siri:AgentReference>
@@ -29,7 +29,7 @@
   <siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
   <siri:EndTime>2001-12-17T10:30:47.0Z</siri:EndTime>
  </siri:ValidityPeriod>
- <siri:MiscellaneousReason>bombExplosion</siri:MiscellaneousReason>
+ <siri:TpegReason>bombExplosion</siri:TpegReason>
  <siri:Severity>severe</siri:Severity>
  <siri:Priority>3</siri:Priority>
  <siri:Audience>public</siri:Audience>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../xsd/siri.xsd">
 		<ServiceDelivery>
 				<ResponseTimestamp>2018-10-16T10:22:30+00:00</ResponseTimestamp>
 				<ProducerRef>ch:VBL</ProducerRef>
@@ -13,7 +13,7 @@
 						<SubscriptionRef>40599x2dsjmu8yjzy</SubscriptionRef>
 						<Situations>
 								<PtSituationElement>
-										<CreationTime>2017-05-28T10:22:00+02:00</CreationTime>
+										<CreationTime>2017-05-28T09:42:00+02:00</CreationTime>
 										<CountryRef>ch</CountryRef>
 										<ParticipantRef>VBL</ParticipantRef>
 										<SituationNumber>5a7cf4f0-c7a5-11e8-813f-f38697968b53</SituationNumber>
@@ -25,10 +25,10 @@
 										</Source>
 										<Progress>published</Progress>
 										<ValidityPeriod>
-												<StartTime>2017-05-28T10:10:00+02:00</StartTime>
+												<StartTime>2017-05-28T09:42:00+02:00</StartTime>
 												<EndTime>2017-05-28T17:10:00+02:00</EndTime>
 										</ValidityPeriod>
-										<MiscellaneousReason>fire</MiscellaneousReason>
+										<TpegReason>fire</TpegReason>
 										<ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
 										<ReasonName xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonName>
 										<Priority>3</Priority>
@@ -59,7 +59,7 @@
 																		<AffectedNetwork>
 																				<AffectedLine>
 																						<LineRef>ch:vbl:VBL006</LineRef>
-																						<PublishedLineName>6</PublishedLineName>
+																						<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																						<Destinations>
 																								<StopPointRef>ch:vbl:2507::01</StopPointRef>
 																								<StopPointName xml:lang="DE">Büttenhalde</StopPointName>
@@ -93,7 +93,7 @@
 																				</AffectedLine>
 																				<AffectedLine>
 																						<LineRef>ch:vbl:VBL006</LineRef>
-																						<PublishedLineName>6</PublishedLineName>
+																						<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																						<Destinations>
 																								<StopPointRef>ch:vbl:601:01</StopPointRef>
 																								<StopPointName xml:lang="DE">Matthof</StopPointName>
@@ -132,7 +132,7 @@
 																				</AffectedLine>
 																				<AffectedLine>
 																						<LineRef>ch:vbl:VBL008</LineRef>
-																						<PublishedLineName>8</PublishedLineName>
+																						<PublishedLineName xml:lang="DE">8</PublishedLineName>
 																						<Destinations>
 																								<StopPointRef>ch:vbl:620:01</StopPointRef>
 																								<StopPointName xml:lang="DE">Würzenbach</StopPointName>
@@ -166,7 +166,7 @@
 																				</AffectedLine>
 																				<AffectedLine>
 																						<LineRef>ch:vbl:VBL008</LineRef>
-																						<PublishedLineName>8</PublishedLineName>
+																						<PublishedLineName xml:lang="DE">8</PublishedLineName>
 																						<Destinations>
 																								<StopPointRef>ch:vbl:801:01</StopPointRef>
 																								<StopPointName xml:lang="DE">Hirtenhof</StopPointName>
@@ -218,7 +218,7 @@
 																		<AffectedNetwork>
 																				<AffectedLine>
 																						<LineRef>ch:vbl:VBL024</LineRef>
-																						<PublishedLineName>24</PublishedLineName>
+																						<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																						<Destinations>
 																								<StopPointRef>ch:vbl:2433:01</StopPointRef>
 																								<StopPointName xml:lang="DE">Tschädigen</StopPointName>
@@ -286,7 +286,7 @@
 																				</AffectedLine>
 																				<AffectedLine>
 																						<LineRef>ch:vbl:VBL024</LineRef>
-																						<PublishedLineName>24</PublishedLineName>
+																						<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																						<Destinations>
 																								<StopPointRef>ch:vbl:119:13</StopPointRef>
 																								<StopPointName xml:lang="DE">Bahnhof</StopPointName>
@@ -364,7 +364,7 @@
 												</Consequence>
 										</Consequences>
 										<PublishingActions>
-												<PublishToDisplayAction>
+												<PublishByPerspectiveAction>
 														<PublishingAction>
 																<PublicationScope>
 																		<ScopeType>route</ScopeType>
@@ -373,7 +373,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
 																												<DirectionName>Büttenenhalde</DirectionName>
@@ -381,43 +381,43 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:601::01</StopPointRef>
-																														<StopPointName>Matthof</StopPointName>
+																														<StopPointName xml:lang="DE">Matthof</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:602::01</StopPointRef>
-																														<StopPointName>Schönbühl</StopPointName>
+																														<StopPointName xml:lang="DE">Schönbühl</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:603::03</StopPointRef>
-																														<StopPointName>Wartegg</StopPointName>
+																														<StopPointName xml:lang="DE">Wartegg</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:604::01</StopPointRef>
-																														<StopPointName>Eisfeldstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Eisfeldstrasse</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:605::01</StopPointRef>
-																														<StopPointName>Weinbergli</StopPointName>
+																														<StopPointName xml:lang="DE">Weinbergli</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:606::01</StopPointRef>
-																														<StopPointName>Werkhofstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Werkhofstrasse</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:407::02</StopPointRef>
-																														<StopPointName>Bundesplatz</StopPointName>
+																														<StopPointName xml:lang="DE">Bundesplatz</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:118::01</StopPointRef>
-																														<StopPointName>Kantonalbank (C)</StopPointName>
+																														<StopPointName xml:lang="DE">Kantonalbank (C)</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:119::02</StopPointRef>
-																														<StopPointName>Bahnhof (B)</StopPointName>
+																														<StopPointName xml:lang="DE">Bahnhof (B)</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:120:01</StopPointRef>
-																														<StopPointName>Schwanenplatz</StopPointName>
+																														<StopPointName xml:lang="DE">Schwanenplatz</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -426,9 +426,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0030</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0260</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>vehicleJourney</Perspective>
@@ -447,19 +447,19 @@
 																						<ConsequenceText xml:lang="EN">Line 6 cancelled between Luzernerhof and Brüelstrasse.</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 und 73 (ohne Halte zwischen Wey und Brühlstrasse) oder die normal verkehrende Linie 14 (mit Halten) und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24, 73 (direct between Wey and Brühlstrasse) or the regular line 14 services (all stop) and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 (ohne Halte zwischen Wey und Brüelstrasse) oder die normal verkehrenden Linien 14 und 73 und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24 (direct between Wey and Brühlstrasse) or the regular line 14 or 73 services and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0040</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0270</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -478,12 +478,12 @@
 																						<ConsequenceText xml:lang="EN">Line 6 cancelled between Luzernerhof and Brüelstrasse.</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 und 73 (ohne Halte zwischen Wey und Brühlstrasse) oder die normal verkehrende Linie 14 (mit Halten) und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24, 73 (direct between Wey and Brühlstrasse) or the regular line 14 services (all stop) and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Reisende nach Brüelstrasse und weiter benützen die umgeleitete Linie 24 (ohne Halte zwischen Wey und Brüelstrasse) oder die normal verkehrenden Linien 14 und 73 und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24 (direct between Wey and Brühlstrasse) or the regular services of line 14 or 73 and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																				<RemarkContent>
 																						<RemarkText xml:lang="DE">Weitere Informationen erhalten Sie unter www.vbl.ch/stoerung/haldenstrasse</RemarkText>
@@ -505,15 +505,11 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-																												<DirectionName>Büttenenhalde</DirectionName>
-																										</Direction>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:121::02</StopPointRef>
-																														<StopPointName>Luzernerhof (D)</StopPointName>
+																														<StopPointName xml:lang="DE">Luzernerhof (B)</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -522,12 +518,12 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0050</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0280</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
-																		<Perspective>vehicleJourney</Perspective>
+																		<Perspective>stopPoint</Perspective>
 																		<TextualContent>
 																				<TextualContentSize>L</TextualContentSize>
 																				<SummaryContent>
@@ -543,8 +539,8 @@
 																						<ConsequenceText xml:lang="EN">Line 6 turns here</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Reisende zur Brühlstrasse und weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte zwischen Wey und Brühlstrasse) oder die normale verkehrende Linie 14 (mit Halten) ab Kante F (Wey) und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24, 73, additonal buses (direct between Wey and Brühlstrasse) or the regular line 14 services (all stop) from platform F (Wey) and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Reisende zur Brüelstrasse und weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte zwischen Wey und Brüelstrasse) oder die normale verkehrende Linie 14 (mit Halten) ab Kante F (Wey) oder die Linie 73 ab Kante D und steigen an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Travellers to Brüelstrasse or further use the diverted line 24, additonal buses (direct between Wey and Brüelstrasse), the regular services of line 14 (all stops) from platform F (Way) or line 73 from platform D and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -557,29 +553,29 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-																												<DirectionName>Büttenenhalde</DirectionName>
-																										</Direction>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:121::01</StopPointRef>
-																														<StopPointName>Luzernerhof (C)</StopPointName>
+																														<StopPointName xml:lang="DE">Luzernerhof (C)</StopPointName>
+																												</AffectedStopPoint>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:121::02</StopPointRef>
+																														<StopPointName xml:lang="DE">Luzernerhof (D)</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL008:A</DirectionRef>
-																												<DirectionName>Würzenbach</DirectionName>
-																										</Direction>
+																										<PublishedLineName xml:lang="DE">8</PublishedLineName>
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:121::01</StopPointRef>
-																														<StopPointName>Luzernerhof (C)</StopPointName>
+																														<StopPointName xml:lang="DE">Luzernerhof (C)</StopPointName>
+																												</AffectedStopPoint>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:121::02</StopPointRef>
+																														<StopPointName xml:lang="DE">Luzernerhof (D)</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -588,9 +584,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0060</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0290</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -609,12 +605,12 @@
 																						<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleiteten Linien 24 und 73, die normal verkehrende Linie 14 oder den Entlastungsbus ab Kante F (Wey) und steigen Sie an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Transfer advice line 6 and 8: Use diverted line 24, 73, the regular line 14 services or the additional buses to Brüelstrasse and transfer back to line 6 and 8. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleitete Linie 24, die normal verkehrende Linie 14 und den Entlastungsbus ab Kante F (Wey) oder die Linie 73 ab Kante D und steigen Sie an der Brüelstrasse wieder um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Transfer advice line 6 and 8: To Brüelstrasse use diverted line 24, the regular line 14 services or the additional buses from platform F (Wey) or line 73 from platform D and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																				<RemarkContent>
 																						<RemarkText xml:lang="DE">Weitere Informationen erhalten Sie beim Auskunftspersonal.</RemarkText>
@@ -629,54 +625,43 @@
 																		<Affects>
 																				<Networks>
 																						<AffectedNetwork>
-																								<!-- Müssen Entlastungsbusse separat referenziert werden? -->
+																								<AffectedLine>
+																										<LineRef>ch:vbl:Entlastungsbusse</LineRef>
+																										<StopPoints>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:715::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Wey</StopPointName>
+																												</AffectedStopPoint>
+																										</StopPoints>
+																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL014</LineRef>
-																										<PublishedLineName>14</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL014:A</DirectionRef>
-																												<DirectionName>Brüelstrasse</DirectionName>
-																										</Direction>
+																										<PublishedLineName xml:lang="DE">14</PublishedLineName>
 																										<StopPoints>
 																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:715::02</StopPointRef>
-																														<StopPointName>Wey</StopPointName>
+																														<StopPointRef>ch:vbl:715::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Wey</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL024</LineRef>
-																										<PublishedLineName>24</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL024:A</DirectionRef>
-																												<DirectionName>Tschädingen</DirectionName>
-																										</Direction>
+																										<LineRef>ch:vbl:VBL24</LineRef>
+																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																										<StopPoints>
 																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:715::02</StopPointRef>
-																														<StopPointName>Wey</StopPointName>
+																														<StopPointRef>ch:vbl:715::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Wey</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
-																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL073</LineRef>
-																										<PublishedLineName>73</PublishedLineName>
-																										<StopPoints>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:715::02</StopPointRef>
-																														<StopPointName>Wey</StopPointName>
-																												</AffectedStopPoint>
-																										</StopPoints>
-																								</AffectedLine>
-																								<!-- Prüfen ob Texte für beide Richtungen Identisch ist -->
 																						</AffectedNetwork>
 																				</Networks>
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0070</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0300</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -691,16 +676,16 @@
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
 																				<ConsequenceContent>
-																						<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8; Umleitung der Linien 24 und 73</ConsequenceText>
-																						<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted; Line 24 and 73 diverted</ConsequenceText>
+																						<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8; Umleitung der Linien 24.</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted; Line 24 diverted.</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Benutzen Sie die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte bis Brühlstrasse) oder die normal verkehrende Linie 14 (mit Halten) bis Brüelstrasse.</AdviceText>
-																						<AdviceText xml:lang="EN">Use the diverted line 24, 73, additional buses (direct to Brühlstrasse) or the regular line 14 services (all stops) to Brüelstrasse.</AdviceText>
+																						<AdviceText xml:lang="DE">Benutzen Sie die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte bis Brüelstrasse) oder die normal verkehrenden Linie 14 (mit Halten) und 73 bis Brüelstrasse.</AdviceText>
+																						<AdviceText xml:lang="EN">Use diverted line 24, additional buses (direct to Brüelstrasse), regular services of line 14 (all stops) or 73 to Brüelstrasse.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -713,7 +698,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
 																												<DirectionName>Büttenenhalde</DirectionName>
@@ -721,13 +706,13 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:121::02</StopPointRef>
-																														<StopPointName>Luzernerhof (D)</StopPointName>
+																														<StopPointName xml:lang="DE">Luzernerhof (D)</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">08</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL008:A</DirectionRef>
 																												<DirectionName>Würzenbach</DirectionName>
@@ -735,7 +720,7 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:121::02</StopPointRef>
-																														<StopPointName>Luzernerhof (D)</StopPointName>
+																														<StopPointName xml:lang="DE">Luzernerhof (D)</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -744,9 +729,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0130</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0370</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -761,16 +746,16 @@
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
 																				<ConsequenceContent>
-																						<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen bis Brüelstrasse aus. Linie 24 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 7 Min. längere Fahrzeit. Linie 73 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 6 Min. längere Fahrzeit.</ConsequenceText>
-																						<ConsequenceText xml:lang="EN">Line 6 and 8 services cancelled to Brüelstrasse. Line 24 services diverted between Luzernerhof and Brüelstrasse via St. Anna. Approx. 7 min. delay. Line 73 services diverted between Luzernerhof and Brüelstrasse. Approx. 6 min delay.</ConsequenceText>
+																						<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen bis Brüelstrasse aus. Linie 24 wird zwischen Luzernerhof und Brüel via St. Anna umgeleitet. Ca. 7 Min. längere Fahrzeit. Linie 73 verkehrt wieder normal.</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Line 6 and 8 cancelled services to Brüelstrasse. Line 24 services diverted between Luzernerhof and Brüel via St. Anna. Approx. 7 min delay. Line 73 back to regular service.</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte zwischen Wey und Brühlstrasse) oder die normale verkehrende Linie 14 (mit Halten) ab Kante F (Wey) und steigen Sie an der Brüelstrasse um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Transfer advice for line 6 and 8: To Brüelstrasse use diverted line 24, 73, additional buses (direct between Wey and Brühlstrasse) or the regular line 14 services (all stops) from platform F (Way) and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte zwischen Wey und Brüelstrasse) oder die normale verkehrende Linie 14 (mit Halten) ab Kante F (Wey) oder die Linie 73 ab Kante D und steigen Sie an der Brüelstrasse um. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Transfer advice for line 6 and 8: Use diverted line 73, additonal buses (direct between Wey and Brüelstrasse), the regular line 14 services (all stops) from platform F (Wey) or line 73 from platform D and transfer back at Brüelstrasse. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -783,7 +768,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
 																												<DirectionName>Büttenenhalde</DirectionName>
@@ -791,25 +776,77 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:621::01</StopPointRef>
-																														<StopPointName>Casino-Palace</StopPointName>
+																														<StopPointName xml:lang="DE">Casino-Palace</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:615::01</StopPointRef>
-																														<StopPointName>Europe</StopPointName>
+																														<StopPointName xml:lang="DE">Europe</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:616::01</StopPointRef>
-																														<StopPointName>Dietschiberg</StopPointName>
+																														<StopPointName xml:lang="DE">Dietschiberg</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:617::01</StopPointRef>
-																														<StopPointName>Verkehrshaus</StopPointName>
+																														<StopPointName xml:lang="DE">Verkehrshaus</StopPointName>
+																												</AffectedStopPoint>
+																										</StopPoints>
+																								</AffectedLine>
+																								<AffectedLine>
+																										<LineRef>ch:vbl:VBL008</LineRef>
+																										<PublishedLineName xml:lang="DE">8</PublishedLineName>
+																										<Direction>
+																												<DirectionRef>ch:vbl:VBL008:A</DirectionRef>
+																												<DirectionName>Würzenbach</DirectionName>
+																										</Direction>
+																										<StopPoints>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:621::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Casino-Palace</StopPointName>
+																												</AffectedStopPoint>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:615::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Europe</StopPointName>
+																												</AffectedStopPoint>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:616::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Dietschiberg</StopPointName>
+																												</AffectedStopPoint>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:617::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Verkehrshaus</StopPointName>
+																												</AffectedStopPoint>
+																										</StopPoints>
+																								</AffectedLine>
+																								<AffectedLine>
+																										<LineRef>ch:vbl:VBL024</LineRef>
+																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
+																										<Direction>
+																												<DirectionRef>ch:vbl:VBL024:A</DirectionRef>
+																												<DirectionName>Tschädingen</DirectionName>
+																										</Direction>
+																										<StopPoints>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:621::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Casino-Palace</StopPointName>
+																												</AffectedStopPoint>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:615::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Europe</StopPointName>
+																												</AffectedStopPoint>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:616::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Dietschiberg</StopPointName>
+																												</AffectedStopPoint>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:617::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Verkehrshaus</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:B</DirectionRef>
 																												<DirectionName>Matthof</DirectionName>
@@ -817,55 +854,29 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:617::02</StopPointRef>
-																														<StopPointName>Verkehrshaus</StopPointName>
+																														<StopPointName xml:lang="DE">Verkehrshaus</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:616::02</StopPointRef>
-																														<StopPointName>Dietschiberg</StopPointName>
+																														<StopPointName xml:lang="DE">Dietschiberg</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:615::02</StopPointRef>
-																														<StopPointName>Europe</StopPointName>
+																														<StopPointName xml:lang="DE">Europe</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:621::02</StopPointRef>
-																														<StopPointName>Casino-Palace</StopPointName>
+																														<StopPointName xml:lang="DE">Casino-Palace</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:622::01</StopPointRef>
-																														<StopPointName>Haldensteig</StopPointName>
+																														<StopPointName xml:lang="DE">Haldensteig</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL008:A</DirectionRef>
-																												<DirectionName>Würzenbach</DirectionName>
-																										</Direction>
-																										<StopPoints>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:621::01</StopPointRef>
-																														<StopPointName>Casino-Palace</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:615::01</StopPointRef>
-																														<StopPointName>Europe</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:616::01</StopPointRef>
-																														<StopPointName>Dietschiberg</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:617::01</StopPointRef>
-																														<StopPointName>Verkehrshaus</StopPointName>
-																												</AffectedStopPoint>
-																										</StopPoints>
-																								</AffectedLine>
-																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">8</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL008:B</DirectionRef>
 																												<DirectionName>Hirtenhof</DirectionName>
@@ -873,55 +884,29 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:617::02</StopPointRef>
-																														<StopPointName>Verkehrshaus</StopPointName>
+																														<StopPointName xml:lang="DE">Verkehrshaus</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:616::02</StopPointRef>
-																														<StopPointName>Dietschiberg</StopPointName>
+																														<StopPointName xml:lang="DE">Dietschiberg</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:615::02</StopPointRef>
-																														<StopPointName>Europe</StopPointName>
+																														<StopPointName xml:lang="DE">Europe</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:621::02</StopPointRef>
-																														<StopPointName>Casino-Palace</StopPointName>
+																														<StopPointName xml:lang="DE">Casino-Palace</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:622::01</StopPointRef>
-																														<StopPointName>Haldensteig</StopPointName>
+																														<StopPointName xml:lang="DE">Haldensteig</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL024</LineRef>
-																										<PublishedLineName>24</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL024:A</DirectionRef>
-																												<DirectionName>Tschädingen</DirectionName>
-																										</Direction>
-																										<StopPoints>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:621::01</StopPointRef>
-																														<StopPointName>Casino-Palace</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:615::01</StopPointRef>
-																														<StopPointName>Europe</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:616::01</StopPointRef>
-																														<StopPointName>Dietschiberg</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:617::01</StopPointRef>
-																														<StopPointName>Verkehrshaus</StopPointName>
-																												</AffectedStopPoint>
-																										</StopPoints>
-																								</AffectedLine>
-																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL024</LineRef>
-																										<PublishedLineName>24</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL024:B</DirectionRef>
 																												<DirectionName>Bahnhof</DirectionName>
@@ -929,65 +914,23 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:617::02</StopPointRef>
-																														<StopPointName>Verkehrshaus</StopPointName>
+																														<StopPointName xml:lang="DE">Verkehrshaus</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:616::02</StopPointRef>
-																														<StopPointName>Dietschiberg</StopPointName>
+																														<StopPointName xml:lang="DE">Dietschiberg</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:615::02</StopPointRef>
-																														<StopPointName>Europe</StopPointName>
+																														<StopPointName xml:lang="DE">Europe</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:621::02</StopPointRef>
-																														<StopPointName>Casino-Palace</StopPointName>
+																														<StopPointName xml:lang="DE">Casino-Palace</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:622::01</StopPointRef>
-																														<StopPointName>Haldensteig</StopPointName>
-																												</AffectedStopPoint>
-																										</StopPoints>
-																								</AffectedLine>
-																								<AffectedLine>
-																										<LineRef>ch:pb:PB073</LineRef>
-																										<PublishedLineName>73</PublishedLineName>
-																										<StopPoints>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:621::01</StopPointRef>
-																														<StopPointName>Casino-Palace</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:615::01</StopPointRef>
-																														<StopPointName>Europe</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:616::01</StopPointRef>
-																														<StopPointName>Dietschiberg</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:617::01</StopPointRef>
-																														<StopPointName>Verkehrshaus</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:617::02</StopPointRef>
-																														<StopPointName>Verkehrshaus</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:616::02</StopPointRef>
-																														<StopPointName>Dietschiberg</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:615::02</StopPointRef>
-																														<StopPointName>Europe</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:621::02</StopPointRef>
-																														<StopPointName>Casino-Palace</StopPointName>
-																												</AffectedStopPoint>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:622::01</StopPointRef>
-																														<StopPointName>Haldensteig</StopPointName>
+																														<StopPointName xml:lang="DE">Haldensteig</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -996,9 +939,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0140</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0380</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -1013,16 +956,16 @@
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
 																				<ConsequenceContent>
-																						<ConsequenceText xml:lang="DE">Keine Bedienung der Linien 6, 8, 24 und 73 zwischen Luzernerhof und Brüelstrasse</ConsequenceText>
-																						<ConsequenceText xml:lang="EN">No service for line 6, 8, 24 and 73 between Luzernerhof and Brüelstrasse</ConsequenceText>
+																						<ConsequenceText xml:lang="DE">Keine Bedienung der Linien 6, 8 und 24 zwischen Luzernerhof und Brüelstrasse</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Line 6, 8 and 24 no service between Luzernerhof and Brüelstrasse</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
 																						<AdviceText xml:lang="DE">Reisende zwischen Luzernerhof und Brüelstrasse erreichen ihr Ziel nur zu Fuß. Ab Luzernerhof und Brüelstrasse verkehren die Linie auf den normalen Fahrwegen.</AdviceText>
 																						<AdviceText xml:lang="EN">Travellers between Luzernerhof and Brüelstrasse can only reach their destination on foot. From Luzernerhof and Brüelstrasse lines will run on regular routes.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																				<RemarkContent>
 																						<RemarkText xml:lang="DE">Fällt aus</RemarkText>
@@ -1039,7 +982,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:014</LineRef>
-																										<PublishedLineName>14</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">14</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL014:A</DirectionRef>
 																												<DirectionName>Brüelstrasse</DirectionName>
@@ -1047,7 +990,7 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:618::01</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Brüelstrasse</StopPointName>
 																														<StopCondition>destination</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1057,9 +1000,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0080</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0310</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>vehicleJourney</Perspective>
@@ -1073,6 +1016,10 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Die Fahrt endet hier</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Service terminates here</ConsequenceText>
+																				</ConsequenceContent>
 																				<AdviceContent>
 																						<AdviceText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu Fuß.</AdviceText>
 																						<AdviceText xml:lang="EN">Board line 6 and 8 from platform C. Travellers to Verkehrshaus and Dietschiberg can only reach their destination on foot.</AdviceText>
@@ -1088,30 +1035,15 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:024</LineRef>
-																										<PublishedLineName>24</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																										<Direction>
-																												<DirectionRef>ch:vbl:VBL024:A</DirectionRef>
-																												<DirectionName>Tschädingen</DirectionName>
-																										</Direction>
-																										<StopPoints>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:618::01</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
-																														<StopCondition>intermediate</StopCondition>
-																												</AffectedStopPoint>
-																										</StopPoints>
-																								</AffectedLine>
-																								<AffectedLine>
-																										<LineRef>ch:pb:073</LineRef>
-																										<PublishedLineName>73</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:pb:PB073:A</DirectionRef>
-																												<DirectionName>Rotkreuz</DirectionName>
+																												<DirectionRef>ch:vbl:VBL014:A</DirectionRef>
+																												<DirectionName>Brüelstrasse</DirectionName>
 																										</Direction>
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:618::04</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Brüelstrasse</StopPointName>
 																														<StopCondition>destination</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1121,9 +1053,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0090</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0320</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>vehicleJourney</Perspective>
@@ -1137,10 +1069,10 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Die Umleitung endet hier</DescriptionText>
-																						<DescriptionText xml:lang="EN">Diversion ends here</DescriptionText>
-																				</DescriptionContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Die Umleitung endet hier</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Diversion ends here</ConsequenceText>
+																				</ConsequenceContent>
 																				<AdviceContent>
 																						<AdviceText xml:lang="DE">Umstieg auf Linie 6 und 8: Einstieg bei Kante C. Reisende nach Verkehrshaus und Dietschiberg erreichen ihr Ziel nur zu Fuß.</AdviceText>
 																						<AdviceText xml:lang="EN">Transfer to line 6 and 8: Board from platform C. Travellers to Verkehrshaus and Dietschiberg can only reach their destination on foot.</AdviceText>
@@ -1156,21 +1088,21 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">06</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-																												<DirectionName>Büttenhalde</DirectionName>
+																												<DirectionName>Büttenenhalde</DirectionName>
 																										</Direction>
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:618::03</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Brüelstrasse</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">08</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL008:A</DirectionRef>
 																												<DirectionName>Würzenbach</DirectionName>
@@ -1178,7 +1110,7 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:618::03</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Brüelstrasse</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -1187,9 +1119,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0100</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0330</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -1203,18 +1135,14 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Normale Bedienung der Linien 6 bis Büttenenhalde und 8 bis Würzenbach.</DescriptionText>
-																						<DescriptionText xml:lang="EN">Regular line 6 services to Büttenenhalde and 8 to Würzenbach.</DescriptionText>
-																				</DescriptionContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Normale Bedienung der Linien 6 bis Büttenenhalde und 8 bis Würzenbach. Es muss mit Verspätungen gerechnet werden.</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Regular service on line 6 to Büttenenhalde and 8 to Würzenbach. Expect delays.</ConsequenceText>
+																				</ConsequenceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
-																				<RemarkContent>
-																						<RemarkText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</RemarkText>
-																						<RemarkText xml:lang="EN">Expect delays.</RemarkText>
-																				</RemarkContent>
 																		</TextualContent>
 																</PassengerInformationAction>
 														</PublishingAction>
@@ -1226,70 +1154,59 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
 																												<DirectionName>Büttenhalde</DirectionName>
 																										</Direction>
 																										<StopPoints>
-																												<!-- StopPoints hier, da Kombination aus den Stops + beide Linien, oder Stops in Linien doppelt auflisten? -->
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:618::03</StopPointRef>
-																														<StopPointName>Brüelstrasse(B)</StopPointName>
-																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2502::01</StopPointRef>
-																														<StopPointName>Giseli</StopPointName>
-																														<StopCondition>intermediate</StopCondition>
+																														<StopPointName xml:lang="DE">Giseli</StopPointName>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2503::01</StopPointRef>
-																														<StopPointName>Oberseeburg</StopPointName>
+																														<StopPointName xml:lang="DE">Oberseeburg</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2504::01</StopPointRef>
-																														<StopPointName>Oberseeburghöhe</StopPointName>
+																														<StopPointName xml:lang="DE">Oberseeburghöhe</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2505::01</StopPointRef>
-																														<StopPointName>Eggen</StopPointName>
+																														<StopPointName xml:lang="DE">Eggen</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2506::01</StopPointRef>
-																														<StopPointName>Büttenen</StopPointName>
+																														<StopPointName xml:lang="DE">Büttenen</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2507::01</StopPointRef>
-																														<StopPointName>Büttenenhalde</StopPointName>
+																														<StopPointName xml:lang="DE">Büttenenhalde</StopPointName>
 																														<StopCondition>destination</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">8</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL008:A</DirectionRef>
 																												<DirectionName>Würzenbach</DirectionName>
 																										</Direction>
 																										<StopPoints>
-																												<!-- StopPoints hier, da Kombination aus den Stops + beide Linien, oder Stops in Linien doppelt auflisten? -->
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:618::03</StopPointRef>
-																														<StopPointName>Brüelstrasse(B)</StopPointName>
-																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:619::01</StopPointRef>
-																														<StopPointName>Würzenbachmatte</StopPointName>
+																														<StopPointName xml:lang="DE">Würzenbachmatte</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:620::01</StopPointRef>
-																														<StopPointName>Würzenbach</StopPointName>
+																														<StopPointName xml:lang="DE">Würzenbach</StopPointName>
 																														<StopCondition>destination</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1299,9 +1216,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0110</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0340</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -1315,14 +1232,14 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Expect delays.</ConsequenceText>
+																				</ConsequenceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
-																				<RemarkContent>
-																						<RemarkText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</RemarkText>
-																						<RemarkText xml:lang="EN">Expect delays.</RemarkText>
-																				</RemarkContent>
 																		</TextualContent>
 																</PassengerInformationAction>
 														</PublishingAction>
@@ -1334,7 +1251,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:Entlastungsbus</LineRef>
-																										<PublishedLineName>Entlastungsbus</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">Entlastungsbus</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
 																												<DirectionName>Büttenhalde</DirectionName>
@@ -1342,7 +1259,7 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:618::04</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Brüelstrasse</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -1351,8 +1268,8 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0120</ActionRef>
+																		
+																		<ActionRef>0350</ActionRef>
 																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
@@ -1386,7 +1303,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:B</DirectionRef>
 																												<DirectionName>Matthof</DirectionName>
@@ -1394,32 +1311,32 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2507::01</StopPointRef>
-																														<StopPointName>Büttenenhalde</StopPointName>
+																														<StopPointName xml:lang="DE">Büttenenhalde</StopPointName>
 																														<StopCondition>origin</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2506::02</StopPointRef>
-																														<StopPointName>Büttenen</StopPointName>
+																														<StopPointName xml:lang="DE">Büttenen</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2505::02</StopPointRef>
-																														<StopPointName>Eggen</StopPointName>
+																														<StopPointName xml:lang="DE">Eggen</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2504::02</StopPointRef>
-																														<StopPointName>Oberseeburghöhe</StopPointName>
+																														<StopPointName xml:lang="DE">Oberseeburghöhe</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2503::02</StopPointRef>
-																														<StopPointName>Oberseeburg</StopPointName>
+																														<StopPointName xml:lang="DE">Oberseeburg</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2502::02</StopPointRef>
-																														<StopPointName>Giseli</StopPointName>
+																														<StopPointName xml:lang="DE">Giseli</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1429,9 +1346,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0150</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0390</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>vehicleJourney</Perspective>
@@ -1450,12 +1367,12 @@
 																						<ConsequenceText xml:lang="EN">Line 6 cancelled between Brüelstrasse and Luzernerhof.</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Reisende nach Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte zwischen Brühlstrasse und Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) bis Luzernerhof und steigen dort wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Travellers to Luzernerhof or further use the diverted lines 24, 73 and the additional bus (direct between Brühlstrasse and Luzernerhof) or the regular line 14 services (all stop) to Luzernhof and transfer there. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Reisende nach Luzernerhof oder weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte zwischen Brüelstrasse und Luzernerhof) oder die normal verkehrenden Linien 14 (mit Halten) und 73 bis Luzernerhof und steigen dort wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Travellers to Luzernerhof or further use the diverted line 24, additional buses (direct between Brühlstrasse and Luzernerhof), the regular line 14 services (all stop) or line 73 to Luzernhof and transfer there. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -1468,7 +1385,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:B</DirectionRef>
 																												<DirectionName>Matthof</DirectionName>
@@ -1476,32 +1393,32 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2507::01</StopPointRef>
-																														<StopPointName>Büttenenhalde</StopPointName>
+																														<StopPointName xml:lang="DE">Büttenenhalde</StopPointName>
 																														<StopCondition>origin</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2506::02</StopPointRef>
-																														<StopPointName>Büttenen</StopPointName>
+																														<StopPointName xml:lang="DE">Büttenen</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2505::02</StopPointRef>
-																														<StopPointName>Eggen</StopPointName>
+																														<StopPointName xml:lang="DE">Eggen</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2504::02</StopPointRef>
-																														<StopPointName>Oberseeburghöhe</StopPointName>
+																														<StopPointName xml:lang="DE">Oberseeburghöhe</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2503::02</StopPointRef>
-																														<StopPointName>Oberseeburg</StopPointName>
+																														<StopPointName xml:lang="DE">Oberseeburg</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:2502::02</StopPointRef>
-																														<StopPointName>Giseli</StopPointName>
+																														<StopPointName xml:lang="DE">Giseli</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1511,9 +1428,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0160</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0400</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -1532,12 +1449,12 @@
 																						<ConsequenceText xml:lang="EN">Line 6 cancelled between Brüelstrasse and Luzernerhof.</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Reisende nach Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte zwischen Brühlstrasse und Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) bis Luzernerhof und steigen dort wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Travellers to Luzernerhof or further use the diverted lines 24, 73 and the additional bus (direct between Brühlstrasse and Luzernerhof) or the regular line 14 services (all stop) to Luzernhof and transfer there. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Reisende nach Luzernerhof oder weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte zwischen Brüelstrasse und Luzernerhof) oder die normal verkehrenden Linien 14 (mit Halten) und 73 bis Luzernerhof und steigen dort wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Travellers to Luzernerhof or further use the diverted line 24, the additional buses (direct between Brühlstrasse and Luzernerhof), the regular line 14 services (all stop) or line 73 to Luzernhof and transfer there. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -1550,7 +1467,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:B</DirectionRef>
 																												<DirectionName>Matthof</DirectionName>
@@ -1558,8 +1475,7 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:618::02</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
-																														<StopCondition>destination</StopCondition>
+																														<StopPointName xml:lang="DE">Brüelstrasse</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -1568,9 +1484,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0170</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0410</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>vehicleJourney</Perspective>
@@ -1584,13 +1500,13 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Linie 6 wendet hier</DescriptionText>
-																						<DescriptionText xml:lang="EN">Line 6 turns here</DescriptionText>
-																				</DescriptionContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Linie 6 wendet hier</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Line 6 turns here</ConsequenceText>
+																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Reisende zum Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) ab Kante D und steigen beim Luzernerhof wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Travellers to Luzernerhof or further use the diverted lines 24, 73, addintionl buses (direct to Luzernerhof) or the regular line 14 services (all stops) from platform D and transfer back to line 6 and 8 at Luzernerhof. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Reisende zum Luzernerhof oder weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) oder 73 ab Kante D und steigen beim Luzernerhof wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Travellers to Luzernerhof or further use the diverted line 24, addintional buses (direct to Luzernerhof), the regular line 14 services (all stops) or line 73 from platform D and transfer back to Luzernerhof. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -1603,7 +1519,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:B</DirectionRef>
 																												<DirectionName>Matthof</DirectionName>
@@ -1611,23 +1527,7 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:618::02</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
-																														<StopCondition>destination</StopCondition>
-																												</AffectedStopPoint>
-																										</StopPoints>
-																								</AffectedLine>
-																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL008:B</DirectionRef>
-																												<DirectionName>Hirtenhof</DirectionName>
-																										</Direction>
-																										<StopPoints>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:618::02</StopPointRef>
-																														<StopPointName>Brüelstrasse</StopPointName>
-																														<StopCondition>destination</StopCondition>
+																														<StopPointName xml:lang="DE">Brüelstrasse</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -1636,9 +1536,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0180</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0420</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -1652,14 +1552,18 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Unterbruch der Linien 6 und 8</DescriptionText>
-																						<DescriptionText xml:lang="EN">Line 6 and 8 disrupted</DescriptionText>
-																				</DescriptionContent>
 																				<ConsequenceContent>
-																						<ConsequenceText xml:lang="DE">Reisende zum Luzernerhof oder weiter benützen die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) ab Kante D und steigen beim Luzernerhof wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</ConsequenceText>
-																						<ConsequenceText xml:lang="EN">Travellers to Luzernerhof or further use the diverted lines 24, 73, addintionl buses (direct to Luzernerhof) or the regular line 14 services (all stops) from platform D and transfer back to line 6 and 8 at Luzernerhof. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</ConsequenceText>
+																						<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted</ConsequenceText>
 																				</ConsequenceContent>
+																				<AdviceContent>
+																						<AdviceText xml:lang="DE">Reisende zum Luzernerhof oder weiter benützen die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte bis Luzernerhof) ab Kante D oder die normal verkehrenden Linien 14 (mit Halten) ab Kante D und 73 ab Kante C und steigen beim Luzernerhof wieder um. Reisende nach Verkehrshaus, Dietschiberg, Europe, Casino-Palace und Haldensteig erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Travellers to Luzernerhof or further use the diverted line 24, addintional buses (direct to Luzernerhof) from platform D, the regular line 14 services (all stops) from platform D or line 73 from platform C and transfer back to Luzernerhof. Travellers to Verkehrshaus, Dietschiberg, Europe, Casino-Palace and Haldensteig can only reach their destination on foot.</AdviceText>
+																				</AdviceContent>
+																				<DurationContent>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
+																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
 														</PublishingAction>
@@ -1669,17 +1573,25 @@
 																		<Affects>
 																				<Networks>
 																						<AffectedNetwork>
+																								<AffectedLine>
+																										<LineRef>ch:vbl:Entlastungsbus</LineRef>
+																										<PublishedLineName xml:lang="DE">Entlastungsbus</PublishedLineName>
+																										<Direction>
+																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
+																												<DirectionName>Büttenhalde</DirectionName>
+																										</Direction>
+																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL014</LineRef>
-																										<PublishedLineName>14</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">14</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL014:A</DirectionRef>
 																												<DirectionName>Brühlstrasse</DirectionName>
 																										</Direction>
 																										<StopPoints>
 																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:618::04</StopPointRef>
-																														<StopPointName>Brühlstrasse</StopPointName>
+																														<StopPointRef>ch:vbl:618::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Brühlstrasse</StopPointName>
 																														<StopCondition>destination</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1688,15 +1600,15 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL024</LineRef>
-																										<PublishedLineName>24</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL024:B</DirectionRef>
 																												<DirectionName>Bahnhof</DirectionName>
 																										</Direction>
 																										<StopPoints>
 																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:618::04</StopPointRef>
-																														<StopPointName>Brühlstrasse</StopPointName>
+																														<StopPointRef>ch:vbl:618::01</StopPointRef>
+																														<StopPointName xml:lang="DE">Brühlstrasse</StopPointName>
 																														<StopCondition>destination</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1706,15 +1618,14 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0190</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0430</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
 																		<TextualContent>
 																				<TextualContentSize>L</TextualContentSize>
-																				<!--Wie sind hier die unterschiedlichen Ankündigungen abzubilden? Wie in <ActionRef>0070</ActionRef> und Folgende oder alles in einem Text? -->
 																				<SummaryContent>
 																						<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
 																						<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
@@ -1723,14 +1634,18 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Unterbruch der Linien 6 und 8; Umleitung der Linien 24 und 73.</DescriptionText>
-																						<DescriptionText xml:lang="EN">Line 6 and 8 disrupted; Line 24 and 73 diverted.</DescriptionText>
-																				</DescriptionContent>
 																				<ConsequenceContent>
-																						<ConsequenceText xml:lang="DE">Benutzen Sie die umgeleiteten Linien 24, 73 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrende Linie 14 (mit Halten) bis Luzernerhof.</ConsequenceText>
-																						<ConsequenceText xml:lang="EN">Use diverted line 24, 73, additional buses (direct ot Luzernhof) or the regular line 14 services (all stops) to Luzernhof.</ConsequenceText>
+																						<ConsequenceText xml:lang="DE">Unterbruch der Linien 6 und 8; Umleitung der Linien 24.</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted; Line 24 diverted.</ConsequenceText>
 																				</ConsequenceContent>
+																				<AdviceContent>
+																						<AdviceText xml:lang="DE">Benutzen Sie die umgeleitete Linie 24 und den Entlastungsbus (ohne Halte bis Luzernerhof) oder die normal verkehrenden Linien 14 (mit Halten) und 73 bis Luzernerhof.</AdviceText>
+																						<AdviceText xml:lang="EN">Use diverted line 24 and additional buses (direct to Luzernerhof) or the regular line 14 (all stops) and line 73 to Luzernerhof.</AdviceText>
+																				</AdviceContent>
+																				<DurationContent>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
+																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
 														</PublishingAction>
@@ -1741,20 +1656,16 @@
 																				<Networks>
 																						<AffectedNetwork>
 																								<AffectedLine>
-																										<!--
-																																				Bei einer anderen Meldung wurde der Entlastungsbus mit <LineRef>ch:vbl:Entlastungsbus</LineRef> bezeichnet. Welche Bezeichnung soll verwendet werden?
-																																			-->
-																										<LineRef>ch:vbl:VBLEBUS</LineRef>
-																										<PublishedLineName>EBUS</PublishedLineName>
+																										<LineRef>ch:vbl:Entlastungsbus</LineRef>
+																										<PublishedLineName xml:lang="DE">Entlastungsbus</PublishedLineName>
 																										<Direction>
-																												<DirectionRef>ch:vbl:VBLEBUS:B</DirectionRef>
-																												<DirectionName>Luzernerhof</DirectionName>
+																												<DirectionRef>ch:vbl:VBL006:A</DirectionRef>
+																												<DirectionName>Büttenhalde</DirectionName>
 																										</Direction>
 																										<StopPoints>
 																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:121::xx</StopPointRef>
-																														<StopPointName>Luzernerhof</StopPointName>
-																														<StopCondition>destination</StopCondition>
+																														<StopPointRef>ch:vbl:121::03</StopPointRef>
+																														<StopPointName xml:lang="DE">Luzernerhof</StopPointName>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -1763,9 +1674,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0200</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0440</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>vehicleJourney</Perspective>
@@ -1779,13 +1690,70 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Die Umleitung endet hier</DescriptionText>
-																						<DescriptionText xml:lang="EN">Diversion ends here</DescriptionText>
-																				</DescriptionContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Diese Fahrt endet hier</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">This service terminates here</ConsequenceText>
+																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Board line 6 and 8 from platform A. Travellers to Haldensteig, Casino-Palace and Europe can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Board line 6 and 8 from platform A. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
+																				</AdviceContent>
+																				<DurationContent>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
+																				</DurationContent>
+																		</TextualContent>
+																</PassengerInformationAction>
+														</PublishingAction>
+														<PublishingAction>
+																<PublicationScope>
+																		<ScopeType>route</ScopeType>
+																		<Affects>
+																				<Networks>
+																						<AffectedNetwork>
+																								<AffectedLine>
+																										<LineRef>ch:vbl:VBL024</LineRef>
+																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
+																										<Direction>
+																												<DirectionRef>ch:vbl:VBL024:B</DirectionRef>
+																												<DirectionName>Bahnhof</DirectionName>
+																										</Direction>
+																										<StopPoints>
+																												<AffectedStopPoint>
+																														<StopPointRef>ch:vbl:121::04</StopPointRef>
+																														<StopPointName xml:lang="DE">Luzernerhof</StopPointName>
+																														<StopCondition>origin</StopCondition>
+																												</AffectedStopPoint>
+																										</StopPoints>
+																								</AffectedLine>
+																						</AffectedNetwork>
+																				</Networks>
+																		</Affects>
+																</PublicationScope>
+																<PassengerInformationAction>
+																		
+																		<ActionRef>0450</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
+																		<Version>1</Version>
+																		<SourceRef>vbl</SourceRef>
+																		<Perspective>vehicleJourney</Perspective>
+																		<TextualContent>
+																				<TextualContentSize>L</TextualContentSize>
+																				<SummaryContent>
+																						<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+																						<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
+																				</SummaryContent>
+																				<ReasonContent>
+																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
+																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
+																				</ReasonContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Die Umleitung endet hier</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Diversion ends here</ConsequenceText>
+																				</ConsequenceContent>
+																				<AdviceContent>
+																						<AdviceText xml:lang="DE">Umstieg auf Linie 6 und 8: Einstieg bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
+																						<AdviceText xml:lang="EN">Transfer to line 6 and 8: Board from platform A. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
 																				</AdviceContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -1798,7 +1766,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL014</LineRef>
-																										<PublishedLineName>14</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">14</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL014:B</DirectionRef>
 																												<DirectionName>Horw Zentrum</DirectionName>
@@ -1806,7 +1774,7 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:121::03</StopPointRef>
-																														<StopPointName>Luzernerhof</StopPointName>
+																														<StopPointName xml:lang="DE">Luzernerhof</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1816,9 +1784,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0210</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0455</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>vehicleJourney</Perspective>
@@ -1826,15 +1794,12 @@
 																				<TextualContentSize>L</TextualContentSize>
 																				<SummaryContent>
 																						<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-																						<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 																				</SummaryContent>
 																				<ReasonContent>
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
-																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Board line 6 and 8 from platform A. Travellers to Haldensteig, Casino-Palace and Europe can only reach their destination on foot.</AdviceText>
+																						<AdviceText xml:lang="DE">Umstieg auf Linie 6 und 8: Einstieg bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
 																				</AdviceContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -1847,30 +1812,15 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL024</LineRef>
-																										<PublishedLineName>24</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL024:B</DirectionRef>
 																												<DirectionName>Bahnhof</DirectionName>
 																										</Direction>
 																										<StopPoints>
 																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:121::3</StopPointRef>
-																														<StopPointName>Luzernerhof</StopPointName>
-																														<StopCondition>origin</StopCondition>
-																												</AffectedStopPoint>
-																										</StopPoints>
-																								</AffectedLine>
-																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL073</LineRef>
-																										<PublishedLineName>73</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL073:B</DirectionRef>
-																												<DirectionName>Bahnhof</DirectionName>
-																										</Direction>
-																										<StopPoints>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:121::3</StopPointRef>
-																														<StopPointName>Luzernerhof</StopPointName>
+																														<StopPointRef>ch:vbl:121::03</StopPointRef>
+																														<StopPointName xml:lang="DE">Luzernerhof</StopPointName>
 																														<StopCondition>origin</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -1880,62 +1830,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0215</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
-																		<Version>1</Version>
-																		<SourceRef>vbl</SourceRef>
-																		<Perspective>vehicleJourney</Perspective>
-																		<TextualContent>
-																				<TextualContentSize>L</TextualContentSize>
-																				<SummaryContent>
-																						<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-																						<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
-																				</SummaryContent>
-																				<ReasonContent>
-																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
-																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
-																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Die Umleitung endet hier</DescriptionText>
-																						<DescriptionText xml:lang="EN">Diversion ends here</DescriptionText>
-																				</DescriptionContent>
-																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Einstieg der Linien 6 und 8 bei Kante A. Reisende nach Haldensteig, Casino-Palace und Europe erreichen ihr Ziel nur zu Fuß.</AdviceText>
-																						<AdviceText xml:lang="EN">Board line 6 and 8 from platform A. Travellers to Haldensteig, Casino-Palace and Europe can only reach their destination on foot.</AdviceText>
-																				</AdviceContent>
-																		</TextualContent>
-																</PassengerInformationAction>
-														</PublishingAction>
-														<PublishingAction>
-																<PublicationScope>
-																		<ScopeType>route</ScopeType>
-																		<Affects>
-																				<Networks>
-																						<AffectedNetwork>
-																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL024</LineRef>
-																										<PublishedLineName>24</PublishedLineName>
-																										<Direction>
-																												<DirectionRef>ch:vbl:VBL024:B</DirectionRef>
-																												<DirectionName>Bahnhof</DirectionName>
-																										</Direction>
-																										<StopPoints>
-																												<AffectedStopPoint>
-																														<StopPointRef>ch:vbl:121::3</StopPointRef>
-																														<StopPointName>Luzernerhof</StopPointName>
-																														<StopCondition>origin</StopCondition>
-																												</AffectedStopPoint>
-																										</StopPoints>
-																								</AffectedLine>
-																						</AffectedNetwork>
-																				</Networks>
-																		</Affects>
-																</PublicationScope>
-																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0220</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0460</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -1949,10 +1846,10 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Die Umleitung endet hier</DescriptionText>
-																						<DescriptionText xml:lang="EN">Diversion ends here</DescriptionText>
-																				</DescriptionContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Die Umleitung endet hier</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Diversion ends here</ConsequenceText>
+																				</ConsequenceContent>
 																				<AdviceContent>
 																						<AdviceText xml:lang="DE">Umstieg auf die Linien 6 und 8: Einstieg bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</AdviceText>
 																						<AdviceText xml:lang="EN">Transfer to line 6 and 8: Board from platform A. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</AdviceText>
@@ -1968,7 +1865,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:B</DirectionRef>
 																												<DirectionName>Matthof</DirectionName>
@@ -1976,22 +1873,22 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:121::04</StopPointRef>
-																														<StopPointName>Luzernerhof</StopPointName>
+																														<StopPointName xml:lang="DE">Luzernerhof</StopPointName>
 																														<StopCondition>origin</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">8</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL008:B</DirectionRef>
-																												<DirectionName>Hirtenhof</DirectionName>
+																												<DirectionName>Hiertenhof</DirectionName>
 																										</Direction>
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:121::04</StopPointRef>
-																														<StopPointName>Luzernerhof</StopPointName>
+																														<StopPointName xml:lang="DE">Luzernerhof</StopPointName>
 																														<StopCondition>origin</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -2001,9 +1898,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0230</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0470</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -2017,18 +1914,14 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Normale Bedienung der Linien 6 bis Matthof und 8 bis Hirtenhof.</DescriptionText>
-																						<DescriptionText xml:lang="EN">Regular service on line 6 to Matthof and line 8 to Hirtenhof.</DescriptionText>
-																				</DescriptionContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Normale Bedienung der Linien 6 bis Matthof und 8 bis Hirtenhof. Es muss mit Verspätungen gerechnet werden.</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Regular service on line 6 to Matthof and line 8 to Hirtenhof. Expect delays.</ConsequenceText>
+																				</ConsequenceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
-																				<RemarkContent>
-																						<RemarkText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</RemarkText>
-																						<RemarkText xml:lang="EN">Expect delays.</RemarkText>
-																				</RemarkContent>
 																		</TextualContent>
 																</PassengerInformationAction>
 														</PublishingAction>
@@ -2040,7 +1933,7 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL006:B</DirectionRef>
 																												<DirectionName>Matthof</DirectionName>
@@ -2048,52 +1941,52 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:120::02</StopPointRef>
-																														<StopPointName>Schwanenplatz</StopPointName>
+																														<StopPointName xml:lang="DE">Schwanenplatz</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:119::01</StopPointRef>
-																														<StopPointName>Bahnhof</StopPointName>
+																														<StopPointName xml:lang="DE">Bahnhof</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:118::02</StopPointRef>
-																														<StopPointName>Kantonalbank</StopPointName>
+																														<StopPointName xml:lang="DE">Kantonalbank</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:407::03</StopPointRef>
-																														<StopPointName>Bundesplatz</StopPointName>
+																														<StopPointName xml:lang="DE">Bundesplatz</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:606::02</StopPointRef>
-																														<StopPointName>Werkhofstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Werkhofstrasse</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:605::02</StopPointRef>
-																														<StopPointName>Weinbergli</StopPointName>
+																														<StopPointName xml:lang="DE">Weinbergli</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:604::02</StopPointRef>
-																														<StopPointName>Eisfeldstrasse</StopPointName>
+																														<StopPointName xml:lang="DE">Eisfeldstrasse</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:603::02</StopPointRef>
-																														<StopPointName>Wartegg</StopPointName>
+																														<StopPointName xml:lang="DE">Wartegg</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:602::02</StopPointRef>
-																														<StopPointName>Schönbühl</StopPointName>
+																														<StopPointName xml:lang="DE">Schönbühl</StopPointName>
 																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:601::01</StopPointRef>
-																														<StopPointName>Matthof</StopPointName>
+																														<StopPointName xml:lang="DE">Matthof</StopPointName>
 																														<StopCondition>destination</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
@@ -2103,9 +1996,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0240</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0480</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>stopPoint</Perspective>
@@ -2119,30 +2012,36 @@
 																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
-																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</DescriptionText>
-																						<DescriptionText xml:lang="EN">Expect delays.</DescriptionText>
-																				</DescriptionContent>
+																				<ConsequenceContent>
+																						<ConsequenceText xml:lang="DE">Es muss mit Verspätungen gerechnet werden.</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Expect delays.</ConsequenceText>
+																				</ConsequenceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
 														</PublishingAction>
 														<PublishingAction>
 																<PublicationScope>
-																		<ScopeType>route</ScopeType>
+																		<ScopeType>line</ScopeType>
 																		<Affects>
 																				<Networks>
 																						<AffectedNetwork>
 																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL02A</LineRef>
-																										<PublishedLineName>2</PublishedLineName>
+																										<LineRef>ch:vbl:VBL002</LineRef>
+																										<PublishedLineName xml:lang="DE">2</PublishedLineName>
+																										<Direction>
+																												<!--Keine Angaben zur RichtungsID im Dokument, Annahme: "ch:vbl:VBL002:A"-->
+																												<DirectionRef>ch:vbl:VBL002:A</DirectionRef>
+																												<DirectionName>Bahnhof</DirectionName>
+																										</Direction>
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:119::06</StopPointRef>
-																														<StopPointName>Luzern Bahnhof</StopPointName>
+																														<StopPointName xml:lang="DE">Bahnhof</StopPointName>
+																														<StopCondition>destination</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -2151,9 +2050,9 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0245</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0481</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>vehicleJourney</Perspective>
@@ -2172,12 +2071,12 @@
 																						<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die umgeleitete Linie 73 oder die normal verkehrende Linie 14 und steigen Sie an der Brüelstrasse wieder um. Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</AdviceText>
-																						<AdviceText xml:lang="EN">Transfer advice for line 6 and 8: Use diverted line 73 or the regular line 14 services to Brüelstrasse and transfer back to line 6 and 8. Travellers to Verkehrshaus use the S3 or ferry.</AdviceText>
+																						<AdviceText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die Linien 14 oder 73 und steigen Sie an der Brüelstrasse wieder um. Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</AdviceText>
+																						<AdviceText xml:lang="EN">Transfer advice line 6 and 8: Use line 14 or 73 to Brüelstrasse and transfer back to line 6 and 8. Travellers to Verkehrshaus use the S3 or ferry.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
@@ -2189,8 +2088,8 @@
 																				<Networks>
 																						<AffectedNetwork>
 																								<AffectedLine>
-																										<LineRef>ch:vbl:VBL014A</LineRef>
-																										<PublishedLineName>14</PublishedLineName>
+																										<LineRef>ch:vbl:VBL014</LineRef>
+																										<PublishedLineName xml:lang="DE">14</PublishedLineName>
 																										<Direction>
 																												<DirectionRef>ch:vbl:VBL014:A</DirectionRef>
 																												<DirectionName>Brüelstrasse</DirectionName>
@@ -2198,7 +2097,8 @@
 																										<StopPoints>
 																												<AffectedStopPoint>
 																														<StopPointRef>ch:vbl:119::08</StopPointRef>
-																														<StopPointName>Luzern Bahnhof</StopPointName>
+																														<StopPointName xml:lang="DE">Bahnhof</StopPointName>
+																														<StopCondition>intermediate</StopCondition>
 																												</AffectedStopPoint>
 																										</StopPoints>
 																								</AffectedLine>
@@ -2207,12 +2107,12 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0246</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0482</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
-																		<Perspective>vehicleJourney</Perspective>
+																		<Perspective>stopPoint</Perspective>
 																		<TextualContent>
 																				<TextualContentSize>L</TextualContentSize>
 																				<SummaryContent>
@@ -2228,20 +2128,16 @@
 																						<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Empfehlung für Linien 6 und 8: Für Fahrten zur Brüelstrasse und weiter bleiben Sie in der Linie 14 und steigen Sie an der Brüelstrasse um. Reisende nach dem Verkehrshaus benutzen ab dem Bahnhof die S3 oder das Schiff.</AdviceText>
-																						<AdviceText xml:lang="EN">Advice for line 6 and 8: For services to Brüelstrasse and further, stay on line 14 and transfer at Brüelstrasse. Travellers after Verkehrshaus use the S3 or ferry from main station.</AdviceText>
+																						<AdviceText xml:lang="DE">Umstiegsempfehlung für Linien 6 und 8: Benutzen Sie bis Brüelstrasse die Linien 14 oder 73 und steigen Sie an der Brüelstrasse wieder um. Reisende nach dem Verkehrshaus benutzen die S3 oder das Schiff.</AdviceText>
+																						<AdviceText xml:lang="EN">Transfer advice line 6 and 8: Use line 14 or 73 to Brüelstrasse and transfer back to line 6 and 8. Travellers to Verkehrshaus use the S3 or ferry.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca. 12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>
 														</PublishingAction>
-														<OnPlace>true</OnPlace>
-														<OnBoard>true</OnBoard>
-												</PublishToDisplayAction>
-												<PublishByPerspectiveAction>
 														<PublishingAction>
 																<PublicationScope>
 																		<ScopeType>line</ScopeType>
@@ -2250,28 +2146,24 @@
 																						<AffectedNetwork>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL006</LineRef>
-																										<PublishedLineName>6</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">6</PublishedLineName>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL008</LineRef>
-																										<PublishedLineName>8</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">8</PublishedLineName>
 																								</AffectedLine>
 																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL024</LineRef>
-																										<PublishedLineName>24</PublishedLineName>
-																								</AffectedLine>
-																								<AffectedLine>
-																										<LineRef>ch:pb:PB073</LineRef>
-																										<PublishedLineName>73</PublishedLineName>
+																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																								</AffectedLine>
 																						</AffectedNetwork>
 																				</Networks>
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<!--<ActionStatus>open</ActionStatus>-->
-																		<ActionRef>0020</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:22:00+02:00</RecordedAtTime>
+																		
+																		<ActionRef>0250</ActionRef>
+																		<RecordedAtTime>2017-05-28T09:42:00+02:00</RecordedAtTime>
 																		<Version>1</Version>
 																		<SourceRef>vbl</SourceRef>
 																		<Perspective>general</Perspective>
@@ -2286,28 +2178,20 @@
 																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 																				</ReasonContent>
 																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Betroffen sind die Linien 6,8, 24 und 73</DescriptionText>
-																						<DescriptionText xml:lang="EN">Affected lines are 6, 8, 24 and 73</DescriptionText>
+																						<DescriptionText xml:lang="DE">Betroffen sind die Linien 6, 8 und 24</DescriptionText>
+																						<DescriptionText xml:lang="EN">Affected lines are 6, 8 and 24</DescriptionText>
 																				</DescriptionContent>
 																				<ConsequenceContent>
-																						<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen zwischen Luzernerhof und Brüelstrasse aus.
-																								Linie 24 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 7 Min. längere Fahrzeit.
-																								Linie 73 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 6 Min. längere Fahrzeit.</ConsequenceText>
-																						<ConsequenceText xml:lang="EN">Line 6 and 8 disrupted Luzernerhof and Brüelstrasse.
-																								Line 24 diverted between Luzernerhof and Brüelstrasse via St. Anna. Approx. 7 min delay.
-																								Line 73 diverted between Luzernerhof and Brüelstrasse via St. Anna. Approx. 6 min delay.</ConsequenceText>
+																						<ConsequenceText xml:lang="DE">Linie 6 und 8 fallen zwischen Luzernerhof und Brüelstrasse aus. Linie 24 wird zwischen Luzernerhof und Brüelstrasse via St. Anna umgeleitet. Ca. 7 Min. längere Fahrzeit.</ConsequenceText>
+																						<ConsequenceText xml:lang="EN">Line 6 and 8 services cancelled between Luzernerhof and Brüelstrasse. Line 24 divirted between Luzernerhof and Brüelstrasse via St. Anna. Approx. 7 min delay.</ConsequenceText>
 																				</ConsequenceContent>
 																				<AdviceContent>
-																						<AdviceText xml:lang="DE">Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.
-																								Zwischen Luzern, Bahnhof und Verkehrshaus benutzen sie die S3 oder das Schiff.
-																								Umstiegsempfehlung für die Linien 6 und 8: Bei den Haltestellen Luzernerhof bzw. Brüelstrasse auf die umgeleiteten Linien 24 und 73, die normal verkehrende Linie 14 oder den Entlastungsbus umsteigen.</AdviceText>
-																						<AdviceText xml:lang="EN">Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.
-																								Between Luzern, Bahnhof and Verkehrshaus use the S3 or ferry.
-																								Transfer advice for line 6 and 8: At Luzernerhof or Brüelstrasse use diverted line 24, 73, additional buses or the regular line 14 services.</AdviceText>
+																						<AdviceText xml:lang="DE">Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß. Zwischen Luzern, Bahnhof und Verkehrshaus benutzen sie die S3 oder das Schiff. Umstiegsempfehlung für die Linien 6 und 8: Bei den Haltestellen Luzernerhof bzw. Brüelstrasse auf die umgeleitete Linie 24, die normal verkehrenden Linien 14 und 73 oder den Entlastungsbus umsteigen.</AdviceText>
+																						<AdviceText xml:lang="EN">Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot. Between Luzern, Bahnhof and Verkehrshaus use the S3 or ferry. Transfer advice for line 6 and 8: At Luzernerhof or Brüelstrasse use diverted line 24, 73, additional buses or the regular line 14 services.</AdviceText>
 																				</AdviceContent>
 																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
+																						<DurationText xml:lang="DE">Die Störung dauert bis ca.12:30 Uhr.</DurationText>
+																						<DurationText xml:lang="EN">Disruption duration until 12:30pm.</DurationText>
 																				</DurationContent>
 																		</TextualContent>
 																</PassengerInformationAction>

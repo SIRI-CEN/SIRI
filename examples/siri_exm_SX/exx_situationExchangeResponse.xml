@@ -27,7 +27,7 @@
       </RelatedToRef>
      </References>
      <Source>
-      <CountryRef>de</CountryRef>
+      <Country>de</Country>
       <SourceType>phone</SourceType>
       <Phone>01223333337654</Phone>
       <AgentReference>03274</AgentReference>
@@ -40,7 +40,7 @@
       <StartTime>2001-12-17T09:30:47.0Z</StartTime>
       <EndTime>2001-12-17T10:30:47.0Z</EndTime>
      </ValidityPeriod>
-     <MiscellaneousReason>bombExplosion</MiscellaneousReason>
+     <TpegReason>bombExplosion</TpegReason>
      <Severity>severe</Severity>
      <Priority>3</Priority>
      <Audience>public</Audience>
@@ -54,7 +54,7 @@
       <StopPoints>
        <AffectedStopPoint>
         <StopPointRef>BAAR0003</StopPointRef>
-        <StopPointName>Barchester Station</StopPointName>
+        <StopPointName xml:lang="EN">Barchester Station</StopPointName>
         <StopPointType>unknown</StopPointType>
         <Location id="NMTOKEN" srsName="String">
          <Longitude>-180</Longitude>
@@ -127,7 +127,7 @@
       </RelatedToRef>
      </References>
      <Source>
-      <CountryRef>de</CountryRef>
+      <Country>de</Country>
       <SourceType>phone</SourceType>
       <Phone>01223333337654</Phone>
       <AgentReference>03274</AgentReference>
@@ -140,7 +140,7 @@
       <StartTime>2001-12-17T09:30:47.0Z</StartTime>
       <EndTime>2001-12-17T10:30:47.0Z</EndTime>
      </ValidityPeriod>
-     <MiscellaneousReason>bombExplosion</MiscellaneousReason>
+     <TpegReason>bombExplosion</TpegReason>
      <Severity>severe</Severity>
      <Priority>3</Priority>
      <Audience>public</Audience>
@@ -154,7 +154,7 @@
       <StopPoints>
        <AffectedStopPoint>
         <StopPointRef>BAAR0003</StopPointRef>
-        <StopPointName>Barchester Station</StopPointName>
+        <StopPointName xml:lang="EN">Barchester Station</StopPointName>
         <StopPointType>unknown</StopPointType>
         <Location id="NMTOKEN" srsName="String">
          <Longitude>-180</Longitude>

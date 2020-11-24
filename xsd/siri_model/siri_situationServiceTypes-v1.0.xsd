@@ -442,104 +442,26 @@ There are several possible reasons for the loss of a feeder, e.g. loss/cancellat
  <!-- ==Route point Type================================= -->
  <xsd:element name="RoutePointType" type="RoutePointTypeEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>ROUTE POINT type - TPEG Pti015</xsd:documentation>
+   <xsd:documentation>Route point type TPEG PTS044: StopPlaceUsage</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="RoutePointTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti015 - RoutePointType</xsd:documentation>
+   <xsd:documentation> route_point_type TPEG PTS044: StopPlaceUsage</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="startPoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_1, start point</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="destination">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_2, destination</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_3, stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="via">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_4, via</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="notStopping">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_5, not-stopping</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="temporaryStop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_6, temporary stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="temporarilyNotStopping">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_7, temporarily not-stopping</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="exceptionalStop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_8, exceptional stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="additionalStop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_9, additional stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="requestStop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_10, request stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="frontTrainDestination">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_11, front train destination</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="rearTrainDestination">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_12, rear train destination</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="throughServiceDestination">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_13, through service destination</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="notVia">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_14, not via</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="alteredStartPoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_15, altered start point</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="alteredDestination">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_16, altered destination</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedRoutePoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_255, undefined route point</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
+   <xsd:enumeration value="unknown"/>
+   <xsd:enumeration value="origin"/>
+   <xsd:enumeration value="destination"/>
+   <xsd:enumeration value="intermediate"/>
+   <xsd:enumeration value="legBoard"/>
+   <xsd:enumeration value="legIntermediate"/>
+   <xsd:enumeration value="legAlight"/>
+   <xsd:enumeration value="firstRoutePoint"/>
+   <xsd:enumeration value="lastRoutePoint"/>
+   <xsd:enumeration value="affectedStopplace"/>
+   <xsd:enumeration value="presentedStopplace"/>
+   <xsd:enumeration value="undefinedStopplaceUsage"/>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ==STOP POINT Type================================= -->
