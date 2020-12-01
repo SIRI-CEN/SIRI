@@ -771,23 +771,23 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
   <xsd:sequence>
    <xsd:element name="PredictionLevel" type="QualityIndexEnumeration">
     <xsd:annotation>
-     <xsd:documentation>An approxiimate characterisation of prediction quality as one of five values . +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>An approxiimate characterisation of prediction quality as one of five values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:sequence minOccurs="0">
     <xsd:element name="Percentile" type="xsd:decimal" default="0.9" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Percentile associated with range as specified by lower and upper bound +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Percentile associated with range as specified by lower and upper bound. +SIRI v2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="LowerTimeLimit" type="xsd:dateTime" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Lower bound on time of for prediction for confidence level if different from defaults  +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Lower bound on time of for prediction for confidence level if different from defaults. +SIRI v2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="HigherTimeLimit" type="xsd:dateTime" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Upper bound on time of for predictios for confidence level if different from defaults  +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Upper bound on time of for prediction for confidence level if different from defaults. +SIRI v2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:sequence>

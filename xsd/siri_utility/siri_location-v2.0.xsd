@@ -148,7 +148,7 @@ Rail transport, Roads and road transport
  <!--====== LOCATION ============================================================-->
  <xsd:complexType name="LocationStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for gepspatial Position of a point. May be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format.</xsd:documentation>
+   <xsd:documentation>Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
@@ -161,11 +161,6 @@ Rail transport, Roads and road transport
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
-   <xsd:element name="Radius" type="DistanceType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Radius in case the location is specified as a circular area. In meters. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
    <xsd:element name="Precision" type="DistanceType" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Precision for point measurement. In meters.</xsd:documentation>
@@ -190,16 +185,12 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="UpperLeft" type="LocationStructure">
     <xsd:annotation>
-     <xsd:documentation>A geospatial point. 
-Upper Left corner.
-.</xsd:documentation>
+     <xsd:documentation>Upper Left corner as a geospatial point.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="LowerRight" type="LocationStructure">
     <xsd:annotation>
-     <xsd:documentation>A geospatial point. 
-Lower right corner.
-.</xsd:documentation>
+     <xsd:documentation>Lower right corner as a geospatial point.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -216,6 +207,20 @@ Lower right corner.
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:complexType name="CircularAreaStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for a circular area centered around a point that may be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="LocationStructure">
+    <xsd:element name="Radius" type="DistanceType" minOccurs="0">
+     <xsd:annotation>
+      <xsd:documentation>Radius around the center point in meters.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
  <xsd:complexType name="FlexibleAreaStructure">
   <xsd:annotation>
    <xsd:documentation>Bounding box, circular area or gml:polyon of the area where stops of a flexible service are called. +SIRI v2.1
@@ -227,7 +232,7 @@ A flexible area is used in cases where a pre-booked service allows pick-up/drop-
      <xsd:documentation>Flexible area specified as a rectangular bounding box.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="CircularArea" type="LocationStructure">
+   <xsd:element name="CircularArea" type="CircularAreaStructure">
     <xsd:annotation>
      <xsd:documentation>Flexible area specified as a circular area (center coordinates and radius).</xsd:documentation>
     </xsd:annotation>
