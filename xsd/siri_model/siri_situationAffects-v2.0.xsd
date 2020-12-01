@@ -581,7 +581,7 @@ Rail transport, Roads and road transport
    <xsd:group ref="LineGroup"/>
    <xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Restricts the affected scope to the specified DIRECTIONs</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified DESTINATIONs</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Direction" type="DirectionStructure" minOccurs="0" maxOccurs="unbounded">
