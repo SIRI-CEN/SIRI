@@ -532,9 +532,14 @@ Rail transport, Roads and road transport
       <xsd:documentation>All LINEs in the network are affected.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-    <xsd:element name="SelectedRoutes" type="EmptyType">
+    <xsd:element name="SelectedRoutes" type="AffectedRouteStructure" maxOccurs="unbounded">
      <xsd:annotation>
-      <xsd:documentation>Only some ROUTEs are affected,  LINE level information not available. See the AffectedRoutes element for textual description.</xsd:documentation>
+      <xsd:documentation>Only some ROUTEs are affected,  LINE level information not available. See the RoutesAffected element for textual description.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="AffectedSection" type="AffectedSectionStructure" maxOccurs="unbounded">
+     <xsd:annotation>
+      <xsd:documentation>Only some COMMON SECTIONs are affected, LINE level information not available. </xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:sequence>
@@ -550,18 +555,18 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="AffectedLineStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for information about the LINEs affected by a SITUATION.</xsd:documentation>
+   <xsd:documentation>Information about the individual LINEs in the network that are affected by a SITUATION. If not explicitly overrided, modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) in the General Context. </xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AffectedOperator" type="AffectedOperatorStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Operators of LINEs affected by incident. Overrides any value specified for (i) Affected Network (ii) General Context.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified operators of LINEs that are affected by the situation. Overrides any value specified for (i) Affected Network (ii) General Context.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="LineGroup"/>
    <xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>DESTINATIONs to which the  LINE runs.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified DIRECTIONs</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Direction" type="DirectionStructure" minOccurs="0" maxOccurs="unbounded">
@@ -571,7 +576,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Routes" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>ROUTEs affected if  LINE has multiple ROUTEs.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified ROUTEs</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -585,7 +590,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Sections" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Sections of  LINE affected.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified LINE SECTIONs</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -598,14 +603,76 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="AffectedSectionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for information about the sectons affected by a SITUATION.</xsd:documentation>
+   <xsd:documentation>Type for information about the SECTIONs affected by a SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
+   <xsd:choice>
    <xsd:element name="SectionRef" type="SectionRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Reference to a section of ROUTE affected by a SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="IndirectSectionRef">
+    <xsd:annotation>
+     <xsd:documentation>An indirect reference to a COMMON SECTION by stating the stop point ref of the first and last POINT IN JOURNEY PATTERN of the section in question. Intermediate POINTs should be added if necessary to distinguish different sections having the same start and end point and is a means to exclude sections not containing those stop points.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:choice>
+       <xsd:element name="FirstStopPointRef" type="StopPointRefStructure">
+        <xsd:annotation>
+         <xsd:documentation>Used to indicate the SCHEDULED stop point with a stop assignment to be considered as start of the SECTION</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+       <xsd:element name="FirstStopPlaceRef" type="ifopt:StopPlaceRefStructure">
+        <xsd:annotation>
+         <xsd:documentation>Used to indicate that any SCHEDULED stop point with a stop assignment of the indicated StopPlace is to be considered as start of the SECTION</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+       <xsd:element name="FirstQuayRef" type="QuayRefStructure">
+        <xsd:annotation>
+         <xsd:documentation>Used to indicate that any SCHEDULED stop point with a stop assignment to the indicated QUAY is to be considered as start of the SECTION</xsd:documentation>
+        </xsd:annotation>
+       </xsd:element>
+      </xsd:choice>
+       <xsd:choice minOccurs="0">
+          <xsd:element name="IntermediateStopPointRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="unbounded">
+          <xsd:annotation>
+           <xsd:documentation>An intermediate Stop POINT of the SECTION that must be part of SECTION</xsd:documentation>
+          </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="IntermediateStopPlaceRef" type="ifopt:StopPlaceRefStructure">
+          <xsd:annotation>
+           <xsd:documentation>Used to indicate that at least one SCHEDULED stop point with a stop assignment of the indicated StopPlace is to be considered as start of the SECTION</xsd:documentation>
+          </xsd:annotation>
+         </xsd:element>
+        <xsd:element name="IntermediateQuayRef" type="QuayRefStructure">
+         <xsd:annotation>
+          <xsd:documentation>Used to indicate that at least one SCHEDULED stop point with a stop assignment to the indicated QUAY must be part of the SECTION</xsd:documentation>
+         </xsd:annotation>
+        </xsd:element>
+       </xsd:choice>
+       <xsd:choice>
+        <xsd:element name="LastStopPointRef" type="StopPointRefStructure">
+         <xsd:annotation>
+          <xsd:documentation>Used to indicate the SCHEDULED stop point with a stop assignment to be considered as end of the SECTION</xsd:documentation>
+         </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="LastStopPlaceRef" type="ifopt:StopPlaceRefStructure">
+         <xsd:annotation>
+          <xsd:documentation>Used to indicate that any SCHEDULED stop point with a stop assignment of the indicated StopPlace is to be considered as end of the SECTION</xsd:documentation>
+         </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="LastQuayRef" type="QuayRefStructure">
+         <xsd:annotation>
+          <xsd:documentation>Used to indicate that any SCHEDULED stop point with a stop assignment to the indicated QUAY is to be considered as end of the SECTION</xsd:documentation>
+         </xsd:annotation>
+        </xsd:element>
+       </xsd:choice>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   </xsd:choice>
    <xsd:group ref="ProjectionGroup">
     <xsd:annotation>
      <xsd:documentation>Spatial projection of element that can be used to show affected area on a map.</xsd:documentation>
@@ -617,7 +684,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="AffectedRouteStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for information about the routes affected by a SITUATION.</xsd:documentation>
+   <xsd:documentation>An ordered list of MAPPING POINTs defining one single path through the road (or rail) Network. A ROUTE may pass through the same MAPPING POINT more than once.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="RouteRef" type="RouteRefStructure" minOccurs="0">
