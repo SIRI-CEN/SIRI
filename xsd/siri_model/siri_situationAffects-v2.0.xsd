@@ -552,14 +552,9 @@ Rail transport, Roads and road transport
       <xsd:documentation>All LINEs in the network are affected.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
-    <xsd:element name="SelectedRoutes" type="AffectedRouteStructure" maxOccurs="unbounded">
+    <xsd:element name="SelectedRoutes" type="EmptyType">
      <xsd:annotation>
-      <xsd:documentation>Only some ROUTEs are affected,  LINE level information not available. See the RoutesAffected element for textual description.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="AffectedSection" type="AffectedSectionStructure" maxOccurs="unbounded">
-     <xsd:annotation>
-      <xsd:documentation>Only some COMMON SECTIONs are affected, LINE level information not available. </xsd:documentation>
+      <xsd:documentation>Only some ROUTEs are affected,  LINE level information not available. See the AffectedRoutes element for textual description.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:sequence>
@@ -646,37 +641,11 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for information about the SECTIONs affected by a SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:choice>
    <xsd:element name="SectionRef" type="SectionRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Reference to a section of ROUTE affected by a SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="IndirectSectionRef">
-    <xsd:annotation>
-     <xsd:documentation>An indirect reference to a COMMON SECTION by stating the stop point ref of the first and last POINT IN JOURNEY PATTERN of the section in question. Intermediate POINTs should be added if necessary to distinguish different sections having the same start and end PONT.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-       <xsd:element name="FirstStopPoint" type="AffectedStopPointStructure">
-         <xsd:annotation>
-          <xsd:documentation>First Stop POINT of the SECTION</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       <xsd:element name="IntermediateStopPoint" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
-        <xsd:annotation>
-         <xsd:documentation>Any intermediate Stop POINT of the SECTION required for identifying a SECTION</xsd:documentation>
-        </xsd:annotation>
-       </xsd:element>
-       <xsd:element name="LastStopPoint" type="AffectedStopPointStructure">
-        <xsd:annotation>
-         <xsd:documentation>Last Stop POINT of the SECTION</xsd:documentation>
-        </xsd:annotation>
-       </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   </xsd:choice>
    <xsd:group ref="ProjectionGroup">
     <xsd:annotation>
      <xsd:documentation>Spatial projection of element that can be used to show affected area on a map.</xsd:documentation>
@@ -688,7 +657,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="AffectedRouteStructure">
   <xsd:annotation>
-   <xsd:documentation>An ordered list of MAPPING POINTs defining one single path through the road (or rail) Network. A ROUTE may pass through the same MAPPING POINT more than once.</xsd:documentation>
+   <xsd:documentation>Type for information about the routes affected by a SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="RouteRef" type="RouteRefStructure" minOccurs="0">
