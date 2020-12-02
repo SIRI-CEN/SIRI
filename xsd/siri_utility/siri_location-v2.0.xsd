@@ -213,11 +213,13 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="LocationStructure">
-    <xsd:element name="Radius" type="DistanceType" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Radius around the center point in meters.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    <xsd:sequence>
+     <xsd:element name="Radius" type="DistanceType" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Radius around the center point in meters.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+	</xsd:sequence>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
