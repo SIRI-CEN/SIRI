@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../../xsd/siri.xsd">
+<!--
+  ~ Copyright (C) Schweizerische Bundesbahnen SBB, 2020.
+  -->
+
+<Siri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../../xsd/siri.xsd">
 		<ServiceDelivery>
-				<ResponseTimestamp>2018-10-04T10:11:00+00:00</ResponseTimestamp>
+				<ResponseTimestamp>2020-10-16T12:22:00+00:00</ResponseTimestamp>
 				<ProducerRef>ch:VBL</ProducerRef>
 				<Address>http:/server/siri/20_ums</Address>
-				<ResponseMessageIdentifier>t3xWB5cY3</ResponseMessageIdentifier>
+				<ResponseMessageIdentifier>JFI2d2mWP</ResponseMessageIdentifier>
 				<Status>true</Status>
 				<MoreData>false</MoreData>
-				<SituationExchangeDelivery version="2.0">
-						<ResponseTimestamp>2018-10-04T10:11:00+00:00</ResponseTimestamp>
+				<SituationExchangeDelivery version="2.1">
+						<ResponseTimestamp>2020-10-16T12:22:00+00:00</ResponseTimestamp>
 						<SubscriberRef>ch:VBL</SubscriberRef>
 						<SubscriptionRef>40599x2dsjmu8yjzy</SubscriptionRef>
 						<Situations>
 								<PtSituationElement>
-										<CreationTime>2017-05-28T10:10:00+02:00</CreationTime>
+										<CreationTime>2020-10-16T10:10:00+02:00</CreationTime>
 										<CountryRef>ch</CountryRef>
 										<ParticipantRef>VBL</ParticipantRef>
-										<SituationNumber>5a7cf4f0-c7a5-11e8-813f-f38697968b53</SituationNumber>
-										<Version>1</Version>
+										<SituationNumber>1</SituationNumber>
+										<Version>4</Version>
 										<Source>
 												<Country>ch</Country>
 												<SourceType>feed</SourceType>
 												<Name>VBL</Name>
 										</Source>
-										<Progress>published</Progress>
+										<VersionedAtTime>2020-10-16T12:22:00+00:00</VersionedAtTime>
+										<Progress>closing</Progress>
 										<ValidityPeriod>
-												<StartTime>2017-05-04T10:10:00+02:00</StartTime>
-												<EndTime>2017-05-28T17:10:00+02:00</EndTime>
+												<StartTime>2020-10-16T09:42:00+02:00</StartTime>
+												<EndTime>2020-10-16T12:47:00+02:00</EndTime>
 										</ValidityPeriod>
 										<TpegReason>fire</TpegReason>
 										<ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
@@ -36,8 +41,7 @@
 										<Planned>false</Planned>
 										<Language>DE</Language>
 										<Summary xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
-										<Summary xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</Summary>
-										<!-- Kein Infolink element im PT Situation laut Verwendungstabelle -->
+										<Summary xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</Summary>
 										<Affects>
 												<StopPlaces>
 														<AffectedStopPlace>
@@ -48,7 +52,7 @@
 										</Affects>
 										<Consequences>
 												<Consequence>
-														<Condition>disruption</Condition>
+														<Condition>disturbanceRectified</Condition>
 														<Affects>
 																<Networks>
 																		<AffectedNetwork>
@@ -68,7 +72,6 @@
 																</Networks>
 														</Affects>
 														<Blocking>
-																<!-- Wie genau soll das gesetzt und wieder zurückgenommen werden? Wer entscheidet es? -->
 																<JourneyPlanner>false</JourneyPlanner>
 														</Blocking>
 												</Consequence>
@@ -90,6 +93,10 @@
 																										<PublishedLineName xml:lang="DE">8</PublishedLineName>
 																								</AffectedLine>
 																								<AffectedLine>
+																										<LineRef>ch:vbl:VBL014</LineRef>
+																										<PublishedLineName xml:lang="DE">14</PublishedLineName>
+																								</AffectedLine>
+																								<AffectedLine>
 																										<LineRef>ch:vbl:VBL024</LineRef>
 																										<PublishedLineName xml:lang="DE">24</PublishedLineName>
 																								</AffectedLine>
@@ -102,68 +109,35 @@
 																		</Affects>
 																</PublicationScope>
 																<PassengerInformationAction>
-																		<ActionRef>0010</ActionRef>
-																		<RecordedAtTime>2017-05-28T10:10:00+02:00</RecordedAtTime>
-																		<SourceRef>VBL</SourceRef>
+																		<ActionRef>0510</ActionRef>
+																		<RecordedAtTime>2020-10-16T12:22:00+02:00</RecordedAtTime>
+																		<Version>1</Version>
+																		<SourceRef>vbl</SourceRef>
 																		<OwnerRef>VBL</OwnerRef>
 																		<Perspective>general</Perspective>
-																		<Perspective>vehicleJourney</Perspective>
 																		<Perspective>stopPoint</Perspective>
+																		<Perspective>vehicleJourney</Perspective>
 																		<TextualContent>
 																				<TextualContentSize>L</TextualContentSize>
 																				<SummaryContent>
 																						<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-																						<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
+																						<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
 																				</SummaryContent>
-																				<ReasonContent>
-																						<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
-																						<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
-																				</ReasonContent>
 																				<DescriptionContent>
-																						<DescriptionText xml:lang="DE">Betroffen sind die Linien 6, 8, 24 und 73</DescriptionText>
-																						<DescriptionText xml:lang="EN">Affected lines are 6, 8, 24 and 73</DescriptionText>
+																						<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
+																						<DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
 																				</DescriptionContent>
-																				<DurationContent>
-																						<DurationText xml:lang="DE">Die Dauer der Störung ist noch unbekannt.</DurationText>
-																						<DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
-																				</DurationContent>
 																				<RemarkContent>
-																						<RemarkText xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</RemarkText>
-																						<RemarkText xml:lang="EN">Expect delays, cancellations and diversions. More details to come soon.</RemarkText>
+																						<RemarkText xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</RemarkText>
+																						<RemarkText xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</RemarkText>
 																				</RemarkContent>
-																				<InfoLinks>
-																						<InfoLink>
-																								<Uri>https://www.vbl.ch/fahrplaene/betriebsmeldungen/</Uri>
-																						</InfoLink>
-																				</InfoLinks>
 																		</TextualContent>
-																		<Classification>
-																				<Consequences>
-																						<Consequence>
-																								<Condition>disruption</Condition>
-																								<Affects>
-																										<Networks>
-																												<AffectedNetwork>
-																														<AffectedLine>
-																																<LineRef>ch:vbl:VBL006</LineRef>
-																																<PublishedLineName xml:lang="DE">6</PublishedLineName>
-																														</AffectedLine>
-																														<AffectedLine>
-																																<LineRef>ch:vbl:VBL008</LineRef>
-																																<PublishedLineName xml:lang="DE">8</PublishedLineName>
-																														</AffectedLine>
-																														<AffectedLine>
-																																<LineRef>ch:vbl:VBL024</LineRef>
-																																<PublishedLineName xml:lang="DE">24</PublishedLineName>
-																														</AffectedLine>
-																												</AffectedNetwork>
-																										</Networks>
-																								</Affects>
-																						</Consequence>
-																				</Consequences>
-																		</Classification>
 																</PassengerInformationAction>
 														</PublishingAction>
+														<PublicationWindow>
+																<StartTime>2020-10-16T12:47:00+02:00</StartTime>
+																<EndTime>2020-10-16T13:15:00+02:00</EndTime>
+														</PublicationWindow>
 												</PublishByPerspectiveAction>
 										</PublishingActions>
 								</PtSituationElement>
