@@ -810,7 +810,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Destination SCHEDULED STOP POINTs  to which the LINE runs. [equivalent to pti15 2 destination route_description_type]</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified DESTINATIONs</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Route" type="AffectedRouteStructure" minOccurs="0" maxOccurs="unbounded">

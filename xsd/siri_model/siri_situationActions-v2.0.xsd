@@ -676,7 +676,7 @@
   <xsd:sequence>
    <xsd:element name="InternalText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Summary of passenger information action.</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -725,7 +725,7 @@
    </xsd:element>
    <xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>for internal information only, not passenger relevant</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Images" type="ImagesStructure" minOccurs="0">
