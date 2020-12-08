@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) Schweizerische Bundesbahnen SBB, 2020.
+  -->
+<!--
+
+Author: Priscila Moreno-Rey priscila.moreno@sbb.ch
+This example demonstrates the communication of a disruption situation in a train route
+-->
+<Siri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../xsd/siri.xsd">
+ <ServiceDelivery>
+  <ResponseTimestamp>2020-03-19T16:18:00Z</ResponseTimestamp>
+  <ProducerRef>sbb-via-out-sx_test</ProducerRef>
+  <SituationExchangeDelivery version="2.1">
+   <ResponseTimestamp>2020-03-19T16:18:00Z</ResponseTimestamp>
+   <SubscriptionRef>rJZZdSxMB8</SubscriptionRef>
+   <Situations>
+    <PtSituationElement>
+     <CreationTime>2020-03-19T16:18:00Z</CreationTime>
+     <CountryRef>ch</CountryRef>
+     <ParticipantRef>sbb-via-out-sx_test</ParticipantRef>
+     <SituationNumber>ch:1:sstid:100001:000000000001</SituationNumber>
+     <Version>1</Version>
+     <Source>
+      <!--in UmS CountryRef -->
+      <Country>ch</Country>
+      <SourceType>directReport</SourceType>
+      <Name xml:lang="DE">VIA</Name>
+     </Source>
+     <VersionedAtTime>2020-03-19T16:18:00Z</VersionedAtTime>
+     <Progress>published</Progress>
+     <ValidityPeriod>
+      <StartTime>2020-03-19T16:18:00Z</StartTime>
+      <EndTime>2020-03-19T20:18:00Z</EndTime>
+     </ValidityPeriod>
+     <!-- in Ums AlertCause-->
+     <TpegReason>technicalProblem</TpegReason>
+     <Priority>2</Priority>
+     <Planned>false</Planned>
+     <Language>DE</Language>
+     <Affects>
+      <StopPoints>
+       <AffectedStopPoint>
+        <StopPointRef>8502017</StopPointRef>
+        <StopPointName xml:lang="DE">Waldibrücke</StopPointName>
+        <!--<StopCondition>firstRoutePoint</StopCondition>-->
+       </AffectedStopPoint>
+       <AffectedStopPoint>
+        <StopPointRef>8502024</StopPointRef>
+        <StopPointName xml:lang="DE">Hochdorf</StopPointName>
+        <!--<StopCondition>lastRoutePoint</StopCondition>-->
+       </AffectedStopPoint>
+      </StopPoints>
+     </Affects>
+     <Consequences>
+      <Consequence>
+       <Period>
+        <StartTime>2020-03-19T16:14:00Z</StartTime>
+        <EndTime>2020-03-19T20:14:00Z</EndTime>
+       </Period>
+       <Condition>tripCancellation</Condition>
+       <Affects>
+        <Networks>
+         <AffectedNetwork>
+          <AffectedOperator>
+           <OperatorRef>85:11</OperatorRef>
+          </AffectedOperator>
+          <AffectedLine>
+           <!--LinienID (VDV454):  train number -->
+           <!--Because of technical issues, we cannot provide a vehicle journey which would suit better.
+																																   All journeys with this train number during the validity period will match in end systems-->
+           <LineRef>85:11:22978</LineRef>
+          </AffectedLine>
+         </AffectedNetwork>
+        </Networks>
+       </Affects>
+       <Advice>
+        <!--no replacement yet-->
+        <AdviceType>noMeansOfTravel</AdviceType>
+       </Advice>
+       <!-- Default is true
+																					<impactOnTimetable>true</impactOnTimetable> -->
+      </Consequence>
+     </Consequences>
+     <PublishingActions>
+      <PublishByPerspectiveAction>
+       <PublishingAction>
+        <!-- in UmS PublicationScope-->
+        <PublicationScope>
+         <ScopeType>vehicleJourney</ScopeType>
+         <Affects>
+          <Networks>
+           <AffectedNetwork>
+            <AffectedOperator>
+             <OperatorRef>85:11</OperatorRef>
+            </AffectedOperator>
+            <AffectedLine>
+             <!--Ländercode:Betreiber:Zugnummer:Linienname -->
+             <LineRef>85:11:22978</LineRef>
+             <PublishedLineName>S99</PublishedLineName>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>85:11:21959</LineRef>
+             <PublishedLineName>S9</PublishedLineName>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>85:11:21960</LineRef>
+             <PublishedLineName>S9</PublishedLineName>
+            </AffectedLine>
+           </AffectedNetwork>
+          </Networks>
+          <VehicleJourneys>
+           <AffectedVehicleJourney>
+            <FramedVehicleJourneyRef>
+             <DataFrameRef>2020-03-19</DataFrameRef>
+             <DatedVehicleJourneyRef>85:11:22978</DatedVehicleJourneyRef>
+             <!--Ländercode:Betreiber:Zugnummer-->
+            </FramedVehicleJourneyRef>
+            <Operator>
+             <OperatorRef>85:11</OperatorRef>
+            </Operator>
+            <TrainNumbers>
+             <TrainNumberRef>22978</TrainNumberRef>
+            </TrainNumbers>
+           </AffectedVehicleJourney>
+           <AffectedVehicleJourney>
+            <FramedVehicleJourneyRef>
+             <DataFrameRef>2020-03-19</DataFrameRef>
+             <DatedVehicleJourneyRef>85:11:21959</DatedVehicleJourneyRef>
+             <!--Ländercode:Betreiber:Zugnummer-->
+            </FramedVehicleJourneyRef>
+            <Operator>
+             <OperatorRef>85:11</OperatorRef>
+            </Operator>
+            <TrainNumbers>
+             <TrainNumberRef>21959</TrainNumberRef>
+            </TrainNumbers>
+           </AffectedVehicleJourney>
+           <AffectedVehicleJourney>
+            <FramedVehicleJourneyRef>
+             <DataFrameRef>2020-03-19</DataFrameRef>
+             <DatedVehicleJourneyRef>85:11:21960</DatedVehicleJourneyRef>
+             <!--Ländercode:Betreiber:Zugnummer-->
+            </FramedVehicleJourneyRef>
+            <Operator>
+             <OperatorRef>85:11</OperatorRef>
+            </Operator>
+            <TrainNumbers>
+             <TrainNumberRef>21960</TrainNumberRef>
+            </TrainNumbers>
+           </AffectedVehicleJourney>
+          </VehicleJourneys>
+         </Affects>
+        </PublicationScope>
+        <PassengerInformationAction>
+         <ActionRef>1</ActionRef>
+         <RecordedAtTime>2020-03-19T16:18:00Z</RecordedAtTime>
+         <SourceRef>sbb-via-out-sx_test</SourceRef>
+         <OwnerRef>85:11</OwnerRef>
+         <Perspective>general</Perspective>
+         <TextualContent>
+          <SummaryContent>
+           <SummaryText xml:lang="DE">Der Bahnverkehr zwischen Waldibrücke und Hochdorf ist beeinträchtigt.</SummaryText>
+           <SummaryText xml:lang="FR">Ligne restreinte entre Waldibrücke et Hochdorf.</SummaryText>
+           <SummaryText xml:lang="IT">Limitazione dell'esercizie fra Waldibrücke e Hochdorf.</SummaryText>
+           <SummaryText xml:lang="EN">The rail traffic between Waldibrücke and Hochdorf is impaired.</SummaryText>
+          </SummaryContent>
+         </TextualContent>
+         <!--<Classification>
+																			<ConsequenceFilter>
+																				<Period>
+																					<StartTime>2020-03-19T16:14:00Z</StartTime>
+																					<EndTime>2020-03-19T20:14:00Z</EndTime>
+																				</Period>
+																				<Condition>tripCancellation</Condition>
+																				<Affects>
+																					<Networks>
+																						<AffectedNetwork>
+																							<AffectedOperator>
+																								<OperatorRef>85:11</OperatorRef>
+																							</AffectedOperator>
+																							<AffectedLine>
+																								<LineRef>85:11:22978</LineRef>
+																							</AffectedLine>
+																						</AffectedNetwork>
+																					</Networks>
+																				</Affects>
+																			</ConsequenceFilter>
+																		</Classification>-->
+        </PassengerInformationAction>
+       </PublishingAction>
+      </PublishByPerspectiveAction>
+     </PublishingActions>
+    </PtSituationElement>
+   </Situations>
+  </SituationExchangeDelivery>
+ </ServiceDelivery>
+</Siri>

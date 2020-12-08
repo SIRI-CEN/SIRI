@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) Schweizerische Bundesbahnen SBB, 2020.
+  -->
+<!--
+
+Author: Priscila Moreno-Rey priscila.moreno@sbb.ch
+This example demonstrates the communication of a disruption situation in a train route
+-->
+<Siri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.siri.org.uk/siri" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+ <ServiceDelivery>
+  <ResponseTimestamp>2020-03-19T16:54:00Z</ResponseTimestamp>
+  <ProducerRef>sbb-via-out-sx_test</ProducerRef>
+  <SituationExchangeDelivery version="2.0">
+   <ResponseTimestamp>2020-03-19T16:54:00Z</ResponseTimestamp>
+   <SubscriptionRef>rJZZdSxMB8</SubscriptionRef>
+   <Situations>
+    <PtSituationElement>
+     <CreationTime>2020-03-19T16:18:00Z</CreationTime>
+     <CountryRef>ch</CountryRef>
+     <ParticipantRef>sbb-via-out-sx_test</ParticipantRef>
+     <SituationNumber>ch:1:sstid:100001:000000000001</SituationNumber>
+     <Version>3</Version>
+     <Source>
+      <Country>ch</Country>
+      <SourceType>directReport</SourceType>
+      <Name xml:lang="DE">VIA</Name>
+     </Source>
+     <VersionedAtTime>2020-03-19T16:54:00Z</VersionedAtTime>
+     <Progress>published</Progress>
+     <ValidityPeriod>
+      <StartTime>2020-03-19T16:18:00Z</StartTime>
+      <EndTime>2020-03-19T20:18:00Z</EndTime>
+     </ValidityPeriod>
+     <TpegReason>technicalProblem</TpegReason>
+     <ReasonName xml:lang="DE">Technische Störung an der Bahnanlage</ReasonName>
+     <Priority>2</Priority>
+     <Planned>false</Planned>
+     <Language>DE</Language>
+     <Affects>
+      <StopPoints>
+       <AffectedStopPoint>
+        <StopPointRef>8502017</StopPointRef>
+        <StopPointName xml:lang="DE">Waldibrücke</StopPointName>
+        <StopCondition>firstRoutePoint</StopCondition>
+       </AffectedStopPoint>
+       <!-- End systems have to evaluate that between Waldibrücke and Hochdorf the following stop points are also affected by disruption
+																																						  <AffectedStopPoint>
+																																								  <StopPointRef>8502022</StopPointRef>
+																																								  <StopPointName xml:lang="DE">Eschenbach</StopPointName>
+																																								  <StopCondition>affectedStopplace</StopCondition>
+																																						  </AffectedStopPoint>
+																																						  <AffectedStopPoint>
+																																								  <StopPointRef>8502023</StopPointRef>
+																																								  <StopPointName xml:lang="DE">Ballwil</StopPointName>
+																																								  <StopCondition>affectedStopplace</StopCondition>
+																																						  </AffectedStopPoint>
+																																						  <AffectedStopPoint>
+																																								  <StopPointRef>8502042</StopPointRef>
+																																								  <StopPointName xml:lang="DE">Hochdorf Schönau</StopPointName>
+																																								  <StopCondition>affectedStopplace</StopCondition>
+																																						  </AffectedStopPoint>-->
+       <AffectedStopPoint>
+        <StopPointRef>8502024</StopPointRef>
+        <StopPointName xml:lang="DE">Hochdorf</StopPointName>
+        <StopCondition>lastRoutePoint</StopCondition>
+       </AffectedStopPoint>
+      </StopPoints>
+     </Affects>
+     <PublishingActions>
+      <PublishToWebAction>
+       <PublishingAction>
+        <PublicationScope>
+         <ScopeType>line</ScopeType>
+         <Affects>
+          <Networks>
+           <AffectedNetwork>
+            <AffectedOperator>
+             <OperatorRef>85:11</OperatorRef>
+            </AffectedOperator>
+            <AffectedLine>
+             <!--LinienID (VDV454):  train number -->
+             <LineRef>22978</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>21959</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>21960</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>21961</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>91961</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>91960</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>21962</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>21963</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>21964</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>21965</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>21966</LineRef>
+            </AffectedLine>
+            <AffectedLine>
+             <LineRef>22980</LineRef>
+            </AffectedLine>
+           </AffectedNetwork>
+          </Networks>
+         </Affects>
+        </PublicationScope>
+        <PassengerInformationAction>
+         <ActionRef>1</ActionRef>
+         <RecordedAtTime>2020-03-19T16:54:00Z</RecordedAtTime>
+         <SourceRef>sbb-via-out-sx_test</SourceRef>
+         <OwnerRef>85:11</OwnerRef>
+         <Perspective>general</Perspective>
+         <TextualContent>
+          <SummaryContent>
+           <SummaryText xml:lang="DE">Der Bahnverkehr auf der Strecke Luzern und Lenzburg ist in beiden Richtungen zwischen Waldibrücke und Hochdorf unterbrochen.</SummaryText>
+          </SummaryContent>
+          <!--Out-of-scope in pilot
+																																			  <ReasonContent>
+																																					  <ReasonText xml:lang="DE">Technische Störung an der Bahnanlage</ReasonText>
+																																			  </ReasonContent>
+																																			  <DescriptionContent>
+																																					  <DescriptionText xml:lang="DE">Betroffen ist die Linie S9.</DescriptionText>
+																																			  </DescriptionContent>
+																																			  <ConsequenceContent>
+																																					  <ConsequenceText xml:lang="DE">Die Linie S9 fällt zwischen Luzern und Hochdorf aus.</ConsequenceText>
+																																			  </ConsequenceContent>
+																																			  <RecommendationContent>
+																																					  <RecommendationText xml:lang="DE">Reisende zwischen Luzern und Emmenbrücke benützen in beiden Richtungen die Züge der Linien S1 und RE. Reisende von Luzern nach Emmembrücke Gersag, Waldibrücke, Eschenbach und Hochdorf und umgekehrt benutzen zwischen Luzern und Emmebrücke die S1 oder den RE und zwischen Emmebrücke und Hochdorf den Ersatzbus. Reisende von Luzern nach Hitzkirch, Beinwil am See, Hallwil und Seon und umgekehrt reisen wie folgt: S1 oder RE von Luzern bis Emmebrücke, Ersatzbus zwischen Emmebrücke und Hochdorf, S9 zwischen Hochdorf und Seon. Reisende zwischen Luzern und Lenzburg reisen in beiden Richtungen via Olten.</RecommendationText>
+																																			  </RecommendationContent>
+																																			  <DurationContent>
+																																					  <DurationText xml:lang="DE">Die Dauer der Einschränkung ist unbestimmt.</DurationText>
+																																			  </DurationContent>-->
+         </TextualContent>
+        </PassengerInformationAction>
+       </PublishingAction>
+       <!--Out-of-scope in pilot
+																								 <PublishingAction>
+																										 <PublicationScope>
+																												 <ScopeType>route</ScopeType>
+																												 <Affects>
+																														 <StopPoints>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8505000</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Luzern</StopPointName>
+																																		 <StopCondition>firstRoutePoint</StopCondition>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502119</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Lenzburg</StopPointName>
+																																		 <StopCondition>lastRoutePoint</StopCondition>
+																																 </AffectedStopPoint>
+																														 </StopPoints>
+																												 </Affects>
+																										 </PublicationScope>
+																										 <PassengerInformationAction>
+
+																												 <ActionRef>3</ActionRef>
+																												 <RecordedAtTime>2020-03-19T16:54:00Z</RecordedAtTime>
+																												 <SourceRef>sbb-via-out-sx_test</SourceRef>
+																												 <OwnerRef>85:11</OwnerRef>
+																												 <Perspective>stopPoint</Perspective>
+																												 <TextualContent>
+																														 <SummaryContent>
+																																 <SummaryText xml:lang="DE">Der Bahnverkehr auf der Strecke Luzern und Lenzburg ist in beiden Richtungen zwischen Waldibrücke und Hochdorf unterbrochen.</SummaryText>
+																														 </SummaryContent>
+																														 <ReasonContent>
+																																 <ReasonText xml:lang="DE">Technische Störung an der Bahnanlage</ReasonText>
+																														 </ReasonContent>
+																														 <ConsequenceContent>
+																																 <ConsequenceText xml:lang="DE">Es ist mit Verspätungen und Zugausfällen zu rechnen.</ConsequenceText>
+																														 </ConsequenceContent>
+																														 <RecommendationContent>
+																																 <RecommendationText xml:lang="DE">Reisende nach Emmenbrücke benützendie Züge der Linien S1 und RE. Reisende nach Emmembrücke Gersag, Waldibrücke, Eschenbach und Hochdorf benutzen zwischen Luzern und Emmebrücke die S1 oder den RE und zwischen Emmebrücke und Hochdorf den Ersatzbus. Reisende nach Hitzkirch, Beinwil am See, Hallwil und Seon reisen wie folgt: S1 oder RE von Luzern bis Emmebrücke, Ersatzbus zwischen Emmebrücke und Hochdorf, S9 zwischen Hochdorf und Seon. Reisende nach Lenzburg reisen via Olten.</RecommendationText>
+																														 </RecommendationContent>
+																														 <DurationContent>
+																																 <DurationText xml:lang="DE">Die Dauer der Einschränkung ist unbestimmt.</DurationText>
+																														 </DurationContent>
+																												 </TextualContent>
+																										 </PassengerInformationAction>
+																								 </PublishingAction>
+																								 <PublishingAction>
+																										 <PublicationScope>
+																												 <ScopeType>stopPoint</ScopeType>
+																												 <Affects>
+																														 <StopPoints>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502021</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Emmenbrücke</StopPointName>
+																																 </AffectedStopPoint>
+																														 </StopPoints>
+																												 </Affects>
+																										 </PublicationScope>
+																										 <PassengerInformationAction>
+
+																												 <ActionRef>4</ActionRef>
+																												 <RecordedAtTime>2020-03-19T16:54:00Z</RecordedAtTime>
+																												 <SourceRef>sbb-via-out-sx_test</SourceRef>
+																												 <OwnerRef>85:11</OwnerRef>
+																												 <Perspective>stopPoint</Perspective>
+																												 <TextualContent>
+																														 <SummaryContent>
+																																 <SummaryText xml:lang="DE">Der Bahnverkehr auf der Strecke Luzern und Lenzburg ist in beiden Richtungen zwischen Waldibrücke und Hochdorf unterbrochen.</SummaryText>
+																														 </SummaryContent>
+																														 <ReasonContent>
+																																 <ReasonText xml:lang="DE">Technische Störung an der Bahnanlage</ReasonText>
+																														 </ReasonContent>
+																														 <ConsequenceContent>
+																																 <ConsequenceText xml:lang="DE">Es ist mit Verspätungen und Zugausfällen zu rechnen.</ConsequenceText>
+																														 </ConsequenceContent>
+																														 <RecommendationContent>
+																																 <RecommendationText xml:lang="DE">Reisende nach Luzern benützen die Züge der Linien S1 und RE. Reisende nach Emmembrücke Gersag, Waldibrücke, Eschenbach und Hochdorf benutzen den Ersatzbus. Reisende nach Hitzkirch, Beinwil am See, Hallwil und Seon benutzen zwischen Emmebrücke und Hochdorf den Ersatzbus und zwischen Hochdorf und Seon die Züge der Linie S9. Reisende nach Lenzburg reisen via Olten.</RecommendationText>
+																														 </RecommendationContent>
+																														 <DurationContent>
+																																 <DurationText xml:lang="DE">Die Dauer der Einschränkung ist unbestimmt.</DurationText>
+																														 </DurationContent>
+																												 </TextualContent>
+																										 </PassengerInformationAction>
+																								 </PublishingAction>
+																								 <PublishingAction>
+																										 <PublicationScope>
+																												 <ScopeType>stopPoint</ScopeType>
+																												 <Affects>
+																														 <StopPoints>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502022</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Eschenbach</StopPointName>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502024</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Hochdorf</StopPointName>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502028</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Emmenbrücke Gersag</StopPointName>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502017</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Waldibrücke</StopPointName>
+																																 </AffectedStopPoint>
+																														 </StopPoints>
+																												 </Affects>
+																										 </PublicationScope>
+																										 <PassengerInformationAction>
+
+																												 <ActionRef>2</ActionRef>
+																												 <RecordedAtTime>2020-03-19T16:54:00Z</RecordedAtTime>
+																												 <SourceRef>sbb-via-out-sx_test</SourceRef>
+																												 <OwnerRef>85:11</OwnerRef>
+																												 <Perspective>stopPoint</Perspective>
+																												 <TextualContent>
+																														 <SummaryContent>
+																																 <SummaryText xml:lang="DE">Der Bahnverkehr auf der Strecke Luzern und Lenzburg ist in beiden Richtungen zwischen Waldibrücke und Hochdorf unterbrochen.</SummaryText>
+																														 </SummaryContent>
+																														 <ReasonContent>
+																																 <ReasonText xml:lang="DE">Technische Störung an der Bahnanlage</ReasonText>
+																														 </ReasonContent>
+																														 <ConsequenceContent>
+																																 <ConsequenceText xml:lang="DE">Es ist mit Verspätungen und Zugausfällen zu rechnen.</ConsequenceText>
+																														 </ConsequenceContent>
+																														 <RecommendationContent>
+																																 <RecommendationText xml:lang="DE">Zwischen Emmenbrücke und Hochdorf fahren in beiden Richtungen Ersatzbusse.</RecommendationText>
+																														 </RecommendationContent>
+																														 <DurationContent>
+																																 <DurationText xml:lang="DE">Die Dauer der Einschränkung ist unbestimmt.</DurationText>
+																														 </DurationContent>
+																												 </TextualContent>
+																										 </PassengerInformationAction>
+																								 </PublishingAction>
+																								 <PublishingAction>
+																										 <PublicationScope>
+																												 <ScopeType>route</ScopeType>
+																												 <Affects>
+																														 <StopPoints>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502021</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Emmenbrücke</StopPointName>
+																																		 <StopCondition>firstRoutePoint</StopCondition>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502028</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Emmenbrücke Gersag</StopPointName>
+																																		 <StopCondition>affectedStopplace</StopCondition>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502017</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Waldibrücke</StopPointName>
+																																		 <StopCondition>affectedStopplace</StopCondition>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502022</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Eschenbach</StopPointName>
+																																		 <StopCondition>affectedStopplace</StopCondition>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502023</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Ballwil</StopPointName>
+																																		 <StopCondition>affectedStopplace</StopCondition>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502042</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Hochdorf Schönau</StopPointName>
+																																		 <StopCondition>affectedStopplace</StopCondition>
+																																 </AffectedStopPoint>
+																																 <AffectedStopPoint>
+																																		 <StopPointRef>8502024</StopPointRef>
+																																		 <StopPointName xml:lang="DE">Hochdorf</StopPointName>
+																																		 <StopCondition>lastRoutePoint</StopCondition>
+																																 </AffectedStopPoint>
+																														 </StopPoints>
+																												 </Affects>
+																										 </PublicationScope>
+																										 <PassengerInformationAction>
+
+																												 <ActionRef>5</ActionRef>
+																												 <RecordedAtTime>2020-03-19T16:54:00Z</RecordedAtTime>
+																												 <SourceRef>sbb-via-out-sx_test</SourceRef>
+																												 <OwnerRef>85:11</OwnerRef>
+																												 <Perspective>general</Perspective>
+																												 <TextualContent>
+																														 <SummaryContent>
+																																 <SummaryText xml:lang="DE">Der Bahnverkehr auf der Strecke Luzern und Lenzburg ist in beiden Richtungen zwischen Waldibrücke und Hochdorf unterbrochen.</SummaryText>
+																														 </SummaryContent>
+																														 <ReasonContent>
+																																 <ReasonText xml:lang="DE">Technische Störung an der Bahnanlage</ReasonText>
+																														 </ReasonContent>
+																														 <ConsequenceContent>
+																																 <ConsequenceText xml:lang="DE">Es ist mit Verspätungen und Zugausfällen zu rechnen.</ConsequenceText>
+																														 </ConsequenceContent>
+																														 <RecommendationContent>
+																																 <RecommendationText xml:lang="DE">Zwischen Emmenbrücke und Hochdorf fahren in beiden Richtungen Ersatzbusse.</RecommendationText>
+																														 </RecommendationContent>
+																														 <DurationContent>
+																																 <DurationText xml:lang="DE">Die Dauer der Einschränkung ist unbestimmt.</DurationText>
+																														 </DurationContent>
+																												 </TextualContent>
+																										 </PassengerInformationAction>
+																								 </PublishingAction>-->
+      </PublishToWebAction>
+     </PublishingActions>
+    </PtSituationElement>
+   </Situations>
+  </SituationExchangeDelivery>
+ </ServiceDelivery>
+</Siri>
