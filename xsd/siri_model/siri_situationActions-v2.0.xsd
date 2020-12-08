@@ -41,6 +41,7 @@
  <xsd:include schemaLocation="siri_feature_support-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
  <xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_location-v2.0.xsd"/>
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -111,11 +112,6 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence minOccurs="0">
    <xsd:group ref="ActionsGroup"/>
-   <xsd:element name="PublishingAction" type="PublishingActionStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of the whole action to be published. &gt;SIRI 2.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
    <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Extension point.</xsd:documentation>
@@ -137,6 +133,74 @@ Rail transport, Roads and road transport
   </xsd:sequence>
  </xsd:complexType>
  <!-- ======================================================================= -->
+ <xsd:element name="PassengerInformationAction" type="PassengerInformationActionStructure"/>
+ <xsd:complexType name="PassengerInformationActionStructure">
+  <xsd:sequence>
+   <xsd:element name="ActionRef" type="EntryQualifierStructure">
+    <xsd:annotation>
+     <xsd:documentation>Reference to the action number within the incident concept.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RecordedAtTime" type="xsd:dateTime">
+    <xsd:annotation>
+     <xsd:documentation>The time of the last update</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Version" type="SituationVersion" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The monotonically increasing version of the passenger information instance. If absent, is the same version as the enclosing Situation</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="SourceRef" type="ParticipantRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The system which created this passenger information. If absent, is the same version as the enclosing Situation</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OwnerRef" type="OrganisationRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>The organisation which owns this passenger information.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Perspective" type="PerspectiveEnumeration" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Perspective of the passenger, e.g. general, vehicleJourney, stopPoint.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ActionPriority" type="xsd:positiveInteger" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Prioritises a passenger information action from the information owner's point of view, e.g. suitable for sorting or hiding individual passenger information actions. 1 = highest priority.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>All texts of the passenger information.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
+ <xsd:complexType name="PublicationScopeStructure">
+  <xsd:annotation>
+   <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
+   <xsd:element name="Affects" type="AffectsScopeStructure"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="PublishingActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for description of the whole action to be published.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
+   <xsd:element ref="PassengerInformationAction" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Description of the whole passenger information of one action.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <xsd:complexType name="ParameterisedActionStructure">
   <xsd:annotation>
    <xsd:documentation>Type for parameterised, i.e. user definable, actions.</xsd:documentation>
@@ -149,11 +213,18 @@ Rail transport, Roads and road transport
        <xsd:documentation>Description of action.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="ActionData" type="ActionDataStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Data associated with action.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
+     <xsd:choice>
+      <xsd:element name="ActionData" type="ActionDataStructure" minOccurs="0" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>Data associated with action.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PublishingAction" type="PublishingActionStructure" minOccurs="0" maxOccurs="unbounded">
+       <xsd:annotation>
+        <xsd:documentation>Type for description of the whole action to be published.</xsd:documentation>
+       </xsd:annotation>
+      </xsd:element>
+     </xsd:choice>
      <xsd:element name="PublicationWindow" type="ClosedTimestampRangeStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
        <xsd:documentation>Defines a number of validity periods. When not sent, then the validity periods of higher level are valid. Can be overwritten by deeper level.</xsd:documentation>
@@ -228,6 +299,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Display prompt for presenting action to user.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="PublicationScope" type="PublicationScopeStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <!-- ======================================================================= -->
@@ -241,6 +317,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="PublishToTvAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="PublishToAlertsAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="PublishToDisplayAction" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="PublishByPerspectiveAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="ManualAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyByEmailAction" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="NotifyBySmsAction" minOccurs="0" maxOccurs="unbounded"/>
@@ -248,6 +325,20 @@ Rail transport, Roads and road transport
    <xsd:element ref="NotifyUserAction" minOccurs="0" maxOccurs="unbounded"/>
   </xsd:sequence>
  </xsd:group>
+ <xsd:element name="PublishByPerspectiveAction" type="PublishByPerspectiveActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Action: Publish SITUATION To one or more passenger perspectives.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="PublishByPerspectiveActionStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Action Publish SITUATION To one or more passenger perspectives.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ParameterisedActionStructure">
+           </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
  <xsd:element name="PublishToWebAction" type="PublishToWebActionStructure">
   <xsd:annotation>
    <xsd:documentation>Action: Publish SITUATION To Web.</xsd:documentation>
@@ -512,39 +603,12 @@ Rail transport, Roads and road transport
   </xsd:complexContent>
  </xsd:complexType>
  <!-- ===Extentions for SIRI-SX v2.0p-a0.x================================================== -->
- <xsd:complexType name="ActionPeriodStructure">
-  <xsd:sequence>
-   <xsd:element name="StartTime" type="xsd:time"/>
-   <xsd:element name="EndTime" type="xsd:time"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="AffectsSegmentStructure">
-  <xsd:sequence>
-   <xsd:element name="Start" type="AffectedPlaceStructure"/>
-   <xsd:element name="End" type="AffectedPlaceStructure"/>
-  </xsd:sequence>
- </xsd:complexType>
  <xsd:complexType name="DescriptionContentStructure">
   <xsd:sequence>
    <xsd:element name="DescriptionText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DescriptionCloze" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
    <xsd:element name="DescriptionPriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
@@ -561,21 +625,6 @@ Rail transport, Roads and road transport
      <xsd:documentation>Further consequence to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ConsequenceCloze" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Consequence" type="PtConsequenceStructure" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
    <xsd:element name="ConsequencePriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Prioritises a consequence from the information owner's point of view, e.g. usable for sorting or hiding individual consequences.
@@ -584,15 +633,6 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:simpleType name="Duration235959">
-  <xsd:annotation>
-   <xsd:documentation>Duration of specific time range (smaller than 24h). StartTime plus Duration can result in a time on the next day, smaller than the StartTime.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:duration">
-   <xsd:minInclusive value="P0Y0M0DT0H0M1S"/>
-   <xsd:maxInclusive value="P0Y0M0DT23H59M59S"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <xsd:complexType name="DurationContentStructure">
   <xsd:sequence>
    <xsd:element name="DurationText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -602,87 +642,6 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:element name="PassengerInformationAction" type="PassengerInformationActionStructure"/>
- <xsd:complexType name="PassengerInformationActionStructure">
-  <xsd:complexContent>
-   <xsd:extension base="ParameterisedActionStructure">
-    <xsd:sequence>
-     <xsd:element name="ActionRef" type="EntryQualifierStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to the action number within the incident concept.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="RecordedAtTime" type="xsd:dateTime">
-      <xsd:annotation>
-       <xsd:documentation>The time of the last update</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="Version" type="SituationVersion" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>The monotonically inscresing version of the passenger information instance. If absent, is the same version as the enclosing Situation</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="SourceRef" type="ParticipantRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>The system which created this passenger information. If absent, is the same version as the enclosing Situation</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="OwnerRef" type="OrganisationRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>The organisation which owns this passenger information.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="Perspective" type="PerspectiveEnumeration" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Perspective of the passenger, e.g. general, vehicleJourney, stopPoint.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="ActionPriority" type="xsd:positiveInteger" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Prioritises a passenger information action from the information owner's point of view, e.g. suitable for sorting or hiding individual passenger information actions.
-1 = highest priority.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>All texts of the passenger information.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="PublishingActionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for description of the whole action to be published (extends SIRI-SX v2.0p).</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="PublishAtScope">
-    <xsd:annotation>
-     <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
-      <xsd:element name="Affects" type="AffectsScopeStructure"/>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element ref="PassengerInformationAction" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of the whole passenger information of one action.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:simpleType name="ReasonCode">
-  <xsd:annotation>
-   <xsd:documentation>Values for reason in cloze.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="18:1"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <xsd:complexType name="ReasonNameContentStructure">
   <xsd:sequence>
    <xsd:element name="ReasonText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -690,74 +649,26 @@ Rail transport, Roads and road transport
      <xsd:documentation>ReasonName of passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ReasonNameCloze" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:group ref="ReasonGroup"/>
-      <xsd:element name="Location" type="LocationStructure"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:complexType name="RecommendationContentStructure">
+ <xsd:complexType name="AdviceContentStructure">
   <xsd:sequence>
-   <xsd:element name="RecommendationText" type="DefaultedTextStructure" maxOccurs="unbounded">
+   <xsd:element name="AdviceText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Further recommendation to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Further advice to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="RecommendationCloze" minOccurs="0">
+   <xsd:element name="AdvicePriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Recommendation" type="RecommendationStructure" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="RecommendationPriority" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Prioritises a recommendation from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations. 
-1 = highest priority.</xsd:documentation>
+     <xsd:documentation>Prioritises an advice from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations.
+      1 = highest priority.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:complexType name="RecommendationStructure">
-  <xsd:sequence>
-   <xsd:element name="Option" type="RecommendationOptionEnumeration"/>
-   <xsd:element name="Affects" type="AffectsScopeStructure" maxOccurs="unbounded"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:simpleType name="RecommendationOptionEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for reason in cloze.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="Umstiegsempfehlung"/>
-   <xsd:enumeration value="umgeleitet"/>
-   <xsd:enumeration value="normal"/>
-   <xsd:enumeration value="Zusatz"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <xsd:complexType name="RemarkContentStructure">
   <xsd:sequence>
-   <xsd:element name="Remark" type="DefaultedTextStructure" maxOccurs="unbounded">
+   <xsd:element name="RemarkText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Further remark to passengers, e,g, "For more information call xy".</xsd:documentation>
     </xsd:annotation>
@@ -777,25 +688,14 @@ Rail transport, Roads and road transport
      <xsd:documentation>Summary of passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="SummaryCloze" minOccurs="0">
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="InternalContentStructure">
+  <xsd:sequence>
+   <xsd:element name="InternalText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Description" type="ServiceConditionEnumeration">
-       <xsd:annotation>
-        <xsd:documentation>Enum for summary description. Enums are TBD</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="Affects" type="AffectsScopeStructure" maxOccurs="unbounded"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
@@ -803,54 +703,57 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="TextualContentSize" type="xsd:NMTOKENS" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small)</xsd:documentation>
+     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small).<br/> If text length for a class size varies on perspective and a PassengerInformationAction applies to several perspectives, take the smallest class</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="ActionsGroup" minOccurs="0"/>
    <xsd:element name="SummaryContent" type="SummaryContentStructure">
     <xsd:annotation>
      <xsd:documentation>Content for summary of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ReasonContent" type="ReasonNameContentStructure" minOccurs="0"/>
+   <xsd:element name="ReasonContent" type="ReasonNameContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for the reason of a passenger information action</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="DescriptionContent" type="DescriptionContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n descriptions of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for the description of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ConsequenceContent" type="ConsequenceContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n consequences of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for the consequence of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="RecommendationContent" type="RecommendationContentStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="AdviceContent" type="AdviceContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n recommendations of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for the advice of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DurationContent" type="DurationContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Content to inform about a passenger information action.</xsd:documentation>
+     <xsd:documentation>Content for the duration of a passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RemarkContent" type="RemarkContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n remarks of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
+     <xsd:documentation>Content for the remark of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="InfoLink" type="InfoLinkStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Image" type="ImageStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="Images" type="ImagesStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Internal" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="InfoLinks" type="InfoLinksStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>for internal information only, not passenger relevant</xsd:documentation>
+     <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
