@@ -621,12 +621,12 @@ Rail transport, Roads and road transport
       <xsd:choice>
        <xsd:element name="FirstStopPointRef" type="StopPointRefStructure">
         <xsd:annotation>
-         <xsd:documentation>Used to indicate the SCHEDULED stop point with a stop assignment to be considered as start of the SECTION</xsd:documentation>
+         <xsd:documentation>Used to indicate the SCHEDULED stop point  at the start of the SECTION</xsd:documentation>
         </xsd:annotation>
        </xsd:element>
        <xsd:element name="FirstStopPlaceRef" type="ifopt:StopPlaceRefStructure">
         <xsd:annotation>
-         <xsd:documentation>Used to indicate that any SCHEDULED stop point with a stop assignment of the indicated StopPlace is to be considered as start of the SECTION</xsd:documentation>
+         <xsd:documentation>Used to indicate that any SCHEDULED stop point with a stop assignment to the indicated StopPlace is to be considered as start of the SECTION</xsd:documentation>
         </xsd:annotation>
        </xsd:element>
        <xsd:element name="FirstQuayRef" type="QuayRefStructure">
@@ -635,15 +635,15 @@ Rail transport, Roads and road transport
         </xsd:annotation>
        </xsd:element>
       </xsd:choice>
-       <xsd:choice minOccurs="0">
-          <xsd:element name="IntermediateStopPointRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="unbounded">
+       <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="IntermediateStopPointRef" type="StopPointRefStructure">
           <xsd:annotation>
            <xsd:documentation>An intermediate Stop POINT of the SECTION that must be part of SECTION</xsd:documentation>
           </xsd:annotation>
          </xsd:element>
          <xsd:element name="IntermediateStopPlaceRef" type="ifopt:StopPlaceRefStructure">
           <xsd:annotation>
-           <xsd:documentation>Used to indicate that at least one SCHEDULED stop point with a stop assignment of the indicated StopPlace is to be considered as start of the SECTION</xsd:documentation>
+           <xsd:documentation>Used to indicate that at least one SCHEDULED stop point with a stop assignment to the indicated StopPlace must be part of the SECTION</xsd:documentation>
           </xsd:annotation>
          </xsd:element>
         <xsd:element name="IntermediateQuayRef" type="QuayRefStructure">
@@ -655,12 +655,12 @@ Rail transport, Roads and road transport
        <xsd:choice>
         <xsd:element name="LastStopPointRef" type="StopPointRefStructure">
          <xsd:annotation>
-          <xsd:documentation>Used to indicate the SCHEDULED stop point with a stop assignment to be considered as end of the SECTION</xsd:documentation>
+          <xsd:documentation>Used to indicate the SCHEDULED stop point at the end of the SECTION</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element name="LastStopPlaceRef" type="ifopt:StopPlaceRefStructure">
          <xsd:annotation>
-          <xsd:documentation>Used to indicate that any SCHEDULED stop point with a stop assignment of the indicated StopPlace is to be considered as end of the SECTION</xsd:documentation>
+          <xsd:documentation>Used to indicate that any SCHEDULED stop point with a stop assignment to the indicated StopPlace is to be considered as end of the SECTION</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element name="LastQuayRef" type="QuayRefStructure">
