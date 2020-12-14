@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von David Sielaff (Verkehrsverbund Rhein-Sieg GmbH) bearbeitet -->
 <!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situation">
+ <!--
+siri_model\siri_situation-v2.0.xsd:
+19.12.2017 D. Rubli, Siri_XML-2.0p_a0.2:
+- Concequence.Period changed to unbounded.
+12.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
+- RelatedToEnumeration Enum value "correctionTo" added according to recommendation document.
+- WorkflowStatusEnumeration Enum value "pendingApproval" added according to recommendation document.
+- AudienceEnumeration Enum value "authorities" added according to recommendation document.
+- AudienceEnumeration Enum value "transportOperators" added according to recommendation document.
+13.06.2018 D. Rubli, Siri_XML-2.0p_a0.5:
+- StatusGroup.Progress changed from optional to mandatory
+- PublicationWindow changed to unbounded
+-->
  <!-- ======================================================================= -->
  <!--Needed to work around import limitation in JAXB - all namespaces. -->
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all-v0.3.xsd"/>
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility-v0.3.xsd"/>
  <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema_2_0RC1_2_0.xsd"/>
+ <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../xml/xml.xsd"/>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_situationIdentity-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_situationServiceTypes-v1.0.xsd"/>
@@ -472,7 +487,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for a source, i.e. provider of information.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Country" type="xsd:NMTOKEN" minOccurs="0">
+   <xsd:element name="Country" type="ifopt:CountryRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Country of origin of source element.</xsd:documentation>
     </xsd:annotation>
@@ -651,7 +666,7 @@ Rail transport, Roads and road transport
      </xsd:sequence>
     </xsd:complexType>
    </xsd:element>
-   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Publication Window for SITUATION if different from validity period.</xsd:documentation>
     </xsd:annotation>
@@ -1119,7 +1134,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for disruption.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
     </xsd:annotation>
