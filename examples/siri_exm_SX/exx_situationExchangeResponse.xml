@@ -40,7 +40,7 @@
      <Severity>severe</Severity>
      <Audience>public</Audience>
      <ReportType>point</ReportType>
-     <Summary overridden="true">Bomb at Barchester station</Summary>
+     <Summary overridden="true" xml:lang="EN">Bomb at Barchester station</Summary>
      <Description overridden="true" xml:lang="EN">Building evacuated. AVoid station untile furtehr notice</Description>
      <Affects>
       <Operators>
@@ -75,8 +75,8 @@
        <Period>
         <StartTime>2001-12-17T09:30:47.0Z</StartTime>
        </Period>
-       <Condition>pti13_0</Condition>
-       <Severity>pti26_0</Severity>
+       <Condition>unknown</Condition>
+       <Severity>unknown</Severity>
        <Blocking>
         <JourneyPlanner>true</JourneyPlanner>
         <RealTime>true</RealTime>
@@ -134,7 +134,7 @@
      <Severity>severe</Severity>
      <Audience>public</Audience>
      <ReportType>point</ReportType>
-     <Summary overridden="true">Jam on the access road to Barchester Station</Summary>
+     <Summary overridden="true" xml:lang="EN">Jam on the access road to Barchester Station</Summary>
      <Description overridden="true" xml:lang="EN">Grislock and panic</Description>
      <Affects>
       <Operators>
@@ -169,7 +169,7 @@
        <Period>
         <StartTime>2001-12-17T09:30:47.0Z</StartTime>
        </Period>
-       <Condition>delayed</Condition>
+       <Condition>delay</Condition>
        <Severity>severe</Severity>
       </Consequence>
      </Consequences>
@@ -202,8 +202,8 @@
 							<d2:sourceIdentification>SRA</d2:sourceIdentification>
 							<d2:sourceName>
 								<d2:values>
-									<d2:value lang="se">Vägverket</d2:value>
-									<d2:value lang="en">Swedish Road Administration</d2:value>
+									<d2:value xml:lang="se">Vägverket</d2:value>
+									<d2:value xml:lang="en">Swedish Road Administration</d2:value>
 								</d2:values>
 							</d2:sourceName>
 							<d2:sourceType>roadAuthorities</d2:sourceType>
@@ -224,8 +224,8 @@
 						<d2:generalPublicComment>
 							<d2:comment>
 								<d2:values>
-									<d2:value lang="se">Detta är en svensk olycka</d2:value>
-									<d2:value lang="en">This is a swedish accident</d2:value>
+									<d2:value xml:lang="se">Detta är en svensk olycka</d2:value>
+									<d2:value xml:lang="en">This is a swedish accident</d2:value>
 								</d2:values>
 							</d2:comment>
 						</d2:generalPublicComment>
