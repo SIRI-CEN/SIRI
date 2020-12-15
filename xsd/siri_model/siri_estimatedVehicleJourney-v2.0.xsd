@@ -403,12 +403,12 @@ the original journey and the nature of the difference.</xsd:documentation>
  </xsd:element>
  <xsd:element name="ExtraCall" type="xsd:boolean" default="false">
   <xsd:annotation>
-   <xsd:documentation>This ESTIMATED CALL is an addition to the respective journey in the production timetable or to the previously sent prediction. If omitted: CALL is planned.</xsd:documentation>
+   <xsd:documentation>This CALL is an addition to the respective journey in the production timetable or to the previously sent prediction. If omitted: CALL is planned.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="CallCancellation">
   <xsd:annotation>
-   <xsd:documentation>This ESTIMATED CALL is a cancellation of a previously announced call.</xsd:documentation>
+   <xsd:documentation>This CALL is a cancellation of a previously announced call.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:boolean"/>
  </xsd:simpleType>
