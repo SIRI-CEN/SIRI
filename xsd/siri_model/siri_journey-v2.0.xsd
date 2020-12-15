@@ -1285,11 +1285,6 @@ It is advised to specify a reference point that is meaningful for passengers on 
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="TrainFormationReferenceGroup"/>
-   <xsd:element name="PositionOfTrainElement" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Relative position of TRAIN ELEMENT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
    <xsd:element name="VehicleInFormationStatus" type="VehicleInFormationStatusStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Information about a change of a VEHICLE within the formation, e.g., whether a VEHICLE is open, booked or has defective doors.</xsd:documentation>
