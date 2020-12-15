@@ -471,7 +471,7 @@ Rail transport, Roads and road transport.
      </xsd:group>
      <xsd:group ref="SiriServiceCapabilitiesRequestGroup"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0"/>
+    <xsd:attribute name="version" type="VersionString" default="2.1"/>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
@@ -507,7 +507,7 @@ Rail transport, Roads and road transport.
     <xsd:sequence>
      <xsd:group ref="SiriServiceCapabilitiesResponseGroup"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0"/>
+    <xsd:attribute name="version" type="VersionString" default="2.1"/>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>

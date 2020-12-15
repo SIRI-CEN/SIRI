@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Ulf Bjersing (Hogia Public Transport Systems AB) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_SituationExchange_service">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_SituationExchange_service">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -18,40 +18,49 @@
      <Modified>2008-01-22</Modified>
     </Date>
     <Date><Modified>2009-04-17</Modified>
-					 Name Space changes 
+     <!-- Name Space changes -->
 				</Date>
     <Date><Modified>2008-01-17</Modified>
-					 IFOPT and Datex2 compatibility changes 
+     <!-- IFOPT and Datex2 compatibility changes -->
 				</Date>
     <Date><Modified>2008-07-05</Modified>
-					 Allow zero sized SITUATIONs 
+     <!-- Allow zero sized SITUATIONs -->
 				</Date>
-    <Date><Modified>2008-10-01</Modified>
-					 -- Add StatusFilterGroup to SIRI-SX request with Verification, Progerss and Reality 
-					 -- Change caridinality on LineRef and CONNECTION link filters to allow many rather than just one.
-					 -- Corret predictability filter values to be an enum. 
-					 -- Add a place and Road filter.
+    <Date>
+     <Modified>2008-10-01</Modified>
+     <!--
+					  Add StatusFilterGroup to SIRI-SX request with Verification, Progerss and Reality
+					  Change caridinality on LineRef and CONNECTION link filters to allow many rather than just one.
+					  Corret predictability filter values to be an enum.
+					  Add a place and Road filter. -->
 				</Date>
     <Date><Modified>2008-11-17</Modified>
-					 -- Revise to support substitution groups 
+     <!-- Revise to support substitution groups -->
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
+     <!-- +SIRI v2.0
 					    - Change to use DatexII V2.0 
-					    -[FR]    Add Extensions tag to SituationExchangeSubscriptionRequest
+					    -[FR]    Add Extensions tag to SituationExchangeSubscriptionRequest -->
 				</Date>
-    <Date><Modified>2013-10-09</Modified>
+    <Date>
+     <Modified>2013-10-09</Modified>
+     <!--
 					    - [VDV] Change caridinality on StopPointRef filter to allow many rather than just one.
-					    -[FR]    Add Extensions tag to SituationExchangeSubscriptionRequest
+					    -[FR]    Add Extensions tag to SituationExchangeSubscriptionRequest -->
 				</Date>
-    <Date><Modified>2014-06-20</Modified>
+    <Date>
+     <Modified>2014-06-20</Modified>
+     <!--
         * [de] Add temporal filter to request in   siri_situationExchange_service.xsd.  
         * [de] Add IncludeOnly-IfInPublicationWindow to situation request temporal filter   siri_situationExchange_service.xsd.  
         * [doc/fx] Correct   capability Matrix  siri_situationExchange_service.xsd.
-          * [fx] StopPlaceFilterGroup: add missing component ref and facility that was in doc but missing from schema
+          * [fx] StopPlaceFilterGroup: add missing component ref and facility that was in doc but missing from schema -->
 				</Date>
-    <Date><Modified>2018-11-13</Modified>
+    <Date>
+     <Modified>2018-11-13</Modified>
+     <!--
           [vdv-UmS] SituationExchangeServiceCapabilitiesStructure.TopicFiltering "FilterByKeword" changed to "FilterByKeyword" according to recommendation.
+          -->
 				</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
@@ -71,7 +80,7 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions-v2.0.xsd</Requires>
     </Relation>
     <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004, 2007</Copyright>
+       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
@@ -79,7 +88,7 @@
       <li> categories from TPEG</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -143,7 +152,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="SituationExchangeRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -505,7 +514,7 @@ If false or omitted, each subscription response will contain the full informatio
      </xsd:group>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -613,7 +622,7 @@ If false or omitted, each subscription response will contain the full informatio
      <xsd:element ref="SituationExchangePermissions" minOccurs="0"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>

@@ -1,41 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situationActions">
- <!--
-10.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
-- PublishToDisplayAction added to ActionsGroup
--->
- <!--
-19.12.2017 D. Rubli, Siri_XML-2.0p_a0.2:
-- ActionsStructure: extended with PublishingAction
-- PassengerInformationAction.ActionValidityPeriod: changed from HalfOpenTimestampOutputRangeStructure to structure with three different time range definitions, with StartTime and Duration
-- PassengerInformationAction.RepetitionWithPeriod: deleted
-- PassengerInformationAction.TextualContent: Single and multiple contents formed with text elements and cloze structures
-- PassengerInformationAction.TextualContent.Internal: changed to unbounded for different languages
-- PassengerInformationAction.TextualContent.ClozeRef: deleted
-- PassengerInformationAction.TextualContent.Language: deleted
-- PassengerInformationAction.ClozeContentStructure: deleted
-08.01.2018 D. Rubli, Siri_XML-2.0p_a0.2:
-- Duration type Duration235959Type renamed to Duration235959 and base changed from time to duration
-25.01.2018 D. Rubli, Siri_XML-2.0p_a0.4:
-- PassengerInformationAction.ActionPriority added, e.g. suitable for sorting or hiding individual passenger information actions.
-- PassengerInformationAction.TextualContent.DetailContent and Detail renamed to ConsequenceContent and ConsequenceText
-- PassengerInformationAction.OwnerRef added
-- PassengerInformationAction.TextualContent.Keywords replaced by TextualContentSize S, M, L
-- PassengerInformationAction.TextualContent.ActionsGroup added
-25.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
-- ActionsStructure.ActionsGroup.PublishToTvAction and NotifyBySmsAction changed to unbounded
-- ActionsStructure.ActionsGroup.PublishToTvAction.Ceefax and Teletext: annotation switched
-13.06.2018 D. Rubli, Siri_XML-2.0p_a0.5:
-- PublicationWindow (with existing SIRI-structure ClosedTimestampRangeStructure) added to ParameterisedActionStructure
-   - because ParameterisedActionStructure is base of PassengerInformationAction, PublicationWindow replaces there the ActionValidityPeriod of version Siri_XML-2.0p_a0.4, which had wrongly not the name PublicationWindow
-   - because ParameterisedActionStructure is base of all PublishTo...-structures, PublicationWindow is now automatically also available there
-- ScopeType renamed to Perspective with new enumeration "general" / "stopPoint" / "vehicleJourney"
-08.05.2019 D. Rubli, Siri_XML-2.0p_a0.15:
-- Networks in DescriptionCloze replaced by Affects
-- all Cloze-elements extended with Extensions
-- The element ConsequenceCloze is now directly defined instead of as type="PtConsequenceStructure"
-- Type of element Option in RecommendationStructure changed from RecommendationOptions to RecommendationOptionEnumeration
--->
  <xsd:include schemaLocation="siri_situation-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_feature_support-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
