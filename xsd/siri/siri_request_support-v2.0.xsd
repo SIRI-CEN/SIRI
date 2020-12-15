@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_requests">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_requests">
  <xsd:include schemaLocation="../siri_utility/siri_participant-v2.0.xsd"/>
  <xsd:annotation>
   <xsd:appinfo>
@@ -35,14 +35,14 @@
     </Relation>
     <Rights>Unclassified
 
-        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+        <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the SIRI 1.0  standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -140,11 +140,25 @@ Rail transport, Roads and road transport
   </xsd:simpleContent>
  </xsd:complexType>
  <!-- ======================================================================= -->
- <xsd:element name="IncludeTranslations" type="xsd:boolean">
+ <xsd:element name="IncludeTranslations" type="xsd:boolean" default="false">
   <xsd:annotation>
-   <xsd:documentation>Whether additional translations of text names are to be included in elements. If false, then only one element should be returned.  Default is false.
-
-Where multiple values are returned The first element returned ill be used as the default value.</xsd:documentation>
+   <xsd:documentation>Whether additional translations of text names are to be included in elements. If 'false', then only one element should be returned.  Default is 'false'.
+Where multiple values are returned The first element returned will be used as the default value.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="IncludeInterchanges" type="xsd:boolean" default="true">
+  <xsd:annotation>
+   <xsd:documentation>Whether SERVICE JOURNEY INTERCHANGE data is to be transmitted or not. Default is 'true'. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="IncludeJourneyRelations" type="xsd:boolean" default="true">
+  <xsd:annotation>
+   <xsd:documentation>Whether JOURNEY RELATION data is to be transmitted or not. Default is 'true'. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="IncludeTrainFormations" type="xsd:boolean" default="true">
+  <xsd:annotation>
+   <xsd:documentation>Whether TRAIN (ELEMENT), COMPOUND TRAIN and TRAIN STOP ASSIGNMENT data is to be transmitted or not. Default is 'true'. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->

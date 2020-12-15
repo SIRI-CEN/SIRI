@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situationAffects">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situationAffects">
  <xsd:include schemaLocation="siri_monitoredVehicleJourney-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_modes-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_situationServiceTypes-v1.0.xsd"/>
@@ -22,7 +22,7 @@
     <Audience>e-service developers</Audience>
     <Contributor>Waldemar Isajkin (INIT GmbH)</Contributor>
     <Coverage>Europe</Coverage>
-    <Creator>&gt;Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
+    <Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
     <Date>
      <Created>2007-09-29</Created>
     </Date>
@@ -34,31 +34,34 @@
      <!-- line group corrected to ref a LINEref an not a route ref -->
     </Date>
     <Date><Modified>2013-10-10</Modified>
-					[vdv] Added Service Condition to the AffectedVehicleJourney
+     <!-- [vdv] Added Service Condition to the AffectedVehicleJourney
           [vdv] Corrected LineGroup - added PublishedLineName and changed cardinality of LineRef to 1:1
           [vdv] CallCondition - changed cardinality to allow to include multiple conditions
           [vdv] AffectedCallStructure - added CallPropertyGroup
           [vdv] AffectedVehicleJourneyStructure - added DestinationDisplayAtOrigin
           [vdv] AffectedRouteStructure - added possibility to expose the ROUTE as a sequence of STOP POINTS with links between them
 		  [vdv] AffectedVehicles added
+      -->
 				</Date>
     <Date><Modified>2014-06-20</Modified>
-        * [de] Add temporal filter to request in   siri_situationExchange_service.xsd.  
-        * [de] Add IncludeOnly-IfInPublicationWindow to situation request temporal filter   siri_situationExchange_service.xsd.  
-        * [doc/fx] Correct   capability Matrix  siri_situationExchange_service.xsd.
+     <!-- [de] Add temporal filter to request in   siri_situationExchange_service.xsd.
+          [de] Add IncludeOnly-IfInPublicationWindow to situation request temporal filter   siri_situationExchange_service.xsd.
+          [doc/fx] Correct   capability Matrix  siri_situationExchange_service.xsd.
+      -->
 				</Date>
-    <Date><Modified>2018-06-13</Modified>
-          [vdv-UmS] StopPoints and StopPlaces added to AffectedLineStructure to be able to restrict line-oriented information for specific stopping points or stops
-          [vdv-UmS] Lines added to AffectedStopPointStructure and AffectedStopPlaceStructure to be able to restrict stopping point- or stop-oriented information for specific lines
-				</Date>
-    <Date><Modified>2018-11-08</Modified>
-          [vdv] Wrapped "AffectedInterchanges" node around AffectedInterchange in AffectedCallStructure
+    <Date>
+     <Modified>2018-11-08</Modified>
+     <!-- [vdv] Wrapped "AffectedInterchanges" node around AffectedInterchange in AffectedCallStructure
           [vdv] "PublishedLineName" inside "LineGroup" and "AffectedVehicleJourneyStructure" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
-		  [VDV-UmS] optional "StopPlaceName" (unbounded because of lang-attr.) and optional "StopPlaceRef" inserted to "AffectedStopPointStructure" to be able to send stop information for the affected StopPoint
           [vdv] "Route" inside "AffectedVehicleJourneyStructure" is now optional since all of its content are optional
+      -->
 				</Date>
-    <Date><Modified>2019-05-07</Modified>
-		  [VDV-UmS] "AffectedLines" inside "LineGroup" changed to "AffectedLine"
+    <Date>
+     <Modified>2020-01-29</Modified>
+     <!-- SIRI 2.1
+	   Aligned with TPEG2 PTS, added AccessibilityFeatureEnumeration (more values than in IFOPT)
+	   Removed unused AreaOfInterestEnumeration
+	  -->
 				</Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents </p>
@@ -70,22 +73,21 @@
     </Format>
     <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_model/siri_situationAffects-v2.0.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+    <Publisher>CEN</Publisher>
     <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situationServiceTypes-v1.2.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situationServiceTypes-v1.0.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modes-v1.1.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey-v2.0.xsd</Requires>
     </Relation>
     <Rights>Unclassified
-
-       <Copyright>Kizoom 2000-2007, CEN 2009-2012</Copyright>
+       <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Schema derived Derived from the Kizoom XTIS schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -106,7 +108,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="AffectedStopPointStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for an SCHEDUELD STOP POINT affected by a SITUATION.</xsd:documentation>
+   <xsd:documentation>Type for an SCHEDULED STOP POINT affected by a SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="StopPointRef" minOccurs="0"/>
@@ -117,7 +119,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Name of SCHEDULED STOP POIHT.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPointType" type="StopPointTypeEnumeration" minOccurs="0">
@@ -147,7 +149,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="PlaceRef" type="ZoneRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Refernce to a SITE or TOPOGRAPHIC PLACE affected by the Locality of stop (In UK NPtg Locality Code). Derivable from StopRef.</xsd:documentation>
+     <xsd:documentation>Reference to a SITE or TOPOGRAPHIC PLACE affected by the Locality of stop (In UK NPtg Locality Code). Derivable from StopRef.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="PlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -157,7 +159,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Assesment of current ACCESSIBILITY of the STOP POINT as affected by the SITUATION.</xsd:documentation>
+     <xsd:documentation>Assessment of current ACCESSIBILITY of the STOP POINT as affected by the SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopCondition" type="RoutePointTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -212,19 +214,6 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:choice>
  </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="AreaOfInterestEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Area Of Interest.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="continentWide"/>
-   <xsd:enumeration value="national"/>
-   <xsd:enumeration value="neighboroughingCountries"/>
-   <xsd:enumeration value="regional"/>
-   <xsd:enumeration value="notSpecified"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <!-- ===Connections============================================================== -->
  <xsd:simpleType name="ZoneCodeType">
   <xsd:annotation>
@@ -318,7 +307,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Description of Link.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="AccessibilityFeature" type="ifopt:AccessibilityFeatureEnumeration" minOccurs="0">
+   <xsd:element name="AccessibilityFeature" type="AccessibilityFeatureEnumeration" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Nature of CONNECTION link.</xsd:documentation>
     </xsd:annotation>
@@ -854,7 +843,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="JourneyCondition" type="ServiceConditionEnumeration" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>enum	Status of service for this Vehicle Journey - TPEG value. Multiple Condtions can be valid at the same time.  (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>enum Status of service for this Vehicle Journey - TPEG value. Multiple Conditions can be valid at the same time.  (+SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Calls" minOccurs="0">
@@ -1117,7 +1106,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>Name of stop place.  (Unbounded since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="StopPlaceType" type="ifopt:StopPlaceTypeEnumeration" minOccurs="0">
+     <xsd:element name="StopPlaceType" type="StopPlaceTypeEnumeration" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Type of Stop Place.</xsd:documentation>
       </xsd:annotation>
@@ -1203,7 +1192,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>Further qualifcation of affected part of Link projection,</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="AccessFeatureType" type="ifopt:AccessibilityFeatureEnumeration" minOccurs="0">
+     <xsd:element name="AccessFeatureType" type="AccessibilityFeatureEnumeration" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Type of AccessFeature  (+SIRI.20)</xsd:documentation>
       </xsd:annotation>
@@ -1216,7 +1205,7 @@ Rail transport, Roads and road transport
        <xsd:sequence>
         <xsd:element name="AffectedFacility" type="AffectedFacilityStructure" maxOccurs="unbounded">
          <xsd:annotation>
-          <xsd:documentation>Facililitiy available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
+          <xsd:documentation>Facility available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
        </xsd:sequence>
@@ -1244,5 +1233,219 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:simpleType name="StopPlaceTypeEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Values for STOP PLACE types - TPEG Pts041 and IFOPT</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:string">
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_0, unknown</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="railwayStation">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_1, railway station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undergroundStation">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_2, underground station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="tramStation">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts41_3, tram station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="busStation">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts41_4, bus station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="airport">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts41_5, airport</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="pier">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_6, pier</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="harbourPort">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts41_7, harbour port</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ferryStop">
+    <xsd:annotation>
+     <xsd:documentation>,IFOPT, TPEG Pts41_8, ferry stop</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="lightRailwayStation">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_9, light railway station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="cogwheelStation">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_10, cogwheel station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="funicularStation">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_11, funicular station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ropewayStation">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_12, ropeway station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="coachStation">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, coach station</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ferryPort">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, ferry port</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="onStreetBus">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, on-street bus stop</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="onStreetTram">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, on-street tram stop</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="skiLift">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, ski lift</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="other">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, other</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefinedStopPlaceType">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts41_255, undefined stop place type</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="railStation">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, deprecated (SIRI 2.1), use railwayStation</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="metroStation">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, deprecated (SIRI 2.1), use undergroundStation</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="AccessibilityFeatureEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Values for AccessibilityFeature - TPEG Pts040 and IFOPT</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:string">
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_0, unknown</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="singleStep">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts40_1, single step</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="stairs">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_2, stairs</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="escalator">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_3, escalator</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="travelator">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_4, travelator / moving walkway</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="lift">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_5, lift / elevator</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="ramp">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, TPEG Pts40_6, ramp</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="mindTheGap">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts40_7, mind the gap</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="tactilePaving">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts40_8, tactile paving</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="seriesOfStairs">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, series of stairs</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="shuttle">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, shuttle</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="barrier">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, barrier</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="narrowEntrance">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, narrow entrance</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="confinedSpace">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, confined space</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="queueManagement">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, queue management</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="none">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, none</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="other">
+    <xsd:annotation>
+     <xsd:documentation>IFOPT, other</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefined">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pts40_255, undefined accessibility feature type</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+  </xsd:restriction>
+ </xsd:simpleType>
  <!-- ======================================================================= -->
 </xsd:schema>

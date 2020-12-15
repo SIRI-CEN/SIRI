@@ -1,198 +1,203 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- (C) Copyright 2005-2012 CEN SIRI -->
+<?xml version="1.0" encoding="UTF-8"?><!-- (C) Copyright 2005-2012 CEN SIRI -->
 <siri:RoadSituationElement xmlns:d2="http://datex2.eu/schema/2_0RC1/2_0" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <siri:CreationTime>2001-12-17T09:30:47.0Z</siri:CreationTime>
- <siri:ParticipantRef>RAILCO01</siri:ParticipantRef>
- <siri:SituationNumber>000354</siri:SituationNumber>
- <siri:Version>0</siri:Version>
- <siri:References>
-  <siri:RelatedToRef>
-   <siri:CreationTime>2001-12-17T09:30:47.0Z</siri:CreationTime>
-   <siri:ParticipantRef>RAILCO01</siri:ParticipantRef>
-   <siri:SituationNumber>000354</siri:SituationNumber>
-   <siri:Version>0</siri:Version>
-  </siri:RelatedToRef>
- </siri:References>
- <siri:Source>
-  <siri:SourceType>phone</siri:SourceType>
-  <siri:Phone>01223333337654</siri:Phone>
-  <siri:AgentReference>03274</siri:AgentReference>
-  <siri:TimeOfCommunication>2001-12-17T09:30:47.0Z</siri:TimeOfCommunication>
- </siri:Source>
- <siri:Verification>verified</siri:Verification>
- <siri:Progress>open</siri:Progress>
- <siri:QualityIndex>certain</siri:QualityIndex>
- <siri:ValidityPeriod>
-  <siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
- </siri:ValidityPeriod>
- <siri:MiscellaneousReason>bombExplosion</siri:MiscellaneousReason>
- <siri:Severity>severe</siri:Severity>
- <siri:Audience>public</siri:Audience>
- <siri:ReportType>point</siri:ReportType>
- <siri:Summary overridden="true" xml:lang="EN">Jam on the access road to Barchester Station</siri:Summary>
- <siri:Description overridden="true" xml:lang="EN">Grislock and panic</siri:Description>
- <siri:Affects>
-  <siri:Operators>
-   <siri:AllOperators/>
-  </siri:Operators>
-  <siri:StopPoints>
-   <siri:AffectedStopPoint>
-    <siri:StopPointRef>BAAR0003</siri:StopPointRef>
-    <siri:StopPointName>Barchester Station</siri:StopPointName>
-    <siri:StopPointType>pti17_0</siri:StopPointType>
-    <siri:Location id="NMTOKEN" srsName="String">
-     <siri:Longitude>-180</siri:Longitude>
-     <siri:Latitude>-90</siri:Latitude>
-     <siri:Precision>1</siri:Precision>
-    </siri:Location>
-   </siri:AffectedStopPoint>
-  </siri:StopPoints>
-  <siri:StopPlaces>
-   <siri:AffectedStopPlace>
-    <siri:StopPlaceRef>BArF001</siri:StopPlaceRef>
-    <siri:AffectedComponents>
-     <siri:AffectedComponent>
-      <siri:ComponentRef>BAR00021</siri:ComponentRef>
-      <siri:ComponentName>Platfrom 3</siri:ComponentName>
-     </siri:AffectedComponent>
-    </siri:AffectedComponents>
-   </siri:AffectedStopPlace>
-  </siri:StopPlaces>
- </siri:Affects>
- <siri:Consequences>
-  <siri:Consequence>
-   <siri:Period>
-    <siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
-   </siri:Period>
-   <siri:Condition>delay</siri:Condition>
-   <siri:Severity>severe</siri:Severity>
-  </siri:Consequence>
- </siri:Consequences>
- <siri:PublishingActions>
-  <siri:PublishToWebAction>
-   <siri:Incidents>true</siri:Incidents>
-   <siri:HomePage>true</siri:HomePage>
-   <siri:Ticker>false</siri:Ticker>
-  </siri:PublishToWebAction>
-  <siri:PublishToMobileAction>
-   <siri:Incidents>true</siri:Incidents>
-   <siri:HomePage>false</siri:HomePage>
-  </siri:PublishToMobileAction>
-  <siri:PublishToAlertsAction>
-   <siri:ClearNotice>true</siri:ClearNotice>
-   <siri:ByEmail>true</siri:ByEmail>
-   <siri:ByMobile>true</siri:ByMobile>
-  </siri:PublishToAlertsAction>
- </siri:PublishingActions>
- <!-- 
-	<siri:SituationRecord xsi:type="d2:Accident" id="GUID2A22530C-D452-4ae8-B942-993BC2923D1">
-		<d2:situationRecordCreationReference>abc</d2:situationRecordCreationReference>
-		<d2:situationRecordCreationTime>2006-09-28T16:00:00+01:00</d2:situationRecordCreationTime>
-		<d2:situationRecordVersion>1</d2:situationRecordVersion>
-		<d2:situationRecordVersionTime>2006-09-28T16:05:00+00:00</d2:situationRecordVersionTime>
-		<d2:situationRecordFirstSupplierVersionTime>2006-09-28T16:05:00+00:00</d2:situationRecordFirstSupplierVersionTime>
-		<d2:probabilityOfOccurrence>certain</d2:probabilityOfOccurrence>
-		<d2:source>
-			<d2:sourceIdentification>SRA</d2:sourceIdentification>
-			<d2:sourceName> <d2:values> 
-				<d2:value lang="se">Vägverket</d2:value>
-				<d2:value lang="en">Swedish Road Administration</d2:value>
-			</d2:values>
-			</d2:sourceName>
-			<d2:sourceType>roadAuthorities</d2:sourceType>
-		</d2:source>
-		<d2:validity>
-			<d2:validityStatus>definedByValidityTimeSpec</d2:validityStatus>
-			<d2:validityTimeSpecification>
-				<d2:overallStartTime>2006-10-17T14:00:00+02:00</d2:overallStartTime>
-				<d2:overallEndTime>2006-10-17T16:00:00+02:00</d2:overallEndTime>
-			</d2:validityTimeSpecification>
-		</d2:validity>
-		<d2:impact> 
-				<d2:numberOfLanesRestricted>1</d2:numberOfLanesRestricted>
-				<d2:numberOfOperationalLanes>3</d2:numberOfOperationalLanes>
-				<d2:originalNumberOfLanes>4</d2:originalNumberOfLanes>
-				<d2:trafficConstrictionType>roadBlocked</d2:trafficConstrictionType> 
-		</d2:impact>
- 
-		<d2:generalPublicComment>
-			<d2:comment>
-				<d2:value lang="se">Detta är en svensk olycka</d2:value>
-				<d2:value lang="en">This is a swedish accident</d2:value>
-			</d2:comment>
-		</d2:generalPublicComment>
-		<d2:groupOfLocations>
-			<d2:locationContainedInGroup xsi:type="d2:Linear">
-				<d2:alertCLinear xsi:type="d2:AlertCMethod4Linear">
-					<d2:alertCLocationCountryCode>E</d2:alertCLocationCountryCode>
-					<d2:alertCLocationTableNumber>33</d2:alertCLocationTableNumber>
-					<d2:alertCLocationTableVersion>1</d2:alertCLocationTableVersion>
-					<d2:alertCDirection>
-						<d2:alertCDirectionCoded>positive</d2:alertCDirectionCoded>
-					</d2:alertCDirection>
-					<d2:alertCMethod4PrimaryPointLocation>
-						<d2:alertCLocation>
-							<d2:specificLocation>2030</d2:specificLocation>
-						</d2:alertCLocation>
-						<d2:offsetDistance>
-							<d2:offsetDistance>10</d2:offsetDistance>
-						</d2:offsetDistance>
-					</d2:alertCMethod4PrimaryPointLocation>
-					<d2:alertCMethod4SecondaryPointLocation>
-						<d2:alertCLocation>
-							<d2:specificLocation>2033</d2:specificLocation>
-						</d2:alertCLocation>
-						<d2:offsetDistance>
-							<d2:offsetDistance>20</d2:offsetDistance>
-						</d2:offsetDistance>
-					</d2:alertCMethod4SecondaryPointLocation>
-					<d2:alertCMethod4LinearExtension>
-						<d2:d2LogicalModel modelBaseVersion="1.0">
-							<d2:exchange>
-								<d2:supplierIdentification>
-									<d2:country>be</d2:country>
-									<d2:nationalIdentifier/>
-								</d2:supplierIdentification>
-							</d2:exchange>
-						</d2:d2LogicalModel>
-					</d2:alertCMethod4LinearExtension>
-				</d2:alertCLinear>
-			</d2:locationContainedInGroup>
-	 
-			<d2:locationContainedInGroup xsi:type="d2:Linear">
-				<d2:referencePointLinear>
-					<d2:referencePointPrimaryLocation>
-						<d2:referencePoint>
-							<d2:referencePointIdentifier>Id</d2:referencePointIdentifier>
-							<d2:administrativeArea>
-								<d2:value>Ramsgate</d2:value>
-							</d2:administrativeArea>
-							<d2:roadName>
-								<d2:value>King Street Junction</d2:value>
-							</d2:roadName>
-							<d2:roadNumber>A255</d2:roadNumber>
-						</d2:referencePoint>
-					</d2:referencePointPrimaryLocation>
-					<d2:referencePointSecondaryLocation>
-						<d2:referencePoint>
-							<d2:referencePointIdentifier>002</d2:referencePointIdentifier>
-							<d2:roadName>
-								<d2:value>Boundary Road </d2:value>
-							</d2:roadName>
-						</d2:referencePoint>
-					</d2:referencePointSecondaryLocation>
-				</d2:referencePointLinear>
-			</d2:locationContainedInGroup>
- 
-			<d2:locationContainedInGroup xsi:type="d2:Point">
-				<d2:pointByCoordinates>
-					<d2:pointCoordinates>
-						<d2:latitude>123.00</d2:latitude>
-						<d2:longitude>3.1415</d2:longitude>
-					</d2:pointCoordinates>
-				</d2:pointByCoordinates>
-			</d2:locationContainedInGroup>
-		</d2:groupOfLocations>
-		<d2:accidentType>accident</d2:accidentType>
-	</siri:SituationRecord>   -->
+		<siri:CreationTime>2001-12-17T09:30:47.0Z</siri:CreationTime>
+		<siri:CountryRef>de</siri:CountryRef>
+		<siri:ParticipantRef>RAILCO01</siri:ParticipantRef>
+		<siri:SituationNumber>000354</siri:SituationNumber>
+		<siri:Version>0</siri:Version>
+		<siri:References>
+				<siri:RelatedToRef>
+						<siri:CreationTime>2001-12-17T09:30:47.0Z</siri:CreationTime>
+						<siri:CountryRef>de</siri:CountryRef>
+						<siri:ParticipantRef>RAILCO01</siri:ParticipantRef>
+						<siri:SituationNumber>000354</siri:SituationNumber>
+						<siri:Version>0</siri:Version>
+				</siri:RelatedToRef>
+		</siri:References>
+		<siri:Source>
+				<siri:Country>de</siri:Country>
+				<siri:SourceType>phone</siri:SourceType>
+				<siri:Phone>01223333337654</siri:Phone>
+				<siri:AgentReference>03274</siri:AgentReference>
+				<siri:TimeOfCommunication>2001-12-17T09:30:47.0Z</siri:TimeOfCommunication>
+		</siri:Source>
+		<siri:Verification>verified</siri:Verification>
+		<siri:Progress>open</siri:Progress>
+		<siri:QualityIndex>certain</siri:QualityIndex>
+		<siri:ValidityPeriod>
+				<siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
+				<siri:EndTime>2001-12-17T10:30:47.0Z</siri:EndTime>
+		</siri:ValidityPeriod>
+		<siri:TpegReason>bombExplosion</siri:TpegReason>
+		<siri:Severity>severe</siri:Severity>
+		<siri:Priority>3</siri:Priority>
+		<siri:Audience>public</siri:Audience>
+		<siri:ReportType>point</siri:ReportType>
+		<siri:Summary overridden="true" xml:lang="EN">Jam on the access road to Barchester Station</siri:Summary>
+		<siri:Description overridden="true" xml:lang="EN">Grislock and panic</siri:Description>
+		<siri:Affects>
+				<siri:Operators>
+						<siri:AllOperators/>
+				</siri:Operators>
+				<siri:StopPoints>
+						<siri:AffectedStopPoint>
+								<siri:StopPointRef>BAAR0003</siri:StopPointRef>
+								<siri:StopPointName>Barchester Station</siri:StopPointName>
+								<siri:StopPointType>unknown</siri:StopPointType>
+								<siri:Location id="NMTOKEN" srsName="String">
+										<siri:Longitude>-180</siri:Longitude>
+										<siri:Latitude>-90</siri:Latitude>
+										<siri:Precision>1</siri:Precision>
+								</siri:Location>
+						</siri:AffectedStopPoint>
+				</siri:StopPoints>
+				<siri:StopPlaces>
+						<siri:AffectedStopPlace>
+								<siri:StopPlaceRef>BArF001</siri:StopPlaceRef>
+								<siri:AffectedComponents>
+										<siri:AffectedComponent>
+												<siri:ComponentRef>BAR00021</siri:ComponentRef>
+												<siri:ComponentName>Platfrom 3</siri:ComponentName>
+										</siri:AffectedComponent>
+								</siri:AffectedComponents>
+						</siri:AffectedStopPlace>
+				</siri:StopPlaces>
+		</siri:Affects>
+		<siri:Consequences>
+				<siri:Consequence>
+						<siri:Period>
+								<siri:StartTime>2001-12-17T09:30:47.0Z</siri:StartTime>
+								<siri:EndTime>2001-12-17T10:30:47.0Z</siri:EndTime>
+						</siri:Period>
+						<siri:Condition>delayed</siri:Condition>
+						<siri:Severity>severe</siri:Severity>
+				</siri:Consequence>
+		</siri:Consequences>
+		<siri:PublishingActions>
+				<siri:PublishToWebAction>
+						<siri:Incidents>true</siri:Incidents>
+						<siri:HomePage>true</siri:HomePage>
+						<siri:Ticker>false</siri:Ticker>
+				</siri:PublishToWebAction>
+				<siri:PublishToMobileAction>
+						<siri:Incidents>true</siri:Incidents>
+						<siri:HomePage>false</siri:HomePage>
+				</siri:PublishToMobileAction>
+				<siri:PublishToAlertsAction>
+						<siri:ClearNotice>true</siri:ClearNotice>
+						<siri:ByEmail>true</siri:ByEmail>
+						<siri:ByMobile>true</siri:ByMobile>
+				</siri:PublishToAlertsAction>
+		</siri:PublishingActions>
+		<!--
+		   <siri:SituationRecord xsi:type="d2:Accident" id="GUID2A22530C-D452-4ae8-B942-993BC2923D1">
+			   <d2:situationRecordCreationReference>abc</d2:situationRecordCreationReference>
+			   <d2:situationRecordCreationTime>2006-09-28T16:00:00+01:00</d2:situationRecordCreationTime>
+			   <d2:situationRecordVersion>1</d2:situationRecordVersion>
+			   <d2:situationRecordVersionTime>2006-09-28T16:05:00+00:00</d2:situationRecordVersionTime>
+			   <d2:situationRecordFirstSupplierVersionTime>2006-09-28T16:05:00+00:00</d2:situationRecordFirstSupplierVersionTime>
+			   <d2:probabilityOfOccurrence>certain</d2:probabilityOfOccurrence>
+			   <d2:source>
+				   <d2:sourceIdentification>SRA</d2:sourceIdentification>
+				   <d2:sourceName> <d2:values>
+					   <d2:value lang="se">Vägverket</d2:value>
+					   <d2:value lang="en">Swedish Road Administration</d2:value>
+				   </d2:values>
+				   </d2:sourceName>
+				   <d2:sourceType>roadAuthorities</d2:sourceType>
+			   </d2:source>
+			   <d2:validity>
+				   <d2:validityStatus>definedByValidityTimeSpec</d2:validityStatus>
+				   <d2:validityTimeSpecification>
+					   <d2:overallStartTime>2006-10-17T14:00:00+02:00</d2:overallStartTime>
+					   <d2:overallEndTime>2006-10-17T16:00:00+02:00</d2:overallEndTime>
+				   </d2:validityTimeSpecification>
+			   </d2:validity>
+			   <d2:impact>
+					   <d2:numberOfLanesRestricted>1</d2:numberOfLanesRestricted>
+					   <d2:numberOfOperationalLanes>3</d2:numberOfOperationalLanes>
+					   <d2:originalNumberOfLanes>4</d2:originalNumberOfLanes>
+					   <d2:trafficConstrictionType>roadBlocked</d2:trafficConstrictionType>
+			   </d2:impact>
+		
+			   <d2:generalPublicComment>
+				   <d2:comment>
+					   <d2:value lang="se">Detta är en svensk olycka</d2:value>
+					   <d2:value lang="en">This is a swedish accident</d2:value>
+				   </d2:comment>
+			   </d2:generalPublicComment>
+			   <d2:groupOfLocations>
+				   <d2:locationContainedInGroup xsi:type="d2:Linear">
+					   <d2:alertCLinear xsi:type="d2:AlertCMethod4Linear">
+						   <d2:alertCLocationCountryCode>E</d2:alertCLocationCountryCode>
+						   <d2:alertCLocationTableNumber>33</d2:alertCLocationTableNumber>
+						   <d2:alertCLocationTableVersion>1</d2:alertCLocationTableVersion>
+						   <d2:alertCDirection>
+							   <d2:alertCDirectionCoded>positive</d2:alertCDirectionCoded>
+						   </d2:alertCDirection>
+						   <d2:alertCMethod4PrimaryPointLocation>
+							   <d2:alertCLocation>
+								   <d2:specificLocation>2030</d2:specificLocation>
+							   </d2:alertCLocation>
+							   <d2:offsetDistance>
+								   <d2:offsetDistance>10</d2:offsetDistance>
+							   </d2:offsetDistance>
+						   </d2:alertCMethod4PrimaryPointLocation>
+						   <d2:alertCMethod4SecondaryPointLocation>
+							   <d2:alertCLocation>
+								   <d2:specificLocation>2033</d2:specificLocation>
+							   </d2:alertCLocation>
+							   <d2:offsetDistance>
+								   <d2:offsetDistance>20</d2:offsetDistance>
+							   </d2:offsetDistance>
+						   </d2:alertCMethod4SecondaryPointLocation>
+						   <d2:alertCMethod4LinearExtension>
+							   <d2:d2LogicalModel modelBaseVersion="1.0">
+								   <d2:exchange>
+									   <d2:supplierIdentification>
+										   <d2:country>be</d2:country>
+										   <d2:nationalIdentifier/>
+									   </d2:supplierIdentification>
+								   </d2:exchange>
+							   </d2:d2LogicalModel>
+						   </d2:alertCMethod4LinearExtension>
+					   </d2:alertCLinear>
+				   </d2:locationContainedInGroup>
+			
+				   <d2:locationContainedInGroup xsi:type="d2:Linear">
+					   <d2:referencePointLinear>
+						   <d2:referencePointPrimaryLocation>
+							   <d2:referencePoint>
+								   <d2:referencePointIdentifier>Id</d2:referencePointIdentifier>
+								   <d2:administrativeArea>
+									   <d2:value>Ramsgate</d2:value>
+								   </d2:administrativeArea>
+								   <d2:roadName>
+									   <d2:value>King Street Junction</d2:value>
+								   </d2:roadName>
+								   <d2:roadNumber>A255</d2:roadNumber>
+							   </d2:referencePoint>
+						   </d2:referencePointPrimaryLocation>
+						   <d2:referencePointSecondaryLocation>
+							   <d2:referencePoint>
+								   <d2:referencePointIdentifier>002</d2:referencePointIdentifier>
+								   <d2:roadName>
+									   <d2:value>Boundary Road </d2:value>
+								   </d2:roadName>
+							   </d2:referencePoint>
+						   </d2:referencePointSecondaryLocation>
+					   </d2:referencePointLinear>
+				   </d2:locationContainedInGroup>
+		
+				   <d2:locationContainedInGroup xsi:type="d2:Point">
+					   <d2:pointByCoordinates>
+						   <d2:pointCoordinates>
+							   <d2:latitude>123.00</d2:latitude>
+							   <d2:longitude>3.1415</d2:longitude>
+						   </d2:pointCoordinates>
+					   </d2:pointByCoordinates>
+				   </d2:locationContainedInGroup>
+			   </d2:groupOfLocations>
+			   <d2:accidentType>accident</d2:accidentType>
+		   </siri:SituationRecord>   -->
 </siri:RoadSituationElement>

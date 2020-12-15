@@ -84,7 +84,7 @@
       <PreviousCall>
        <StopPointRef>HLT0011</StopPointRef>
        <VisitNumber>2</VisitNumber>
-       <StopPointName>String</StopPointName>
+       <StopPointName xml:lang="EN">String</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedDepartureTime>2004-12-17T09:32:43-05:00</AimedDepartureTime>
        <ActualDepartureTime>2004-12-17T09:32:43-05:00</ActualDepartureTime>
@@ -94,7 +94,7 @@
       <OnwardCall>
        <StopPointRef>HLTST012</StopPointRef>
        <VisitNumber>4</VisitNumber>
-       <StopPointName>Church</StopPointName>
+       <StopPointName xml:lang="EN">Church</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T09:30:56-05:00</AimedArrivalTime>
        <ExpectedArrivalTime>2004-12-17T09:30:56-05:00</ExpectedArrivalTime>
@@ -136,7 +136,7 @@
      <OnwardCalls>
       <OnwardCall>
        <StopPointRef>HLTST012</StopPointRef>
-       <StopPointName>Church</StopPointName>
+       <StopPointName xml:lang="EN">Church</StopPointName>
       </OnwardCall>
      </OnwardCalls>
     </MonitoredVehicleJourney>
