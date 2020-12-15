@@ -202,7 +202,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Whether the engine of the vehicle is on. Default is 'true' (+SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Occupancy" minOccurs="0"/>
+   <xsd:element ref="Occupancy" minOccurs="0"/>
    <xsd:element name="Delay" type="DurationType" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Delay of VEHICLE against schedule, to a precision in seconds. Early times are shown as negative values.</xsd:documentation>
