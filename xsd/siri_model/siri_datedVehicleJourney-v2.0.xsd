@@ -257,7 +257,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
    <xsd:choice>
     <xsd:element ref="ExtraInterchange" minOccurs="0"/>
-    <xsd:element ref="Cancellation" minOccurs="0"/>
+    <xsd:element name="Cancellation" type="InterchangeCancellation" default="false" minOccurs="0"/>
    </xsd:choice>
    <xsd:element ref="ReasonForRemoval" minOccurs="0"/>
    <xsd:element ref="FeederRef" minOccurs="0"/>
@@ -341,7 +341,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
      <xsd:choice>
       <xsd:element ref="ExtraInterchange" minOccurs="0"/>
-      <xsd:element ref="Cancellation" minOccurs="0"/>
+      <xsd:element name="Cancellation" type="InterchangeCancellation" default="false" minOccurs="0"/>
      </xsd:choice>
      <xsd:element ref="FeederRef"/>
      <xsd:element ref="FeederArrivalStopRef"/>
@@ -635,11 +635,13 @@ Rail transport, Roads and road transport
    <xsd:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="Cancellation" type="xsd:boolean" default="false">
+ <xsd:simpleType name="InterchangeCancellation">
   <xsd:annotation>
-   <xsd:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not cancelled. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable. 
+Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not cancelled. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
- </xsd:element>
+  <xsd:restriction base="xsd:boolean"/>
+ </xsd:simpleType>
  <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey or an interchange from the plan. +SIRI v2.1</xsd:documentation>
