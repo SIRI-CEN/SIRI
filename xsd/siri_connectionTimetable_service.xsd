@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_connectionTimetable_service">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_connectionTimetable_service">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -26,23 +26,23 @@
      <Modified>2005-05-11</Modified>
     </Date>
     <Date><Modified>2007-04-17</Modified>
-					 Name Space changes 
+     <!-- Name Space changes -->
 				</Date>
     <Date><Modified>2008-11-17</Modified>
-					 Revise to support substitution groups 
+     <!-- Revise to support substitution groups -->
 				</Date>
     <Date><Modified>2011-01-19</Modified>
-					 Drop use of As Flat Groups for InterChangeJourney 
+     <!-- Drop use of As Flat Groups for InterChangeJourney -->
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
+     <!-- +SIRI v2.0 -->
 				</Date>
     <Date><Modified>2012-04-18</Modified>
-					Add valid until to response
+     <!-- Add valid until to response
 					 +SIRI v2.0
 					 
 						- [FR]    Add Extensions tag to Connection|TimetableSubscriptionRequest
-						- [DE] Add Extensions element to  request
+						- [DE] Add Extensions element to  request -->
 				</Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of Public Transport real-time information.</p>
@@ -61,14 +61,14 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey-v2.0.xsd</Requires>
     </Relation>
     <Rights>Unclassified
-        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+        <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -149,7 +149,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionTimetableRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -163,9 +163,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values.</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
@@ -213,7 +213,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionTimetablePayloadGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -390,7 +390,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>
 Version number of response. Fixed 

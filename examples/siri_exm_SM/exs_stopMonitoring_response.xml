@@ -89,7 +89,7 @@
       <PreviousCall>
        <StopPointRef>HLT0010</StopPointRef>
        <VisitNumber>2</VisitNumber>
-       <StopPointName>String</StopPointName>
+       <StopPointName xml:lang="EN">String</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedDepartureTime>2004-12-17T09:32:43-05:00</AimedDepartureTime>
        <ActualDepartureTime>2004-12-17T09:32:43-05:00</ActualDepartureTime>
@@ -116,7 +116,7 @@
       <OnwardCall>
        <StopPointRef>HLTST012</StopPointRef>
        <VisitNumber>4</VisitNumber>
-       <StopPointName>Church</StopPointName>
+       <StopPointName xml:lang="EN">Church</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T09:30:56-05:00</AimedArrivalTime>
        <ExpectedArrivalTime>2004-12-17T09:30:56-05:00</ExpectedArrivalTime>
@@ -176,21 +176,21 @@
       <PreviousCall>
        <StopPointRef>HLT0107</StopPointRef>
        <VisitNumber>002</VisitNumber>
-       <StopPointName>Library</StopPointName>
+       <StopPointName xml:lang="EN">Library</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <ActualDepartureTime>2004-12-17T09:30:43-05:00</ActualDepartureTime>
       </PreviousCall>
       <PreviousCall>
        <StopPointRef>HLT0109</StopPointRef>
        <VisitNumber>007</VisitNumber>
-       <StopPointName>Library</StopPointName>
+       <StopPointName xml:lang="EN">Library</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <ActualDepartureTime>2004-12-17T09:32:44-05:00</ActualDepartureTime>
       </PreviousCall>
       <PreviousCall>
        <StopPointRef>HLT0110</StopPointRef>
        <VisitNumber>009</VisitNumber>
-       <StopPointName>Library</StopPointName>
+       <StopPointName xml:lang="EN">Library</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <ActualDepartureTime>2004-12-17T09:38:47-05:00</ActualDepartureTime>
       </PreviousCall>
@@ -213,7 +213,7 @@
       <OnwardCall>
        <StopPointRef>HLTST112</StopPointRef>
        <VisitNumber>0012</VisitNumber>
-       <StopPointName>Hospital</StopPointName>
+       <StopPointName xml:lang="EN">Hospital</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T09:55:47-05:00</AimedArrivalTime>
        <AimedDepartureTime>2004-12-17T09:56:47-05:00</AimedDepartureTime>
@@ -222,7 +222,7 @@
       <OnwardCall>
        <StopPointRef>HLTST113</StopPointRef>
        <VisitNumber>0013</VisitNumber>
-       <StopPointName>Starbucks</StopPointName>
+       <StopPointName xml:lang="EN">Starbucks</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T10:07:47-05:00</AimedArrivalTime>
        <AimedDepartureTime>2004-12-17T10:09:47-05:00</AimedDepartureTime>
@@ -230,7 +230,7 @@
       <OnwardCall>
        <StopPointRef>HLTST114</StopPointRef>
        <VisitNumber>0014</VisitNumber>
-       <StopPointName>Station</StopPointName>
+       <StopPointName xml:lang="EN">Station</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T10:12:47-05:00</AimedArrivalTime>
        <AimedDepartureTime>2004-12-17T10:33:47-05:00</AimedDepartureTime>

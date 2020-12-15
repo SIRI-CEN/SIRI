@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Ulf Bjersing (Hogia Public Transport Systems AB) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -130,7 +130,7 @@ mailto:schemer@siri.org.uk</Creator>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri__situationExchange_service.xsd</Requires>
     </Relation>
     <Rights>Unclassified
-     <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+     <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
@@ -169,7 +169,7 @@ Rail transport, Roads and road transport.
     <xsd:group ref="ResponseGroup"/>
     <xsd:element ref="Extensions" minOccurs="0"/>
    </xsd:choice>
-   <xsd:attribute name="version" type="VersionString" default="2.0"/>
+   <xsd:attribute name="version" type="VersionString" default="2.1"/>
   </xsd:complexType>
  </xsd:element>
  <!--== Requests ===================================================================== -->
