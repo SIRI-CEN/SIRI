@@ -766,8 +766,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  <!-- ======================================================================= -->
  <xsd:element name="PredictionInaccurate" type="xsd:boolean" default="false">
   <xsd:annotation>
-   <xsd:documentation>Whether the prediction for a stop or the whole journey is considered to be of useful accuracy or not. Default is 'false'.</xsd:documentation>
-   <xsd:documentation>Whether the prediction for the specific stop is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is considered to be accurate.
+   <xsd:documentation>Whether the prediction for a specific stop or the whole journey is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is considered to be accurate.
 If prediction is degraded, e.g. because of a situation, PredictionInaccurate is used to indicate a lowered quality of data. Inherited property. PredictionInaccurate can be used in combination with InCongestion, but is more general.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
