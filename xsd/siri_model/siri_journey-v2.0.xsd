@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -114,9 +114,12 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRI Common Journey Model.</xsd:documentation>
  </xsd:annotation>
  <!-- ======================================================================= -->
+ <xsd:include schemaLocation="siri_journey_support-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_reference-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_monitoredVehicleJourney-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_facility-v2.0.xsd"/>
  <xsd:include schemaLocation="../siri_model_discovery/siri_feature-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_location-v2.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment-v0.3.xsd"/>
  <!-- ======================================================================= -->
@@ -768,32 +771,81 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
   <xsd:sequence>
    <xsd:element name="PredictionLevel" type="QualityIndexEnumeration">
     <xsd:annotation>
-     <xsd:documentation>An approxiimate characterisation of prediction quality as one of five values . +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>An approxiimate characterisation of prediction quality as one of five values. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:sequence minOccurs="0">
     <xsd:element name="Percentile" type="xsd:decimal" default="0.9" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Percentile associated with range as specified by lower and upper bound +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Percentile associated with range as specified by lower and upper bound. +SIRI v2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="LowerTimeLimit" type="xsd:dateTime" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Lower bound on time of for prediction  for confidence level if different from defaults  +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Lower bound on time of for prediction for confidence level if different from defaults. +SIRI v2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="HigherTimeLimit" type="xsd:dateTime" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Upper bound on time of for predictios  for confidence level if different from defaults  +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Upper bound on time of for prediction for confidence level if different from defaults. +SIRI v2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:sequence>
   </xsd:sequence>
  </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="StopAssignmentStructure">
+ <!-- ========STOP ASSIGNMENT and dependencies=============================================================== -->
+ <xsd:element name="AimedFlexibleArea" type="FlexibleAreaStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a specific QUAY or platform. +SIRI v2.0.</xsd:documentation>
+   <xsd:documentation>Area that encompasses the scheduled flexible stop locations according to the planned timetable. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="AimedFlexibleAreaRef" type="FlexibleAreaRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Reference to the scheduled location or flexible area. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="AimedLocationName" type="NaturalLanguageStringStructure">
+  <xsd:annotation>
+   <xsd:documentation>Name or description (e.g. address) of the scheduled location or flexible area. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <!-- ======================================================================= -->
+ <xsd:group name="FlexibleStopLocationGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for location of flexible stops or service that allows pickup anywhere in a designated area. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="AimedFlexibleArea" minOccurs="0"/>
+   <xsd:element ref="AimedFlexibleAreaRef" minOccurs="0"/>
+   <xsd:element ref="AimedLocationName" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element name="ExpectedFlexibleArea" type="FlexibleAreaStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Area that encompasses the expected flexible stop locations according to the real-time prediction.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ExpectedFlexibleAreaRef" type="FlexibleAreaRefStructure" minOccurs="0"/>
+   <xsd:element name="ExpectedLocationName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Name or description (e.g. address) of the expected location or flexible area.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ActualFlexibleArea" type="FlexibleAreaStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Area that encompasses the actually recorded flexible stop locations.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ActualFlexibleAreaRef" type="FlexibleAreaRefStructure" minOccurs="0"/>
+   <xsd:element name="ActualLocationName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Name or description (e.g. address) of the actually recorded location or flexible area.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ======================================================================= -->
+ <xsd:group name="QuayAssignmentGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for assignment of a SCHEDULED STOP POINT to a specific QUAY or platform. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AimedQuayRef" type="QuayRefStructure" minOccurs="0">
@@ -828,26 +880,103 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
    </xsd:element>
    <xsd:element ref="QuayType" minOccurs="0"/>
   </xsd:sequence>
+ </xsd:group>
+ <!-- ======================================================================= -->
+ <xsd:group name="BoardingPositionAssignmentGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for assignment of a SCHEDULED STOP POINT to a specific BOARDING POSITION or location on a QUAY. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="AimedBoardingPositionRef" type="BoardingPositionRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Physical BOARDING POSITION to use according to the planned timetable.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="AimedBoardingPositionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Scheduled BOARDING POSITION name. Can be used to indicate boarding position change.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ExpectedBoardingPositionRef" type="BoardingPositionRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Physical BOARDING POSITION to use according to the real-time prediction.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ExpectedBoardingPositionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Expected BOARDING POSITION name. Can be used to indicate real-time prediction.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ActualBoardingPositionRef" type="BoardingPositionRefStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Actually recorded BOARDING POSITION. Can be used to indicate the actually used boarding position.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ActualBoardingPositionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Recorded BOARDING POSITION name. Can be used to indicate the actually used boarding position.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ======================================================================= -->
+ <xsd:complexType name="StopAssignmentStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a physical location, in particular to a QUAY or BOARDING POSITION. +SIRI v2.0.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:choice>
+    <xsd:group ref="QuayAssignmentGroup"/>
+	<xsd:group ref="BoardingPositionAssignmentGroup"/>
+   </xsd:choice>
+   <xsd:group ref="FlexibleStopLocationGroup"/>
+  </xsd:sequence>
  </xsd:complexType>
  <!-- ======================================================================= -->
  <xsd:complexType name="PlannedStopAssignmentStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a specific QUAY or platform +SIRI v2.0.</xsd:documentation>
+   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a physical location, in particular to a QUAY or BOARDING POSITION, according to the planned timetable. +SIRI v2.0.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="AimedQuayRef" type="QuayRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Physical QUAY to use according to the planned timetable. +SIRI v2.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AimedQuayName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Scheduled Platform name. +SIRI v2.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="QuayType" minOccurs="0"/>
+   <xsd:choice>
+    <xsd:sequence>
+     <xsd:element name="AimedQuayRef" type="QuayRefStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Physical QUAY to use according to the planned timetable. +SIRI v2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="AimedQuayName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Scheduled Platform name. +SIRI v2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element ref="QuayType" minOccurs="0"/>
+	</xsd:sequence>
+	<xsd:sequence>
+     <xsd:element name="AimedBoardingPositionRef" type="BoardingPositionRefStructure" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Physical BOARDING POSITION to use according to the planned timetable. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element name="AimedBoardingPositionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Scheduled BOARDING POSITION name. +SIRI v2.1</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+	</xsd:sequence>
+   </xsd:choice>
+   <xsd:element ref="AimedFlexibleArea" minOccurs="0"/>
+   <xsd:element ref="AimedFlexibleAreaRef" minOccurs="0"/>
+   <xsd:element ref="AimedLocationName" minOccurs="0" maxOccurs="unbounded"/>
   </xsd:sequence>
  </xsd:complexType>
+ <!-- ===== Characterisation of nested QUAYs ================================================================= -->
+ <xsd:element name="QuayType" type="TypeOfNestedQuayEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Indicates the type of a nested QUAY in case of detailed STOP PLACE models. 
+A QUAY may be part of a group of QUAYs, or may be divided into sectors, i.e., smaller sub-QUAYs. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <!-- =====Arrival================================================================== -->
  <xsd:element name="AimedArrivalTime" type="xsd:dateTime">
   <xsd:annotation>
@@ -1005,13 +1134,6 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <!-- =====Arrival and Departure================================================================= -->
- <xsd:element name="QuayType" type="QuayTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Indicates the type of the referenced QUAY. In case of detailed STOP PLACE models, a QUAY may be a nested structure. 
-A QUAY may be part of a group of QUAYs, or may be divided into sectors, i.e., smaller sub-QUAYs. +SIRI v2.1</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
  <!-- =====Interval================================================================= -->
  <xsd:element name="AimedHeadwayInterval" type="PositiveDurationType">
   <xsd:annotation>
@@ -1320,7 +1442,8 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
  </xsd:group>
  <xsd:group name="OccupancyScopeFilterGroup">
   <xsd:annotation>
-   <xsd:documentation>The intersection of supplied elements describes the extent that the Occupancy values applies to. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>The intersection of supplied elements describes the extent that the Occupancy values applies to. +SIRI v2.1
+Only vehicle-centric filter (measurement in a part or at an entrance of a TRAIN) are available here, but a stop-centric filtering (measurement in a sector or at a position on a QUAY) can be achieved indirectly via Arrival-/DepartureFormationAssignment.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
