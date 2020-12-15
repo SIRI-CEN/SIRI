@@ -631,22 +631,6 @@ Rail transport, Roads and road transport
      <xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <!--TODO integrate in CEN -->
-   <xsd:element name="DescriptionCloze" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
    <xsd:element name="DescriptionPriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Prioritises a description from the information owner's point of view, e.g. usable for sorting or hiding individual descriptions.
@@ -661,22 +645,6 @@ Rail transport, Roads and road transport
     <xsd:annotation>
      <xsd:documentation>Further consequence to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
-   </xsd:element>
-   <!--TODO integrate in CEN -->
-   <xsd:element name="ConsequenceCloze" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Consequence" type="PtConsequenceStructure" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
    <xsd:element name="ConsequencePriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
@@ -702,23 +670,6 @@ Rail transport, Roads and road transport
      <xsd:documentation>ReasonName of passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-      <!--TODO integrate in CEN -->
-    <xsd:element name="ReasonCloze" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>TBD</xsd:documentation>
-       </xsd:annotation>
-       <xsd:complexType>
-        <xsd:sequence>
-         <xsd:group ref="ReasonGroup"/>
-         <xsd:element name="Location" type="LocationStructure"/>
-         <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-          <xsd:annotation>
-           <xsd:documentation>Extension point.</xsd:documentation>
-          </xsd:annotation>
-         </xsd:element>
-        </xsd:sequence>
-       </xsd:complexType>
-    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="AdviceContentStructure">
@@ -728,22 +679,6 @@ Rail transport, Roads and road transport
      <xsd:documentation>Further advice to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
-   <xsd:element name="RecommendationCloze" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <!-- TODO RecommendationStructure cannot be defined because already exists in same namespace (shee siri_journey-v.2.0)
-      <xsd:element name="Recommendation" type="RecommendationStructure" minOccurs="0" maxOccurs="unbounded"/> -->
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
    <xsd:element name="AdvicePriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Prioritises an advice from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations.
@@ -751,24 +686,7 @@ Rail transport, Roads and road transport
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
- </xsd:complexType><!--TODO RecommendationStructure cannot be defined because already exists in same namespace (shee siri_journey-v.2.0)
- <xsd:complexType name="RecommendationStructure">
-  <xsd:sequence>
-   <xsd:element name="Option" type="RecommendationOptionEnumeration"/>
-   <xsd:element name="Affects" type="AffectsScopeStructure" maxOccurs="unbounded"/>
-  </xsd:sequence>
  </xsd:complexType>
- <xsd:simpleType name="RecommendationOptionEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for reason in cloze.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="Umstiegsempfehlung"/>
-   <xsd:enumeration value="umgeleitet"/>
-   <xsd:enumeration value="normal"/>
-   <xsd:enumeration value="Zusatz"/>
-  </xsd:restriction>
- </xsd:simpleType>-->
  <xsd:complexType name="RemarkContentStructure">
   <xsd:sequence>
    <xsd:element name="RemarkText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -790,27 +708,6 @@ Rail transport, Roads and road transport
     <xsd:annotation>
      <xsd:documentation>Summary of passenger information action.</xsd:documentation>
     </xsd:annotation>
-   </xsd:element>
-   <!--TODO integrate in CEN -->
-   <xsd:element name="SummaryCloze" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TBD</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Description" type="ServiceConditionEnumeration">
-       <xsd:annotation>
-        <xsd:documentation>Enum for summary description. Enums are TBD</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="Affects" type="AffectsScopeStructure" maxOccurs="unbounded"/>
-      <xsd:element name="Extensions" type="xsd:anyType" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Extension point.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
