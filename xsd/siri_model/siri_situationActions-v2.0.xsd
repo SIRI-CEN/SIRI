@@ -181,22 +181,6 @@ Rail transport, Roads and road transport
      <xsd:documentation>All texts of the passenger information.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Classification" minOccurs="0">
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:group ref="ReasonGroup" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages for the current Perspective. If no enumerated values are given, ReasonName is used instead. Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
-       </xsd:annotation>
-      </xsd:group>
-      <xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Reference to effects caused by situation </xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:element name="PublicationScope" type="PublicationScopeStructure"/>
@@ -677,8 +661,8 @@ Rail transport, Roads and road transport
    <xsd:element name="AdviceText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Further advice to passengers. (Unbounded since SIRI 2.0)</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="AdvicePriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Prioritises an advice from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations.
@@ -715,7 +699,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="InternalText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Summary of passenger information action.</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
