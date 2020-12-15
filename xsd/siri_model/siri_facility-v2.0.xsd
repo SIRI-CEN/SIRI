@@ -31,7 +31,6 @@
     <Date>
      <Modified>2012-03-23</Modified>
      <!-- +SIRI v2.0: remove unnecessary dependencies -->
-									
     </Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information.
@@ -245,9 +244,14 @@ Rail transport, Roads and road transport
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
    <xsd:enumeration value="fixedEquipment"/>
+   <xsd:enumeration value="mobileEquipment"/>
    <xsd:enumeration value="serviceProvidedByIndividual"/>
    <xsd:enumeration value="serviceForPersonalDevice"/>
    <xsd:enumeration value="reservedArea"/>
+   <xsd:enumeration value="site"/>
+   <xsd:enumeration value="siteComponent"/>
+   <xsd:enumeration value="parkingBay"/>
+   <xsd:enumeration value="vehicle"/>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ======================================================================= -->
@@ -531,6 +535,11 @@ Rail transport, Roads and road transport
    <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Description of the set up remedy in natural language.  (Unbounded since SIRI 2.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RemedyPeriod" type="HalfOpenTimestampInputRangeStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Validity period for the remedy</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
