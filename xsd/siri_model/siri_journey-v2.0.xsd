@@ -908,6 +908,8 @@ If prediction is degraded, e.g. because of a situation, PredictionInaccurate is 
   <xsd:annotation>
    <xsd:documentation>An approximate figure of how occupied the journey is after departing from a given stop, e.g. 'manySeatsAvailable' or 'standingRoomOnly'. If omitted: Passenger load is unknown.
 Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRAIN, can also be specified in more detail for the departure on CALL level.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <!-- =====Arrival================================================================== -->
  <xsd:element name="AimedArrivalTime" type="xsd:dateTime">
   <xsd:annotation>
