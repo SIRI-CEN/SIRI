@@ -50,7 +50,7 @@
        <AffectedStopPoint>
         <StopPointRef>BAAR0003</StopPointRef>
         <StopPointName>Barchester Station</StopPointName>
-        <StopPointType>pti17_0</StopPointType>
+        <StopPointType>unknown</StopPointType>
         <Location id="NMTOKEN" srsName="String">
          <Longitude>-180</Longitude>
          <Latitude>-90</Latitude>
@@ -76,7 +76,7 @@
         <StartTime>2001-12-17T09:30:47.0Z</StartTime>
        </Period>
        <Condition>unknown</Condition>
-       <Severity>pti26_0</Severity>
+       <Severity>unknown</Severity>
        <Blocking>
         <JourneyPlanner>true</JourneyPlanner>
         <RealTime>true</RealTime>
@@ -144,7 +144,7 @@
        <AffectedStopPoint>
         <StopPointRef>BAAR0003</StopPointRef>
         <StopPointName>Barchester Station</StopPointName>
-        <StopPointType>pti17_0</StopPointType>
+        <StopPointType>unknown</StopPointType>
         <Location id="NMTOKEN" srsName="String">
          <Longitude>-180</Longitude>
          <Latitude>-90</Latitude>
