@@ -37,17 +37,19 @@
     <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}/siri_situationClassifiers-v1.1.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>CEN</Publisher>
-    <Relation> </Relation>
+    <Relation>
+
+    </Relation>
     <Rights>Unclassified
      <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
-    </Rights>
+				</Rights>
     <Source>
      <ul>
       <li>Schema derived Derived from the Kizoom XTIS schema </li>
       <li>Derived from the TPEG Categories schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -56,7 +58,7 @@ Public transport, Bus services, Coach services, Bus stops and stations,
 Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
-     </Category>
+</Category>
      <Project>CEN TC278 WG3 SG7</Project>
     </Subject>
     <Title>SIRI-SX Xml Schema for PT Incidents. Classifier subschema</Title>

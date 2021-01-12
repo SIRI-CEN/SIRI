@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von David Sielaff (Verkehrsverbund Rhein-Sieg GmbH) bearbeitet -->
 <!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situation">
- <!--
-siri_model\siri_situation-v2.0.xsd:
-19.12.2017 D. Rubli, Siri_XML-2.0p_a0.2:
-- Concequence.Period changed to unbounded.
-12.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
-- RelatedToEnumeration Enum value "correctionTo" added according to recommendation document.
-- WorkflowStatusEnumeration Enum value "pendingApproval" added according to recommendation document.
-- AudienceEnumeration Enum value "authorities" added according to recommendation document.
-- AudienceEnumeration Enum value "transportOperators" added according to recommendation document.
-13.06.2018 D. Rubli, Siri_XML-2.0p_a0.5:
-- StatusGroup.Progress changed from optional to mandatory
-- PublicationWindow changed to unbounded
--->
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situation">
  <!-- ======================================================================= -->
  <!--Needed to work around import limitation in JAXB - all namespaces. -->
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all-v0.3.xsd"/>
@@ -28,6 +14,7 @@ siri_model\siri_situation-v2.0.xsd:
  <xsd:include schemaLocation="siri_situationReasons-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationAffects-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationActions-v2.0.xsd"/>
+		<xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:annotation>
   <xsd:appinfo>
@@ -68,8 +55,8 @@ siri_model\siri_situation-v2.0.xsd:
        InformationUsageOverride /  D2LogicalModel:InformationUsage dropped  for  D2
        D2LogicalModel:SourceInformation renamed to   D2LogicalModel:Source
        D2LogicalModel:SourceInformation values wrapped in valuse tag
-       D2LogicalModel:Advcie   dropped. 
-       D2LogicalModel:Imppact ImpactDetails wrapper tag dropped. 
+       D2LogicalModel:Advice   dropped.
+       D2LogicalModel:Impact ImpactDetails wrapper tag dropped.
        D2 trafficResstrictionType renamed to  trafficConstrictionType
        Correct type on easementref to normalized string. 
        Allow translations of NLString elements
@@ -95,6 +82,12 @@ siri_model\siri_situation-v2.0.xsd:
           Added AdviceType, AdviceName, ConditionName, ConditionGroup
        -->
     </Date>
+    <Date>
+     <Modified>2020-07-15</Modified>
+     <!-- SIRI v2.1
+		 Wrapper structure added for InfoLinks, Internal, Images Structures aligned to the use in the ActionGroup
+       -->
+        </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs </p>
     </Description>
@@ -119,7 +112,7 @@ siri_model\siri_situation-v2.0.xsd:
       <li>Schema Derived from the Kizoom XTIS schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -128,7 +121,7 @@ Public transport, Bus services, Coach services, Bus stops and stations,
 Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
-     </Category>
+</Category>
      <Project>CEN TC278 WG3 SG7</Project>
     </Subject>
     <Title>SIRI-SX Xml Schema for PT SITUATIONs. Common element subschema</Title>
@@ -752,7 +745,7 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:group name="ReasonGroup">
   <xsd:annotation>
-   <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ReasonName is used instead. 
+   <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ReasonName is used instead.
 Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
@@ -960,7 +953,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedNetwork" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Nrtworks and Route(s) affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>Networks and Route(s) affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
        <xsd:complexType>
         <xsd:complexContent>
@@ -979,7 +972,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>STOP POINT affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -993,7 +986,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>STOP PLACE affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -1007,7 +1000,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedPlace" type="AffectedPlaceStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>Place affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -1067,6 +1060,23 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
   </xsd:sequence>
  </xsd:complexType>
  <!-- ====Text Descriptions======================================= -->
+ <xsd:complexType name="ImagesStructure">
+  <xsd:annotation>
+   <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="Image" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Image description.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:complexContent>
+      <xsd:extension base="ImageStructure"/>
+     </xsd:complexContent>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <xsd:complexType name="ImageStructure">
   <xsd:annotation>
    <xsd:documentation>Type for image.</xsd:documentation>
@@ -1096,7 +1106,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    <xsd:documentation>Text description of SITUATION. Some or all of this may have been generated from the other structured content elements. Where text has been overriden this is indicated.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:NMTOKEN" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Default language.</xsd:documentation>
     </xsd:annotation>
@@ -1121,43 +1131,20 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:documentation>Further advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Internal" type="DefaultedTextStructure" minOccurs="0">
+   <xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Further advice to passengers.</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Images" minOccurs="0">
+   <xsd:element name="Images" type="ImagesStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Image" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Image description.</xsd:documentation>
-       </xsd:annotation>
-       <xsd:complexType>
-        <xsd:complexContent>
-         <xsd:extension base="ImageStructure"/>
-        </xsd:complexContent>
-       </xsd:complexType>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
-   <xsd:element name="InfoLinks" minOccurs="0">
+   <xsd:element name="InfoLinks" type="InfoLinksStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="InfoLink" type="InfoLinkStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Hyperlink description.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
@@ -1197,6 +1184,18 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    <xsd:enumeration value="other"/>
   </xsd:restriction>
  </xsd:simpleType>
+ <xsd:complexType name="InfoLinksStructure">
+  <xsd:annotation>
+   <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="InfoLink" type="InfoLinkStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>Hyperlink description.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <xsd:complexType name="InfoLinkStructure">
   <xsd:annotation>
    <xsd:documentation>Type for a general hyperlink.</xsd:documentation>
@@ -1307,7 +1306,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
  </xsd:complexType>
  <xsd:group name="ConditionGroup">
   <xsd:annotation>
-   <xsd:documentation>Structured elements of a SITUATION condition. The Condition enumerated value(s) can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ConditionName is used instead. 
+   <xsd:documentation>Structured elements of a SITUATION condition. The Condition enumerated value(s) can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ConditionName is used instead.
 Note: this means that ConditionName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
@@ -1342,7 +1341,7 @@ Note: this means that ConditionName is NOT a complete message, but only a (few) 
  </xsd:complexType>
  <xsd:complexType name="PtAdviceStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for (structured) advice. The AdviceType enumerated value can be used to generate standardized messages describing the SITUATION. If no enumerated value is given, AdviceName is used instead. 
+   <xsd:documentation>Type for (structured) advice. The AdviceType enumerated value can be used to generate standardized messages describing the SITUATION. If no enumerated value is given, AdviceName is used instead.
 Note: this means that AdviceName is NOT a complete message, but only a (few) word(s) to be included in the message!
 Alternatively, AdviceRef can be used to reference a (complete) standardised advisory message.
    </xsd:documentation>

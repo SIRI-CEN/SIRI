@@ -13,18 +13,21 @@
    <Situations>
     <PtSituationElement>
      <CreationTime>2001-12-17T09:30:47.0Z</CreationTime>
+     <CountryRef>de</CountryRef>
      <ParticipantRef>RAILCO01</ParticipantRef>
      <SituationNumber>000354</SituationNumber>
      <Version>0</Version>
      <References>
       <RelatedToRef>
        <CreationTime>2001-12-17T09:30:47.0Z</CreationTime>
+       <CountryRef>de</CountryRef>
        <ParticipantRef>RAILCO01</ParticipantRef>
        <SituationNumber>000354</SituationNumber>
        <Version>0</Version>
       </RelatedToRef>
      </References>
      <Source>
+      <Country>de</Country>
       <SourceType>phone</SourceType>
       <Phone>01223333337654</Phone>
       <AgentReference>03274</AgentReference>
@@ -35,13 +38,15 @@
      <QualityIndex>certain</QualityIndex>
      <ValidityPeriod>
       <StartTime>2001-12-17T09:30:47.0Z</StartTime>
+      <EndTime>2001-12-17T10:30:47.0Z</EndTime>
      </ValidityPeriod>
-     <MiscellaneousReason>bombExplosion</MiscellaneousReason>
+     <AlertCause>bombExplosion</AlertCause>
      <Severity>severe</Severity>
+     <Priority>3</Priority>
      <Audience>public</Audience>
      <ReportType>point</ReportType>
      <Summary overridden="true" xml:lang="EN">Bomb at Barchester station</Summary>
-     <Description overridden="true" xml:lang="EN">Building evacuated. AVoid station untile furtehr notice</Description>
+     <Description overridden="true" xml:lang="EN">Building evacuated. AVoid station untile further notice</Description>
      <Affects>
       <Operators>
        <AllOperators/>
@@ -49,7 +54,7 @@
       <StopPoints>
        <AffectedStopPoint>
         <StopPointRef>BAAR0003</StopPointRef>
-        <StopPointName>Barchester Station</StopPointName>
+        <StopPointName xml:lang="EN">Barchester Station</StopPointName>
         <StopPointType>unknown</StopPointType>
         <Location id="NMTOKEN" srsName="String">
          <Longitude>-180</Longitude>
@@ -74,6 +79,7 @@
       <Consequence>
        <Period>
         <StartTime>2001-12-17T09:30:47.0Z</StartTime>
+        <EndTime>2001-12-17T10:30:47.0Z</EndTime>
        </Period>
        <Condition>unknown</Condition>
        <Severity>unknown</Severity>
@@ -107,18 +113,21 @@
     <!-- =============ROAD SITUATION ============ -->
     <RoadSituationElement>
      <CreationTime>2001-12-17T09:30:47.0Z</CreationTime>
+     <CountryRef>de</CountryRef>
      <ParticipantRef>RAILCO01</ParticipantRef>
      <SituationNumber>000354</SituationNumber>
      <Version>0</Version>
      <References>
       <RelatedToRef>
        <CreationTime>2001-12-17T09:30:47.0Z</CreationTime>
+       <CountryRef>de</CountryRef>
        <ParticipantRef>RAILCO01</ParticipantRef>
        <SituationNumber>000354</SituationNumber>
        <Version>0</Version>
       </RelatedToRef>
      </References>
      <Source>
+      <Country>de</Country>
       <SourceType>phone</SourceType>
       <Phone>01223333337654</Phone>
       <AgentReference>03274</AgentReference>
@@ -129,9 +138,11 @@
      <QualityIndex>certain</QualityIndex>
      <ValidityPeriod>
       <StartTime>2001-12-17T09:30:47.0Z</StartTime>
+      <EndTime>2001-12-17T10:30:47.0Z</EndTime>
      </ValidityPeriod>
-     <MiscellaneousReason>bombExplosion</MiscellaneousReason>
+     <AlertCause>bombExplosion</AlertCause>
      <Severity>severe</Severity>
+     <Priority>3</Priority>
      <Audience>public</Audience>
      <ReportType>point</ReportType>
      <Summary overridden="true" xml:lang="EN">Jam on the access road to Barchester Station</Summary>
@@ -143,7 +154,7 @@
       <StopPoints>
        <AffectedStopPoint>
         <StopPointRef>BAAR0003</StopPointRef>
-        <StopPointName>Barchester Station</StopPointName>
+        <StopPointName xml:lang="EN">Barchester Station</StopPointName>
         <StopPointType>unknown</StopPointType>
         <Location id="NMTOKEN" srsName="String">
          <Longitude>-180</Longitude>
@@ -168,6 +179,7 @@
       <Consequence>
        <Period>
         <StartTime>2001-12-17T09:30:47.0Z</StartTime>
+        <EndTime>2001-12-17T10:30:47.0Z</EndTime>
        </Period>
        <Condition>delay</Condition>
        <Severity>severe</Severity>

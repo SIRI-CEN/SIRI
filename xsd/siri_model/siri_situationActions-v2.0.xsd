@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von David Sielaff (Verkehrsverbund Rhein-Sieg GmbH) bearbeitet -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situationActions">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situationActions">
  <!--
 10.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
 - PublishToDisplayAction added to ActionsGroup
@@ -10,9 +9,11 @@
 - ActionsStructure: extended with PublishingAction
 - PassengerInformationAction.ActionValidityPeriod: changed from HalfOpenTimestampOutputRangeStructure to structure with three different time range definitions, with StartTime and Duration
 - PassengerInformationAction.RepetitionWithPeriod: deleted
-- PassengerInformationAction.TextualContent: Single and multiple contents formed with text elements
+- PassengerInformationAction.TextualContent: Single and multiple contents formed with text elements and cloze structures
 - PassengerInformationAction.TextualContent.Internal: changed to unbounded for different languages
+- PassengerInformationAction.TextualContent.ClozeRef: deleted
 - PassengerInformationAction.TextualContent.Language: deleted
+- PassengerInformationAction.ClozeContentStructure: deleted
 08.01.2018 D. Rubli, Siri_XML-2.0p_a0.2:
 - Duration type Duration235959Type renamed to Duration235959 and base changed from time to duration
 25.01.2018 D. Rubli, Siri_XML-2.0p_a0.4:
@@ -30,11 +31,16 @@
    - because ParameterisedActionStructure is base of all PublishTo...-structures, PublicationWindow is now automatically also available there
 - ScopeType renamed to Perspective with new enumeration "general" / "stopPoint" / "vehicleJourney"
 08.05.2019 D. Rubli, Siri_XML-2.0p_a0.15:
+- Networks in DescriptionCloze replaced by Affects
+- all Cloze-elements extended with Extensions
+- The element ConsequenceCloze is now directly defined instead of as type="PtConsequenceStructure"
+- Type of element Option in RecommendationStructure changed from RecommendationOptions to RecommendationOptionEnumeration
 -->
  <xsd:include schemaLocation="siri_situation-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_feature_support-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_journey-v2.0.xsd"/>
  <xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_location-v2.0.xsd"/>
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -50,12 +56,18 @@
      <Modified>2007-04-17</Modified>
     </Date>
     <Date><Modified>2013-10-01</Modified>
-          (a) Added PublishToDisplayAction element definition
-          (b) Corrected default values for string fields
+     <!-- (a) Added PublishToDisplayAction element definition (b) Corrected default values for string fields -->
         </Date>
     <Date><Modified>2013-05-01</Modified>
-         [de] Add SocialNetworks to PublishToWeb action
+     <!-- [de] Add SocialNetworks to PublishToWeb action -->
         </Date>
+    <Date><Modified>2018-11-13</Modified>
+     <!-- [vdv] ActionsStructure.ActionsGroup.PublishToTvAction changed to unbounded [vdv] ActionsStructure.ActionsGroup.NotifyBySmsAction changed to unbounded [vdv] PublishToDisplayAction added to ActionsGroup [vdv] ActionsStructure.ActionsGroup.PublishToTvAction.Ceefax and Teletext: annotation switched -->
+    </Date>
+    <Date>
+     <Modified>2020-07-14</Modified>
+     <!-- [vdv] New elements added to the ParameterisedActionStructure -->
+				</Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs. This subschema describes publishing actions </p>
     </Description>
@@ -72,14 +84,14 @@
     </Relation>
     <Rights>Unclassified
 
-       <Copyright>Kizoom 2000-2007, CEN 2009-2014</Copyright>
+										<Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
         </Rights>
     <Source>
      <ul>
       <li>Schema derived Derived from the Kizoom XTIS schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -220,6 +232,11 @@ Rail transport, Roads and road transport
    <xsd:element name="Prompt" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Display prompt for presenting action to user.  (Unbounded since SIRI 2.0)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PublicationScope" type="PublicationScopeStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -506,18 +523,6 @@ Rail transport, Roads and road transport
   </xsd:complexContent>
  </xsd:complexType>
  <!-- ===Extentions for SIRI-SX v2.0p-a0.x================================================== -->
- <xsd:complexType name="ActionPeriodStructure">
-  <xsd:sequence>
-   <xsd:element name="StartTime" type="xsd:time"/>
-   <xsd:element name="EndTime" type="xsd:time"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="AffectsSegmentStructure">
-  <xsd:sequence>
-   <xsd:element name="Start" type="AffectedPlaceStructure"/>
-   <xsd:element name="End" type="AffectedPlaceStructure"/>
-  </xsd:sequence>
- </xsd:complexType>
  <xsd:complexType name="DescriptionContentStructure">
   <xsd:sequence>
    <xsd:element name="DescriptionText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -548,15 +553,6 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:simpleType name="Duration235959">
-  <xsd:annotation>
-   <xsd:documentation>Duration of specific time range (smaller than 24h). StartTime plus Duration can result in a time on the next day, smaller than the StartTime.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:duration">
-   <xsd:minInclusive value="P0Y0M0DT0H0M1S"/>
-   <xsd:maxInclusive value="P0Y0M0DT23H59M59S"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <xsd:complexType name="DurationContentStructure">
   <xsd:sequence>
    <xsd:element name="DurationText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -670,7 +666,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="RemarkContentStructure">
   <xsd:sequence>
-   <xsd:element name="Remark" type="DefaultedTextStructure" maxOccurs="unbounded">
+   <xsd:element name="RemarkText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Further remark to passengers, e,g, "For more information call xy".</xsd:documentation>
     </xsd:annotation>
@@ -692,11 +688,20 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:complexType name="InternalContentStructure">
+  <xsd:sequence>
+   <xsd:element name="InternalText" type="DefaultedTextStructure" maxOccurs="unbounded">
+    <xsd:annotation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
  <xsd:complexType name="TextualContentStructure">
   <xsd:sequence>
    <xsd:element name="TextualContentSize" type="xsd:NMTOKENS" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small)</xsd:documentation>
+     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small).<br/> If text length for a class size varies on perspective and a PassengerInformationAction applies to several perspectives, take the smallest class</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="ActionsGroup" minOccurs="0"/>
@@ -705,45 +710,49 @@ Rail transport, Roads and road transport
      <xsd:documentation>Content for summary of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ReasonContent" type="ReasonNameContentStructure" minOccurs="0"/>
+   <xsd:element name="ReasonContent" type="ReasonNameContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for the reason of a passenger information action</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="DescriptionContent" type="DescriptionContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n descriptions of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for the description of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ConsequenceContent" type="ConsequenceContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n consequences of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for the consequence of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RecommendationContent" type="RecommendationContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n recommendations of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for the recommendations of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DurationContent" type="DurationContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Content to inform about a passenger information action.</xsd:documentation>
+     <xsd:documentation>Content for the duration of a passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RemarkContent" type="RemarkContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n remarks of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
+     <xsd:documentation>Content for the remark of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="InfoLink" type="InfoLinkStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="Internal" type="InternalContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
+     <xsd:documentation>for internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Image" type="ImageStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="Images" type="ImagesStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Internal" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="InfoLinks" type="InfoLinksStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>for internal information only, not passenger relevant</xsd:documentation>
+     <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

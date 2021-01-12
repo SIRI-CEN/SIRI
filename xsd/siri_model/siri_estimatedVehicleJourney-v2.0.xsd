@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_estimatedVehicleJourney">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_estimatedVehicleJourney">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -26,22 +26,22 @@
      <Modified>2005-05-11</Modified>
     </Date>
     <Date><Modified>2007-04-17</Modified>
-				 Name Space changes 
+     <!-- Name Space changes -->
 				</Date>
     <Date><Modified>2008-03-26</Modified>
-				 Add wrapper tag for Line DIRECTION to help binding to Axis 
+     <!-- Add wrapper tag for Line DIRECTION to help binding to Axis -->
 				</Date>
     <Date><Modified>2008-11-17</Modified>
-					 Revise to support substitution groups 
+     <!-- Revise to support substitution groups -->
 				</Date>
     <Date><Modified>2011-01-19</Modified>
-				 Drop use of As Flat Groups for EstimatedCalls 
+     <!--  Drop use of As Flat Groups for EstimatedCalls -->
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
+     <!-- +SIRI v2.0
 					  Factored out of estimatedTimetableService
 					  Add EstimatedServiceJourneyInterchange (i.e. Estimated Connection of VEHICLE) to EstimatedTimetableDelivery
-					  Corrected feed and distributor Journety refs and add InterchangeRef
+					  Corrected feed and distributor Journety refs and add InterchangeRef -->
 				</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
@@ -59,14 +59,14 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey-v2.0.xsd</Requires>
     </Relation>
     <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
-    </Rights>
+       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
+				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -101,24 +101,24 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:choice>
     <xsd:sequence>
-     <xsd:choice>
-      <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
-       <xsd:annotation>
-        <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
-       <xsd:annotation>
-        <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' i.e. be with the data context of the ESTIMATED Timetable.
-DEPRECATED from SIRI 2.0</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:choice>
-     <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
+    <xsd:choice>
+     <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
       <xsd:annotation>
-       <xsd:documentation>Additionally, identify the VEHICLE JOURNEY by origin and destination and the scheduled times at these stops.</xsd:documentation>
+       <xsd:documentation>Identifer of a VEHICLE JOURNEY within data Horizon of a service.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
+     <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
+      <xsd:annotation>
+        <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' i.e. be with the data context of the ESTIMATED Timetable.
+DEPRECATED from SIRI 2.0</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+    </xsd:choice>
+     <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
+     <xsd:annotation>
+       <xsd:documentation>Additionally, identify the VEHICLE JOURNEY by origin and destination and the scheduled times at these stops.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:element>
     </xsd:sequence>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
