@@ -90,7 +90,7 @@
    <siri:ByMobile>true</siri:ByMobile>
   </siri:PublishToAlertsAction>
  </siri:PublishingActions>
- <!-- 
+ <!--
 	<siri:SituationRecord xsi:type="d2:Accident" id="GUID2A22530C-D452-4ae8-B942-993BC2923D1">
 		<d2:situationRecordCreationReference>abc</d2:situationRecordCreationReference>
 		<d2:situationRecordCreationTime>2006-09-28T16:00:00+01:00</d2:situationRecordCreationTime>
@@ -100,7 +100,7 @@
 		<d2:probabilityOfOccurrence>certain</d2:probabilityOfOccurrence>
 		<d2:source>
 			<d2:sourceIdentification>SRA</d2:sourceIdentification>
-			<d2:sourceName> <d2:values> 
+			<d2:sourceName> <d2:values>
 				<d2:value lang="se">Vägverket</d2:value>
 				<d2:value lang="en">Swedish Road Administration</d2:value>
 			</d2:values>
@@ -114,13 +114,13 @@
 				<d2:overallEndTime>2006-10-17T16:00:00+02:00</d2:overallEndTime>
 			</d2:validityTimeSpecification>
 		</d2:validity>
-		<d2:impact> 
+		<d2:impact>
 				<d2:numberOfLanesRestricted>1</d2:numberOfLanesRestricted>
 				<d2:numberOfOperationalLanes>3</d2:numberOfOperationalLanes>
 				<d2:originalNumberOfLanes>4</d2:originalNumberOfLanes>
-				<d2:trafficConstrictionType>roadBlocked</d2:trafficConstrictionType> 
+				<d2:trafficConstrictionType>roadBlocked</d2:trafficConstrictionType>
 		</d2:impact>
- 
+
 		<d2:generalPublicComment>
 			<d2:comment>
 				<d2:value lang="se">Detta är en svensk olycka</d2:value>
@@ -164,7 +164,7 @@
 					</d2:alertCMethod4LinearExtension>
 				</d2:alertCLinear>
 			</d2:locationContainedInGroup>
-	 
+
 			<d2:locationContainedInGroup xsi:type="d2:Linear">
 				<d2:referencePointLinear>
 					<d2:referencePointPrimaryLocation>
@@ -189,7 +189,7 @@
 					</d2:referencePointSecondaryLocation>
 				</d2:referencePointLinear>
 			</d2:locationContainedInGroup>
- 
+
 			<d2:locationContainedInGroup xsi:type="d2:Point">
 				<d2:pointByCoordinates>
 					<d2:pointCoordinates>

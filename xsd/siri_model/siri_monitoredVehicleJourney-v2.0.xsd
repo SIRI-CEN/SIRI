@@ -24,14 +24,14 @@
      <Modified>2007-03-29</Modified>
     </Date>
     <Date><Modified>2008-11-13</Modified>
-				<!--Correct Cardinalities on SIRI DESTINATION REF Structure--> 
+				<!--Correct Cardinalities on SIRI DESTINATION REF Structure-->
 				</Date>
     <Date><Modified>2011-04-18</Modified>
 				<!--siri_journey-v2.0.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com-->
  
 				</Date>
     <Date><Modified>2012-03-22</Modified>
-				<!--SIRI 2.0 
+				<!--SIRI 2.0
 					[VDV] Add EarliestExpectedArrivalTimeForVehicle to Arrival Times Group
 					[VDV] Add ProvisionalExpectedDepartureTime to Departure Times Group
 					[VDV] Add LatestExpectedArrivalTimeForVehicle to Departure Times Group
@@ -53,11 +53,11 @@
 					[UK] add engineOn to vehicle progress group-->
 				</Date>
     <Date><Modified>2012-04-27</Modified>
-				<!--SIRI 2.0 
-					[MTA] Add DIstanceFromSTop and NumberOfStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET-->				 
+				<!--SIRI 2.0
+					[MTA] Add DIstanceFromSTop and NumberOfStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET-->
 				</Date>
     <Date><Modified>2012-04-27</Modified>
-				<!--SIRI 2.0 
+				<!--SIRI 2.0
 					[SE] Add Vehicle Status-->
 				</Date>
     <Description>

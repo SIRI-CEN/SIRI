@@ -234,7 +234,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Display prompt for presenting action to user.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="PublicationScope" type="PublicationScopeStructure" minOccurs="0">
+   <xsd:element name="PublishAtScope" type="PublishAtScopeStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
     </xsd:annotation>
@@ -612,22 +612,22 @@ Rail transport, Roads and road transport
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
+ <xsd:element name="PublishAtScope" type="PublishAtScopeStructure"/>
+ <xsd:complexType name="PublishAtScopeStructure">
+  <xsd:annotation>
+   <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
+   <xsd:element name="Affects" type="AffectsScopeStructure"/>
+  </xsd:sequence>
+ </xsd:complexType>
  <xsd:complexType name="PublishingActionStructure">
   <xsd:annotation>
    <xsd:documentation>Type for description of the whole action to be published (extends SIRI-SX v2.0p).</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="PublishAtScope">
-    <xsd:annotation>
-     <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
-      <xsd:element name="Affects" type="AffectsScopeStructure"/>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
+   <xsd:element ref="PublishAtScope" />
    <xsd:element ref="PassengerInformationAction" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Description of the whole passenger information of one action.</xsd:documentation>
@@ -653,15 +653,10 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="RecommendationPriority" type="xsd:positiveInteger" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Prioritises a recommendation from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations. 
+     <xsd:documentation>Prioritises a recommendation from the information owner's point of view, e.g. usable for sorting or hiding individual recommendations.
 1 = highest priority.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="RecommendationStructure">
-  <xsd:sequence>
-   <xsd:element name="Affects" type="AffectsScopeStructure" maxOccurs="unbounded"/>
   </xsd:sequence>
  </xsd:complexType>
  <xsd:complexType name="RemarkContentStructure">

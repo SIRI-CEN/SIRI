@@ -637,7 +637,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:simpleType name="InterchangeCancellation">
   <xsd:annotation>
-   <xsd:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable. 
+   <xsd:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable.
 Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not cancelled. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:boolean"/>
@@ -664,7 +664,7 @@ Can only be used when both participants recognise the same schedule version. If 
  </xsd:element>
  <xsd:element name="FeederStopOrder" type="xsd:positiveInteger">
   <xsd:annotation>
-   <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. 
+   <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead.
 ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
@@ -690,7 +690,7 @@ ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL i
  </xsd:element>
  <xsd:element name="DistributorStopOrder" type="xsd:positiveInteger">
   <xsd:annotation>
-   <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. 
+   <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead.
 ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>

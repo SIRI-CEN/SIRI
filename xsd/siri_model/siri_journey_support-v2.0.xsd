@@ -484,7 +484,7 @@ Rail transport, Roads and road transport
   <xsd:annotation>
    <xsd:documentation>Groups together the relevant references needed in a formation. +SIRI v2.1
 Has the following uses:
-- Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. The former is ideally used in a FORMATION ASSIGNMENT, i.e. QUAY (sector) assignment, to provide the highest level of detail for passenger orientation. 
+- Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. The former is ideally used in a FORMATION ASSIGNMENT, i.e. QUAY (sector) assignment, to provide the highest level of detail for passenger orientation.
 - If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is also possible. This might be used in a FORMATION CONDITION to signal a change of the train composition.
 - In case alighting/boarding data from an automatic passenger counting system is available, the respective vehicle entrances may be referenced.
 </xsd:documentation>
@@ -865,7 +865,7 @@ Passengers don't need to change vehicles. The new journey is not communicated as
    </xsd:enumeration>
    <xsd:enumeration value="platformSector">
     <xsd:annotation>
-     <xsd:documentation>A QUAY of type 'platformEdge' may be divided into multiple sectors, e.g. "A", "B", "C" etc., to help passengers find a specific part of a vehicle. 
+     <xsd:documentation>A QUAY of type 'platformEdge' may be divided into multiple sectors, e.g. "A", "B", "C" etc., to help passengers find a specific part of a vehicle.
 The first class carriage of a TRAIN might, for example, be assigned to sector "A" of a QUAY.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>

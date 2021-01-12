@@ -51,7 +51,8 @@
           [doc/fx] Correct   capability Matrix  siri_situationExchange_service.xsd.
       -->
     </Date>
-    <Date><Modified>2018-06-13</Modified>
+    <Date>
+     <Modified>2018-06-13</Modified>
     <!-- [vdv-UmS] StopPoints and StopPlaces added to AffectedLineStructure to be able to restrict line-oriented information for specific stopping points or stops
      [vdv-UmS] Lines added to AffectedStopPointStructure and AffectedStopPlaceStructure to be able to restrict stopping point- or stop-oriented information for specific lines
      -->
@@ -60,11 +61,11 @@
      <Modified>2018-11-08</Modified>
      <!-- [vdv] Wrapped "AffectedInterchanges" node around AffectedInterchange in AffectedCallStructure
           [vdv] "PublishedLineName" inside "LineGroup" and "AffectedVehicleJourneyStructure" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
-		  [VDV-UmS] optional "StopPlaceName" (unbounded because of lang-attr.) and optional "StopPlaceRef" inserted to "AffectedStopPointStructure" to be able to send stop information for the affected StopPoint
           [vdv] "Route" inside "AffectedVehicleJourneyStructure" is now optional since all of its content are optional
           -->
 				</Date>
-    <Date><Modified>2019-05-07</Modified>
+    <Date>
+     <Modified>2019-05-07</Modified>
 	<!--	  [VDV-UmS] "AffectedLines" inside "LineGroup" changed to "AffectedLine"
 				</Date>
       -->
@@ -100,7 +101,7 @@
       <li>Schema derived Derived from the Kizoom XTIS schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,

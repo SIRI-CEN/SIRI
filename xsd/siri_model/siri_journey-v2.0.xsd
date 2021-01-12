@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_journey">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -54,7 +54,7 @@
 					[DE] Add Driver Name-->
 				</Date>
     <Date><Modified>2012-04-27</Modified>
-				<!--SIRI 2.0 
+				<!--SIRI 2.0
 					[MTA] Add DistanceFromSTop and NumberOFStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET		
 					[NeTEx] Add Driver/Crew Ref		 
 					
@@ -607,7 +607,7 @@ Rail transport, Roads and road transport
 (ii) transmit ExpectedArrivalTime together with "PredictionInaccurate=true"
 (iii) drop/omit ExpectedArrivalTime
 (iv) set ArrivalStatus to 'noReport'
-However, this might introduce ambiguity: e.g. option (iii) might be interpreted as "on time" by one consumer, but also as "indefinite delay" by another consumer. 
+However, this might introduce ambiguity: e.g. option (iii) might be interpreted as "on time" by one consumer, but also as "indefinite delay" by another consumer.
 To avoid this, the producer should transmit xxxPredictionUnknown instead of any expected times. +SIRI v2.1</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
@@ -646,7 +646,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
 (ii) transmit ExpectedDepartureTime together with "PredictionInaccurate=true"
 (iii) drop/omit ExpectedDepartureTime
 (iv) set DepartureStatus to 'noReport'
-However, this might introduce ambiguity: e.g. option (iii) might be interpreted as "on time" by one consumer, but also as "indefinite delay" by another consumer. 
+However, this might introduce ambiguity: e.g. option (iii) might be interpreted as "on time" by one consumer, but also as "indefinite delay" by another consumer.
 To avoid this, the producer should transmit xxxPredictionUnknown instead of any expected times. +SIRI v2.1</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
@@ -888,7 +888,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  <!-- ===== Characterisation of nested QUAYs ================================================================= -->
  <xsd:element name="QuayType" type="TypeOfNestedQuayEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Indicates the type of a nested QUAY in case of detailed STOP PLACE models. 
+   <xsd:documentation>Indicates the type of a nested QUAY in case of detailed STOP PLACE models.
 A QUAY may be part of a group of QUAYs, or may be divided into sectors, i.e., smaller sub-QUAYs. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
@@ -943,9 +943,9 @@ Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRA
  </xsd:element>
  <xsd:element name="ArrivalPlatformName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicle to arrive at. 
+   <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicle to arrive at.
 Inheritable property. Can be omitted if the same as the DeparturePlatformName If there no arrival platform name separate from the departure platform name, the precedence is:
-(i) any arrival platform on any related dated timetable element, 
+(i) any arrival platform on any related dated timetable element,
 (ii) any departure platform name on this estimated element;
 (iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
   </xsd:annotation>
@@ -1202,8 +1202,8 @@ It is advised to specify a reference point that is meaningful for passengers on 
  <!-- =====Train formation/composition================================================================= -->
  <xsd:group name="JourneyFormationGroup">
   <xsd:annotation>
-   <xsd:documentation>Groups relevant elements of the formation model that are used on JOURNEY level. 
-The TRAIN conceptual model represents VEHICLE TYPE properties that are peculiar to TRAINs. A TRAIN may comprise not just a single VEHICLE but a chain of carriages, TRAIN ELEMENTS, assembled as TRAIN COMPONENTs. 
+   <xsd:documentation>Groups relevant elements of the formation model that are used on JOURNEY level.
+The TRAIN conceptual model represents VEHICLE TYPE properties that are peculiar to TRAINs. A TRAIN may comprise not just a single VEHICLE but a chain of carriages, TRAIN ELEMENTS, assembled as TRAIN COMPONENTs.
 Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN made up of multiple TRAIN IN COMPOUND TRAIN, for example in a train that joins or splits. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
@@ -1258,7 +1258,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
    </xsd:element>
    <xsd:element name="TrainStopAssignment" type="StopAssignmentStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>References to the QUAY on which the particular VEHICLE, i.e., component of the formation, arrives or departs from. 
+     <xsd:documentation>References to the QUAY on which the particular VEHICLE, i.e., component of the formation, arrives or departs from.
 If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENTs), and a TRAIN COMPONENT spans over multiple sectors of the QUAY, the FORMATION ASSIGNMENT must reference all of them (in multiple STOP ASSIGNMENTs).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -1432,7 +1432,7 @@ Only vehicle-centric filter (measurement in a part or at an entrance of a TRAIN)
   <xsd:sequence>
    <xsd:element name="OccupancyLevel" type="OccupancyEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>An approximate figure of how occupied or full a VEHICLE and its parts are, e.g. 'manySeatsAvailable' or 'standingRoomOnly'.  
+     <xsd:documentation>An approximate figure of how occupied or full a VEHICLE and its parts are, e.g. 'manySeatsAvailable' or 'standingRoomOnly'.
 More accurate data can be provided by the individual occupancies or capacities below.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>

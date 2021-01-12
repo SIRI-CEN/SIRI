@@ -201,7 +201,7 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="distributorWaitProlonged">
     <xsd:annotation>
-     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders. 
+     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders.
 To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
@@ -222,7 +222,7 @@ To achieve this a distributorWaitProlonged status shall be communicated back to 
    </xsd:enumeration>
    <xsd:enumeration value="feederArrivalCancellation">
     <xsd:annotation>
-     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. 
+     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection.
 There are several possible reasons for the loss of a feeder, e.g. loss/cancellation of the feeder VEHICLE, diversion of the feeder LINE/DIRECTION, disruption of a LINE section etc. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>

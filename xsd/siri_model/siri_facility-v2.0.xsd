@@ -328,7 +328,7 @@ Rail transport, Roads and road transport
  </xsd:simpleType>
  <xsd:simpleType name="CountedFeatureUnitEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for units of what is counted 
+   <xsd:documentation>Allowed values for units of what is counted
    bay: parking bay for cars, bicycle, scooter, etc
    otherSpaces: any other kind of spaces: lockers, standing spaces, toilets, etc.
    devices: electronic devices (audio guide, headphones, etc.) and physical devices (walking stick, wheelchair, etc.)

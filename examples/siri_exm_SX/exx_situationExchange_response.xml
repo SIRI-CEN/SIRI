@@ -213,7 +213,7 @@
 							<d2:sourceName><d2:values>					<d2:value lang="se">Vägverket</d2:value>
 								<d2:value lang="en">Swedish Road Administration</d2:value>
 							</d2:values>
-			
+
 							</d2:sourceName>
 							<d2:sourceType>roadAuthorities</d2:sourceType>
 						</d2:source>
@@ -224,15 +224,15 @@
 								<d2:overallEndTime>2006-10-17T16:00:00+02:00</d2:overallEndTime>
 							</d2:validityTimeSpecification>
 						</d2:validity>
-						<d2:impact>  
+						<d2:impact>
 								<d2:numberOfLanesRestricted>1</d2:numberOfLanesRestricted>
 								<d2:numberOfOperationalLanes>3</d2:numberOfOperationalLanes>
 								<d2:originalNumberOfLanes>4</d2:originalNumberOfLanes>
 								<d2:trafficConstrictionType>roadBlocked</d2:trafficConstrictionType>
-					 
+
 						</d2:impact>
-						 
-					 
+
+
 						<d2:generalPublicComment>
 							<d2:comment>
 								<d2:value lang="se">Detta är en svensk olycka</d2:value>

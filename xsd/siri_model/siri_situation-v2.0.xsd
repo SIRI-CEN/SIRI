@@ -35,7 +35,7 @@
     </Date>
     <Date>
      <Modified>2008-07-05</Modified>
-     <!-- 
+     <!--
        1) correct data type to be participant ref not participant pair.
        2) add missing scopeType to classifier.
 	  -->
@@ -47,18 +47,18 @@
     <Date>
      <Modified>2012-03-23</Modified>
      <!-- +SIRI v2.0
-       Use revised 2.0 definitions 
-       Update to use DATEXII V 2.0 schema 
+       Use revised 2.0 definitions
+       Update to use DATEXII V 2.0 schema
        Namespace changed from http://datex2.eu/schema/1_0/1_0  to  http://datex2.eu/schema/2_0RC1/2_0
        D2LogicalModel:ReferencePointLinear has been renamed to D2LogicalModel:ReferencePointLinear
-       DelayCodeENum renamed to DelayBandEnum 
+       DelayCodeENum renamed to DelayBandEnum
        InformationUsageOverride /  D2LogicalModel:InformationUsage dropped  for  D2
        D2LogicalModel:SourceInformation renamed to   D2LogicalModel:Source
        D2LogicalModel:SourceInformation values wrapped in valuse tag
        D2LogicalModel:Advice   dropped.
        D2LogicalModel:Impact ImpactDetails wrapper tag dropped.
        D2 trafficResstrictionType renamed to  trafficConstrictionType
-       Correct type on easementref to normalized string. 
+       Correct type on easementref to normalized string.
        Allow translations of NLString elements
       -->
     </Date>
