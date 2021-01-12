@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../xsd/siri.xsd">
  <ServiceDelivery>
   <ResponseTimestamp>2018-10-04T10:11:00+00:00</ResponseTimestamp>
   <ProducerRef>ch:VBL</ProducerRef>
@@ -124,8 +124,8 @@
           <DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
          </DurationContent>
          <RemarkContent>
-          <Remark xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
-          <Remark xml:lang="EN">Expect delays, cancellations and diversions. More details to come soon.</Remark>
+          <RemarkText xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</RemarkText>
+          <RemarkText xml:lang="EN">Expect delays, cancellations and diversions. More details to come soon.</RemarkText>
          </RemarkContent>
         </TextualContent>
        </PassengerInformationAction>
@@ -182,8 +182,8 @@
           <DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
          </DurationContent>
          <RemarkContent>
-          <Remark xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
-          <Remark xml:lang="EN">Expect delays, cancellations and diversions. More details to come soon.</Remark>
+          <RemarkText xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</RemarkText>
+          <RemarkText xml:lang="EN">Expect delays, cancellations and diversions. More details to come soon.</RemarkText>
          </RemarkContent>
         </TextualContent>
        </PassengerInformationAction>
@@ -240,8 +240,8 @@
           <DurationText xml:lang="EN">Disruption duration until further notice.</DurationText>
          </DurationContent>
          <RemarkContent>
-          <Remark xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</Remark>
-          <Remark xml:lang="EN">Expect delays, cancellations and diversions. More details to come soon.</Remark>
+          <RemarkText xml:lang="DE">Es muss mit Verspätungen, Ausfällen und Umleitungen gerechnet werden. Wir werden sie rasch möglichst detaillierter informieren.</RemarkText>
+          <RemarkText xml:lang="EN">Expect delays, cancellations and diversions. More details to come soon.</RemarkText>
          </RemarkContent>
         </TextualContent>
        </PassengerInformationAction>
