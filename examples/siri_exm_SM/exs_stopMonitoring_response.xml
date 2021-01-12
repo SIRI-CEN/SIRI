@@ -8,7 +8,7 @@
 	See also simple response  for minimal version
 
 (C) Copyright 2005-2012 CEN SIRI -->
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
  <ServiceDelivery>
   <!--=======HEADER================================================== -->
   <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
@@ -16,7 +16,7 @@
   <Status>true</Status>
   <MoreData>false</MoreData>
   <!--=======PAYLOAD============================================== -->
-  <StopMonitoringDelivery version="2.0">
+  <StopMonitoringDelivery version="2.1">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <SubscriberRef>NADER</SubscriberRef>
    <SubscriptionRef>2004-12-17T09:30:47-05:00</SubscriptionRef>

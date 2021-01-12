@@ -767,7 +767,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request.  
 </xsd:documentation>
