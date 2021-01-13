@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von David Sielaff (Verkehrsverbund Rhein-Sieg GmbH) bearbeitet -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situationActions">
  <!--
 10.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
@@ -219,8 +218,19 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Prompt" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Display prompt for presenting action to user.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Display prompt for presenting action to user. (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PublishAtScope" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Defines the information area where the action has to be published.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
+      <xsd:element name="Affects" type="AffectsScopeStructure"/>
+     </xsd:sequence>
+    </xsd:complexType>
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
