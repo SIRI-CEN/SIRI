@@ -1287,7 +1287,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
     </xsd:element>
    </xsd:choice>
    <xsd:element ref="SituationRef" minOccurs="0"/>
-   <xsd:element name="RecommendedAction" type="RecommendationStructure" minOccurs="0">
+   <xsd:element name="RecommendedAction" type="RecommendedActionStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Information on recommendations for passengers on how to deal with the formation change.</xsd:documentation>
     </xsd:annotation>
@@ -1339,7 +1339,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
- <xsd:complexType name="RecommendationStructure">
+ <xsd:complexType name="RecommendedActionStructure">
   <xsd:annotation>
    <xsd:documentation>Description of the recommended action for passengers on how to deal with changes, for example of the TRAIN formation.</xsd:documentation>
   </xsd:annotation>
