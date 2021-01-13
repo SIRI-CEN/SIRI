@@ -7,7 +7,7 @@
     <Audience>e-service developers</Audience>
     <Contributor>Add names </Contributor>
     <Coverage>Europe</Coverage>
-    <Creator>&gt;Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
+    <Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
     <Date>
      <Created>2008-07-05</Created>
     </Date>
@@ -17,6 +17,14 @@
     <Date>
      <Modified>2008-10-01</Modified>
      <!-- Add predictability status -->
+    </Date>
+    <Date>
+     <Modified>2019-09-01</Modified>
+     <!-- +SIRI v2.1
+       Merged with TPEG2 (Pts43 ServiceStatus).
+       Removed numerical values from SeverityEnumeration and VerificationStatusEnumeration.
+       Corrected content of Predictability.
+      -->
     </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes calssifier codes </p>
@@ -28,20 +36,18 @@
     </Format>
     <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}/siri_situationClassifiers-v1.1.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
-    <Relation>
-
-    </Relation>
+    <Publisher>CEN</Publisher>
+    <Relation> </Relation>
     <Rights>Unclassified
-         <Copyright>Kizoom 2000-2007, CEN 2009-2012</Copyright>
-				</Rights>
+     <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
+    </Rights>
     <Source>
      <ul>
       <li>Schema derived Derived from the Kizoom XTIS schema </li>
       <li>Derived from the TPEG Categories schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.0</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -50,7 +56,7 @@ Public transport, Bus services, Coach services, Bus stops and stations,
 Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
-</Category>
+     </Category>
      <Project>CEN TC278 WG3 SG7</Project>
     </Subject>
     <Title>SIRI-SX Xml Schema for PT Incidents. Classifier subschema</Title>
@@ -63,60 +69,52 @@ Rail transport, Roads and road transport
  <!-- ===INCIDENT SEVERITIES================================================== -->
  <xsd:element name="Severity" type="SeverityEnumeration" default="normal">
   <xsd:annotation>
-   <xsd:documentation>Severity of Incident. Corresponds to TPEG Pti26 severities. Defautl is 'normal'.</xsd:documentation>
+   <xsd:documentation>Severity of Incident - TPEG Pti26. Default is 'normal'.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="SeverityEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Severity. Correspond to TPEG Pti26 Severity values.</xsd:documentation>
+   <xsd:documentation>Values for TPEG Pti26 - Severity</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="pti26_0"/>
    <xsd:enumeration value="unknown">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_0: unknown.</xsd:documentation>
+     <xsd:documentation>TPEG Pti26_0, unknown</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="pti26_1"/>
    <xsd:enumeration value="verySlight">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_1: very slight.</xsd:documentation>
+     <xsd:documentation>TPEG Pti26_1, very slight</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="pti26_2"/>
    <xsd:enumeration value="slight">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_2: slight.</xsd:documentation>
+     <xsd:documentation>TPEG Pti26_2, slight</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="pti26_3"/>
    <xsd:enumeration value="normal">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_3: normal.</xsd:documentation>
+     <xsd:documentation>TPEG Pti26_3, normal</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="pti26_4"/>
    <xsd:enumeration value="severe">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_4: severe.</xsd:documentation>
+     <xsd:documentation>TPEG Pti26_4, severe</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="pti26_5"/>
    <xsd:enumeration value="verySevere">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_5: verySevere.</xsd:documentation>
+     <xsd:documentation>TPEG Pti26_5, very severe</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="pti26_6"/>
    <xsd:enumeration value="noImpact">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_6: noImpact.</xsd:documentation>
+     <xsd:documentation>TPEG Pti26_6, no impact</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="pti26_255"/>
    <xsd:enumeration value="undefined">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_255: undefined.</xsd:documentation>
+     <xsd:documentation>TPEG Pti26_255, undefined</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
@@ -372,7 +370,7 @@ Rail transport, Roads and road transport
  <!-- ==Verification================================= -->
  <xsd:element name="VerificationStatus">
   <xsd:annotation>
-   <xsd:documentation>Classification of verification status TPEG Pti13 Service Condition values.</xsd:documentation>
+   <xsd:documentation>Classification of verification status - TPEG Pti032</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleType>
    <xsd:restriction base="VerificationStatusEnumeration"/>
@@ -380,16 +378,34 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:simpleType name="VerificationStatusEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Verification Status Corresponds to TPEG pti_table 32.</xsd:documentation>
+   <xsd:documentation>Values for TPEG Pti032 - VerificationStatus</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="pti32_0"/>
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="pti32_1"/>
-   <xsd:enumeration value="unverified"/>
-   <xsd:enumeration value="pti32_255"/>
-   <xsd:enumeration value="verified"/>
-   <xsd:enumeration value="verifiedAsDuplicate"/>
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti32_0, unknown</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="unverified">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti32_1, unverified</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="verified">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti32_?, verified</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="verifiedAsDuplicate">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti32_?, verifiedAsDuplicate</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefined">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti32_255 ?</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ==Predictability================================= -->
@@ -398,7 +414,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Classification of Predictability status.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleType>
-   <xsd:restriction base="VerificationStatusEnumeration"/>
+   <xsd:restriction base="PredictabilityEnumeration"/>
   </xsd:simpleType>
  </xsd:element>
  <xsd:simpleType name="PredictabilityEnumeration">
