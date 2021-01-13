@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_estimatedVehicleJourney">
  <xsd:annotation>
   <xsd:appinfo>
@@ -107,7 +106,7 @@ Rail transport, Roads and road transport
      <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
       <xsd:annotation>
        <xsd:documentation>Reference to a dated VEHICLE JOURNEY. This will be 'framed' ie be with the data context of the ESTIMATED Timetable. 
-DEPRECATED from SRI 2.0</xsd:documentation>
+DEPRECATED since SIRI v2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:choice>
@@ -119,7 +118,7 @@ DEPRECATED from SRI 2.0</xsd:documentation>
     <xsd:element name="EstimatedVehicleJourneyCode" type="EstimatedVehicleJourneyCodeType">
      <xsd:annotation>
       <xsd:documentation>If this is the first message about an extra unplanned VEHICLE JOURNEY, a new and unique code must be given for it. ExtraJourney should be set to 'true'. 
-DEPRECATED from SRI 2.0</xsd:documentation>
+DEPRECATED since SIRI v2.0</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
