@@ -238,50 +238,154 @@ Rail transport, Roads and road transport
  <!-- ==Route point Type================================= -->
  <xsd:element name="RoutePointType" type="RoutePointTypeEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>Route point type Tpeg Report Type pti15.</xsd:documentation>
+   <xsd:documentation>Route point type Tpeg Report Type PTi15.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="RoutePointTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation> route_point_type TPEG pti_table15.</xsd:documentation>
+   <xsd:documentation>Values for TPEG PTs44: StopPlaceUsage - RoutePointType (Pti15: deprecated since SIRI v2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="pti15_0"/>
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="pti15_1"/>
-   <xsd:enumeration value="startPoint"/>
-   <xsd:enumeration value="pti15_2"/>
-   <xsd:enumeration value="destination"/>
-   <xsd:enumeration value="pti15_3"/>
-   <xsd:enumeration value="stop"/>
-   <xsd:enumeration value="pti15_4"/>
-   <xsd:enumeration value="via"/>
-   <xsd:enumeration value="pti15_5"/>
-   <xsd:enumeration value="notStopping"/>
-   <xsd:enumeration value="pti15_6"/>
-   <xsd:enumeration value="temporaryStop"/>
-   <xsd:enumeration value="pti15_7"/>
-   <xsd:enumeration value="temporarilyNotStopping"/>
-   <xsd:enumeration value="pti15_8"/>
-   <xsd:enumeration value="exceptionalStop"/>
-   <xsd:enumeration value="pti15_9"/>
-   <xsd:enumeration value="additionalStop"/>
-   <xsd:enumeration value="pti15_10"/>
-   <xsd:enumeration value="requestStop"/>
-   <xsd:enumeration value="pti15_11"/>
-   <xsd:enumeration value="frontTrainDestination"/>
-   <xsd:enumeration value="pti15_12"/>
-   <xsd:enumeration value="rearTrainDestination"/>
-   <xsd:enumeration value="pti15_13"/>
-   <xsd:enumeration value="throughServiceDestination"/>
-   <xsd:enumeration value="pti15_14"/>
-   <xsd:enumeration value="notVia"/>
-   <xsd:enumeration value="pti15_15"/>
-   <xsd:enumeration value="alteredStartPoint"/>
-   <xsd:enumeration value="pti15_16"/>
-   <xsd:enumeration value="alteredDestination"/>
-   <xsd:enumeration value="pti15_255"/>
-   <xsd:enumeration value="undefinedRoutePoint"/>
+   <xsd:enumeration value="unknown">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_0, PTs44_0, unknown</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="origin">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_1, origin</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="destination">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_2, PTs44_2, destination</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="intermediate">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_3, intermediate.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="legBoard">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_4, leg board</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="legIntermediate">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_5, leg intermediate</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="legAlight">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_6, leg alight</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="firstRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_7, first route point</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="lastRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_8, last route point</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="affectedStopplace">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_9, affected stop place</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="presentedStopplace">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_10, presented stop place</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefinedStopplaceUsage">
+    <xsd:annotation>
+     <xsd:documentation>TPEG PTs44_255, undefined stop place usage</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="startPoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_1, start point, deprecated (SIRI v2.1) and replaced by PTs44_1 value 'origin'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="stop">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_3, stop, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="via">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_4, via, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="notStopping">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_5, not-stopping, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="temporaryStop">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_6, temporary stop, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="temporarilyNotStopping">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_7, temporarily not-stopping, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="exceptionalStop">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_8, exceptional stop, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="additionalStop">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_9, additional stop, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="requestStop">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_10, request stop, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="frontTrainDestination">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_11, front train destination, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="rearTrainDestination">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_12, rear train destination, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="throughServiceDestination">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_13, through service destination, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="notVia">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_14, not via, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="alteredStartPoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_15, altered start point, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="alteredDestination">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_16, altered destination, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="undefinedRoutePoint">
+    <xsd:annotation>
+     <xsd:documentation>TPEG Pti15_255, undefined route point, deprecated (SIRI v2.1)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ==STOP POINT Type================================= -->
