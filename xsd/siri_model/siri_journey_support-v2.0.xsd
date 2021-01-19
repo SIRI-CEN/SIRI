@@ -910,6 +910,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
    <xsd:enumeration value="electricity"/>
    <xsd:enumeration value="hydrogen"/>
    <xsd:enumeration value="other"/>
+   <xsd:enumeration value="unknown"/>
   </xsd:restriction>
  </xsd:simpleType>
  <xsd:element name="FareClass" type="FareClassEnumeration" default="unknown">

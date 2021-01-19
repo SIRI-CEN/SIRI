@@ -735,4 +735,22 @@ Rail transport, Roads and road transport
    </xsd:sequence>
   </xsd:sequence>
  </xsd:group>
+ <!-- ===Vehicle FACILITY====================================== -->
+ <xsd:complexType name="TypeOfVehicleFuelStructure">
+  <xsd:annotation>
+   <xsd:documentation>Classification of vehicle energy type. See Transmodel TypeOfFuel. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element name="TypeOfFuel" type="TypeOfFuelEnumeration">
+    <xsd:annotation>
+     <xsd:documentation>Values for vehicle fuel type. Use of 'other' requires the additional open ended OtherTypeOfFuel to be filled.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="OtherTypeOfFuel" type="TypeOfValueStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>An arbitrary vehicle fuel classification.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+  </xsd:sequence>	
+ </xsd:complexType>
 </xsd:schema>
