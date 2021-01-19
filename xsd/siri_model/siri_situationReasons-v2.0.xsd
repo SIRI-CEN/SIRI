@@ -1289,6 +1289,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_64 value 'levelCrossingIncident'.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
+   <xsd:enumeration value="heavySnowfall">
+    <xsd:annotation>
+     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_87 value 'heavySnowFall'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
    <xsd:enumeration value="waitingForTransferPassengers">
     <xsd:annotation>
      <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_130 value 'awaitingShuttle'.</xsd:documentation>
