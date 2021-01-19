@@ -450,6 +450,20 @@ Rail transport, Roads and road transport
      <xsd:documentation>Description of what is counted</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="CountedItemsIdList" minOccurs="0">
+	<xsd:annotation>
+		<xsd:documentation>List of the IDs of the counted items: usefull mainly for reservation and detailed information purposes</xsd:documentation>
+	</xsd:annotation>
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="ItemId" type="IdType" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>IDs of a counted item</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+   </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
