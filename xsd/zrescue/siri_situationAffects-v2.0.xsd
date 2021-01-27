@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situationAffects">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situationAffects">
  <xsd:include schemaLocation="siri_monitoredVehicleJourney-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_modes-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_situationServiceTypes-v1.0.xsd"/>
@@ -60,14 +60,14 @@
     </Relation>
     <Rights>Unclassified
 
-       <Copyright>Kizoom 2000-2007, CEN 2009-2012</Copyright>
+       <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Schema derived Derived from the Kizoom XTIS schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
