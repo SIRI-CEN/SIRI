@@ -169,22 +169,9 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
      <xsd:documentation>Whether the VEHICLE JOURNEY is monitored by an AVMS: true if active. Inherited property: if omitted: same as indicated by (i) any preceding update message, or (ii) if no preceding update, by the referenced dated VEHICLE JOURNEY.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="PredictionInaccurate" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the prediction for the journey is considered to be of a useful accuracy or not. Default is 'false'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PredictionInaccurateReason" type="PredictionInaccurateReasonEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>An approximate figure of how occupied the journey is after departing from a given stop, e.g. 'manySeatsAvailable' or 'standingRoomOnly'. If omitted: Passenger load is unknown.
-Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRAIN, can also be specified in more detail for the departure on CALL level.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element ref="PredictionInaccurate" minOccurs="0"/>
+   <xsd:element ref="PredictionInaccurateReason" minOccurs="0"/>
+   <xsd:element ref="Occupancy" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
  <!-- ======================================================================= -->
@@ -408,11 +395,24 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
+ <!-- ======================================================================= -->
  <xsd:element name="EstimatedCall" type="EstimatedCallStructure">
   <xsd:annotation>
    <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY. If IsCompleteStopSequence is false, may be just those stops that are altered.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
+ <xsd:element name="ExtraCall" type="xsd:boolean" default="false">
+  <xsd:annotation>
+   <xsd:documentation>This CALL is an addition to the respective journey in the production timetable or to the previously sent prediction. If omitted: CALL is planned.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:simpleType name="CallCancellation">
+  <xsd:annotation>
+   <xsd:documentation>This CALL is a cancellation of a previously announced call.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:boolean"/>
+ </xsd:simpleType>
+ <!-- ======================================================================= -->
  <xsd:complexType name="EstimatedCallStructure">
   <xsd:annotation>
    <xsd:documentation>Type for real-time info about a VEHICLE JOURNEY Stop.</xsd:documentation>
@@ -420,16 +420,8 @@ the original journey and the nature of the difference.</xsd:documentation>
   <xsd:sequence>
    <xsd:group ref="StopPointInSequenceGroup"/>
    <xsd:choice minOccurs="0">
-    <xsd:element name="ExtraCall" type="xsd:boolean" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>This call is additional and unplanned. If omitted: CALL is planned.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="Cancellation" type="xsd:boolean" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>This call is a cancellation of a previously announced call.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    <xsd:element ref="ExtraCall" minOccurs="0"/>
+    <xsd:element name="Cancellation" type="CallCancellation" default="false" minOccurs="0"/>
    </xsd:choice>
    <xsd:group ref="CallRealTimeInfoGroup"/>
    <xsd:group ref="CallPropertyGroup"/>
@@ -444,22 +436,9 @@ the original journey and the nature of the difference.</xsd:documentation>
    <xsd:documentation>Information relating to real-time properties of call.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="PredictionInaccurate" type="xsd:boolean" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the prediction for the specific stop is considered to be of a useful accuracy or not. Default is 'false', i.e. prediction is not known to be inaccurate. {DOUBLE NEGATIVE IS BAD _ BETTER AS PredictionAccurate. Default is 'true'?]. If prediction is degraded, e.g. because in congestion, used to 9indicate a lowered quality of data. Inherited property. {SHOULD THIS JUST BE THE SPECIFIC InCongestion INDICATOR INSTEAD, OR IS IT MORE GENERAL]</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PredictionInaccurateReason" type="PredictionInaccurateReasonEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>An approximate figure of how occupied the journey is after departing from a given stop, e.g. 'manySeatsAvailable' or 'standingRoomOnly'. If omitted: Passenger load is unknown.
-Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRAIN, can also be specified in more detail for the departure on CALL level.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element ref="PredictionInaccurate" minOccurs="0"/>
+   <xsd:element ref="PredictionInaccurateReason" minOccurs="0"/>
+   <xsd:element ref="Occupancy" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
  <!-- ======================================================================= -->
@@ -468,107 +447,6 @@ Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRA
    <xsd:documentation>Ordered sequence of SCHEDULED STOP POINTs called at by the VEHICLE JOURNEY. Only used if observed stop data is being recorded. (SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:group name="RecordedCallGroup">
-  <xsd:annotation>
-   <xsd:documentation>Information relating to recorded real-time properties of call.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
-   <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
-   <xsd:element ref="ActualArrivalTime" minOccurs="0"/>
-   <xsd:element name="ArrivalStatus" type="CallStatusEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Classification of the timeliness of the visit according to a fixed list of values. If not specified, same as DepartureStatus. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="ArrivalCancellationReason" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Text annotation to be used in cases where ArrivalStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="ArrivalPlatformName" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Bay or platform (QUAY) name to show passenger i.e. expected platform for vehicle to arrive at. Inheritable property. Can be omitted if the same as the DeparturePlatformName. If there is no arrival platform name separate from the departure platform name, the precedence is
-(i) any arrival platform on any related dated timetable element, 
-(ii) any departure platform name on this estimated element;
-(iii) any departure platform name on any related dated timetable CALL.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="ArrivalBoardingActivity" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type of alighting at stop, e.g. alighting, noAlighting or passThru. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Assignment of arrival of Scheduled STOP POINT to a physical QUAY (platform). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ArrivalFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="AimedDepartureTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Target departure time of VEHICLE according to latest working timetable.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="ExpectedDepartureTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="DeparturePlatformName" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Bay or platform (QUAY) name from which VEHICLE will depart. Inherited property.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="ActualDepartureTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Estimated time of departure of VEHICLE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DepartureStatus" type="CallStatusEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Classification of the timeliness of the departure part of the CALL, according to a fixed list of values. This may reflect a presentation policy, for example CALLs less than one minute behind target time are still classified as on-time. Applications may use this to guide their own presentation of times. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="DepartureCancellationReason" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Text annotation to be used in cases where DepartureStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="DepartureBoardingActivity" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Nature of boarding at stop, e.g. boarding, noBoarding or passThru. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Assignment of departure platform for Scheduled STOP POINT to a physical QUAY. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DepartureFormationAssignment" type="FormationAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="RecordedDepartureOccupancy" type="VehicleOccupancyStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Recorded occupancies of a VEHICLE and reserved seats after departing from a given stop. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="RecordedDepartureCapacities" type="PassengerCapacityStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Recorded capacities of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="AimedHeadwayInterval" minOccurs="0"/>
-   <xsd:element ref="ExpectedHeadwayInterval" minOccurs="0"/>
-   <xsd:element ref="ActualHeadwayInterval" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
  <xsd:complexType name="RecordedCallStructure">
   <xsd:annotation>
    <xsd:documentation>Type for  recroded Real-time info about a VEHICLE JOURNEY Stop.</xsd:documentation>
@@ -576,21 +454,48 @@ Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRA
   <xsd:sequence>
    <xsd:group ref="StopPointInSequenceGroup"/>
    <xsd:choice minOccurs="0">
-    <xsd:element name="ExtraCall" type="xsd:boolean" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>This call is additional and unplanned. If omitted: CALL is planned.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="Cancellation" type="xsd:boolean" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>This call is a cancellation of a previously announced call.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
+    <xsd:element ref="ExtraCall" minOccurs="0"/>
+    <xsd:element name="Cancellation" type="CallCancellation" default="false" minOccurs="0"/>
    </xsd:choice>
    <xsd:group ref="CallRealTimeInfoGroup"/>
    <xsd:group ref="RecordedCallGroup"/>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
+ <xsd:group name="RecordedCallGroup">
+  <xsd:annotation>
+   <xsd:documentation>Information relating to recorded real-time properties of call.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="CallPropertyGroup"/>
+   <xsd:group ref="CallNoteGroup"/>
+   <xsd:group ref="DisruptionGroup"/>
+   <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
+   <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
+   <xsd:element ref="ActualArrivalTime" minOccurs="0"/>
+   <xsd:group ref="MonitoredStopArrivalStatusGroup"/>
+   <!-- It should actually follow the MonitoredStopDepartureStatusGroup but because of an old mistake described below the elements have to be listed explicitly (in a slightly different order).
+   <xsd:group ref="MonitoredStopDepartureStatusGroup"/>-->
+   <xsd:element ref="AimedDepartureTime" minOccurs="0"/>
+   <xsd:element ref="ExpectedDepartureTime" minOccurs="0"/>
+   <xsd:element ref="DeparturePlatformName" minOccurs="0"/>
+   <xsd:element ref="ActualDepartureTime" minOccurs="0"/>
+   <xsd:element ref="DepartureStatus" minOccurs="0"/>
+   <xsd:element ref="DepartureCancellationReason" minOccurs="0"/>
+   <xsd:element ref="DepartureProximityText" minOccurs="0"/>
+   <!-- DeparturePlatformName should actually be inserted here, but by a mistake in an old version it has to be used between Expected- and ActualDepartureTime above 
+   (which is confusing, given that this ordering is only valid in the RecordedCallStructure and nowhere else). Backward compatibility and non-determinism forbids us to correct the mistake.  
+   <xsd:element ref="DeparturePlatformName" minOccurs="0"/>-->
+   <xsd:element ref="DepartureBoardingActivity" minOccurs="0"/>
+   <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="DepartureFormationAssignment" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="DepartureOrientationRelativeToQuay" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="RecordedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="RecordedDepartureCapacities" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:element ref="DepartureOperatorRefs" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:group ref="HeadwayIntervalGroup"/>
+   <xsd:element ref="ActualHeadwayInterval" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
  <!-- ======================================================================= -->
 </xsd:schema>

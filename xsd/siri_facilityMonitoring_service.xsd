@@ -172,7 +172,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="FacilityRef" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="FeatureRef" minOccurs="0"/>
+   <xsd:element ref="FeatureRef" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="LineRef" minOccurs="0"/>
    <xsd:element ref="StopPointRef" minOccurs="0"/>
    <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
@@ -197,6 +197,11 @@ Rail transport, Roads and road transport
    <xsd:element name="StopPlaceComponentRef" type="ifopt:StopPlaceComponentRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Reference to a stop place component.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="SiteRef" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to a Site.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

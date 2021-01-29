@@ -24,14 +24,14 @@
      <Modified>2007-03-29</Modified>
     </Date>
     <Date><Modified>2008-11-13</Modified>
-				 Correct Cardinalities on SIRI DESTINATION REF Structure 
+				<!--Correct Cardinalities on SIRI DESTINATION REF Structure--> 
 				</Date>
     <Date><Modified>2011-04-18</Modified>
-				 siri_journey-v2.0.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com
+				<!--siri_journey-v2.0.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com-->
  
 				</Date>
     <Date><Modified>2012-03-22</Modified>
-				SIRI 2.0 
+				<!--SIRI 2.0 
 					[VDV] Add EarliestExpectedArrivalTimeForVehicle to Arrival Times Group
 					[VDV] Add ProvisionalExpectedDepartureTime to Departure Times Group
 					[VDV] Add LatestExpectedArrivalTimeForVehicle to Departure Times Group
@@ -50,15 +50,15 @@
 					
 					[VDV] Add ViaPriority to ViaNames using a new ViaNameStructure SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
 					[VDV] Add Velocity to MonitoredVehicleJourney SIRI-SM and SIRI-VM
-					[UK] add engineOn to vehicle progress group
+					[UK] add engineOn to vehicle progress group-->
 				</Date>
     <Date><Modified>2012-04-27</Modified>
-				SIRI 2.0 
-					[MTA] Add DIstanceFromSTop and NumberOfStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET				 
+				<!--SIRI 2.0 
+					[MTA] Add DIstanceFromSTop and NumberOfStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET-->				 
 				</Date>
     <Date><Modified>2012-04-27</Modified>
-				SIRI 2.0 
-					[SE] Add Vehicle Status   
+				<!--SIRI 2.0 
+					[SE] Add Vehicle Status-->
 				</Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of real-time information .</p>
@@ -75,7 +75,7 @@
     <Relation>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types-v2.0.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
+    <Rights><!--Unclassified-->
 
        <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
@@ -153,16 +153,8 @@ Rail transport, Roads and road transport
      <xsd:documentation>Whether the panic alarm on the VEHICLE is activated. This may lead to indeterminate predictions. If absent, default is 'false'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="PredictionInaccurate" type="xsd:boolean" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the prediction should be judged as inaccurate.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PredictionInaccurateReason" type="PredictionInaccurateReasonEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. +SIRI v2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element ref="PredictionInaccurate" minOccurs="0"/>
+   <xsd:element ref="PredictionInaccurateReason" minOccurs="0"/>
    <xsd:element name="DataSource" type="xsd:string" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>System originating real-time data. Can be used to make judgements of relative quality and accuracy compared to other feeds.</xsd:documentation>
@@ -210,12 +202,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Whether the engine of the vehicle is on. Default is 'true' (+SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="Occupancy" type="OccupancyEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>An approximate figure of how occupied the journey is across all of its stops, e.g. 'manySeatsAvailable' or 'standingRoomOnly'. If omitted: Passenger load is unknown.
-Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRAIN, can also be specified in more detail for the departure on CALL level.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
+   <xsd:element ref="Occupancy" minOccurs="0"/>
    <xsd:element name="Delay" type="DurationType" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Delay of VEHICLE against schedule, to a precision in seconds. Early times are shown as negative values.</xsd:documentation>
