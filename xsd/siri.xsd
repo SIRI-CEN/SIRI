@@ -363,7 +363,7 @@ Rail transport, Roads and road transport.
    <xsd:group ref="ServiceDeliveryRequestStatusGroup"/>
    <xsd:element name="MoreData" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether there is a further delvery message with more current updates that follows this one. Default is 'false'.</xsd:documentation>
+     <xsd:documentation>Whether there is a further delivery message with more current updates that follows this one. Default is 'false'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="SiriServiceDeliveryGroup"/>
