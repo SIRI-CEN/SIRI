@@ -390,12 +390,12 @@ Rail transport, Roads and road transport.
      <xsd:element ref="StopTimetableDelivery" maxOccurs="unbounded"/>
      <xsd:element ref="StopMonitoringDelivery" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Delviery for Stop Event service.</xsd:documentation>
+       <xsd:documentation>Delivery for Stop Event service.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="VehicleMonitoringDelivery" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Delviery for Vehicle Activity Service.</xsd:documentation>
+       <xsd:documentation>Delivery for Vehicle Activity Service.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="ConnectionTimetableDelivery" maxOccurs="unbounded"/>
