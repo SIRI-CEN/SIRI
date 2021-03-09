@@ -603,7 +603,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>ProgressStatus. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="QualityIndex" type="QualityEnumeration" minOccurs="0">
+   <xsd:element name="QualityIndex" type="QualityIndexEnumeration" default="reliable" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Assessement of likely correctness of data.</xsd:documentation>
     </xsd:annotation>
@@ -644,18 +644,6 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for Publication status.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:simpleType name="QualityEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Type for Quality of data indication.  </xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="certain"/>
-   <xsd:enumeration value="veryReliable"/>
-   <xsd:enumeration value="reliable"/>
-   <xsd:enumeration value="probablyReliable"/>
-   <xsd:enumeration value="unconfirmed"/>
-  </xsd:restriction>
  </xsd:simpleType>
  <!-- ===Time=========================================== -->
  <xsd:group name="TemporalGroup">
