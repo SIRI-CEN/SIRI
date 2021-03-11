@@ -515,18 +515,6 @@ Rail transport, Roads and road transport
   </xsd:complexContent>
  </xsd:complexType>
  <!-- ===Extentions for SIRI-SX v2.0p-a0.x================================================== -->
- <xsd:complexType name="ActionPeriodStructure">
-  <xsd:sequence>
-   <xsd:element name="StartTime" type="xsd:time"/>
-   <xsd:element name="EndTime" type="xsd:time"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="AffectsSegmentStructure">
-  <xsd:sequence>
-   <xsd:element name="Start" type="AffectedPlaceStructure"/>
-   <xsd:element name="End" type="AffectedPlaceStructure"/>
-  </xsd:sequence>
- </xsd:complexType>
  <xsd:complexType name="DescriptionContentStructure">
   <xsd:sequence>
    <xsd:element name="DescriptionText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -557,15 +545,6 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:simpleType name="Duration235959">
-  <xsd:annotation>
-   <xsd:documentation>Duration of specific time range (smaller than 24h). StartTime plus Duration can result in a time on the next day, smaller than the StartTime.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:duration">
-   <xsd:minInclusive value="P0Y0M0DT0H0M1S"/>
-   <xsd:maxInclusive value="P0Y0M0DT23H59M59S"/>
-  </xsd:restriction>
- </xsd:simpleType>
  <xsd:complexType name="DurationContentStructure">
   <xsd:sequence>
    <xsd:element name="DurationText" type="DefaultedTextStructure" maxOccurs="unbounded">
@@ -731,7 +710,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="DurationContent" type="DurationContentStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Content to inform about a passenger information action.</xsd:documentation>
+     <xsd:documentation>Content for the duration of a passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RemarkContent" type="RemarkContentStructure" minOccurs="0" maxOccurs="unbounded">

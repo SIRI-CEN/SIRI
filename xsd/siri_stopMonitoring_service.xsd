@@ -873,7 +873,7 @@ If false each subscription response will contain the full information as specifi
         </xsd:element>
         <xsd:element name="ByStartTime" type="xsd:boolean" default="true" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'truet.</xsd:documentation>
+          <xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'true'.</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element ref="FilterByMonitoringRef"/>

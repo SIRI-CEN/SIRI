@@ -202,7 +202,7 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:group name="DelegatorEndpointGroup">
   <xsd:annotation>
-   <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking informattion relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
+   <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="DelegatorAddress" type="EndpointAddress" minOccurs="0">
@@ -444,7 +444,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      </xsd:choice>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregting system, trackng informattion relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate  aggregating system, tracking information relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
      <xsd:group ref="DeliveryStatusGroup"/>
@@ -624,7 +624,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:group ref="ProducerRequestEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregting system, trackng informattion relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system, tracking information relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -868,7 +868,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:group ref="ContextualisedResponseEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregting system, trackng informattion relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system, tracking information relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
      <xsd:sequence>

@@ -576,18 +576,18 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="AffectedLineStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for information about the LINEs affected by a SITUATION.</xsd:documentation>
+   <xsd:documentation>Information about the individual LINEs in the network that are affected by a SITUATION. If not explicitly overrided, modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) in the General Context. </xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AffectedOperator" type="AffectedOperatorStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Operators of LINEs affected by incident. Overrides any value specified for (i) Affected Network (ii) General Context.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified operators of LINEs that are affected by the situation. Overrides any value specified for (i) Affected Network (ii) General Context.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="LineGroup"/>
    <xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>DESTINATIONs to which the  LINE runs.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified DESTINATIONs</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Direction" type="DirectionStructure" minOccurs="0" maxOccurs="unbounded">
@@ -597,7 +597,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Routes" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>ROUTEs affected if  LINE has multiple ROUTEs.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified ROUTEs</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -611,7 +611,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Sections" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Sections of  LINE affected.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified LINE SECTIONs</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -644,7 +644,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="AffectedSectionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for information about the sectons affected by a SITUATION.</xsd:documentation>
+   <xsd:documentation>Type for information about the SECTIONs affected by a SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="SectionRef" type="SectionRefStructure" minOccurs="0">
