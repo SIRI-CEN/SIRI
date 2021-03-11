@@ -531,7 +531,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="DescriptionText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DescriptionPriority" type="xsd:positiveInteger" minOccurs="0">
@@ -546,7 +546,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="ConsequenceText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Further consequence to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Further consequence to passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ConsequencePriority" type="xsd:positiveInteger" minOccurs="0">
@@ -648,11 +648,11 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:complexType name="ReasonNameContentStructure">
+ <xsd:complexType name="ReasonContentStructure">
   <xsd:sequence>
    <xsd:element name="ReasonText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>ReasonName of passenger information action.</xsd:documentation>
+     <xsd:documentation>Reason of passenger information action.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -661,7 +661,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="RecommendationText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Further recommendation to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Further recommendation to passengers.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RecommendationPriority" type="xsd:positiveInteger" minOccurs="0">
@@ -709,20 +709,24 @@ Rail transport, Roads and road transport
      <xsd:documentation>Content for summary of a passenger information action</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="ReasonContent" type="ReasonNameContentStructure" minOccurs="0"/>
+   <xsd:element name="ReasonContent" type="ReasonContentStructure" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Content for reason of a passenger information action</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element name="DescriptionContent" type="DescriptionContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n descriptions of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for n descriptions of a passenger information action. For hiding / sorting descriptions in end devices, a description priority can be set.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ConsequenceContent" type="ConsequenceContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n consequences of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for n consequences of a passenger information action. For hiding / sorting descriptions in end devices, a consequence priority can be set.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RecommendationContent" type="RecommendationContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n recommendations of a passenger information action</xsd:documentation>
+     <xsd:documentation>Content for n recommendations of a passenger information action. For hiding / sorting descriptions in end devices, a recommendation priority can be set.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DurationContent" type="DurationContentStructure" minOccurs="0">
@@ -732,7 +736,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="RemarkContent" type="RemarkContentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Content for n remarks of a passenger information action, e,g, "For more information call xy".</xsd:documentation>
+     <xsd:documentation>Content for n remarks of a passenger information action, e,g, "For more information call xy". For hiding / sorting descriptions in end devices, a remark priority can be set.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="InfoLink" type="InfoLinkStructure" minOccurs="0" maxOccurs="unbounded">

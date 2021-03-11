@@ -1094,7 +1094,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    <xsd:documentation>Text description of SITUATION. Some or all of this may have been generated from the other structured content elements. Where text has been overriden this is indicated.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:NMTOKEN" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Default language.</xsd:documentation>
     </xsd:annotation>
