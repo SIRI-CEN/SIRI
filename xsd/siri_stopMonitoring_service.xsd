@@ -621,7 +621,7 @@ If false each subscription response will contain the full information as specifi
  </xsd:complexType>
  <xsd:complexType name="DeliveryVariantStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Delviery Variant +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Type for Delivery Variant +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="VariantType" type="xsd:normalizedString" minOccurs="0">
