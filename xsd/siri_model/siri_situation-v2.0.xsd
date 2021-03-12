@@ -66,8 +66,8 @@ siri_model\siri_situation-v2.0.xsd:
        InformationUsageOverride /  D2LogicalModel:InformationUsage dropped  for  D2
        D2LogicalModel:SourceInformation renamed to   D2LogicalModel:Source
        D2LogicalModel:SourceInformation values wrapped in valuse tag
-       D2LogicalModel:Advcie   dropped. 
-       D2LogicalModel:Imppact ImpactDetails wrapper tag dropped. 
+       D2LogicalModel:Advice   dropped.
+       D2LogicalModel:Impact ImpactDetails wrapper tag dropped.
        D2 trafficResstrictionType renamed to  trafficConstrictionType
        Correct type on easementref to normalized string. 
        Allow translations of NLString elements

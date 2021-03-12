@@ -679,7 +679,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="TextualContentSize" type="xsd:NMTOKENS" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small)</xsd:documentation>
+     <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small).<br/> If text length for a class size varies on perspective and a PassengerInformationAction applies to several perspectives, take the smallest class</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="ActionsGroup" minOccurs="0"/>
