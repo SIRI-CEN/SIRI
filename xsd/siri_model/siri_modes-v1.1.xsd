@@ -108,6 +108,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="RailSubmode"/>
    <xsd:element ref="TramSubmode"/>
    <xsd:element ref="WaterSubmode"/>
+   <xsd:element ref="TelecabinSubmode"/>
   </xsd:choice>
  </xsd:group>
  <!-- ======================================================================= -->
