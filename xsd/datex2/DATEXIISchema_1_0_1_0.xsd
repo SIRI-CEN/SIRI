@@ -8134,6 +8134,11 @@
      <xs:documentation>A station dedicated to the monitoring of the road network by processing microwave information.</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
+   <xs:enumeration value="microwavedMonitoringStation">
+    <xs:annotation>
+     <xs:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also 'microwaveMonitoringStation'</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
    <xs:enumeration value="mobileTelephoneCaller">
     <xs:annotation>
      <xs:documentation>A caller using a mobile telephone (who may or may not be on the road network).</xs:documentation>
@@ -8142,6 +8147,11 @@
    <xs:enumeration value="nonPoliceEmergencyServicePatrol">
     <xs:annotation>
      <xs:documentation>Emergency service patrols other than police.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="nonPoliceEmergencyServicesPatrol">
+    <xs:annotation>
+     <xs:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also 'nonPoliceEmergencyServicePatrol'</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="otherInformation">
@@ -8172,6 +8182,11 @@
    <xs:enumeration value="registeredMotoristObserver">
     <xs:annotation>
      <xs:documentation>A motorist who is an officially registered observer.</xs:documentation>
+    </xs:annotation>
+   </xs:enumeration>
+   <xs:enumeration value="registeredMobileObserver">
+    <xs:annotation>
+     <xs:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also 'registeredMotoristObserver'</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="roadAuthorities">

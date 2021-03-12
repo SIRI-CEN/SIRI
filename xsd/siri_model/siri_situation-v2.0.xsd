@@ -19,13 +19,13 @@ siri_model\siri_situation-v2.0.xsd:
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility-v0.3.xsd"/>
  <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries-v0.2.xsd"/>
  <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema_2_0RC1_2_0.xsd"/>
- <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../xml/xml.xsd"/>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_situationIdentity-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_situationServiceTypes-v1.0.xsd"/>
  <xsd:include schemaLocation="siri_situationReasons-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationAffects-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationActions-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:annotation>
   <xsd:appinfo>
@@ -946,7 +946,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedNetwork" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Nrtworks and Route(s) affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>Networks and Route(s) affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
        <xsd:complexType>
         <xsd:complexContent>
@@ -965,7 +965,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>STOP POINT affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -979,7 +979,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>STOP PLACE affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -993,7 +993,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedPlace" type="AffectedPlaceStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>Place affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -1082,7 +1082,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    <xsd:documentation>Text description of SITUATION. Some or all of this may have been generated from the other structured content elements. Where text has been overriden this is indicated.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:NMTOKEN" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Default language.</xsd:documentation>
     </xsd:annotation>
@@ -1109,7 +1109,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:element>
    <xsd:element name="Internal" type="DefaultedTextStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Further advice to passengers.</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Images" minOccurs="0">
