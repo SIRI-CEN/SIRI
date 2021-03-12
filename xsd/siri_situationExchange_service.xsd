@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_SituationExchange_service">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_SituationExchange_service">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -65,9 +65,9 @@
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
     <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests-v2.0.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situation-v2.0.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions-v2.0.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situation.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
     </Relation>
     <Rights>Unclassified
        <Copyright>CEN, VDV, RTIG 2004, 2007</Copyright>
@@ -78,7 +78,7 @@
       <li> categories from TPEG</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1 Draft</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -98,16 +98,16 @@ Rail transport, Roads and road transport
  </xsd:annotation>
  <!-- ======================================================================= -->
  <!-- ===Global import of all IFOPT namespace elements used in SIRI neeeded to work around XERCES limitation=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace-v0.3.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
  <!--.....See SITUATION for the actual dependencies...-->
  <!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all-v0.3.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
  <!--.....These are the actual dependencies...-->
  <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri/siri_requests-v2.0.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_situation-v2.0.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_modelPermissions-v2.0.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility-v0.3.xsd"/>
+ <xsd:include schemaLocation="siri/siri_requests.xsd"/>
+ <xsd:include schemaLocation="siri_model/siri_situation.xsd"/>
+ <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
  <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="datex2/DATEXIISchema_2_0RC1_2_0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:group name="SiriSituationExchangeServiceIndexGroup">
