@@ -61,7 +61,7 @@
       -->
     </Date>
     <Description>
-     <p>SIRI is a European CEN standard for the exchange of real-time information .</p>
+     <p>SIRI is a European CEN standard for the exchange of real-time information.</p>
      <p>This package defines common basic domain model identifier elements that are used in one or more SIRI fucntional service.</p>
     </Description>
     <Format>
@@ -230,7 +230,7 @@ Rail transport, Roads and road transport
    <xsd:extension base="ClearDownCodeType"/>
   </xsd:simpleContent>
  </xsd:complexType>
- <!-- ===== STOP AREA==================================================== -->
+ <!-- ===== STOP AREA ==================================================== -->
  <xsd:simpleType name="StopAreaCodeType">
   <xsd:annotation>
    <xsd:documentation>Type for identifier of a STOP AREA.</xsd:documentation>
@@ -245,7 +245,7 @@ Rail transport, Roads and road transport
    <xsd:extension base="StopAreaCodeType"/>
   </xsd:simpleContent>
  </xsd:complexType>
- <!--====Mode Enumerations =================================================================== -->
+ <!--==== QUAY =================================================================== -->
  <xsd:simpleType name="QuayCodeType">
   <xsd:annotation>
    <xsd:documentation>Type for identifier of a QUAY (Platform, Bay, etc).</xsd:documentation>
@@ -258,6 +258,36 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="QuayCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <!--==== BOARDING POSITION =================================================================== -->
+ <xsd:simpleType name="BoardingPositionCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a BOARDING POSITION (location on a QUAY where passengers can actually board/alight).</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="BoardingPositionRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a BOARDING POSITION.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="BoardingPositionCodeType"/>
+  </xsd:simpleContent>
+ </xsd:complexType>
+ <!--==== FLEXIBLE AREA =================================================================== -->
+ <xsd:simpleType name="FlexibleAreaCodeType">
+  <xsd:annotation>
+   <xsd:documentation>Type for identifier of a FLEXIBLE AREA (area that encompasses the stop location of a flexible service).</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:NMTOKEN"/>
+ </xsd:simpleType>
+ <xsd:complexType name="FlexibleAreaRefStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for reference to a FLEXIBLE AREA.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleContent>
+   <xsd:extension base="FlexibleAreaCodeType"/>
   </xsd:simpleContent>
  </xsd:complexType>
  <!-- ==== MonitopringPoint (LOGICAL DISPLAY) ==================================================== -->
@@ -286,7 +316,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Whether VEHICLE is currently at stop.  Default is false (xml  default added from SIRI 2.0) </xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <!-- ===  CONNECTION link ====================================================== -->
+ <!-- === CONNECTION link ====================================================== -->
  <xsd:simpleType name="ConnectionLinkCodeType">
   <xsd:annotation>
    <xsd:documentation>Type for identifier of a CONNECTION link</xsd:documentation>
@@ -306,7 +336,7 @@ Rail transport, Roads and road transport
    <xsd:extension base="ConnectionLinkCodeType"/>
   </xsd:simpleContent>
  </xsd:complexType>
- <!--====Mode Enumerations =================================================================== -->
+ <!--==== Mode Enumerations =================================================================== -->
  <xsd:simpleType name="VehicleModesEnumeration">
   <xsd:annotation>
    <xsd:documentation>MODEs of transport applicable to timetabled public transport.</xsd:documentation>
@@ -792,4 +822,23 @@ Values for these elements can be specified on an annual schedule and will be inh
   </xsd:sequence>
  </xsd:complexType>
  <!-- ======================================================================= -->
+<xsd:simpleType name="SiteCodeType">
+	<xsd:annotation>
+		<xsd:documentation>Identifier of a SITE</xsd:documentation>
+	</xsd:annotation>
+	<xsd:restriction base="xsd:NMTOKEN"/>
+</xsd:simpleType>
+<xsd:complexType name="SiteRefStructure">
+	<xsd:annotation>
+		<xsd:documentation>Reference to a SITE</xsd:documentation>
+	</xsd:annotation>
+	<xsd:simpleContent>
+		<xsd:extension base="SiteCodeType"/>
+	</xsd:simpleContent>
+</xsd:complexType>
+<xsd:element name="SiteRef" type="SiteRefStructure">
+	<xsd:annotation>
+		<xsd:documentation>Reference to a SITE</xsd:documentation>
+	</xsd:annotation>
+</xsd:element>
 </xsd:schema>

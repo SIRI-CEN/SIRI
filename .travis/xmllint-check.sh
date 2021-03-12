@@ -1,4 +1,4 @@
 #!/bin/bash
 /usr/bin/find . -name "*.xsd" -type f | while read i; do XMLLINT_INDENT=" " xmllint --pretty 1 "$i" > "$i.pretty"; mv "$i.pretty" "$i"; done; /usr/bin/find . -name "*.xml" -type f | while read i; do XMLLINT_INDENT=" " xmllint --pretty 1 "$i" > "$i.pretty"; mv "$i.pretty" "$i"; done; /usr/bin/find . -name "*.wsdl" -type f | while read i; do XMLLINT_INDENT=" " xmllint --pretty 1 "$i" > "$i.pretty"; mv "$i.pretty" "$i"; done;
 echo "finished formatting"
-xmllint --noout --schema xsd/siri.xsd examples/siri_exa_framework/*xml examples/siri_exm_CM/*xml examples/siri_exm_CT/*xml examples/siri_exm_ET/*xml examples/siri_exm_FM/*xml examples/siri_exm_GM/*xml examples/siri_exm_PT/*xml examples/siri_exm_SM/*xml examples/siri_exm_ST/*xml examples/siri_exm_SX/*xml examples/siri_exm_VM/*xml examples/siri_exu_capability/*xml examples/siri_exu_discovery/*xml
+find examples/ -iname "*.xml" | xargs xmllint --noout --schema xsd/siri.xsd

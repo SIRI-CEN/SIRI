@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_situation">
+ <!--
+siri_model\siri_situation-v2.0.xsd:
+19.12.2017 D. Rubli, Siri_XML-2.0p_a0.2:
+- Concequence.Period changed to unbounded.
+12.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
+- RelatedToEnumeration Enum value "correctionTo" added according to recommendation document.
+- WorkflowStatusEnumeration Enum value "pendingApproval" added according to recommendation document.
+- AudienceEnumeration Enum value "authorities" added according to recommendation document.
+- AudienceEnumeration Enum value "transportOperators" added according to recommendation document.
+13.06.2018 D. Rubli, Siri_XML-2.0p_a0.5:
+- StatusGroup.Progress changed from optional to mandatory
+- PublicationWindow changed to unbounded
+-->
  <!-- ======================================================================= -->
  <!--Needed to work around import limitation in JAXB - all namespaces. -->
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all-v0.3.xsd"/>
@@ -13,6 +25,7 @@
  <xsd:include schemaLocation="siri_situationReasons-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationAffects-v2.0.xsd"/>
  <xsd:include schemaLocation="siri_situationActions-v2.0.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_types-v2.0.xsd"/>
  <!-- ======================================================================= -->
  <xsd:annotation>
   <xsd:appinfo>
@@ -590,7 +603,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>ProgressStatus. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="QualityIndex" type="QualityEnumeration" minOccurs="0">
+   <xsd:element name="QualityIndex" type="QualityIndexEnumeration" default="reliable" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Assessement of likely correctness of data.</xsd:documentation>
     </xsd:annotation>
@@ -631,18 +644,6 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for Publication status.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:simpleType name="QualityEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Type for Quality of data indication.  </xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="certain"/>
-   <xsd:enumeration value="veryReliable"/>
-   <xsd:enumeration value="reliable"/>
-   <xsd:enumeration value="probablyReliable"/>
-   <xsd:enumeration value="unconfirmed"/>
-  </xsd:restriction>
  </xsd:simpleType>
  <!-- ===Time=========================================== -->
  <xsd:group name="TemporalGroup">
@@ -748,7 +749,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:group>
    <xsd:group ref="TpegSubReasonGroup" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Deprecated (SIRI 2.1) - use only TpegReasonGroup and PublicEventReason.</xsd:documentation>
+     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only TpegReasonGroup and PublicEventReason.</xsd:documentation>
     </xsd:annotation>
    </xsd:group>
    <xsd:element name="PublicEventReason" type="D2LogicalModel:PublicEventTypeEnum" minOccurs="0">
@@ -945,7 +946,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedNetwork" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Nrtworks and Route(s) affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>Networks and Route(s) affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
        <xsd:complexType>
         <xsd:complexContent>
@@ -964,7 +965,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>STOP POINT affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -978,7 +979,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>STOP PLACE affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -992,7 +993,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:sequence>
       <xsd:element name="AffectedPlace" type="AffectedPlaceStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Stop affected by SITUATION.</xsd:documentation>
+        <xsd:documentation>Place affected by SITUATION.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -1081,7 +1082,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    <xsd:documentation>Text description of SITUATION. Some or all of this may have been generated from the other structured content elements. Where text has been overriden this is indicated.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:NMTOKEN" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Default language.</xsd:documentation>
     </xsd:annotation>
@@ -1108,7 +1109,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:element>
    <xsd:element name="Internal" type="DefaultedTextStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Further advice to passengers.</xsd:documentation>
+     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Images" minOccurs="0">
