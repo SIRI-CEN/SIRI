@@ -86,6 +86,7 @@ Rail transport, Roads and road transport
  </xsd:annotation>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_reference-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_feature_support-v2.0.xsd"/>
  <!-- ==== Journey == ============================================= -->
  <xsd:group name="JourneyIdentityGroup">
   <xsd:annotation>
