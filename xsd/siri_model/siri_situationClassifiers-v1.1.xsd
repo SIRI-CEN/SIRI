@@ -122,7 +122,7 @@ Rail transport, Roads and road transport
  <!-- ===INCIDENT CONDITIONS================================= -->
  <xsd:element name="Condition" type="ServiceConditionEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Classification of effect on service - TPEG Pts43</xsd:documentation>
+   <xsd:documentation>Classification of effect on service. TPEG PTS043 ServiceStatus</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="ServiceConditionEnumeration">

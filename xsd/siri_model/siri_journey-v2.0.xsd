@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey">
  <xsd:annotation>
   <xsd:appinfo>
@@ -1288,7 +1287,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
     </xsd:element>
    </xsd:choice>
    <xsd:element ref="SituationRef" minOccurs="0"/>
-   <xsd:element name="RecommendedAction" type="RecommendationStructure" minOccurs="0">
+   <xsd:element name="RecommendedAction" type="RecommendedActionStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Information on recommendations for passengers on how to deal with the formation change.</xsd:documentation>
     </xsd:annotation>
@@ -1340,7 +1339,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
- <xsd:complexType name="RecommendationStructure">
+ <xsd:complexType name="RecommendedActionStructure">
   <xsd:annotation>
    <xsd:documentation>Description of the recommended action for passengers on how to deal with changes, for example of the TRAIN formation.</xsd:documentation>
   </xsd:annotation>

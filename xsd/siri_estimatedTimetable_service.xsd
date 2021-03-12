@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_estimatedTimetable_service">
  <xsd:annotation>
   <xsd:appinfo>
@@ -39,7 +38,7 @@
 				</Date>
     <Date><Modified>2012-03-23</Modified>
 					 +SIRI v2.0
-					   - Add EstimatedServiceJourneyInterchange (i.e. Estimated Connection of VEHICLE) to EstimatedTimetableDelviery
+					   - Add EstimatedServiceJourneyInterchange (i.e. Estimated Connection of VEHICLE) to EstimatedTimetableDelivery
 					   - [FR]    Add Extensions tag to EstimatedTimetableSubscriptionRequest
 					   - [DE] Add ExpectedDeparturePredictionQuality to OnwardVehicleDepartureTimes
 					     [DE] Correct capabilites matrix to matx doc. Add defauklt preview intervakl and versionref

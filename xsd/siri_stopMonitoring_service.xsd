@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_stopMonitoring_service">
  <xsd:annotation>
   <xsd:appinfo>
@@ -622,7 +621,7 @@ If false each subscription response will contain the full information as specifi
  </xsd:complexType>
  <xsd:complexType name="DeliveryVariantStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Delviery Variant +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Type for Delivery Variant +SIRI v2.0</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="VariantType" type="xsd:normalizedString" minOccurs="0">
@@ -874,7 +873,7 @@ If false each subscription response will contain the full information as specifi
         </xsd:element>
         <xsd:element name="ByStartTime" type="xsd:boolean" default="true" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'truet.</xsd:documentation>
+          <xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'true'.</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element ref="FilterByMonitoringRef"/>

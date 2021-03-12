@@ -112,38 +112,42 @@ Rail transport, Roads and road transport
    <xsd:documentation>Structured Classification Elements.</xsd:documentation>
   </xsd:annotation>
   <xsd:choice>
-   <xsd:element ref="UnknownReason"/>
-   <xsd:element ref="TpegReason">
+   <xsd:element ref="AlertCause"/>
+   <xsd:element ref="UnknownReason">
     <xsd:annotation>
-     <xsd:documentation>Classification corresponding to TPEG Pts38 - AlertCause</xsd:documentation>
+     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="MiscellaneousReason">
     <xsd:annotation>
-     <xsd:documentation>Deprecated (SIRI 2.1) - use only TpegReason.</xsd:documentation>
+     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="PersonnelReason">
     <xsd:annotation>
-     <xsd:documentation>Deprecated (SIRI 2.1) - use only TpegReason.</xsd:documentation>
+     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="EquipmentReason">
     <xsd:annotation>
-     <xsd:documentation>Deprecated (SIRI 2.1) - use only TpegReason.</xsd:documentation>
+     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="EnvironmentReason">
     <xsd:annotation>
-     <xsd:documentation>Deprecated (SIRI 2.1) - use only TpegReason.</xsd:documentation>
+     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element ref="UndefinedReason"/>
+   <xsd:element ref="UndefinedReason">
+    <xsd:annotation>
+     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
   </xsd:choice>
  </xsd:group>
  <xsd:group name="TpegSubReasonGroup">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (SIRI 2.1) - use only TpegReasonGroup.</xsd:documentation>
+   <xsd:documentation>DEPRECATED (SIRI 2.1) - use only TpegReasonGroup.</xsd:documentation>
   </xsd:annotation>
   <xsd:choice>
    <xsd:element ref="MiscellaneousSubReason"/>
@@ -152,25 +156,11 @@ Rail transport, Roads and road transport
    <xsd:element ref="EnvironmentSubReason"/>
   </xsd:choice>
  </xsd:group>
- <!-- ===INCIDENT REASON TYPES====================================== -->
- <xsd:element name="UnknownReason" type="xsd:string">
+ <xsd:element name="AlertCause" type="AlertCauseEnumeration">
   <xsd:annotation>
-   <xsd:documentation>TPEG Pts38_0, unknown alert cause</xsd:documentation>
+   <xsd:documentation>TPEG Pts38: AlertCause.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <!-- ===================================================== -->
- <xsd:element name="UndefinedReason" type="xsd:string">
-  <xsd:annotation>
-   <xsd:documentation>TPEG Pts38_255, undefined alert cause</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ===================================================== -->
- <xsd:element name="TpegReason" type="AlertCauseEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>TPEG Pts38 - AlertCause</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ===================================================== -->
  <xsd:simpleType name="AlertCauseEnumeration">
   <xsd:annotation>
    <xsd:documentation>Values for TPEG Pts38 - AlertCause, plus additional values from TPEG Pti19/20/21/22</xsd:documentation>
@@ -1291,47 +1281,90 @@ Rail transport, Roads and road transport
      <xsd:documentation>TPEG Pti22_255, deprecated (SIRI 2.1) - replaced by Pts38_255, undefined alert cause</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
+   <!-- Values added for compatiblity with VDV736 / UmS profile (v1.0) of CEN SIRI SX. -->
+   <xsd:enumeration value="fireAtTheStation">
+    <xsd:annotation>
+     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_8 value 'fireAtStation'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="breakdown">
+    <xsd:annotation>
+     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_43 value 'breakDown'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="levelCrossingBlocked">
+    <xsd:annotation>
+     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_64 value 'levelCrossingIncident'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="heavySnowfall">
+    <xsd:annotation>
+     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_87 value 'heavySnowFall'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="waitingForTransferPassengers">
+    <xsd:annotation>
+     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_130 value 'awaitingShuttle'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="awaitingOncomingVehicle">
+    <xsd:annotation>
+     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_134 value 'awaitingApproach'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
   </xsd:restriction>
  </xsd:simpleType>
+ <!-- ===INCIDENT REASON TYPES====================================== -->
+ <xsd:element name="UnknownReason" type="xsd:string">
+  <xsd:annotation>
+   <xsd:documentation>TPEG Pts38_0, unknown alert cause. Additionally, deprecated (SIRI v2.1) TPEG Pti18_0, unknown event reason.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <!-- ===================================================== -->
+ <xsd:element name="UndefinedReason" type="xsd:string">
+  <xsd:annotation>
+   <xsd:documentation>TPEG Pts38_255, undefined alert cause. Additionally, deprecated (SIRI v2.1) TPEG Pti18_255, undefined event reason.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
  <!-- ===DEPRECATED REASON TYPES====================================== -->
  <xsd:element name="MiscellaneousReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="MiscellaneousSubReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="PersonnelReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="PersonnelSubReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EquipmentReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EquipmentSubReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EnvironmentReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EnvironmentSubReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>Deprecated (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
 </xsd:schema>

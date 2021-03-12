@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Christophe Duquesne (DRYADE SA) -->
-<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:siriWS="http://wsdl.siri.org.uk" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ns="http://datex2.eu/schema/1_0/1_0" xmlns:ns1="http://www.ifopt.org.uk/acsb" xmlns:ns2="http://www.ifopt.org.uk/ifopt" targetNamespace="http://wsdl.siri.org.uk">
  <types>
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk">
