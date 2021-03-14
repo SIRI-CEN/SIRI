@@ -9,9 +9,10 @@
     <Contributor>CEN TC278 WG3 SG9 Team.</Contributor>
     <Coverage>Europe</Coverage>
     <Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@siri.org.uk</Creator>
-    <Date><Created>2008-09-307</Created>
+    <Date>
+     <Created>2008-09-307</Created>
      <!--  change any to lax / empty -->
-				</Date>
+    </Date>
     <Date>
      <Created>2007-04-17</Created>
     </Date>
@@ -26,15 +27,15 @@
     <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_utiliyty/}siri_utility.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIGXML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,

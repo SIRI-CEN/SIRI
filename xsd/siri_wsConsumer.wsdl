@@ -257,7 +257,7 @@
 				<Relation>
 					<Requires>http://www.siri.org.uk/schema/2.0/siri_wsCOnsumer.wsdl</Requires>
 				</Relation>
-				<Rights>Unclassified
+				<Rights><!--Unclassified-->
                                       <Copyright>CEN, VDV, RTIG  2004-2012</Copyright>
 				</Rights>
 				<Source>
@@ -323,7 +323,7 @@ Rail transport, Roads and road transport.
                 <Identifier>{http://www.siri.org.uk/schema/2.0/siri}siri_wsConsumer.wsdl</Identifier>
                 <Language>[ISO 639-2/B] ENG</Language>
                 <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-                <Rights>Unclassified
+                <Rights><!--Unclassified-->
                                          <Copyright>CEN, VDV, RTIG  2004-2012</Copyright>
                 </Rights>
                 <Source>

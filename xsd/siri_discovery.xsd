@@ -23,18 +23,22 @@
     <Date>
      <Modified>2005-11-25</Modified>
     </Date>
-    <Date><Modified>2007-04-17</Modified>
+    <Date>
+     <Modified>2007-04-17</Modified>
      <!-- Name Space changes -->
-				</Date>
-    <Date><Modified>2008-11-13</Modified>
+    </Date>
+    <Date>
+     <Modified>2008-11-13</Modified>
      <!-- Fix cardinalities on delivery items eg LINEs, refs, facilities
 							MoveAbstractDiscoveryDelivery to siri_requests -->
-				</Date>
-    <Date><Modified>2008-11-17</Modified>
+    </Date>
+    <Date>
+     <Modified>2008-11-17</Modified>
      <!-- Revise to support substitution groups
 					 Correct Type on VEHICLE features delivery structure -->
-				</Date>
-    <Date><Modified>2012-03-23</Modified>
+    </Date>
+    <Date>
+     <Modified>2012-03-23</Modified>
      <!-- +SIRI v2.0
 						 Move Features to separate model separate model package
 						 Move Annotated Facility to separate model package.
@@ -42,18 +46,20 @@
 			 			 Add filtering to Lines request by box, place,  and Operator
 			 			 Add filtering to Facility  request by box, place,   and Operator and detail  level
 			 			 Add filtering of Lang to all requests -->
-				</Date>
-    <Date><Modified>2012-05-17</Modified>
+    </Date>
+    <Date>
+     <Modified>2012-05-17</Modified>
      <!-- +SIRI v2.0
  						 [MTA]  Add filtering to StopPoints and Lines Discovery requests by point + radius  
 						 [MTA]  Add filtering to Lines Discovery  request by LineRef and Direction
 						[MTA]  Add stops in pattern to Lines Discovery and LineDetailParameter
 						[MTA]  Add url to annotated stop -->
-				</Date>
-    <Date><Modified>2013-03-28</Modified>
+    </Date>
+    <Date>
+     <Modified>2013-03-28</Modified>
      <!-- +SIRI v2.0
  						 [FR]  Addition of Connection Links Discovery -->
-				</Date>
+    </Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
      <p>This subschema describes discovery services used by different SIRI functional services
@@ -72,15 +78,15 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Discovery services Derived from the NaPTAN standard .</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -180,7 +186,7 @@ Rail transport, Roads and road transport
      </xsd:group>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -278,7 +284,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="AnnotatedStopPointRef" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -305,7 +311,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="LinesDiscoveryRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -406,7 +412,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="AnnotatedLineRef" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -431,7 +437,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ProductCategoriesRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -468,7 +474,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="ProductCategory" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -493,7 +499,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="VehicleFeaturesRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -530,7 +536,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="VehicleFeature" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -554,7 +560,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -579,7 +585,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="InfoChannel" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -605,7 +611,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="FacilityRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -702,7 +708,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -732,7 +738,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -756,7 +762,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="ServiceFeature" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -782,7 +788,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionLinksDiscoveryRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.0">
+    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed </xsd:documentation>
      </xsd:annotation>
@@ -881,7 +887,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="AnnotatedConnectionLinkRef" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.0">
+    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
      </xsd:annotation>

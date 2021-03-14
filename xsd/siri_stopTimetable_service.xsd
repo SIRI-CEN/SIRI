@@ -60,15 +60,15 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -122,7 +122,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="StopTimetableRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -226,7 +226,7 @@ If false each subscription response will contain the full information as specifi
      <xsd:group ref="StopTimetablePayloadGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -331,7 +331,7 @@ If false each subscription response will contain the full information as specifi
      <xsd:element ref="StopTimetablePermissions" minOccurs="0"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>

@@ -85,15 +85,15 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -227,7 +227,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Level of detail to include in response. Default is 'normal'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0">
+   <xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0" default="false">
     <xsd:annotation>
      <xsd:documentation>Whether any related SITUATIONs should be included in the ServiceDelivery. Default is 'false'. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
@@ -298,7 +298,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="StopMonitoringRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request.  
 </xsd:documentation>
@@ -325,7 +325,7 @@ Rail transport, Roads and road transport
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="optional" default="2.0"/>
+    <xsd:attribute name="version" type="VersionString" use="optional" default="2.1"/>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
@@ -407,7 +407,7 @@ If false each subscription response will contain the full information as specifi
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -839,7 +839,7 @@ If false each subscription response will contain the full information as specifi
      <xsd:element ref="StopMonitoringPermissions" minOccurs="0"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situation">
  <!--
-siri_model\siri_situation.xsd:
+siri_model\siri_situation-v2.0.xsd:
 19.12.2017 D. Rubli, Siri_XML-2.0p_a0.2:
 - Concequence.Period changed to unbounded.
 12.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
@@ -59,17 +59,17 @@ siri_model\siri_situation.xsd:
      <Modified>2012-03-23</Modified>
      <!-- +SIRI v2.0
        Use revised 2.0 definitions 
-       Update to use DATEXII V 2.0 schema 
-       Namespace changed from http://datex2.eu/schema/1_0/1_0  to  http://datex2.eu/schema/2_0RC1/2_0
+       Update to use DATEXII V2.0 schema 
+       Namespace changed from http://datex2.eu/schema/1_0/1_0 to http://datex2.eu/schema/2_0RC1/2_0
        D2LogicalModel:ReferencePointLinear has been renamed to D2LogicalModel:ReferencePointLinear
        DelayCodeENum renamed to DelayBandEnum 
-       InformationUsageOverride /  D2LogicalModel:InformationUsage dropped  for  D2
-       D2LogicalModel:SourceInformation renamed to   D2LogicalModel:Source
+       InformationUsageOverride / D2LogicalModel:InformationUsage dropped for D2
+       D2LogicalModel:SourceInformation renamed to D2LogicalModel:Source
        D2LogicalModel:SourceInformation values wrapped in valuse tag
-       D2LogicalModel:Advice   dropped.
-       D2LogicalModel:Impact ImpactDetails wrapper tag dropped.
-       D2 trafficResstrictionType renamed to  trafficConstrictionType
-       Correct type on easementref to normalized string. 
+       D2LogicalModel:Advice dropped. 
+       D2LogicalModel:Imppact ImpactDetails wrapper tag dropped. 
+       D2TrafficRestrictionType renamed to trafficConstrictionType
+       Correct type on EasementRef to normalized string. 
        Allow translations of NLString elements
       -->
     </Date>
@@ -109,15 +109,15 @@ siri_model\siri_situation.xsd:
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modes.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_monitoredVehicleJourney.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-       <Copyright>Kizoom 2000-2005, CEN 2009-2020</Copyright>
-				</Rights>
+    <Rights><!--Unclassified-->
+     <Copyright>Kizoom 2000-2005, CEN 2009-2020</Copyright>
+	</Rights>
     <Source>
      <ul>
       <li>Schema Derived from the Kizoom XTIS schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,

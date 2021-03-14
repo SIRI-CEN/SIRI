@@ -5,7 +5,7 @@
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
     <Aggregation>main schema</Aggregation>
     <Audience>e-service developers</Audience>
-    <Contributor>Add names </Contributor>
+    <Contributor>Add names</Contributor>
     <Coverage>Europe</Coverage>
     <Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
     <Date>
@@ -20,15 +20,13 @@
     <Date>
      <Modified>2007-05-14</Modified>
      <!-- [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_2" changed to "27_1_Alias_2" according to recommendation document
-          [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_3" changed to "27_1_Alias_3" according to recommendation document
-      -->
+		[vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_3" changed to "27_1_Alias_3" according to recommendation document-->
     </Date>
     <Date>
      <Modified>2020-01-10</Modified>
-     <!-- +SIRI v2.1
-       Align with TPEG2 PTS
-       Remove numerical values ("Pti25_0") from enumerations
-      -->
+     <!-- SIRI v2.1
+		Align with TPEG2 PTS
+		Remove numerical values ("Pti25_0") from enumerations-->
     </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes service types.</p>
@@ -48,11 +46,11 @@
     </Rights>
     <Source>
      <ul>
-      <li>Schema derived Derived from the Kizoom XTIS schema </li>
-      <li>Derived from the TPEG2 PTS schemas </li>
+      <li>Schema derived Derived from the Kizoom XTIS schema</li>
+      <li>Derived from the TPEG2 PTS schemas</li>
      </ul>
     </Source>
-    <Status>Version 2.0</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -146,7 +144,7 @@ Rail transport, Roads and road transport
  <!-- ==Interchange Status Type================================= -->
  <xsd:element name="InterchangeStatusType" type="InterchangeStatusEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation> Status of a SERVICE JOURNEY INTERCHANGE - TPEG Pti31 InterchangeStatus</xsd:documentation>
+   <xsd:documentation>Status of a SERVICE JOURNEY INTERCHANGE - TPEG Pti31 InterchangeStatus</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="InterchangeStatusEnumeration">
@@ -223,7 +221,7 @@ To achieve this a distributorWaitProlonged status shall be communicated back to 
    <xsd:enumeration value="feederArrivalCancellation">
     <xsd:annotation>
      <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. 
-There are several possible reasons for the loss of a feeder, e.g. loss/cancellation of the feeder VEHICLE, diversion of the feeder LINE/DIRECTION, disruption of a LINE section etc. +SIRI v2.1</xsd:documentation>
+Reasons for the loss of a feeder include (but are not limited to) the cancellation of the feeder VEHICLE, diversion/rerouting of the feeder VEHICLE, disruption of a line section or journey part of the feeder VEHICLE etc. +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="distributorDepartureCancellation">

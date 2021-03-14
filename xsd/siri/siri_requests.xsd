@@ -29,48 +29,55 @@
     <Date>
      <Modified>2007-03-29</Modified>
     </Date>
-    <Date><Modified>2008-11-11</Modified>
-					 -- add substitution groups for 
-     AbstractRequest
-     AbstractResponse
-     AbstractFunctionalServiceRequest
-     AbstractFunctionalServiceSubscriptionRequest
-     AbstractFunctionalServiceDelivery
-     AbstractFunctionalServiceCapabilityRequest
-     AbstractFunctionalServiceCapabilityDelivery
-     AbstractDiscoveryDelivery
-     ErrorCode
-     
-				</Date>
-    <Date><Modified>2008-11-13</Modified>
-					 Move abstract discovery deliveries to here from siri_discoveries 
-				</Date>
-    <Date><Modified>2008-11-17</Modified>
-					 -- Add abstract discovery request 
-       Make request and response descendent of Request and Response Types 
-				</Date>
-    <Date><Modified>2009-03-31</Modified>
-					 - Add ErrorConditionelement to enable WSDL axis binding 
-				</Date>
-    <Date><Modified>2011-04-18</Modified>
-					 - ErrorConditionStructure Line 841 should not be abstract. Fix from RV ixxi.biz
-						 Also Add ServiceConditionErrorConditionElement 
-				</Date>
-    <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
-					  Add error number to Error structure
-					  factor out base identifier defintiiosn so can be share dwith error codes
-					  Factor out error codes
-					  Factor our Permission model to separate package siri_permissions
-				</Date>
-    <Date><Modified>2012-06-17</Modified>
-					 +SIRI v2.0 x
-					  Add delegator endpoint group to ServiceRequest and FunctionalServcieResponse
-				</Date>
-    <Date><Modified>2013-02-11</Modified>
-					Added AbstractRequiredIdentifiedItemStructure
-					Added AbstractRequiredReferencingItemStructure
-				</Date>
+    <Date>
+     <Modified>2008-11-11</Modified>
+     <!-- add substitution groups for
+		   AbstractRequest,
+		   AbstractResponse,
+		   AbstractFunctionalServiceRequest,
+		   AbstractFunctionalServiceSubscriptionRequest,
+		   AbstractFunctionalServiceDelivery,
+		   AbstractFunctionalServiceCapabilityRequest,
+		   AbstractFunctionalServiceCapabilityDelivery,
+		   AbstractDiscoveryDelivery,
+		   ErrorCode -->
+    </Date>
+    <Date>
+     <Modified>2008-11-13</Modified>
+     <!-- Move abstract discovery deliveries to here from siri_discoveries -->
+    </Date>
+    <Date>
+     <Modified>2008-11-17</Modified>
+     <!-- Add abstract discovery request
+		  Make request and response descendent of Request and Response Types -->
+    </Date>
+    <Date>
+     <Modified>2009-03-31</Modified>
+     <!-- Add ErrorConditionelement to enable WSDL axis binding -->
+    </Date>
+    <Date>
+     <Modified>2011-04-18</Modified>
+     <!-- ErrorConditionStructure Line 841 should not be abstract. Fix from RV ixxi.biz
+		  Also Add ServiceConditionErrorConditionElement -->
+    </Date>
+    <Date>
+     <Modified>2012-03-23</Modified>
+     <!-- SIRI v2.0
+		  Add error number to Error structure
+		  factor out base identifier defintiiosn so can be share dwith error codes
+		  Factor out error codes
+		  Factor our Permission model to separate package siri_permissions -->
+    </Date>
+    <Date>
+     <Modified>2012-06-17</Modified>
+     <!-- SIRI v2.0
+		  Add delegator endpoint group to ServiceRequest and FunctionalServcieResponse -->
+    </Date>
+    <Date>
+     <Modified>2013-02-11</Modified>
+     <!-- Added AbstractRequiredIdentifiedItemStructure
+		  Added AbstractRequiredReferencingItemStructure -->
+    </Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines common request processing elements</p>
     </Description>
@@ -81,32 +88,30 @@
     </Format>
     <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri/}siri_requests.xsd</Identifier>
     <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
     <Relation>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-
-        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
-				</Rights>
+    <Rights><!--Unclassified-->
+	 <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
+	</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIGXML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
-Air transport, Airports,
-Ports and maritime transport, Ferries (marine),
-Public transport, Bus services, Coach services, Bus stops and stations,
-Rail transport, Railway stations and track, Train services, Underground trains,
-Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
-Rail transport, Roads and road transport
-</Category>
+     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport, 
+Air transport, Airports, 
+Ports and maritime transport, Ferries (marine), 
+Public transport, Bus services, Coach services, Bus stops and stations, 
+Rail transport, Railway stations and track, Train services, Underground trains, 
+Business and industry transport, 
+Roads and road transport</Category>
      <Project>CEN TC278 WG3 SG7</Project>
     </Subject>
-    <Title>SIRI XML schema. Common Request elements. </Title>
+    <Title>SIRI XML schema. Common Request elements.</Title>
     <Type>Standard</Type>
    </Metadata>
   </xsd:appinfo>
@@ -154,7 +159,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="AccountId" type="xsd:NMTOKEN" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Account Identifier. May be used to attribute requests to a particular application provider and authentication key. The account  may be common to all users of an application, or to an individual user. Note that to identify an individual user the  RequestorRef can be used with an anonymised token.  .     +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Account Identifier. May be used to attribute requests to a particular application provider and authentication key. The account may be common to all users of an application, or to an individual user. Note that to identify an individual user the RequestorRef can be used with an anonymised token. . +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AccountKey" type="xsd:normalizedString" minOccurs="0">
@@ -175,7 +180,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="RequestorEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -202,12 +207,12 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:group name="DelegatorEndpointGroup">
   <xsd:annotation>
-   <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
+   <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="DelegatorAddress" type="EndpointAddress" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Address of original Consumer, i.e. requesting system to which delegating response is to be  returned. +SIRI 2.0</xsd:documentation>
+     <xsd:documentation>Address of original Consumer, i.e. requesting system to which delegating response is to be returned. +SIRI 2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DelegatorRef" type="ParticipantRefStructure" minOccurs="0">
@@ -289,9 +294,8 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="SubscriptionRenewal" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>By using this element, the subscriber asks the data provider for an extension of the InitialTerminationTime of the subscription.
-If SubscriptionRenewal is omitted, this request is to be treated as a re-subscription and therefore all data corresponding to the SubscriptionRequest must 
-be sent in the initial response (or a portion of the data if MoreData is set to 'true'). +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>By using this element, the subscriber asks the data provider for an extension of the InitialTerminationTime of the subscription. 
+If SubscriptionRenewal is omitted, this request is to be treated as a re-subscription and therefore all data corresponding to the SubscriptionRequest must be sent in the initial response (or a portion of the data if MoreData is set to 'true'). +SIRI v2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -396,7 +400,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:group ref="ProducerResponseEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -444,7 +448,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      </xsd:choice>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregating system, tracking information relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system, tracking information relating to the original requestor. This allows the aggregation to be stateless.</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
      <xsd:group ref="DeliveryStatusGroup"/>
@@ -571,7 +575,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:group ref="ConsumerRequestEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -605,7 +609,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:group ref="ConsumerResponseEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -677,9 +681,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
  </xsd:group>
  <xsd:complexType name="ResponseEndpointStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Unique reference to reponse. May be used to reference request in subsequent interactions. Used for WSDL 
-
- .</xsd:documentation>
+   <xsd:documentation>Type for Unique reference to reponse. May be used to reference request in subsequent interactions. Used for WSDL.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="ResponseStructure">
@@ -687,7 +689,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      <xsd:group ref="ResponseEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -787,7 +789,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
     <xsd:sequence>
      <xsd:element name="ItemRef" type="ItemRefStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Reference to an Activity Element of  a delivery.</xsd:documentation>
+       <xsd:documentation>Reference to an Activity Element of a delivery.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -803,7 +805,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
     <xsd:sequence>
      <xsd:element name="ItemRef" type="ItemRefStructure">
       <xsd:annotation>
-       <xsd:documentation>Reference to an Activity Element of  a delivery.</xsd:documentation>
+       <xsd:documentation>Reference to an Activity Element of a delivery.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -831,7 +833,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed.</xsd:documentation>
      </xsd:annotation>
@@ -977,7 +979,7 @@ be sent in the initial response (or a portion of the data if MoreData is set to 
    </xsd:element>
    <xsd:element name="Translations" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether producer can provide multiple  translations of NL text elements  +SIRI 2.0</xsd:documentation>
+     <xsd:documentation>Whether producer can provide multiple translations of NL text elements +SIRI 2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:choice>

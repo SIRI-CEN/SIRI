@@ -14,9 +14,10 @@
     <Date>
      <Modified>2004-10-01</Modified>
     </Date>
-    <Date><Modified>2008-07-015</Modified>
-					 Correct data type to be particpant ref not participant pair 
-				</Date>
+    <Date>
+	 <Modified>2008-07-015</Modified>
+	 <!-- Correct data type to be particpant ref not participant pair -->
+	</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information .</p>
      <p>This package defines common basic domain model identifier elements that are used in one or more SIRI fucntional service.</p>
@@ -32,16 +33,15 @@
     <Relation>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_uility/siri_participant.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-
-       <Copyright>Kizoom CEN, VDV, RTIG 2004,2007</Copyright>
-				</Rights>
+    <Rights><!--Unclassified-->
+     <Copyright>Kizoom CEN, VDV, RTIG 2004-2020</Copyright>
+	</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG CML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,

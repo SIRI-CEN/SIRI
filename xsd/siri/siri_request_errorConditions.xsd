@@ -11,34 +11,37 @@
     <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
     <Coverage>Europe</Coverage>
     <Creator>First drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date><Created>2012-03-24</Created>
-					 Factored out of SIRI request 
-				</Date>
-    <Date><Modified>2009-03-31</Modified>
-					 - Add errorConditionelement to enable WSDL axis binding 
-				</Date>
-    <Date><Modified>2011-04-18</Modified>
-					 - ErrorConditionStructure Line 841 should not be abstract. Fix from RV ixxi.biz
-						 Also Add ServiceConditionErrorConditionElement 
-						 
-						Add new error conditions
-						
-						UnknownParticipant	Recipient for a message to be distributed is unknown. +SIRI v2.0
-						UnknownEndpoint	Endpoint to which a message is to be distributed is unknown. +SIRI v2.0
-						EndpointDeniedAccess	Distribution message could not be delivered because not authorised.. +SIRI v2.0
-						EndpointNotAvailable	Recipient of a message to be distributed is not available. +SIRI v2.0
-						UnapprovedKey	User authorisation Key is not  enabled. +SIRI v2.0
-						
-						InvalidDataReferences	Request contains references to  identifiers that are not known.  +SIRI v2.0
-						ParametersIgnored	Request contained parameters that were not supported by the producer. A response has been provided but some parameters have been ignored. +SIRI v2.0
-						UnknownExtensions	Request contained extensions that were not supported bu the producer. A response has been provided but some or all extensions have been ignored.. +SIRI v2.0
-
-				</Date>
-    <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
-					  Add error number to Error structure
-					  Factor our Permission model to separate package siri_permissions
-				</Date>
+    <Date>
+	 <Created>2012-03-24</Created>
+	 <!-- Factored out of SIRI request -->
+	</Date>
+    <Date>
+	 <Modified>2009-03-31</Modified>
+	 <!-- Add errorConditionelement to enable WSDL axis binding -->
+	</Date>
+    <Date>
+	 <Modified>2011-04-18</Modified>
+	 <!-- ErrorConditionStructure Line 841 should not be abstract. Fix from RV ixxi.biz
+		  Also Add ServiceConditionErrorConditionElement 
+		   
+		  Add new error conditions
+		  
+		  UnknownParticipant	Recipient for a message to be distributed is unknown. +SIRI v2.0
+		  UnknownEndpoint	Endpoint to which a message is to be distributed is unknown. +SIRI v2.0
+		  EndpointDeniedAccess	Distribution message could not be delivered because not authorised.. +SIRI v2.0
+		  EndpointNotAvailable	Recipient of a message to be distributed is not available. +SIRI v2.0
+		  UnapprovedKey	User authorisation Key is not  enabled. +SIRI v2.0
+		  
+		  InvalidDataReferences	Request contains references to  identifiers that are not known.  +SIRI v2.0
+		  ParametersIgnored	Request contained parameters that were not supported by the producer. A response has been provided but some parameters have been ignored. +SIRI v2.0
+		  UnknownExtensions	Request contained extensions that were not supported bu the producer. A response has been provided but some or all extensions have been ignored.. +SIRI v2.0 -->
+	</Date>
+    <Date>
+	 <Modified>2012-03-23</Modified>
+	 <!-- SIRI v2.0
+		  Add error number to Error structure
+		  Factor our Permission model to separate package siri_permissions -->
+	</Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines common request error conditions </p>
     </Description>
@@ -54,16 +57,15 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_uility/siri_types.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_uility/siri_participant.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-
-        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
-				</Rights>
+    <Rights><!--Unclassified-->
+	 <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
+	</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIGXML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
