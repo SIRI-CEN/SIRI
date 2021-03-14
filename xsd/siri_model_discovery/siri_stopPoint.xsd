@@ -12,18 +12,18 @@
      <Created>2012-03-23</Created>
     </Date>
     <Date><Modified>2008-11-17</Modified>
-					 Revise to support substitution groups 
-					 Correct Type on VEHICLE features delivery structure 
+     <!-- Revise to support substitution groups
+					 Correct Type on VEHICLE features delivery structure -->
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
+     <!-- +SIRI v2.0
 					    Factored out from siri_discovery
-					    Add Location, Add StopLine Direction 
+					    Add Location, Add StopLine Direction -->
 				</Date>
     <Date><Modified>2012-06-12</Modified>
-					 +SIRI v2.0
+     <!-- +SIRI v2.0
 					    Factored out from siri_discovery
-					     Add StopLine Direction 
+					     Add StopLine Direction -->
 				</Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
@@ -72,6 +72,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_feature.xsd"/>
  <xsd:include schemaLocation="../siri_model/siri_reference.xsd"/>
+ <xsd:include schemaLocation="../siri_utility/siri_location.xsd"/>
  <!-- === VIEW of SCHEDULED STOP POINT============================================== -->
  <xsd:element name="AnnotatedStopPointRef" type="AnnotatedStopPointStructure">
   <xsd:annotation>

@@ -78,7 +78,7 @@ The elements exterior and interior describe the surface boundary of the polygon.
 	<element name="AbstractRing" type="gml:AbstractRingType" abstract="true" substitutionGroup="gml:AbstractObject">
 		<annotation>
 			<documentation>An abstraction of a ring to support surface boundaries of different complexity.
-The AbstractRing element is the abstract head of the substituition group for all closed boundaries of a surface patch.</documentation>
+The AbstractRing element is the abstract head of the substitution group for all closed boundaries of a surface patch.</documentation>
 		</annotation>
 	</element>
 	<complexType name="AbstractRingPropertyType">

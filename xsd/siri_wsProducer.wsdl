@@ -4,7 +4,9 @@
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri">
    <xsd:include schemaLocation="siri.xsd"/>
   </xsd:schema>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk">
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk" xmlns:siri="http://www.siri.org.uk/siri">
+   <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="siri/siri_requests.xsd"/>
+   <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="siri/siri_common_services.xsd"/>
    <xsd:complexType name="WsSubscriptionRequestInfoStructure">
     <xsd:complexContent>
      <xsd:extension base="siri:AbstractSubscriptionRequestStructure"/>

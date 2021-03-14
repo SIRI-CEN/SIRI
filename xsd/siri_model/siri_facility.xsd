@@ -81,9 +81,10 @@ Rail transport, Roads and road transport
  <xsd:include schemaLocation="siri_journey_support.xsd"/>
  <!-- ======================================================================= -->
  <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_stop.xsd"/>
  <!-- ======================================================================= -->
  <!--Needed to work around import limitation in jaxb - all namespaces acsb needs to be after ifopt. -->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_limitations.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
  <!-- ======================================================================= -->

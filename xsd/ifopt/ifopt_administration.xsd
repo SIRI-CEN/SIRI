@@ -224,7 +224,7 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:complexType name="DataManagedObjectStructure" abstract="true">
   <xsd:annotation>
-   <xsd:documentation>Abstract Type for DATA MANAGED OBJECT, that is an object that may be assigned a RESPONSIBILITY SET dictating a responsbile ORGANISATION and/or ADMINISTRATIVE ZONE.</xsd:documentation>
+   <xsd:documentation>Abstract Type for DATA MANAGED OBJECT, that is an object that may be assigned a RESPONSIBILITY SET dictating a responsible ORGANISATION and/or ADMINISTRATIVE ZONE.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="VersionedObjectStructure">

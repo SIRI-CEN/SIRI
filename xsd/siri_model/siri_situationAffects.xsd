@@ -528,7 +528,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="AffectedNetworkStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for information about the parts of the network affected by an incident. If not explclitly overrided Modes and submodes will be defaulted to any values present in the general Context.</xsd:documentation>
+   <xsd:documentation>Type for information about the parts of the network affected by an incident. If not explicitly overridden, modes and submodes will be defaulted to any values present in the general context.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AffectedOperator" type="AffectedOperatorStructure" minOccurs="0" maxOccurs="unbounded">
@@ -571,7 +571,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Information about the indvidual LINEs in the network that are affected. If not explclitly overrided Modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) In the general Context.</xsd:documentation>
+       <xsd:documentation>Information about the indvidual LINEs in the network that are affected. If not explicitly overridden, modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) In the general context.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -581,7 +581,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="AffectedLineStructure">
   <xsd:annotation>
-   <xsd:documentation>Information about the individual LINEs in the network that are affected by a SITUATION. If not explicitly overrided, modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) in the General Context. </xsd:documentation>
+   <xsd:documentation>Information about the individual LINEs in the network that are affected by a SITUATION. If not explicitly overridden, modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) in the general context. </xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AffectedOperator" type="AffectedOperatorStructure" minOccurs="0" maxOccurs="unbounded">
@@ -592,7 +592,7 @@ Rail transport, Roads and road transport
    <xsd:group ref="LineGroup"/>
    <xsd:element name="Origins" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>ORIGINs to which the  LINE runs.</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified ORIGINs</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
