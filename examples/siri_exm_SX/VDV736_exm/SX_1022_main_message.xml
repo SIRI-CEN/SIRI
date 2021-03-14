@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../xsd/siri.xsd">
  <ServiceDelivery>
   <ResponseTimestamp>2018-10-16T10:22:30+00:00</ResponseTimestamp>
   <ProducerRef>ch:VBL</ProducerRef>
@@ -7,7 +7,7 @@
   <ResponseMessageIdentifier>Pgfkw0GAsg</ResponseMessageIdentifier>
   <Status>true</Status>
   <MoreData>false</MoreData>
-  <SituationExchangeDelivery version="2.0">
+  <SituationExchangeDelivery version="2.1">
    <ResponseTimestamp>2018-10-16T10:22:30+00:00</ResponseTimestamp>
    <SubscriberRef>ch:VBL</SubscriberRef>
    <SubscriptionRef>40599x2dsjmu8yjzy</SubscriptionRef>
@@ -26,7 +26,7 @@
       <StartTime>2017-05-28T10:10:00+02:00</StartTime>
       <EndTime>2017-05-28T17:10:00+02:00</EndTime>
      </ValidityPeriod>
-     <MiscellaneousReason>fire</MiscellaneousReason>
+     <AlertCause>fire</AlertCause>
      <ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
      <ReasonName xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonName>
      <Priority>3</Priority>

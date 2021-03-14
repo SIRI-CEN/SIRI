@@ -122,18 +122,18 @@
 	</Folder>
 	<Folder FolderName="examples">
 		<Folder FolderName="SIRI Generic framework Examples">
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_checkStatus_request.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_checkStatus_response.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_dataReady_request.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_dataReady_response.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_dataReceived_response.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_dataSupply_request.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_heartbeat_request.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_requestSubscription_response.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_subscriptionTerminated_notification.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_terminateSubscription_request.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_terminateSubscription_response.xml" HomeFolder="Yes"/>
-			<File FilePath="C:\Users\nick.knowles\Documents\PROJECTS\PtStandards\PtStandardsPublic\siri\schema\2.0l\examples\siri_exa_framework\exa_terminateSubscription_response_err.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_checkStatus_request.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_checkStatus_response.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_dataReady_request.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_dataReady_response.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_dataReceived_response.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_dataSupply_request.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_heartbeat_request.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_requestSubscription_response.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_subscriptionTerminated_notification.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_terminateSubscription_request.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_terminateSubscription_response.xml" HomeFolder="Yes"/>
+			<File FilePath="..\examples\siri_exa_framework\exa_terminateSubscription_response_err.xml" HomeFolder="Yes"/>
 		</Folder>
 		<Folder FolderName="SIRI-SM Stop Monitoring Examples">
 			<File FilePath="..\examples\siri_exm_SM\exp_stopMonitoring_permissions.xml" HomeFolder="Yes"/>

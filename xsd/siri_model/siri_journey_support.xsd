@@ -23,24 +23,28 @@
     <Date>
      <Modified>2007-03-29</Modified>
     </Date>
-    <Date><Modified>2008-11-13</Modified>
-				 <!--Correct Cardinalities on SIRI DESTINATION REF Structure-->
-				</Date>
-    <Date><Modified>2011-04-18</Modified>
-				 <!--siri_journey-v2.0.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com-->
-				</Date>
-    <Date><Modified>2012-03-22</Modified>
-				<!--SIRI 2.0 
-					Create from siri_journey
-					Add TrainNumber
-					Add departed, missed states to ProgressStatusEnum (arrivalStatus and  DepartureStatus)
-					Add VehicleStatusEnum-->
-				</Date>
-    <Date><Modified>2013-02-11</Modified>
-				<!--SIRI 2.0 
-					Add notExpected state to ProgressStatusEnum
-					Corrected enumeration value cancellled in VehicleStatusEnum-->
-				</Date>
+    <Date>
+     <Modified>2008-11-13</Modified>
+     <!-- Correct Cardinalities on SIRI DESTINATION REF Structure -->
+    </Date>
+    <Date>
+     <Modified>2011-04-18</Modified>
+     <!-- siri_journey.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com -->
+    </Date>
+    <Date>
+     <Modified>2012-03-22</Modified>
+     <!-- SIRI 2.0
+		  Create from siri_journey
+		  Add TrainNumber
+		  Add departed, missed states to ProgressStatusEnum (arrivalStatus and  DepartureStatus)
+		  Add VehicleStatusEnum -->
+    </Date>
+    <Date>
+     <Modified>2013-02-11</Modified>
+     <!-- SIRI 2.0
+	      Add notExpected state to ProgressStatusEnum
+		  Corrected enumeration value cancellled in VehicleStatusEnum -->
+    </Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of real-time information .</p>
      <p>This subschema defines identifer definitions for common journey elements.</p>
@@ -56,16 +60,15 @@
     <Relation>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_types.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+     <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
     </Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG CML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -85,6 +88,7 @@ Rail transport, Roads and road transport
  </xsd:annotation>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_reference.xsd"/>
+ <xsd:include schemaLocation="siri_feature_support.xsd"/>
  <!-- ==== Journey == ============================================= -->
  <xsd:group name="JourneyIdentityGroup">
   <xsd:annotation>

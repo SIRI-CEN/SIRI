@@ -25,25 +25,30 @@
     <Date>
      <Modified>2005-05-11</Modified>
     </Date>
-    <Date><Modified>2007-04-17</Modified>
-					 Name Space changes 
-				</Date>
-    <Date><Modified>2008-11-17</Modified>
-					 Revise to support substitution groups 
-				</Date>
-    <Date><Modified>2011-01-19</Modified>
-					 Drop use of As Flat Groups for InterChangeJourney 
-				</Date>
-    <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
-				</Date>
-    <Date><Modified>2012-04-18</Modified>
-					Add valid until to response
+    <Date>
+     <Modified>2007-04-17</Modified>
+     <!-- Name Space changes -->
+    </Date>
+    <Date>
+     <Modified>2008-11-17</Modified>
+     <!-- Revise to support substitution groups -->
+    </Date>
+    <Date>
+     <Modified>2011-01-19</Modified>
+     <!-- Drop use of As Flat Groups for InterChangeJourney -->
+    </Date>
+    <Date>
+     <Modified>2012-03-23</Modified>
+     <!-- +SIRI v2.0 -->
+    </Date>
+    <Date>
+     <Modified>2012-04-18</Modified>
+     <!-- Add valid until to response
 					 +SIRI v2.0
 					 
 						- [FR]    Add Extensions tag to Connection|TimetableSubscriptionRequest
-						- [DE] Add Extensions element to  request
-				</Date>
+						- [DE] Add Extensions element to  request -->
+    </Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of Public Transport real-time information.</p>
      <p>This sub-schema describes the Connection Timetable Service, which provides timetables of planned connections at a connection point.</p>
@@ -60,15 +65,15 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+        <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -149,7 +154,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionTimetableRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -213,7 +218,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionTimetablePayloadGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -390,7 +395,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>
 Version number of response. Fixed 

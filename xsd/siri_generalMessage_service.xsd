@@ -24,20 +24,25 @@
     <Date>
      <Modified>2005-05-11</Modified>
     </Date>
-    <Date><Modified>2007-04-17</Modified>
-					 Name Space changes 
-				</Date>
-    <Date><Modified>2008-11-17</Modified>
-					 Revise to support substitution groups 
-				</Date>
-    <Date><Modified>2011-04-18</Modified>
+    <Date>
+     <Modified>2007-04-17</Modified>
+     <!-- Name Space changes -->
+    </Date>
+    <Date>
+     <Modified>2008-11-17</Modified>
+     <!-- Revise to support substitution groups -->
+    </Date>
+    <Date>
+     <Modified>2011-04-18</Modified>
+     <!--
 				 (i) siri_generalMessage_service.xsd (line 221) Missing extension point in InfoMessageStructure in Robin Vettier Ixxi.biz
-       (ii) and siri_generalMessage_service.xsd subscription structure 
-       (iii) Missing type: Assign a type of normalizedString to formatRef
-				</Date>
-    <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
-				</Date>
+                (ii) and siri_generalMessage_service.xsd subscription structure
+                (iii) Missing type: Assign a type of normalizedString to formatRef -->
+    </Date>
+    <Date>
+     <Modified>2012-03-23</Modified>
+     <!-- +SIRI v2.0 -->
+    </Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of Public Transport real-time information.</p>
      <p>This sub-schema describes the General Message Service.</p>
@@ -54,15 +59,15 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.1 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -117,7 +122,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="GeneralMessageRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -194,7 +199,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="GeneralMessagePayloadGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -342,7 +347,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="GeneralMessagePermissions" minOccurs="0"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>
 Version number of response. Fixed 
