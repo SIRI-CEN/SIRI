@@ -18,7 +18,7 @@ siri_model\siri_situation-v2.0.xsd:
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
  <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/>
- <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema_2_0RC1_2_0.xsd"/>
+ <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema.xsd"/>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_situationIdentity.xsd"/>
  <xsd:include schemaLocation="siri_situationServiceTypes.xsd"/>

@@ -118,7 +118,7 @@ Rail transport, Roads and road transport
  <xsd:include schemaLocation="siri_model/siri_situation.xsd"/>
  <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
- <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="datex2/DATEXIISchema_2_0RC1_2_0.xsd"/>
+ <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="datex2/DATEXIISchema.xsd"/>
  <!-- ======================================================================= -->
  <xsd:group name="SiriSituationExchangeServiceIndexGroup">
   <xsd:annotation>
