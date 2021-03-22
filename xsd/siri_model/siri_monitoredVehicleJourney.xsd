@@ -123,14 +123,16 @@ Rail transport, Roads and road transport
    <xsd:documentation>Elements describing the real-time progress of a monitored VEHICLE JOURNEY.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Monitored" type="xsd:boolean" minOccurs="0">
+   <xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether there is real-time information available for journey; if not present, not known.</xsd:documentation>
+     <xsd:documentation>Whether there is real-time information available for journey. Default is 'true'.
+It is recommended to specify a MonitoringError if Monitored is set to 'false'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="MonitoringError" type="xsd:NMTOKENS" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Condition indicating nature of real-time fault. Present if VEHICLE JOURNEY is normally monitored but temporarily cannot be Monitored for a known reason.</xsd:documentation>
+     <xsd:documentation>If Monitored is 'false', a (list of) reason(s) for non-availability of real-time data. Examples are "GPS", "GPRS", "Radio" etc.
+MonitoringError must not be used if Monitored is omitted or set to 'true'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="ProgressDataQualityGroup"/>

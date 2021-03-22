@@ -71,14 +71,14 @@ Rail transport, Roads and road transport
    <xsd:group ref="VehicleJourneyInfoGroup" minOccurs="0"/>
    <xsd:group ref="DisruptionGroup" minOccurs="0"/>
    <xsd:group ref="OperationalInfoGroup" minOccurs="0"/>
-   <xsd:element name="Monitored" type="xsd:boolean" minOccurs="0">
+   <xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether there is real-time information available for journey; if not present, not known.</xsd:documentation>
+     <xsd:documentation>Whether there is real-time information available for journey. Default is 'true'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AimedDepartureTime" type="xsd:dateTime" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>On a Distributor journey , a Timetabled departure time of the VEHICLE JOURNEY from the CONNECTION LINK for the SERVICE JOURNEY INTERCHANGE. On a Feeder journey a Timetabled arrival time of the VEHICLE JOURNEY at the CONNECTION link for the SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
+     <xsd:documentation>On a Distributor journey, a timetabled departure time of the VEHICLE JOURNEY from the CONNECTION LINK for the SERVICE JOURNEY INTERCHANGE. On a Feeder journey a Timetabled arrival time of the VEHICLE JOURNEY at the CONNECTION link for the SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>

@@ -145,34 +145,6 @@ DEPRECATED from SIRI 2.0</xsd:documentation>
    </xsd:choice>
   </xsd:sequence>
  </xsd:group>
- <xsd:group name="EstimatedJourneyInfoGroup">
-  <xsd:annotation>
-   <xsd:documentation>General properties of the journey.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="HeadwayService" type="xsd:boolean" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether this is a Headway Service, that is shown as operating at a prescribed interval rather than to a fixed timetable. Inherited property: if omitted: same as indicated by (i) any preceding update message, or (ii) if no preceding update, by the referenced dated VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="FirstOrLastJourney" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="EstimatedRealtimeInfoGroup">
-  <xsd:annotation>
-   <xsd:documentation>Real-time properties of the journey.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Monitored" type="xsd:boolean" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the VEHICLE JOURNEY is monitored by an AVMS: true if active. Inherited property: if omitted: same as indicated by (i) any preceding update message, or (ii) if no preceding update, by the referenced dated VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="PredictionInaccurate" minOccurs="0"/>
-   <xsd:element ref="PredictionInaccurateReason" minOccurs="0"/>
-   <xsd:element ref="Occupancy" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
  <!-- ======================================================================= -->
  <xsd:element name="EstimatedServiceJourneyInterchange" type="EstimatedServiceJourneyInterchangeStructure">
   <xsd:annotation>
