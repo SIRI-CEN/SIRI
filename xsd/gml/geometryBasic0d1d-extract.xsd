@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" version="3.2.1 2010-01-28">
-	<include schemaLocation="gmlBase-extract-v3_2_1.xsd"/>
+	<include schemaLocation="gmlBase-extract.xsd"/>
 	<annotation>
 		<appinfo source="urn:x-ogc:specification:gml:schema-xsd:geometryBasic0d1d:3.2.1">geometryBasic0d1d.xsd</appinfo>
 		<documentation>See ISO/DIS 19136 Clause 10.

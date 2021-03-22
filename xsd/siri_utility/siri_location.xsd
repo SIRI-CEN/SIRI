@@ -75,9 +75,9 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRI Framewrok Location Types.</xsd:documentation>
  </xsd:annotation>
  <!-- ======================================================================= -->
- <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gml_extract_all_objects_v_3_2_1.xsd"/>
+ <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gml_extract_all_objects.xsd"/>
  <!--Actual dependency-->
- <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gmlBasic2d-extract-v3_2_1-.xsd"/>
+ <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gmlBasic2d-extract.xsd"/>
  <!--======WGS84=======================================================================================-->
  <xsd:simpleType name="LongitudeType">
   <xsd:annotation>
