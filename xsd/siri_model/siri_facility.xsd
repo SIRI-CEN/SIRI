@@ -307,6 +307,8 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="inUseCount"/>
    <xsd:enumeration value="outOfOrderCount"/>
    <xsd:enumeration value="presentCount"/>
+   <xsd:enumeration value="chargingLevel"/>
+   <xsd:enumeration value="availableRunningDistance"/>
    <xsd:enumeration value="currentStateCount"/>
   </xsd:restriction>
  </xsd:simpleType>
@@ -334,6 +336,7 @@ Rail transport, Roads and road transport
    devices: electronic devices (audio guide, headphones, etc.) and physical devices (walking stick, wheelchair, etc.)
    vehicles: any type of vehicles (cycle, car, scooter, hoverboard, motorbike, etc.)
    kW (kiloWatt) or kWh (kiloWatt-hour): means that an available or consumed power is measured
+   mAh (milliAmpere per hour): typically used for battery charging level
    litres and cubicMeters: means that a volume is measured
    squareMeters: means that a surface is measured
    meters: means that a distance is measured
@@ -355,6 +358,7 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="cubicMeters"/>
    <xsd:enumeration value="meters"/>
    <xsd:enumeration value="kWh"/>
+   <xsd:enumeration value="mAh"/>
    <xsd:enumeration value="kW"/>
    <xsd:enumeration value="kg"/>
    <xsd:enumeration value="A"/>
