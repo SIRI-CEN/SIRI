@@ -88,14 +88,14 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
     </Relation>
     <Rights><!--Unclassified-->
-       <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
+       <Copyright>Kizoom 2000-2007, CEN 2009-2021</Copyright>
     </Rights>
     <Source>
      <ul>
       <li>Schema derived Derived from the Kizoom XTIS schema </li>
      </ul>
     </Source>
-    <Status>Version 2.0</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -672,7 +672,7 @@ Rail transport, Roads and road transport
       <xsd:choice>
        <xsd:element name="FirstStopPointRef" type="StopPointRefStructure">
         <xsd:annotation>
-         <xsd:documentation>Used to indicate the SCHEDULED stop point  at the start of the SECTION</xsd:documentation>
+         <xsd:documentation>Used to indicate the SCHEDULED stop point at the start of the SECTION</xsd:documentation>
         </xsd:annotation>
        </xsd:element>
        <xsd:element name="FirstStopPlaceRef" type="ifopt:StopPlaceRefStructure">
@@ -1068,7 +1068,8 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="VehicleArrivalTimesGroup"/>
    <xsd:element ref="ArrivalStatus" minOccurs="0"/>
-   <xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
+   <!-- multiplicity of Arrival-/DeparturePlatformName is 0:1 in all SIRI services except here to ensure compatibility with VDV736 / UmS profile of CEN SIRI SX -->
+   <xsd:element ref="ArrivalPlatformName" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>

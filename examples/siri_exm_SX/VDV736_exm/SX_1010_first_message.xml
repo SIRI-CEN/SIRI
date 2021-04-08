@@ -19,7 +19,7 @@
      <Version>1</Version>
      <Source>
       <SourceType>feed</SourceType>
-      <Name>VBL</Name>
+      <Name xml:lang="DE">VBL</Name>
      </Source>
      <Progress>published</Progress>
      <ValidityPeriod>
@@ -40,7 +40,7 @@
       <StopPlaces>
        <AffectedStopPlace>
         <StopPlaceRef>ch:vbl:622</StopPlaceRef>
-        <PlaceName>Haldensteig</PlaceName>
+        <PlaceName xml:lang="DE">Haldensteig</PlaceName>
        </AffectedStopPlace>
       </StopPlaces>
      </Affects>
@@ -52,15 +52,15 @@
          <AffectedNetwork>
           <AffectedLine>
            <LineRef>ch:vbl:VBL006</LineRef>
-           <PublishedLineName>6</PublishedLineName>
+           <PublishedLineName xml:lang="DE">6</PublishedLineName>
           </AffectedLine>
           <AffectedLine>
            <LineRef>ch:vbl:VBL008</LineRef>
-           <PublishedLineName>8</PublishedLineName>
+           <PublishedLineName xml:lang="DE">8</PublishedLineName>
           </AffectedLine>
           <AffectedLine>
            <LineRef>ch:vbl:VBL024</LineRef>
-           <PublishedLineName>24</PublishedLineName>
+           <PublishedLineName xml:lang="DE">24</PublishedLineName>
           </AffectedLine>
          </AffectedNetwork>
         </Networks>
@@ -80,19 +80,19 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:pb:PB073</LineRef>
-            <PublishedLineName>73</PublishedLineName>
+            <PublishedLineName xml:lang="DE">73</PublishedLineName>
            </AffectedLine>
           </AffectedNetwork>
          </Networks>
@@ -138,19 +138,19 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:pb:PB073</LineRef>
-            <PublishedLineName>73</PublishedLineName>
+            <PublishedLineName xml:lang="DE">73</PublishedLineName>
            </AffectedLine>
           </AffectedNetwork>
          </Networks>
@@ -196,19 +196,19 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:pb:PB073</LineRef>
-            <PublishedLineName>73</PublishedLineName>
+            <PublishedLineName xml:lang="DE">73</PublishedLineName>
            </AffectedLine>
           </AffectedNetwork>
          </Networks>

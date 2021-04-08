@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2011 CEN SIRI -->
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
  <ServiceDelivery>
   <!--=======HEADER================================================== -->
   <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
@@ -8,7 +8,7 @@
   <Status>true</Status>
   <MoreData>false</MoreData>
   <!--=======PAYLOAD============================================== -->
-  <ProductionTimetableDelivery version="2.0">
+  <ProductionTimetableDelivery version="2.1">
    <ResponseTimestamp>2001-12-17T09:30:47-05:00</ResponseTimestamp>
    <SubscriberRef>NADER</SubscriberRef>
    <SubscriptionRef>00123456</SubscriptionRef>
@@ -20,7 +20,7 @@
     <!-- JP Info Group -->
     <LineRef>123</LineRef>
     <DirectionRef>Out</DirectionRef>
-    <PublishedLineName>String</PublishedLineName>
+    <PublishedLineName xml:lang="EN">String</PublishedLineName>
     <DirectionName xml:lang="EN">Outbound</DirectionName>
     <!-- Service Info Group -->
     <OperatorRef>Smooth</OperatorRef>
@@ -35,7 +35,7 @@
      <DatedVehicleJourneyCode>DVC0008767</DatedVehicleJourneyCode>
      <VehicleJourneyRef>VJ123</VehicleJourneyRef>
      <ExtraJourney>false</ExtraJourney>
-     <PublishedLineName>123 Out</PublishedLineName>
+     <PublishedLineName xml:lang="EN">123 Out</PublishedLineName>
      <!-- Service Info Group -->
      <OperatorRef>Sharp</OperatorRef>
      <ProductCategoryRef>Plusbus</ProductCategoryRef>
@@ -57,7 +57,7 @@
        <AimedArrivalTime>2001-12-17T09:20:47-05:00</AimedArrivalTime>
        <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
        <AimedDepartureTime>2001-12-17T09:21:47-05:00</AimedDepartureTime>
-       <DeparturePlatformName>1</DeparturePlatformName>
+       <DeparturePlatformName xml:lang="EN">1</DeparturePlatformName>
        <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
       </DatedCall>
       <!-- CALL 2 -->
@@ -83,7 +83,7 @@
        <DestinationDisplay>Hell</DestinationDisplay>
        <CallNote>Can change here to </CallNote>
        <AimedArrivalTime>2001-12-17T09:35:47-05:00</AimedArrivalTime>
-       <ArrivalPlatformName>4</ArrivalPlatformName>
+       <ArrivalPlatformName xml:lang="EN">4</ArrivalPlatformName>
        <AimedDepartureTime>2001-12-17T09:37:47-05:00</AimedDepartureTime>
        <DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
        <TargetedInterchange>

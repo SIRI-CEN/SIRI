@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
-<ConnectionTimetableCapabilitiesResponse xmlns="http://www.siri.org.uk/siri" xmlns:gms="http://www.govtalk.gov.uk/CM/gms" xmlns:gms-xs="http://www.govtalk.gov.uk/CM/gms-xs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd" version="2.0">
+<ConnectionTimetableCapabilitiesResponse xmlns="http://www.siri.org.uk/siri" xmlns:gms="http://www.govtalk.gov.uk/CM/gms" xmlns:gms-xs="http://www.govtalk.gov.uk/CM/gms-xs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd" version="2.1">
  <ResponseTimestamp>2001-12-17T09:30:47.0Z</ResponseTimestamp>
  <RequestMessageRef>http://www.mytransportco.eu</RequestMessageRef>
  <Status>true</Status>

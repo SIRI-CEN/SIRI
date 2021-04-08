@@ -8,7 +8,7 @@
 	See also simple response  for minimal version
 
 (C) Copyright 2005-2012 CEN SIRI -->
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
  <ServiceDelivery>
   <!--=======HEADER================================================== -->
   <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
@@ -16,7 +16,7 @@
   <Status>true</Status>
   <MoreData>false</MoreData>
   <!--=======PAYLOAD============================================== -->
-  <StopMonitoringDelivery version="2.0">
+  <StopMonitoringDelivery version="2.1">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <SubscriberRef>NADER</SubscriberRef>
    <SubscriptionRef>2004-12-17T09:30:47-05:00</SubscriptionRef>
@@ -43,19 +43,19 @@
       <DatedVehicleJourneyRef>Oubound</DatedVehicleJourneyRef>
      </FramedVehicleJourneyRef>
      <!-- LINE INFO GROUP -->
-     <PublishedLineName>123</PublishedLineName>
+     <PublishedLineName xml:lang="EN">123</PublishedLineName>
      <!-- SERVICE INFO GROUP -->
      <OperatorRef>OP22</OperatorRef>
      <ProductCategoryRef>PDCATEXPRESS</ProductCategoryRef>
      <ServiceFeatureRef>SERVCCAT551</ServiceFeatureRef>
      <!-- SERVICE POINTS GROUP -->
      <OriginRef>PLACE21</OriginRef>
-     <OriginName>Highbury</OriginName>
+     <OriginName xml:lang="EN">Highbury</OriginName>
      <Via>
-      <PlaceName>Kensall Green</PlaceName>
+      <PlaceName xml:lang="EN">Kensall Green</PlaceName>
      </Via>
      <Via>
-      <PlaceName>Roman Road</PlaceName>
+      <PlaceName xml:lang="EN">Roman Road</PlaceName>
      </Via>
      <DestinationRef>PLACE45</DestinationRef>
      <DestinationName xml:lang="EN">Paradise Park</DestinationName>
@@ -89,7 +89,7 @@
      <CourseOfJourneyRef>RUN765</CourseOfJourneyRef>
      <VehicleRef>VEH987654</VehicleRef>
      <DriverRef>DRV654</DriverRef>
-     <DriverName>N.I.Blick</DriverName>
+     <DriverName xml:lang="EN">N.I.Blick</DriverName>
      <!-- MONITORED CALLING PATTERN GROUP -->
      <PreviousCalls>
       <PreviousCall>
@@ -118,7 +118,7 @@
       <ExpectedDepartureTime>2004-12-17T09:40:47-05:00</ExpectedDepartureTime>
       <!-- CALL INFO GROUP -->
       <DepartureStatus> arrived</DepartureStatus>
-      <DeparturePlatformName>Bay 5</DeparturePlatformName>
+      <DeparturePlatformName xml:lang="EN">Bay 5</DeparturePlatformName>
       <!-- MONITORED VEHICLE JOURNEY -->
      </MonitoredCall>
      <OnwardCalls>
@@ -155,8 +155,8 @@
      </FramedVehicleJourneyRef>
      <RouteRef>Rt24</RouteRef>
      <!-- LINE INFO GROUP -->
-     <PublishedLineName>24</PublishedLineName>
-     <DirectionName>To Library</DirectionName>
+     <PublishedLineName xml:lang="EN">24</PublishedLineName>
+     <DirectionName xml:lang="EN">To Library</DirectionName>
      <ExternalLineRef>Line128</ExternalLineRef>
      <!-- SERVICE INFO GROUP -->
      <OperatorRef>OP22</OperatorRef>
@@ -166,12 +166,12 @@
      <VehicleFeatureRef>446</VehicleFeatureRef>
      <!-- SERVICE POINTS GROUP -->
      <OriginRef>PLACE4675</OriginRef>
-     <OriginName>Chancery Lane</OriginName>
+     <OriginName xml:lang="EN">Chancery Lane</OriginName>
      <Via>
-      <PlaceName>Picadilly Green</PlaceName>
+      <PlaceName xml:lang="EN">Picadilly Green</PlaceName>
      </Via>
      <DestinationRef>PLACE1245</DestinationRef>
-     <DestinationName>Paradise Park</DestinationName>
+     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
      <!--JOURNEY INFO GROUP -->
      <JourneyNote>Accessiblity  help available from driver</JourneyNote>
      <PublicContact>
@@ -268,7 +268,7 @@
        <AimedLatestPassengerAccessTime>2004-12-17T09:55:47-05:00</AimedLatestPassengerAccessTime>
        <DepartureStatus>onTime</DepartureStatus>
        <DepartureProximityText xml:lang="EN">Approaching stop</DepartureProximityText>
-       <DeparturePlatformName>2</DeparturePlatformName>
+       <DeparturePlatformName xml:lang="EN">2</DeparturePlatformName>
        <AimedHeadwayInterval>PT10M</AimedHeadwayInterval>
        <ExpectedHeadwayInterval>PT11M</ExpectedHeadwayInterval>
        <DistanceFromStop>750</DistanceFromStop>
@@ -291,7 +291,7 @@
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T10:12:47-05:00</AimedArrivalTime>
        <ArrivalStatus>onTime</ArrivalStatus>
-       <ArrivalPlatformName>2</ArrivalPlatformName>
+       <ArrivalPlatformName xml:lang="EN">2</ArrivalPlatformName>
        <DistanceFromStop>4000</DistanceFromStop>
        <NumberOfStopsAway>3</NumberOfStopsAway>
       </OnwardCall>

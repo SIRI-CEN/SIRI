@@ -19,7 +19,7 @@
      <Version>2</Version>
      <Source>
       <SourceType>feed</SourceType>
-      <Name>VBL</Name>
+      <Name xml:lang="DE">VBL</Name>
      </Source>
      <Progress>published</Progress>
      <ValidityPeriod>
@@ -45,7 +45,7 @@
       <StopPlaces>
        <AffectedStopPlace>
         <StopPlaceRef>ch:vbl:622</StopPlaceRef>
-        <PlaceName>Haldensteig</PlaceName>
+        <PlaceName xml:lang="DE">Haldensteig</PlaceName>
        </AffectedStopPlace>
       </StopPlaces>
      </Affects>
@@ -57,146 +57,146 @@
          <AffectedNetwork>
           <AffectedLine>
            <LineRef>ch:vbl:VBL006</LineRef>
-           <PublishedLineName>6</PublishedLineName>
+           <PublishedLineName xml:lang="DE">6</PublishedLineName>
            <Destinations>
             <StopPointRef>ch:vbl:2507::01</StopPointRef>
-            <StopPlaceName>Büttenhalde</StopPlaceName>
+            <StopPlaceName xml:lang="DE">Büttenhalde</StopPlaceName>
            </Destinations>
            <Direction>
             <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-            <DirectionName>Büttenhalde</DirectionName>
+            <DirectionName xml:lang="DE">Büttenhalde</DirectionName>
            </Direction>
            <StopPoints>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:621::01</StopPointRef>
-             <StopPlaceName>Casino-Palace</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:615::01</StopPointRef>
-             <StopPlaceName>Europe</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:616::01</StopPointRef>
-             <StopPlaceName>Dietschiberg</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:617::01</StopPointRef>
-             <StopPlaceName>Verkehrshaus</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
            </StopPoints>
           </AffectedLine>
           <AffectedLine>
            <LineRef>ch:vbl:VBL006</LineRef>
-           <PublishedLineName>6</PublishedLineName>
+           <PublishedLineName xml:lang="DE">6</PublishedLineName>
            <Destinations>
             <StopPointRef>ch:vbl:601:01</StopPointRef>
-            <StopPlaceName>Matthof</StopPlaceName>
+            <StopPlaceName xml:lang="DE">Matthof</StopPlaceName>
            </Destinations>
            <Direction>
             <DirectionRef>ch:vbl:VBL006:B</DirectionRef>
-            <DirectionName>Matthof</DirectionName>
+            <DirectionName xml:lang="DE">Matthof</DirectionName>
            </Direction>
            <StopPoints>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:617::02</StopPointRef>
-             <StopPlaceName>Verkehrshaus</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:616::02</StopPointRef>
-             <StopPlaceName>Dietschiberg</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:615::02</StopPointRef>
-             <StopPlaceName>Europe</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:621::02</StopPointRef>
-             <StopPlaceName>Casino-Palace</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:622::02</StopPointRef>
-             <StopPlaceName>Haldensteig</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Haldensteig</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
            </StopPoints>
           </AffectedLine>
           <AffectedLine>
            <LineRef>ch:vbl:VBL008</LineRef>
-           <PublishedLineName>8</PublishedLineName>
+           <PublishedLineName xml:lang="DE">8</PublishedLineName>
            <Destinations>
             <StopPointRef>ch:vbl:620:01</StopPointRef>
-            <StopPlaceName>Würzenbach</StopPlaceName>
+            <StopPlaceName xml:lang="DE">Würzenbach</StopPlaceName>
            </Destinations>
            <Direction>
             <DirectionRef>ch:vbl:VBL008:A</DirectionRef>
-            <DirectionName>Würzenbach</DirectionName>
+            <DirectionName xml:lang="DE">Würzenbach</DirectionName>
            </Direction>
            <StopPoints>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:621::01</StopPointRef>
-             <StopPlaceName>Casino-Palace</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:615::01</StopPointRef>
-             <StopPlaceName>Europe</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:616::01</StopPointRef>
-             <StopPlaceName>Dietschiberg</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:617::01</StopPointRef>
-             <StopPlaceName>Verkehrshaus</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
            </StopPoints>
           </AffectedLine>
           <AffectedLine>
            <LineRef>ch:vbl:VBL008</LineRef>
-           <PublishedLineName>8</PublishedLineName>
+           <PublishedLineName xml:lang="DE">8</PublishedLineName>
            <Destinations>
             <StopPointRef>ch:vbl:801:01</StopPointRef>
-            <StopPlaceName>Hirtenhof</StopPlaceName>
+            <StopPlaceName xml:lang="DE">Hirtenhof</StopPlaceName>
            </Destinations>
            <Direction>
             <DirectionRef>ch:vbl:VBL008:B</DirectionRef>
-            <DirectionName>Hirtenhof</DirectionName>
+            <DirectionName xml:lang="DE">Hirtenhof</DirectionName>
            </Direction>
            <StopPoints>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:617::02</StopPointRef>
-             <StopPlaceName>Verkehrshaus</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:616::02</StopPointRef>
-             <StopPlaceName>Dietschiberg</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:615::02</StopPointRef>
-             <StopPlaceName>Europe</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:621::02</StopPointRef>
-             <StopPlaceName>Casino-Palace</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:622::02</StopPointRef>
-             <StopPlaceName>Haldensteig</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Haldensteig</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
            </StopPoints>
@@ -216,14 +216,14 @@
          <AffectedNetwork>
           <AffectedLine>
            <LineRef>ch:vbl:VBL024</LineRef>
-           <PublishedLineName>24</PublishedLineName>
+           <PublishedLineName xml:lang="DE">24</PublishedLineName>
            <Destinations>
             <StopPointRef>ch:vbl:2433:01</StopPointRef>
-            <StopPlaceName>Tschädigen</StopPlaceName>
+            <StopPlaceName xml:lang="DE">Tschädigen</StopPlaceName>
            </Destinations>
            <Direction>
             <DirectionRef>ch:vbl:VBL024:A</DirectionRef>
-            <DirectionName>Tschädigen</DirectionName>
+            <DirectionName xml:lang="DE">Tschädigen</DirectionName>
            </Direction>
            <StopPoints>
             <AffectedStopPoint>
@@ -232,12 +232,12 @@
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:621::01</StopPointRef>
-             <StopPlaceName>Casino-Palace</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:617::01</StopPointRef>
-             <StopPlaceName>Verkehrshaus</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
@@ -284,19 +284,19 @@
           </AffectedLine>
           <AffectedLine>
            <LineRef>ch:vbl:VBL024</LineRef>
-           <PublishedLineName>24</PublishedLineName>
+           <PublishedLineName xml:lang="DE">24</PublishedLineName>
            <Destinations>
             <StopPointRef>ch:vbl:119:13</StopPointRef>
-            <StopPlaceName>Bahnhof</StopPlaceName>
+            <StopPlaceName xml:lang="DE">Bahnhof</StopPlaceName>
            </Destinations>
            <Direction>
             <DirectionRef>ch:vbl:VBL024:B</DirectionRef>
-            <DirectionName>Bahnhof</DirectionName>
+            <DirectionName xml:lang="DE">Bahnhof</DirectionName>
            </Direction>
            <StopPoints>
             <AffectedStopPoint>
              <StopPointRef>ch:vbl:617::02</StopPointRef>
-             <StopPlaceName>Verkehrshaus</StopPlaceName>
+             <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              <StopCondition>affectedStopplace</StopCondition>
             </AffectedStopPoint>
             <AffectedStopPoint>
@@ -370,19 +370,19 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:pb:PB073</LineRef>
-            <PublishedLineName>73</PublishedLineName>
+            <PublishedLineName xml:lang="DE">73</PublishedLineName>
            </AffectedLine>
           </AffectedNetwork>
          </Networks>
@@ -440,51 +440,51 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-             <DirectionName>Büttenenhalde</DirectionName>
+             <DirectionName xml:lang="DE">Büttenenhalde</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:601::01</StopPointRef>
-              <StopPlaceName>Matthof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Matthof</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:602::01</StopPointRef>
-              <StopPlaceName>Schönbühl</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Schönbühl</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:603::03</StopPointRef>
-              <StopPlaceName>Wartegg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Wartegg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:604::01</StopPointRef>
-              <StopPlaceName>Eisfeldstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Eisfeldstrasse</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:605::01</StopPointRef>
-              <StopPlaceName>Weinbergli</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Weinbergli</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:606::01</StopPointRef>
-              <StopPlaceName>Werkhofstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Werkhofstrasse</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:407::02</StopPointRef>
-              <StopPlaceName>Bundesplatz</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Bundesplatz</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:118::01</StopPointRef>
-              <StopPlaceName>Kantonalbank (C)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Kantonalbank (C)</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:119::02</StopPointRef>
-              <StopPlaceName>Bahnhof (B)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Bahnhof (B)</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:120:01</StopPointRef>
-              <StopPlaceName>Schwanenplatz</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Schwanenplatz</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -570,15 +570,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-             <DirectionName>Büttenenhalde</DirectionName>
+             <DirectionName xml:lang="DE">Büttenenhalde</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::02</StopPointRef>
-              <StopPlaceName>Luzernerhof (D)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof (D)</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -622,29 +622,29 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-             <DirectionName>Büttenenhalde</DirectionName>
+             <DirectionName xml:lang="DE">Büttenenhalde</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::01</StopPointRef>
-              <StopPlaceName>Luzernerhof (C)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof (C)</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL008:A</DirectionRef>
-             <DirectionName>Würzenbach</DirectionName>
+             <DirectionName xml:lang="DE">Würzenbach</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::01</StopPointRef>
-              <StopPlaceName>Luzernerhof (C)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof (C)</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -697,39 +697,39 @@
            <!-- Müssen Entlastungsbusse separat referenziert werden? -->
            <AffectedLine>
             <LineRef>ch:vbl:VBL014</LineRef>
-            <PublishedLineName>14</PublishedLineName>
+            <PublishedLineName xml:lang="DE">14</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL014:A</DirectionRef>
-             <DirectionName>Brüelstrasse</DirectionName>
+             <DirectionName xml:lang="DE">Brüelstrasse</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:715::02</StopPointRef>
-              <StopPlaceName>Wey</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Wey</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL024:A</DirectionRef>
-             <DirectionName>Tschädingen</DirectionName>
+             <DirectionName xml:lang="DE">Tschädingen</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:715::02</StopPointRef>
-              <StopPlaceName>Wey</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Wey</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL073</LineRef>
-            <PublishedLineName>73</PublishedLineName>
+            <PublishedLineName xml:lang="DE">73</PublishedLineName>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:715::02</StopPointRef>
-              <StopPlaceName>Wey</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Wey</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -778,29 +778,29 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-             <DirectionName>Büttenenhalde</DirectionName>
+             <DirectionName xml:lang="DE">Büttenenhalde</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::02</StopPointRef>
-              <StopPlaceName>Luzernerhof (D)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof (D)</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL008:A</DirectionRef>
-             <DirectionName>Würzenbach</DirectionName>
+             <DirectionName xml:lang="DE">Würzenbach</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::02</StopPointRef>
-              <StopPlaceName>Luzernerhof (D)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof (D)</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -848,211 +848,211 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-             <DirectionName>Büttenenhalde</DirectionName>
+             <DirectionName xml:lang="DE">Büttenenhalde</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:621::01</StopPointRef>
-              <StopPlaceName>Casino-Palace</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:615::01</StopPointRef>
-              <StopPlaceName>Europe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:616::01</StopPointRef>
-              <StopPlaceName>Dietschiberg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:617::01</StopPointRef>
-              <StopPlaceName>Verkehrshaus</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:B</DirectionRef>
-             <DirectionName>Matthof</DirectionName>
+             <DirectionName xml:lang="DE">Matthof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:617::02</StopPointRef>
-              <StopPlaceName>Verkehrshaus</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:616::02</StopPointRef>
-              <StopPlaceName>Dietschiberg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:615::02</StopPointRef>
-              <StopPlaceName>Europe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:621::02</StopPointRef>
-              <StopPlaceName>Casino-Palace</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:622::01</StopPointRef>
-              <StopPlaceName>Haldensteig</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Haldensteig</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL008:A</DirectionRef>
-             <DirectionName>Würzenbach</DirectionName>
+             <DirectionName xml:lang="DE">Würzenbach</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:621::01</StopPointRef>
-              <StopPlaceName>Casino-Palace</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:615::01</StopPointRef>
-              <StopPlaceName>Europe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:616::01</StopPointRef>
-              <StopPlaceName>Dietschiberg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:617::01</StopPointRef>
-              <StopPlaceName>Verkehrshaus</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL008:B</DirectionRef>
-             <DirectionName>Hirtenhof</DirectionName>
+             <DirectionName xml:lang="DE">Hirtenhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:617::02</StopPointRef>
-              <StopPlaceName>Verkehrshaus</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:616::02</StopPointRef>
-              <StopPlaceName>Dietschiberg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:615::02</StopPointRef>
-              <StopPlaceName>Europe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:621::02</StopPointRef>
-              <StopPlaceName>Casino-Palace</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:622::01</StopPointRef>
-              <StopPlaceName>Haldensteig</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Haldensteig</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL024:A</DirectionRef>
-             <DirectionName>Tschädingen</DirectionName>
+             <DirectionName xml:lang="DE">Tschädingen</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:621::01</StopPointRef>
-              <StopPlaceName>Casino-Palace</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:615::01</StopPointRef>
-              <StopPlaceName>Europe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:616::01</StopPointRef>
-              <StopPlaceName>Dietschiberg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:617::01</StopPointRef>
-              <StopPlaceName>Verkehrshaus</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL024:B</DirectionRef>
-             <DirectionName>Bahnhof</DirectionName>
+             <DirectionName xml:lang="DE">Bahnhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:617::02</StopPointRef>
-              <StopPlaceName>Verkehrshaus</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:616::02</StopPointRef>
-              <StopPlaceName>Dietschiberg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:615::02</StopPointRef>
-              <StopPlaceName>Europe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:621::02</StopPointRef>
-              <StopPlaceName>Casino-Palace</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:622::01</StopPointRef>
-              <StopPlaceName>Haldensteig</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Haldensteig</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:pb:PB073</LineRef>
-            <PublishedLineName>73</PublishedLineName>
+            <PublishedLineName xml:lang="DE">73</PublishedLineName>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:621::01</StopPointRef>
-              <StopPlaceName>Casino-Palace</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:615::01</StopPointRef>
-              <StopPlaceName>Europe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:616::01</StopPointRef>
-              <StopPlaceName>Dietschiberg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:617::01</StopPointRef>
-              <StopPlaceName>Verkehrshaus</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:617::02</StopPointRef>
-              <StopPlaceName>Verkehrshaus</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Verkehrshaus</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:616::02</StopPointRef>
-              <StopPlaceName>Dietschiberg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Dietschiberg</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:615::02</StopPointRef>
-              <StopPlaceName>Europe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Europe</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:621::02</StopPointRef>
-              <StopPlaceName>Casino-Palace</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Casino-Palace</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:622::01</StopPointRef>
-              <StopPlaceName>Haldensteig</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Haldensteig</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -1104,15 +1104,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:014</LineRef>
-            <PublishedLineName>14</PublishedLineName>
+            <PublishedLineName xml:lang="DE">14</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL014:A</DirectionRef>
-             <DirectionName>Brüelstrasse</DirectionName>
+             <DirectionName xml:lang="DE">Brüelstrasse</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::01</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1153,30 +1153,30 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL024:A</DirectionRef>
-             <DirectionName>Tschädingen</DirectionName>
+             <DirectionName xml:lang="DE">Tschädingen</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::01</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:pb:073</LineRef>
-            <PublishedLineName>73</PublishedLineName>
+            <PublishedLineName xml:lang="DE">73</PublishedLineName>
             <Direction>
              <DirectionRef>ch:pb:PB073:A</DirectionRef>
-             <DirectionName>Rotkreuz</DirectionName>
+             <DirectionName xml:lang="DE">Rotkreuz</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::04</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1221,29 +1221,29 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-             <DirectionName>Büttenhalde</DirectionName>
+             <DirectionName xml:lang="DE">Büttenhalde</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::03</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL008:A</DirectionRef>
-             <DirectionName>Würzenbach</DirectionName>
+             <DirectionName xml:lang="DE">Würzenbach</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::03</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -1291,70 +1291,70 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-             <DirectionName>Büttenhalde</DirectionName>
+             <DirectionName xml:lang="DE">Büttenhalde</DirectionName>
             </Direction>
             <StopPoints>
              <!-- StopPoints hier, da Kombination aus den Stops + beide Linien, oder Stops in Linien doppelt auflisten? -->
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::03</StopPointRef>
-              <StopPlaceName>Brüelstrasse(B)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse(B)</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2502::01</StopPointRef>
-              <StopPlaceName>Giseli</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Giseli</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2503::01</StopPointRef>
-              <StopPlaceName>Oberseeburg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Oberseeburg</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2504::01</StopPointRef>
-              <StopPlaceName>Oberseeburghöhe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Oberseeburghöhe</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2505::01</StopPointRef>
-              <StopPlaceName>Eggen</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Eggen</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2506::01</StopPointRef>
-              <StopPlaceName>Büttenen</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Büttenen</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2507::01</StopPointRef>
-              <StopPlaceName>Büttenenhalde</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Büttenenhalde</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL008:A</DirectionRef>
-             <DirectionName>Würzenbach</DirectionName>
+             <DirectionName xml:lang="DE">Würzenbach</DirectionName>
             </Direction>
             <StopPoints>
              <!-- StopPoints hier, da Kombination aus den Stops + beide Linien, oder Stops in Linien doppelt auflisten? -->
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::03</StopPointRef>
-              <StopPlaceName>Brüelstrasse(B)</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse(B)</StopPlaceName>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:619::01</StopPointRef>
-              <StopPlaceName>Würzenbachmatte</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Würzenbachmatte</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:620::01</StopPointRef>
-              <StopPlaceName>Würzenbach</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Würzenbach</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1399,15 +1399,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:Entlastungsbus</LineRef>
-            <PublishedLineName>Entlastungsbus</PublishedLineName>
+            <PublishedLineName xml:lang="DE">Entlastungsbus</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:A</DirectionRef>
-             <DirectionName>Büttenhalde</DirectionName>
+             <DirectionName xml:lang="DE">Büttenhalde</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::04</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -1451,40 +1451,40 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:B</DirectionRef>
-             <DirectionName>Matthof</DirectionName>
+             <DirectionName xml:lang="DE">Matthof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2507::01</StopPointRef>
-              <StopPlaceName>Büttenenhalde</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Büttenenhalde</StopPlaceName>
               <StopCondition>origin</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2506::02</StopPointRef>
-              <StopPlaceName>Büttenen</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Büttenen</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2505::02</StopPointRef>
-              <StopPlaceName>Eggen</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Eggen</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2504::02</StopPointRef>
-              <StopPlaceName>Oberseeburghöhe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Oberseeburghöhe</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2503::02</StopPointRef>
-              <StopPlaceName>Oberseeburg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Oberseeburg</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2502::02</StopPointRef>
-              <StopPlaceName>Giseli</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Giseli</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1533,40 +1533,40 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:B</DirectionRef>
-             <DirectionName>Matthof</DirectionName>
+             <DirectionName xml:lang="DE">Matthof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2507::01</StopPointRef>
-              <StopPlaceName>Büttenenhalde</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Büttenenhalde</StopPlaceName>
               <StopCondition>origin</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2506::02</StopPointRef>
-              <StopPlaceName>Büttenen</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Büttenen</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2505::02</StopPointRef>
-              <StopPlaceName>Eggen</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Eggen</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2504::02</StopPointRef>
-              <StopPlaceName>Oberseeburghöhe</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Oberseeburghöhe</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2503::02</StopPointRef>
-              <StopPlaceName>Oberseeburg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Oberseeburg</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:2502::02</StopPointRef>
-              <StopPlaceName>Giseli</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Giseli</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1615,15 +1615,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:B</DirectionRef>
-             <DirectionName>Matthof</DirectionName>
+             <DirectionName xml:lang="DE">Matthof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::02</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1668,30 +1668,30 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:B</DirectionRef>
-             <DirectionName>Matthof</DirectionName>
+             <DirectionName xml:lang="DE">Matthof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::02</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL008:B</DirectionRef>
-             <DirectionName>Hirtenhof</DirectionName>
+             <DirectionName xml:lang="DE">Hirtenhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::02</StopPointRef>
-              <StopPlaceName>Brüelstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brüelstrasse</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1736,15 +1736,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL014</LineRef>
-            <PublishedLineName>14</PublishedLineName>
+            <PublishedLineName xml:lang="DE">14</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL014:A</DirectionRef>
-             <DirectionName>Brühlstrasse</DirectionName>
+             <DirectionName xml:lang="DE">Brühlstrasse</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::04</StopPointRef>
-              <StopPlaceName>Brühlstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brühlstrasse</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1753,15 +1753,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL024:B</DirectionRef>
-             <DirectionName>Bahnhof</DirectionName>
+             <DirectionName xml:lang="DE">Bahnhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::04</StopPointRef>
-              <StopPlaceName>Brühlstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Brühlstrasse</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1810,15 +1810,15 @@
                                                     Bei einer anderen Meldung wurde der Entlastungsbus mit <LineRef>ch:vbl:Entlastungsbus</LineRef> bezeichnet. Welche Bezeichnung soll verwendet werden?
                                                 -->
             <LineRef>ch:vbl:VBLEBUS</LineRef>
-            <PublishedLineName>EBUS</PublishedLineName>
+            <PublishedLineName xml:lang="DE">EBUS</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBLEBUS:B</DirectionRef>
-             <DirectionName>Luzernerhof</DirectionName>
+             <DirectionName xml:lang="DE">Luzernerhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::xx</StopPointRef>
-              <StopPlaceName>Luzernerhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1863,15 +1863,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL014</LineRef>
-            <PublishedLineName>14</PublishedLineName>
+            <PublishedLineName xml:lang="DE">14</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL014:B</DirectionRef>
-             <DirectionName>Horw Zentrum</DirectionName>
+             <DirectionName xml:lang="DE">Horw Zentrum</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::03</StopPointRef>
-              <StopPlaceName>Luzernerhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1912,30 +1912,30 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL024:B</DirectionRef>
-             <DirectionName>Bahnhof</DirectionName>
+             <DirectionName xml:lang="DE">Bahnhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::3</StopPointRef>
-              <StopPlaceName>Luzernerhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof</StopPlaceName>
               <StopCondition>origin</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL073</LineRef>
-            <PublishedLineName>73</PublishedLineName>
+            <PublishedLineName xml:lang="DE">73</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL073:B</DirectionRef>
-             <DirectionName>Bahnhof</DirectionName>
+             <DirectionName xml:lang="DE">Bahnhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::3</StopPointRef>
-              <StopPlaceName>Luzernerhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof</StopPlaceName>
               <StopCondition>origin</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -1980,15 +1980,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName>24</PublishedLineName>
+            <PublishedLineName xml:lang="DE">24</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL024:B</DirectionRef>
-             <DirectionName>Bahnhof</DirectionName>
+             <DirectionName xml:lang="DE">Bahnhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::3</StopPointRef>
-              <StopPlaceName>Luzernerhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof</StopPlaceName>
               <StopCondition>origin</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -2033,30 +2033,30 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:B</DirectionRef>
-             <DirectionName>Matthof</DirectionName>
+             <DirectionName xml:lang="DE">Matthof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::04</StopPointRef>
-              <StopPlaceName>Luzernerhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof</StopPlaceName>
               <StopCondition>origin</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
            <AffectedLine>
             <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName>8</PublishedLineName>
+            <PublishedLineName xml:lang="DE">8</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL008:B</DirectionRef>
-             <DirectionName>Hirtenhof</DirectionName>
+             <DirectionName xml:lang="DE">Hirtenhof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:121::04</StopPointRef>
-              <StopPlaceName>Luzernerhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzernerhof</StopPlaceName>
               <StopCondition>origin</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -2105,60 +2105,60 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName>6</PublishedLineName>
+            <PublishedLineName xml:lang="DE">6</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL006:B</DirectionRef>
-             <DirectionName>Matthof</DirectionName>
+             <DirectionName xml:lang="DE">Matthof</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:120::02</StopPointRef>
-              <StopPlaceName>Schwanenplatz</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Schwanenplatz</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:119::01</StopPointRef>
-              <StopPlaceName>Bahnhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Bahnhof</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:118::02</StopPointRef>
-              <StopPlaceName>Kantonalbank</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Kantonalbank</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:407::03</StopPointRef>
-              <StopPlaceName>Bundesplatz</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Bundesplatz</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:606::02</StopPointRef>
-              <StopPlaceName>Werkhofstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Werkhofstrasse</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:605::02</StopPointRef>
-              <StopPlaceName>Weinbergli</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Weinbergli</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:604::02</StopPointRef>
-              <StopPlaceName>Eisfeldstrasse</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Eisfeldstrasse</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:603::02</StopPointRef>
-              <StopPlaceName>Wartegg</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Wartegg</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:602::02</StopPointRef>
-              <StopPlaceName>Schönbühl</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Schönbühl</StopPlaceName>
               <StopCondition>intermediate</StopCondition>
              </AffectedStopPoint>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:601::01</StopPointRef>
-              <StopPlaceName>Matthof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Matthof</StopPlaceName>
               <StopCondition>destination</StopCondition>
              </AffectedStopPoint>
             </StopPoints>
@@ -2203,11 +2203,11 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL02A</LineRef>
-            <PublishedLineName>2</PublishedLineName>
+            <PublishedLineName xml:lang="DE">2</PublishedLineName>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:119::06</StopPointRef>
-              <StopPlaceName>Luzern Bahnhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzern Bahnhof</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
@@ -2255,15 +2255,15 @@
           <AffectedNetwork>
            <AffectedLine>
             <LineRef>ch:vbl:VBL014A</LineRef>
-            <PublishedLineName>14</PublishedLineName>
+            <PublishedLineName xml:lang="DE">14</PublishedLineName>
             <Direction>
              <DirectionRef>ch:vbl:VBL014:A</DirectionRef>
-             <DirectionName>Brüelstrasse</DirectionName>
+             <DirectionName xml:lang="DE">Brüelstrasse</DirectionName>
             </Direction>
             <StopPoints>
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:119::08</StopPointRef>
-              <StopPlaceName>Luzern Bahnhof</StopPlaceName>
+              <StopPlaceName xml:lang="DE">Luzern Bahnhof</StopPlaceName>
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>

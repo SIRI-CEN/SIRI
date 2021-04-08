@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
  <ServiceDelivery>
   <!--=======HEADER================================================== -->
   <ResponseTimestamp>2005-12-17T09:30:46-05:00</ResponseTimestamp>
   <ProducerRef>KUBRICK</ProducerRef>
   <!--=======PAYLOAD============================================== -->
-  <GeneralMessageDelivery version="2.0">
+  <GeneralMessageDelivery version="2.1">
    <ResponseTimestamp>2005-12-17T09:30:47.0Z</ResponseTimestamp>
    <RequestMessageRef>12345</RequestMessageRef>
    <Status>true</Status>
@@ -17,7 +17,7 @@
     <InfoChannelRef>WARNINGS</InfoChannelRef>
     <ValidUntilTime>2005-12-17T09:30:47.0Z</ValidUntilTime>
     <Content>
-     <Xtis version="2.0">
+     <Xtis version="2.1">
       <Incidents>
        <PtIncident>
         <CreationTime>2005-08-18T10:58:11Z</CreationTime>
@@ -51,7 +51,7 @@
            <StopPointRef>490G00000011</StopPointRef>
            <PrivateRef>1000011</PrivateRef>
            <StopPointName xml:lang="EN">Baker Street</StopPointName>
-           <ZoneName>London</ZoneName>
+           <ZoneName xml:lang="EN">London</ZoneName>
           </AffectedStopPoint>
          </StopPoints>
         </Affects>

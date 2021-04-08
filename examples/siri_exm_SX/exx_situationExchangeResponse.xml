@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:d2="http://datex2.eu/schema/2_0RC1/2_0" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:d2="http://datex2.eu/schema/2_0RC1/2_0" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
  <ServiceDelivery>
   <!--=======HEADER================================================== -->
   <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
@@ -8,7 +8,7 @@
   <Status>true</Status>
   <MoreData>false</MoreData>
   <!--=======PAYLOAD============================================== -->
-  <SituationExchangeDelivery version="2.0">
+  <SituationExchangeDelivery version="2.1">
    <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
    <Situations>
     <PtSituationElement>
@@ -69,7 +69,7 @@
         <AffectedComponents>
          <AffectedComponent>
           <ComponentRef>BAR00021</ComponentRef>
-          <ComponentName>Platfrom 3</ComponentName>
+          <ComponentName xml:lang="EN">Platfrom 3</ComponentName>
          </AffectedComponent>
         </AffectedComponents>
        </AffectedStopPlace>
@@ -169,7 +169,7 @@
         <AffectedComponents>
          <AffectedComponent>
           <ComponentRef>BAR00021</ComponentRef>
-          <ComponentName>Platfrom 3</ComponentName>
+          <ComponentName xml:lang="EN">Platfrom 3</ComponentName>
          </AffectedComponent>
         </AffectedComponents>
        </AffectedStopPlace>

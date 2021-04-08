@@ -110,7 +110,7 @@ siri_model\siri_situation-v2.0.xsd:
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_monitoredVehicleJourney.xsd</Requires>
     </Relation>
     <Rights><!--Unclassified-->
-     <Copyright>Kizoom 2000-2005, CEN 2009-2020</Copyright>
+     <Copyright>Kizoom 2000-2005, CEN 2009-2021</Copyright>
 	</Rights>
     <Source>
      <ul>
@@ -605,7 +605,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="QualityIndex" type="QualityIndexEnumeration" default="reliable" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Assessement of likely correctness of data.</xsd:documentation>
+     <xsd:documentation>Assessement of likely correctness of data. Default is reliable</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Reality" type="D2LogicalModel:InformationStatusEnum" minOccurs="0">
