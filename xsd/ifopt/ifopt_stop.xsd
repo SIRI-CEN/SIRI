@@ -17,10 +17,10 @@
      <Modified>2007-03-29</Modified>
     </Date>
     <Date><Modified>2012-03-12</Modified>
-					Change IdentifertYpe to normalizedString
+					<!--Change IdentifertYpe to normalizedString-->
 				</Date>
     <Date><Modified>2018-11-13</Modified>
-          [vdv] Enum "ferrytPort" in StopPlaceTypeEnumeration changed to "ferryPort"
+          <!--[vdv] Enum "ferrytPort" in StopPlaceTypeEnumeration changed to "ferryPort"-->
 				</Date>
     <Description>
      <p>Fixed Objects in Public Transport. This subschema defines STOP PLACE base types.</p>
