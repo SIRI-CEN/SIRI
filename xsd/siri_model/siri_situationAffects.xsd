@@ -883,7 +883,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Origins" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Origin SCHEDULED STOP POINTs from which the LINE runs. [equivalent to pti15 1 start_point route_description_type]</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified ORIGINs from which the LINE runs. [equivalent to pti15 1 start_point route_description_type]</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">

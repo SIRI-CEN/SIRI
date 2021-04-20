@@ -2641,14 +2641,17 @@
    <xs:enumeration value="inductionLoopMonitoringStation"/>
    <xs:enumeration value="infraredMonitoringStation"/>
    <xs:enumeration value="microwaveMonitoringStation"/>
+   <xs:enumeration value="microwavedMonitoringStation"/>
    <xs:enumeration value="mobileTelephoneCaller"/>
    <xs:enumeration value="nonPoliceEmergencyServicePatrol"/>
+   <xs:enumeration value="nonPoliceEmergencyServicesPatrol"/>
    <xs:enumeration value="otherInformation"/>
    <xs:enumeration value="otherOfficialVehicle"/>
    <xs:enumeration value="policePatrol"/>
    <xs:enumeration value="privateBreakdownService"/>
    <xs:enumeration value="publicAndPrivateUtilities"/>
    <xs:enumeration value="registeredMotoristObserver"/>
+   <xs:enumeration value="registeredMobileObserver"/>
    <xs:enumeration value="roadAuthorities"/>
    <xs:enumeration value="roadOperatorPatrol"/>
    <xs:enumeration value="roadsideTelephoneCaller"/>

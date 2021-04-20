@@ -159,7 +159,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="SituationInfoGroup"/>
      <xsd:element name="VersionedAtTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Time at which SITUATION element was versioned. Once versioned, no furtr changes can be made.</xsd:documentation>
+       <xsd:documentation>Time at which SITUATION element was versioned. Once versioned, no further changes can be made.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -1235,7 +1235,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:element>
    <xsd:group ref="ConditionGroup">
     <xsd:annotation>
-     <xsd:documentation>Condition(s) of effect of disruptione.</xsd:documentation>
+     <xsd:documentation>Condition(s) of effect of disruptions.</xsd:documentation>
     </xsd:annotation>
    </xsd:group>
    <xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
@@ -1316,12 +1316,12 @@ Note: this means that ConditionName is NOT a complete message, but only a (few) 
   <xsd:sequence>
    <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Type of boarding and alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
+     <xsd:documentation>Type of alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" default="boarding" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Type of alighting allowed at stop. Default is 'Boarding'.</xsd:documentation>
+     <xsd:documentation>Type of boarding allowed at stop. Default is 'Boarding'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -1456,12 +1456,12 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
   <xsd:sequence>
    <xsd:element name="JourneyPlanner" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether information about parts of the network identified by Affects should be blocked from computation made by a Journey Planner that has a real-tiem feed of the SITUATIONs. Default is 'false'; do not suppress.</xsd:documentation>
+     <xsd:documentation>Whether information about parts of the network identified by Affects should be blocked from computation made by a Journey Planner that has a real-time feed of the SITUATIONs. Default is 'false'; do not suppress.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RealTime" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether information about parts of the network identified by Affects should be blocked from real-time departureinfo systems. Default is 'false'; do not suppress.</xsd:documentation>
+     <xsd:documentation>Whether information about parts of the network identified by Affects should be blocked from real-time departure info systems. Default is 'false'; do not suppress.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
