@@ -1441,9 +1441,14 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
      <xsd:documentation>no advice</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="undefined">
+   <xsd:enumeration value="takeDetour">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_255, undefined advice</xsd:documentation>
+     <xsd:documentation>take detour</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="changeAccessibility">
+    <xsd:annotation>
+     <xsd:documentation>change accessibility</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>

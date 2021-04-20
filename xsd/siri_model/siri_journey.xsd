@@ -959,7 +959,7 @@ Inheritable property. Can be omitted if the same as the DeparturePlatformName If
  </xsd:element>
  <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting">
   <xsd:annotation>
-   <xsd:documentation>Type of boarding and alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
+   <xsd:documentation>Type of alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ArrivalFormationAssignment" type="FormationAssignmentStructure">
