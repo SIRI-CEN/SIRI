@@ -142,12 +142,12 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference of Stop Place related to this affected StopPoint.</xsd:documentation>
+     <xsd:documentation>Reference of STOP PLACE related to this affected StopPoint.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Name of Stop Place related to this affected StopPoint.  (Unbounded to allow a text for every language)</xsd:documentation>
+     <xsd:documentation>Name of STOP PLACE related to this affected StopPoint.  (Unbounded to allow a text for every language)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AffectedModes" type="AffectedModesStructure" minOccurs="0">
@@ -592,7 +592,7 @@ Rail transport, Roads and road transport
    <xsd:group ref="LineGroup"/>
    <xsd:element name="Origins" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Restricts the affected scope to the specified ORIGINs</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified origins</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
@@ -631,7 +631,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPoints" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Used to restrict lines to some stop points</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified SCHEDULED STOP POINTs</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -641,7 +641,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPlaces" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Used to restrict lines to some stop places</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified STOP PLACEs</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -818,7 +818,7 @@ Rail transport, Roads and road transport
     </xsd:element>
     <xsd:element name="VehicleJourneyRef" type="VehicleJourneyRefStructure" maxOccurs="unbounded">
      <xsd:annotation>
-      <xsd:documentation>Reference to a service VEHICLE JOURNEY affected by a SITUATION.</xsd:documentation>
+      <xsd:documentation>DEPRECATED (SIRI 2.1) - use only FramedVehicleJourneyRef</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -883,7 +883,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Origins" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Restricts the affected scope to the specified ORIGINs from which the LINE runs. [equivalent to pti15 1 start_point route_description_type]</xsd:documentation>
+     <xsd:documentation>Restricts the affected scope to the specified origins from which the LINE runs. [equivalent to pti15 1 start_point route_description_type]</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
@@ -908,12 +908,12 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="OriginDisplayAtDestination" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>DESTINATION name shown for journey at the origin. Can be Used to identify joruney for user. (+SIRI 2.0), </xsd:documentation>
+     <xsd:documentation>DESTINATION name shown for journey at the origin. Can be Used to identify journey for user. (+SIRI 2.0), </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>DESTINATION name shown for journey at the origin.  Can be Used to identify joruney for user. (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>DESTINATION name shown for journey at the origin.  Can be Used to identify journey for user. (+SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
@@ -923,7 +923,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="JourneyCondition" type="ServiceConditionEnumeration" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>enum Status of service for this Vehicle Journey - TPEG value. Multiple Conditions can be valid at the same time.  (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Status of service for this Vehicle Journey - TPEG value. Multiple Conditions can be valid at the same time.  (+SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Calls" minOccurs="0">
@@ -1173,24 +1173,24 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="AffectedStopPlaceStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for information about the Stop Places affected by an SITUATION.</xsd:documentation>
+   <xsd:documentation>Type for information about the STOP PLACEs affected by an SITUATION.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="AffectedStopPlaceElementStructure">
     <xsd:sequence>
      <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure">
       <xsd:annotation>
-       <xsd:documentation>Stop Place affected by SITUATION.</xsd:documentation>
+       <xsd:documentation>Identifier of STOP PLACE affected by SITUATION.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="PlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Name of stop place.  (Unbounded since SIRI 2.0)</xsd:documentation>
+       <xsd:documentation>Name of STOP PLACE.  (Unbounded since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="StopPlaceType" type="StopPlaceTypeEnumeration" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Type of Stop Place.</xsd:documentation>
+       <xsd:documentation>Type of STOP PLACE.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="AffectedFacilities" minOccurs="0">
@@ -1233,7 +1233,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="Lines" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Used to restrict stop places to some lines</xsd:documentation>
+       <xsd:documentation>Used to restrict STOP PLACEs to some lines</xsd:documentation>
       </xsd:annotation>
       <xsd:complexType>
        <xsd:sequence>
@@ -1255,7 +1255,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="ComponentRef" type="ifopt:StopPlaceComponentRefStructure">
       <xsd:annotation>
-       <xsd:documentation>Reference to a Stop Place.</xsd:documentation>
+       <xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="ComponentName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1417,7 +1417,7 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="undefinedStopPlaceType">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pts41_255, undefined stop place type</xsd:documentation>
+     <xsd:documentation>TPEG Pts41_255, undefined STOP PLACE type</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="railStation">

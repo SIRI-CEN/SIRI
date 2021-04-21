@@ -488,17 +488,17 @@ Reasons for the loss of a feeder include (but are not limited to) the cancellati
    </xsd:enumeration>
    <xsd:enumeration value="affectedStopplace">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_9, affected stop place</xsd:documentation>
+     <xsd:documentation>TPEG Pts44_9, affected STOP PLACE</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="presentedStopplace">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_10, presented stop place</xsd:documentation>
+     <xsd:documentation>TPEG Pts44_10, presented STOP PLACE</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedStopplaceUsage">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_255, undefined stop place usage</xsd:documentation>
+     <xsd:documentation>TPEG Pts44_255, undefined STOP PLACE usage</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="startPoint">

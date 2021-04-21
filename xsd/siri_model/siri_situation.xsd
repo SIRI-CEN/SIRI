@@ -332,7 +332,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Structured model identifiying parts of transport network affected by SITUATION. Operator and Network values will be defaulted to values in general Context unless explicitly overridden.</xsd:documentation>
+     <xsd:documentation>Structured model identifiying parts of transport network affected by SITUATION. OPERATOR and Network values will be defaulted to values in general Context unless explicitly overridden.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0">
@@ -813,7 +813,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:enumeration>
    <xsd:enumeration value="stopPlace">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_1, stop place</xsd:documentation>
+     <xsd:documentation>TPEG Pts36_1, STOP PLACE</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="line">
@@ -853,7 +853,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:enumeration>
    <xsd:enumeration value="stopPlaceComponent">
     <xsd:annotation>
-     <xsd:documentation>stop place component</xsd:documentation>
+     <xsd:documentation>STOP PLACE component</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="place">

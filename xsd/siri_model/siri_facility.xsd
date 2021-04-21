@@ -195,12 +195,12 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a Stop Place.</xsd:documentation>
+     <xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPlaceComponentId" type="ifopt:StopPlaceComponentRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>System identifier of Stop Place component. Unique at least within Stop Place and concrete component type.</xsd:documentation>
+     <xsd:documentation>System identifier of STOP PLACE component. Unique at least within STOP PLACE and concrete component type.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

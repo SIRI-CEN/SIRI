@@ -59,13 +59,13 @@ Rail transport, Roads and road transport
  <!--===========================================================================================-->
  <xsd:simpleType name="LimitationIdType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a hazard within a stop place.</xsd:documentation>
+   <xsd:documentation>Type for identifier of a hazard within a STOP PLACE.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="LimitationRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to an identifier of a hazard within a stop place.</xsd:documentation>
+   <xsd:documentation>Type for reference to an identifier of a hazard within a STOP PLACE.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="LimitationIdType"/>
