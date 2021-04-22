@@ -337,7 +337,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:group name="AffectedModeGroup">
   <xsd:annotation>
-   <xsd:documentation>Mode Submode and OPERATOR. Overrides any value sspecified for (i) Affected Network (ii) General Context.</xsd:documentation>
+   <xsd:documentation>Mode Submode. Overrides any value sspecified for (i) Affected Network (ii) General Context.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="VehicleMode" minOccurs="0"/>
