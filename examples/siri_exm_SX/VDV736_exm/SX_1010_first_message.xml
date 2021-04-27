@@ -35,7 +35,6 @@
      <Language>DE</Language>
      <Summary xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
      <Summary xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</Summary>
-     <!-- Kein Infolink element im PT Situation laut Verwendungstabelle -->
      <Affects>
       <StopPlaces>
        <AffectedStopPlace>
@@ -66,8 +65,7 @@
         </Networks>
        </Affects>
        <Blocking>
-        <!-- Wie genau soll das gesetzt und wieder zurückgenommen werden? Wer entscheidet es? -->
-        <JourneyPlanner>false</JourneyPlanner>
+        <JourneyPlanner>true</JourneyPlanner>
        </Blocking>
       </Consequence>
      </Consequences>

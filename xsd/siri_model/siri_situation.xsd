@@ -452,12 +452,12 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="Road" type="D2LogicalModel:RoadsideReferencePointLinear" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>AFfected Road as described by a Date2x location.</xsd:documentation>
+     <xsd:documentation>Affected Road as described by a Date2x location.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="ProjectionGroup">
     <xsd:annotation>
-     <xsd:documentation>Optional spatial projection of road. Can be used to distriute the path of the road to systems that do not already hold it. To pass just a Reference, use Datex2 location.</xsd:documentation>
+     <xsd:documentation>Optional spatial projection of road. Can be used to distribute the path of the road to systems that do not already hold it. To pass just a Reference, use Datex2 location.</xsd:documentation>
     </xsd:annotation>
    </xsd:group>
    <xsd:element ref="Extensions" minOccurs="0"/>

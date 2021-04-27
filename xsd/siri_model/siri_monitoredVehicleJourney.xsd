@@ -400,7 +400,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    </xsd:element>
    <xsd:element name="PositionOfTrainBlockPart" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Description of position of Train BLOCK Part within Train to guide passengers where to find it. E.g. 'Front four coaches'.</xsd:documentation>
+     <xsd:documentation>Description of position of train BLOCK part within Train to guide passengers where to find it. E.g. 'Front four coaches'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

@@ -84,7 +84,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="ValidityCondition" type="ifopt:ValidityConditionStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Validty condition governing applicability of LIMITATION.</xsd:documentation>
+     <xsd:documentation>Validity condition governing applicability of LIMITATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="MobilityLimitationGroup"/>
@@ -111,7 +111,7 @@ Rail transport, Roads and road transport
      <xsd:sequence>
       <xsd:element name="AccessibilityLimitation" type="AccessibilityLimitationStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>The accessibility limitations of a component.</xsd:documentation>
+        <xsd:documentation>The accessibility limitations on navigation.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>

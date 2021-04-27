@@ -985,12 +985,12 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to VEHICLE JOURNEY that VEHICLE is making.</xsd:documentation>
+     <xsd:documentation>Reference to VEHICLE JOURNEY framed by the day which the VEHICLE is running.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Location" type="LocationStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Location where the VEHICLE was when the situation arosse</xsd:documentation>
+     <xsd:documentation>Location where the VEHICLE was when the situation arose</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="CurrentLocation" type="LocationStructure" minOccurs="0">
@@ -1006,7 +1006,7 @@ Rail transport, Roads and road transport
    <xsd:group ref="ServiceInfoGroup" minOccurs="0"/>
    <xsd:element name="TrainBlockPart" type="TrainBlockPartStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>If a VEHICLE JOURNEY is a coupled journey, i.e. comprises several coupled BLOCKparts, there will be a separate delivery for each BLOCKp art and this element will indicate the vehicles that the journey part uses.</xsd:documentation>
+     <xsd:documentation>If a VEHICLE JOURNEY is a coupled journey, i.e. comprises several coupled BLOCK PARTs, there will be a separate delivery for each BLOCK PART and this element will indicate the vehicles that the journey part uses.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="OperationalBlockGroup"/>
@@ -1037,7 +1037,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="Order" type="xsd:positiveInteger" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Order of visit to stop within JORUNYE PATTERN of journey.</xsd:documentation>
+       <xsd:documentation>Order of visit to stop within JOURNEY PATTERN of journey.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="CallCondition" type="RoutePointTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
@@ -1142,12 +1142,12 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="PlaceCategory" type="xsd:NMTOKEN" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Category of TOPGRAPHIC PLACE or SITE.</xsd:documentation>
+     <xsd:documentation>Category of TOPOGRAPHIC PLACE or SITE.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="EquipmentRef" type="xsd:NMTOKEN" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Reference to an EQUIPMENT found at location.</xsd:documentation>
+     <xsd:documentation>Reference to an EQUIPMENT found at SITE.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
