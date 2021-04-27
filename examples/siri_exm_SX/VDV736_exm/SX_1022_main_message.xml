@@ -694,7 +694,7 @@
         <Affects>
          <Networks>
           <AffectedNetwork>
-           <!-- Müssen Entlastungsbusse separat referenziert werden? -->
+
            <AffectedLine>
             <LineRef>ch:vbl:VBL014</LineRef>
             <PublishedLineName xml:lang="DE">14</PublishedLineName>
@@ -733,7 +733,7 @@
              </AffectedStopPoint>
             </StopPoints>
            </AffectedLine>
-           <!-- Prüfen ob Texte für beide Richtungen Identisch ist -->
+
           </AffectedNetwork>
          </Networks>
         </Affects>
@@ -1297,7 +1297,7 @@
              <DirectionName xml:lang="DE">Büttenhalde</DirectionName>
             </Direction>
             <StopPoints>
-             <!-- StopPoints hier, da Kombination aus den Stops + beide Linien, oder Stops in Linien doppelt auflisten? -->
+
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::03</StopPointRef>
               <StopPlaceName xml:lang="DE">Brüelstrasse(B)</StopPlaceName>
@@ -1342,7 +1342,7 @@
              <DirectionName xml:lang="DE">Würzenbach</DirectionName>
             </Direction>
             <StopPoints>
-             <!-- StopPoints hier, da Kombination aus den Stops + beide Linien, oder Stops in Linien doppelt auflisten? -->
+
              <AffectedStopPoint>
               <StopPointRef>ch:vbl:618::03</StopPointRef>
               <StopPlaceName xml:lang="DE">Brüelstrasse(B)</StopPlaceName>
@@ -1779,7 +1779,7 @@
         <Perspective>stopPoint</Perspective>
         <TextualContent>
          <TextualContentSize>L</TextualContentSize>
-         <!--Wie sind hier die unterschiedlichen Ankündigungen abzubilden? Wie in <ActionRef>0070</ActionRef> und Folgende oder alles in einem Text? -->
+
          <SummaryContent>
           <SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
           <SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
@@ -1806,7 +1806,7 @@
          <Networks>
           <AffectedNetwork>
            <AffectedLine>
-            <!--
+
                                                     Bei einer anderen Meldung wurde der Entlastungsbus mit <LineRef>ch:vbl:Entlastungsbus</LineRef> bezeichnet. Welche Bezeichnung soll verwendet werden?
                                                 -->
             <LineRef>ch:vbl:VBLEBUS</LineRef>
