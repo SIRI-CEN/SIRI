@@ -1806,9 +1806,6 @@
          <Networks>
           <AffectedNetwork>
            <AffectedLine>
-
-                                                    Bei einer anderen Meldung wurde der Entlastungsbus mit <LineRef>ch:vbl:Entlastungsbus</LineRef> bezeichnet. Welche Bezeichnung soll verwendet werden?
-                                                -->
             <LineRef>ch:vbl:VBLEBUS</LineRef>
             <PublishedLineName xml:lang="DE">EBUS</PublishedLineName>
             <Direction>
