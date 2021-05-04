@@ -344,9 +344,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Classifiers. Logically ANDed with other values.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
+   <xsd:element name="Severity" type="SeverityEnumeration" default="normal" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Severity filter value to apply: only SITUATIONs with a severity greater than or equal to the specified value will be returned. See TPEG severities. Default is 'all'.</xsd:documentation>
+     <xsd:documentation>Severity filter value to apply: only SITUATIONs with a severity greater than or equal to the specified value will be returned. See TPEG severities. Default is 'normal'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Scope" type="ScopeTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
