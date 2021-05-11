@@ -4,7 +4,7 @@
 	This example describes a  set of capabilities & permissions describing a SIRI-SM Service
 
 (C) Copyright 2005-2012 CEN SIRI -->
-<StopMonitoringCapabilitiesResponse xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd" version="2.1">
+<StopMonitoringCapabilitiesResponse xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd" version="2.0">
  <ResponseTimestamp>2005-11-17T09:30:47-05:00</ResponseTimestamp>
  <RequestMessageRef>12536</RequestMessageRef>
  <Status>true</Status>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <CapabilitiesResponse version="2.1">
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+ <CapabilitiesResponse version="2.0">
   <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
   <ProducerRef>KUBRICK</ProducerRef>
-  <ProductionTimetableCapabilitiesResponse version="2.1">
+  <ProductionTimetableCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <Status>true</Status>
    <ProductionTimetableServiceCapabilities>
@@ -48,7 +48,7 @@
     </AccessControl>
    </ProductionTimetableServiceCapabilities>
   </ProductionTimetableCapabilitiesResponse>
-  <EstimatedTimetableCapabilitiesResponse version="2.1">
+  <EstimatedTimetableCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <Status>true</Status>
    <EstimatedTimetableServiceCapabilities>
@@ -92,7 +92,7 @@
    </EstimatedTimetableServiceCapabilities>
    <Extensions/>
   </EstimatedTimetableCapabilitiesResponse>
-  <StopTimetableCapabilitiesResponse version="2.1">
+  <StopTimetableCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <RequestMessageRef>my123</RequestMessageRef>
    <Status>true</Status>
@@ -135,7 +135,7 @@
     </AccessControl>
    </StopTimetableServiceCapabilities>
   </StopTimetableCapabilitiesResponse>
-  <StopMonitoringCapabilitiesResponse version="2.1">
+  <StopMonitoringCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <RequestMessageRef>my123</RequestMessageRef>
    <Status>true</Status>
@@ -196,7 +196,7 @@
     </ResponseFeatures>
    </StopMonitoringServiceCapabilities>
   </StopMonitoringCapabilitiesResponse>
-  <VehicleMonitoringCapabilitiesResponse version="2.1">
+  <VehicleMonitoringCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <RequestMessageRef>abcde</RequestMessageRef>
    <Status> true</Status>
@@ -253,7 +253,7 @@
     </ResponseFeatures>
    </VehicleMonitoringServiceCapabilities>
   </VehicleMonitoringCapabilitiesResponse>
-  <ConnectionTimetableCapabilitiesResponse version="2.1">
+  <ConnectionTimetableCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <RequestMessageRef>abcde</RequestMessageRef>
    <Status> true</Status>
@@ -298,7 +298,7 @@
     </AccessControl>
    </ConnectionTimetableServiceCapabilities>
   </ConnectionTimetableCapabilitiesResponse>
-  <ConnectionMonitoringCapabilitiesResponse version="2.1">
+  <ConnectionMonitoringCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <RequestMessageRef>abcde</RequestMessageRef>
    <Status> true</Status>
@@ -343,7 +343,7 @@
     </AccessControl>
    </ConnectionMonitoringServiceCapabilities>
   </ConnectionMonitoringCapabilitiesResponse>
-  <GeneralMessageCapabilitiesResponse version="2.1">
+  <GeneralMessageCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <RequestMessageRef>abcde</RequestMessageRef>
    <Status> true</Status>
@@ -381,7 +381,7 @@
     </AccessControl>
    </GeneralMessageServiceCapabilities>
   </GeneralMessageCapabilitiesResponse>
-  <FacilityMonitoringCapabilitiesResponse version="2.1">
+  <FacilityMonitoringCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <RequestMessageRef>abcde</RequestMessageRef>
    <Status> true</Status>
@@ -437,7 +437,7 @@
     </ResponseFeatures>
    </FacilityMonitoringServiceCapabilities>
   </FacilityMonitoringCapabilitiesResponse>
-  <SituationExchangeCapabilitiesResponse version="2.1">
+  <SituationExchangeCapabilitiesResponse version="2.0">
    <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
    <RequestMessageRef>abcde</RequestMessageRef>
    <Status> true</Status>
