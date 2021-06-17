@@ -497,9 +497,9 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="PushedActionStructure">
     <xsd:sequence>
-     <xsd:element name="WorkgroupRef" type="xsd:string" default="true" minOccurs="0">
+     <xsd:element name="WorkgroupRef" type="xsd:string" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Workgroup of user to be notified. Default is 'true'.</xsd:documentation>
+       <xsd:documentation>Workgroup of user to be notified.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="UserName" type="xsd:string" minOccurs="0">
@@ -507,9 +507,9 @@ Rail transport, Roads and road transport
        <xsd:documentation>Name of user to be notified.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="UserRef" type="xsd:string" default="true" minOccurs="0">
+     <xsd:element name="UserRef" type="xsd:string" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Reference to a user to be notified. Default is 'true'.</xsd:documentation>
+       <xsd:documentation>Reference to a user to be notified.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -579,7 +579,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="SourceRef" type="ParticipantRefStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>The system which created this passenger information. If absent, is the same version as the enclosing Situation</xsd:documentation>
+       <xsd:documentation>The system which created this passenger information. If absent, the same system as the PtSituationElement.ParticipantRef.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="OwnerRef" type="OrganisationRefStructure" minOccurs="0">
