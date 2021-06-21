@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:acsb="http://www.ifopt.org.uk/acsb" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<ResponseTimestamp>2020-08-14T13:10:00+02:00</ResponseTimestamp>
+		<ProducerRef>MES</ProducerRef>
+		<SituationExchangeDelivery version="2.0">
+			<ResponseTimestamp>2020-08-14T13:10:00+02:00</ResponseTimestamp>
+			<Situations>
+				<PtSituationElement>
+					<CreationTime>2020-08-14T13:10:00+02:00</CreationTime>
+					<ParticipantRef>HHA-U</ParticipantRef>
+					<SituationNumber>181107001A</SituationNumber>
+					<Source>
+						<SourceType>web</SourceType>
+						<AgentReference>HHA-U</AgentReference>
+						<Name xml:lang="DE">HHA MES Disponent</Name>
+						<TimeOfCommunication>2020-08-14T13:10:00+02:00</TimeOfCommunication>
+					</Source>
+					<Progress>published</Progress>
+					<ValidityPeriod>
+						<StartTime>2020-09-05T04:00:00+02:00</StartTime>
+						<EndTime>2020-12-06T23:59:00+01:00</EndTime>
+					</ValidityPeriod>
+					<PublicationWindow>
+						<StartTime>2020-08-17T00:00:00+02:00</StartTime>
+						<EndTime>2020-12-06T23:59:00+01:00</EndTime>
+					</PublicationWindow>
+					<AlertCause>policeActivity</AlertCause>
+					<Priority>3</Priority>  <!-- normal -->
+					<Planned>true</Planned>
+					<Summary xml:lang="DE">Bauarbeiten an Haltestelle Landungsbrücken</Summary>
+					<Description xml:lang="DE">Barrierefreier Ausbau dieser Haltestelle, 
+												Instandsetzungsarbeiten an der Haltestelle.
+												Deshalb fahren die U-Bahnen der Linie U3 an dieser Haltestelle durch.
+												Da das RBL der U-Bahn den Halt an dieser Haltestelle weiterhin anzeigt, 
+												muß die Echtzeit-Anzeige an dieser Haltestelle de-aktiviert werden.</Description>
+					<Affects>
+						<StopPlaces>
+							<AffectedStopPlace>
+								<StopPlaceRef>de:02000:80950</StopPlaceRef>
+								<PlaceName xml:lang="DE">Landungsbrücken</PlaceName>
+							</AffectedStopPlace>
+						</StopPlaces>
+					</Affects>
+					<Consequences>
+						<Consequence>
+							<!-- stopCancelled = Haltestelle wird nicht bedient / durchfahrt -->
+							<Condition>stopCancelled</Condition>
+							<Affects>
+								<Networks>
+									<AffectedNetwork>
+										<AffectedOperator>
+											<OperatorShortName xml:lang="DE">HHA-U</OperatorShortName>
+										</AffectedOperator>
+										<AffectedLine>
+											<LineRef>HHA-U:U3_HHA-U</LineRef>
+											<PublishedLineName xml:lang="DE">U3</PublishedLineName>
+											<StopPoints>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:80950::1</StopPointRef>
+													<StopPointName xml:lang="DE">Landungsbrücken</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:80950::2</StopPointRef>
+													<StopPointName xml:lang="DE">Landungsbrücken</StopPointName>
+												</AffectedStopPoint>
+											</StopPoints>
+										</AffectedLine>
+									</AffectedNetwork>
+								</Networks>
+							</Affects>
+							<Blocking>
+								<JourneyPlanner>true</JourneyPlanner>
+								<!-- use this consequence for journey planning -->
+								<RealTime>true</RealTime>
+								<!-- disable real time for that stoppoint -->
+							</Blocking>
+						</Consequence>
+					</Consequences>
+					<PublishingActions>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<NetworkRef>HHA</NetworkRef>
+											<AffectedLine>
+												<LineRef>HHA-U:U3_HHA-U</LineRef>
+												<PublishedLineName xml:lang="DE">U3</PublishedLineName>
+												<Direction>
+													<DirectionRef>1</DirectionRef>
+													<DirectionName xml:lang="DE">Barmbek</DirectionName>
+												</Direction>
+												<Direction>
+													<DirectionRef>6</DirectionRef>
+													<DirectionName xml:lang="DE">Wandsbek-Gartenstadt</DirectionName>
+												</Direction>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-08-17T00:00:00+02:00</StartTime>
+									<EndTime>2020-09-05T04:00:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-08-14T13:09:00+02:00</RecordedAtTime>
+								<SourceRef>HHA_MES_DISPONENT</SourceRef>
+								<Perspective>general</Perspective>
+								<TextualContent>
+									<TextualContentSize>medium</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Ankündigung: U3 Landungsbrücken ohne Halt 
+												in beiden Richtungen.</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Von Sonnabend, 5. September, bis Sonntag, 6. Dezember, 
+												fährt die U3 in beiden Richtungen ohne Halt durch die 
+												Haltestelle Landungsbrücken.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Ankündigung: U3 Landungsbrücken ohne Halt</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Vom 5. 9. bis 6. 12. 
+												U3 ohne Halt in	Hst. Landungsbrücken.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>stopPoint</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<NetworkRef>HHA</NetworkRef>
+											<AffectedLine>
+												<LineRef>HHA-U:U3_HHA-U</LineRef>
+												<PublishedLineName xml:lang="DE">U3</PublishedLineName>
+												<Direction>
+													<DirectionRef>1</DirectionRef>
+													<DirectionName xml:lang="DE">Barmbek</DirectionName>
+												</Direction>
+												<Direction>
+													<DirectionRef>6</DirectionRef>
+													<DirectionName xml:lang="DE">Wandsbek-Gartenstadt</DirectionName>
+												</Direction>
+												<StopPoints>
+													<AffectedStopPoint>
+														<StopPointRef>de:02000:80950::1</StopPointRef>
+														<StopPointName xml:lang="DE">Landungsbrücken</StopPointName>
+													</AffectedStopPoint>
+													<AffectedStopPoint>
+														<StopPointRef>de:02000:80950::2</StopPointRef>
+														<StopPointName xml:lang="DE">Landungsbrücken</StopPointName>
+													</AffectedStopPoint>
+												</StopPoints>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-09-05T04:00:00+02:00</StartTime>
+									<EndTime>2020-12-06T23:59:00+01:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-08-14T13:09:00+02:00</RecordedAtTime>
+								<SourceRef>HHA_MES_DISPONENT</SourceRef>
+								<Perspective>general</Perspective>
+								<TextualContent>
+									<TextualContentSize>large</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">U3 Landungsbrücken ohne Halt 
+												in beiden Richtungen.</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Von Sonnabend, 5. September, bis Sonntag, 6. Dezember, 
+												fährt die U3 in beiden Richtungen ohne Halt durch die 
+												Haltestelle Landungsbrücken.
+												Grund hierfür sind der barrierefreie Ausbau und 
+												Instandsetzungsarbeiten an der Haltestelle.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>medium</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">U3 Landungsbrücken ohne Halt 
+												in beiden Richtungen.</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Von Sonnabend, 5. September, bis Sonntag, 6. Dezember, 
+												fährt die U3 in beiden Richtungen ohne Halt durch die 
+												Haltestelle Landungsbrücken.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">U3 Landungsbrücken ohne Halt</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Vom 5. 9. bis 6. 12. 
+												U3 ohne Halt in	Hst. Landungsbrücken.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>stopPlace</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<NetworkRef>HHA</NetworkRef>
+											<AffectedLine>
+												<LineRef>HHA-U:U3_HHA-U</LineRef>
+												<PublishedLineName xml:lang="DE">U3</PublishedLineName>
+												<Direction>
+													<DirectionRef>1</DirectionRef>
+													<DirectionName xml:lang="DE">Barmbek</DirectionName>
+												</Direction>
+												<Direction>
+													<DirectionRef>6</DirectionRef>
+													<DirectionName xml:lang="DE">Wandsbek-Gartenstadt</DirectionName>
+												</Direction>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-08-17T00:00:00+02:00</StartTime>
+									<EndTime>2020-12-06T23:59:00+01:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-08-14T13:09:00+02:00</RecordedAtTime>
+								<SourceRef>HHA_MES_DISPONENT</SourceRef>
+								<Perspective>stopPoint</Perspective>
+								<TextualContent>
+									<TextualContentSize>large</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">U3 Landungsbrücken ohne Halt 
+												in beiden Richtungen.</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Von Sonnabend, 5. September, bis Sonntag, 6. Dezember, 
+												fährt die U3 in beiden Richtungen ohne Halt durch die 
+												Haltestelle Landungsbrücken.
+												Grund hierfür sind der barrierefreie Ausbau und 
+												Instandsetzungsarbeiten an der Haltestelle.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>medium</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">U3 Landungsbrücken ohne Halt 
+												in beiden Richtungen.</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Von Sonnabend, 5. September, bis Sonntag, 6. Dezember, 
+												fährt die U3 in beiden Richtungen ohne Halt durch die 
+												Haltestelle Landungsbrücken.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE"> </SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Vom 5. 9. bis 6. 12. 
+												U3 ohne Halt in	Landungsbrücken.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+					</PublishingActions>
+				</PtSituationElement>
+			</Situations>
+		</SituationExchangeDelivery>
+	</ServiceDelivery>
+</Siri>

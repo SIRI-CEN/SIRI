@@ -1288,6 +1288,11 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
      <xsd:documentation>Description of fare exceptions allowed because of disruption.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
+   <xsd:element name="PredictableDelays" type="PredictableDelaysStructure" minOccurs="0">
+    <xsd:annotation>
+        <xsd:documentation>Delay at specified stop as result of this Consequence</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
@@ -1530,6 +1535,63 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
+ <!--==PredictableDelays =========================================== -->
+ <xsd:complexType name="PredictableDelaysStructure">
+  <xsd:annotation>
+      <xsd:documentation>Type for defining the delay at different stops.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+      <xsd:element name="PredictableDelay" type="PredictableDelayStructure" minOccurs="0" maxOccurs="unbounded">
+          <xsd:annotation>
+              <xsd:documentation>Additional journey time needed to overcome disruption.</xsd:documentation>
+          </xsd:annotation>
+      </xsd:element>
+  </xsd:sequence>
+  </xsd:complexType>
+   <xsd:complexType name="PredictableDelayStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for defining the delay at one stop.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure">
+					<xsd:annotation>
+						<xsd:documentation>Stop affected by Consequence.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure">
+					<xsd:annotation>
+						<xsd:documentation>Stop affected by Consequence.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="ArrivalTravelProlongation" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Additional travel time needed to achieve arriving at specified stop</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ArrivalTravelDuration" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Travel time needed from start to arrive at specified stop</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureTravelProlongation" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Additional journey time needed to achieve departing from specified stop</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureTravelDuration" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Travel time needed from start to depart at specified stop</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureInterval" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Time interval if not correlated to the original departure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
  <!-- ======================================================================= -->
  <!-- ======================================================================= -->
 </xsd:schema>

@@ -275,6 +275,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>TPEG Pts43_255, undefined status</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
+   <xsd:enumeration value="predictableDelay">
+    <xsd:annotation>
+     <xsd:documentation>predictable delay</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
    <xsd:enumeration value="altered">
     <xsd:annotation>
      <xsd:documentation>TPEG Pti13_1, deprecated (SIRI 2.1)</xsd:documentation>

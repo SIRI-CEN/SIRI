@@ -233,5 +233,13 @@
 			<File FilePath="examples\siri_exu_capability\exd_allServices_capabilitiesRequest.xml" HomeFolder="Yes"/>
 			<File FilePath="examples\siri_exu_capability\exd_allServices_capabilitiesResponse.xml" HomeFolder="Yes"/>
 		</Folder>
+		<Folder FolderName="hamburg_example">
+        		  <File FilePath="..\examples\hamburg_example\Use_Case_Ausfall.xml" HomeFolder="Yes"/>
+        		  <File FilePath="..\examples\hamburg_example\Use_Case_Durchfahrt_Landungsbruecken.xml" HomeFolder="Yes"/>
+        		  <File FilePath="..\examples\hamburg_example\Use_Case_Abkehren1Seitig_S1_global_initial.xml" HomeFolder="Yes"/>
+        		  <File FilePath="..\examples\hamburg_example\Use_Case_Abkehren1Seitig_S1_global_nur_Ausfall.xml" HomeFolder="Yes"/>
+        		  <File FilePath="..\examples\hamburg_example\Use_Case_Abkehren1Seitig_S1_global_SEV.xml" HomeFolder="Yes"/>
+        		  <File FilePath="..\examples\hamburg_example\Use_Case_Abkehren2Seitig_U1_global_SEV.xml" HomeFolder="Yes"/>
+        		</Folder>
 	</Folder>
 </Project>

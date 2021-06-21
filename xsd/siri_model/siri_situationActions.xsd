@@ -745,6 +745,8 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="general"/>
    <xsd:enumeration value="stopPoint"/>
    <xsd:enumeration value="vehicleJourney"/>
+   <xsd:enumeration value="journeyPlanner"/>
+   <xsd:enumeration value="generalExceptJourneyPlanner"/>
   </xsd:restriction>
  </xsd:simpleType>
 </xsd:schema>

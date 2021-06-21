@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri  ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<ResponseTimestamp>2020-10-01T13:10:00+02:00</ResponseTimestamp>
+		<ProducerRef>MES</ProducerRef>
+		<SituationExchangeDelivery version="2.0">
+			<ResponseTimestamp>2020-10-01T13:10:00+02:00</ResponseTimestamp>
+			<Situations>
+				<PtSituationElement>
+					<CreationTime>2020-10-01T13:20:00+02:00</CreationTime>
+					<ParticipantRef>S-Bahn-HH</ParticipantRef>
+					<SituationNumber>201001001</SituationNumber>
+					<Version>2</Version>
+					<Source>
+						<SourceType>web</SourceType>
+						<AgentReference>S-DB-HH</AgentReference>
+						<Name xml:lang="DE">S-Bahn MES Disponent</Name>
+						<TimeOfCommunication>2020-10-01T13:08:00+02:00</TimeOfCommunication>
+					</Source>
+					<VersionedAtTime>2020-10-01T13:20:00+02:00</VersionedAtTime>
+					<Progress>published</Progress>
+					<ValidityPeriod>
+						<StartTime>2020-10-01T13:10:00+02:00</StartTime>
+						<EndTime>2020-10-01T16:00:00+02:00</EndTime>
+					</ValidityPeriod>
+					<PublicationWindow>
+						<StartTime>2020-10-01T13:10:00+02:00</StartTime>
+						<EndTime>2020-10-01T16:00:00+02:00</EndTime>
+					</PublicationWindow>
+					<AlertCause>policeActivity</AlertCause>
+					<Priority>2</Priority>
+					<!-- high -->
+					<Planned>false</Planned>
+					<Summary xml:lang="DE">Polizei-Einsatz an der S-Bahn-Station Sülldorf.</Summary>
+					<Description xml:lang="DE">Wegen des Polizei-Einsatzes an der Station Sülldorf 
+									kommt es zu einer Streckensperrung der S1 zwischen Blankenese - Wedel 
+									in beiden Richtungen. Vermutete Daueer ca. 3 Stunden. Es wird ein SEV 
+									eingerichtet, Dauer der Einrichtung ca. 30 Minuten. Danach fährt der 
+									SEV alle 10 Minuten für die Dauer der Streckensperrung.</Description>
+					<Affects>
+						<StopPlaces>
+							<AffectedStopPlace>
+								<StopPlaceRef>de:02000:81952</StopPlaceRef>
+								<PlaceName xml:lang="DE">Sülldorf</PlaceName>
+							</AffectedStopPlace>
+						</StopPlaces>
+					</Affects>
+					<Consequences>
+						<Consequence>
+							<!-- Initial bevore SEV takes place -->
+							<Period>
+								<StartTime>2020-10-01T13:10:00+02:00</StartTime>
+								<EndTime>2020-10-01T13:45:00+02:00</EndTime>
+							</Period>
+							<Condition>disruption</Condition>
+							<!-- it takes time until the SEV is ready -->
+							<Affects>
+								<Networks>
+									<AffectedNetwork>
+										<AffectedLine>
+											<AffectedOperator>
+												<OperatorShortName xml:lang="DE">S-Bahn</OperatorShortName>
+											</AffectedOperator>
+											<LineRef>ZVU-DB:S1_ZVU-DB_S-ZVU</LineRef>
+											<PublishedLineName xml:lang="DE">S1</PublishedLineName>
+											<StopPoints>
+												<!-- the portion between Iserbrook and Wedel is affected by the disruption -->
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81951</StopPointRef>
+													<StopPointName xml:lang="DE">Iserbrook</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81952</StopPointRef>
+													<StopPointName xml:lang="DE">Sülldorf</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81953</StopPointRef>
+													<StopPointName xml:lang="DE">Rissen</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:01056:85950</StopPointRef>
+													<StopPointName xml:lang="DE">Wedel</StopPointName>
+												</AffectedStopPoint>
+											</StopPoints>
+										</AffectedLine>
+									</AffectedNetwork>
+								</Networks>
+							</Affects>
+							<Advice>
+								<Details xml:lang="DE">Es dauert vermutlich ca. 30 Minuten, bis der SEV bereit ist.</Details>
+								<Details xml:lang="DE">In dieser Zeit ist leider keine Beförderung möglich.</Details>
+							</Advice>
+							<Blocking>
+								<JourneyPlanner>true</JourneyPlanner>
+								<!-- handle disruption in Journey Planner -->
+								<RealTime>true</RealTime>
+								<!-- this blocks the real-time for the S1, which tells, 
+									 it would run all the way (but ends the trip in Blankenese) -->
+							</Blocking>
+						</Consequence>
+						<Consequence>
+							<Period>
+								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
+								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
+							</Period>
+							<Condition>predictableDelay</Condition>
+							<!-- special handling for the case the trip starts 
+									outside the disrupped portion but ends inside -->
+							<Affects>
+								<Networks>
+									<AffectedNetwork>
+										<AffectedLine>
+											<AffectedOperator>
+												<OperatorShortName xml:lang="DE">S-Bahn</OperatorShortName>
+											</AffectedOperator>
+											<LineRef>ZVU-DB:S1_ZVU-DB_S-ZVU</LineRef>
+											<PublishedLineName xml:lang="DE">S1</PublishedLineName>
+											<Direction>
+												<DirectionRef>6</DirectionRef>
+												<DirectionName>Wedel</DirectionName>
+											</Direction>
+											<StopPoints>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81950</StopPointRef>
+													<StopPointName xml:lang="DE">Blankenese</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81951</StopPointRef>
+													<StopPointName xml:lang="DE">Iserbrook</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81952</StopPointRef>
+													<StopPointName xml:lang="DE">Sülldorf</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81953</StopPointRef>
+													<StopPointName xml:lang="DE">Rissen</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:01056:85950</StopPointRef>
+													<StopPointName xml:lang="DE">Wedel</StopPointName>
+												</AffectedStopPoint>
+											</StopPoints>
+										</AffectedLine>
+									</AffectedNetwork>
+								</Networks>
+							</Affects>
+							<Advice>
+								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen S-Bahnhof.</Details>
+							</Advice>
+							<Blocking>
+								<JourneyPlanner>true</JourneyPlanner>
+								<!-- handle replacementRide (SEV) in Journey Planner -->
+								<RealTime>true</RealTime>
+								<!-- this blocks the real-time for the S1, which tells, 
+									 it would run all the way (but ends the trip in Blankenese) -->
+							</Blocking>
+							<PredictableDelays>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:81950</StopPointRef>
+										<StopPointName xml:lang="DE">Blankenese</StopPointName>
+									</AffectedStopPoint>
+									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
+									<!-- 10 minutes for the change to SEV-->
+								</PredictableDelay>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:81951</StopPointRef>
+										<StopPointName xml:lang="DE">Iserbrook</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT15M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT15M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:81952</StopPointRef>
+										<StopPointName xml:lang="DE">Sülldorf</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT20M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT20M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:81953</StopPointRef>
+										<StopPointName xml:lang="DE">Rissen</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT25M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT25M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:01056:85950</StopPointRef>
+										<StopPointName xml:lang="DE">Wedel</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT30M</ArrivalTravelProlongation>
+                                    <DepartureTravelProlongation>PT40M</DepartureTravelProlongation>
+                                    <!-- 10 minutes for the change from SEV-->
+								</PredictableDelay>
+							</PredictableDelays>
+						</Consequence>
+						<Consequence>
+							<Period>
+								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
+								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
+							</Period>
+							<Condition>predictableDelay</Condition>
+							<!-- special handling for the case the trip starts 
+									inside the disrupped portion but ends outside -->
+							<Affects>
+								<Networks>
+									<AffectedNetwork>
+										<AffectedLine>
+											<AffectedOperator>
+												<OperatorShortName xml:lang="DE">S-Bahn</OperatorShortName>
+											</AffectedOperator>
+											<LineRef>ZVU-DB:S1_ZVU-DB_S-ZVU</LineRef>
+											<PublishedLineName xml:lang="DE">S1</PublishedLineName>
+											<Direction>
+												<DirectionRef>1</DirectionRef>
+												<DirectionName>Airport/Poppenbüttel</DirectionName>
+											</Direction>
+											<StopPoints>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81950</StopPointRef>
+													<StopPointName xml:lang="DE">Blankenese</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81951</StopPointRef>
+													<StopPointName xml:lang="DE">Iserbrook</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81952</StopPointRef>
+													<StopPointName xml:lang="DE">Sülldorf</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:81953</StopPointRef>
+													<StopPointName xml:lang="DE">Rissen</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:01056:85950</StopPointRef>
+													<StopPointName xml:lang="DE">Wedel</StopPointName>
+												</AffectedStopPoint>
+											</StopPoints>
+										</AffectedLine>
+									</AffectedNetwork>
+								</Networks>
+							</Affects>
+							<Advice>
+								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen S-Bahnhof.</Details>
+							</Advice>
+							<Blocking>
+								<JourneyPlanner>true</JourneyPlanner>
+								<!-- handle replacementRide (SEV) in Journey Planner -->
+								<RealTime>true</RealTime>
+								<!-- this blocks the real-time for the S1, which tells, 
+									 it would run all the way (but ends the trip in Blankenese) -->
+							</Blocking>
+							<PredictableDelays>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:81950</StopPointRef>
+										<StopPointName xml:lang="DE">Blankenese</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT30M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT40M</DepartureTravelProlongation>
+									<!-- 10 minutes more for the change from SEV-->
+								</PredictableDelay>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:81951</StopPointRef>
+										<StopPointName xml:lang="DE">Iserbrook</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT25M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT25M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:81952</StopPointRef>
+										<StopPointName xml:lang="DE">Sülldorf</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT20M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT20M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:81953</StopPointRef>
+										<StopPointName xml:lang="DE">Rissen</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT15M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT15M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
+									<AffectedStopPoint>
+										<StopPointRef>de:01056:85950</StopPointRef>
+										<StopPointName xml:lang="DE">Wedel</StopPointName>
+									</AffectedStopPoint>
+									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
+                                    <!-- 10 minutes for the change to SEV-->
+								</PredictableDelay>
+							</PredictableDelays>
+						</Consequence>
+					</Consequences>
+					<PublishingActions>
+						<PublishingAction>
+							<!-- for stop points display only -->
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<NetworkRef>S-Bahn</NetworkRef>
+											<AffectedLine>
+												<LineRef>ZVU-DB:S1_ZVU-DB_S-ZVU</LineRef>
+												<PublishedLineName xml:lang="DE">S1</PublishedLineName>
+												<Direction>
+													<DirectionRef>1</DirectionRef>
+													<DirectionName xml:lang="DE">Airport/Poppenbüttel</DirectionName>
+												</Direction>
+												<Direction>
+													<DirectionRef>6</DirectionRef>
+													<DirectionName xml:lang="DE">Wedel</DirectionName>
+												</Direction>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-10-01T13:10:00+02:00</StartTime>
+									<EndTime>2020-10-01T13:45:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-10-01T13:11:00+02:00</RecordedAtTime>
+								<SourceRef>S-Bahn_MES_Disponent</SourceRef>
+								<Perspective>stopPoint</Perspective>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 temporäre Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+								</TextualContent>
+							</PassengerInformationAction>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-10-01T13:45:00+02:00</StartTime>
+									<EndTime>2020-10-01T16:00:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-10-01T13:11:00+02:00</RecordedAtTime>
+								<SourceRef>S-Bahn_MES_Disponent</SourceRef>
+								<Perspective>stopPoint</Perspective>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 temporäre Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
+													Verzögerung bis zu 30 Min.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<!-- Initial bevore SEV takes place plus general except journey planner-->
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<NetworkRef>S-Bahn</NetworkRef>
+											<AffectedLine>
+												<LineRef>ZVU-DB:S1_ZVU-DB_S-ZVU</LineRef>
+												<PublishedLineName xml:lang="DE">S1</PublishedLineName>
+												<Direction>
+													<DirectionRef>1</DirectionRef>
+													<DirectionName xml:lang="DE">Airport/Poppenbüttel</DirectionName>
+												</Direction>
+												<Direction>
+													<DirectionRef>6</DirectionRef>
+													<DirectionName xml:lang="DE">Wedel</DirectionName>
+												</Direction>
+												<StopPlaces>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81950</StopPlaceRef>
+														<PlaceName xml:lang="DE">Blankenese</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81951</StopPlaceRef>
+														<PlaceName xml:lang="DE">Iserbrook</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81952</StopPlaceRef>
+														<PlaceName xml:lang="DE">Sülldorf</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81953</StopPlaceRef>
+														<PlaceName xml:lang="DE">Rissen</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:01056:85950</StopPlaceRef>
+														<PlaceName xml:lang="DE">Wedel</PlaceName>
+													</AffectedStopPlace>
+												</StopPlaces>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-10-01T13:10:00+02:00</StartTime>
+									<EndTime>2020-10-01T13:45:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
+								<SourceRef>S-Bahn_MES_Disponent</SourceRef>
+								<Perspective>general</Perspective>
+								<TextualContent>
+									<TextualContentSize>medium</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes ist 
+													derzeit keine Beförderung zwischen Blankenese und Wedel 
+													in beiden Richtungen möglich. SEV ist bestellt, 
+													dauert aber noch.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+								</TextualContent>
+							</PassengerInformationAction>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-10-01T13:45:00+02:00</StartTime>
+									<EndTime>2020-10-01T16:00:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
+								<SourceRef>S-Bahn_MES_Disponent</SourceRef>
+								<Perspective>generalExceptJourneyPlanner</Perspective>
+								<TextualContent>
+									<TextualContentSize>medium</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
+													ist derzeit keine Beförderung zwischen Blankenese und Wedel 
+													in beiden Richtungen möglich. SEV ist eingerichtet, 
+													Verlängerung der Fahrzeit bis zu 30 Min.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
+													Verzögerung bis zu 30 Min.</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<NetworkRef>S-Bahn</NetworkRef>
+											<AffectedLine>
+												<LineRef>ZVU-DB:S1_ZVU-DB_S-ZVU</LineRef>
+												<PublishedLineName xml:lang="DE">S1</PublishedLineName>
+												<Direction>
+													<DirectionRef>6</DirectionRef>
+													<DirectionName xml:lang="DE">Wedel</DirectionName>
+												</Direction>
+												<StopPlaces>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81950</StopPlaceRef>
+														<PlaceName xml:lang="DE">Blankenese</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81951</StopPlaceRef>
+														<PlaceName xml:lang="DE">Iserbrook</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81952</StopPlaceRef>
+														<PlaceName xml:lang="DE">Sülldorf</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81953</StopPlaceRef>
+														<PlaceName xml:lang="DE">Rissen</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:01056:85950</StopPlaceRef>
+														<PlaceName xml:lang="DE">Wedel</PlaceName>
+													</AffectedStopPlace>
+												</StopPlaces>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-10-01T13:45:00+02:00</StartTime>
+									<EndTime>2020-10-01T16:00:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
+								<SourceRef>S-Bahn_MES_Disponent</SourceRef>
+								<Perspective>journeyPlanner</Perspective>
+								<TextualContent>
+									<TextualContentSize>medium</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
+													ist derzeit keine Beförderung zwischen Blankenese und Wedel 
+													in beiden Richtungen möglich. SEV ist eingerichtet.
+										</DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
+													Verzögerung </DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<NetworkRef>S-Bahn</NetworkRef>
+											<AffectedLine>
+												<LineRef>ZVU-DB:S1_ZVU-DB_S-ZVU</LineRef>
+												<PublishedLineName xml:lang="DE">S1</PublishedLineName>
+												<Direction>
+													<DirectionRef>1</DirectionRef>
+													<DirectionName xml:lang="DE">Airport/Poppenbüttel</DirectionName>
+												</Direction>
+												<StopPlaces>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81950</StopPlaceRef>
+														<PlaceName xml:lang="DE">Blankenese</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81951</StopPlaceRef>
+														<PlaceName xml:lang="DE">Iserbrook</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81952</StopPlaceRef>
+														<PlaceName xml:lang="DE">Sülldorf</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:81953</StopPlaceRef>
+														<PlaceName xml:lang="DE">Rissen</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
+														<StopPlaceRef>de:01056:85950</StopPlaceRef>
+														<PlaceName xml:lang="DE">Wedel</PlaceName>
+													</AffectedStopPlace>
+												</StopPlaces>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2020-10-01T13:45:00+02:00</StartTime>
+									<EndTime>2020-10-01T16:00:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef/>
+								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
+								<SourceRef>S-Bahn_MES_Disponent</SourceRef>
+								<Perspective>journeyPlanner</Perspective>
+								<TextualContent>
+									<TextualContentSize>medium</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
+													ist derzeit keine Beförderung zwischen Blankenese und Wedel 
+													in beiden Richtungen möglich. SEV ist eingerichtet, 
+													Verlängerung der Fahrzeit </DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+								<TextualContent>
+									<TextualContentSize>small</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">S1 Streckensperrung Blankenese - Wedel</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
+													Verzögerung </DescriptionText>
+									</DescriptionContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+					</PublishingActions>
+				</PtSituationElement>
+			</Situations>
+		</SituationExchangeDelivery>
+	</ServiceDelivery>
+</Siri>
