@@ -1466,12 +1466,12 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
   <xsd:sequence>
    <xsd:element name="JourneyPlanner" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether information about parts of the network identified by Affects should be blocked from computation made by a Journey Planner that has a real-time feed of the SITUATIONs. Default is 'false'; do not suppress.</xsd:documentation>
+     <xsd:documentation>Whether information about parts of the NETWORK identified by AffectsScope should be blocked from the Journey Planner. Default is false; do not suppress.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RealTime" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether information about parts of the network identified by Affects should be blocked from real-time departure info systems. Default is 'false'; do not suppress.</xsd:documentation>
+     <xsd:documentation>Whether information about parts of the NETWORK identified by AffectsScope should be blocked from real-time departure info systems. Default is false; do not suppress.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
