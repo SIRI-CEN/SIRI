@@ -160,7 +160,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="FacilityLocation" type="FacilityLocationStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Describes where the facility is located. The location is a Transmodel object reference or an IFOPT object reference.</xsd:documentation>
+     <xsd:documentation>Describes where the facility is located. The location is a Transmodel object reference or an NeTEx object reference.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="FacilityAccessibilityGroup"/>
