@@ -1565,29 +1565,24 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>
-			<xsd:element name="ArrivalTravelProlongation" type="PositiveDurationType" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Additional travel time needed to achieve arriving at specified stop</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="ArrivalTravelDuration" type="PositiveDurationType" minOccurs="0">
+			<xsd:element name="ArrivalTravelDurationProlongation" type="PositiveDurationType" minOccurs="0" default="PT0M">
 				<xsd:annotation>
 					<xsd:documentation>Travel time needed from start to arrive at specified stop</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="DepartureTravelProlongation" type="PositiveDurationType" minOccurs="0">
+			<xsd:element name="DepartureTravelProlongation" type="PositiveDurationType" minOccurs="0" default="PT0M">
 				<xsd:annotation>
 					<xsd:documentation>Additional journey time needed to achieve departing from specified stop</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="DepartureTravelDuration" type="PositiveDurationType" minOccurs="0">
+            <xsd:element name="TotalArrivalTravelProlongation" type="PositiveDurationType" minOccurs="0" default="PT0M">
 				<xsd:annotation>
-					<xsd:documentation>Travel time needed from start to depart at specified stop</xsd:documentation>
+					<xsd:documentation>Additional travel time needed to achieve arriving at specified stop</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="DepartureInterval" type="PositiveDurationType" minOccurs="0">
+			<xsd:element name="TotalDepartureTravelProlongation" type="PositiveDurationType" minOccurs="0" default="PT0M">
 				<xsd:annotation>
-					<xsd:documentation>Time interval if not correlated to the original departure</xsd:documentation>
+					<xsd:documentation>Travel time needed from start to depart at specified stop</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
