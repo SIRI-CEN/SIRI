@@ -1577,12 +1577,12 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
 			</xsd:element>
             <xsd:element name="TotalArrivalTravelProlongation" type="PositiveDurationType" minOccurs="0" default="PT0M">
 				<xsd:annotation>
-					<xsd:documentation>Additional travel time needed to achieve arriving at specified stop</xsd:documentation>
+					<xsd:documentation>Additional journey time needed to achieve arriving at specified stop, considering pro-longations at previ-ous stops.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TotalDepartureTravelProlongation" type="PositiveDurationType" minOccurs="0" default="PT0M">
 				<xsd:annotation>
-					<xsd:documentation>Travel time needed from start to depart at specified stop</xsd:documentation>
+					<xsd:documentation>Additional journey time needed to achieve departing from specified stop, considering pro-longations at previ-ous stops.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
