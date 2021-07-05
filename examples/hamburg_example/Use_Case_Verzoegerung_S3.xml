@@ -129,11 +129,6 @@
 									</AffectedNetwork>
 								</Networks>
 							</Affects>
-							<Blocking>
-								<JourneyPlanner>true</JourneyPlanner>
-								<!-- handle predictableDelay in Journey Planner -->
-								<RealTime>true</RealTime>
-							</Blocking>
 							<PredictableDelays>
 								<PredictableDelay>
 									<AffectedStopPoint>
@@ -212,11 +207,6 @@
 									</AffectedNetwork>
 								</Networks>
 							</Affects>
-							<Blocking>
-								<JourneyPlanner>true</JourneyPlanner>
-								<!-- handle predictableDelay in Journey Planner -->
-								<RealTime>true</RealTime>
-							</Blocking>
 							<PredictableDelays>
 								<PredictableDelay>
 									<AffectedStopPoint>
