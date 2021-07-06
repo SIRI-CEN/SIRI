@@ -28,7 +28,7 @@
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
     <Rights><!--Unclassified-->
-    <Copyright>CEN, Crown Copyright 2006-2020</Copyright>
+    <Copyright>CEN, Crown Copyright 2006-2021</Copyright>
 				</Rights>
     <Source>
      <ul>
@@ -83,12 +83,12 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element ref="AudibleSignalsAvailable" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether a PLACE / SITE ELEMENT has Audible signals for the viusally impaired.</xsd:documentation>
+     <xsd:documentation>Whether a PLACE / SITE ELEMENT has Audible signals for the visually impaired. Default is 'false'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="VisualSignsAvailable" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether a PLACE / SITE ELEMENT has Visual signals for the hearing impaired.</xsd:documentation>
+     <xsd:documentation>Whether a PLACE / SITE ELEMENT has Visual signals for the hearing impaired. Default is 'unknown'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -104,32 +104,32 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="WheelchairAccess" type="AccessibilityStructure" default="false">
   <xsd:annotation>
-   <xsd:documentation>Whether a PLACE / SITE ELEMENT is wheelchair accessible.</xsd:documentation>
+   <xsd:documentation>Whether a PLACE / SITE ELEMENT is wheelchair accessible. Default is 'false'.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="StepFreeAccess" type="AccessibilityStructure" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>Whether a PLACE / SITE ELEMENT has step free access.</xsd:documentation>
+   <xsd:documentation>Whether a PLACE / SITE ELEMENT has step free access. Default is 'unknown'.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EscalatorFreeAccess" type="AccessibilityStructure" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>Whether a PLACE / SITE ELEMENT has escalator free access.</xsd:documentation>
+   <xsd:documentation>Whether a PLACE / SITE ELEMENT has escalator free access. Default is 'unknown'.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="LiftFreeAccess" type="AccessibilityStructure" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>Whether a PLACE / SITE ELEMENT has lift free access.</xsd:documentation>
+   <xsd:documentation>Whether a PLACE / SITE ELEMENT has lift free access. Default is 'unknown'.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="AudibleSignalsAvailable" type="AccessibilityStructure" default="false">
   <xsd:annotation>
-   <xsd:documentation>Whether a PLACE / SITE ELEMENT is wheelchair accessible.</xsd:documentation>
+   <xsd:documentation>Whether a PLACE / SITE ELEMENT is wheelchair accessible. Default is 'false'.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="VisualSignsAvailable" type="AccessibilityStructure" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>Whether a PLACE / SITE ELEMENT has Visual signals availble for the free access.</xsd:documentation>
+   <xsd:documentation>Whether a PLACE / SITE ELEMENT has Visual signals available for the visually impaired.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="GuideDogAccess" type="AccessibilityStructure" default="unknown">

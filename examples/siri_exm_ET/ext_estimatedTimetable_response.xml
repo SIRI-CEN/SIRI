@@ -24,12 +24,12 @@
      <DirectionRef>INBOUND</DirectionRef>
      <DatedVehicleJourneyRef>00008</DatedVehicleJourneyRef>
      <Cancellation>false</Cancellation>
-     <PublishedLineName>124</PublishedLineName>
+     <PublishedLineName xml:lang="EN">124</PublishedLineName>
      <OperatorRef>SMOOTH</OperatorRef>
      <ProductCategoryRef>Cat274</ProductCategoryRef>
      <ServiceFeatureRef>CyclesPermitted</ServiceFeatureRef>
      <VehicleFeatureRef>DisabledAccess</VehicleFeatureRef>
-     <VehicleJourneyName>Shoppers Special</VehicleJourneyName>
+     <VehicleJourneyName xml:lang="EN">Shoppers Special</VehicleJourneyName>
      <JourneyNote>Not o bank holidays</JourneyNote>
      <Monitored>true</Monitored>
      <PredictionInaccurate>false</PredictionInaccurate>
@@ -47,7 +47,7 @@
        <AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
        <ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
        <AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
-       <DeparturePlatformName>1</DeparturePlatformName>
+       <DeparturePlatformName xml:lang="EN">1</DeparturePlatformName>
       </EstimatedCall>
       <!-- CALL 2-->
       <EstimatedCall>
@@ -58,10 +58,10 @@
        <RequestStop>true</RequestStop>
        <AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
        <ExpectedArrivalTime>2001-12-17T09:30:47-05:00</ExpectedArrivalTime>
-       <ArrivalPlatformName>4</ArrivalPlatformName>
+       <ArrivalPlatformName xml:lang="EN">4</ArrivalPlatformName>
        <AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
        <ExpectedDepartureTime>2001-12-17T09:30:47-05:00</ExpectedDepartureTime>
-       <DeparturePlatformName>3</DeparturePlatformName>
+       <DeparturePlatformName xml:lang="EN">3</DeparturePlatformName>
       </EstimatedCall>
       <!-- CALL 3 -->
       <EstimatedCall>
@@ -70,7 +70,7 @@
        <Occupancy>full</Occupancy>
        <AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
        <ExpectedArrivalTime>2001-12-17T09:30:47-05:00</ExpectedArrivalTime>
-       <ArrivalPlatformName>5</ArrivalPlatformName>
+       <ArrivalPlatformName xml:lang="EN">5</ArrivalPlatformName>
        <AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
        <ExpectedDepartureTime>2001-12-17T09:30:47-05:00</ExpectedDepartureTime>
        <DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>

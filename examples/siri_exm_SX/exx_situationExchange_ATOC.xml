@@ -43,7 +43,7 @@
   <siri:StopPoints>
    <siri:AffectedStopPoint>
     <siri:StopPointRef>BAAR0003</siri:StopPointRef>
-    <siri:StopPointName>Barchester Station</siri:StopPointName>
+    <siri:StopPointName xml:lang="EN">Barchester Station</siri:StopPointName>
     <siri:StopPointType>unknown</siri:StopPointType>
     <siri:Location id="NMTOKEN" srsName="String">
      <siri:Longitude>-180</siri:Longitude>
@@ -58,7 +58,7 @@
     <siri:AffectedComponents>
      <siri:AffectedComponent>
       <siri:ComponentRef>BAR00021</siri:ComponentRef>
-      <siri:ComponentName>Platform 3</siri:ComponentName>
+      <siri:ComponentName xml:lang="EN">Platform 3</siri:ComponentName>
      </siri:AffectedComponent>
     </siri:AffectedComponents>
    </siri:AffectedStopPlace>

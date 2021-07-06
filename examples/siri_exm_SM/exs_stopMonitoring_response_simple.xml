@@ -21,9 +21,9 @@
     <RecordedAtTime>2004-12-17T09:25:46-05:00</RecordedAtTime>
     <MonitoringRef>HLTST011</MonitoringRef>
     <MonitoredVehicleJourney>
-     <PublishedLineName>123</PublishedLineName>
+     <PublishedLineName xml:lang="EN">123</PublishedLineName>
      <OperatorRef>OP22</OperatorRef>
-     <DestinationName>Paradise Park</DestinationName>
+     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
      <ProgressStatus>Service running on time</ProgressStatus>
      <MonitoredCall>
       <AimedDepartureTime>2004-12-17T09:42:47-05:00</AimedDepartureTime>
@@ -35,7 +35,7 @@
     <RecordedAtTime>2004-12-17T09:25:46-06:00</RecordedAtTime>
     <MonitoringRef>HLTST011</MonitoringRef>
     <MonitoredVehicleJourney>
-     <PublishedLineName>128</PublishedLineName>
+     <PublishedLineName xml:lang="EN">128</PublishedLineName>
      <ProgressStatus>Running Early</ProgressStatus>
      <MonitoredCall>
       <VehicleAtStop>true</VehicleAtStop>
