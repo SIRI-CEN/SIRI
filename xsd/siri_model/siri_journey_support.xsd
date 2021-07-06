@@ -727,7 +727,7 @@ Corresponds to NeTEX TYPE OF SERVICe.</xsd:documentation>
    </xsd:enumeration>
    <xsd:enumeration value="reliable">
     <xsd:annotation>
-     <xsd:documentation>Data has confidence lvel of reliable (3/5).</xsd:documentation>
+     <xsd:documentation>Data has confidence level of reliable (3/5).</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="probablyReliable">

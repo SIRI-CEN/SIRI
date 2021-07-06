@@ -280,9 +280,9 @@ Rail transport, Roads and road transport
        <xsd:documentation>Include in moving ticker band. Default is 'false'.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="SocialNetwork" type="xsd:normalizedString" default="false" minOccurs="0" maxOccurs="unbounded">
+     <xsd:element name="SocialNetwork" type="xsd:normalizedString" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Include in social NETWORK indicated by this name. Possible value could be "twitter.com", "facebook.com", "vk.com" and so on. Parameters may be specified as Action data. Default is 'false' (SIRI 2.1)</xsd:documentation>
+       <xsd:documentation>Include in social NETWORK indicated by this name. Possible value could be "twitter.com", "facebook.com", "vk.com" and so on. Parameters may be specified as Action data. (SIRI 2.1)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -424,9 +424,9 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="PushedActionStructure">
     <xsd:sequence>
-     <xsd:element name="Phone" type="PhoneType" default="true" minOccurs="0">
+     <xsd:element name="Phone" type="PhoneType" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>MSISDN of user to which to send messages. Default is 'true'.</xsd:documentation>
+       <xsd:documentation>MSISDN of user to which to send messages.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="Premium" type="xsd:boolean" default="false" minOccurs="0">
@@ -476,9 +476,9 @@ Rail transport, Roads and road transport
        <xsd:documentation>Reference to a pager group to be notified.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="Pager" type="xsd:NMTOKEN" default="true" minOccurs="0">
+     <xsd:element name="Pager" type="xsd:NMTOKEN" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Pager number of pager to be notified. Default is 'true'.</xsd:documentation>
+       <xsd:documentation>Pager number of pager to be notified.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -600,7 +600,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>The actual, structured passenger information.</xsd:documentation>
+       <xsd:documentation>The actual, structured passenger information for a specific TextualContentSize.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
