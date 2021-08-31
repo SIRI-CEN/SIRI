@@ -27,12 +27,12 @@
       <DatedVehicleJourneyRef>Oubound</DatedVehicleJourneyRef>
      </FramedVehicleJourneyRef>
      <!-- LINE INFO GROUP -->
-     <PublishedLineName>123</PublishedLineName>
+     <PublishedLineName xml:lang="EN">123</PublishedLineName>
      <!-- SERVICE POINTS GROUP -->
      <OriginRef>PLACE21</OriginRef>
-     <OriginName>Highbury</OriginName>
+     <OriginName xml:lang="EN">Highbury</OriginName>
      <DestinationRef>PLACE45</DestinationRef>
-     <DestinationName>Paradise Park</DestinationName>
+     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
      <!-- STOP EVENT TIMES GROUP -->
      <TargetedCall>
       <VisitNumber>1</VisitNumber>

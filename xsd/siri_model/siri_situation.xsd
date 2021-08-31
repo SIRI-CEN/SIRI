@@ -110,7 +110,7 @@ siri_model\siri_situation-v2.0.xsd:
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_monitoredVehicleJourney.xsd</Requires>
     </Relation>
     <Rights><!--Unclassified-->
-     <Copyright>Kizoom 2000-2005, CEN 2009-2020</Copyright>
+     <Copyright>Kizoom 2000-2005, CEN 2009-2021</Copyright>
 	</Rights>
     <Source>
      <ul>
@@ -159,7 +159,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="SituationInfoGroup"/>
      <xsd:element name="VersionedAtTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Time at which SITUATION element was versioned. Once versioned, no furtr changes can be made.</xsd:documentation>
+       <xsd:documentation>Time at which SITUATION element was versioned. Once versioned, no further changes can be made.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -332,7 +332,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Structured model identifiying parts of transport network affected by SITUATION. Operator and Network values will be defaulted to values in general Context unless explicitly overridden.</xsd:documentation>
+     <xsd:documentation>Structured model identifiying parts of transport network affected by SITUATION. OPERATOR and Network values will be defaulted to values in general Context unless explicitly overridden.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0">
@@ -452,12 +452,12 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="Road" type="D2LogicalModel:RoadsideReferencePointLinear" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>AFfected Road as described by a Date2x location.</xsd:documentation>
+     <xsd:documentation>Affected Road as described by a Date2x location.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="ProjectionGroup">
     <xsd:annotation>
-     <xsd:documentation>Optional spatial projection of road. Can be used to distriute the path of the road to systems that do not already hold it. To pass just a Reference, use Datex2 location.</xsd:documentation>
+     <xsd:documentation>Optional spatial projection of road. Can be used to distribute the path of the road to systems that do not already hold it. To pass just a Reference, use Datex2 location.</xsd:documentation>
     </xsd:annotation>
    </xsd:group>
    <xsd:element ref="Extensions" minOccurs="0"/>
@@ -605,7 +605,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="QualityIndex" type="QualityIndexEnumeration" default="reliable" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Assessement of likely correctness of data.</xsd:documentation>
+     <xsd:documentation>Assessement of likely correctness of data. Default is reliable</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Reality" type="D2LogicalModel:InformationStatusEnum" minOccurs="0">
@@ -615,7 +615,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Likelihood" type="D2LogicalModel:ProbabilityOfOccurrenceEnum" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Likellihoo of a future sutuation happening.</xsd:documentation>
+     <xsd:documentation>Likellihood of a future situation happening.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Publication" type="PublicationStatusType" minOccurs="0" maxOccurs="unbounded">
@@ -813,7 +813,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:enumeration>
    <xsd:enumeration value="stopPlace">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_1, stop place</xsd:documentation>
+     <xsd:documentation>TPEG Pts36_1, STOP PLACE</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="line">
@@ -853,7 +853,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:enumeration>
    <xsd:enumeration value="stopPlaceComponent">
     <xsd:annotation>
-     <xsd:documentation>stop place component</xsd:documentation>
+     <xsd:documentation>STOP PLACE component</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="place">
@@ -1235,7 +1235,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:element>
    <xsd:group ref="ConditionGroup">
     <xsd:annotation>
-     <xsd:documentation>Condition(s) of effect of disruptione.</xsd:documentation>
+     <xsd:documentation>Condition(s) of effect of disruptions.</xsd:documentation>
     </xsd:annotation>
    </xsd:group>
    <xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
@@ -1316,12 +1316,12 @@ Note: this means that ConditionName is NOT a complete message, but only a (few) 
   <xsd:sequence>
    <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Type of boarding and alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
+     <xsd:documentation>Type of alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" default="boarding" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Type of alighting allowed at stop. Default is 'Boarding'.</xsd:documentation>
+     <xsd:documentation>Type of boarding allowed at stop. Default is 'Boarding'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -1441,9 +1441,19 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
      <xsd:documentation>no advice</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="undefined">
+   <xsd:enumeration value="undefinedAdvice">
     <xsd:annotation>
      <xsd:documentation>TPEG Pts39_255, undefined advice</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="takeDetour">
+    <xsd:annotation>
+     <xsd:documentation>take detour</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="useAlternativeAccess">
+    <xsd:annotation>
+     <xsd:documentation>change accessibility</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
@@ -1456,12 +1466,12 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
   <xsd:sequence>
    <xsd:element name="JourneyPlanner" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether information about parts of the network identified by Affects should be blocked from computation made by a Journey Planner that has a real-tiem feed of the SITUATIONs. Default is 'false'; do not suppress.</xsd:documentation>
+     <xsd:documentation>Whether information about parts of the NETWORK identified by AffectsScope should be blocked from the Journey Planner. Default is false; do not suppress.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RealTime" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether information about parts of the network identified by Affects should be blocked from real-time departureinfo systems. Default is 'false'; do not suppress.</xsd:documentation>
+     <xsd:documentation>Whether information about parts of the NETWORK identified by AffectsScope should be blocked from real-time departure info systems. Default is false; do not suppress.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

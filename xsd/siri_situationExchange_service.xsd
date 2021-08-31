@@ -80,7 +80,7 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
     </Relation>
     <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
+       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
     <Source>
      <ul>
@@ -344,9 +344,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Classifiers. Logically ANDed with other values.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
+   <xsd:element name="Severity" type="SeverityEnumeration" default="normal" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Severity filter value to apply: only SITUATIONs with a severity greater than or equal to the specified value will be returned. See TPEG severities. Default is 'all'.</xsd:documentation>
+     <xsd:documentation>Severity filter value to apply: only SITUATIONs with a severity greater than or equal to the specified value will be returned. See TPEG severities. Default is 'normal'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Scope" type="ScopeTypeEnumeration" minOccurs="0" maxOccurs="unbounded">

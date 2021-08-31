@@ -76,7 +76,7 @@
     </Relation>
     <Rights><!--Unclassified-->
 
-       <Copyright>CEN, VDV, RTIG 2004-2020</Copyright>
+       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
     <Source>
      <ul>
@@ -313,7 +313,7 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
    </xsd:element>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Operator of JOURNEY PART. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>OPERATOR of JOURNEY PART. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="CompoundTrainRef" minOccurs="0">
@@ -342,7 +342,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    </xsd:element>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Operator of JOURNEY PART.</xsd:documentation>
+     <xsd:documentation>OPERATOR of JOURNEY PART.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="CompoundTrainRef" minOccurs="0">
@@ -400,7 +400,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    </xsd:element>
    <xsd:element name="PositionOfTrainBlockPart" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Description of position of Train BLOCK Part within Train to guide passengers where to find it. E.g. 'Front four coaches'.</xsd:documentation>
+     <xsd:documentation>Description of position of train BLOCK part within Train to guide passengers where to find it. E.g. 'Front four coaches'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

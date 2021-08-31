@@ -6,24 +6,24 @@
   <Status>true</Status>
   <AnnotatedLineRef>
    <LineRef>Line564</LineRef>
-   <LineName>564</LineName>
+   <LineName xml:lang="EN">564</LineName>
    <Monitored>true</Monitored>
    <Destinations>
     <Destination>
      <DestinationRef>PLace45</DestinationRef>
-     <PlaceName>Paradise</PlaceName>
+     <PlaceName xml:lang="EN">Paradise</PlaceName>
     </Destination>
    </Destinations>
    <Directions>
     <Direction>
      <DirectionRef>DIR01</DirectionRef>
-     <DirectionName>Outbound</DirectionName>
+     <DirectionName xml:lang="EN">Outbound</DirectionName>
      <JourneyPatterns>
       <JourneyPattern>
        <StopsInPattern>
         <StopPointInPattern>
          <StopPointRef>ST001</StopPointRef>
-         <StopName>Alpha Road</StopName>
+         <StopName xml:lang="EN">Alpha Road</StopName>
          <Lines>
           <LineRef>Line564</LineRef>
           <LineRef>22</LineRef>
@@ -36,7 +36,7 @@
         </StopPointInPattern>
         <StopPointInPattern>
          <StopPointRef>ST002</StopPointRef>
-         <StopName>Beta Street</StopName>
+         <StopName xml:lang="EN">Beta Street</StopName>
          <Lines>
           <LineRef>Line564</LineRef>
          </Lines>
@@ -48,7 +48,7 @@
         </StopPointInPattern>
         <StopPointInPattern>
          <StopPointRef>ST003</StopPointRef>
-         <StopName>Charley Square</StopName>
+         <StopName xml:lang="EN">Charley Square</StopName>
          <StopAreaRef>SA2001</StopAreaRef>
          <Lines>
           <LineDirection>
@@ -69,7 +69,7 @@
     </Direction>
     <Direction>
      <DirectionRef>DIR02</DirectionRef>
-     <DirectionName>Inbound</DirectionName>
+     <DirectionName xml:lang="EN">Inbound</DirectionName>
     </Direction>
    </Directions>
   </AnnotatedLineRef>

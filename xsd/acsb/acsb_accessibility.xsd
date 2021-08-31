@@ -28,7 +28,7 @@
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
     <Rights><!--Unclassified-->
-       <Copyright>CEN, Crown Copyright 2006-2020</Copyright>
+       <Copyright>CEN, Crown Copyright 2006-2021</Copyright>
     </Rights>
     <Source>
      <ul>
@@ -59,13 +59,13 @@ Rail transport, Roads and road transport
  <!--===========================================================================================-->
  <xsd:simpleType name="LimitationIdType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a hazard within a stop place.</xsd:documentation>
+   <xsd:documentation>Type for identifier of a hazard within a STOP PLACE.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="LimitationRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to an identifier of a hazard within a stop place.</xsd:documentation>
+   <xsd:documentation>Type for reference to an identifier of a hazard within a STOP PLACE.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="LimitationIdType"/>
@@ -84,7 +84,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="ValidityCondition" type="ifopt:ValidityConditionStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Validty condition governing applicability of LIMITATION.</xsd:documentation>
+     <xsd:documentation>Validity condition governing applicability of LIMITATION.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="MobilityLimitationGroup"/>
@@ -111,7 +111,7 @@ Rail transport, Roads and road transport
      <xsd:sequence>
       <xsd:element name="AccessibilityLimitation" type="AccessibilityLimitationStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>The accessibility limitations of a component.</xsd:documentation>
+        <xsd:documentation>The accessibility limitations on navigation.</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>

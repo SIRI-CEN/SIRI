@@ -72,7 +72,7 @@
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types.xsd</Requires>
     </Relation>
     <Rights><!--Unclassified-->
-	 <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
+	 <Copyright>Kizoom 2000-2007, CEN 2009-2021</Copyright>
     </Rights>
     <Source>
      <ul>
@@ -125,7 +125,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="ActionStatus" type="ActionStatusEnumeration" default="open" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Processing Status of action at time of SITUATION publication.</xsd:documentation>
+     <xsd:documentation>Processing Status of action at time of SITUATION publication. Default is 'open'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -150,7 +150,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="PublicationWindow" type="ClosedTimestampRangeStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Defines a number of validity periods. When not sent, then the validity periods of higher level are valid. Can be overwritten by deeper level.</xsd:documentation>
+       <xsd:documentation>Defines a number of publication windows. When not sent, then the publication windows of higher level are valid. Can be overwritten by deeper level.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -255,12 +255,12 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:element name="PublishToWebAction" type="PublishToWebActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION To Web.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION To Web channel.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="PublishToWebActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Action Publish SITUATION To Web.</xsd:documentation>
+   <xsd:documentation>Type for Action Publish SITUATION To Web channel.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="ParameterisedActionStructure">
@@ -280,9 +280,9 @@ Rail transport, Roads and road transport
        <xsd:documentation>Include in moving ticker band. Default is 'false'.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="SocialNetwork" type="xsd:normalizedString" default="false" minOccurs="0" maxOccurs="unbounded">
+     <xsd:element name="SocialNetwork" type="xsd:normalizedString" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Include in social NETWORK indicated by this name. Possible value could be "twitter.com", "facebook.com", "vk.com" and so on. Parameters may be specifed as Action data. (SIRIv 2.10)</xsd:documentation>
+       <xsd:documentation>Include in social NETWORK indicated by this name. Possible value could be "twitter.com", "facebook.com", "vk.com" and so on. Parameters may be specified as Action data. (SIRI 2.1)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -291,12 +291,12 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="PublishToMobileAction" type="PublishToMobileActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION To WAP and PDA.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION To Mobile Applications.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="PublishToMobileActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Action Publish SITUATION To Displays.</xsd:documentation>
+   <xsd:documentation>Type for Action Publish SITUATION To Mobile Applications.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="ParameterisedActionStructure">
@@ -317,12 +317,12 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="PublishToDisplayAction" type="PublishToDisplayActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION To Displays.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION To Display channel.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="PublishToDisplayActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Action Publish SITUATION To Web.</xsd:documentation>
+   <xsd:documentation>Type for Action Publish SITUATION To Display channel.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="ParameterisedActionStructure">
@@ -343,12 +343,12 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="PublishToAlertsAction" type="PublishToAlertsActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION To Alert Service.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION To Alert channel.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="PublishToAlertsActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Action Publish SITUATION To Alert Service.</xsd:documentation>
+   <xsd:documentation>Type for Action Publish SITUATION To Alert channel.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="PushedActionStructure">
@@ -369,12 +369,12 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="PublishToTvAction" type="PublishToTvActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION To TvService.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION To TV channel.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="PublishToTvActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Notify SITUATION to Tv.</xsd:documentation>
+   <xsd:documentation>Type for Notify SITUATION to TV channel.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="ParameterisedActionStructure">
@@ -396,7 +396,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="ManualAction">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION Manually. i.e. a procedure must be carried out.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION to Manual publication channel.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexType>
    <xsd:complexContent>
@@ -406,7 +406,7 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:complexType name="ManualActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Action Publish SITUATION Manual process.</xsd:documentation>
+   <xsd:documentation>Type for Action Publish SITUATION to Manual publication channel.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="ParameterisedActionStructure"/>
@@ -414,24 +414,24 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="NotifyBySmsAction" type="NotifyBySmsActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION to an individual by SMS.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION to an individual user by SMS.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="NotifyBySmsActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Notify user by SMS.</xsd:documentation>
+   <xsd:documentation>Type for Notify an individual user by SMS.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="PushedActionStructure">
     <xsd:sequence>
-     <xsd:element name="Phone" type="PhoneType" default="true" minOccurs="0">
+     <xsd:element name="Phone" type="PhoneType" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>MSISDN of user to which to send messages.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="Premium" type="xsd:boolean" default="false" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Whether content is flagged as subject to premium charge.</xsd:documentation>
+       <xsd:documentation>Whether content is flagged as subject to premium charge. Default is 'false'.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -440,12 +440,12 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="NotifyByEmailAction" type="NotifyByEmailActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION to a named workgroup or individual by email.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION to a named workgroup or individual user by email.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="NotifyByEmailActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Notify user by Email.</xsd:documentation>
+   <xsd:documentation>Type for Notify a named workgroup or individual user by email.</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="PushedActionStructure">
@@ -473,12 +473,12 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="PagerGroupRef" type="xsd:string" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Reference to a pager group to be notfied.</xsd:documentation>
+       <xsd:documentation>Reference to a pager group to be notified.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="Pager" type="xsd:NMTOKEN" default="true" minOccurs="0">
+     <xsd:element name="Pager" type="xsd:NMTOKEN" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Pager number of pager to be notfied.</xsd:documentation>
+       <xsd:documentation>Pager number of pager to be notified.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -487,7 +487,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="NotifyUserAction" type="NotifyUserActionStructure">
   <xsd:annotation>
-   <xsd:documentation>Action: Publish SITUATION To User.</xsd:documentation>
+   <xsd:documentation>Action: Publish SITUATION To User by other means.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="NotifyUserActionStructure">
@@ -497,7 +497,7 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="PushedActionStructure">
     <xsd:sequence>
-     <xsd:element name="WorkgroupRef" type="xsd:string" default="true" minOccurs="0">
+     <xsd:element name="WorkgroupRef" type="xsd:string" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Workgroup of user to be notified.</xsd:documentation>
       </xsd:annotation>
@@ -507,7 +507,7 @@ Rail transport, Roads and road transport
        <xsd:documentation>Name of user to be notified.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
-     <xsd:element name="UserRef" type="xsd:string" default="true" minOccurs="0">
+     <xsd:element name="UserRef" type="xsd:string" minOccurs="0">
       <xsd:annotation>
        <xsd:documentation>Reference to a user to be notified.</xsd:documentation>
       </xsd:annotation>
@@ -521,7 +521,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="DescriptionText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary.</xsd:documentation>
+     <xsd:documentation>Description of passenger information action in a specific language. Should not repeat any strap line included in Summary.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DescriptionPriority" type="xsd:positiveInteger" minOccurs="0">
@@ -536,7 +536,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="ConsequenceText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Further consequence to passengers.</xsd:documentation>
+     <xsd:documentation>Consequence of passenger information action in a specific language.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ConsequencePriority" type="xsd:positiveInteger" minOccurs="0">
@@ -551,7 +551,8 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="DurationText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Further information about the duration to passengers.</xsd:documentation>
+     <xsd:documentation>Indicates the currently expected duration of a SITUATION in a specific language. An estimation should be given here, because an indefinite duration is not helpful to the passenger. The duration can be adjusted at any time, if the traffic operator has additional information.
+     </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -568,7 +569,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="RecordedAtTime" type="xsd:dateTime">
       <xsd:annotation>
-       <xsd:documentation>The time of the last update</xsd:documentation>
+       <xsd:documentation>The time of the last update. This must be the timestamp of the original data source and not that of an intermediate system, such as a data hub. This timestamp has to be changed by the source system with every update.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="Version" type="SituationVersion" minOccurs="0">
@@ -578,7 +579,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="SourceRef" type="ParticipantRefStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>The system which created this passenger information. If absent, is the same version as the enclosing Situation</xsd:documentation>
+       <xsd:documentation>The system which created this passenger information. If absent, the same system as the PtSituationElement.ParticipantRef.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="OwnerRef" type="OrganisationRefStructure" minOccurs="0">
@@ -599,7 +600,7 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>All texts of the passenger information.</xsd:documentation>
+       <xsd:documentation>The actual, structured passenger information for a specific TextualContentSize.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -633,7 +634,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="ReasonText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Reason of passenger information action.</xsd:documentation>
+     <xsd:documentation>Reason of passenger information action in a specific language.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -642,7 +643,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="RecommendationText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Further recommendation to passengers.</xsd:documentation>
+     <xsd:documentation>Recommendation of passenger information action in a specific language.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="RecommendationPriority" type="xsd:positiveInteger" minOccurs="0">
@@ -672,7 +673,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="SummaryText" type="DefaultedTextStructure" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Summary of passenger information action.</xsd:documentation>
+     <xsd:documentation>Summary of passenger information action in a specific language.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -684,7 +685,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Class of size, e.g. L (large), M (medium), S (small)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:group ref="ActionsGroup" minOccurs="0"/>
+   <xsd:group ref="ActionsGroup" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Limits the distribution to publication channels in addition to perspective</xsd:documentation>
+    </xsd:annotation>
+   </xsd:group>
    <xsd:element name="SummaryContent" type="SummaryContentStructure">
     <xsd:annotation>
      <xsd:documentation>Content for summary of a passenger information action</xsd:documentation>

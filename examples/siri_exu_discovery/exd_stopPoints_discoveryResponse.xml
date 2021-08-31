@@ -7,11 +7,11 @@
   <AnnotatedStopPointRef>
    <StopPointRef>HLTS0001</StopPointRef>
    <Monitored>true</Monitored>
-   <StopName>Stop 101</StopName>
+   <StopName xml:lang="EN">Stop 101</StopName>
    <Features>
     <ServiceFeature>
      <ServiceFeatureCode>S123</ServiceFeatureCode>
-     <Name>Shelter</Name>
+     <Name xml:lang="EN">Shelter</Name>
      <Icon>http://www.mybus.org/shelter.jpg</Icon>
     </ServiceFeature>
    </Features>
@@ -26,11 +26,11 @@
   <AnnotatedStopPointRef>
    <StopPointRef>HLTS0002</StopPointRef>
    <Monitored>true</Monitored>
-   <StopName>Stop 102</StopName>
+   <StopName xml:lang="EN">Stop 102</StopName>
    <Features>
     <ServiceFeature>
      <ServiceFeatureCode>S123</ServiceFeatureCode>
-     <Name>Shelter</Name>
+     <Name xml:lang="EN">Shelter</Name>
      <Icon>http://www.mybus.org/shelter.jpg</Icon>
     </ServiceFeature>
    </Features>
