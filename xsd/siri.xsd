@@ -99,6 +99,9 @@ mailto:schemer@siri.org.uk</Creator>
 					 <!--+SIRI v2.0 Comments
 					   - Add terminate subscription notification-->
 				</Date>
+    <Date><Modified>2021-09-22</Modified>
+					 <!--+Control Action: initialisation of draft Control action service-->
+				</Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
      <p>SIRI is defined by XMLschemas and comprises a general protocol for communication, and a modular set of functional services as follows :
@@ -230,6 +233,7 @@ Rail transport, Roads and road transport.
    <xsd:element ref="GeneralMessageRequest" maxOccurs="unbounded"/>
    <xsd:element ref="FacilityMonitoringRequest" maxOccurs="unbounded"/>
    <xsd:element ref="SituationExchangeRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="ControlActionRequest" maxOccurs="unbounded"/>
   </xsd:choice>
  </xsd:group>
  <!--===GS: Subscription REquest ==================================================================== -->
@@ -279,6 +283,7 @@ Rail transport, Roads and road transport.
    <xsd:element ref="GeneralMessageSubscriptionRequest" maxOccurs="unbounded"/>
    <xsd:element ref="FacilityMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
    <xsd:element ref="SituationExchangeSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="ControlActionSubscriptionRequest" maxOccurs="unbounded"/>
   </xsd:choice>
  </xsd:group>
  <!-- === RESPONSES ================================================================== -->
@@ -415,7 +420,11 @@ Rail transport, Roads and road transport.
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="FacilityMonitoringDelivery" maxOccurs="unbounded"/>
-    </xsd:choice>
+     <xsd:element ref="ControlActionDelivery" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Delivery for control actions.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>    </xsd:choice>
    </xsd:sequence>
    <xsd:element ref="SituationExchangeDelivery" maxOccurs="unbounded"/>
   </xsd:choice>
@@ -489,6 +498,7 @@ Rail transport, Roads and road transport.
    <xsd:element ref="GeneralMessageCapabilitiesRequest" minOccurs="0"/>
    <xsd:element ref="FacilityMonitoringCapabilitiesRequest" minOccurs="0"/>
    <xsd:element ref="SituationExchangeCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="ControlActionCapabilitiesRequest" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
  <!-- ===GS: Capabilities Delivery==================================================================== -->
@@ -525,6 +535,7 @@ Rail transport, Roads and road transport.
    <xsd:element ref="GeneralMessageCapabilitiesResponse" minOccurs="0"/>
    <xsd:element ref="FacilityMonitoringCapabilitiesResponse" minOccurs="0"/>
    <xsd:element ref="SituationExchangeCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="ControlActionCapabilitiesResponse" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
  <!-- ======================================================================= -->
