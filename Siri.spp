@@ -9,6 +9,7 @@
 			<File FilePath="xsd\siri_all_functionalServices.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_connectionMonitoring_service.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_connectionTimetable_service.xsd" HomeFolder="Yes"/>
+			<File FilePath="xsd\siri_contolAction_service.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_discovery.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_estimatedTimetable_service.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_facilityMonitoring_service.xsd" HomeFolder="Yes"/>
@@ -44,7 +45,7 @@
 				<File FilePath="xsd\siri_model\siri_all_situation.xsd"/>
 				<File FilePath="xsd\siri_model\siri_facilities.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\siri_model\siri_feature_support.xsd" HomeFolder="Yes"/>
-				<File FilePath="xsd\siri_model\siri_interchangeJourney.xsd" HomeFolder="Yes"/>
+				<File FilePath="xsd\siri_model\siri_interchangeJourney.xsd"/>
 				<File FilePath="xsd\siri_model\siri_journey.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\siri_model\siri_journey_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\siri_model\siri_modelPermissions.xsd" HomeFolder="Yes"/>
@@ -69,7 +70,7 @@
 			<File FilePath="xsd\siri_model\siri_all.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_model\siri_all_journeyModel.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_model\siri_all_model.xsd" HomeFolder="Yes"/>
-			<File FilePath="xsd\siri_model/siri_all_situation.xsd" HomeFolder="Yes"/>
+			<File FilePath="xsd\siri_model/siri_all_situation.xsd"/>
 		</Folder>
 		<Folder FolderName="siri_utility">
 			<File FilePath="xsd\siri_utility\siri_all_utility.xsd" HomeFolder="Yes"/>
@@ -103,8 +104,8 @@
 			<File FilePath="xsd\datex2\DATEXIISchema.xsd" HomeFolder="Yes"/>
 		</Folder>
 		<Folder FolderName="xml">
-			<File FilePath="xsd\xml\2008\09\xsd.xsl" HomeFolder="Yes"/>
 			<File FilePath="xsd\xml\2009\01\XMLSchema.xsd" HomeFolder="Yes"/>
+			<File FilePath="xsd\xml\2008\09\xsd.xsl" HomeFolder="Yes"/>
 		</Folder>
 	</Folder>
 	<Folder FolderName="wsdl">
