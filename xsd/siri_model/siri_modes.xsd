@@ -133,9 +133,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>See pti2_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="rail">
-   <xsd:documentation>See also 'railwayService', deprecated (SIRI 2.1)</xsd:documentation>
-  </xsd:enumeration>
+   <xsd:enumeration value="rail"/>
    <xsd:enumeration value="lightRailwayService">
     <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
      See also 'railwayService'.</xsd:documentation>
@@ -152,16 +150,12 @@ Rail transport, Roads and road transport
      <xsd:documentation>See pti3_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="coach">
-   <xsd:documentation>See also 'coachService', deprecated (SIRI 2.1)</xsd:documentation>
-  </xsd:enumeration>
+   <xsd:enumeration value="coach"/>
    <xsd:enumeration value="pti1_3">
     <xsd:documentation>TPEG pti1_3, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
    <xsd:enumeration value="suburbanRailwayService"/>
-   <xsd:enumeration value="suburbanRail">
-    <xsd:documentation>See also 'suburbanRailwayService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="suburbanRail"/>
    <xsd:enumeration value="pti1_4">
     <xsd:documentation>TPEG pti1_4, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -170,16 +164,12 @@ Rail transport, Roads and road transport
      <xsd:documentation>See pti4_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="urbanRail">
-    <xsd:documentation>See also 'urbanRail', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="urbanRail"/>
    <xsd:enumeration value="pti1_5">
     <xsd:documentation>TPEG pti1_5, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
    <xsd:enumeration value="metroService"/>
-   <xsd:enumeration value="metro">
-    <xsd:documentation>See also 'metroService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="metro"/>
    <xsd:enumeration value="pti1_6">
     <xsd:documentation>TPEG pti1_6, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -195,16 +185,12 @@ Rail transport, Roads and road transport
      <xsd:documentation>See pti5_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="bus">
-   <xsd:documentation>See also 'busService', deprecated (SIRI 2.1)</xsd:documentation>
-  </xsd:enumeration>
+   <xsd:enumeration value="bus"/>
    <xsd:enumeration value="pti1_8">
     <xsd:documentation>TPEG pti1_8, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
    <xsd:enumeration value="trolleyBusService"/>
-   <xsd:enumeration value="trolleyBus">
-    <xsd:documentation>See also 'trolleyBusService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="trolleyBus"/>
    <xsd:enumeration value="pti1_9">
     <xsd:documentation>TPEG pti1_9, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -213,9 +199,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>See pti6_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="tram">
-    <xsd:documentation>See also 'tramService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="tram"/>
    <xsd:enumeration value="pti1_10">
     <xsd:documentation>TPEG pti1_10, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -239,16 +223,12 @@ Rail transport, Roads and road transport
      <xsd:documentation>See pti8_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="air">
-    <xsd:documentation>See also 'airService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="air"/>
    <xsd:enumeration value="pti1_12">
     <xsd:documentation>TPEG pti1_12, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
    <xsd:enumeration value="ferryService"/>
-   <xsd:enumeration value="water">
-    <xsd:documentation>See also 'waterTransportService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="water"/>
    <xsd:enumeration value="pti1_13">
     <xsd:documentation>TPEG pti1_13, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -269,9 +249,8 @@ Rail transport, Roads and road transport
     <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
      See also 'telecabinService'</xsd:documentation>
    </xsd:enumeration>
-   <xsd:enumeration value="telecabin">
-    <xsd:documentation>See also 'telecabinService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="lift"/>
+   <xsd:enumeration value="telecabin"/>
    <xsd:enumeration value="pti1_14">
     <xsd:documentation>TPEG pti1_14, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -280,9 +259,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>See pti10_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="funicular">
-   <xsd:documentation>See also 'funicalarService', deprecated (SIRI 2.1)</xsd:documentation>
-  </xsd:enumeration>
+   <xsd:enumeration value="funicular"/>
    <xsd:enumeration value="pti1_15">
     <xsd:documentation>TPEG pti1_15, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -291,9 +268,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>pti11_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="taxi">
-    <xsd:documentation>See also 'taxiService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="taxi"/>
    <xsd:enumeration value="pti1_16">
     <xsd:documentation>TPEG pti1_16, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -310,9 +285,7 @@ Rail transport, Roads and road transport
     <xsd:documentation>TPEG pti1_17, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
    <xsd:enumeration value="allServices"/>
-   <xsd:enumeration value="all">
-    <xsd:documentation>deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="all"/>
    <xsd:enumeration value="pti1_18">
     <xsd:documentation>TPEG pti1_18, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
