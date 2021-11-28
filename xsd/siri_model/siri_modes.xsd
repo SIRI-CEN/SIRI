@@ -178,9 +178,7 @@ Rail transport, Roads and road transport
     <xsd:documentation>TPEG pti1_6, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
    <xsd:enumeration value="undergroundService"/>
-   <xsd:enumeration value="underground">
-    <xsd:documentation>See also 'undergroundService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="underground"/>
    <xsd:enumeration value="pti1_7">
     <xsd:documentation>TPEG pti1_7, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
@@ -212,9 +210,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>See pti7_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="waterTransport">
-    <xsd:documentation>See also 'waterTransportService', deprecated (SIRI 2.1)</xsd:documentation>
-   </xsd:enumeration>
+   <xsd:enumeration value="waterTransport"/>
    <xsd:enumeration value="cableDrawnBoatService">
     <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
      See also 'waterTransportService'</xsd:documentation>
