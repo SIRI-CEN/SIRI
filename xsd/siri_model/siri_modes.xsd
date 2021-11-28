@@ -125,6 +125,10 @@ Rail transport, Roads and road transport
    <xsd:documentation>TPEG pti1_0, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
    <xsd:enumeration value="unknown"/>
+   <xsd:enumeration value="undefinedModeOfTransport">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'unknown'.</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="pti1_1">
     <xsd:documentation>TPEG pti1_1, deprecated (SIRI 2.1)</xsd:documentation>
    </xsd:enumeration>
