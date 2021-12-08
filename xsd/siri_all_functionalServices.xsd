@@ -109,7 +109,7 @@ Rail transport, Roads and road transport.
 	<xsd:include schemaLocation="siri_facilityMonitoring_service.xsd"/>
 	<xsd:include schemaLocation="siri_situationExchange_service.xsd"/>
 	<xsd:include schemaLocation="siri_discovery.xsd"/>
-	<xsd:include schemaLocation="siri_contolAction_service.xsd"/>
+	<xsd:include schemaLocation="siri_controlAction_service.xsd"/>
 	<!-- END OF FUNCTIONAL SERVICES -->
 	<!-- ======================================================================= -->
 </xsd:schema>

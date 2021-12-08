@@ -53,7 +53,7 @@ Rail transport, Roads and road transport
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>SIRI-CA Control Action Service.</xsd:documentation>
+		<xsd:documentation/>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
@@ -63,6 +63,7 @@ Rail transport, Roads and road transport
 	<xsd:include schemaLocation="siri_model/siri_facility.xsd"/>
 	<!-- ===Global import of all IFOPT namespace elements used in SIRI needed to work around XERCES limitation=====-->
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:group name="SiricontrolActionIndexGroup">
 		<xsd:annotation>
@@ -162,7 +163,7 @@ Rail transport, Roads and road transport
 			</xsd:element>
 			<xsd:element name="MaximumNumberOfControlActions" type="xsd:positiveInteger" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>The maximum number of SITUATION elements to return in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
+					<xsd:documentation>The maximum number of CONTROL ACTIONS elements to return in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -323,7 +324,7 @@ If false each subscription response will contain the full information as specifi
 		<xsd:choice>
 			<xsd:element name="MasterControlCaseRef" type="ItemRefStructure">
 				<xsd:annotation>
-					<xsd:documentation>The  SetRef may be the value of a certain "master" Control Action or a separate value related to a certain Situation</xsd:documentation>
+					<xsd:documentation>The MasterRef may be the value of a certain "master" Control Action or a separate value related to a certain Situation</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="SituationRef"/>
@@ -600,13 +601,34 @@ If false each subscription response will contain the full information as specifi
 		</xsd:complexContent>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
-	<!--   FOM NOPTIS  (updated to SIR Istyle)                                               -->
+	<!--   FOM NOPTIS  (updated to SIRI style)                       -->
 	<!--  *********************************************************  -->
-	<xsd:complexType name="ControlActionStructure">
+	<xsd:element name="ControlActionNumber" type="EntryQualifierStructure">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of CONTROL ACTION within a Participant.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ControlActionVersion">
+		<xsd:annotation>
+			<xsd:documentation>Type for CONTROL ACTION version number if entry is update from a previous version. Unique within Control Action, monotonically increasing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:integer"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AbstractControlActionHeaderStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for abstract CONTROL ACTION Header</xsd:documentation>
+		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="ItemIdentifier" type="ItemIdentifierType" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Identifier of item.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CreationTime" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Time of creation of CONTROL ACTION</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="ControlActionSetRef" type="ItemRefStructure" minOccurs="0">
@@ -614,68 +636,136 @@ If false each subscription response will contain the full information as specifi
 					<xsd:documentation>Reference to a set of related ControlAction items. By specifying this element here, this Control Action is added to that group. Note that, in parallel, there are also other mechanisms to group and un-group Control Actions.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="DeviationReason" type="DeviationReason" minOccurs="0"/>
-			<xsd:choice>
-				<xsd:group ref="JourneyControlAction"/>
-				<xsd:group ref="NetworkControlAction"/>
-				<xsd:group ref="ConnectionControlAction"/>
-				<xsd:group ref="VehicleControlAction"/>
-			</xsd:choice>
-			<xsd:choice minOccurs="0">
-				<xsd:element ref="SituationRef"/>
-				<xsd:element name="SituationDescription">
-					<xsd:complexType>
-						<xsd:group ref="DescriptionGroup"/>
-					</xsd:complexType>
-				</xsd:element>
-			</xsd:choice>
-			<xsd:element name="RegistrationDateTime" type="xsd:dateTime" minOccurs="0">
+			<xsd:group ref="ControlActionBaseIdentityGroup"/>
+			<xsd:group ref="ControlActionUpdateIdentityGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="ControlActionBaseIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a CONTROL ACTION or an update to a CONTROL ACTION Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>This is the offical time used for penalty-decisions. It could be the time a fax or phone call laying the basis for a control action reached the transport authority.</xsd:documentation>
+					<xsd:documentation>Unique identifier of a Participant. Provides namespace for CONTROL ACTION If absent provdied from context.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="SourceNote" type="xsd:string" minOccurs="0">
+			<xsd:element ref="ControlActionNumber">
 				<xsd:annotation>
-					<xsd:documentation>This is a note including a hint of who originally supplied a manual report leading to this control action. It could include name and organisational unit of the information provider.</xsd:documentation>
+					<xsd:documentation>Unique identifier of CONTROL ACTION within a Participant. Excludes any version number.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ControlActionUpdateIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a CONTROL ACTION or an update to a CONTROL ACTION Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Version" type="ControlActionVersion" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of update version within a CONTROL ACTION Number Omit if reference to the base CONTROL ACTION</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VersionedAtTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Time at which CONTROL ACTION element was versioned. Once versioned, no further changes can be made.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="ControlActionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual CONTROL ACTION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractControlActionHeaderStructure">
+				<xsd:sequence>
+					<xsd:element name="DeviationReason" type="DeviationReason" minOccurs="0"/>
+					<xsd:element name="RegistrationDateTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>This is the offical time used for penalty-decisions. It could be the time a fax or phone call laying the basis for a control action reached the transport authority.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="SourceNote" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>This is a note including a hint of who originally supplied a manual report leading to this control action. It could include name and organisational unit of the information provider.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Contains a generic textual description of the CONTROL ACTION and additional information that can not be expressed in data (for CONTROL CENTER and PASSENGER information)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="MessageToDriver" type="NaturalLanguageStringStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Contains additional information, specific for  the driver, that can not be expressed in data.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:choice>
+						<xsd:group ref="JourneyControlAction"/>
+						<xsd:group ref="NetworkControlAction"/>
+						<xsd:group ref="ConnectionControlAction"/>
+						<xsd:group ref="VehicleControlAction"/>
+					</xsd:choice>
+					<xsd:choice minOccurs="0">
+						<xsd:element ref="SituationRef"/>
+						<xsd:element name="SituationDescription">
+							<xsd:complexType>
+								<xsd:group ref="DescriptionGroup"/>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="NeedsAssociatedPassengerInformation" type="xsd:boolean">
+							<xsd:annotation>
+								<xsd:documentation>Wether some passenger information shall be associated to this CONTROL ACTION (meaning that if no SituationRef is associated, then some information shall be created)</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
 	<xsd:complexType name="DeviationReason">
-		<xsd:attribute name="StandardCategory" type="DeviationReasonCategory" use="required"/>
-		<xsd:attribute name="CustomCategory" type="xsd:string" use="optional"/>
+		<xsd:annotation>
+			<xsd:documentation>Deviation description</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StandardCategory" type="DeviationReasonCategory" minOccurs="1"/>
+			<xsd:element name="CustomCategory" type="NaturalLanguageStringStructure" minOccurs="0"/>
+		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:simpleType name="DeviationReasonCategory">
 		<xsd:restriction base="xsd:token">
-			<xsd:enumeration value="ACCIDENT"/>
-			<xsd:enumeration value="ASSAULT"/>
-			<xsd:enumeration value="VANDALISM"/>
-			<xsd:enumeration value="NODRIVER"/>
-			<xsd:enumeration value="STRIKE"/>
-			<xsd:enumeration value="VEHICLESHORTAGE"/>
-			<xsd:enumeration value="TECHNICALFAILURE"/>
-			<xsd:enumeration value="VEHICLEBREAKDOWN"/>
-			<xsd:enumeration value="INFRASTRUCTUREFAILURE"/>
-			<xsd:enumeration value="DELAYS"/>
-			<xsd:enumeration value="REDUCEDSPEED"/>
-			<xsd:enumeration value="WEATHER"/>
-			<xsd:enumeration value="CONGESTION"/>
-			<xsd:enumeration value="ROADWORK"/>
-			<xsd:enumeration value="CHANGEDROUTE"/>
-			<xsd:enumeration value="OTHER"/>
-			<xsd:enumeration value="TRAFFICINCIDENT"/>
-			<xsd:enumeration value="EARLYDEPARTURE"/>
-			<xsd:enumeration value="WRONGROUTE"/>
-			<xsd:enumeration value="POLICEDECISION"/>
-			<xsd:enumeration value="SAFETY"/>
-			<xsd:enumeration value="SMOKE"/>
-			<xsd:enumeration value="MEDICAL"/>
-			<xsd:enumeration value="HEAVYLOAD"/>
-			<xsd:enumeration value="RESTOREOPERATION"/>
-			<xsd:enumeration value="MAINTENANCE"/>
-			<xsd:enumeration value="SERVICEINFO"/>
-			<xsd:enumeration value="MARKETINGINFO"/>
+			<xsd:enumeration value="accident"/>
+			<xsd:enumeration value="assault"/>
+			<xsd:enumeration value="vandalism"/>
+			<xsd:enumeration value="noDriver"/>
+			<xsd:enumeration value="strike"/>
+			<xsd:enumeration value="vehicleShortage"/>
+			<xsd:enumeration value="technicalFailure"/>
+			<xsd:enumeration value="vehicleBreakdown"/>
+			<xsd:enumeration value="infrastructurFailure"/>
+			<xsd:enumeration value="delays"/>
+			<xsd:enumeration value="reducedspeed"/>
+			<xsd:enumeration value="weather"/>
+			<xsd:enumeration value="congestion"/>
+			<xsd:enumeration value="roadwork"/>
+			<xsd:enumeration value="changedRoute"/>
+			<xsd:enumeration value="traficIncident"/>
+			<xsd:enumeration value="earlydeparture"/>
+			<xsd:enumeration value="wrongRoute"/>
+			<xsd:enumeration value="policeDecision"/>
+			<xsd:enumeration value="safety"/>
+			<xsd:enumeration value="smoke"/>
+			<xsd:enumeration value="medical"/>
+			<xsd:enumeration value="heavyload"/>
+			<xsd:enumeration value="restoreOperation"/>
+			<xsd:enumeration value="maintenance"/>
+			<xsd:enumeration value="serviceInfo"/>
+			<xsd:enumeration value="marketingInfo"/>
+			<xsd:enumeration value="other"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:group name="JourneyControlAction">
@@ -790,7 +880,7 @@ If false each subscription response will contain the full information as specifi
 			<xsd:element name="ChangedPoints" type="ChangedPoints"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+	<!--  *********************************************************  -->
 	<xsd:complexType name="CallCancellationActionStructure">
 		<xsd:sequence>
 			<xsd:group ref="PartialJourneyScope"/>
@@ -810,6 +900,7 @@ If false each subscription response will contain the full information as specifi
 		<xsd:sequence>
 			<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure"/>
 			<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+			<xsd:element name="TypeOfActivatedJourney" type="TypeOfActivatedJourneyEnumeration" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
@@ -828,6 +919,16 @@ If false each subscription response will contain the full information as specifi
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="VehicleRef"/>
+			<xsd:element name="DriverRef" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the DRIVER or Crew currently logged in to operate a monitored VEHICLE. May be omitted if real-time data is not available - i.e. it is timetabled data. +SIRI v2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DriverName" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name oo the Driver or Crew   +SIRI v2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:choice>
 				<xsd:element name="DatedBlockRef" type="BlockRefStructure" minOccurs="0"/>
 				<!--NOPTIS-CHANGE: >>BlockRefStructure -->
@@ -843,6 +944,16 @@ If false each subscription response will contain the full information as specifi
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="VehicleRef"/>
+			<xsd:element name="DriverRef" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the DRIVER or Crew currently logged in to operate a monitored VEHICLE. May be omitted if real-time data is not available - i.e. it is timetabled data. +SIRI v2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DriverName" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name oo the Driver or Crew   +SIRI v2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:choice>
 				<xsd:element name="DatedBlockRef" type="BlockRefStructure" minOccurs="0"/>
 				<!--NOPTIS-CHANGE: >>BlockRefStructure -->
@@ -875,7 +986,7 @@ If false each subscription response will contain the full information as specifi
 					<xsd:sequence>
 						<!--					<xsd:element name="MiddleCall" type="Call" minOccurs="0" maxOccurs="unbounded"/> NOPTIS-CHANGE: Change to regular SIRI Calls -->
 						<xsd:element name="MiddleCall" type="MiddleCallStructure" minOccurs="0" maxOccurs="unbounded"/>
-						<!-- NOPTIS-CHANGE: Change to regular SIRI MonitoredCalls -->
+						<!-- NOPTIS-CHANGE: Change to regular SIRI MonitoredCalls => NO, Middlecall -->
 					</xsd:sequence>
 				</xsd:sequence>
 			</xsd:choice>
@@ -883,7 +994,6 @@ If false each subscription response will contain the full information as specifi
 			<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
 			<xsd:element name="NewJourneyCode" type="DatedVehicleJourneyCodeType" minOccurs="1"/>
 			<!--NOPTIS-CHANGE: attribute>>element + NewJourneyGid>>NewJourneyCode -->
-			<xsd:element name="SituationRef" type="SituationRefStructure" minOccurs="0"/>
 			<!--		<xsd:attribute name="InformPassengersCondition" type="InformPassengersCondition" use="optional" default="ALWAYS"/>  NOPTIS-CHANGE: InformPassengersCondition>>SituationRef : CA service does not do PI... this is for SX ! -->
 			<xsd:element name="OperatingDayDate" type="xsd:date" minOccurs="0">
 				<xsd:annotation>
@@ -903,12 +1013,15 @@ If false each subscription response will contain the full information as specifi
 						<xsd:documentation>Changes to subsequent Calls can be applied using different change models. MINIMAL, LINEAR, STATISTIC</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
+				<xsd:element name="TypeOfChange" type="ChangeOfJourneyTimingTypeEnumeration">
+					<xsd:annotation>
+						<xsd:documentation>Type/reason for the change (respacing, resorption, etc.)</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
 				<xsd:element name="TimedCalls" type="TimedCalls"/>
 			</xsd:choice>
 		</xsd:sequence>
 	</xsd:complexType>
-	<!--  *********************************************************  -->
-	<!--  *********************************************************  -->
 	<!--  *********************************************************  -->
 	<xsd:complexType name="StopRefs">
 		<xsd:sequence maxOccurs="unbounded">
@@ -923,8 +1036,7 @@ If false each subscription response will contain the full information as specifi
 		<xsd:sequence>
 			<xsd:element name="StopRefs" type="StopRefs"/>
 			<xsd:element name="TimeScope" type="StopPointStatusTimeScope"/>
-			<xsd:element name="Status" type="FacilityStatusStructure" minOccurs="1"/>
-			<!--NOPTIS-CHANGE: attribute>>element + LIMITEDACCESS/CLOSED/ATTENTION changed to FacilityStatus-->
+			<xsd:element name="Status" type="StopPlaceStatusEnumeration" minOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<!-- *********************************************************  -->
@@ -963,11 +1075,6 @@ If false each subscription response will contain the full information as specifi
 					<xsd:element name="TargetDeparturePoint" type="AllocatedStopPoint"/>
 				</xsd:sequence>
 			</xsd:choice>
-			<xsd:element name="MessageToDriver" type="xsd:string" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Contains additional information to the driver that can not be expressed in data.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
@@ -999,14 +1106,14 @@ If false each subscription response will contain the full information as specifi
 		<xsd:sequence>
 			<xsd:element name="FromPointInJourneyPatternRef" type="PointInJourneyPatternRef" minOccurs="0"/>
 			<xsd:element name="Offset" type="xsd:duration"/>
-			<xsd:element name="ChangeModel" type="ChangeModel" default="MINIMAL" minOccurs="0"/>
+			<xsd:element name="ChangeModel" type="ChangeModelEnumeration" default="minimal" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
 	<xsd:complexType name="TimedCalls">
 		<xsd:sequence>
 			<xsd:element name="TimedCall" type="MiddleCallStructure" maxOccurs="unbounded"/>
-			<!--NOPTIS-CHANGE: TimedCall>>MonitoredCall -->
+			<!--NOPTIS-CHANGE: TimedCall>>MonitoredCall  => NO, Middlecall-->
 		</xsd:sequence>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
@@ -1118,14 +1225,22 @@ If false each subscription response will contain the full information as specifi
 			<!--NOPTIS-CHANGE: why not operator ? -->
 		</xsd:choice>
 	</xsd:group>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+	<!--  *********************************************************  -->
 	<xsd:group name="PointRefGroup">
-		<xsd:choice>
-			<xsd:element ref="StopPointRef"/>
-			<!-- <xsd:element ref="ParkingPointRef"/> -->
-		</xsd:choice>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="StopPointRef"/>
+				<!-- <xsd:element ref="ParkingPointRef"/> -->
+				<xsd:element ref="ifopt:StopPlaceRef"/>
+			</xsd:choice>
+			<xsd:element name="QuayRef" type="ifopt:QuayRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a QUAY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
 	</xsd:group>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+	<!--  *********************************************************  -->
 	<xsd:complexType name="PointInJourneyPatternRef">
 		<xsd:sequence>
 			<xsd:group ref="PointRefGroup"/>
@@ -1145,14 +1260,14 @@ If false each subscription response will contain the full information as specifi
 			<!--NOPTIS-CHANGE: attribute>>element + VisitCount >> VisitNumber-->
 		</xsd:sequence>
 	</xsd:complexType>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+	<!--  *********************************************************  -->
 	<xsd:complexType name="CancelledConnection">
 		<xsd:sequence>
 			<xsd:element name="FeederCallRef" type="DatedCallRef"/>
 			<xsd:element name="FetcherCallRef" type="DatedCallRef"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+	<!--  *********************************************************  -->
 	<xsd:complexType name="ModifiedConnection">
 		<xsd:sequence>
 			<xsd:element name="FeederCallRef" type="DatedCallRef"/>
@@ -1161,7 +1276,7 @@ If false each subscription response will contain the full information as specifi
 			<xsd:element name="WaitForFeederUntilDateTime" type="xsd:dateTime" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+	<!--  *********************************************************  -->
 	<xsd:complexType name="ExtraConnection">
 		<xsd:sequence>
 			<xsd:element name="FeederCallRef" type="DatedCallRef"/>
@@ -1175,11 +1290,40 @@ If false each subscription response will contain the full information as specifi
 	</xsd:complexType>
 	<!--Ressource types from RII-SharedTypes -->
 	<!--  -->
-	<xsd:simpleType name="ChangeModel">
+	<xsd:simpleType name="ChangeModelEnumeration">
 		<xsd:restriction base="xsd:token">
-			<xsd:enumeration value="MINIMAL"/>
-			<xsd:enumeration value="LINEAR"/>
-			<xsd:enumeration value="STATISTIC"/>
+			<xsd:enumeration value="minimal"/>
+			<xsd:enumeration value="linear"/>
+			<xsd:enumeration value="statistic"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--  -->
+	<xsd:simpleType name="StopPlaceStatusEnumeration">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="limitedAccess"/>
+			<xsd:enumeration value="clodes"/>
+			<xsd:enumeration value="attention"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--  -->
+	<xsd:simpleType name="ChangeOfJourneyTimingTypeEnumeration">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="respacing"/>
+			<xsd:enumeration value="resorption"/>
+			<xsd:enumeration value="departureLag"/>
+			<xsd:enumeration value="interchangeSecuring"/>
+			<xsd:enumeration value="trafic"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--  -->
+	<xsd:simpleType name="TypeOfActivatedJourneyEnumeration">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="virtualLineJourney"/>
+			<xsd:enumeration value="otherFlexibleJourney"/>
+			<xsd:enumeration value="planedReplacement"/>
+			<xsd:enumeration value="planedReinforcement"/>
+			<xsd:enumeration value="other"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 </xsd:schema>
