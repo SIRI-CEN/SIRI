@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2021 (x64) (http://www.altova.com) by Hogia Public Transport Systems AB (Hogia Public Transport Systems AB) -->
+<!-- edited with XMLSpy v2021 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_ControlAction_service">
 	<xsd:annotation>
 		<xsd:appinfo>
@@ -342,34 +342,45 @@ If false each subscription response will contain the full information as specifi
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
-			<xsd:element name="controlActionGroupingRequests" minOccurs="0">
+			<xsd:element name="controlActionSetsInformation" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Add one or more ControlActions to a set of related ControlActions.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="ControlActionGroupingRequest" maxOccurs="unbounded">
+						<xsd:element name="ControlActionSet" maxOccurs="unbounded">
 							<xsd:complexType>
 								<xsd:sequence>
+									<xsd:element name="ControlActionSetCode"/>
 									<xsd:group ref="MasterRef"/>
-									<xsd:element name="AddedControlActionRef" type="ItemRefStructure" minOccurs="1" maxOccurs="unbounded"/>
-								</xsd:sequence>
-							</xsd:complexType>
-						</xsd:element>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="controlActionUnGroupingRequests" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Remove one or more ControlActions from a set of related ControlActions</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="ControlActionUnGroupingRequest" maxOccurs="unbounded">
-							<xsd:complexType>
-								<xsd:sequence>
-									<xsd:group ref="MasterRef"/>
-									<xsd:element name="UnGroupedControlActionRef" type="ItemRefStructure" maxOccurs="unbounded"/>
+									<xsd:element name="AddedControlActions">
+										<xsd:annotation>
+											<xsd:documentation>Codes of Control Actions added to the set (group)</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="AddedControlActionRef" type="ItemRefStructure" maxOccurs="unbounded">
+													<xsd:annotation>
+														<xsd:documentation>Control Action Code</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="RemovedControlActions">
+										<xsd:annotation>
+											<xsd:documentation>Codes of Control Actions removed from the set (group)</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="AddedControlActionRef" type="ItemRefStructure" maxOccurs="unbounded">
+													<xsd:annotation>
+														<xsd:documentation>Control Action Code</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
 								</xsd:sequence>
 							</xsd:complexType>
 						</xsd:element>
@@ -385,9 +396,9 @@ If false each subscription response will contain the full information as specifi
 							</xsd:annotation>
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element name="ItemRef" type="ItemRefStructure">
+									<xsd:element name="ControlActionRef" type="ItemRefStructure">
 										<xsd:annotation>
-											<xsd:documentation>Identifier of revoked ControlAction</xsd:documentation>
+											<xsd:documentation>Control Action Code</xsd:documentation>
 										</xsd:annotation>
 									</xsd:element>
 									<xsd:element name="RevokedFromDateTime" type="xsd:dateTime" minOccurs="0"/>
@@ -682,7 +693,7 @@ If false each subscription response will contain the full information as specifi
 		<xsd:complexContent>
 			<xsd:extension base="AbstractControlActionHeaderStructure">
 				<xsd:sequence>
-					<xsd:element name="DeviationReason" type="DeviationReason" minOccurs="0"/>
+					<xsd:element name="Reason" type="ControlActionReason" minOccurs="0"/>
 					<xsd:element name="RegistrationDateTime" type="xsd:dateTime" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>This is the offical time used for penalty-decisions. It could be the time a fax or phone call laying the basis for a control action reached the transport authority.</xsd:documentation>
@@ -727,13 +738,13 @@ If false each subscription response will contain the full information as specifi
 		</xsd:complexContent>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
-	<xsd:complexType name="DeviationReason">
+	<xsd:complexType name="ControlActionReason">
 		<xsd:annotation>
 			<xsd:documentation>Deviation description</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="StandardCategory" type="DeviationReasonCategory" minOccurs="1"/>
-			<xsd:element name="CustomCategory" type="NaturalLanguageStringStructure" minOccurs="0"/>
+			<xsd:element name="CustomCategory" type="TypeOfValueStructure" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:simpleType name="DeviationReasonCategory">
@@ -930,9 +941,9 @@ If false each subscription response will contain the full information as specifi
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:choice>
-				<xsd:element name="DatedBlockRef" type="BlockRefStructure" minOccurs="0"/>
 				<!--NOPTIS-CHANGE: >>BlockRefStructure -->
-				<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0"/>
+				<xsd:element name="DatedBlockRef" type="BlockRefStructure"/>
+				<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure"/>
 				<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
 			</xsd:choice>
 		</xsd:sequence>
@@ -1232,12 +1243,18 @@ If false each subscription response will contain the full information as specifi
 				<xsd:element ref="StopPointRef"/>
 				<!-- <xsd:element ref="ParkingPointRef"/> -->
 				<xsd:element ref="ifopt:StopPlaceRef"/>
+				<xsd:element name="arbitraryPoint" type="LocationStructure">
+					<xsd:annotation>
+						<xsd:documentation>Current geospatial location of VEHICLE. Measured to front of vehicle.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
 			</xsd:choice>
 			<xsd:element name="QuayRef" type="ifopt:QuayRefStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Reference to a QUAY</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element ref="TimingPoint" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
 	<!--  *********************************************************  -->
