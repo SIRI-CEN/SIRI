@@ -61,6 +61,8 @@ Rail transport, Roads and road transport
 	<xsd:include schemaLocation="siri_model/siri_monitoredVehicleJourney.xsd"/>
 	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
 	<xsd:include schemaLocation="siri_model/siri_facility.xsd"/>
+	<!--	<xsd:include schemaLocation="siri_generalMessage_service.xsd"/>-->
+	<!--TODO : MOST PROBABLY TO BE CHANGED BY PUTTING THE MESSAGE STRUCTURE IN A MORE GENERIC FILE (i.e inSIRI MODEL-->
 	<!-- ===Global import of all IFOPT namespace elements used in SIRI needed to work around XERCES limitation=====-->
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop.xsd"/>
@@ -143,6 +145,16 @@ Rail transport, Roads and road transport
 					</xsd:complexType>
 				</xsd:element>
 			</xsd:choice>
+			<xsd:element name="IncludeDriverMessages" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Wether Driver Messages shall be included in the answer (defaulf no)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IncludeVehicleDetectings" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Wether Vehicle Detecting shall be included in the answer (defaulf no)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="ControlActionRequestPolicyGroup">
@@ -314,7 +326,7 @@ If false each subscription response will contain the full information as specifi
 				<xsd:attribute name="version" type="VersionString" default="2.1">
 					<xsd:annotation>
 						<xsd:documentation>Version number of response. Fixed 
-</xsd:documentation>
+		</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 			</xsd:extension>
@@ -352,6 +364,11 @@ If false each subscription response will contain the full information as specifi
 							<xsd:complexType>
 								<xsd:sequence>
 									<xsd:element name="ControlActionSetCode"/>
+									<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+										<xsd:annotation>
+											<xsd:documentation>Contains a generic textual description of the Control Action Set (reason fro creatin the set, etc.)</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
 									<xsd:group ref="MasterRef"/>
 									<xsd:element name="AddedControlActions">
 										<xsd:annotation>
@@ -402,7 +419,7 @@ If false each subscription response will contain the full information as specifi
 										</xsd:annotation>
 									</xsd:element>
 									<xsd:element name="RevokedFromDateTime" type="xsd:dateTime" minOccurs="0"/>
-									<xsd:element name="SourceNote" minOccurs="0">
+									<xsd:element name="SourceNote" type="NaturalLanguageStringStructure" minOccurs="0">
 										<xsd:annotation>
 											<xsd:documentation>This is a note including a hint of who revoked this control action. It could include name and organisational unit of the information provider</xsd:documentation>
 										</xsd:annotation>
@@ -410,6 +427,20 @@ If false each subscription response will contain the full information as specifi
 								</xsd:sequence>
 							</xsd:complexType>
 						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DriverMessages" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="DriverMessage" type="DriverMessageStructure" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="VehicleDetectings" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="VehicleDetectings" type="VehicleDetectingStructure" maxOccurs="unbounded"/>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
@@ -455,8 +486,7 @@ If false each subscription response will contain the full information as specifi
 				</xsd:sequence>
 				<xsd:attribute name="version" type="VersionString" default="2.1">
 					<xsd:annotation>
-						<xsd:documentation>Version number of response. Fixed 
-</xsd:documentation>
+						<xsd:documentation>Version number of response. Fixed </xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 			</xsd:extension>
@@ -699,7 +729,7 @@ If false each subscription response will contain the full information as specifi
 							<xsd:documentation>This is the offical time used for penalty-decisions. It could be the time a fax or phone call laying the basis for a control action reached the transport authority.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element name="SourceNote" type="xsd:string" minOccurs="0">
+					<xsd:element name="SourceNote" type="NaturalLanguageStringStructure" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>This is a note including a hint of who originally supplied a manual report leading to this control action. It could include name and organisational unit of the information provider.</xsd:documentation>
 						</xsd:annotation>
@@ -733,6 +763,87 @@ If false each subscription response will contain the full information as specifi
 							</xsd:annotation>
 						</xsd:element>
 					</xsd:choice>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="DriverMessageStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual Message exchanged with driver.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractIdentifiedItemStructure">
+				<xsd:sequence>
+					<xsd:element name="MessageIdentifier" type="EntryQualifierStructure">
+						<xsd:annotation>
+							<xsd:documentation>Identifier of MESSAGE within a Participant.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="InfoMessageVersion" type="xsd:positiveInteger" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional version number of update to previosu message.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ValidUntilTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Time until when message is valid. If absent unopen ended.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="SituationRef" minOccurs="0"/>
+					<xsd:element name="MessageToDriver" type="NaturalLanguageStringStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Contains additional information, specific for  the driver, that can not be expressed in data.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="OriginatedFromDriver" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>if TRUE means that the message was originated by the driver (defauld FALSE)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="CallForMean" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>if TRUE means that it is a message sent to a PARKING POINT to ask for the disposal of  resources in stand-by.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="CallForRepair" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>if TRUE means that it is a message sent to a sent to a GARAGE to ask for repair of a VEHICLE.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:group ref="JourneyScope" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="formatRef" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Reference to a format of the Content. If absent, free text.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="VehicleDetectingStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual Vehicle Detecting information structure.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractIdentifiedItemStructure">
+				<xsd:sequence>
+					<xsd:element name="DetectingLocation" type="LocationStructure">
+						<xsd:annotation>
+							<xsd:documentation>Current geospatial location of DETECTING device.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Contains a generic textual description of the detection</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="VehicleRef" minOccurs="0"/>
+					<xsd:group ref="JourneyScope" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -740,14 +851,14 @@ If false each subscription response will contain the full information as specifi
 	<!--  *********************************************************  -->
 	<xsd:complexType name="ControlActionReason">
 		<xsd:annotation>
-			<xsd:documentation>Deviation description</xsd:documentation>
+			<xsd:documentation>Control Action Reason description</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="StandardCategory" type="DeviationReasonCategory" minOccurs="1"/>
+			<xsd:element name="StandardCategory" type="ControlActionReasonCategory" minOccurs="1"/>
 			<xsd:element name="CustomCategory" type="TypeOfValueStructure" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:simpleType name="DeviationReasonCategory">
+	<xsd:simpleType name="ControlActionReasonCategory">
 		<xsd:restriction base="xsd:token">
 			<xsd:enumeration value="accident"/>
 			<xsd:enumeration value="assault"/>
