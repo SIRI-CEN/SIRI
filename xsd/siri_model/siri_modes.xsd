@@ -121,103 +121,174 @@ Rail transport, Roads and road transport
    <xsd:documentation>Values for ModesOfTransport : TPEG pti_table 01.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="pti1_0"/>
+   <xsd:enumeration value="pti1_0">
+   <xsd:documentation>TPEG pti1_0, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="pti1_1"/>
+   <xsd:enumeration value="undefinedModeOfTransport">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'unknown'.</xsd:documentation>
+   </xsd:enumeration>
+   <xsd:enumeration value="pti1_1">
+    <xsd:documentation>TPEG pti1_1, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="railwayService">
     <xsd:annotation>
      <xsd:documentation>See pti2_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="rail"/>
-   <xsd:enumeration value="pti1_2"/>
+   <xsd:enumeration value="lightRailwayService">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'railwayService'.</xsd:documentation>
+   </xsd:enumeration>
+   <xsd:enumeration value="rackRailwayService">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'railwayService'.</xsd:documentation>
+   </xsd:enumeration>
+   <xsd:enumeration value="pti1_2">
+   <xsd:documentation>TPEG pti1_2, deprecated (SIRI 2.1)</xsd:documentation>
+  </xsd:enumeration>
    <xsd:enumeration value="coachService">
     <xsd:annotation>
      <xsd:documentation>See pti3_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="coach"/>
-   <xsd:enumeration value="pti1_3"/>
+   <xsd:enumeration value="pti1_3">
+    <xsd:documentation>TPEG pti1_3, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="suburbanRailwayService"/>
    <xsd:enumeration value="suburbanRail"/>
-   <xsd:enumeration value="pti1_4"/>
+   <xsd:enumeration value="pti1_4">
+    <xsd:documentation>TPEG pti1_4, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="urbanRailwayService">
     <xsd:annotation>
      <xsd:documentation>See pti4_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="urbanRail"/>
-   <xsd:enumeration value="pti1_5"/>
+   <xsd:enumeration value="pti1_5">
+    <xsd:documentation>TPEG pti1_5, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="metroService"/>
    <xsd:enumeration value="metro"/>
-   <xsd:enumeration value="pti1_6"/>
+   <xsd:enumeration value="pti1_6">
+    <xsd:documentation>TPEG pti1_6, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="undergroundService"/>
    <xsd:enumeration value="underground"/>
-   <xsd:enumeration value="pti1_7"/>
+   <xsd:enumeration value="pti1_7">
+    <xsd:documentation>TPEG pti1_7, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="busService">
     <xsd:annotation>
      <xsd:documentation>See pti5_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="bus"/>
-   <xsd:enumeration value="pti1_8"/>
+   <xsd:enumeration value="pti1_8">
+    <xsd:documentation>TPEG pti1_8, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="trolleyBusService"/>
    <xsd:enumeration value="trolleyBus"/>
-   <xsd:enumeration value="pti1_9"/>
+   <xsd:enumeration value="pti1_9">
+    <xsd:documentation>TPEG pti1_9, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="tramService">
     <xsd:annotation>
      <xsd:documentation>See pti6_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="tram"/>
-   <xsd:enumeration value="pti1_10"/>
+   <xsd:enumeration value="pti1_10">
+    <xsd:documentation>TPEG pti1_10, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="waterTransportService">
     <xsd:annotation>
      <xsd:documentation>See pti7_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="waterTransport"/>
-   <xsd:enumeration value="pti1_11"/>
+   <xsd:enumeration value="cableDrawnBoatService">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'waterTransportService'</xsd:documentation>
+   </xsd:enumeration>
+   <xsd:enumeration value="pti1_11">
+    <xsd:documentation>TPEG pti1_11, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="airService">
     <xsd:annotation>
      <xsd:documentation>See pti8_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="air"/>
-   <xsd:enumeration value="pti1_12"/>
+   <xsd:enumeration value="pti1_12">
+    <xsd:documentation>TPEG pti1_12, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="ferryService"/>
    <xsd:enumeration value="water"/>
-   <xsd:enumeration value="pti1_13"/>
+   <xsd:enumeration value="pti1_13">
+    <xsd:documentation>TPEG pti1_13, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="telecabinService">
     <xsd:annotation>
      <xsd:documentation>See pti9_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
+   <xsd:enumeration value="gondolaCableCarService">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'telecabinService'</xsd:documentation>
+   </xsd:enumeration>
+   <xsd:enumeration value="chairliftService">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'telecabinService'</xsd:documentation>
+   </xsd:enumeration>
+   <xsd:enumeration value="elevatorService">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'telecabinService'</xsd:documentation>
+   </xsd:enumeration>
+   <xsd:enumeration value="lift"/>
    <xsd:enumeration value="telecabin"/>
-   <xsd:enumeration value="pti1_14"/>
+   <xsd:enumeration value="pti1_14">
+    <xsd:documentation>TPEG pti1_14, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="funicularService">
     <xsd:annotation>
      <xsd:documentation>See pti10_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="funicular"/>
-   <xsd:enumeration value="pti1_15"/>
+   <xsd:enumeration value="pti1_15">
+    <xsd:documentation>TPEG pti1_15, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="taxiService">
     <xsd:annotation>
      <xsd:documentation>pti11_x.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="taxi"/>
-   <xsd:enumeration value="pti1_16"/>
+   <xsd:enumeration value="pti1_16">
+    <xsd:documentation>TPEG pti1_16, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="selfDrive">
     <xsd:annotation>
      <xsd:documentation>See pti12_x.</xsd:documentation>
     </xsd:annotation>
+   <xsd:enumeration value="rentalVehicle">
+    <xsd:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX.
+     See also 'selfDrive'</xsd:documentation>
    </xsd:enumeration>
-   <xsd:enumeration value="pti1_17"/>
+   </xsd:enumeration>
+   <xsd:enumeration value="pti1_17">
+    <xsd:documentation>TPEG pti1_17, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="allServices"/>
    <xsd:enumeration value="all"/>
-   <xsd:enumeration value="pti1_18"/>
+   <xsd:enumeration value="pti1_18">
+    <xsd:documentation>TPEG pti1_18, deprecated (SIRI 2.1)</xsd:documentation>
+   </xsd:enumeration>
    <xsd:enumeration value="allServicesExcept"/>
   </xsd:restriction>
  </xsd:simpleType>
