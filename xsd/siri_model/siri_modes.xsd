@@ -285,10 +285,11 @@ Rail transport, Roads and road transport
      <xsd:documentation>Use 'ferry' instead.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="telecabin"/>
-   <xsd:annotation>
-    <xsd:documentation>See also 'cableway'.</xsd:documentation>
-   </xsd:annotation>
+   <xsd:enumeration value="telecabin">
+    <xsd:annotation>
+     <xsd:documentation>See also 'cableway'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
    <xsd:enumeration value="telecabinService">
     <xsd:annotation>
      <xsd:documentation>See also 'telecabin'.</xsd:documentation>
