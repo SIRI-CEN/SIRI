@@ -363,14 +363,18 @@ If false each subscription response will contain the full information as specifi
 						<xsd:element name="ControlActionSet" maxOccurs="unbounded">
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element name="ControlActionSetCode"/>
+									<xsd:element name="ControlActionSetCode">
+										<xsd:annotation>
+											<xsd:documentation>Identification of the set: can be the Master Case / Situation Id</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
 									<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 										<xsd:annotation>
 											<xsd:documentation>Contains a generic textual description of the Control Action Set (reason fro creatin the set, etc.)</xsd:documentation>
 										</xsd:annotation>
 									</xsd:element>
 									<xsd:group ref="MasterRef"/>
-									<xsd:element name="AddedControlActions">
+									<xsd:element name="AddedControlActions" minOccurs="0">
 										<xsd:annotation>
 											<xsd:documentation>Codes of Control Actions added to the set (group)</xsd:documentation>
 										</xsd:annotation>
@@ -384,7 +388,7 @@ If false each subscription response will contain the full information as specifi
 											</xsd:sequence>
 										</xsd:complexType>
 									</xsd:element>
-									<xsd:element name="RemovedControlActions">
+									<xsd:element name="RemovedControlActions" minOccurs="0">
 										<xsd:annotation>
 											<xsd:documentation>Codes of Control Actions removed from the set (group)</xsd:documentation>
 										</xsd:annotation>
@@ -440,7 +444,7 @@ If false each subscription response will contain the full information as specifi
 			<xsd:element name="VehicleDetectings" minOccurs="0">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="VehicleDetectings" type="VehicleDetectingStructure" maxOccurs="unbounded"/>
+						<xsd:element name="VehicleDetecting" type="VehicleDetectingStructure" maxOccurs="unbounded"/>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
@@ -461,13 +465,13 @@ If false each subscription response will contain the full information as specifi
 		</xsd:sequence>
 	</xsd:complexType>
 	<!-- ======================================================================= -->
-	<!-- ==== CS: Capability Request=================================================================== -->
+	<!-- ==== CA: Capability Request=================================================================== -->
 	<xsd:element name="ControlActionCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
 		<xsd:annotation>
 			<xsd:documentation>Request for information about Control Action Service Capabilities. Answered with ControlActionCapabilitiesResponse.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
-	<!-- ==== CS: Capability Response =================================================================== -->
+	<!-- ==== CA: Capability Response =================================================================== -->
 	<xsd:element name="ControlActionCapabilitiesResponse" type="ControlActionCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
 		<xsd:annotation>
 			<xsd:documentation>Capabilities for Control Action Service. Answers a ControlActionCapabilitiesRequest.</xsd:documentation>
@@ -781,7 +785,7 @@ If false each subscription response will contain the full information as specifi
 							<xsd:documentation>Identifier of MESSAGE within a Participant.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element name="InfoMessageVersion" type="xsd:positiveInteger" minOccurs="0">
+					<xsd:element name="MessageVersion" type="xsd:positiveInteger" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>Optional version number of update to previosu message.</xsd:documentation>
 						</xsd:annotation>
@@ -792,22 +796,31 @@ If false each subscription response will contain the full information as specifi
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element ref="SituationRef" minOccurs="0"/>
-					<xsd:element name="MessageToDriver" type="NaturalLanguageStringStructure" minOccurs="0">
+					<xsd:element name="MessageContents">
 						<xsd:annotation>
-							<xsd:documentation>Contains additional information, specific for  the driver, that can not be expressed in data.</xsd:documentation>
+							<xsd:documentation>Messages, possibly multiple if multiple languages are to be used</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="MessageContent" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>Contains additional information, specific for  the driver, that can not be expressed in data. Multiplicity for multiple languages.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="OriginatedByDriver" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>if TRUE means that the message was originated by the driver (defauld FALSE, meaning that the Message is sent to the driver)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element name="OriginatedFromDriver" type="xsd:boolean" default="false" minOccurs="0">
-						<xsd:annotation>
-							<xsd:documentation>if TRUE means that the message was originated by the driver (defauld FALSE)</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element name="CallForMean" type="xsd:boolean" default="false" minOccurs="0">
+					<xsd:element name="CallForMeans" type="xsd:boolean" default="false" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>if TRUE means that it is a message sent to a PARKING POINT to ask for the disposal of  resources in stand-by.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element name="CallForRepair" type="xsd:boolean" default="false" minOccurs="0">
+					<xsd:element name="CallForRepairs" type="xsd:boolean" default="false" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>if TRUE means that it is a message sent to a sent to a GARAGE to ask for repair of a VEHICLE.</xsd:documentation>
 						</xsd:annotation>
@@ -826,28 +839,76 @@ If false each subscription response will contain the full information as specifi
 	<!-- ======================================================================= -->
 	<xsd:complexType name="VehicleDetectingStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for individual Vehicle Detecting information structure.</xsd:documentation>
+			<xsd:documentation>Type for individual Vehicle Detecting information structure.Based on the TRANSMODEL's VHEICLE DETECTING dn associated LOG ENTRY model. Limited to position and speed detection. 
+			Note thant this is NOT the tracking of the vehicle position (see VehicleMonitoring for this) but the detecting of a passing vehicle by a fixed device (nearby, under/connected to the rail or the road used by the vehicle)
+			</xsd:documentation>
 		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="AbstractIdentifiedItemStructure">
-				<xsd:sequence>
-					<xsd:element name="DetectingLocation" type="LocationStructure">
-						<xsd:annotation>
-							<xsd:documentation>Current geospatial location of DETECTING device.</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation>Contains a generic textual description of the detection</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="VehicleRef" minOccurs="0"/>
-					<xsd:group ref="JourneyScope" minOccurs="0"/>
-					<xsd:element ref="Extensions" minOccurs="0"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
+		<xsd:sequence>
+			<xsd:group ref="VehicleDetectingLogEntryGroup"/>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
 	</xsd:complexType>
+	<xsd:group name="VehicleDetectingLogEntryGroup">
+		<xsd:annotation>
+			<xsd:documentation>LOG ENTRY for the DETECTING</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="LogEntryGroup"/>
+			<xsd:element name="DetectingLocation" type="LocationStructure">
+				<xsd:annotation>
+					<xsd:documentation>Current geospatial location of DETECTING device (NOT THE VEHICLE LOCATION)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DetectedSpeed" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Speed of the detected vehicle (in kilometers per hour)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DetectingEquipmentRef" type="FacilityRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the Equimpent that triggered the detection (expected to be defined in a static data set, possibly a NeTEx ActivatedEquipment or ActivationPoint).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TypeOfDetecting" type="TypeOfValueStructure" minOccurs="0">
+							<xsd:annotation>
+					<xsd:documentation>Open type associated with te detection (could be some weight range, length range, etc.)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="VehicleRef" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the detected vehicle </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="JourneyScope" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="LogEntryGroup">
+		<xsd:annotation>
+			<xsd:documentation>Generic LOG ENTRY (cf Transmodel)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Id" type="ItemIdentifierType">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of LOG ENTRY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LoggedAtTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of LOG ENTRY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Contains a generic textual description of the LOG ENTRY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of the LOG ENTRY </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
 	<!--  *********************************************************  -->
 	<xsd:complexType name="ControlActionReason">
 		<xsd:annotation>
