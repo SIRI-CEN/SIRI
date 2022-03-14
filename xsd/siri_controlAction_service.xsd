@@ -354,18 +354,23 @@ If false each subscription response will contain the full information as specifi
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
-			<xsd:element name="controlActionSetsInformation" minOccurs="0">
+			<xsd:element name="groupsOfControlActions" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Add one or more ControlActions to a set of related ControlActions.</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="ControlActionSet" maxOccurs="unbounded">
+						<xsd:element name="GoupOfControlActions" maxOccurs="unbounded">
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element name="ControlActionSetCode">
+									<xsd:element name="GoupOfControlActionsCode">
 										<xsd:annotation>
 											<xsd:documentation>Identification of the set: can be the Master Case / Situation Id</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="PurposeOfGrouping" type="NaturalLanguageStringStructure" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>Functional purpose for which GROUPs of CONTROL ACTIONs is defined. </xsd:documentation>
 										</xsd:annotation>
 									</xsd:element>
 									<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -434,14 +439,14 @@ If false each subscription response will contain the full information as specifi
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
-			<xsd:element name="DriverMessages" minOccurs="0">
+			<xsd:element name="driverMessages" minOccurs="0">
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="DriverMessage" type="DriverMessageStructure" maxOccurs="unbounded"/>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
-			<xsd:element name="VehicleDetectings" minOccurs="0">
+			<xsd:element name="vehicleDetectings" minOccurs="0">
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="VehicleDetecting" type="VehicleDetectingStructure" maxOccurs="unbounded"/>
@@ -514,7 +519,7 @@ If false each subscription response will contain the full information as specifi
 						</xsd:annotation>
 						<xsd:complexType>
 							<xsd:sequence>
-								<xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
+								<xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M" minOccurs="0">
 									<xsd:annotation>
 										<xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
 									</xsd:annotation>
@@ -524,15 +529,17 @@ If false each subscription response will contain the full information as specifi
 										<xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'true'.</xsd:documentation>
 									</xsd:annotation>
 								</xsd:element>
-								<xsd:element ref="FilterByMonitoringRef"/>
-								<xsd:element ref="FilterByLineRef"/>
-								<xsd:element ref="FilterByDirectionRef" minOccurs="0"/>
-								<xsd:element ref="FilterByDestination" minOccurs="0"/>
-								<xsd:element name="FilterByVisitType" type="xsd:boolean" default="true" minOccurs="0">
+								<xsd:element name="FilterByMode" type="xsd:boolean" default="true" minOccurs="0">
 									<xsd:annotation>
-										<xsd:documentation>Whether results can be filtered by VistitType, e.g. arrivals, departures. Default True.</xsd:documentation>
+										<xsd:documentation>Whether results can be filtered by Network. Default True.</xsd:documentation>
 									</xsd:annotation>
 								</xsd:element>
+								<xsd:element name="FilterByNetworkRef" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by Network. Default True.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByLineRef" minOccurs="0"/>
 							</xsd:sequence>
 						</xsd:complexType>
 					</xsd:element>
@@ -566,11 +573,6 @@ If false each subscription response will contain the full information as specifi
 						</xsd:annotation>
 						<xsd:complexType>
 							<xsd:sequence>
-								<xsd:element name="HasLineNotices" type="xsd:boolean" default="true" minOccurs="0">
-									<xsd:annotation>
-										<xsd:documentation>Whether result supports LINE events. Default is 'true'.</xsd:documentation>
-									</xsd:annotation>
-								</xsd:element>
 								<xsd:element name="HasSituations" type="xsd:boolean" default="false" minOccurs="0">
 									<xsd:annotation>
 										<xsd:documentation>Whether result supports SITUATION REFERENCESs. Default is 'false'. +SIRI v2.0</xsd:documentation>
@@ -590,9 +592,14 @@ If false each subscription response will contain the full information as specifi
 		<xsd:complexContent>
 			<xsd:extension base="CapabilityRequestPolicyStructure">
 				<xsd:sequence>
-					<xsd:element name="UseReferences" type="xsd:boolean" default="true" minOccurs="0">
+					<xsd:element name="HasDriverMessages" type="xsd:boolean" default="false" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Whether results can return references for stops. Default is 'true'.</xsd:documentation>
+							<xsd:documentation>Whether results can return Driver Messages. Default is 'false'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="HasVehicleDetectings" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether results can return Vehicle Detectings. Default is 'false'.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -676,7 +683,7 @@ If false each subscription response will contain the full information as specifi
 					<xsd:documentation>Time of creation of CONTROL ACTION</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="ControlActionSetRef" type="ItemRefStructure" minOccurs="0">
+			<xsd:element name="GroupOfControlActionRef" type="ItemRefStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Reference to a set of related ControlAction items. By specifying this element here, this Control Action is added to that group. Note that, in parallel, there are also other mechanisms to group and un-group Control Actions.</xsd:documentation>
 				</xsd:annotation>
@@ -870,7 +877,7 @@ If false each subscription response will contain the full information as specifi
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="TypeOfDetecting" type="TypeOfValueStructure" minOccurs="0">
-							<xsd:annotation>
+				<xsd:annotation>
 					<xsd:documentation>Open type associated with te detection (could be some weight range, length range, etc.)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
@@ -953,21 +960,40 @@ If false each subscription response will contain the full information as specifi
 	</xsd:simpleType>
 	<xsd:group name="JourneyControlAction">
 		<xsd:choice>
-			<xsd:element name="JourneyCreation" type="JourneyCreation" minOccurs="0"/>
-			<xsd:element name="JourneyCancellation" type="JourneyCancellation" minOccurs="0"/>
+			<xsd:element name="JourneyCreation" type="JourneyCreation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in adding a completely new DATED VEHICLE JOURNEY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="JourneyCancellation" type="JourneyCancellation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in deleting a DATED VEHICLE JOURNEY from the latest valid plan.
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="PartialJourneyCancellation" type="CallCancellationActionStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>This report can be used for shortened journeys and when stops are bypassed by certain journeys</xsd:documentation>
+					<xsd:documentation>CONTROL ACTION consisting in assigning a JOURNEY PATTERN that is a subset of the original JOURNEY PATTERN to a DATED VEHICLE JOURNEY; thus specifically expressing that a part of a DATED VEHICLE JOURNEY has been cancelled.
+Can be used for shortened journeys and when stops are bypassed by certain journeys</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="JourneyActivation" type="JourneyActivation" minOccurs="0"/>
+			<xsd:element name="FlexibleJourneyActivation" type="FlexibleJourneyActivation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in activating a DATED VEHICLE JOURNEY that has an activation (i.e.  booking) pre-condition.
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="ChangeOfJourneyPattern" type="JourneyPatternModification" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>This report can be used  when stops are replaced by other stops on certain journeys</xsd:documentation>
+					<xsd:documentation>A CONTROL ACTION consisting in assigning a new JOURNEY PATTERN (and possibly the ROUTE supporting it) to a DATED VEHICLE JOURNEY.
+Can be used  when stops are replaced by other stops on certain journeys</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="ChangeOfJourneyProgress" type="ChangeOfJourneyProgress" minOccurs="0"/>
-			<xsd:element name="ChangeOfJourneyTiming" type="ChangeOfJourneyTiming" minOccurs="0"/>
+			<xsd:element name="ChangeOfJourneyTiming" type="ChangeOfJourneyTiming" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Simplified view mixing Transmodel,’s RESPACING, RESORPTION, DEPARTURE LAG and DEPARTURE EXCHANGE (all resulting in some changes in the passing times)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="StopPointAllocation" type="StopPointAllocation" minOccurs="0"/>
 		</xsd:choice>
 	</xsd:group>
@@ -984,17 +1010,32 @@ If false each subscription response will contain the full information as specifi
 	<!--  *********************************************************  -->
 	<xsd:group name="ConnectionControlAction">
 		<xsd:choice>
-			<xsd:element name="ConnectionCreation" type="ExtraConnection" minOccurs="0"/>
-			<xsd:element name="ConnectionCancellation" type="CancelledConnection" minOccurs="0"/>
-			<xsd:element name="ConnectionModification" type="ModifiedConnection" minOccurs="0"/>
+			<xsd:element name="InterchangeCreation" type="ExtraConnection" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in adding a completely new DATED VEHICLE JOURNEY INTERCHANGE between a feeder DATED VEHICLE JOURNEY and a distributor DATED VEHICLE JOURNEY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InterchangeCancellation" type="CancelledConnection" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in deleting a DATED VEHICLE JOURNEY INTERCHANGE from the latest valid plan so that a distributor DATED VEHICLE JOURNEY no longer needs to wait for a feeder DATED VEHICLE JOURNEY.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InterchangeModification" type="ModifiedConnection" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION expressing that the duration a distributor DATED VEHICLE  JOURNEY needs to wait for a feeder DATED VEHICLE JOURNEY in a DATED VEHICLE JOURNEY INTERCHANGE is changed or that a different DATED VEHICLE JOURNEY is to wait for the feeder.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:choice>
 	</xsd:group>
 	<!--  *********************************************************  -->
 	<xsd:group name="VehicleControlAction">
-		<xsd:choice>
-			<xsd:element name="VehicleWorkAssignment" type="VehicleWorkAssignment" minOccurs="0"/>
-			<xsd:element name="VehicleWorkDeassignment" type="VehicleWorkDeassignment" minOccurs="0"/>
-		</xsd:choice>
+		<xsd:sequence>
+			<xsd:element name="VehicleWorkAssignment" type="VehicleWorkAssignment" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The assignment, or the cancellation of an assignment, of a LOGICAL VEHICLE to a planned work, represented as DATED BLOCKs or as DATED VEHICLE JOURNEYs. This assignment may be overridden by a further assignment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
 	</xsd:group>
 	<!--  *********************************************************  -->
 	<xsd:complexType name="MiddleCallStructure">
@@ -1076,7 +1117,7 @@ If false each subscription response will contain the full information as specifi
 		<xsd:group ref="JourneyScope"/>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
-	<xsd:complexType name="JourneyActivation">
+	<xsd:complexType name="FlexibleJourneyActivation">
 		<xsd:annotation>
 			<xsd:documentation>To revoke this operation use JourneyCancellation.</xsd:documentation>
 		</xsd:annotation>
@@ -1087,21 +1128,17 @@ If false each subscription response will contain the full information as specifi
 		</xsd:sequence>
 	</xsd:complexType>
 	<!--  *********************************************************  -->
-	<xsd:complexType name="ChangeOfJourneyProgress">
-		<xsd:sequence>
-			<xsd:element name="MonitoredVehicleJourneyRef" type="FramedVehicleJourneyRefStructure"/>
-			<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
-			<xsd:element name="ProgressState" type="ProgressRateEnumeration" minOccurs="1"/>
-			<!--NOPTIS-CHANGE:a attribute>>element + ProgressRateEnumeration -->
-		</xsd:sequence>
-	</xsd:complexType>
-	<!--  *********************************************************  -->
 	<xsd:complexType name="VehicleWorkAssignment">
 		<xsd:annotation>
 			<xsd:documentation/>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="VehicleRef"/>
+			<xsd:element name="deassignment" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>if "true" this information is a deassignment (defaulf "false")</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="DriverRef" type="xsd:normalizedString" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>A reference to the DRIVER or Crew currently logged in to operate a monitored VEHICLE. May be omitted if real-time data is not available - i.e. it is timetabled data. +SIRI v2.0</xsd:documentation>
@@ -1116,31 +1153,6 @@ If false each subscription response will contain the full information as specifi
 				<!--NOPTIS-CHANGE: >>BlockRefStructure -->
 				<xsd:element name="DatedBlockRef" type="BlockRefStructure"/>
 				<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure"/>
-				<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
-			</xsd:choice>
-		</xsd:sequence>
-	</xsd:complexType>
-	<!--  *********************************************************  -->
-	<xsd:complexType name="VehicleWorkDeassignment">
-		<xsd:annotation>
-			<xsd:documentation/>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element ref="VehicleRef"/>
-			<xsd:element name="DriverRef" type="xsd:normalizedString" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>A reference to the DRIVER or Crew currently logged in to operate a monitored VEHICLE. May be omitted if real-time data is not available - i.e. it is timetabled data. +SIRI v2.0</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="DriverName" type="xsd:normalizedString" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>The name oo the Driver or Crew   +SIRI v2.0</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:choice>
-				<xsd:element name="DatedBlockRef" type="BlockRefStructure" minOccurs="0"/>
-				<!--NOPTIS-CHANGE: >>BlockRefStructure -->
-				<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0"/>
 				<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
 			</xsd:choice>
 		</xsd:sequence>
