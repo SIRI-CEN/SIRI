@@ -360,10 +360,10 @@ If false each subscription response will contain the full information as specifi
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="GoupOfControlActions" maxOccurs="unbounded">
+						<xsd:element name="GroupOfControlActions" maxOccurs="unbounded">
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element name="GoupOfControlActionsCode">
+									<xsd:element name="GroupOfControlActionsCode">
 										<xsd:annotation>
 											<xsd:documentation>Identification of the set: can be the Master Case / Situation Id</xsd:documentation>
 										</xsd:annotation>
@@ -803,20 +803,28 @@ If false each subscription response will contain the full information as specifi
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element ref="SituationRef" minOccurs="0"/>
-					<xsd:element name="MessageContents">
-						<xsd:annotation>
-							<xsd:documentation>Messages, possibly multiple if multiple languages are to be used</xsd:documentation>
-						</xsd:annotation>
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="MessageContent" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
-									<xsd:annotation>
-										<xsd:documentation>Contains additional information, specific for  the driver, that can not be expressed in data. Multiplicity for multiple languages.</xsd:documentation>
-									</xsd:annotation>
-								</xsd:element>
-							</xsd:sequence>
-						</xsd:complexType>
-					</xsd:element>
+					<xsd:element name="MessageHeading" type="NaturalLanguageStringStructure" minOccurs="0"/>
+					<xsd:choice>
+						<xsd:element name="MessageContents">
+							<xsd:annotation>
+								<xsd:documentation>Messages, possibly multiple if multiple languages are to be used</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="MessageContent" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
+										<xsd:annotation>
+											<xsd:documentation>Contains additional information, specific for  the driver, that can not be expressed in data. Multiplicity for multiple languages.</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="MessageCode" type="xsd:NMTOKEN">
+							<xsd:annotation>
+								<xsd:documentation>Code corresponding to the message: the code can be used to replace the message content; it has to be agreed between participant ahead of the exchange</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
 					<xsd:element name="OriginatedByDriver" type="xsd:boolean" default="false" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>if TRUE means that the message was originated by the driver (defauld FALSE, meaning that the Message is sent to the driver)</xsd:documentation>
@@ -832,7 +840,28 @@ If false each subscription response will contain the full information as specifi
 							<xsd:documentation>if TRUE means that it is a message sent to a sent to a GARAGE to ask for repair of a VEHICLE.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:group ref="JourneyScope" minOccurs="0"/>
+					<xsd:element name="DiverScope">
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element name="EmployeeRef" type="xsd:normalizedString">
+									<xsd:annotation>
+										<xsd:documentation>Reference to the concerned employee (most probably the driver)</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="DutyRef" type="xsd:normalizedString">
+									<xsd:annotation>
+										<xsd:documentation>Reference to the concerned duty (work to be performed by a driver on a particular day)</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="VehicleRef"/>
+								<xsd:group ref="JourneyScope">
+									<xsd:annotation>
+										<xsd:documentation>Reference to the concerned journey</xsd:documentation>
+									</xsd:annotation>
+								</xsd:group>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
 					<xsd:element ref="Extensions" minOccurs="0"/>
 				</xsd:sequence>
 				<xsd:attribute name="formatRef" type="xsd:string">
@@ -1134,7 +1163,7 @@ Can be used  when stops are replaced by other stops on certain journeys</xsd:doc
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="VehicleRef"/>
-			<xsd:element name="deassignment" type="xsd:boolean" default="false" minOccurs="0">
+			<xsd:element name="DeAssignment" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>if "true" this information is a deassignment (defaulf "false")</xsd:documentation>
 				</xsd:annotation>
