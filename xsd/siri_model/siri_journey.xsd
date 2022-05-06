@@ -34,35 +34,35 @@
     <Date>
      <Modified>2012-03-22</Modified>
      <!-- SIRI 2.0 
-					[VDV] Add EarliestExpectedArrivalTimeForVehicle to Arrival Times Group
-					[VDV] Add ProvisionalExpectedDepartureTime to Departure Times Group
-					[VDV] Add LatestExpectedArrivalTimeForVehicle to Departure Times Group
-					[VDV] Add ViaPriority to ViaNames using a new ViaNameStructure SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
-					[VDV] Add Velocity to MonitoredVehicleJourney SIRI-SM and SIRI-VM	
-					Add JOURNEY PARTs to Vehicle INFO TODO
-					[VDV] Add Public and Contact Details to JourneyInfo : SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
-					[VDV] at DirectionAtOrigin name to JourneyInfo SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
-					
-					[MTA] Add ArrivalProximityText to Arrival Times on MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
-					[MTA] Add ArrivalProximityText to Departure Times on MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
-					
-					[FR] Add AimedLatestPassengerAccessTime to TargetedCall : SIRI-ST
-					[FR] Add AimedLatestPassengerAccessTime to MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
-					[FR] Add ExpectedLatestPassengerAccessTime to MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
-					[FR] add ArrivalOperatorRefs and DepartureOperatorRefs to Call arrival and  Departure
-
-					[Fr] Add FirstOrLastJourney to JourneyTimesGroup : SIRI-SM and SIRI-VM
-					[DE] Add Driver Name
-					-->
+          [VDV] Add EarliestExpectedArrivalTimeForVehicle to Arrival Times Group
+          [VDV] Add ProvisionalExpectedDepartureTime to Departure Times Group
+          [VDV] Add LatestExpectedArrivalTimeForVehicle to Departure Times Group
+          [VDV] Add ViaPriority to ViaNames using a new ViaNameStructure SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
+          [VDV] Add Velocity to MonitoredVehicleJourney SIRI-SM and SIRI-VM	
+          Add JOURNEY PARTs to Vehicle INFO TODO
+          [VDV] Add Public and Contact Details to JourneyInfo : SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
+          [VDV] at DirectionAtOrigin name to JourneyInfo SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
+          
+          [MTA] Add ArrivalProximityText to Arrival Times on MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
+          [MTA] Add ArrivalProximityText to Departure Times on MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
+          
+          [FR] Add AimedLatestPassengerAccessTime to TargetedCall : SIRI-ST
+          [FR] Add AimedLatestPassengerAccessTime to MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
+          [FR] Add ExpectedLatestPassengerAccessTime to MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
+          [FR] add ArrivalOperatorRefs and DepartureOperatorRefs to Call arrival and  Departure
+          
+          [Fr] Add FirstOrLastJourney to JourneyTimesGroup : SIRI-SM and SIRI-VM
+          [DE] Add Driver Name
+          -->
     </Date>
     <Date>
      <Modified>2012-04-27</Modified>
      <!-- SIRI 2.0 
-					[MTA] Add DistanceFromSTop and NumberOFStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET		
-					[NeTEx] Add Driver/Crew Ref		 
+          [MTA] Add DistanceFromSTop and NumberOFStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET		
+          [NeTEx] Add Driver/Crew Ref		 
           
-					[DE] Add ExpectedDeparturePredictionQuality to OnwardVehicleDepartureTimes
-					-->
+          [DE] Add ExpectedDeparturePredictionQuality to OnwardVehicleDepartureTimes
+          -->
     </Date>
     <Date>
      <Modified>2013-01-25</Modified>
@@ -93,10 +93,10 @@
     <Relation>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types.xsd</Requires>
     </Relation>
-    <Rights><!--Unclassified-->
-
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
-				</Rights>
+    <Rights>
+     <!--Unclassified-->
+     <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+    </Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG CML and Trident standards.</li>
@@ -501,8 +501,16 @@ Rail transport, Roads and road transport
    <xsd:element name="DepartureStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="DepartureFormationAssignment" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="DepartureOrientationRelativeToQuay" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="ExpectedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="ExpectedDepartureCapacities" minOccurs="0" maxOccurs="unbounded"/>
+   <xsd:choice>
+    <xsd:sequence>
+     <xsd:element ref="ExpectedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded"/>
+     <xsd:element ref="ExpectedDepartureCapacities" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:sequence>
+     <xsd:element ref="RecordedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded"/>
+     <xsd:element ref="RecordedDepartureCapacities" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+   </xsd:choice>
    <xsd:element ref="DepartureOperatorRefs" minOccurs="0" maxOccurs="unbounded"/>
   </xsd:sequence>
  </xsd:group>
@@ -1062,27 +1070,27 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:element>
  <xsd:element name="ExpectedDepartureOccupancy" type="VehicleOccupancyStructure">
   <xsd:annotation>
-   <xsd:documentation>Real-time occupancies of a VEHICLE and reservations after departing from a given stop. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Expected/Predicted real-time occupancies of a VEHICLE and reservations after departing from a given stop. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ExpectedDepartureCapacities" type="PassengerCapacityStructure">
   <xsd:annotation>
-   <xsd:documentation>Real-time capacities (number of available seats) of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Expected/Predicted real-time capacities (number of available seats) of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="RecordedDepartureOccupancy" type="VehicleOccupancyStructure">
+  <xsd:annotation>
+   <xsd:documentation>Actually recorded/counted occupancies of a VEHICLE and reserved seats after departing from a given stop. +SIRI v2.1</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:element name="RecordedDepartureCapacities" type="PassengerCapacityStructure">
+  <xsd:annotation>
+   <xsd:documentation>Actually recorded/counted capacities of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DepartureOperatorRefs" type="OperatorRefStructure">
   <xsd:annotation>
    <xsd:documentation>OPERATORs of service for departure and onwards. May change from that for arrival. +SIRI v2.0.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="RecordedDepartureOccupancy" type="VehicleOccupancyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Recorded occupancies of a VEHICLE and reserved seats after departing from a given stop. +SIRI v2.1</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="RecordedDepartureCapacities" type="PassengerCapacityStructure">
-  <xsd:annotation>
-   <xsd:documentation>Recorded capacities of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->

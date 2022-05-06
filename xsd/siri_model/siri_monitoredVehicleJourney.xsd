@@ -23,42 +23,47 @@
     <Date>
      <Modified>2007-03-29</Modified>
     </Date>
-    <Date><Modified>2008-11-13</Modified>
-				<!--Correct Cardinalities on SIRI DESTINATION REF Structure--> 
-				</Date>
-    <Date><Modified>2011-04-18</Modified>
-				<!--siri_journey.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com-->
-				</Date>
-    <Date><Modified>2012-03-22</Modified>
-				<!--SIRI 2.0 
-					[VDV] Add EarliestExpectedArrivalTimeForVehicle to Arrival Times Group
-					[VDV] Add ProvisionalExpectedDepartureTime to Departure Times Group
-					[VDV] Add LatestExpectedArrivalTimeForVehicle to Departure Times Group
-		
-					[Fr] Add FirstOrLastJourney to JourneyTimesGroup : SIRI-SM and SIRI-VM
-					Add JOURNEY PARTs to Vehicle INFO TODO
-					[VDV] Add Public and Contact Details to JourneyInfo : SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
-					[VDV] at DirectionAtOrigin name to JourneyInfo SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
-					
-					[MTA] Add ArrivalProximityText to Arrival Times on MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
-					[MTA] Add ArrivalProximityText to Departure Times on MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
-					
-					[FR] Add AimedLatestPassengerAccessTime to TargetedCall : SIRI-ST
-					[FR] Add AimedLatestPassengerAccessTime to MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
-					[FR] Add ExpectedLatestPassengerAccessTime to MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
-					
-					[VDV] Add ViaPriority to ViaNames using a new ViaNameStructure SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
-					[VDV] Add Velocity to MonitoredVehicleJourney SIRI-SM and SIRI-VM
-					[UK] add engineOn to vehicle progress group-->
-				</Date>
-    <Date><Modified>2012-04-27</Modified>
-				<!--SIRI 2.0 
-					[MTA] Add DIstanceFromSTop and NumberOfStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET-->				 
-				</Date>
-    <Date><Modified>2012-04-27</Modified>
-				<!--SIRI 2.0 
-					[SE] Add Vehicle Status-->
-				</Date>
+    <Date>
+     <Modified>2008-11-13</Modified>
+     <!--Correct Cardinalities on SIRI DESTINATION REF Structure--> 
+    </Date>
+    <Date>
+     <Modified>2011-04-18</Modified>
+     <!--siri_journey.xsd (l.1015). FramedVehicleJourneyRef isn't mandatory in MonitoredCall SIRI-SM answer accourding to CEN TS (prCEN/TS 15531-3:2006 (E) p.56). Make optional. RV ixxx.com-->
+    </Date>
+    <Date>
+     <Modified>2012-03-22</Modified>
+     <!--SIRI 2.0 
+         [VDV] Add EarliestExpectedArrivalTimeForVehicle to Arrival Times Group
+         [VDV] Add ProvisionalExpectedDepartureTime to Departure Times Group
+         [VDV] Add LatestExpectedArrivalTimeForVehicle to Departure Times Group
+         
+         [Fr] Add FirstOrLastJourney to JourneyTimesGroup : SIRI-SM and SIRI-VM
+         Add JOURNEY PARTs to Vehicle INFO TODO
+         [VDV] Add Public and Contact Details to JourneyInfo : SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
+         [VDV] at DirectionAtOrigin name to JourneyInfo SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
+         
+         [MTA] Add ArrivalProximityText to Arrival Times on MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
+         [MTA] Add ArrivalProximityText to Departure Times on MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
+         
+         [FR] Add AimedLatestPassengerAccessTime to TargetedCall : SIRI-ST
+         [FR] Add AimedLatestPassengerAccessTime to MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
+         [FR] Add ExpectedLatestPassengerAccessTime to MonitoredCall and OnwardsCall : SIRI-SM and SIRI-VM
+         
+         [VDV] Add ViaPriority to ViaNames using a new ViaNameStructure SIRI-PT, SIRI-ET, SIRI-SM. SIRI-VM
+         [VDV] Add Velocity to MonitoredVehicleJourney SIRI-SM and SIRI-VM
+         [UK] add engineOn to vehicle progress group-->
+    </Date>
+    <Date>
+     <Modified>2012-04-27</Modified>
+     <!--SIRI 2.0 
+         [MTA] Add DIstanceFromSTop and NumberOfStops away   to  MonitoredCall and OnwardsCall : SIRI-SM and SIRI-ET-->				 
+    </Date>
+    <Date>
+     <Modified>2012-04-27</Modified>
+     <!--SIRI 2.0 
+         [SE] Add Vehicle Status-->
+    </Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of real-time information .</p>
      <p>This subschema defines common journey elements.</p>
@@ -74,10 +79,10 @@
     <Relation>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types.xsd</Requires>
     </Relation>
-    <Rights><!--Unclassified-->
-
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
-				</Rights>
+    <Rights>
+     <!--Unclassified-->
+     <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+    </Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG CML and Trident standards.</li>
@@ -509,6 +514,8 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
      <xsd:element ref="VehicleAtStop" minOccurs="0"/>
      <xsd:group ref="VehicleArrivalTimesGroup"/>
      <xsd:group ref="VehicleDepartureTimesGroup"/>
+     <xsd:element ref="RecordedDepartureOccupancy" minOccurs="0" maxOccurs="unbounded"/>
+     <xsd:element ref="RecordedDepartureCapacities" minOccurs="0" maxOccurs="unbounded"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
    </xsd:extension>
