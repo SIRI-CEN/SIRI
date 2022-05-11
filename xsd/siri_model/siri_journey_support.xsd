@@ -495,8 +495,14 @@ Has the following uses:
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="CompoundTrainRef" minOccurs="0"/>
-   <xsd:element ref="TrainRef" minOccurs="0"/>
-   <xsd:element ref="TrainComponentRef" minOccurs="0"/>
+   <xsd:choice>
+    <xsd:element ref="TrainRef" minOccurs="0"/>
+    <xsd:element ref="TrainInCompoundTrainRef" minOccurs="0"/>
+   </xsd:choice>
+   <xsd:choice>
+    <xsd:element ref="TrainElementRef" minOccurs="0"/>
+    <xsd:element ref="TrainComponentRef" minOccurs="0"/>
+   </xsd:choice>
    <xsd:element ref="EntranceToVehicleRef" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
