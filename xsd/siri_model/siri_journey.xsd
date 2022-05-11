@@ -191,7 +191,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="OriginRef" minOccurs="0"/>
-   <xsd:element name="OriginName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="OriginName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Name of the origin of the journey.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
@@ -201,7 +201,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Short name of the origin of the journey; used to help identify the VEHICLE JOURNEY on arrival boards. If absent, same as Origin Name.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>DIRECTION name shown for jurney at the origin. +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
@@ -226,7 +226,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>Short name of the DESTINATION.of the journey; used to help identify the VEHICLE JOURNEY on arrival boards. If absent, same as DestinationName.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="OriginDisplayAtDestination" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="OriginDisplayAtDestination" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Origin name shown for jourey at the destination +SIRI v2.0</xsd:documentation>
     </xsd:annotation>
@@ -267,17 +267,17 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:element name="OriginName" type="NaturalLanguagePlaceNameStructure">
+ <xsd:element name="OriginName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>The name of the origin of the journey; used to help identify the VEHICLE JOURNEY on arrival boards.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="ViaName" type="NaturalLanguagePlaceNameStructure">
+ <xsd:element name="ViaName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>Names of VIA points, used to help identify the LINEfor example, Luton to Luton via Sutton. Currently 3 in VDV. Should only be included if the detail level was requested.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="DestinationName" type="NaturalLanguagePlaceNameStructure">
+ <xsd:element name="DestinationName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>The name of the DESTINATION of the journey; used to help identify the VEHICLE to the public. Note when used in a CALL, this is the Dynamic Destination Display: since vehicles can change their destination during a journey, the destination included here should be what the VEHICLE will display when it reaches the stop.</xsd:documentation>
   </xsd:annotation>
