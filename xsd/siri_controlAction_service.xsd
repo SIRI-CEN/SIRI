@@ -390,7 +390,7 @@ If false each subscription response will contain the full information as specifi
 										</xsd:annotation>
 										<xsd:complexType>
 											<xsd:sequence>
-												<xsd:element name="AddedControlActionRef" type="ItemRefStructure" maxOccurs="unbounded">
+												<xsd:element name="AddedControlActionRef" type="ControlActionRefStructure" maxOccurs="unbounded">
 													<xsd:annotation>
 														<xsd:documentation>Control Action Code</xsd:documentation>
 													</xsd:annotation>
@@ -404,7 +404,7 @@ If false each subscription response will contain the full information as specifi
 										</xsd:annotation>
 										<xsd:complexType>
 											<xsd:sequence>
-												<xsd:element name="AddedControlActionRef" type="ItemRefStructure" maxOccurs="unbounded">
+												<xsd:element name="RemovedControlActionRef" type="ControlActionRefStructure" maxOccurs="unbounded">
 													<xsd:annotation>
 														<xsd:documentation>Control Action Code</xsd:documentation>
 													</xsd:annotation>
@@ -430,7 +430,7 @@ If false each subscription response will contain the full information as specifi
 							</xsd:annotation>
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element name="ControlActionRef" type="ItemRefStructure">
+									<xsd:element ref="ControlActionRef">
 										<xsd:annotation>
 											<xsd:documentation>Control Action Code</xsd:documentation>
 										</xsd:annotation>
@@ -681,7 +681,7 @@ If false each subscription response will contain the full information as specifi
 	<!--  *********************************************************  -->
 	<!--   FOM NOPTIS  (updated to SIRI style)                       -->
 	<!--  *********************************************************  -->
-	<xsd:element name="ControlActionCode" type="EntryQualifierStructure">
+	<xsd:element name="ControlActionCode" type="ControlActionCodeType">
 		<xsd:annotation>
 			<xsd:documentation>Identifier of CONTROL ACTION within a Participant.</xsd:documentation>
 		</xsd:annotation>
@@ -1720,10 +1720,9 @@ Not expressed anymore as duration since the waiting may have already started.</x
 					<xsd:documentation>Minimum duration needed for a passenger to use  the INTERCHANGE</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="IsContinuingVehicle" type="xsd:boolean" default="false" minOccurs="0">
+			<xsd:element name="StaySeated" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether the feeder is continuing its journey after this interchange call
-Default is true</xsd:documentation>
+					<xsd:documentation>Whether the interchange has the same physical vehicle is both the feeder and the fetcher, allowing passenger to stay in the vehicle.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="IsExposedToStaff" type="xsd:boolean" default="true" minOccurs="0">
@@ -1740,6 +1739,25 @@ Default is true</xsd:documentation>
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==ControlAction Reference ================================================================== -->
+	<!-- Moved to sisi_references to allow references from other services
+
+	<xsd:element name="ControlActionRef" type="ControlActionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a ControlAction associated with the element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ControlActionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a ControlAction.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="ItemRefStructure"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	-->
+	
 	<!--Ressource types from RII-SharedTypes -->
 	<!--  -->
 	<xsd:simpleType name="ChangeModelEnumeration">
