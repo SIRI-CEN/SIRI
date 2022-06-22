@@ -143,6 +143,15 @@ Rail transport, Roads and road transport.
   </xsd:sequence>
  </xsd:complexType>
  <xsd:element name="NotifySituationExchange" type="WsSituationExchangeNotificationStructure"/>
+ <!-- ControlAction -->
+ <xsd:complexType name="WsControlActionNotificationStructure">
+  <xsd:sequence>
+   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="Notification" type="siri:ControlActionDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="SiriExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:element name="NotifyControlAction" type="WsControlActionNotificationStructure"/>
  <!-- VehicleMonitoring -->
  <xsd:complexType name="WsVehicleMonitoringNotificationStructure">
   <xsd:sequence>
