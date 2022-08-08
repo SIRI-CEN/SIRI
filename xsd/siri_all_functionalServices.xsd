@@ -78,7 +78,7 @@ Rail transport, Roads and road transport.
  </xsd:annotation>
  <!-- ======================================================================= -->
  <!-- ======================================================================= -->
- <!-- REPLACE THESE PACKAGES WITH OTHER FINCTIONAL SERVICES -->
+ <!-- REPLACE THESE PACKAGES WITH OTHER FUNCTIONAL SERVICES -->
  <xsd:include schemaLocation="siri_productionTimetable_service.xsd"/>
  <xsd:include schemaLocation="siri_estimatedTimetable_service.xsd"/>
  <xsd:include schemaLocation="siri_stopTimetable_service.xsd"/>
