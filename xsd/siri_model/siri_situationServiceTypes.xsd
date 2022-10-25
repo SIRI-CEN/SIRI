@@ -24,7 +24,7 @@
     </Date>
     <Date>
      <Modified>2020-01-10</Modified>
-     <!-- SIRI v2.1
+     <!-- SIRI 2.1
 		Align with TPEG2 PTS
 		Remove numerical values ("Pti25_0") from enumerations-->
     </Date>
@@ -194,44 +194,44 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="connectionChanged">
     <xsd:annotation>
-     <xsd:documentation>Interchange is planned but was updated as a result of changes in the QUAYs or arrival/departure times. Can be used if the status is a combination of the other values. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Interchange is planned but was updated as a result of changes in the QUAYs or arrival/departure times. Can be used if the status is a combination of the other values. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="distributorWaitProlonged">
     <xsd:annotation>
      <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders. 
-To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. +SIRI v2.1</xsd:documentation>
+To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="departurePlatformChanged">
     <xsd:annotation>
-     <xsd:documentation>Used to provide the passengers with information about a new departure platform of the distributor VEHICLE if the distributor changes its planned stopping position. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Used to provide the passengers with information about a new departure platform of the distributor VEHICLE if the distributor changes its planned stopping position. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="extraInterchange">
     <xsd:annotation>
-     <xsd:documentation>Interchange is an addition to the plan. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Interchange is an addition to the plan. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="cancelled">
     <xsd:annotation>
-     <xsd:documentation>Interchange is a cancellation of an interchange in the plan. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Interchange is a cancellation of an interchange in the plan. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="feederArrivalCancellation">
     <xsd:annotation>
      <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. 
-Reasons for the loss of a feeder include (but are not limited to) the cancellation of the feeder VEHICLE, diversion/rerouting of the feeder VEHICLE, disruption of a line section or journey part of the feeder VEHICLE etc. +SIRI v2.1</xsd:documentation>
+Reasons for the loss of a feeder include (but are not limited to) the cancellation of the feeder VEHICLE, diversion/rerouting of the feeder VEHICLE, disruption of a line section or journey part of the feeder VEHICLE etc. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="distributorDepartureCancellation">
     <xsd:annotation>
-     <xsd:documentation>Indicates the loss of an outbound connection, i.e., is used to signal the cancellation of the onward connection to the passengers in the feeder VEHICLEs. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Indicates the loss of an outbound connection, i.e., is used to signal the cancellation of the onward connection to the passengers in the feeder VEHICLEs. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="statusOfConenctionUndecided">
     <xsd:annotation>
-     <xsd:documentation>deprecated (SIRI 2.1) - use statusOfConnectionUndecided instead</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 - use statusOfConnectionUndecided instead</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
@@ -425,7 +425,7 @@ Reasons for the loss of a feeder include (but are not limited to) the cancellati
    </xsd:enumeration>
    <xsd:enumeration value="undefinedBookingInformation">
     <xsd:annotation>
-     <xsd:documentation>deprecated (SIRI 2.1) - use undefinedStopPointType</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 - use undefinedStopPointType</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
@@ -438,7 +438,7 @@ Reasons for the loss of a feeder include (but are not limited to) the cancellati
  </xsd:element>
  <xsd:simpleType name="RoutePointTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for ROUTE POINT type that correspond to TPEG Pts44: StopPlaceUsage (Pti15: deprecated since SIRI v2.1).</xsd:documentation>
+   <xsd:documentation>Values for ROUTE POINT type that correspond to TPEG Pts44: StopPlaceUsage (Pti15: deprecated since SIRI 2.1).</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown">
@@ -503,82 +503,82 @@ Reasons for the loss of a feeder include (but are not limited to) the cancellati
    </xsd:enumeration>
    <xsd:enumeration value="startPoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_1, start point, deprecated (SIRI v2.1) and replaced by Pts44_1 value 'origin'.</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 and replaced by Pts44_1 value 'origin' (TPEG Pti15_1 - start point) .</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="stop">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_3, stop, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_3 - stop)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="via">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_4, via, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_4 - via)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="notStopping">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_5, not-stopping, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_5 - not-stopping)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="temporaryStop">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_6, temporary stop, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_6 - temporary stop)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="temporarilyNotStopping">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_7, temporarily not-stopping, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_7 - temporarily not-stopping)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="exceptionalStop">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_8, exceptional stop, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_8 - exceptional stop)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="additionalStop">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_9, additional stop, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_9 - additional stop)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="requestStop">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_10, request stop, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_10 - request stop)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="frontTrainDestination">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_11, front train destination, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_11 - front train destination)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="rearTrainDestination">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_12, rear train destination, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_12 - rear train destination)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="throughServiceDestination">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_13, through service destination, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_13 - through service destination)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="notVia">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_14, not via, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_14 - not via)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="alteredStartPoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_15, altered start point, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_15 - altered start point)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="alteredDestination">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_16, altered destination, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_16 - altered destination)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedRoutePoint">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_255, undefined route point, deprecated (SIRI v2.1)</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_255 - undefined route point)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>

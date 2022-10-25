@@ -41,7 +41,7 @@
     </Date>
     <Date>
      <Modified>2012-03-23</Modified>
-     <!-- +SIRI v2.0
+     <!-- (since SIRI 2.0)
 		  - Update to DatexII V2.0 
 		  - [FR] Add Extensions tag to SituationExchangeSubscriptionRequest -->
     </Date>
@@ -224,7 +224,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="ValidityPeriod" type="HalfOpenTimestampInputRangeStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Temporal scope of Situations be included in response.  The Situations must be valid within the specified period of time.  (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Temporal scope of Situations be included in response.  The Situations must be valid within the specified period of time.  (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="IncludeOnlyIfInPublicationWindow" type="xsd:boolean" default="false" minOccurs="0">
@@ -314,7 +314,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="StopPlaceComponentRef" type="ifopt:StopPlaceSpaceRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to part of a STOP PLACE. (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Reference to part of a STOP PLACE. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -663,19 +663,19 @@ If false or omitted, each subscription response will contain the full informatio
         <xsd:element ref="FilterByVehicleRef" minOccurs="0"/>
         <xsd:element name="FilterByMode" type="xsd:boolean" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by MODE. Default is true.. (+SIRI v2.0)</xsd:documentation>
+          <xsd:documentation>Whether results can be filtered by MODE. Default is true.. ((since SIRI 2.0))</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element name="FilterByNetworkRef" type="xsd:boolean" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by NETWORKs. Default is 'true'. (+SIRI v2.0)</xsd:documentation>
+          <xsd:documentation>Whether results can be filtered by NETWORKs. Default is 'true'. ((since SIRI 2.0))</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element ref="FilterByLineRef" minOccurs="0"/>
         <xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
         <xsd:element name="FilterByStopPlaceRef" type="xsd:boolean" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by STOP PLACE identifvier.  Default is 'false'. (+SIRI v2.0)</xsd:documentation>
+          <xsd:documentation>Whether results can be filtered by STOP PLACE identifvier.  Default is 'false'. ((since SIRI 2.0))</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element ref="FilterByVehicleJourneyRef" minOccurs="0"/>
