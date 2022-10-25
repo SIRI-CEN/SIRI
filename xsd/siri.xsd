@@ -246,295 +246,300 @@ Rail transport, Roads and road transport.
 		<xsd:annotation>
 			<xsd:documentation>Request from Subscriber to Producer for a subscription. Answered with a SubscriptionResponse. 
 </xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexType>
-			<xsd:complexContent>
-				<xsd:extension base="SubscriptionRequestStructure"/>
-			</xsd:complexContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:complexType name="SubscriptionRequestStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for SIRI Subscription Request.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="AbstractSubscriptionRequestStructure">
-				<xsd:sequence>
-					<xsd:group ref="SiriSubscriptionRequestGroup"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:complexType name="SiriSubscriptionRequestStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for SIRI Functional Service Subscription types. Used for WSDL exchanges.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:group ref="SiriSubscriptionRequestGroup"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:group name="SiriSubscriptionRequestGroup">
-		<xsd:annotation>
-			<xsd:documentation>SIRI Functional Service Subscription types. For a given SubscriptionRequest, must all be of the same service type.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:choice>
-			<xsd:element ref="ProductionTimetableSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="EstimatedTimetableSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="StopTimetableSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="StopMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="VehicleMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="ConnectionTimetableSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="ConnectionMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="GeneralMessageSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="FacilityMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
-			<xsd:element ref="SituationExchangeSubscriptionRequest" maxOccurs="unbounded"/>
-		</xsd:choice>
-	</xsd:group>
-	<!-- === RESPONSES ================================================================== -->
-	<xsd:group name="ResponseGroup">
-		<xsd:annotation>
-			<xsd:documentation>SIRI Service Responses.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:choice>
-			<xsd:group ref="ServiceResponseGroup"/>
-			<xsd:group ref="DeliveryResponseGroup"/>
-			<xsd:group ref="StatusResponseGroup"/>
-			<xsd:group ref="SiriDiscoveryResponseGroup"/>
-		</xsd:choice>
-	</xsd:group>
-	<xsd:group name="ServiceResponseGroup">
-		<xsd:annotation>
-			<xsd:documentation>Responses to requests other than deliveries and status information.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:choice>
-			<xsd:element ref="SubscriptionResponse"/>
-			<xsd:element ref="TerminateSubscriptionResponse"/>
-			<xsd:element ref="SubscriptionTerminatedNotification"/>
-		</xsd:choice>
-	</xsd:group>
-	<!-- ===Data Delivery ============================================================== -->
-	<xsd:group name="DeliveryResponseGroup">
-		<xsd:annotation>
-			<xsd:documentation>Responses that deliver payload content.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:choice>
-			<xsd:element ref="DataReadyAcknowledgement"/>
-			<xsd:element ref="ServiceDelivery"/>
-			<xsd:element ref="DataReceivedAcknowledgement"/>
-		</xsd:choice>
-	</xsd:group>
-	<!-- ===GS: Service Delivery==================================================================== -->
-	<xsd:element name="ServiceDelivery">
-		<xsd:annotation>
-			<xsd:documentation>Response from Producer to Consumer to deliver payload data. Either answers a direct ServiceRequest, or asynchronously satisfies a subscription. May be sent directly in one step, or fetched in response to a DataSupply Request.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexType>
-			<xsd:complexContent>
-				<xsd:extension base="ServiceDeliveryStructure"/>
-			</xsd:complexContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:complexType name="ServiceDeliveryStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for SIRI Service Delivery.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="ProducerResponseStructure">
-				<xsd:sequence>
-					<xsd:group ref="ServiceDeliveryBodyGroup"/>
-				</xsd:sequence>
-				<xsd:attribute name="srsName" type="SrsNameType">
-					<xsd:annotation>
-						<xsd:documentation>Default gml coordinate format for eny location elements in response; applies if Coordinates element is used to specify points. May be overridden on individual points.</xsd:documentation>
-					</xsd:annotation>
-				</xsd:attribute>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:complexType name="ServiceDeliveryBodyStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for SIRI Service Delivery Body..</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:group ref="ServiceDeliveryBodyGroup"/>
-		</xsd:sequence>
-		<xsd:attribute name="srsName" type="SrsNameType">
-			<xsd:annotation>
-				<xsd:documentation>Default gml coordinate format for eny location elements in response; applies if Coordinates element is used to specify points. May be overridden on individual points.</xsd:documentation>
-			</xsd:annotation>
-		</xsd:attribute>
-	</xsd:complexType>
-	<xsd:group name="ServiceDeliveryBodyGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for SIRI Service Delivery.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:group ref="ServiceDeliveryRequestStatusGroup"/>
-			<xsd:element name="MoreData" type="xsd:boolean" default="false" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Whether there is a further delivery message with more current updates that follows this one. Default is 'false'.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:group ref="SiriServiceDeliveryGroup"/>
-		</xsd:sequence>
-	</xsd:group>
-	<xsd:complexType name="SiriServiceDeliveryStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for a SIRI SIRI Functional Service Delivery types.Used for WSDL.  </xsd:documentation>
-		</xsd:annotation>
-		<xsd:choice>
-			<xsd:group ref="SiriServiceDeliveryGroup"/>
-		</xsd:choice>
-	</xsd:complexType>
-	<xsd:group name="SiriServiceDeliveryGroup">
-		<xsd:annotation>
-			<xsd:documentation>SIRI Functional Service Delivery types.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:choice>
-			<xsd:sequence>
-				<xsd:element ref="IncludedSituationExchangeDelivery" minOccurs="0" maxOccurs="unbounded"/>
-				<xsd:choice>
-					<xsd:element ref="ProductionTimetableDelivery" maxOccurs="unbounded"/>
-					<xsd:element ref="EstimatedTimetableDelivery" maxOccurs="unbounded"/>
-					<xsd:element ref="StopTimetableDelivery" maxOccurs="unbounded"/>
-					<xsd:element ref="StopMonitoringDelivery" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation>Delivery for Stop Event service.</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="VehicleMonitoringDelivery" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation>Delivery for Vehicle Activity Service.</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="ConnectionTimetableDelivery" maxOccurs="unbounded"/>
-					<xsd:element ref="ConnectionMonitoringFeederDelivery" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation>Delivery for Connection Protection Fetcher Service.</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="ConnectionMonitoringDistributorDelivery" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation>Delivery for Connection Protection Fetcher Service.</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="GeneralMessageDelivery" maxOccurs="unbounded">
-						<xsd:annotation>
-							<xsd:documentation>Delivery for general Message service.</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="FacilityMonitoringDelivery" maxOccurs="unbounded"/>
-				</xsd:choice>
-			</xsd:sequence>
-			<xsd:element ref="SituationExchangeDelivery" maxOccurs="unbounded"/>
-		</xsd:choice>
-	</xsd:group>
-	<!-- ===Discovery==================================================================== -->
-	<xsd:group name="SiriDiscoveryRequestGroup">
-		<xsd:annotation>
-			<xsd:documentation>Requests for reference data for use in SIRI Functional Service requests.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:choice>
-			<xsd:element ref="CapabilitiesRequest"/>
-			<xsd:group ref="SiriReferenceDiscoveryRequestGroup"/>
-		</xsd:choice>
-	</xsd:group>
-	<xsd:group name="SiriDiscoveryResponseGroup">
-		<xsd:annotation>
-			<xsd:documentation>Responses with reference data for use in SIRI Functional Service requests.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:choice>
-			<xsd:element ref="CapabilitiesResponse">
-				<xsd:annotation>
-					<xsd:documentation>Responses with the capabilities of an implementation. Answers a CapabilityRequest.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:group ref="SiriDiscoveryReferenceDeliveryGroup"/>
-		</xsd:choice>
-	</xsd:group>
-	<!-- === Capabilities ============================================================== -->
-	<!-- ===GS: Capabilities Request==================================================================== -->
-	<xsd:element name="CapabilitiesRequest" type="CapabilitiesRequestStructure">
-		<xsd:annotation>
-			<xsd:documentation>Requests a the current capabilities of the server. Answred with a CpabailitiesResponse.</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="CapabilitiesRequestStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for Requests for capabilities of the current system.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="AuthenticatedRequestStructure">
-				<xsd:sequence>
-					<xsd:element name="Address" type="EndpointAddress" minOccurs="0">
-						<xsd:annotation>
-							<xsd:documentation>Address to which response is to be sent. This may also be determined from RequestorRef and preconfigured data.</xsd:documentation>
-						</xsd:annotation>
-					</xsd:element>
-					<xsd:element ref="RequestorRef"/>
-					<xsd:group ref="DelegatorEndpointGroup">
-						<xsd:annotation>
-							<xsd:documentation>If request has been proxied by an intermediate  aggregating system, tracking information relating to the original requestor. This allows the aggregation to be stateless</xsd:documentation>
-						</xsd:annotation>
-					</xsd:group>
-					<xsd:group ref="SiriServiceCapabilitiesRequestGroup"/>
-				</xsd:sequence>
-				<xsd:attribute name="version" type="VersionString" default="2.1"/>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:group name="SiriServiceCapabilitiesRequestGroup">
-		<xsd:annotation>
-			<xsd:documentation>Defines the capabilities of an individual SIRI service request functions.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element ref="ProductionTimetableCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="EstimatedTimetableCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="StopTimetableCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="StopMonitoringCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="VehicleMonitoringCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="ConnectionTimetableCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="ConnectionMonitoringCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="GeneralMessageCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="FacilityMonitoringCapabilitiesRequest" minOccurs="0"/>
-			<xsd:element ref="SituationExchangeCapabilitiesRequest" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:group>
-	<!-- ===GS: Capabilities Delivery==================================================================== -->
-	<xsd:element name="CapabilitiesResponse" type="CapabilitiesResponseStructure">
-		<xsd:annotation>
-			<xsd:documentation>Responses with the capabilities of an implementation.</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="CapabilitiesResponseStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for the capabilities of an implementation.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="ProducerResponseStructure">
-				<xsd:sequence>
-					<xsd:group ref="SiriServiceCapabilitiesResponseGroup"/>
-				</xsd:sequence>
-				<xsd:attribute name="version" type="VersionString" default="2.1"/>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:group name="SiriServiceCapabilitiesResponseGroup">
-		<xsd:annotation>
-			<xsd:documentation>Defines the capabilities of an individual SIRI service response functions.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element ref="ProductionTimetableCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="EstimatedTimetableCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="StopTimetableCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="StopMonitoringCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="VehicleMonitoringCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="ConnectionTimetableCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="ConnectionMonitoringCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="GeneralMessageCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="FacilityMonitoringCapabilitiesResponse" minOccurs="0"/>
-			<xsd:element ref="SituationExchangeCapabilitiesResponse" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:group>
-	<!-- ======================================================================= -->
+  </xsd:annotation>
+  <xsd:complexType>
+   <xsd:complexContent>
+    <xsd:extension base="SubscriptionRequestStructure"/>
+   </xsd:complexContent>
+  </xsd:complexType>
+ </xsd:element>
+ <xsd:complexType name="SubscriptionRequestStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for SIRI Subscription Request.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="AbstractSubscriptionRequestStructure">
+    <xsd:sequence>
+     <xsd:group ref="SiriSubscriptionRequestGroup"/>
+    </xsd:sequence>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="SiriSubscriptionRequestStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for SIRI Functional Service Subscription types. Used for WSDL exchanges.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="SiriSubscriptionRequestGroup"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:group name="SiriSubscriptionRequestGroup">
+  <xsd:annotation>
+   <xsd:documentation>SIRI Functional Service Subscription types. For a given SubscriptionRequest, must all be of the same service type.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:choice>
+   <xsd:element ref="ProductionTimetableSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="EstimatedTimetableSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="StopTimetableSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="StopMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="VehicleMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="ConnectionTimetableSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="ConnectionMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="GeneralMessageSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="FacilityMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
+   <xsd:element ref="SituationExchangeSubscriptionRequest" maxOccurs="unbounded"/>
+  </xsd:choice>
+ </xsd:group>
+ <!-- === RESPONSES ================================================================== -->
+ <xsd:group name="ResponseGroup">
+  <xsd:annotation>
+   <xsd:documentation>SIRI Service Responses.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:choice>
+   <xsd:group ref="ServiceResponseGroup"/>
+   <xsd:group ref="DeliveryResponseGroup"/>
+   <xsd:group ref="StatusResponseGroup"/>
+   <xsd:group ref="SiriDiscoveryResponseGroup"/>
+  </xsd:choice>
+ </xsd:group>
+ <xsd:group name="ServiceResponseGroup">
+  <xsd:annotation>
+   <xsd:documentation>Responses to requests other than deliveries and status information.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:choice>
+   <xsd:element ref="SubscriptionResponse"/>
+   <xsd:element ref="TerminateSubscriptionResponse"/>
+   <xsd:element ref="SubscriptionTerminatedNotification"/>
+  </xsd:choice>
+ </xsd:group>
+ <!-- ===Data Delivery ============================================================== -->
+ <xsd:group name="DeliveryResponseGroup">
+  <xsd:annotation>
+   <xsd:documentation>Responses that deliver payload content.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:choice>
+   <xsd:element ref="DataReadyAcknowledgement"/>
+   <xsd:element ref="ServiceDelivery"/>
+   <xsd:element ref="DataReceivedAcknowledgement"/>
+  </xsd:choice>
+ </xsd:group>
+ <!-- ===GS: Service Delivery==================================================================== -->
+ <xsd:element name="ServiceDelivery">
+  <xsd:annotation>
+   <xsd:documentation>Response from Producer to Consumer to deliver payload data. Either answers a direct ServiceRequest, or asynchronously satisfies a subscription. May be sent directly in one step, or fetched in response to a DataSupply Request.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType>
+   <xsd:complexContent>
+    <xsd:extension base="ServiceDeliveryStructure"/>
+   </xsd:complexContent>
+  </xsd:complexType>
+ </xsd:element>
+ <xsd:complexType name="ServiceDeliveryStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for SIRI Service Delivery.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ProducerResponseStructure">
+    <xsd:sequence>
+     <xsd:group ref="ServiceDeliveryBodyGroup"/>
+    </xsd:sequence>
+    <xsd:attribute name="srsName" type="SrsNameType">
+     <xsd:annotation>
+      <xsd:documentation>Default gml coordinate format for eny location elements in response; applies if Coordinates element is used to specify points. May be overridden on individual points.</xsd:documentation>
+     </xsd:annotation>
+    </xsd:attribute>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="ServiceDeliveryBodyStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for SIRI Service Delivery Body..</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="ServiceDeliveryBodyGroup"/>
+  </xsd:sequence>
+  <xsd:attribute name="srsName" type="SrsNameType">
+   <xsd:annotation>
+    <xsd:documentation>Default gml coordinate format for eny location elements in response; applies if Coordinates element is used to specify points. May be overridden on individual points.</xsd:documentation>
+   </xsd:annotation>
+  </xsd:attribute>
+ </xsd:complexType>
+ <xsd:group name="ServiceDeliveryBodyGroup">
+  <xsd:annotation>
+   <xsd:documentation>Elements for SIRI Service Delivery.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:group ref="ServiceDeliveryRequestStatusGroup"/>
+   <xsd:element name="AllData" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether to return all data, or just new updates since the last delivery. Default false, i.e. just updates.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="MoreData" type="xsd:boolean" default="false" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Whether there is a further delivery message with more current updates that follows this one. Default is 'false'.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="SiriServiceDeliveryGroup"/>
+  </xsd:sequence>
+ </xsd:group>
+ <xsd:complexType name="SiriServiceDeliveryStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for a SIRI SIRI Functional Service Delivery types.Used for WSDL.  </xsd:documentation>
+  </xsd:annotation>
+  <xsd:choice>
+   <xsd:group ref="SiriServiceDeliveryGroup"/>
+  </xsd:choice>
+ </xsd:complexType>
+ <xsd:group name="SiriServiceDeliveryGroup">
+  <xsd:annotation>
+   <xsd:documentation>SIRI Functional Service Delivery types.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:choice>
+   <xsd:sequence>
+    <xsd:element ref="IncludedSituationExchangeDelivery" minOccurs="0" maxOccurs="unbounded"/>
+    <xsd:choice>
+     <xsd:element ref="ProductionTimetableDelivery" maxOccurs="unbounded"/>
+     <xsd:element ref="EstimatedTimetableDelivery" maxOccurs="unbounded"/>
+     <xsd:element ref="StopTimetableDelivery" maxOccurs="unbounded"/>
+     <xsd:element ref="StopMonitoringDelivery" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Delivery for Stop Event service.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element ref="VehicleMonitoringDelivery" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Delivery for Vehicle Activity Service.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element ref="ConnectionTimetableDelivery" maxOccurs="unbounded"/>
+     <xsd:element ref="ConnectionMonitoringFeederDelivery" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Delivery for Connection Protection Fetcher Service.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element ref="ConnectionMonitoringDistributorDelivery" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Delivery for Connection Protection Fetcher Service.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element ref="GeneralMessageDelivery" maxOccurs="unbounded">
+      <xsd:annotation>
+       <xsd:documentation>Delivery for general Message service.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element ref="FacilityMonitoringDelivery" maxOccurs="unbounded"/>
+    </xsd:choice>
+   </xsd:sequence>
+   <xsd:element ref="SituationExchangeDelivery" maxOccurs="unbounded"/>
+  </xsd:choice>
+ </xsd:group>
+ <!-- ===Discovery==================================================================== -->
+ <xsd:group name="SiriDiscoveryRequestGroup">
+  <xsd:annotation>
+   <xsd:documentation>Requests for reference data for use in SIRI Functional Service requests.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:choice>
+   <xsd:element ref="CapabilitiesRequest"/>
+   <xsd:group ref="SiriReferenceDiscoveryRequestGroup"/>
+  </xsd:choice>
+ </xsd:group>
+ <xsd:group name="SiriDiscoveryResponseGroup">
+  <xsd:annotation>
+   <xsd:documentation>Responses with reference data for use in SIRI Functional Service requests.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:choice>
+   <xsd:element ref="CapabilitiesResponse">
+    <xsd:annotation>
+     <xsd:documentation>Responses with the capabilities of an implementation. Answers a CapabilityRequest.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:group ref="SiriDiscoveryReferenceDeliveryGroup"/>
+  </xsd:choice>
+ </xsd:group>
+ <!-- === Capabilities ============================================================== -->
+ <!-- ===GS: Capabilities Request==================================================================== -->
+ <xsd:element name="CapabilitiesRequest" type="CapabilitiesRequestStructure">
+  <xsd:annotation>
+   <xsd:documentation>Requests a the current capabilities of the server. Answred with a CpabailitiesResponse.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="CapabilitiesRequestStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for Requests for capabilities of the current system.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="AuthenticatedRequestStructure">
+    <xsd:sequence>
+     <xsd:element name="Address" type="EndpointAddress" minOccurs="0">
+      <xsd:annotation>
+       <xsd:documentation>Address to which response is to be sent. This may also be determined from RequestorRef and preconfigured data.</xsd:documentation>
+      </xsd:annotation>
+     </xsd:element>
+     <xsd:element ref="RequestorRef"/>
+     <xsd:group ref="DelegatorEndpointGroup">
+      <xsd:annotation>
+       <xsd:documentation>If request has been proxied by an intermediate  aggregating system, tracking information relating to the original requestor. This allows the aggregation to be stateless</xsd:documentation>
+      </xsd:annotation>
+     </xsd:group>
+     <xsd:group ref="SiriServiceCapabilitiesRequestGroup"/>
+    </xsd:sequence>
+    <xsd:attribute name="version" type="VersionString" default="2.1"/>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:group name="SiriServiceCapabilitiesRequestGroup">
+  <xsd:annotation>
+   <xsd:documentation>Defines the capabilities of an individual SIRI service request functions.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="ProductionTimetableCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="EstimatedTimetableCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="StopTimetableCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="StopMonitoringCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="VehicleMonitoringCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="ConnectionTimetableCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="ConnectionMonitoringCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="GeneralMessageCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="FacilityMonitoringCapabilitiesRequest" minOccurs="0"/>
+   <xsd:element ref="SituationExchangeCapabilitiesRequest" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ===GS: Capabilities Delivery==================================================================== -->
+ <xsd:element name="CapabilitiesResponse" type="CapabilitiesResponseStructure">
+  <xsd:annotation>
+   <xsd:documentation>Responses with the capabilities of an implementation.</xsd:documentation>
+  </xsd:annotation>
+ </xsd:element>
+ <xsd:complexType name="CapabilitiesResponseStructure">
+  <xsd:annotation>
+   <xsd:documentation>Type for the capabilities of an implementation.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexContent>
+   <xsd:extension base="ProducerResponseStructure">
+    <xsd:sequence>
+     <xsd:group ref="SiriServiceCapabilitiesResponseGroup"/>
+    </xsd:sequence>
+    <xsd:attribute name="version" type="VersionString" default="2.1"/>
+   </xsd:extension>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:group name="SiriServiceCapabilitiesResponseGroup">
+  <xsd:annotation>
+   <xsd:documentation>Defines the capabilities of an individual SIRI service response functions.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:sequence>
+   <xsd:element ref="ProductionTimetableCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="EstimatedTimetableCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="StopTimetableCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="StopMonitoringCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="VehicleMonitoringCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="ConnectionTimetableCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="ConnectionMonitoringCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="GeneralMessageCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="FacilityMonitoringCapabilitiesResponse" minOccurs="0"/>
+   <xsd:element ref="SituationExchangeCapabilitiesResponse" minOccurs="0"/>
+  </xsd:sequence>
+ </xsd:group>
+ <!-- ======================================================================= -->
 </xsd:schema>
