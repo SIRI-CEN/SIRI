@@ -38,14 +38,14 @@
       <DataFrameRef>2001-12-17</DataFrameRef>
       <DatedVehicleJourneyRef>09876</DatedVehicleJourneyRef>
      </FramedVehicleJourneyRef>
-     <PublishedLineName>Line A11C</PublishedLineName>
-     <DirectionName>Outbound</DirectionName>
+     <PublishedLineName xml:lang="EN">Line A11C</PublishedLineName>
+     <DirectionName xml:lang="EN">Outbound</DirectionName>
      <OperatorRef>1s23</OperatorRef>
      <ProductCategoryRef>School</ProductCategoryRef>
      <ServiceFeatureRef>CyclesPermitted</ServiceFeatureRef>
      <VehicleFeatureRef>LowFloors</VehicleFeatureRef>
-     <OriginName>Purgatory</OriginName>
-     <DestinationName>Paradise</DestinationName>
+     <OriginName xml:lang="EN">Purgatory</OriginName>
+     <DestinationName xml:lang="EN">Paradise</DestinationName>
      <JourneyNote>from A to B</JourneyNote>
      <OriginAimedDepartureTime>2001-12-17T08:30:47-05:00</OriginAimedDepartureTime>
      <DestinationAimedArrivalTime>2001-12-17T10:30:47-05:00</DestinationAimedArrivalTime>
@@ -69,8 +69,8 @@
     <DistributorJourney>
      <LineRef>123</LineRef>
      <DirectionRef>OUT</DirectionRef>
-     <PublishedLineName>Line 123</PublishedLineName>
-     <DirectionName>Outbound</DirectionName>
+     <PublishedLineName xml:lang="EN">Line 123</PublishedLineName>
+     <DirectionName xml:lang="EN">Outbound</DirectionName>
     </DistributorJourney>
     <FeederVehicleJourneyRef>
      <DataFrameRef>2001-12-17</DataFrameRef>

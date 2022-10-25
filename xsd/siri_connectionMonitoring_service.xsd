@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Winfried Bruns (VDV) -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_connectionMonitoring_service">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_connectionMonitoring_service">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -33,11 +32,11 @@
 				 Revise to support substitution groups 
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					  Add SuggestedWaitDecisionTime to MonitoredArrival
 				</Date>
     <Date><Modified>2012-04-18</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					  Add ValidUntil Time to MonitoredFeederArrival
 					  
      	* [FR]    Add Extensions tag to ConnectionMonitoringSubscriptionRequest
@@ -59,19 +58,19 @@
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
     <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests-v.2.0.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey-v2.0.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions-v2.0.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-        <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+        <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -134,7 +133,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionMonitoringRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -177,9 +176,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values.</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
@@ -311,7 +310,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionMonitoringFeederPayloadGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -367,7 +366,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
      <xsd:element name="SuggestedWaitDecisionTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Latest time by which the feeder needs informationabout the connection from the distributor as to whether it will wait and for how long. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Latest time by which the feeder needs informationabout the connection from the distributor as to whether it will wait and for how long. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
@@ -430,7 +429,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="ConnectionMonitoringDistributorPayloadGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -621,7 +620,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="ConnectionMonitoringPermissions" minOccurs="0"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>
 Version number of response. Fixed 

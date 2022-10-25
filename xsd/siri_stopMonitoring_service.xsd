@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Dryade) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_stopMonitoring_service">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_stopMonitoring_service">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -46,22 +45,22 @@
 					 On SiriRequest change the element type of MaximumNumberOfCalls and MaximumNumberOfCallsOnwards from xsd:positiveInteger to xsd:nonNegativeInteger 
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0  
+					 (since SIRI 2.0)  
 					  [VDV] Add Minimum-StopVisits�PerVia to STopMonitoringRequestPolicy
 					  [VDV] Add HasMinimum-StopVisits�Via to STopMonitoringCapabilities
 					  [VDV]  Revise MonitoredVehicleJourney to include additioanl result files
 					  [FR] Add Servcie Exception element
 					  [VDV] Add delivery variant to LineNote
 					  [SIRI-LITE] Allow a monitoring name in results. 
-					   [SIRI-LITE] Whether any related Situations  should be included in the ServiceDelivery. Default is 'false'. +SIRI v2.0
+					   [SIRI-LITE] Whether any related Situations  should be included in the ServiceDelivery. Default is 'false'. (since SIRI 2.0)
 				</Date>
     <Date><Modified>2012-04-18</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					  [VDV] Add ValidUntil Time to MonitoredStopVisit
 					  Correct comment on MaximumNumberOfCalls elements
 				</Date>
     <Date><Modified>2012-04-18</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					  [VDV] Add normal realtiem service  Time to MonitoredStopVisit 
 					  Geeneral update permissions to include has SItuations
 				</Date>
@@ -83,18 +82,18 @@
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
     <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests-v2.0.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey-v2.0.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -113,9 +112,9 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRI-SM Stop Monitoring Service.</xsd:documentation>
  </xsd:annotation>
  <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri/siri_requests-v2.0.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_monitoredVehicleJourney-v2.0.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_modelPermissions-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri/siri_requests.xsd"/>
+ <xsd:include schemaLocation="siri_model/siri_monitoredVehicleJourney.xsd"/>
+ <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
  <!-- ======================================================================= -->
  <xsd:group name="SiriStopMonitoringIndexGroup">
   <xsd:annotation>
@@ -195,9 +194,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:boolean" default="false" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values.</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
@@ -214,7 +213,7 @@ Rail transport, Roads and road transport
     </xsd:element>
     <xsd:element name="MinimumStopVisitsPerLineVia" type="xsd:nonNegativeInteger" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>The minimum number of Stop Visits for a given LINE and VIA combination to include in a given delivery. As for MinimumStopVisitsPerLine but with Via also taken into account. SIRI+v2.0</xsd:documentation>
+      <xsd:documentation>The minimum number of Stop Visits for a given LINE and VIA combination to include in a given delivery. As for MinimumStopVisitsPerLine but with Via also taken into account. (since SIRI 2.0)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -228,9 +227,9 @@ Rail transport, Roads and road transport
      <xsd:documentation>Level of detail to include in response. Default is 'normal'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0">
+   <xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0" default="false">
     <xsd:annotation>
-     <xsd:documentation>Whether any related SITUATIONs should be included in the ServiceDelivery. Default is 'false'. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Whether any related SITUATIONs should be included in the ServiceDelivery. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="MaximumNumberOfCalls" minOccurs="0">
@@ -299,7 +298,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="StopMonitoringRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request.  
 </xsd:documentation>
@@ -326,7 +325,7 @@ Rail transport, Roads and road transport
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="optional" default="2.0"/>
+    <xsd:attribute name="version" type="VersionString" use="optional" default="2.1"/>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
@@ -408,7 +407,7 @@ If false each subscription response will contain the full information as specifi
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -429,7 +428,7 @@ If false each subscription response will contain the full information as specifi
    </xsd:element>
    <xsd:element name="MonitoringName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Name to use to describe monitoring point (Stop or display). Normally Consumer will already have access to this in its reference data but may be included to increase utility of delivery data i to devices that do not hold reference data, e.g. for SIRI LITE services(+SIRI v2.0).</xsd:documentation>
+     <xsd:documentation>Name to use to describe monitoring point (Stop or display). Normally Consumer will already have access to this in its reference data but may be included to increase utility of delivery data i to devices that do not hold reference data, e.g. for SIRI LITE services((since SIRI 2.0)).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="MonitoredStopVisit" minOccurs="0" maxOccurs="unbounded"/>
@@ -485,7 +484,7 @@ If false each subscription response will contain the full information as specifi
     <xsd:sequence>
      <xsd:element name="ValidUntilTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Time until when data is valid. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>Time until when data is valid. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:group ref="StopVisitReferenceGroup" minOccurs="0"/>
@@ -601,7 +600,7 @@ If false each subscription response will contain the full information as specifi
      <xsd:group ref="LineIdentityGroup"/>
      <xsd:element name="PublishedLineName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Name or Number by which the LINE is known to the public. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Name or Number by which the LINE is known to the public. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="LineNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -611,7 +610,7 @@ If false each subscription response will contain the full information as specifi
      </xsd:element>
      <xsd:element name="DeliveryVariant" type="DeliveryVariantStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Variant of a notice for use in a particular media channel. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Variant of a notice for use in a particular media channel. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="SituationRef" minOccurs="0" maxOccurs="unbounded"/>
@@ -622,12 +621,12 @@ If false each subscription response will contain the full information as specifi
  </xsd:complexType>
  <xsd:complexType name="DeliveryVariantStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Delviery Variant +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Type for Delivery Variant (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="VariantType" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Classification of DELIVERY VARIANT +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Classification of DELIVERY VARIANT (since SIRI 2.0).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Content" type="NaturalLanguageStringStructure">
@@ -840,7 +839,7 @@ If false each subscription response will contain the full information as specifi
      <xsd:element ref="StopMonitoringPermissions" minOccurs="0"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -874,7 +873,7 @@ If false each subscription response will contain the full information as specifi
         </xsd:element>
         <xsd:element name="ByStartTime" type="xsd:boolean" default="true" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'truet.</xsd:documentation>
+          <xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'true'.</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
         <xsd:element ref="FilterByMonitoringRef"/>
@@ -926,7 +925,7 @@ If false each subscription response will contain the full information as specifi
         </xsd:element>
         <xsd:element name="HasSituations" type="xsd:boolean" default="false" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether result supports SITUATION REFERENCESs. Default is 'false'. +SIRI v2.0</xsd:documentation>
+          <xsd:documentation>Whether result supports SITUATION REFERENCESs. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
        </xsd:sequence>
@@ -1003,7 +1002,7 @@ If false each subscription response will contain the full information as specifi
    </xsd:element>
    <xsd:element name="HasMinimumVisitsPerVia" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether results can be limited to include a minimum numVIA (i.e. per JOURNEY PATTERN). +SIRI v2.0.
+     <xsd:documentation>Whether results can be limited to include a minimum numVIA (i.e. per JOURNEY PATTERN). (since SIRI 2.0).
 default is 'false'.
 </xsd:documentation>
     </xsd:annotation>

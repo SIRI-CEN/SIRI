@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Ulf Bjersing (Hogia Public Transport Systems AB) -->
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -70,35 +69,35 @@ mailto:schemer@siri.org.uk</Creator>
      <Modified>2007-02-02</Modified>
     </Date>
     <Date><Modified>2007-04-17</Modified>
-					 Name Space changes  
+				<!--	 Name Space changes-->
 				</Date>
     <Date><Modified>2008-11-17</Modified>
-					 Change to use common 1_2. Add in mussing StopMonitoringMultipelRequest 
-					Rename groups to identify common SIRI elements 
+					 <!--Change to use common 1_2. Add in mussing StopMonitoringMultipelRequest
+					Rename groups to identify common SIRI elements-->
 				</Date>
     <Date><Modified>2009-03-03</Modified>
-					 Corrrect cardinality on facility and Service Monitoring Delivery request 
+					 <!--Corrrect cardinality on facility and Service Monitoring Delivery request-->
 				</Date>
     <Date><Modified>2011-04-18</Modified>
-					 Updated journey, request and other subpackages - see readme 
+					 <!--Updated journey, request and other subpackages - see readme-->
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 SIRI Version 2.0 
+					 <!--SIRI Version 2.0
 					  Model subpackages Refactored to improve modularisation.
 					  [SIRI-LITE] Add authentication Key
-					  See Readme.txt for list of changes
+					  See Readme.txt for list of changes-->
 				</Date>
     <Date><Modified>2012-05-18</Modified>
-					 SIRI Version 2.0 
-					  Correct error in SituationExchangeCapabilitiesReponse include
+					 <!--SIRI Version 2.0
+					  Correct error in SituationExchangeCapabilitiesReponse include-->
 				</Date>
     <Date><Modified>2012-08-01</Modified>
-					 SIRI Version 2.0 
-					  Correct delegation elements 
+					 <!--SIRI Version 2.0
+					  Correct delegation elements-->
 				</Date>
     <Date><Modified>2014-03-31</Modified>
-					 +SIRI v2.0 Comments
-					   - Add terminate subscription notification
+					 <!--(since SIRI 2.0) Comments
+					   - Add terminate subscription notification-->
 				</Date>
     <Description>
      <p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
@@ -129,8 +128,8 @@ mailto:schemer@siri.org.uk</Creator>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri__discovery.xsd</Requires>
      <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri__situationExchange_service.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-     <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+     <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
     <Source>
      <ul>
@@ -156,7 +155,7 @@ Rail transport, Roads and road transport.
   <xsd:documentation>SIRI Service Interface for Real-time  Information relating to Public Transport Operations. - XML Schema with explicit functional services</xsd:documentation>
  </xsd:annotation>
  <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri/siri_common_services-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri/siri_common_services.xsd"/>
  <xsd:include schemaLocation="siri_all_functionalServices.xsd"/>
  <!-- ======================================================================= -->
  <xsd:element name="Siri">
@@ -169,7 +168,7 @@ Rail transport, Roads and road transport.
     <xsd:group ref="ResponseGroup"/>
     <xsd:element ref="Extensions" minOccurs="0"/>
    </xsd:choice>
-   <xsd:attribute name="version" type="VersionString" default="2.0"/>
+   <xsd:attribute name="version" type="VersionString" default="2.1"/>
   </xsd:complexType>
  </xsd:element>
  <!--== Requests ===================================================================== -->
@@ -364,7 +363,7 @@ Rail transport, Roads and road transport.
    <xsd:group ref="ServiceDeliveryRequestStatusGroup"/>
    <xsd:element name="MoreData" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether there is a further delvery message with more current updates that follows this one. Default is 'false'.</xsd:documentation>
+     <xsd:documentation>Whether there is a further delivery message with more current updates that follows this one. Default is 'false'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="SiriServiceDeliveryGroup"/>
@@ -391,12 +390,12 @@ Rail transport, Roads and road transport.
      <xsd:element ref="StopTimetableDelivery" maxOccurs="unbounded"/>
      <xsd:element ref="StopMonitoringDelivery" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Delviery for Stop Event service.</xsd:documentation>
+       <xsd:documentation>Delivery for Stop Event service.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="VehicleMonitoringDelivery" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Delviery for Vehicle Activity Service.</xsd:documentation>
+       <xsd:documentation>Delivery for Vehicle Activity Service.</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="ConnectionTimetableDelivery" maxOccurs="unbounded"/>
@@ -466,12 +465,12 @@ Rail transport, Roads and road transport.
      <xsd:element ref="RequestorRef"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregting system, trackng informattion relating to the original requestor. This allows the aggregation to be stateless</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate  aggregating system, tracking information relating to the original requestor. This allows the aggregation to be stateless</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
      <xsd:group ref="SiriServiceCapabilitiesRequestGroup"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0"/>
+    <xsd:attribute name="version" type="VersionString" default="2.1"/>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>
@@ -507,7 +506,7 @@ Rail transport, Roads and road transport.
     <xsd:sequence>
      <xsd:group ref="SiriServiceCapabilitiesResponseGroup"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0"/>
+    <xsd:attribute name="version" type="VersionString" default="2.1"/>
    </xsd:extension>
   </xsd:complexContent>
  </xsd:complexType>

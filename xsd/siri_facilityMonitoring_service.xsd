@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_FacilityMonitoring_service">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_FacilityMonitoring_service">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -26,7 +26,7 @@
 					 Revise in line with FM spec - add filters 
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					    Add Extensions tag to FacilityMonitoringSubscriptionRequest
 				</Date>
     <Description>
@@ -42,19 +42,19 @@
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
     <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests-v2.0.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference-v2.0.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions-v2.0.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference.xsd</Requires>
+     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
     </Relation>
-    <Rights>Unclassified
-       <Copyright>CEN, VDV, RTIG 2004-2012</Copyright>
+    <Rights><!--Unclassified-->
+       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
     <Source>
      <ul>
       <li>Derived from the VDV, RTIG XML and Trident standards.</li>
      </ul>
     </Source>
-    <Status>Version 2.0 Draft</Status>
+    <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
@@ -73,18 +73,18 @@ Rail transport, Roads and road transport
   <xsd:documentation>SIRI-FM Facility Monitoring Service.</xsd:documentation>
  </xsd:annotation>
  <!-- ===Global import of all IFOPT namespace elements used in SIRI needed to work around XERCES limitation=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace-v0.3.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop-v0.3.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop.xsd"/>
  <!--.....See facility for the actual dependencies...-->
  <!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation This needs to be after ifopt=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all-v0.3.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
  <!--.....These are the actual dependencies...-->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility-v0.3.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_accessibility-v0.3.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
+ <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_accessibility.xsd"/>
  <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_model/siri_facility-v2.0.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_modelPermissions-v2.0.xsd"/>
- <xsd:include schemaLocation="siri/siri_requests-v2.0.xsd"/>
+ <xsd:include schemaLocation="siri_model/siri_facility.xsd"/>
+ <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
+ <xsd:include schemaLocation="siri/siri_requests.xsd"/>
  <!-- ======================================================================= -->
  <xsd:group name="SiriFacilityMonitoringServiceIndexGroup">
   <xsd:annotation>
@@ -118,7 +118,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="FacilityMonitoringRequestPolicyGroup"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
@@ -172,7 +172,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="FacilityRef" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="FeatureRef" minOccurs="0"/>
+   <xsd:element ref="FeatureRef" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="LineRef" minOccurs="0"/>
    <xsd:element ref="StopPointRef" minOccurs="0"/>
    <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
@@ -191,12 +191,17 @@ Rail transport, Roads and road transport
    <xsd:element ref="VehicleRef" minOccurs="0"/>
    <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a stop place.</xsd:documentation>
+     <xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPlaceComponentRef" type="ifopt:StopPlaceComponentRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a stop place component.</xsd:documentation>
+     <xsd:documentation>Reference to a STOP PLACE component.</xsd:documentation>
+    </xsd:annotation>
+   </xsd:element>
+   <xsd:element ref="SiteRef" minOccurs="0">
+    <xsd:annotation>
+     <xsd:documentation>Reference to a Site.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -206,9 +211,9 @@ Rail transport, Roads and road transport
    <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred language in which to return text values.</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="IncludeTranslations" minOccurs="0"/>
@@ -281,7 +286,7 @@ If false or omitted, each subscription response will contain the full informatio
      </xsd:group>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
@@ -334,7 +339,7 @@ If false or omitted, each subscription response will contain the full informatio
      <xsd:element ref="FacilityMonitoringPermissions" minOccurs="0"/>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.0">
+    <xsd:attribute name="version" type="VersionString" default="2.1">
      <xsd:annotation>
       <xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
