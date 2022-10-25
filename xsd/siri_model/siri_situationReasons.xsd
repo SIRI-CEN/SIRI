@@ -55,14 +55,14 @@
     </Date>
     <Date>
      <Modified>2014-06-23</Modified>
-     <!-- +SIRI v2.0
+     <!-- (since SIRI 2.0)
        add Holiday and PoliceActivity subreasons to Miscellaneous 
        Correct Reason codes to match spec.
       -->
     </Date>
     <Date>
      <Modified>2019-09-01</Modified>
-     <!-- +SIRI v2.1
+     <!-- (since SIRI 2.1)
        Replaced separate ReasonEnumerations by AlertCauseEnumeration (TPEG2).
        Removed SubReasonEnumerations
       -->
@@ -115,39 +115,39 @@ Rail transport, Roads and road transport
    <xsd:element ref="AlertCause"/>
    <xsd:element ref="UnknownReason">
     <xsd:annotation>
-     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="MiscellaneousReason">
     <xsd:annotation>
-     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="PersonnelReason">
     <xsd:annotation>
-     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="EquipmentReason">
     <xsd:annotation>
-     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="EnvironmentReason">
     <xsd:annotation>
-     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="UndefinedReason">
     <xsd:annotation>
-     <xsd:documentation>DEPRECATED (SIRI 2.1) - use only AlertCause.</xsd:documentation>
+     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:choice>
  </xsd:group>
  <xsd:group name="TpegSubReasonGroup">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED (SIRI 2.1) - use only TpegReasonGroup.</xsd:documentation>
+   <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
   </xsd:annotation>
   <xsd:choice>
    <xsd:element ref="MiscellaneousSubReason"/>
@@ -863,453 +863,453 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="incident">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="safetyViolation">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_1_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="trainDoor">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_5, deprecated (SIRI 2.1) - replaced by Pts38_33, door failure</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_1_5, DEPRECATED since SIRI 2.1 - replaced by Pts38_33, door failure</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="altercation">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_7, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_1_7, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="illVehicleOccupants">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_8, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_1_8, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="serviceFailure">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_12, deprecated (SIRI 2.1) - replaced by Pts38_32, service disruption</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_1_12, DEPRECATED since SIRI 2.1 - replaced by Pts38_32, service disruption</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="bombExplosion">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="fireBrigadeSafetyChecks">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_3_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="civilEmergency">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_6, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_3_6, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="airRaid">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_7, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_3_7, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="sabotage">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_8, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_3_8, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="bombAlert">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_9, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_3_9, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="attack">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_10, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_3_10, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="gunfireOnRoadway">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_13, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_3_13, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="securityIncident">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_16, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_3_16, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="linesideFire">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_4_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_4_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="passengerAction">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="staffAssault">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_5_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="railwayCrime">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_3, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_5_3, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="assault">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_4, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_5_4, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="theft">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_5, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_5_5, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="fatality">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_6_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="personUnderTrain">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_6_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="personHitByTrain">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_3, deprecated (SIRI 2.1) - replaced by Pts38_79, person hit by vehicle</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_6_3, DEPRECATED since SIRI 2.1 - replaced by Pts38_79, person hit by vehicle</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="personIllOnVehicle">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_4, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_6_4, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="emergencyServices">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_5, deprecated (SIRI 2.1) - replaced by Pts38_14, emergency medical services</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_6_5, DEPRECATED since SIRI 2.1 - replaced by Pts38_14, emergency medical services</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="insufficientDemand">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_8, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_8, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="leaderBoardFailure">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_10, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_10, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="serviceIndicatorFailure">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_11, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_11, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="operatorSuspended">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_14, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_14, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="problemsAtBorderPost">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_15_1, deprecated (SIRI 2.1) - replaced by Pts38_23, border control</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_15_1, DEPRECATED since SIRI 2.1 - replaced by Pts38_23, border control</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="problemsAtCustomsPost">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_15_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_15_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="levelCrossingIncident">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_18_1, deprecated (SIRI 2.1) - replaced by Pts38_64, level crossing blocked</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_18_1, DEPRECATED since SIRI 2.1 - replaced by Pts38_64, level crossing blocked</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="trainStruckAnimal">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_19_3, deprecated (SIRI 2.1) - replaced by Pts38_81, vehicle struck animal</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_19_3, DEPRECATED since SIRI 2.1 - replaced by Pts38_81, vehicle struck animal</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="trainStruckObject">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_19_4, deprecated (SIRI 2.1) - replaced by Pts38_80, vehicle struck object</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_19_4, DEPRECATED since SIRI 2.1 - replaced by Pts38_80, vehicle struck object</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="roadMaintenance">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_23_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_23_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="asphalting">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_23_3, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_23_3, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="paving">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_23_4, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_23_4, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="march">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_24_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_24_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="filterBlockade">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_24_5, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_24_5, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="sightseersObstructingAccess">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_24_6, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_24_6, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="holiday">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_24_7, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_24_7, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="bridgeStrike">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_25, deprecated (SIRI 2.1) - replaced by Pts38_68, bridge damage</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_25, DEPRECATED since SIRI 2.1 - replaced by Pts38_68, bridge damage</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="viaductFailure">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_25_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_25_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="overheadObstruction">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_26, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_26, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedProblem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_255, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_255, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="logisticProblems">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_255_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_255_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="problemsOnLocalRoad">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_255_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_255_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedProblem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_255, deprecated (SIRI 2.1) - replaced by Pts38_255, undefined alert cause</xsd:documentation>
+     <xsd:documentation>TPEG Pti19_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="staffInjury">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_1_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti20_1_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="contractorStaffInjury">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_1_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti20_1_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="staffInWrongPlace">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_3, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti20_3, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="staffShortage">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_4, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti20_4, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="unofficialIndustrialAction">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_5_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti20_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="workToRule">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_6, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti20_6, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedPersonnelProblem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_255, deprecated (SIRI 2.1) - replaced by Pts38_255, undefined alert cause</xsd:documentation>
+     <xsd:documentation>TPEG Pti20_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="trainWarningSystemProblem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_3_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_3_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="signalAndSwitchFailure">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_4_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_4_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="tractionFailure">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_6_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_6_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="defectiveTrain">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_6_2, deprecated (SIRI 2.1) - replaced by Pts38_53, defective vehicle</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_6_2, DEPRECATED since SIRI 2.1 - replaced by Pts38_53, defective vehicle</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="wheelImpactLoad">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_3, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_8_3, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="lackOfOperationalStock">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_4, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_8_4, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="defectiveFireAlarmEquipment">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_5, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_8_5, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="defectivePlatformEdgeDoors">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_6, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_8_6, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="defectiveCctv">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_7, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_8_7, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="defectivePublicAnnouncementSystem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_8, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_8_8, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="ticketingSystemNotAvailable">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_9, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_8_9, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="emergencyEngineeringWork">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_11_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_11_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="lateFinishToEngineeringWork">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_11_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_11_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="fuelProblem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_13, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_13, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="closedForMaintenance">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_18, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_18, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="fuelShortage">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_19, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_19, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="slipperyTrack">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_21_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_21_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="luggageCarouselProblem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_22, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_22, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedEquipmentProblem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_255, deprecated (SIRI 2.1) - replaced by Pts38_255, undefined alert cause</xsd:documentation>
+     <xsd:documentation>TPEG Pti21_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="stormConditions">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_5_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="tidalRestrictions">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_6, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_6, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="slipperiness">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_9_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_9_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="glazedFrost">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_9_3, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_9_3, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="frozen">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_10, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_10, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="sleet">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_11_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_11_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="waterlogged">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_14, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_14, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="sewerOverflow">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_255_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_255_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedEnvironmentalProblem">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_255, deprecated (SIRI 2.1) - replaced by Pts38_255, undefined alert cause</xsd:documentation>
+     <xsd:documentation>TPEG Pti22_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <!-- Values added for compatiblity with VDV736 / UmS profile (v1.0) of CEN SIRI SX. -->
+   <!-- Values added for compatiblity -->
    <xsd:enumeration value="fireAtTheStation">
     <xsd:annotation>
-     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_8 value 'fireAtStation'.</xsd:documentation>
+     <xsd:documentation>See also TPEG Pts38_8 value 'fireAtStation'.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="breakdown">
     <xsd:annotation>
-     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_43 value 'breakDown'.</xsd:documentation>
+     <xsd:documentation>See also TPEG Pts38_43 value 'breakDown'.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="levelCrossingBlocked">
     <xsd:annotation>
-     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_64 value 'levelCrossingIncident'.</xsd:documentation>
+     <xsd:documentation>See also TPEG Pts38_64 value 'levelCrossingIncident'.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="heavySnowfall">
     <xsd:annotation>
-     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_87 value 'heavySnowFall'.</xsd:documentation>
+     <xsd:documentation>See also TPEG Pts38_87 value 'heavySnowFall'.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="waitingForTransferPassengers">
     <xsd:annotation>
-     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_130 value 'awaitingShuttle'.</xsd:documentation>
+     <xsd:documentation>See also TPEG Pts38_130 value 'awaitingShuttle'.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="awaitingOncomingVehicle">
     <xsd:annotation>
-     <xsd:documentation>Value was added in SIRI v2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also TPEG Pts38_134 value 'awaitingApproach'.</xsd:documentation>
+     <xsd:documentation>See also TPEG Pts38_134 value 'awaitingApproach'.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
@@ -1317,54 +1317,54 @@ Rail transport, Roads and road transport
  <!-- ===INCIDENT REASON TYPES====================================== -->
  <xsd:element name="UnknownReason" type="xsd:string">
   <xsd:annotation>
-   <xsd:documentation>TPEG Pts38_0, unknown alert cause. Additionally, deprecated (SIRI v2.1) TPEG Pti18_0, unknown event reason.</xsd:documentation>
+   <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti18_0 - unknown event reason).</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ===================================================== -->
  <xsd:element name="UndefinedReason" type="xsd:string">
   <xsd:annotation>
-   <xsd:documentation>TPEG Pts38_255, undefined alert cause. Additionally, deprecated (SIRI v2.1) TPEG Pti18_255, undefined event reason.</xsd:documentation>
+   <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti18_255 - undefined event reason).</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ===DEPRECATED REASON TYPES====================================== -->
  <xsd:element name="MiscellaneousReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="MiscellaneousSubReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="PersonnelReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="PersonnelSubReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EquipmentReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EquipmentSubReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EnvironmentReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="EnvironmentSubReason" type="xsd:NMTOKEN">
   <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI v2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
+   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
 </xsd:schema>

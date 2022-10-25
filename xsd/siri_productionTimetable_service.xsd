@@ -49,7 +49,7 @@
     </Date>
     <Date>
      <Modified>2012-03-23</Modified>
-     <!-- +SIRI v2.0 
+     <!-- (since SIRI 2.0) 
           Add ServiceJourneyInterchange (i.e. Monitored Connection)
 		  Add additional times to TargetedServiceInterchange MinimumTransferTime, MaximimTransferTime, StandardTransferTime, MaximumAUtomaticWaitTime, StandardWiatTime.			 
 		  Add Public and Contact Details to JourneyInfo 
@@ -175,17 +175,17 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Filter the results to include only journeys of the specified VEHICLE MODE. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Filter the results to include only journeys of the specified VEHICLE MODE. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ProductCategoryRef" type="ProductCategoryRefStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Filter the results to include only journeys of the specified TYPE OF PRODUCT CATEGORY. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Filter the results to include only journeys of the specified TYPE OF PRODUCT CATEGORY. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Filter the results to include only journeys with a CALL at the specified STOP POINT. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Filter the results to include only journeys with a CALL at the specified STOP POINT. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -307,7 +307,7 @@ If false each subscription response will contain the full information as specifi
      <xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
      <xsd:element name="ShortestPossibleCycle" type="PositiveDurationType" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Minimum interval at which updates for this DATED TIMETABLE VERSION FRAME can be sent. +SIRI v2.1</xsd:documentation>
+       <xsd:documentation>Minimum interval at which updates for this DATED TIMETABLE VERSION FRAME can be sent. (since SIRI 2.1)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:group ref="LineIdentityGroup"/>
@@ -325,7 +325,7 @@ If false each subscription response will contain the full information as specifi
        <xsd:documentation>List of all removed VEHICLE JOURNEYs for this LINE and DIRECTION. 
 A data producer may silently remove a journey from the plan if it was previously provided in error. Careful: Removal is different from Cancellation.
 Minimal information, or no information at all, of a RemovedDatedVehicleJourney or the removal itself must be communicated to the passengers, i.e., it is "silently" removed. A Cancellation, on the other hand, is possibly the most important information to provide to the passengers.
-It is strongly advised to only use this feature in cases where a journey was sent in error and it can be assumed that as few passengers as possible have seen the erroneous information to avoid confusion. +SIRI v2.1</xsd:documentation>
+It is strongly advised to only use this feature in cases where a journey was sent in error and it can be assumed that as few passengers as possible have seen the erroneous information to avoid confusion. (since SIRI 2.1)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="ServiceJourneyInterchange" type="ServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
@@ -338,7 +338,7 @@ It is strongly advised to only use this feature in cases where a journey was sen
        <xsd:documentation>List of all removed SERVICE JOURNEY INTERCHANGEs.
 A data producer may silently remove an interchange from the plan if it was previously provided in error. Careful: Removal is different from Cancellation.
 Minimal information, or no information at all, of a RemovedServiceJourneyInterchange or the removal itself must be communicated to the passengers, i.e., it is "silently" removed. A Cancellation, on the other hand, is possibly the most important information to provide to the passengers.
-It is strongly advised to only use this feature in cases where an interchange was sent in error and it can be assumed that as few passengers as possible have seen the erroneous information to avoid confusion. +SIRI v2.1</xsd:documentation>
+It is strongly advised to only use this feature in cases where an interchange was sent in error and it can be assumed that as few passengers as possible have seen the erroneous information to avoid confusion. (since SIRI 2.1)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>

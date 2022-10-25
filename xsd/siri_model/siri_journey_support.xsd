@@ -371,13 +371,13 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:simpleType name="TrainElementCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a TRAIN ELEMENT. An elementary component of a TRAIN (e.g. wagon, locomotive etc.). +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a TRAIN ELEMENT. An elementary component of a TRAIN (e.g. wagon, locomotive etc.). (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="TrainElementRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for reference to a TRAIN ELEMENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="TrainElementCodeType"/>
@@ -385,18 +385,18 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="TrainElementRef" type="TrainElementRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Reference to a TRAIN ELEMENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="TrainComponentCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a TRAIN COMPONENT. A TRAIN ELEMENT with a specific order within a TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a TRAIN COMPONENT. A TRAIN ELEMENT with a specific order within a TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="TrainComponentRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for reference to a TRAIN COMPONENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="TrainComponentCodeType"/>
@@ -404,18 +404,18 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="TrainComponentRef" type="TrainComponentRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Reference to a TRAIN COMPONENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="TrainCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a TRAIN. An ordered sequence of TRAIN ELEMENTs or TRAIN COMPONENTs respectively. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a TRAIN. An ordered sequence of TRAIN ELEMENTs or TRAIN COMPONENTs respectively. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="TrainRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for reference to a TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="TrainCodeType"/>
@@ -423,18 +423,18 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="TrainRef" type="TrainRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to a TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Reference to a TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="CompoundTrainCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a COMPOUND TRAIN. An ordered sequence of TRAINs or TRAIN IN COMPOUND TRAINs respectively. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a COMPOUND TRAIN. An ordered sequence of TRAINs or TRAIN IN COMPOUND TRAINs respectively. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="CompoundTrainRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for reference to a COMPOUND TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="CompoundTrainCodeType"/>
@@ -442,18 +442,18 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="CompoundTrainRef" type="CompoundTrainRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Reference to a COMPOUND TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="TrainInCompoundTrainCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a TRAIN IN COMPOUND TRAIN. A TRAIN with a specific order within a COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a TRAIN IN COMPOUND TRAIN. A TRAIN with a specific order within a COMPOUND TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="TrainInCompoundTrainRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for reference to a TRAIN IN COMPOUND TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="TrainInCompoundTrainCodeType"/>
@@ -461,18 +461,18 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="TrainInCompoundTrainRef" type="TrainInCompoundTrainRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Reference to a TRAIN IN COMPOUND TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="EntranceToVehicleCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of an ENTRANCE TO VEHICLE, e.g. a door of a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of an ENTRANCE TO VEHICLE, e.g. a door of a TRAIN ELEMENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="EntranceToVehicleRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to an ENTRANCE TO VEHICLE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for reference to an ENTRANCE TO VEHICLE. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="EntranceToVehicleCodeType"/>
@@ -480,13 +480,13 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:element name="EntranceToVehicleRef" type="EntranceToVehicleRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to an ENTRANCE TO VEHICLE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Reference to an ENTRANCE TO VEHICLE. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ============================ -->
  <xsd:group name="TrainFormationReferenceGroup">
   <xsd:annotation>
-   <xsd:documentation>Groups together the relevant references needed in a formation. +SIRI v2.1
+   <xsd:documentation>Groups together the relevant references needed in a formation. (since SIRI 2.1)
 Has the following uses:
 - Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. The former is ideally used in a FORMATION ASSIGNMENT, i.e. QUAY (sector) assignment, to provide the highest level of detail for passenger orientation. 
 - If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is also possible. This might be used in a FORMATION CONDITION to signal a change of the train composition.
@@ -855,7 +855,7 @@ Passengers don't need to change vehicles. The new journey is not communicated as
  <!-- =====StopAssignment============================================================ -->
  <xsd:simpleType name="TypeOfNestedQuayEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for characterisation of nested QUAYs as part of a STOP ASSIGNMENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for characterisation of nested QUAYs as part of a STOP ASSIGNMENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="platformGroup">
@@ -884,7 +884,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
  <!-- =====Train Formation/Composition============================================================ -->
  <xsd:simpleType name="TrainElementTypeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for TYPE OF TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for TYPE OF TRAIN ELEMENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="buffetCar"/>
@@ -899,7 +899,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
  </xsd:simpleType>
  <xsd:simpleType name="TrainSizeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for TRAIN SIZE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for TRAIN SIZE. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="normal"/>
@@ -909,7 +909,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
  </xsd:simpleType>
  <xsd:simpleType name="TypeOfFuelEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for TYPE OF FUEL. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for TYPE OF FUEL. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:normalizedString">
    <xsd:enumeration value="petrol"/>
@@ -924,23 +924,23 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
  </xsd:simpleType>
  <xsd:element name="FareClass" type="FareClassEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>Classification of FARE CLASSes. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Classification of FARE CLASSes. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="FareClasses" type="FareClassListOfEnumerations">
   <xsd:annotation>
-   <xsd:documentation>List of FARE CLASSes. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>List of FARE CLASSes. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="FareClassListOfEnumerations">
   <xsd:annotation>
-   <xsd:documentation>List of values for FARE CLASSes. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>List of values for FARE CLASSes. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:list itemType="FareClassEnumeration"/>
  </xsd:simpleType>
  <xsd:simpleType name="FareClassEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Values for Fare Class Facility. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Values for Fare Class Facility. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown">
@@ -990,7 +990,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
  </xsd:simpleType>
  <xsd:simpleType name="VehicleInFormationStatusEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for VEHICLE IN FORMATION STATUS CODE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for VEHICLE IN FORMATION STATUS CODE. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
@@ -1008,7 +1008,7 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
  </xsd:simpleType>
  <xsd:simpleType name="FormationChangeEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for FORMATION CHANGE CODE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for FORMATION CHANGE CODE. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="changedFormation"/>

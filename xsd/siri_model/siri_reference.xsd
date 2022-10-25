@@ -473,12 +473,12 @@ Values for these elements can be specified on an annual schedule and will be inh
    <xsd:choice>
     <xsd:element name="BrandingRef" type="BrandingRefStructure" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Reference to a BRANDING. +SIRI v2.1</xsd:documentation>
+      <xsd:documentation>Reference to a BRANDING. (since SIRI 2.1)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="Branding" type="BrandingStructure" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>An arbitrary marketing classification. +SIRI v2.1</xsd:documentation>
+      <xsd:documentation>An arbitrary marketing classification. (since SIRI 2.1)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -796,13 +796,13 @@ Values for these elements can be specified on an annual schedule and will be inh
  <!-- ======================================================================= -->
  <xsd:simpleType name="BrandingCodeType">
   <xsd:annotation>
-   <xsd:documentation>Type for identifier of a BRANDING. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for identifier of a BRANDING. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
  <xsd:complexType name="BrandingRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for reference to a BRANDING. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for reference to a BRANDING. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
    <xsd:extension base="BrandingCodeType"/>
@@ -810,7 +810,7 @@ Values for these elements can be specified on an annual schedule and will be inh
  </xsd:complexType>
  <xsd:complexType name="BrandingStructure">
   <xsd:annotation>
-   <xsd:documentation>An arbitrary marketing classification. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>An arbitrary marketing classification. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="BrandingCode" type="xsd:NMTOKEN">

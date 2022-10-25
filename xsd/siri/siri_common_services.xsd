@@ -30,17 +30,17 @@
 					 -- Revise for substitution groups and move down to siri subdirectory 
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					   - Add DataReady to Check Status
 					   - Add DistanceUnits and VelocityUnits to ServiceRequestContext
 					   - [FR]    Add Extensions tag to Terminate SubscriptionRequest
 				</Date>
     <Date><Modified>2014-03-31</Modified>
-					 +SIRI v2.0 Comments
+					 (since SIRI 2.0) Comments
 					   - Add terminate subscription notification
 				</Date>
     <Date><Modified>2014-06-23</Modified>
-					 +SIRI v2.0 Comments
+					 (since SIRI 2.0) Comments
 					   - Revise  terminate subscription erroc condition to be consistent with other services
 				</Date>
     <Description>
@@ -345,12 +345,12 @@ Rail transport, Roads and road transport
    </xsd:choice>
    <xsd:element name="DistanceUnits" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Units for Distance Type. Default is metres. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Units for Distance Type. Default is metres. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="VelocityUnits" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Units for Distance Type. Default is metres per second. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Units for Distance Type. Default is metres per second. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -395,7 +395,7 @@ Rail transport, Roads and road transport
      <xsd:group ref="RequestorEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate  aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
      <xsd:group ref="TerminateSubscriptionTopicGroup"/>

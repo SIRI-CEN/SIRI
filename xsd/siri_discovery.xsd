@@ -39,7 +39,7 @@
     </Date>
     <Date>
      <Modified>2012-03-23</Modified>
-     <!-- +SIRI v2.0
+     <!-- (since SIRI 2.0)
 						 Move Features to separate model separate model package
 						 Move Annotated Facility to separate model package.
 						 Add filtering to StopPoints request by box, place, line and OPERATOR and detail  level
@@ -49,7 +49,7 @@
     </Date>
     <Date>
      <Modified>2012-05-17</Modified>
-     <!-- +SIRI v2.0
+     <!-- (since SIRI 2.0)
  						 [MTA]  Add filtering to StopPoints and Lines Discovery requests by point + radius  
 						 [MTA]  Add filtering to Lines Discovery  request by LineRef and Direction
 						[MTA]  Add stops in pattern to Lines Discovery and LineDetailParameter
@@ -57,7 +57,7 @@
     </Date>
     <Date>
      <Modified>2013-03-28</Modified>
-     <!-- +SIRI v2.0
+     <!-- (since SIRI 2.0)
  						 [FR]  Addition of Connection Links Discovery -->
     </Date>
     <Description>
@@ -176,12 +176,12 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:group ref="StopPointsDiscoveryRequestTopicGroup">
       <xsd:annotation>
-       <xsd:documentation>Parameters that specify the content to be returned. (+SIRI v2.0)</xsd:documentation>
+       <xsd:documentation>Parameters that specify the content to be returned. ((since SIRI 2.0))</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
      <xsd:group ref="StopPointsDiscoveryRequestPolicyGroup">
       <xsd:annotation>
-       <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. (+SIRI v2.0)</xsd:documentation>
+       <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. ((since SIRI 2.0))</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
      <xsd:element ref="Extensions" minOccurs="0"/>
@@ -197,58 +197,58 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="StopPointsDiscoveryRequestTopicGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that specify the  STOP POINTs  to be returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that specify the  STOP POINTs  to be returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
     <xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Rectangle containing stops  be returned. (+SIRI v2.0)</xsd:documentation>
+      <xsd:documentation>Rectangle containing stops  be returned. ((since SIRI 2.0))</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="Circle" type="LocationStructure" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Circle containing stops  be returned. Point indicates centre, precision indicates radius (+SIRI v2.0)</xsd:documentation>
+      <xsd:documentation>Circle containing stops  be returned. Point indicates centre, precision indicates radius ((since SIRI 2.0))</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Filter the results to include only stops associated with  the PLACE . (+SIRI v2.0)</xsd:documentation>
+      <xsd:documentation>Filter the results to include only stops associated with  the PLACE . ((since SIRI 2.0))</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Filter the results to include only stops run by the specified OPERATOR.  (+SIRI v2.0)</xsd:documentation>
+     <xsd:documentation>Filter the results to include only stops run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Filter the results to include only stops for the given LINE. (+SIRI v2.0)</xsd:documentation>
+     <xsd:documentation>Filter the results to include only stops for the given LINE. ((since SIRI 2.0))</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="StopPointsDiscoveryRequestPolicyGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="StopPointsDetailLevel" type="StopPointsDetailEnumeration" default="normal" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:simpleType name="StopPointsDetailEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Detail Levels for Stop Points Discovery Request. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Detail Levels for Stop Points Discovery Request. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="minimum">
@@ -322,24 +322,24 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="LinesDiscoveryRequestTopicGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that specify the LINEs to be returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that specify the LINEs to be returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice minOccurs="0">
     <xsd:choice>
      <xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="1">
       <xsd:annotation>
-       <xsd:documentation>Rectangle containing stops of lines be returned. (+SIRI v2.0)</xsd:documentation>
+       <xsd:documentation>Rectangle containing stops of lines be returned. ((since SIRI 2.0))</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="Circle" type="LocationStructure" minOccurs="1">
       <xsd:annotation>
-       <xsd:documentation>Circle containing stops for lines  be returned. Point indicates centre, precision indicates radius (+SIRI v2.0)</xsd:documentation>
+       <xsd:documentation>Circle containing stops for lines  be returned. Point indicates centre, precision indicates radius ((since SIRI 2.0))</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="1">
       <xsd:annotation>
-       <xsd:documentation>Filter the results to include only lines for  stops assoicated with  the place . (+SIRI v2.0)</xsd:documentation>
+       <xsd:documentation>Filter the results to include only lines for  stops assoicated with  the place . ((since SIRI 2.0))</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:choice>
@@ -351,31 +351,31 @@ Rail transport, Roads and road transport
    </xsd:choice>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Filter the results to include only Stop d run by the specified OPERATOR.  (+SIRI v2.0)</xsd:documentation>
+     <xsd:documentation>Filter the results to include only Stop d run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="LinesDiscoveryRequestPolicyGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Linesreturned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Linesreturned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="LinesDetailLevel" type="LinesDetailEnumeration" default="normal" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:simpleType name="LinesDetailEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Detail Levels for Lines Discovery Request. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Detail Levels for Lines Discovery Request. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="minimum">
@@ -448,12 +448,12 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="ProductCategoriesRequestPolicyGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -510,12 +510,12 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="VehicleFeaturesRequestPolicyGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -622,53 +622,53 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="FacilityRequestTopicGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that specify the  Facilities to be returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that specify the  Facilities to be returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
     <xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Rectangle containing Facilities  be returned. (+SIRI v2.0)</xsd:documentation>
+      <xsd:documentation>Rectangle containing Facilities  be returned. ((since SIRI 2.0))</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Filter the results to include only Facilities associated with  the TOPOGRAPHIC PLACE . (+SIRI v2.0)</xsd:documentation>
+      <xsd:documentation>Filter the results to include only Facilities associated with  the TOPOGRAPHIC PLACE . ((since SIRI 2.0))</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Filter the results to include only Facilities run by the specified OPERATOR.  (+SIRI v2.0)</xsd:documentation>
+     <xsd:documentation>Filter the results to include only Facilities run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Filter the results to include only Facilities for the given LINE. (+SIRI v2.0)</xsd:documentation>
+     <xsd:documentation>Filter the results to include only Facilities for the given LINE. ((since SIRI 2.0))</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:group name="FacilityRequestPolicyGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="FacilityDetailLevel" type="FacilityDetailEnumeration" default="normal" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:simpleType name="FacilityDetailEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Detail Levels for Facility Points Request. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Detail Levels for Facility Points Request. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="minimum">
@@ -774,12 +774,12 @@ Rail transport, Roads and road transport
  <!-- ===== DS: CONNECTION LINKs Request =========================================== -->
  <xsd:element name="ConnectionLinksRequest" type="ConnectionLinksDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
   <xsd:annotation>
-   <xsd:documentation>Requests a list of the CONNECTION LINKs covered by a Producer. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Requests a list of the CONNECTION LINKs covered by a Producer. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="ConnectionLinksDiscoveryRequestStructure">
   <xsd:annotation>
-   <xsd:documentation>Requests for CONNECTION LINK data for use in service requests. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Requests for CONNECTION LINK data for use in service requests. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="AbstractDiscoveryRequestStructure">
@@ -798,7 +798,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:group name="ConnectionLinksDiscoveryRequestTopicGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that specify the CONNECTION LINKs to be returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that specify the CONNECTION LINKs to be returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice minOccurs="0">
@@ -834,24 +834,24 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:group name="ConnectionLinksDiscoveryRequestPolicyGroup">
   <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of ConnectionLinks returned. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of ConnectionLinks returned. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ConnectionLinksDetailLevel" type="ConnectionLinksDetailEnumeration" default="normal" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
  <xsd:simpleType name="ConnectionLinksDetailEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Detail Levels for CONNECTION LINKs Discovery Request. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Detail Levels for CONNECTION LINKs Discovery Request. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="minimum">
@@ -874,7 +874,7 @@ Rail transport, Roads and road transport
  <!-- ===== DS: CONNECTION LINKs Response =========================================== -->
  <xsd:element name="ConnectionLinksDelivery" type="ConnectionLinksDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
   <xsd:annotation>
-   <xsd:documentation>Returns the CONNECTION LINKs covered by a web service. Answers a LINEsRequest. +Siri v2.0</xsd:documentation>
+   <xsd:documentation>Returns the CONNECTION LINKs covered by a web service. Answers a LINEsRequest. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="ConnectionLinksDeliveryStructure">

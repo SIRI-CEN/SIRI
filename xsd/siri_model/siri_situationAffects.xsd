@@ -850,12 +850,12 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="BlockRef" type="BlockRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>BLOCK which journey runs. +SIRI 2.0</xsd:documentation>
+     <xsd:documentation>BLOCK which journey runs. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="TrainNumbers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>TRAIN NUMBERs for journey. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>TRAIN NUMBERs for journey. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -875,7 +875,7 @@ Rail transport, Roads and road transport
      <xsd:sequence>
       <xsd:element name="JourneyPartInfo" type="JourneyPartInfoStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Information about Parts of JOURNEY  +SIRI v2.0</xsd:documentation>
+        <xsd:documentation>Information about Parts of JOURNEY  (since SIRI 2.0)</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -908,12 +908,12 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="OriginDisplayAtDestination" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>DESTINATION name shown for journey at the origin. Can be Used to identify journey for user. (+SIRI 2.0), </xsd:documentation>
+     <xsd:documentation>DESTINATION name shown for journey at the origin. Can be Used to identify journey for user. (since SIRI 2.0), </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>DESTINATION name shown for journey at the origin.  Can be Used to identify journey for user. (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>DESTINATION name shown for journey at the origin.  Can be Used to identify journey for user. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
@@ -923,7 +923,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="JourneyCondition" type="ServiceConditionEnumeration" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Status of service for this Vehicle Journey - TPEG value. Multiple Conditions can be valid at the same time.  (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Status of service for this Vehicle Journey - TPEG value. Multiple Conditions can be valid at the same time.  (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Calls" minOccurs="0">
@@ -938,13 +938,13 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Facilities" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Facilities available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Facilities available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
       <xsd:element name="AffectedFacility" type="AffectedFacilityStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Facililitiy available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
+        <xsd:documentation>Facililitiy available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -1068,7 +1068,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="VehicleArrivalTimesGroup"/>
    <xsd:element ref="ArrivalStatus" minOccurs="0"/>
-   <!-- multiplicity of Arrival-/DeparturePlatformName is 0:1 in all SIRI services except here to ensure compatibility with VDV736 / UmS profile of CEN SIRI SX -->
+   <!-- multiplicity of Arrival-/DeparturePlatformName is 0:1 in all SIRI services except here to ensure backwards compatibility -->
    <xsd:element ref="ArrivalPlatformName" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0"/>
   </xsd:sequence>
@@ -1080,14 +1080,14 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:group ref="VehicleDepartureTimesGroup"/>
    <xsd:element ref="DepartureStatus" minOccurs="0"/>
-   <!-- multiplicity of Arrival-/DeparturePlatformName is 0:1 in all SIRI services except here to ensure compatibility with VDV736 / UmS profile of CEN SIRI SX -->
+   <!-- multiplicity of Arrival-/DeparturePlatformName is 0:1 in all SIRI services except here to ensure backwards compatibility -->
    <xsd:element ref="DeparturePlatformName" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element ref="DepartureBoardingActivity" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
  <xsd:complexType name="AffectedFacilityStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for information about a FACILITY affected by an SITUATION. (+SIRI 2.0)</xsd:documentation>
+   <xsd:documentation>Type for information about a FACILITY affected by an SITUATION. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="FacilityRef" minOccurs="0"/>
@@ -1195,13 +1195,13 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="AffectedFacilities" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Facilities available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
+       <xsd:documentation>Facilities available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
       <xsd:complexType>
        <xsd:sequence>
         <xsd:element name="AffectedFacility" type="AffectedFacilityStructure" maxOccurs="unbounded">
          <xsd:annotation>
-          <xsd:documentation>Facililitiy available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
+          <xsd:documentation>Facililitiy available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
        </xsd:sequence>
@@ -1281,13 +1281,13 @@ Rail transport, Roads and road transport
      </xsd:element>
      <xsd:element name="AffectedFacilities" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Facilities available for component   (+SIRI 2.0)</xsd:documentation>
+       <xsd:documentation>Facilities available for component   (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
       <xsd:complexType>
        <xsd:sequence>
         <xsd:element name="AffectedFacility" type="AffectedFacilityStructure" maxOccurs="unbounded">
          <xsd:annotation>
-          <xsd:documentation>Facility available for VEHICLE JOURNEY   (+SIRI 2.0)</xsd:documentation>
+          <xsd:documentation>Facility available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
        </xsd:sequence>
