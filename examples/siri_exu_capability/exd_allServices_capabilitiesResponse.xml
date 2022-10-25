@@ -476,7 +476,7 @@
     <RequestPolicy>
      <NationalLanguage>en</NationalLanguage>
      <GmlCoordinateFormat>WGS84</GmlCoordinateFormat>
-     <HasMaximumFacilityStatus>true</HasMaximumFacilityStatus>
+     <HasMaximumNumberOfSituations>true</HasMaximumNumberOfSituations>
     </RequestPolicy>
     <SubscriptionPolicy>
      <HasIncrementalUpdates>true</HasIncrementalUpdates>
@@ -487,10 +487,7 @@
      <CheckOperatorRef>false</CheckOperatorRef>
      <CheckLineRef>false</CheckLineRef>
     </AccessControl>
-    <ResponseFeatures>
-     <HasRemedy>true</HasRemedy>
-     <HasFacilityLocation>true</HasFacilityLocation>
-    </ResponseFeatures>
+    <ResponseFeatures/>
    </SituationExchangeServiceCapabilities>
   </SituationExchangeCapabilitiesResponse>
  </CapabilitiesResponse>
