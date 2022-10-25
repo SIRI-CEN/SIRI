@@ -20,7 +20,7 @@
     </Date>
     <Date>
      <Modified>2019-09-01</Modified>
-     <!-- +SIRI v2.1
+     <!-- (since SIRI 2.1)
        Merged with TPEG2 (Pts43 ServiceStatus).
        Removed numerical values from SeverityEnumeration and VerificationStatusEnumeration.
        Corrected content of Predictability.
@@ -277,92 +277,92 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="altered">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_1, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_1, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="cancelled">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_2, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_2, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="delayed">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_3, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_3, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="noService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_5, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_5, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="disrupted">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_6, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_6, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="additionalService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_7, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_7, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="specialService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_8, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_8, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="normalService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_10, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_10, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="intermittentService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_11, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_11, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="shortFormedService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_12, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_12, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="fullLengthService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_13, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_13, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="extendedService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_14, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_14, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="splittingTrain">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_15, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_15, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="replacementTransport">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_16, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_16, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="arrivesEarly">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_17, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_17, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="shuttleService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_18, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_18, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="replacementService">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_19, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_19, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="undefinedServiceInformation">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_255, deprecated (SIRI 2.1)</xsd:documentation>
+     <xsd:documentation>TPEG Pti13_255, DEPRECATED since SIRI 2.1</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>

@@ -39,12 +39,12 @@
     </Date>
     <Date>
      <Modified>2012-03-23</Modified>
-     <!-- +SIRI v2.0 -->
+     <!-- (since SIRI 2.0) -->
     </Date>
     <Date>
      <Modified>2012-04-18</Modified>
      <!-- Add valid until to response
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					 
 						- [FR]    Add Extensions tag to Connection|TimetableSubscriptionRequest
 						- [DE] Add Extensions element to  request -->
@@ -251,7 +251,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="ValidUntilTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Time until when data is valid. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>Time until when data is valid. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:group ref="InterchangeFeederIdentityGroup"/>

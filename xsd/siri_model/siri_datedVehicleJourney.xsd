@@ -43,7 +43,7 @@
 				</Date>
     <Date><Modified>2012-03-23</Modified>
 					 Factor out fropm ProductionTimetable package
-					 +SIRI v2.0 Add ServiceJourneyInterchange (i.e. Monitored Connection)
+					 (since SIRI 2.0) Add ServiceJourneyInterchange (i.e. Monitored Connection)
 						[VDV] Add additional times to TargetedServiceInterchange MinimumTransferTime, MaximimTransferTime, StandardTransferTime, MaximumAUtomaticWaitTime, StandardWaitTime.					 
 					 [VDV] Add Public and Contact Details to JourneyInfo 				
 						[VDV] Add AimedLatestPassengerAccessTime to TargetedCall 				
@@ -139,7 +139,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="RemovedDatedVehicleJourneyStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for previously planned VEHICLE JOURNEY that is removed from the data producer when using incremental updates. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for previously planned VEHICLE JOURNEY that is removed from the data producer when using incremental updates. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
@@ -176,7 +176,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="OriginDisplay" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Description of the origin stop (vehicle signage) to show on vehicle, Can be overwritten for a journey, and then also section by section by the entry in an Individual Call.  (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Description of the origin stop (vehicle signage) to show on vehicle, Can be overwritten for a journey, and then also section by section by the entry in an Individual Call.  (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DestinationDisplay" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -191,7 +191,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="FirstOrLastJourney" type="FirstOrLastJourneyEnumeration" default="unspecified" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether journey is first or last jouurney of day. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Whether journey is first or last jouurney of day. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -246,7 +246,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="AbstractServiceJourneyInterchangeStructure" abstract="true">
   <xsd:annotation>
-   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE between two journeys. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE between two journeys. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
@@ -277,7 +277,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="FromServiceJourneyInterchangeStructure">
   <xsd:annotation>
-   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE from a journey. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE from a journey. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
@@ -304,7 +304,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="ToServiceJourneyInterchangeStructure">
   <xsd:annotation>
-   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE to a journey. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE to a journey. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
@@ -331,7 +331,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="ServiceJourneyInterchangeStructure">
   <xsd:annotation>
-   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE between two journeys. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE between two journeys. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
@@ -362,7 +362,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:complexType name="RemovedServiceJourneyInterchangeStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for a previously planned SERVICE JOURNEY INTERCHANGE that a data producer wants to silently remove from the plan (because it is erroneous data). Careful: Removal is different from Cancellation. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for a previously planned SERVICE JOURNEY INTERCHANGE that a data producer wants to silently remove from the plan (because it is erroneous data). Careful: Removal is different from Cancellation. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
@@ -438,7 +438,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="MaximumAutomaticWaitTime" type="xsd:duration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Maximum automatic wait time that Distributor will wait for Feeder for INTERCHANGE. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Maximum automatic wait time that Distributor will wait for Feeder for INTERCHANGE. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -626,34 +626,34 @@ Rail transport, Roads and road transport
  <!-- =====individual elements that are referenced in various groups================================================================== -->
  <xsd:element name="InterchangeCode" type="InterchangeCodeType">
   <xsd:annotation>
-   <xsd:documentation>Identifier of SERVICE JOURNEY INTERCHANGE. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Identifier of SERVICE JOURNEY INTERCHANGE. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ExtraInterchange" type="xsd:boolean" default="false">
   <xsd:annotation>
-   <xsd:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="InterchangeCancellation">
   <xsd:annotation>
    <xsd:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable. 
-Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not cancelled. +SIRI v2.1</xsd:documentation>
+Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not cancelled. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:boolean"/>
  </xsd:simpleType>
  <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey or an interchange from the plan. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey or an interchange from the plan. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="FeederRef" type="ConnectingJourneyRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to a feeder VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Reference to a feeder VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="FeederArrivalStopRef" type="StopPointRefStructure">
   <xsd:annotation>
-   <xsd:documentation>SCHEDULED STOP POINT at which feeder journey arrives. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>SCHEDULED STOP POINT at which feeder journey arrives. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="FeederVisitNumber" type="VisitNumberType">
@@ -664,22 +664,22 @@ Can only be used when both participants recognise the same schedule version. If 
  <xsd:element name="FeederStopOrder" type="xsd:positiveInteger">
   <xsd:annotation>
    <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. 
-ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
+ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime">
   <xsd:annotation>
-   <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DistributorRef" type="ConnectingJourneyRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to a feeder VEHICLE JOURNEY. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Reference to a feeder VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DistributorDepartureStopRef" type="StopPointRefStructure">
   <xsd:annotation>
-   <xsd:documentation>SCHEDULED STOP POINT at which distributor journet departs. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>SCHEDULED STOP POINT at which distributor journet departs. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DistributorVisitNumber" type="VisitNumberType">
@@ -690,12 +690,12 @@ ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL i
  <xsd:element name="DistributorStopOrder" type="xsd:positiveInteger">
   <xsd:annotation>
    <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. 
-ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. +SIRI v2.1</xsd:documentation>
+ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime">
   <xsd:annotation>
-   <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->

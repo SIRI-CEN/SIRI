@@ -200,12 +200,12 @@ MonitoringError must not be used if Monitored is omitted or set to 'true'.</xsd:
    </xsd:element>
    <xsd:element name="Velocity" type="VelocityType" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Velocity of VEHICLE. EIther actual speed or average speed may be used. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Velocity of VEHICLE. EIther actual speed or average speed may be used. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="EngineOn" type="xsd:boolean" default="true" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the engine of the vehicle is on. Default is 'true' (+SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Whether the engine of the vehicle is on. Default is 'true' (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="Occupancy" minOccurs="0"/>
@@ -221,7 +221,7 @@ MonitoringError must not be used if Monitored is omitted or set to 'true'.</xsd:
    </xsd:element>
    <xsd:element name="VehicleStatus" type="VehicleStatusEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>An classification of the progress state of running of this VEHICLE JOURNEY. +SIRI 2.0</xsd:documentation>
+     <xsd:documentation>An classification of the progress state of running of this VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -252,7 +252,7 @@ MonitoringError must not be used if Monitored is omitted or set to 'true'.</xsd:
       <xsd:element ref="ViaName" minOccurs="0"/>
       <xsd:element name="PresentationPriority" type="xsd:integer" minOccurs="0">
        <xsd:annotation>
-        <xsd:documentation>Relative priority for incliding via in displays. 1 Is high 3 is low. +SIRI v2.0</xsd:documentation>
+        <xsd:documentation>Relative priority for incliding via in displays. 1 Is high 3 is low. (since SIRI 2.0)</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -303,27 +303,27 @@ For SIRI-VM this is the most recent stop visited by the VEHICLE.</xsd:documentat
  <!-- ==== LINE ROUTE and destination elements======================================================== -->
  <xsd:complexType name="JourneyPartInfoStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for a reference to JOURNEY PART. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Type for a reference to JOURNEY PART. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="JourneyPartRef" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to a JOURNEY part. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Reference to a JOURNEY part. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Train Number for JOURNEY PART +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Train Number for JOURNEY PART (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>OPERATOR of JOURNEY PART. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>OPERATOR of JOURNEY PART. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="CompoundTrainRef" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to COMPOUND TRAIN that represents the train formation/composition as a whole (for this JOURNEY PART). +SIRI v2.1
+     <xsd:documentation>Reference to COMPOUND TRAIN that represents the train formation/composition as a whole (for this JOURNEY PART). (since SIRI 2.1)
 A journey does always have one or more JOURNEY PARTs for which the train formation/composition remains unchanged.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
@@ -332,7 +332,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
  </xsd:complexType>
  <xsd:complexType name="DatedJourneyPartInfoStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for a reference to JOURNEY PART. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for a reference to JOURNEY PART. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="JourneyPartRef" type="xsd:normalizedString" minOccurs="0">
@@ -352,7 +352,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    </xsd:element>
    <xsd:element ref="CompoundTrainRef" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Reference to COMPOUND TRAIN that represents the train formation/composition as a whole (for this JOURNEY PART). +SIRI v2.1
+     <xsd:documentation>Reference to COMPOUND TRAIN that represents the train formation/composition as a whole (for this JOURNEY PART). (since SIRI 2.1)
 A journey does always have one or more JOURNEY PARTs for which the train formation/composition remains unchanged.
 </xsd:documentation>
     </xsd:annotation>
@@ -362,7 +362,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
  </xsd:complexType>
  <xsd:group name="JourneyPartViewGroup">
   <xsd:annotation>
-   <xsd:documentation>If no JOURNEY PART reference is available (or in addition to the reference), identify it indirectly by From-/ToStopPointRef and Start-/EndTime (i.e. the scheduled times at these stops). +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>If no JOURNEY PART reference is available (or in addition to the reference), identify it indirectly by From-/ToStopPointRef and Start-/EndTime (i.e. the scheduled times at these stops). (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="FromStopPointRef" type="StopPointRefStructure">
@@ -423,7 +423,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    <xsd:group ref="OperationalInfoGroup"/>
    <xsd:element name="TrainNumbers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>TRAIN NUMBERs for journey. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>TRAIN NUMBERs for journey. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -443,7 +443,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
      <xsd:sequence>
       <xsd:element name="JourneyPartInfo" type="JourneyPartInfoStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Information about Parts of JOURNEY  +SIRI v2.0</xsd:documentation>
+        <xsd:documentation>Information about Parts of JOURNEY  (since SIRI 2.0)</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -465,7 +465,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    <xsd:group ref="DatedOperationalInfoGroup"/>
    <xsd:element name="TrainNumbers" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>TRAIN NUMBERs for journey. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>TRAIN NUMBERs for journey. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -485,7 +485,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
      <xsd:sequence>
       <xsd:element name="JourneyPartInfo" type="DatedJourneyPartInfoStructure" maxOccurs="unbounded">
        <xsd:annotation>
-        <xsd:documentation>Information about Parts of JOURNEY  +SIRI v2.0</xsd:documentation>
+        <xsd:documentation>Information about Parts of JOURNEY  (since SIRI 2.0)</xsd:documentation>
        </xsd:annotation>
       </xsd:element>
      </xsd:sequence>
@@ -603,7 +603,7 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    <xsd:group ref="VehicleArrivalTimesGroup"/>
    <xsd:element name="LatestExpectedArrivalTime" type="xsd:dateTime" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Latest time at which a VEHICLE will arrive at stop. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Latest time at which a VEHICLE will arrive at stop. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -626,17 +626,17 @@ A journey does always have one or more JOURNEY PARTs for which the train formati
    <xsd:group ref="VehicleDepartureTimesGroup"/>
    <xsd:element name="ProvisionalExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Expected departure time of VEHICLE without waiting time due to operational actions. For people at stop this would normally be shown if different from Expected Departure time. +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Expected departure time of VEHICLE without waiting time due to operational actions. For people at stop this would normally be shown if different from Expected Departure time. (since SIRI 2.0).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="EarliestExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Earliest time at which VEHICLE may leave the stop. Used to secure connections. Passengers must be at boarding point by this time to be sure of catching VEHICLE. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Earliest time at which VEHICLE may leave the stop. Used to secure connections. Passengers must be at boarding point by this time to be sure of catching VEHICLE. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ExpectedDeparturePredictionQuality" type="PredictionQualityStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Prediction quality, either as approcimate level, or more quantitatyive percentile range of   predictions will  fall within a given range of times.  +SIRI v2.0 </xsd:documentation>
+     <xsd:documentation>Prediction quality, either as approcimate level, or more quantitatyive percentile range of   predictions will  fall within a given range of times.  (since SIRI 2.0) </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>

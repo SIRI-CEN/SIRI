@@ -8286,7 +8286,7 @@
    </xs:enumeration>
    <xs:enumeration value="microwavedMonitoringStation">
     <xs:annotation>
-     <xs:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also 'microwaveMonitoringStation'</xs:documentation>
+     <xs:documentation>See also 'microwaveMonitoringStation'</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="mobileTelephoneCaller">
@@ -8301,7 +8301,7 @@
    </xs:enumeration>
    <xs:enumeration value="nonPoliceEmergencyServicesPatrol">
     <xs:annotation>
-     <xs:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also 'nonPoliceEmergencyServicePatrol'</xs:documentation>
+     <xs:documentation>See also 'nonPoliceEmergencyServicePatrol'</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="otherInformation">
@@ -8336,7 +8336,7 @@
    </xs:enumeration>
    <xs:enumeration value="registeredMobileObserver">
     <xs:annotation>
-     <xs:documentation>Value was added in SIRI 2.1 to ensure compatibility with VDV736 / UmS profile (v1.0) of CEN SIRI SX. See also 'registeredMotoristObserver'</xs:documentation>
+     <xs:documentation>See also 'registeredMotoristObserver'</xs:documentation>
     </xs:annotation>
    </xs:enumeration>
    <xs:enumeration value="roadAuthorities">

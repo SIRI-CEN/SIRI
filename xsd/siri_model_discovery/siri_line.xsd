@@ -145,13 +145,13 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="JourneyPatterns" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>JourneyPatterns in  Direction of route (+SIRI 2.0)</xsd:documentation>
+       <xsd:documentation>JourneyPatterns in  Direction of route (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
       <xsd:complexType>
        <xsd:sequence>
         <xsd:element name="JourneyPattern" maxOccurs="unbounded">
          <xsd:annotation>
-          <xsd:documentation>JourneyPattern. (+SIRI 2.0)</xsd:documentation>
+          <xsd:documentation>JourneyPattern. (since SIRI 2.0)</xsd:documentation>
          </xsd:annotation>
          <xsd:complexType>
           <xsd:sequence>
@@ -163,13 +163,13 @@ Rail transport, Roads and road transport
            </xsd:element>
            <xsd:element name="StopsInPattern" minOccurs="0">
             <xsd:annotation>
-             <xsd:documentation>Ordered collection of STOP POINTs the LINE and direction . Detail level is  'stops'. +SIRI v2.0 </xsd:documentation>
+             <xsd:documentation>Ordered collection of STOP POINTs the LINE and direction . Detail level is  'stops'. (since SIRI 2.0) </xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
              <xsd:sequence>
               <xsd:element name="StopPointInPattern" type="StopPointInPatternStructure" minOccurs="2" maxOccurs="unbounded">
                <xsd:annotation>
-                <xsd:documentation>Stop within Route of LINE. Detail level is 'stop' +SIRI v2.0 </xsd:documentation>
+                <xsd:documentation>Stop within Route of LINE. Detail level is 'stop' (since SIRI 2.0) </xsd:documentation>
                </xsd:annotation>
               </xsd:element>
              </xsd:sequence>
@@ -195,12 +195,12 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="Order" type="xsd:positiveInteger">
       <xsd:annotation>
-       <xsd:documentation>Order of STOP POINT in route +SIRI v2.0 </xsd:documentation>
+       <xsd:documentation>Order of STOP POINT in route (since SIRI 2.0) </xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="OnwardLinkShape" type="LineShapeStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Plot of points from this stop to next Stop.  Detail level is 'full'. +SIRI v2.0 </xsd:documentation>
+       <xsd:documentation>Plot of points from this stop to next Stop.  Detail level is 'full'. (since SIRI 2.0) </xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="LinkProjectionToNextStopPoint" type="ifopt:LinkProjectionStructure" minOccurs="0">
