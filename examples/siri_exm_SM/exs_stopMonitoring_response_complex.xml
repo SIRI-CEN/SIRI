@@ -24,8 +24,8 @@
    <ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
    <ShortestPossibleCycle>PT3M</ShortestPossibleCycle>
    <MonitoringRef>HLTST011</MonitoringRef>
-   <MonitoringName xml:lang="en">British Museum Stop A</MonitoringName>
-   <MonitoringName xml:lang="fr">Musee Britannique Halte A</MonitoringName>
+   <MonitoringName xml:lang="EN">British Museum Stop A</MonitoringName>
+   <MonitoringName xml:lang="FR">Musee Britannique Halte A</MonitoringName>
    <!--====FIRST ARRIVAL ============================================ -->
    <MonitoredStopVisit>
     <RecordedAtTime>2004-12-17T09:25:46-05:00</RecordedAtTime>
@@ -43,23 +43,23 @@
       <DatedVehicleJourneyRef>Oubound</DatedVehicleJourneyRef>
      </FramedVehicleJourneyRef>
      <!-- LINE INFO GROUP -->
-     <PublishedLineName>123</PublishedLineName>
+     <PublishedLineName xml:lang="EN">123</PublishedLineName>
      <!-- SERVICE INFO GROUP -->
      <OperatorRef>OP22</OperatorRef>
      <ProductCategoryRef>PDCATEXPRESS</ProductCategoryRef>
      <ServiceFeatureRef>SERVCCAT551</ServiceFeatureRef>
      <!-- SERVICE POINTS GROUP -->
      <OriginRef>PLACE21</OriginRef>
-     <OriginName>Highbury</OriginName>
+     <OriginName xml:lang="EN">Highbury</OriginName>
      <Via>
-      <PlaceName>Kensall Green</PlaceName>
+      <PlaceName xml:lang="EN">Kensall Green</PlaceName>
      </Via>
      <Via>
-      <PlaceName>Roman Road</PlaceName>
+      <PlaceName xml:lang="EN">Roman Road</PlaceName>
      </Via>
      <DestinationRef>PLACE45</DestinationRef>
-     <DestinationName xml:lang="en">Paradise Park</DestinationName>
-     <DestinationName xml:lang="fr">Parc du Paradis</DestinationName>
+     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
+     <DestinationName xml:lang="FR">Parc du Paradis</DestinationName>
      <VehicleJourneyName xml:lang="EN">Boris Special</VehicleJourneyName>
      <!-- JOURNEY INFO GROUP -->
      <JourneyNote>Kensall Green</JourneyNote>
@@ -95,8 +95,8 @@
       <PreviousCall>
        <StopPointRef>HLT0010</StopPointRef>
        <VisitNumber>2</VisitNumber>
-       <StopPointName xml:lang="en">Town Hall</StopPointName>
-       <StopPointName xml:lang="en">Hotel de Ville</StopPointName>
+       <StopPointName xml:lang="EN">Town Hall</StopPointName>
+       <StopPointName xml:lang="EN">Hotel de Ville</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedDepartureTime>2004-12-17T09:32:43-05:00</AimedDepartureTime>
        <ActualDepartureTime>2004-12-17T09:32:43-05:00</ActualDepartureTime>
@@ -118,15 +118,15 @@
       <ExpectedDepartureTime>2004-12-17T09:40:47-05:00</ExpectedDepartureTime>
       <!-- CALL INFO GROUP -->
       <DepartureStatus> arrived</DepartureStatus>
-      <DeparturePlatformName>Bay 5</DeparturePlatformName>
+      <DeparturePlatformName xml:lang="EN">Bay 5</DeparturePlatformName>
       <!-- MONITORED VEHICLE JOURNEY -->
      </MonitoredCall>
      <OnwardCalls>
       <OnwardCall>
        <StopPointRef>HLTST012</StopPointRef>
        <VisitNumber>4</VisitNumber>
-       <StopPointName xml:lang="en">Church</StopPointName>
-       <StopPointName xml:lang="fr">Eglise</StopPointName>
+       <StopPointName xml:lang="EN">Church</StopPointName>
+       <StopPointName xml:lang="FR">Eglise</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T09:30:56-05:00</AimedArrivalTime>
        <ExpectedArrivalTime>2004-12-17T09:30:56-05:00</ExpectedArrivalTime>
@@ -155,8 +155,8 @@
      </FramedVehicleJourneyRef>
      <RouteRef>Rt24</RouteRef>
      <!-- LINE INFO GROUP -->
-     <PublishedLineName>24</PublishedLineName>
-     <DirectionName>To Library</DirectionName>
+     <PublishedLineName xml:lang="EN">24</PublishedLineName>
+     <DirectionName xml:lang="EN">To Library</DirectionName>
      <ExternalLineRef>Line128</ExternalLineRef>
      <!-- SERVICE INFO GROUP -->
      <OperatorRef>OP22</OperatorRef>
@@ -166,12 +166,12 @@
      <VehicleFeatureRef>446</VehicleFeatureRef>
      <!-- SERVICE POINTS GROUP -->
      <OriginRef>PLACE4675</OriginRef>
-     <OriginName>Chancery Lane</OriginName>
+     <OriginName xml:lang="EN">Chancery Lane</OriginName>
      <Via>
-      <PlaceName>Picadilly Green</PlaceName>
+      <PlaceName xml:lang="EN">Picadilly Green</PlaceName>
      </Via>
      <DestinationRef>PLACE1245</DestinationRef>
-     <DestinationName>Paradise Park</DestinationName>
+     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
      <!--JOURNEY INFO GROUP -->
      <JourneyNote>Accessiblity  help available from driver</JourneyNote>
      <PublicContact>
@@ -216,7 +216,7 @@
       <PreviousCall>
        <StopPointRef>HLT0107</StopPointRef>
        <VisitNumber>002</VisitNumber>
-       <StopPointName>Library</StopPointName>
+       <StopPointName xml:lang="EN">Library</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedDepartureTime>2004-12-17T09:30:42-00:00</AimedDepartureTime>
        <ActualDepartureTime>2004-12-17T09:30:43-05:00</ActualDepartureTime>
@@ -224,14 +224,14 @@
       <PreviousCall>
        <StopPointRef>HLT0109</StopPointRef>
        <VisitNumber>007</VisitNumber>
-       <StopPointName>Library</StopPointName>
+       <StopPointName xml:lang="EN">Library</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <ActualDepartureTime>2004-12-17T09:32:44-05:00</ActualDepartureTime>
       </PreviousCall>
       <PreviousCall>
        <StopPointRef>HLT0110</StopPointRef>
        <VisitNumber>009</VisitNumber>
-       <StopPointName>Library</StopPointName>
+       <StopPointName xml:lang="EN">Library</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <ActualDepartureTime>2004-12-17T09:38:47-05:00</ActualDepartureTime>
       </PreviousCall>
@@ -254,7 +254,7 @@
       <OnwardCall>
        <StopPointRef>HLTST112</StopPointRef>
        <VisitNumber>0012</VisitNumber>
-       <StopPointName>Hospital</StopPointName>
+       <StopPointName xml:lang="EN">Hospital</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T09:55:47-05:00</AimedArrivalTime>
        <AimedDepartureTime>2004-12-17T09:56:47-05:00</AimedDepartureTime>
@@ -267,8 +267,8 @@
        </ExpectedDeparturePredictionQuality>
        <AimedLatestPassengerAccessTime>2004-12-17T09:55:47-05:00</AimedLatestPassengerAccessTime>
        <DepartureStatus>onTime</DepartureStatus>
-       <DepartureProximityText xml:lang="en">Approaching stop</DepartureProximityText>
-       <DeparturePlatformName>2</DeparturePlatformName>
+       <DepartureProximityText xml:lang="EN">Approaching stop</DepartureProximityText>
+       <DeparturePlatformName xml:lang="EN">2</DeparturePlatformName>
        <AimedHeadwayInterval>PT10M</AimedHeadwayInterval>
        <ExpectedHeadwayInterval>PT11M</ExpectedHeadwayInterval>
        <DistanceFromStop>750</DistanceFromStop>
@@ -277,7 +277,7 @@
       <OnwardCall>
        <StopPointRef>HLTST113</StopPointRef>
        <VisitNumber>0013</VisitNumber>
-       <StopPointName>Starbucks</StopPointName>
+       <StopPointName xml:lang="EN">Starbucks</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T10:07:47-05:00</AimedArrivalTime>
        <AimedDepartureTime>2004-12-17T10:09:47-05:00</AimedDepartureTime>
@@ -287,11 +287,11 @@
       <OnwardCall>
        <StopPointRef>HLTST114</StopPointRef>
        <VisitNumber>0014</VisitNumber>
-       <StopPointName>Station</StopPointName>
+       <StopPointName xml:lang="EN">Station</StopPointName>
        <VehicleAtStop>false</VehicleAtStop>
        <AimedArrivalTime>2004-12-17T10:12:47-05:00</AimedArrivalTime>
        <ArrivalStatus>onTime</ArrivalStatus>
-       <ArrivalPlatformName>2</ArrivalPlatformName>
+       <ArrivalPlatformName xml:lang="EN">2</ArrivalPlatformName>
        <DistanceFromStop>4000</DistanceFromStop>
        <NumberOfStopsAway>3</NumberOfStopsAway>
       </OnwardCall>
