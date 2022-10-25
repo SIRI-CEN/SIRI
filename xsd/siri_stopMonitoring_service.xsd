@@ -45,22 +45,22 @@
 					 On SiriRequest change the element type of MaximumNumberOfCalls and MaximumNumberOfCallsOnwards from xsd:positiveInteger to xsd:nonNegativeInteger 
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0  
+					 (since SIRI 2.0)  
 					  [VDV] Add Minimum-StopVisits�PerVia to STopMonitoringRequestPolicy
 					  [VDV] Add HasMinimum-StopVisits�Via to STopMonitoringCapabilities
 					  [VDV]  Revise MonitoredVehicleJourney to include additioanl result files
 					  [FR] Add Servcie Exception element
 					  [VDV] Add delivery variant to LineNote
 					  [SIRI-LITE] Allow a monitoring name in results. 
-					   [SIRI-LITE] Whether any related Situations  should be included in the ServiceDelivery. Default is 'false'. +SIRI v2.0
+					   [SIRI-LITE] Whether any related Situations  should be included in the ServiceDelivery. Default is 'false'. (since SIRI 2.0)
 				</Date>
     <Date><Modified>2012-04-18</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					  [VDV] Add ValidUntil Time to MonitoredStopVisit
 					  Correct comment on MaximumNumberOfCalls elements
 				</Date>
     <Date><Modified>2012-04-18</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					  [VDV] Add normal realtiem service  Time to MonitoredStopVisit 
 					  Geeneral update permissions to include has SItuations
 				</Date>
@@ -213,7 +213,7 @@ Rail transport, Roads and road transport
     </xsd:element>
     <xsd:element name="MinimumStopVisitsPerLineVia" type="xsd:nonNegativeInteger" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>The minimum number of Stop Visits for a given LINE and VIA combination to include in a given delivery. As for MinimumStopVisitsPerLine but with Via also taken into account. SIRI+v2.0</xsd:documentation>
+      <xsd:documentation>The minimum number of Stop Visits for a given LINE and VIA combination to include in a given delivery. As for MinimumStopVisitsPerLine but with Via also taken into account. (since SIRI 2.0)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -229,7 +229,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0" default="false">
     <xsd:annotation>
-     <xsd:documentation>Whether any related SITUATIONs should be included in the ServiceDelivery. Default is 'false'. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Whether any related SITUATIONs should be included in the ServiceDelivery. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="MaximumNumberOfCalls" minOccurs="0">
@@ -428,7 +428,7 @@ If false each subscription response will contain the full information as specifi
    </xsd:element>
    <xsd:element name="MonitoringName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Name to use to describe monitoring point (Stop or display). Normally Consumer will already have access to this in its reference data but may be included to increase utility of delivery data i to devices that do not hold reference data, e.g. for SIRI LITE services(+SIRI v2.0).</xsd:documentation>
+     <xsd:documentation>Name to use to describe monitoring point (Stop or display). Normally Consumer will already have access to this in its reference data but may be included to increase utility of delivery data i to devices that do not hold reference data, e.g. for SIRI LITE services((since SIRI 2.0)).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="MonitoredStopVisit" minOccurs="0" maxOccurs="unbounded"/>
@@ -484,7 +484,7 @@ If false each subscription response will contain the full information as specifi
     <xsd:sequence>
      <xsd:element name="ValidUntilTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Time until when data is valid. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>Time until when data is valid. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:group ref="StopVisitReferenceGroup" minOccurs="0"/>
@@ -600,7 +600,7 @@ If false each subscription response will contain the full information as specifi
      <xsd:group ref="LineIdentityGroup"/>
      <xsd:element name="PublishedLineName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Name or Number by which the LINE is known to the public. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Name or Number by which the LINE is known to the public. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="LineNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -610,7 +610,7 @@ If false each subscription response will contain the full information as specifi
      </xsd:element>
      <xsd:element name="DeliveryVariant" type="DeliveryVariantStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Variant of a notice for use in a particular media channel. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Variant of a notice for use in a particular media channel. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="SituationRef" minOccurs="0" maxOccurs="unbounded"/>
@@ -621,12 +621,12 @@ If false each subscription response will contain the full information as specifi
  </xsd:complexType>
  <xsd:complexType name="DeliveryVariantStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Delivery Variant +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Type for Delivery Variant (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="VariantType" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Classification of DELIVERY VARIANT +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Classification of DELIVERY VARIANT (since SIRI 2.0).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Content" type="NaturalLanguageStringStructure">
@@ -925,7 +925,7 @@ If false each subscription response will contain the full information as specifi
         </xsd:element>
         <xsd:element name="HasSituations" type="xsd:boolean" default="false" minOccurs="0">
          <xsd:annotation>
-          <xsd:documentation>Whether result supports SITUATION REFERENCESs. Default is 'false'. +SIRI v2.0</xsd:documentation>
+          <xsd:documentation>Whether result supports SITUATION REFERENCESs. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
          </xsd:annotation>
         </xsd:element>
        </xsd:sequence>
@@ -1002,7 +1002,7 @@ If false each subscription response will contain the full information as specifi
    </xsd:element>
    <xsd:element name="HasMinimumVisitsPerVia" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether results can be limited to include a minimum numVIA (i.e. per JOURNEY PATTERN). +SIRI v2.0.
+     <xsd:documentation>Whether results can be limited to include a minimum numVIA (i.e. per JOURNEY PATTERN). (since SIRI 2.0).
 default is 'false'.
 </xsd:documentation>
     </xsd:annotation>

@@ -30,7 +30,7 @@
     </Date>
     <Date>
      <Modified>2012-03-23</Modified>
-     <!-- +SIRI v2.0: remove unnecessary dependencies -->
+     <!-- (since SIRI 2.0): remove unnecessary dependencies -->
     </Date>
     <Description>
      <p>SIRI is a European CEN standard for the exchange of real-time information.
@@ -722,7 +722,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element ref="FormationCondition" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="FacilityConditionElement" minOccurs="0" maxOccurs="unbounded">
@@ -742,7 +742,7 @@ Rail transport, Roads and road transport
  <!-- ===Vehicle FACILITY====================================== -->
  <xsd:complexType name="TypeOfVehicleFuelStructure">
   <xsd:annotation>
-   <xsd:documentation>Classification of vehicle energy type. See Transmodel TypeOfFuel. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Classification of vehicle energy type. See Transmodel TypeOfFuel. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TypeOfFuel" type="TypeOfFuelEnumeration">

@@ -32,11 +32,11 @@
 				 Revise to support substitution groups 
 				</Date>
     <Date><Modified>2012-03-23</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					  Add SuggestedWaitDecisionTime to MonitoredArrival
 				</Date>
     <Date><Modified>2012-04-18</Modified>
-					 +SIRI v2.0
+					 (since SIRI 2.0)
 					  Add ValidUntil Time to MonitoredFeederArrival
 					  
      	* [FR]    Add Extensions tag to ConnectionMonitoringSubscriptionRequest
@@ -366,7 +366,7 @@ Rail transport, Roads and road transport
      <xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
      <xsd:element name="SuggestedWaitDecisionTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Latest time by which the feeder needs informationabout the connection from the distributor as to whether it will wait and for how long. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Latest time by which the feeder needs informationabout the connection from the distributor as to whether it will wait and for how long. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="Extensions" minOccurs="0"/>

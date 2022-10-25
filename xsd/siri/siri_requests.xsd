@@ -154,17 +154,17 @@ Roads and road transport</Category>
  </xsd:complexType>
  <xsd:group name="AuthenticatedRequestGroup">
   <xsd:annotation>
-   <xsd:documentation>Elemenst for authecticiation. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Elemenst for authecticiation. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AccountId" type="xsd:NMTOKEN" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Account Identifier. May be used to attribute requests to a particular application provider and authentication key. The account may be common to all users of an application, or to an individual user. Note that to identify an individual user the RequestorRef can be used with an anonymised token. . +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Account Identifier. May be used to attribute requests to a particular application provider and authentication key. The account may be common to all users of an application, or to an individual user. Note that to identify an individual user the RequestorRef can be used with an anonymised token. . (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AccountKey" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Authentication key for request. May be used to authenticate requests from a particular account. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Authentication key for request. May be used to authenticate requests from a particular account. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -180,7 +180,7 @@ Roads and road transport</Category>
      <xsd:group ref="RequestorEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -212,12 +212,12 @@ Roads and road transport</Category>
   <xsd:sequence>
    <xsd:element name="DelegatorAddress" type="EndpointAddress" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Address of original Consumer, i.e. requesting system to which delegating response is to be returned. +SIRI 2.0</xsd:documentation>
+     <xsd:documentation>Address of original Consumer, i.e. requesting system to which delegating response is to be returned. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DelegatorRef" type="ParticipantRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Identifier of delegating system that originated message. +SIRI 2.0</xsd:documentation>
+     <xsd:documentation>Identifier of delegating system that originated message. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -295,7 +295,7 @@ Roads and road transport</Category>
    <xsd:element name="SubscriptionRenewal" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>By using this element, the subscriber asks the data provider for an extension of the InitialTerminationTime of the subscription. 
-If SubscriptionRenewal is omitted, this request is to be treated as a re-subscription and therefore all data corresponding to the SubscriptionRequest must be sent in the initial response (or a portion of the data if MoreData is set to 'true'). +SIRI v2.1</xsd:documentation>
+If SubscriptionRenewal is omitted, this request is to be treated as a re-subscription and therefore all data corresponding to the SubscriptionRequest must be sent in the initial response (or a portion of the data if MoreData is set to 'true'). (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -400,7 +400,7 @@ If SubscriptionRenewal is omitted, this request is to be treated as a re-subscri
      <xsd:group ref="ProducerResponseEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -575,7 +575,7 @@ If SubscriptionRenewal is omitted, this request is to be treated as a re-subscri
      <xsd:group ref="ConsumerRequestEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -609,7 +609,7 @@ If SubscriptionRenewal is omitted, this request is to be treated as a re-subscri
      <xsd:group ref="ConsumerResponseEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -689,7 +689,7 @@ If SubscriptionRenewal is omitted, this request is to be treated as a re-subscri
      <xsd:group ref="ResponseEndpointGroup"/>
      <xsd:group ref="DelegatorEndpointGroup">
       <xsd:annotation>
-       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. +SIRI 2.0</xsd:documentation>
+       <xsd:documentation>If request has been proxied by an intermediate aggregating system , tracking information relating to the original requestor. This allows the aggregation to be stateless. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:group>
     </xsd:sequence>
@@ -979,7 +979,7 @@ If SubscriptionRenewal is omitted, this request is to be treated as a re-subscri
    </xsd:element>
    <xsd:element name="Translations" type="xsd:boolean" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether producer can provide multiple translations of NL text elements +SIRI 2.0</xsd:documentation>
+     <xsd:documentation>Whether producer can provide multiple translations of NL text elements (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:choice>

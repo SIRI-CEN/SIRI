@@ -146,12 +146,12 @@ Rail transport, Roads and road transport
    <xsd:element ref="JourneyNote" minOccurs="0" maxOccurs="unbounded"/>
    <xsd:element name="PublicContact" type="SimpleContactStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Contact details for use by members of public. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Contact details for use by members of public. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="OperationsContact" type="SimpleContactStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Contact details for use by operational staff. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Contact details for use by operational staff. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -163,12 +163,12 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="PhoneNumber" type="PhoneType" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Phone number +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Phone number (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Url" type="xsd:anyURI" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Url for contact +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Url for contact (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -191,7 +191,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="OriginRef" minOccurs="0"/>
-   <xsd:element name="OriginName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="OriginName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
      <xsd:documentation>Name of the origin of the journey.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
@@ -201,9 +201,9 @@ Rail transport, Roads and road transport
      <xsd:documentation>Short name of the origin of the journey; used to help identify the VEHICLE JOURNEY on arrival boards. If absent, same as Origin Name.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>DIRECTION name shown for jurney at the origin. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>DIRECTION name shown for jurney at the origin. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Via" type="ViaNameStructure" minOccurs="0" maxOccurs="unbounded">
@@ -226,9 +226,9 @@ Rail transport, Roads and road transport
      <xsd:documentation>Short name of the DESTINATION.of the journey; used to help identify the VEHICLE JOURNEY on arrival boards. If absent, same as DestinationName.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
-   <xsd:element name="OriginDisplayAtDestination" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+   <xsd:element name="OriginDisplayAtDestination" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Origin name shown for jourey at the destination +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Origin name shown for jourey at the destination (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -242,7 +242,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element name="ViaPriority" type="xsd:nonNegativeInteger" default="2" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Relative priority to give to VIA name in displays. 1=high. Default is 2. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Relative priority to give to VIA name in displays. 1=high. Default is 2. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -267,17 +267,17 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
- <xsd:element name="OriginName" type="NaturalLanguagePlaceNameStructure">
+ <xsd:element name="OriginName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>The name of the origin of the journey; used to help identify the VEHICLE JOURNEY on arrival boards.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="ViaName" type="NaturalLanguagePlaceNameStructure">
+ <xsd:element name="ViaName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>Names of VIA points, used to help identify the LINEfor example, Luton to Luton via Sutton. Currently 3 in VDV. Should only be included if the detail level was requested.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
- <xsd:element name="DestinationName" type="NaturalLanguagePlaceNameStructure">
+ <xsd:element name="DestinationName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
    <xsd:documentation>The name of the DESTINATION of the journey; used to help identify the VEHICLE to the public. Note when used in a CALL, this is the Dynamic Destination Display: since vehicles can change their destination during a journey, the destination included here should be what the VEHICLE will display when it reaches the stop.</xsd:documentation>
   </xsd:annotation>
@@ -308,7 +308,7 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:element name="FirstOrLastJourney" type="FirstOrLastJourneyEnumeration" default="unspecified">
   <xsd:annotation>
-   <xsd:documentation>Whether journey is first or last journey of day. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Whether journey is first or last journey of day. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="JourneyNote" type="NaturalLanguageStringStructure">
@@ -349,17 +349,17 @@ Rail transport, Roads and road transport
    <xsd:element ref="VehicleRef" minOccurs="0"/>
    <xsd:element name="AdditionalVehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Refercence to other VEHICLE Journeys (+SIRI v2.0)</xsd:documentation>
+     <xsd:documentation>Refercence to other VEHICLE Journeys ((since SIRI 2.0))</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DriverRef" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>A reference to the DRIVER or Crew currently logged in to operate a monitored VEHICLE. May be omitted if real-time data is not available - i.e. it is timetabled data. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>A reference to the DRIVER or Crew currently logged in to operate a monitored VEHICLE. May be omitted if real-time data is not available - i.e. it is timetabled data. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DriverName" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The name oo the Driver or Crew   +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>The name oo the Driver or Crew   (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -439,7 +439,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0"/>
    <xsd:element name="ArrivalStopAssignment" type="PlannedStopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Assignment of planned arrival at scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure. +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Assignment of planned arrival at scheduled STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure. (since SIRI 2.0).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="ArrivalFormationAssignment" minOccurs="0" maxOccurs="unbounded"/>
@@ -480,7 +480,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="ArrivalBoardingActivity" minOccurs="0"/>
    <xsd:element name="ArrivalStopAssignment" type="StopAssignmentStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Assignment of planned, expected and/or recorded arrival at STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure. +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Assignment of planned, expected and/or recorded arrival at STOP POINT to a phsyical QUAY (platform). If not given, assume same as for departure. (since SIRI 2.0).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="ArrivalFormationAssignment" minOccurs="0" maxOccurs="unbounded"/>
@@ -533,7 +533,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="OriginDisplay" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Origin to show for the VEHICLE at the specific stop (vehicle signage), if different to the Origin Name for the full journey. (+Siri 2.0)</xsd:documentation>
+     <xsd:documentation>Origin to show for the VEHICLE at the specific stop (vehicle signage), if different to the Origin Name for the full journey. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DestinationDisplay" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -606,12 +606,12 @@ Rail transport, Roads and road transport
      <xsd:element ref="ExpectedArrivalTime" minOccurs="0"/>
      <xsd:element name="LatestExpectedArrivalTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Latest time at which a VEHICLE will arrive at stop. +SIRI v2.1</xsd:documentation>
+       <xsd:documentation>Latest time at which a VEHICLE will arrive at stop. (since SIRI 2.1)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="ExpectedArrivalPredictionQuality" type="PredictionQualityStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Prediction quality, either as approximate level, or more quantitative percentile range of predictions that will fall within a given range of times. +SIRI v2.0 </xsd:documentation>
+       <xsd:documentation>Prediction quality, either as approximate level, or more quantitative percentile range of predictions that will fall within a given range of times. (since SIRI 2.0) </xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -623,7 +623,7 @@ Rail transport, Roads and road transport
 (iii) drop/omit ExpectedArrivalTime
 (iv) set ArrivalStatus to 'noReport'
 However, this might introduce ambiguity: e.g. option (iii) might be interpreted as "on time" by one consumer, but also as "indefinite delay" by another consumer. 
-To avoid this, the producer should transmit xxxPredictionUnknown instead of any expected times. +SIRI v2.1</xsd:documentation>
+To avoid this, the producer should transmit xxxPredictionUnknown instead of any expected times. (since SIRI 2.1)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -640,17 +640,17 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
      <xsd:element ref="ExpectedDepartureTime" minOccurs="0"/>
      <xsd:element name="ProvisionalExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Expected departure time of VEHICLE without waiting time due to operational actions. For people at stop this would normally be shown if different from Expected departure time. So if servcie decides not to wait may leave earler than expected departure time +SIRI v2.0.</xsd:documentation>
+       <xsd:documentation>Expected departure time of VEHICLE without waiting time due to operational actions. For people at stop this would normally be shown if different from Expected departure time. So if servcie decides not to wait may leave earler than expected departure time (since SIRI 2.0).</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="EarliestExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Earliest time at which VEHICLE may leave the stop. Used to secure connections. Used for passenger announcements. Passengers must be at boarding point by this time to be sure of catching VEHICLE.  i.e. "Vehicle will not leave before this time" - may be revised from original aimed time. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Earliest time at which VEHICLE may leave the stop. Used to secure connections. Used for passenger announcements. Passengers must be at boarding point by this time to be sure of catching VEHICLE.  i.e. "Vehicle will not leave before this time" - may be revised from original aimed time. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="ExpectedDeparturePredictionQuality" type="PredictionQualityStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Prediction quality, either as approximate level, or more quantitative percentile range of predictions that will fall within a given range of times. +SIRI v2.0 </xsd:documentation>
+       <xsd:documentation>Prediction quality, either as approximate level, or more quantitative percentile range of predictions that will fall within a given range of times. (since SIRI 2.0) </xsd:documentation>
       </xsd:annotation>
      </xsd:element>
     </xsd:sequence>
@@ -662,7 +662,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
 (iii) drop/omit ExpectedDepartureTime
 (iv) set DepartureStatus to 'noReport'
 However, this might introduce ambiguity: e.g. option (iii) might be interpreted as "on time" by one consumer, but also as "indefinite delay" by another consumer. 
-To avoid this, the producer should transmit xxxPredictionUnknown instead of any expected times. +SIRI v2.1</xsd:documentation>
+To avoid this, the producer should transmit xxxPredictionUnknown instead of any expected times. (since SIRI 2.1)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>
@@ -679,17 +679,17 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  </xsd:group>
  <xsd:group name="StopProximityGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements describing the distance from the stop of a VEHICLE. +SIRI v2.0.</xsd:documentation>
+   <xsd:documentation>Elements describing the distance from the stop of a VEHICLE. (since SIRI 2.0).</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="DistanceFromStop" type="DistanceType" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Distance of VEHICLE from stop of CALL as measured along ROUTE track. Only shown if detail level is 'calls' or higher. Positive value denotes distance before stop. +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Distance of VEHICLE from stop of CALL as measured along ROUTE track. Only shown if detail level is 'calls' or higher. Positive value denotes distance before stop. (since SIRI 2.0).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="NumberOfStopsAway" type="xsd:nonNegativeInteger" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Count of stops along SERVICE PATTERN between current position of VEHICLE and stop of CALL as measured along ROUTE track. Only shown if detail level is 'calls' or higher. +SIRI v2.0.</xsd:documentation>
+     <xsd:documentation>Count of stops along SERVICE PATTERN between current position of VEHICLE and stop of CALL as measured along ROUTE track. Only shown if detail level is 'calls' or higher. (since SIRI 2.0).</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -701,23 +701,23 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
   <xsd:sequence>
    <xsd:element name="PredictionLevel" type="QualityIndexEnumeration">
     <xsd:annotation>
-     <xsd:documentation>An approxiimate characterisation of prediction quality as one of five values. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>An approxiimate characterisation of prediction quality as one of five values. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:sequence minOccurs="0">
     <xsd:element name="Percentile" type="xsd:decimal" default="0.9" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Percentile associated with range as specified by lower and upper bound. +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Percentile associated with range as specified by lower and upper bound. (since SIRI 2.0)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="LowerTimeLimit" type="xsd:dateTime" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Lower bound on time of prediction for confidence level if different from defaults. +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Lower bound on time of prediction for confidence level if different from defaults. (since SIRI 2.0)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="HigherTimeLimit" type="xsd:dateTime" minOccurs="0">
      <xsd:annotation>
-      <xsd:documentation>Upper bound on time of prediction for confidence level if different from defaults. +SIRI v2.0</xsd:documentation>
+      <xsd:documentation>Upper bound on time of prediction for confidence level if different from defaults. (since SIRI 2.0)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:sequence>
@@ -726,23 +726,23 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  <!-- ========STOP ASSIGNMENT and dependencies=============================================================== -->
  <xsd:element name="AimedFlexibleArea" type="FlexibleAreaStructure">
   <xsd:annotation>
-   <xsd:documentation>Area that encompasses the scheduled flexible stop locations according to the planned timetable. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Area that encompasses the scheduled flexible stop locations according to the planned timetable. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="AimedFlexibleAreaRef" type="FlexibleAreaRefStructure">
   <xsd:annotation>
-   <xsd:documentation>Reference to the scheduled location or flexible area. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Reference to the scheduled location or flexible area. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="AimedLocationName" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>Name or description (e.g. address) of the scheduled location or flexible area. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Name or description (e.g. address) of the scheduled location or flexible area. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->
  <xsd:group name="FlexibleStopLocationGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for location of flexible stops or service that allows pickup anywhere in a designated area. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for location of flexible stops or service that allows pickup anywhere in a designated area. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="AimedFlexibleArea" minOccurs="0"/>
@@ -775,37 +775,37 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  <!-- ======================================================================= -->
  <xsd:group name="QuayAssignmentGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for assignment of a SCHEDULED STOP POINT to a specific QUAY or platform. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for assignment of a SCHEDULED STOP POINT to a specific QUAY or platform. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AimedQuayRef" type="QuayRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Physical QUAY to use according to the planned timetable. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Physical QUAY to use according to the planned timetable. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AimedQuayName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Scheduled Platform name. Can be used to indicate platfrom change. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Scheduled Platform name. Can be used to indicate platfrom change. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ExpectedQuayRef" type="QuayRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Physical QUAY to use according to the real-time prediction. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Physical QUAY to use according to the real-time prediction. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ExpectedQuayName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Expected Platform name. Can be used to indicate real-time prediction. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Expected Platform name. Can be used to indicate real-time prediction. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ActualQuayRef" type="QuayRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Physical QUAY actually used. +SIRI v2.0</xsd:documentation>
+     <xsd:documentation>Physical QUAY actually used. (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ActualQuayName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Actual Platform name. Can be used to indicate recorded platform. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Actual Platform name. Can be used to indicate recorded platform. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element ref="QuayType" minOccurs="0"/>
@@ -814,7 +814,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  <!-- ======================================================================= -->
  <xsd:group name="BoardingPositionAssignmentGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for assignment of a SCHEDULED STOP POINT to a specific BOARDING POSITION or location on a QUAY. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for assignment of a SCHEDULED STOP POINT to a specific BOARDING POSITION or location on a QUAY. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="AimedBoardingPositionRef" type="BoardingPositionRefStructure" minOccurs="0">
@@ -852,7 +852,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  <!-- ======================================================================= -->
  <xsd:complexType name="StopAssignmentStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a physical location, in particular to a QUAY or BOARDING POSITION. +SIRI v2.0.</xsd:documentation>
+   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a physical location, in particular to a QUAY or BOARDING POSITION. (since SIRI 2.0).</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
@@ -865,19 +865,19 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  <!-- ======================================================================= -->
  <xsd:complexType name="PlannedStopAssignmentStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a physical location, in particular to a QUAY or BOARDING POSITION, according to the planned timetable. +SIRI v2.0.</xsd:documentation>
+   <xsd:documentation>Type for assignment of a SCHEDULED STOP POINT to a physical location, in particular to a QUAY or BOARDING POSITION, according to the planned timetable. (since SIRI 2.0).</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
     <xsd:sequence>
      <xsd:element name="AimedQuayRef" type="QuayRefStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Physical QUAY to use according to the planned timetable. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Physical QUAY to use according to the planned timetable. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="AimedQuayName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Scheduled Platform name. +SIRI v2.0</xsd:documentation>
+       <xsd:documentation>Scheduled Platform name. (since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element ref="QuayType" minOccurs="0"/>
@@ -885,12 +885,12 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
 	<xsd:sequence>
      <xsd:element name="AimedBoardingPositionRef" type="BoardingPositionRefStructure" minOccurs="0">
       <xsd:annotation>
-       <xsd:documentation>Physical BOARDING POSITION to use according to the planned timetable. +SIRI v2.1</xsd:documentation>
+       <xsd:documentation>Physical BOARDING POSITION to use according to the planned timetable. (since SIRI 2.1)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
      <xsd:element name="AimedBoardingPositionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
-       <xsd:documentation>Scheduled BOARDING POSITION name. +SIRI v2.1</xsd:documentation>
+       <xsd:documentation>Scheduled BOARDING POSITION name. (since SIRI 2.1)</xsd:documentation>
       </xsd:annotation>
      </xsd:element>
 	</xsd:sequence>
@@ -904,7 +904,7 @@ To avoid this, the producer should transmit xxxPredictionUnknown instead of any 
  <xsd:element name="QuayType" type="TypeOfNestedQuayEnumeration">
   <xsd:annotation>
    <xsd:documentation>Indicates the type of a nested QUAY in case of detailed STOP PLACE models. 
-A QUAY may be part of a group of QUAYs, or may be divided into sectors, i.e., smaller sub-QUAYs. +SIRI v2.1</xsd:documentation>
+A QUAY may be part of a group of QUAYs, or may be divided into sectors, i.e., smaller sub-QUAYs. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->
@@ -916,7 +916,7 @@ If prediction is degraded, e.g. because of a situation, PredictionInaccurate is 
  </xsd:element>
  <xsd:element name="PredictionInaccurateReason" type="PredictionInaccurateReasonEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Can be used to inform the passenger about the reason for a change of the prediction (in)accuracy in case PredictionInaccurate is set to 'true'. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="Occupancy" type="OccupancyEnumeration">
@@ -948,12 +948,12 @@ Occupancies and capacities for individual VEHICLEs, e.g. parts of a COMPOUND TRA
  </xsd:element>
  <xsd:element name="ArrivalCancellationReason" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>Text annotation to be used in cases where ArrivalStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Text annotation to be used in cases where ArrivalStatus is set to 'cancelled'. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ArrivalProximityText" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>Arbitrary text string to show to indicate the status of the departure of the VEHICLE for example, “Enroute”, “5 Km”, “Approaching”. May depend on the policy of the OPERATOR, for example show “Approaching” if less than 200metres away from stop. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Arbitrary text string to show to indicate the status of the departure of the VEHICLE for example, “Enroute”, “5 Km”, “Approaching”. May depend on the policy of the OPERATOR, for example show “Approaching” if less than 200metres away from stop. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ArrivalPlatformName" type="NaturalLanguageStringStructure">
@@ -972,12 +972,12 @@ Inheritable property. Can be omitted if the same as the DeparturePlatformName If
  </xsd:element>
  <xsd:element name="ArrivalFormationAssignment" type="FormationAssignmentStructure">
   <xsd:annotation>
-   <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). If not given, assume same as for departure. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). If not given, assume same as for departure. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ArrivalOrientationRelativeToQuay" type="VehicleOrientationRelativeToQuay">
   <xsd:annotation>
-   <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. Unbounded to allow multiple languages. +SIRI v2.1
+   <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. Unbounded to allow multiple languages. (since SIRI 2.1)
 Examples:
 - "towards A" or "towards sector A" if the QUAY is separated into sub-QUAYs or so called sectors. This would be equivalent to the vehicle arriving at sector A first when approaching the QUAY with sectors A-B-C-D. If the arriving vehicle is represented as an arrow, "towards A" would be abstracted as "=&gt; A-B-C-D".
 - "towards 0" or "towards reference point 0" if sectors are not available or the QUAY has a reference point, e.g. for measuring the length of the QUAY, identified by "0". This would be equivalent to the vehicle arriving at this reference point first when approaching the QUAY. If the arriving vehicle is represented as an arrow, "towards 0" would be abstracted as "=&gt; 0...100". "100" (as in percent) could denote the opposite side of the QUAY (measured at the full length of the QUAY with respect to the reference point).
@@ -987,7 +987,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:element>
  <xsd:element name="ArrivalOperatorRefs" type="OperatorRefStructure">
   <xsd:annotation>
-   <xsd:documentation>OPERATORs of of service up until arrival. May change for departure. +SIRI v2.0.</xsd:documentation>
+   <xsd:documentation>OPERATORs of of service up until arrival. May change for departure. (since SIRI 2.0).</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->
@@ -1021,12 +1021,12 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:element>
  <xsd:element name="AimedLatestPassengerAccessTime" type="xsd:dateTime">
   <xsd:annotation>
-   <xsd:documentation>Latest target time at which a PASSENGER should aim to arrive at the STOP PLACE containing the stop. This time may be earlier than the VEHICLE departure times and may include time for processes such as checkin, security, etc.(As specified by CHECK CONSTRAINT DELAYs in the underlying data). If absent assume to be the same as Earliest expected departure time. +SIRI 2.0</xsd:documentation>
+   <xsd:documentation>Latest target time at which a PASSENGER should aim to arrive at the STOP PLACE containing the stop. This time may be earlier than the VEHICLE departure times and may include time for processes such as checkin, security, etc.(As specified by CHECK CONSTRAINT DELAYs in the underlying data). If absent assume to be the same as Earliest expected departure time. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ExpectedLatestPassengerAccessTime" type="xsd:dateTime">
   <xsd:annotation>
-   <xsd:documentation>Latest expected time at which a PASSENGER should aim to arrive at the STOP PLACE containing the stop. This time may be earlier than the VEHICLE departure times and may include time for processes such as checkin, security, etc.(As specified by CHECK CONSTRAINT DELAYs in the underlying data). If absent assume to be the same as Earliest expected departure time. +SIRI 2.0</xsd:documentation>
+   <xsd:documentation>Latest expected time at which a PASSENGER should aim to arrive at the STOP PLACE containing the stop. This time may be earlier than the VEHICLE departure times and may include time for processes such as checkin, security, etc.(As specified by CHECK CONSTRAINT DELAYs in the underlying data). If absent assume to be the same as Earliest expected departure time. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DepartureStatus" type="CallStatusEnumeration">
@@ -1036,12 +1036,12 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:element>
  <xsd:element name="DepartureCancellationReason" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>Text annotation to be used in cases where DepartureStatus is set to 'cancelled'. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Text annotation to be used in cases where DepartureStatus is set to 'cancelled'. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DepartureProximityText" type="NaturalLanguageStringStructure">
   <xsd:annotation>
-   <xsd:documentation>Arbitrary text string to show to indicate the status of the departure of the vehicle, for example, “Boarding”, “GatesClosed”. +SIRI v2.0</xsd:documentation>
+   <xsd:documentation>Arbitrary text string to show to indicate the status of the departure of the vehicle, for example, “Boarding”, “GatesClosed”. (since SIRI 2.0)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DeparturePlatformName" type="NaturalLanguageStringStructure">
@@ -1056,12 +1056,12 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:element>
  <xsd:element name="DepartureFormationAssignment" type="FormationAssignmentStructure">
   <xsd:annotation>
-   <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Assignment of a TRAIN formation to a physical QUAY (platform or sectors thereof). (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DepartureOrientationRelativeToQuay" type="VehicleOrientationRelativeToQuay">
   <xsd:annotation>
-   <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. Unbounded to allow multiple languages. +SIRI v2.1
+   <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. Unbounded to allow multiple languages. (since SIRI 2.1)
 Examples:
 - "towards A" or "towards sector A" if the QUAY is separated into sub-QUAYs or so called sectors. This would be equivalent to the vehicle departing in the direction of sector A on a QUAY with sectors A-B-C-D. If the departing vehicle is represented as an arrow, "towards A" would be abstracted as "&lt;= A-B-C-D".
 - "towards 0" or "towards reference point 0" if sectors are not available or the QUAY has a reference point, e.g. for measuring the length of the QUAY, identified by "0". This would be equivalent to the vehicle departing in the direction of this reference point. If the departing vehicle is represented as an arrow, "towards 0" would be abstracted as "&lt;= 0...100". "100" (as in percent) could denote the opposite side of the QUAY (measured at the full length of the QUAY with respect to the reference point).
@@ -1070,27 +1070,27 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:element>
  <xsd:element name="ExpectedDepartureOccupancy" type="VehicleOccupancyStructure">
   <xsd:annotation>
-   <xsd:documentation>Expected/Predicted real-time occupancies of a VEHICLE and reservations after departing from a given stop. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Expected/Predicted real-time occupancies of a VEHICLE and reservations after departing from a given stop. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="ExpectedDepartureCapacities" type="PassengerCapacityStructure">
   <xsd:annotation>
-   <xsd:documentation>Expected/Predicted real-time capacities (number of available seats) of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Expected/Predicted real-time capacities (number of available seats) of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="RecordedDepartureOccupancy" type="VehicleOccupancyStructure">
   <xsd:annotation>
-   <xsd:documentation>Actually recorded/counted occupancies of a VEHICLE and reserved seats after departing from a given stop. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Actually recorded/counted occupancies of a VEHICLE and reserved seats after departing from a given stop. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="RecordedDepartureCapacities" type="PassengerCapacityStructure">
   <xsd:annotation>
-   <xsd:documentation>Actually recorded/counted capacities of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Actually recorded/counted capacities of a VEHICLE after departing from a given stop. Alternative way to communicate occupancy measurements. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="DepartureOperatorRefs" type="OperatorRefStructure">
   <xsd:annotation>
-   <xsd:documentation>OPERATORs of service for departure and onwards. May change from that for arrival. +SIRI v2.0.</xsd:documentation>
+   <xsd:documentation>OPERATORs of service for departure and onwards. May change from that for arrival. (since SIRI 2.0).</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->
@@ -1134,7 +1134,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
  <!-- =====JourneyRelation================================================== -->
  <xsd:complexType name="JourneyRelationsStructure">
   <xsd:annotation>
-   <xsd:documentation>Provides information about relations to other journeys. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Provides information about relations to other journeys. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="JourneyRelation" type="JourneyRelationStructure" maxOccurs="unbounded"/>
@@ -1144,7 +1144,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
   <xsd:sequence>
    <xsd:element name="JourneyRelationType" type="JourneyRelationTypeEnumeration">
     <xsd:annotation>
-     <xsd:documentation>Specifies the type of the relation, e.g., joining, splitting, replacement etc. +SIRI v2.1</xsd:documentation>
+     <xsd:documentation>Specifies the type of the relation, e.g., joining, splitting, replacement etc. (since SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="JourneyRelationInfoGroup"/>
@@ -1153,24 +1153,24 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:complexType>
  <xsd:group name="JourneyRelationInfoGroup">
   <xsd:annotation>
-   <xsd:documentation>Specifies which CALL or JOURNEY PART of the JOURNEY has a JOURNEY RELATION. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Specifies which CALL or JOURNEY PART of the JOURNEY has a JOURNEY RELATION. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:choice>
     <xsd:element name="CallInfo" type="RelatedCallStructure">
      <xsd:annotation>
-      <xsd:documentation>Information about the stop at which the JOURNEY is related to another JOURNEY. +SIRI v2.1</xsd:documentation>
+      <xsd:documentation>Information about the stop at which the JOURNEY is related to another JOURNEY. (since SIRI 2.1)</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="JourneyParts">
      <xsd:annotation>
-      <xsd:documentation>Information about the JOURNEY PARTs for which the JOURNEY has a JOURNEY RELATION. +SIRI v2.1</xsd:documentation>
+      <xsd:documentation>Information about the JOURNEY PARTs for which the JOURNEY has a JOURNEY RELATION. (since SIRI 2.1)</xsd:documentation>
      </xsd:annotation>
      <xsd:complexType>
       <xsd:sequence>
        <xsd:element name="JourneyPartInfo" type="RelatedJourneyPartStructure" maxOccurs="unbounded">
         <xsd:annotation>
-         <xsd:documentation>Information about related parts of JOURNEY. +SIRI v2.1</xsd:documentation>
+         <xsd:documentation>Information about related parts of JOURNEY. (since SIRI 2.1)</xsd:documentation>
         </xsd:annotation>
        </xsd:element>
       </xsd:sequence>
@@ -1181,7 +1181,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:group>
  <xsd:complexType name="RelatedCallStructure">
   <xsd:annotation>
-   <xsd:documentation>The JOURNEY RELATION refers to this CALL. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>The JOURNEY RELATION refers to this CALL. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="AbstractCallStructure">
@@ -1194,7 +1194,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:complexType>
  <xsd:complexType name="RelatedJourneyPartStructure">
   <xsd:annotation>
-   <xsd:documentation>The JOURNEY RELATION refers to this JOURNEY PART. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>The JOURNEY RELATION refers to this JOURNEY PART. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:complexContent>
    <xsd:extension base="JourneyPartInfoStructure"/>
@@ -1202,7 +1202,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:complexType>
  <xsd:element name="RelatedJourney" type="RelatedJourneyStructure">
   <xsd:annotation>
-   <xsd:documentation>Refers to the JOURNEY to which the current JOURNEY is related. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Refers to the JOURNEY to which the current JOURNEY is related. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="RelatedJourneyStructure">
@@ -1219,7 +1219,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
   <xsd:annotation>
    <xsd:documentation>Groups relevant elements of the formation model that are used on JOURNEY level. 
 The TRAIN conceptual model represents VEHICLE TYPE properties that are peculiar to TRAINs. A TRAIN may comprise not just a single VEHICLE but a chain of carriages, TRAIN ELEMENTS, assembled as TRAIN COMPONENTs. 
-Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN made up of multiple TRAIN IN COMPOUND TRAIN, for example in a train that joins or splits. +SIRI v2.1</xsd:documentation>
+Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN made up of multiple TRAIN IN COMPOUND TRAIN, for example in a train that joins or splits. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainElements" minOccurs="0">
@@ -1250,7 +1250,7 @@ Groups of carriages may be managed as sections by composing TRAINs into a COMPOU
  </xsd:group>
  <xsd:complexType name="VehicleOrientationRelativeToQuay">
   <xsd:annotation>
-   <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. +SIRI v2.1
+   <xsd:documentation>Indication of the direction of travel of the vehicle (e.g. TRAIN formation) with respect to the platform, or more precisely the QUAY. (since SIRI 2.1)
 Examples:
 - "towards A" or "towards sector A" if the QUAY is separated into sub-QUAYs or so called sectors. This would be equivalent to the vehicle arriving or departing in the direction of sector A on a QUAY with sectors A-B-C-D. If the arriving vehicle is represented as an arrow, "towards A" would be abstracted as "=&gt; A-B-C-D". If the departing vehicle is represented as an arrow, "towards A" would be abstracted as "&lt;= A-B-C-D".
 - "towards 0" or "towards reference point 0" if sectors are not available or the QUAY has a reference point, e.g. for measuring the length of the QUAY, identified by "0". This would be equivalent to the vehicle arriving or departing in the direction of this reference point. If the arriving vehicle is represented as an arrow, "towards 0" would be abstracted as "=&gt; 0...100". "100" (as in percent) could denote the opposite side of the QUAY (measured at the full length of the QUAY with respect to the reference point). If the departing vehicle is represented as an arrow, "towards 0" would be abstracted as "&lt;= 0...100".
@@ -1262,7 +1262,7 @@ It is advised to specify a reference point that is meaningful for passengers on 
  </xsd:complexType>
  <xsd:complexType name="FormationAssignmentStructure">
   <xsd:annotation>
-   <xsd:documentation>Assignment of the arrival/departure of a VEHICLE within a formation, e.g. carriage in a TRAIN composition, to a physical QUAY or nested QUAY (i.e. platform or sector of a platform). +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Assignment of the arrival/departure of a VEHICLE within a formation, e.g. carriage in a TRAIN composition, to a physical QUAY or nested QUAY (i.e. platform or sector of a platform). (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="TrainFormationReferenceGroup"/>
@@ -1281,12 +1281,12 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
  </xsd:complexType>
  <xsd:element name="FormationCondition" type="FormationConditionStructure">
   <xsd:annotation>
-   <xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="FormationConditionStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for FORMATION CONDITION. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for FORMATION CONDITION. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
@@ -1339,7 +1339,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
  </xsd:complexType>
  <xsd:group name="FormationStatusInfoGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for FormationStatus that further describe the status of the formation, e.g. whether the accessibility has changed. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for FormationStatus that further describe the status of the formation, e.g. whether the accessibility has changed. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1373,10 +1373,10 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
    <xsd:element ref="Extensions" minOccurs="0"/>
   </xsd:sequence>
  </xsd:complexType>
- <!-- ===== Detailed occupancies/capacities for use on CALL level. +SIRI v2.1 ============================================ -->
+ <!-- ===== Detailed occupancies/capacities for use on CALL level. (since SIRI 2.1) ============================================ -->
  <xsd:group name="PassengerCapacityGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for a PASSENGER CAPACITY. Used to indicate the maximum capacities of a TRAIN ELEMENT or the estimated/recorded capacities of a VEHICLE at a given stop, i.e., the number of seats available. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for a PASSENGER CAPACITY. Used to indicate the maximum capacities of a TRAIN ELEMENT or the estimated/recorded capacities of a VEHICLE at a given stop, i.e., the number of seats available. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TotalCapacity" type="NumberOfPassengers" minOccurs="0">
@@ -1423,7 +1423,7 @@ If a QUAY is divided into sub-QUAYs or sectors (with the help of STOP ASSIGNMENT
  </xsd:group>
  <xsd:group name="OccupancyScopeFilterGroup">
   <xsd:annotation>
-   <xsd:documentation>The intersection of supplied elements describes the extent that the Occupancy values applies to. +SIRI v2.1
+   <xsd:documentation>The intersection of supplied elements describes the extent that the Occupancy values applies to. (since SIRI 2.1)
 Only vehicle-centric filter (measurement in a part or at an entrance of a TRAIN) are available here, but a stop-centric filtering (measurement in a sector or at a position on a QUAY) can be achieved indirectly via Arrival-/DepartureFormationAssignment.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
@@ -1442,7 +1442,7 @@ Only vehicle-centric filter (measurement in a part or at an entrance of a TRAIN)
  </xsd:group>
  <xsd:group name="OccupancyValuesGroup">
   <xsd:annotation>
-   <xsd:documentation>Occupancy values applying to indicated scope. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Occupancy values applying to indicated scope. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="OccupancyLevel" type="OccupancyEnumeration" minOccurs="0">
@@ -1500,7 +1500,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:group>
  <xsd:complexType name="GroupReservationStructure">
   <xsd:annotation>
-   <xsd:documentation>Used to specify that a travel group has booked a section of the vehicle for a part of the journey, and if so under what name. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Used to specify that a travel group has booked a section of the vehicle for a part of the journey, and if so under what name. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="NameOfGroup" type="NaturalLanguageStringStructure">
@@ -1517,7 +1517,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:complexType>
  <xsd:complexType name="VehicleOccupancyStructure">
   <xsd:annotation>
-   <xsd:documentation>Real-time occupancies of a VEHICLE (by fare class). Could be feedback from an automatic passenger counting system (APC) or estimated values from statistics. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Real-time occupancies of a VEHICLE (by fare class). Could be feedback from an automatic passenger counting system (APC) or estimated values from statistics. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="OccupancyScopeFilterGroup"/>
@@ -1536,22 +1536,22 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:complexType>
  <xsd:complexType name="PassengerCapacityStructure">
   <xsd:annotation>
-   <xsd:documentation>Real-time capacities of a VEHICLE (by fare class), i.e., number of available seats. Alternative way to communicate occupancy measurements. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Real-time capacities of a VEHICLE (by fare class), i.e., number of available seats. Alternative way to communicate occupancy measurements. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="OccupancyScopeFilterGroup"/>
    <xsd:group ref="PassengerCapacityGroup"/>
   </xsd:sequence>
  </xsd:complexType>
- <!-- ===== NeTEx TrainElement: corresponds to VDV454 FoFahrzeuge. +SIRI v2.1 ============================================ -->
+ <!-- ===== NeTEx TrainElement: corresponds to VDV454 FoFahrzeuge. (since SIRI 2.1) ============================================ -->
  <xsd:element name="TrainElement" type="TrainElementStructure">
   <xsd:annotation>
-   <xsd:documentation>An elementary component of a TRAIN, e.g. wagon or locomotive. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>An elementary component of a TRAIN, e.g. wagon or locomotive. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="TrainElementStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for TRAIN ELEMENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainElementCode" type="TrainElementCodeType">
@@ -1565,7 +1565,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:complexType>
  <xsd:group name="TrainElementGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for a TRAIN ELEMENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for a TRAIN ELEMENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainElementType" type="TrainElementTypeEnumeration" minOccurs="0">
@@ -1581,15 +1581,15 @@ More accurate data can be provided by the individual occupancies or capacities b
    <xsd:element ref="FareClasses" minOccurs="0"/>
   </xsd:sequence>
  </xsd:group>
- <!-- ===== NeTEx TrainComponent: corresponds to VDV454 FoFahrzeugPosition. +SIRI v2.1 ============================================ -->
+ <!-- ===== NeTEx TrainComponent: corresponds to VDV454 FoFahrzeugPosition. (since SIRI 2.1) ============================================ -->
  <xsd:element name="TrainComponent" type="TrainComponentStructure">
   <xsd:annotation>
-   <xsd:documentation>Specifies the order of a certain TRAIN ELEMENT within a TRAIN and how the TRAIN ELEMENT is labeled in that context. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Specifies the order of a certain TRAIN ELEMENT within a TRAIN and how the TRAIN ELEMENT is labeled in that context. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="TrainComponentStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for TRAIN COMPONENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainComponentCode" type="TrainComponentCodeType" minOccurs="0">
@@ -1607,7 +1607,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:complexType>
  <xsd:group name="TrainComponentGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for a TRAIN COMPONENT. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for a TRAIN COMPONENT. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
@@ -1631,15 +1631,15 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <!-- ===== NeTEx Train: corresponds to VDV454 FoFahrzeugGruppe. +SIRI v2.1 ============================================ -->
+ <!-- ===== NeTEx Train: corresponds to VDV454 FoFahrzeugGruppe. (since SIRI 2.1) ============================================ -->
  <xsd:element name="Train" type="TrainStructure">
   <xsd:annotation>
-   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs assembled in a certain order (so called TRAIN COMPONENTs), i.e. wagons assembled together and propelled by a locomotive or one of the wagons. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>A vehicle composed of TRAIN ELEMENTs assembled in a certain order (so called TRAIN COMPONENTs), i.e. wagons assembled together and propelled by a locomotive or one of the wagons. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="TrainStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainCode" type="TrainCodeType" minOccurs="0">
@@ -1653,7 +1653,7 @@ More accurate data can be provided by the individual occupancies or capacities b
  </xsd:complexType>
  <xsd:group name="TrainGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="NumberOfCars" type="xsd:nonNegativeInteger" minOccurs="0">
@@ -1679,16 +1679,16 @@ More accurate data can be provided by the individual occupancies or capacities b
    </xsd:element>
   </xsd:sequence>
  </xsd:group>
- <!-- ===== NeTEx CompoundTrain: corresonds to VDV454 FoFahrzeugGruppenFahrtAbschnitt when combined with CompoundTrainRef in JourneyPartInfo. +SIRI v2.1 =========================== -->
+ <!-- ===== NeTEx CompoundTrain: corresonds to VDV454 FoFahrzeugGruppenFahrtAbschnitt when combined with CompoundTrainRef in JourneyPartInfo. (since SIRI 2.1) =========================== -->
  <xsd:element name="CompoundTrain" type="CompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN, for example if a TRAIN joins (or splits from) another TRAIN. +SIRI v2.1
+   <xsd:documentation>Groups of carriages may be managed as sections by composing TRAINs into a COMPOUND TRAIN, for example if a TRAIN joins (or splits from) another TRAIN. (since SIRI 2.1)
 TRAINs within a COMPOUND TRAIN may have different origins and destinations due to joining/splitting. A COMPOUND TRAIN may be stable for one or multiple JOURNEY PARTs and change at a certain STOP POINT due to planned joining/splitting, despatching alterations or a situation.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="CompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for COMPOUND TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="CompoundTrainCode" type="CompoundTrainCodeType" minOccurs="0">
@@ -1712,12 +1712,12 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
  </xsd:complexType>
  <xsd:element name="TrainInCompoundTrain" type="TrainInCompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>Specifies the order of a certain TRAIN within a COMPOUND TRAIN and how the TRAIN is labeled in that context. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Specifies the order of a certain TRAIN within a COMPOUND TRAIN and how the TRAIN is labeled in that context. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="TrainInCompoundTrainStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Type for a TRAIN IN COMPOUND TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="TrainInCompoundTrainCode" type="TrainInCompoundTrainCodeType" minOccurs="0">
@@ -1735,7 +1735,7 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
  </xsd:complexType>
  <xsd:group name="TrainInCompoundTrainGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for a TRAIN IN COMPOUND TRAIN. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for a TRAIN IN COMPOUND TRAIN. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0">
@@ -1772,7 +1772,7 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
  </xsd:group>
  <xsd:complexType name="PassageBetweenTrainsStructure">
   <xsd:annotation>
-   <xsd:documentation>Indicates whether passengers have access to adjacent TRAINs or TRAIN COMPONENTs within a COMPOUND TRAIN, i.e., whether passage between those wagons/coaches is possible. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Indicates whether passengers have access to adjacent TRAINs or TRAIN COMPONENTs within a COMPOUND TRAIN, i.e., whether passage between those wagons/coaches is possible. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="TrainRef"/>
@@ -1780,10 +1780,10 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
    <xsd:element name="PassageIsPossible" type="xsd:boolean"/>
   </xsd:sequence>
  </xsd:complexType>
- <!-- ===== Various NeTEx property groups needed for the train formation model. +SIRI v2.1 ============================================ -->
+ <!-- ===== Various NeTEx property groups needed for the train formation model. (since SIRI 2.1) ============================================ -->
  <xsd:group name="VehicleTypeGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements for a VEHICLE TYPE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements for a VEHICLE TYPE. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
@@ -1821,7 +1821,7 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
  </xsd:group>
  <xsd:group name="VehicleTypePropertiesGroup">
   <xsd:annotation>
-   <xsd:documentation>Property elements for the abstract VEHICLE TYPE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Property elements for the abstract VEHICLE TYPE. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="ReversingDirection" type="xsd:boolean" default="true" minOccurs="0">
@@ -1860,7 +1860,7 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
  </xsd:group>
  <xsd:group name="VehicleAccessibilityRequirementsGroup">
   <xsd:annotation>
-   <xsd:documentation>Elements specifying Requirement properties of VEHICLE TYPE. Vehicle should satisfy these requirements. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Elements specifying Requirement properties of VEHICLE TYPE. Vehicle should satisfy these requirements. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="LowFloor" type="xsd:boolean" minOccurs="0">
@@ -1882,7 +1882,7 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
  </xsd:group>
  <xsd:group name="VehicleDimensionsGroup">
   <xsd:annotation>
-   <xsd:documentation>Dimension elements for a VEHICLE TYPE. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Dimension elements for a VEHICLE TYPE. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Length" type="LengthType" minOccurs="0">

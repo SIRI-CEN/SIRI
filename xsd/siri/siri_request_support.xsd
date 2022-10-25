@@ -155,17 +155,17 @@ Where multiple values are returned The first element returned will be used as th
  </xsd:element>
  <xsd:element name="IncludeInterchanges" type="xsd:boolean" default="true">
   <xsd:annotation>
-   <xsd:documentation>Whether SERVICE JOURNEY INTERCHANGE data is to be transmitted or not. Default is 'true'. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Whether SERVICE JOURNEY INTERCHANGE data is to be transmitted or not. Default is 'true'. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="IncludeJourneyRelations" type="xsd:boolean" default="true">
   <xsd:annotation>
-   <xsd:documentation>Whether JOURNEY RELATION data is to be transmitted or not. Default is 'true'. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Whether JOURNEY RELATION data is to be transmitted or not. Default is 'true'. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:element name="IncludeTrainFormations" type="xsd:boolean" default="true">
   <xsd:annotation>
-   <xsd:documentation>Whether TRAIN (ELEMENT), COMPOUND TRAIN and TRAIN STOP ASSIGNMENT data is to be transmitted or not. Default is 'true'. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Whether TRAIN (ELEMENT), COMPOUND TRAIN and TRAIN STOP ASSIGNMENT data is to be transmitted or not. Default is 'true'. (since SIRI 2.1)</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <!-- ======================================================================= -->
