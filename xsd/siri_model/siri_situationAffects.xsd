@@ -206,7 +206,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="Lines" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Used to restrict stop points to some lines. DEPRECATED since SIRI 2.1</xsd:documentation>
+     <xsd:documentation>Used to restrict stop points to some lines.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -1208,7 +1208,7 @@ Rail transport, Roads and road transport
    <xsd:sequence>
    <xsd:element name="Lines" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Used to restrict STOP PLACEs to some lines. DEPRECATED since SIRI 2.1</xsd:documentation>
+     <xsd:documentation>Used to restrict STOP PLACEs to some lines.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
