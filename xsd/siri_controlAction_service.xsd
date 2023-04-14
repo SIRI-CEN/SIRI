@@ -333,11 +333,7 @@ If false each subscription response will contain the full information as specifi
 	</xsd:complexType>
 	<xsd:group name="MasterRef">
 		<xsd:choice>
-			<xsd:element name="MasterControlCaseRef" type="ItemRefStructure">
-				<xsd:annotation>
-					<xsd:documentation>The MasterRef may be the value of a certain "master" Control Action or a separate value related to a certain Situation</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:element name="MasterControlCaseRef" type="ControlActionRefStructure"/>
 			<xsd:element ref="SituationRef"/>
 		</xsd:choice>
 	</xsd:group>
@@ -430,11 +426,18 @@ If false each subscription response will contain the full information as specifi
 							</xsd:annotation>
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element ref="ControlActionRef">
-										<xsd:annotation>
-											<xsd:documentation>Control Action Code</xsd:documentation>
-										</xsd:annotation>
-									</xsd:element>
+									<xsd:choice>
+										<xsd:element ref="ControlActionRef">
+											<xsd:annotation>
+												<xsd:documentation>Control Action Code</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ItemIdentifierRef" type="ItemRefStructure">
+											<xsd:annotation>
+												<xsd:documentation>Itemidentifier of an update of the ControlAction (only that update is revoked)</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
 									<xsd:element name="RevokedFromDateTime" type="xsd:dateTime" minOccurs="0">
 										<xsd:annotation>
 											<xsd:documentation>Time at which the ControlAction has been revoke, or will be revoked.</xsd:documentation>
@@ -1757,7 +1760,6 @@ Default is true</xsd:documentation>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	-->
-	
 	<!--Ressource types from RII-SharedTypes -->
 	<!--  -->
 	<xsd:simpleType name="ChangeModelEnumeration">
