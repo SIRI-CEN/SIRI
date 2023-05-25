@@ -72,15 +72,11 @@ Rail transport, Roads and road transport
   </xsd:appinfo>
   <xsd:documentation>SIRI-FM Facility Monitoring Service.</xsd:documentation>
  </xsd:annotation>
- <!-- ===Global import of all IFOPT namespace elements used in SIRI needed to work around XERCES limitation=====-->
+ <!-- ======================================================================= -->
+ <!-- Global import of all IFOPT namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
  <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop.xsd"/>
- <!--.....See facility for the actual dependencies...-->
- <!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation This needs to be after ifopt=====-->
+ <!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
- <!--.....These are the actual dependencies...-->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_accessibility.xsd"/>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_model/siri_facility.xsd"/>
  <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
