@@ -1,56 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_feature">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2012-03-23</Created>
-    </Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
-     <!-- Revise to support substitution groups
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2012-03-23</Created>
+				</Date>
+				<Date>
+					<Modified>2008-11-17</Modified>
+					<!-- Revise to support substitution groups
 		  Correct Type on VEHICLE features delivery structure -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- SIRI v2.0
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- SIRI v2.0
 		  Factored out from siri_discovery
 		  Make Product category icon optional -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
-     <p>This subschema describes  soem code value  models used by different SIRI functional services
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
+					<p>This subschema describes  soem code value  models used by different SIRI functional services
      <ul><li>SERVICE FEATURE discovery</li><li>TYPE OF PRODUCT CATEGORY Discovery</li></ul>
 					</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_discovery.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_discovery.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Discovery services Derived from the NaPTAN standard .</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Discovery services Derived from the NaPTAN standard .</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -58,101 +59,101 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI_DS XML schema. Service Interface for Real-time  Information. Discovery subschema. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI  subschema with view of  classifiers for use in Discovery service</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="../siri_model/siri_feature_support.xsd"/>
- <xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
- <!-- ======================================================================= -->
- <!-- ======================================================================= -->
- <!-- ==== PRODUCT CATE GOIRY =================================================== -->
- <xsd:element name="ProductCategory" type="ProductCategoryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Category for classification of a journey as a Product </xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ProductCategoryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for TYPE OF PRODUCT CATEGORY description.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ProductCategoryCode" type="ProductCategoryCodeType">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of TYPE OF PRODUCT CATEGORY classification. SIRI provides a recommended set of values covering most usages, intended to be TPEG compatible. See the SIRI facilities packaged.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Name" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of classification  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Icon" type="xsd:anyURI" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Icon used to represent TYPE OF PRODUCT CATEGORY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- =====SERVICE FEATURE =========================================== -->
- <xsd:element name="ServiceFeature" type="ServiceFeatureStructure">
-  <xsd:annotation>
-   <xsd:documentation>Service Feature description. </xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ServiceFeatureStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Service Feature description.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ServiceFeatureCode" type="ServiceFeatureCodeType">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of classification. SIRI provides a recommended set of values covering most usages, intended to be TPEG compatible. See the SIRI facilities packaged.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Name" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of classification.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Icon" type="xsd:anyURI">
-    <xsd:annotation>
-     <xsd:documentation>Icon associated with feature.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ====VEHICLE FEATURE =========================================== -->
- <xsd:element name="VehicleFeature" type="VehicleFeaturesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Vehicle Feature description.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="VehicleFeaturesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for description of feature of VEHICLE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="VehicleFeatureCode" type="VehicleFeatureCodeType">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of feature of VEHICLE. SIRI provides a recommended set of values covering most usages, intended to be TPEG compatible. See the SIRI facilities packaged.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Name" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of feature of VEHICLE.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Icon" type="xsd:anyURI">
-    <xsd:annotation>
-     <xsd:documentation>Icon used to represent feature of VEHICLE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI_DS XML schema. Service Interface for Real-time  Information. Discovery subschema. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI  subschema with view of  classifiers for use in Discovery service</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_model/siri_feature_support.xsd"/>
+	<xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
+	<!-- ======================================================================= -->
+	<!-- ======================================================================= -->
+	<!-- ==== PRODUCT CATE GOIRY =================================================== -->
+	<xsd:element name="ProductCategory" type="ProductCategoryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Category for classification of a journey as a Product </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ProductCategoryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for TYPE OF PRODUCT CATEGORY description.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ProductCategoryCode" type="ProductCategoryCodeType">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of TYPE OF PRODUCT CATEGORY classification. SIRI provides a recommended set of values covering most usages, intended to be TPEG compatible. See the SIRI facilities packaged.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Name" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of classification  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Icon" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Icon used to represent TYPE OF PRODUCT CATEGORY.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- =====SERVICE FEATURE =========================================== -->
+	<xsd:element name="ServiceFeature" type="ServiceFeatureStructure">
+		<xsd:annotation>
+			<xsd:documentation>Service Feature description. </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ServiceFeatureStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Service Feature description.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ServiceFeatureCode" type="ServiceFeatureCodeType">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of classification. SIRI provides a recommended set of values covering most usages, intended to be TPEG compatible. See the SIRI facilities packaged.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Name" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of classification.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Icon" type="xsd:anyURI">
+				<xsd:annotation>
+					<xsd:documentation>Icon associated with feature.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ====VEHICLE FEATURE =========================================== -->
+	<xsd:element name="VehicleFeature" type="VehicleFeaturesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Vehicle Feature description.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="VehicleFeaturesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for description of feature of VEHICLE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="VehicleFeatureCode" type="VehicleFeatureCodeType">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of feature of VEHICLE. SIRI provides a recommended set of values covering most usages, intended to be TPEG compatible. See the SIRI facilities packaged.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Name" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of feature of VEHICLE.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Icon" type="xsd:anyURI">
+				<xsd:annotation>
+					<xsd:documentation>Icon used to represent feature of VEHICLE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
 </xsd:schema>

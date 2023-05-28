@@ -1,66 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_stopPoint">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2012-03-23</Created>
-    </Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
-     <!-- Revise to support substitution groups
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2012-03-23</Created>
+				</Date>
+				<Date>
+					<Modified>2008-11-17</Modified>
+					<!-- Revise to support substitution groups
 		  Correct Type on VEHICLE features delivery structure -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- SIRI v2.0
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- SIRI v2.0
 		  Factored out from siri_discovery -->
-    </Date>
-    <Date>
-     <Modified>2012-05-10</Modified>
-     <!-- SIRI v2.0
+				</Date>
+				<Date>
+					<Modified>2012-05-10</Modified>
+					<!-- SIRI v2.0
 		  [MTA]  Add stops and line shape
 		  [General] Add Extensiosn tag to Lines response -->
-    </Date>
-    <Date>
-     <Modified>2012-06-12</Modified>
-     <!-- SIRI v2.0
+				</Date>
+				<Date>
+					<Modified>2012-06-12</Modified>
+					<!-- SIRI v2.0
 		  [MTA]  Add Direction to Line  destination -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
-     <p>This subschema describes  soem code value  models used by different SIRI functional services
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
+					<p>This subschema describes  soem code value  models used by different SIRI functional services
      <ul><li>Service Feature discovery</li><li>TYPE OF PRODUCT CATEGORY Discovery</li></ul>
 					</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_discovery.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_discovery.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Discovery services Derived from the NaPTAN standard .</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Discovery services Derived from the NaPTAN standard .</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -68,174 +69,174 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI_DS XML schema. Service Interface for Real-time  Information. Stop Discovery subschema. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI subschema with view of  LINE for use in Discovery service</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="../siri_model/siri_journey.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_stop.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_location.xsd"/>
- <xsd:include schemaLocation="siri_stopPoint.xsd"/>
- <!-- ======================================================================= -->
- <!-- === LINE =================================================== -->
- <xsd:element name="AnnotatedLineRef" type="AnnotatedLineStructure">
-  <xsd:annotation>
-   <xsd:documentation>Information about LINEs covered by server.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="AnnotatedLineStructure">
-  <xsd:annotation>
-   <xsd:documentation>Summary information about a LINE type.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="LineRef" type="LineRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of LINE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="LineName" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of LINE. (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the LINE has real-time info. Default is 'true'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Destinations" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>DESTINATIONs to which the LINE runs. Detail level is 'normal'</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element ref="Destination" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Directions" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>DIRECTIONs and Stops for the LINE. 'normal'</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Direction" type="RouteDirectionStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Directions of Route</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="RouteDirectionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Summary information about a  Direction of a Line</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="DirectionStructure">
-    <xsd:sequence>
-     <xsd:element name="JourneyPatterns" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>JourneyPatterns in  Direction of route (since SIRI 2.0)</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="JourneyPattern" maxOccurs="unbounded">
-         <xsd:annotation>
-          <xsd:documentation>JourneyPattern. (since SIRI 2.0)</xsd:documentation>
-         </xsd:annotation>
-         <xsd:complexType>
-          <xsd:sequence>
-           <xsd:element ref="JourneyPatternRef" minOccurs="0"/>
-           <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-             <xsd:documentation>Name Of Journety Pattern (SIRI 2.0)</xsd:documentation>
-            </xsd:annotation>
-           </xsd:element>
-           <xsd:element name="StopsInPattern" minOccurs="0">
-            <xsd:annotation>
-             <xsd:documentation>Ordered collection of STOP POINTs the LINE and direction . Detail level is  'stops'. (since SIRI 2.0) </xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-             <xsd:sequence>
-              <xsd:element name="StopPointInPattern" type="StopPointInPatternStructure" minOccurs="2" maxOccurs="unbounded">
-               <xsd:annotation>
-                <xsd:documentation>Stop within Route of LINE. Detail level is 'stop' (since SIRI 2.0) </xsd:documentation>
-               </xsd:annotation>
-              </xsd:element>
-             </xsd:sequence>
-            </xsd:complexType>
-           </xsd:element>
-          </xsd:sequence>
-         </xsd:complexType>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="StopPointInPatternStructure">
-  <xsd:annotation>
-   <xsd:documentation>Summary information about a stop within line </xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AnnotatedStopPointStructure">
-    <xsd:sequence>
-     <xsd:element name="Order" type="xsd:positiveInteger">
-      <xsd:annotation>
-       <xsd:documentation>Order of STOP POINT in route (since SIRI 2.0) </xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="OnwardLinkShape" type="LineShapeStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Plot of points from this stop to next Stop.  Detail level is 'full'. (since SIRI 2.0) </xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="LinkProjectionToNextStopPoint" type="ifopt:LinkProjectionStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>GIs projection of Link to the next provided StopPoint. NB Line here means Geometry Polyline, not Transmodel Transport Line.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- === DESTINATION ======================================================= -->
- <xsd:element name="Destination" type="AnnotatedDestinationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Description of a DESTINATION.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="AnnotatedDestinationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for DESTINATION and place name.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="DestinationRef" type="DestinationRefStructure"/>
-   <xsd:element name="PlaceName" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of destination TOPOGRAPHIC PLACE.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Direction in which destination lies. relatoive to currernt stop SIRI 2.0 </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI_DS XML schema. Service Interface for Real-time  Information. Stop Discovery subschema. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI subschema with view of  LINE for use in Discovery service</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_model/siri_journey.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_stop.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_location.xsd"/>
+	<xsd:include schemaLocation="siri_stopPoint.xsd"/>
+	<!-- ======================================================================= -->
+	<!-- === LINE =================================================== -->
+	<xsd:element name="AnnotatedLineRef" type="AnnotatedLineStructure">
+		<xsd:annotation>
+			<xsd:documentation>Information about LINEs covered by server.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="AnnotatedLineStructure">
+		<xsd:annotation>
+			<xsd:documentation>Summary information about a LINE type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="LineRef" type="LineRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LineName" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of LINE. (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the LINE has real-time info. Default is 'true'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Destinations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>DESTINATIONs to which the LINE runs. Detail level is 'normal'</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="Destination" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Directions" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>DIRECTIONs and Stops for the LINE. 'normal'</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Direction" type="RouteDirectionStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Directions of Route</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="RouteDirectionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Summary information about a  Direction of a Line</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="DirectionStructure">
+				<xsd:sequence>
+					<xsd:element name="JourneyPatterns" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>JourneyPatterns in  Direction of route (since SIRI 2.0)</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="JourneyPattern" maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>JourneyPattern. (since SIRI 2.0)</xsd:documentation>
+									</xsd:annotation>
+									<xsd:complexType>
+										<xsd:sequence>
+											<xsd:element ref="JourneyPatternRef" minOccurs="0"/>
+											<xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+												<xsd:annotation>
+													<xsd:documentation>Name Of Journety Pattern (SIRI 2.0)</xsd:documentation>
+												</xsd:annotation>
+											</xsd:element>
+											<xsd:element name="StopsInPattern" minOccurs="0">
+												<xsd:annotation>
+													<xsd:documentation>Ordered collection of STOP POINTs the LINE and direction . Detail level is  'stops'. (since SIRI 2.0) </xsd:documentation>
+												</xsd:annotation>
+												<xsd:complexType>
+													<xsd:sequence>
+														<xsd:element name="StopPointInPattern" type="StopPointInPatternStructure" minOccurs="2" maxOccurs="unbounded">
+															<xsd:annotation>
+																<xsd:documentation>Stop within Route of LINE. Detail level is 'stop' (since SIRI 2.0) </xsd:documentation>
+															</xsd:annotation>
+														</xsd:element>
+													</xsd:sequence>
+												</xsd:complexType>
+											</xsd:element>
+										</xsd:sequence>
+									</xsd:complexType>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StopPointInPatternStructure">
+		<xsd:annotation>
+			<xsd:documentation>Summary information about a stop within line </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AnnotatedStopPointStructure">
+				<xsd:sequence>
+					<xsd:element name="Order" type="xsd:positiveInteger">
+						<xsd:annotation>
+							<xsd:documentation>Order of STOP POINT in route (since SIRI 2.0) </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="OnwardLinkShape" type="LineShapeStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Plot of points from this stop to next Stop.  Detail level is 'full'. (since SIRI 2.0) </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="LinkProjectionToNextStopPoint" type="ifopt:LinkProjectionStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>GIs projection of Link to the next provided StopPoint. NB Line here means Geometry Polyline, not Transmodel Transport Line.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- === DESTINATION ======================================================= -->
+	<xsd:element name="Destination" type="AnnotatedDestinationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Description of a DESTINATION.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="AnnotatedDestinationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for DESTINATION and place name.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DestinationRef" type="DestinationRefStructure"/>
+			<xsd:element name="PlaceName" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of destination TOPOGRAPHIC PLACE.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Direction in which destination lies. relatoive to currernt stop SIRI 2.0 </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
 </xsd:schema>

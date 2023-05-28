@@ -1,47 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.ifopt.org.uk/ifopt" xmlns:siri="http://www.siri.org.uk/siri" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ifopt.org.uk/ifopt" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.3" id="ifopt_checkpoint">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
-    <Date>
-     <Created>2006-08-12</Created>
-    </Date>
-    <Date>
-     <Modified>2006-09-22</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-03-29</Modified>
-    </Date>
-    <Date>
-     <Modified>2011-04-19</Modified>
-     <!-- Add explicit incldue of ifopt time so that will validate -->
-    </Date>
-    <Description>
-     <p>Fixed Objects in Public Transport. This subschema defines common CHECK CONSTRAINT types.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_accessibility.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, Crown Copyright 2006-2021</Copyright>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
+				<Date>
+					<Created>2006-08-12</Created>
+				</Date>
+				<Date>
+					<Modified>2006-09-22</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-03-29</Modified>
+				</Date>
+				<Date>
+					<Modified>2011-04-19</Modified>
+					<!-- Add explicit incldue of ifopt time so that will validate -->
+				</Date>
+				<Description>
+					<p>Fixed Objects in Public Transport. This subschema defines common CHECK CONSTRAINT types.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_accessibility.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, Crown Copyright 2006-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the IFOPT standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the IFOPT standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -49,174 +50,174 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG6</Project>
-    </Subject>
-    <Title>IFOPT Fixed Objects in Public Transport - CHECK CONSTRAINT Types. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>Fixed Objects CHECK CONSTRAINT types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
- </xsd:annotation>
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
- <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_types.xsd"/>
- <xsd:include schemaLocation="ifopt_time.xsd"/>
- <xsd:simpleType name="CheckPointIdType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a CHECK CONSTRAINT.within a STOP PLACE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="CheckPointRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to am identifier of a hazard within a STOP PLACE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="CheckPointIdType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!--======Point=======================================================================================-->
- <xsd:complexType name="CheckPointStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a CHECK CONSTRAINT Hazard that can be associated with.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="CheckPointId" type="CheckPointIdType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of CHECK CONSTRAINt.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="CheckPointGroup"/>
-   <xsd:group ref="DelayGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="CheckPointGroup">
-  <xsd:sequence>
-   <xsd:element name="ValidityCondition" type="ValidityConditionStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Validty condition governing applicability of CHECK CONSTRAINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="CheckPointProcess" type="CheckPointProcessEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type of process that may occur at CHECK CONSTRAINt.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="CheckPointService" type="CheckPointServiceEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type of process that may occur at CHECK CONSTRAINt.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AccessFeatureType" type="AccessibilityFeatureEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type of physical featrue that may slow use of CHECK CONSTRAINt.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Congestion" type="CongestionEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type of crowding that may slow use of CHECK CONSTRAINt.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FacilityRef" type="xsd:string" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Classification of feature of CHECK CONSTRAINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="CheckPointProcessEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for a CHECK CONSTRAINT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="none"/>
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="ticketPurchase"/>
-   <xsd:enumeration value="ticketCollection"/>
-   <xsd:enumeration value="ticketValidation"/>
-   <xsd:enumeration value="baggageCheckIn"/>
-   <xsd:enumeration value="oversizeBaggageCheckIn"/>
-   <xsd:enumeration value="oversizeBaggageReclaim"/>
-   <xsd:enumeration value="baggageReclaim"/>
-   <xsd:enumeration value="leftLuggageDeposit"/>
-   <xsd:enumeration value="leftLuggageReclaim"/>
-   <xsd:enumeration value="firstclassCheckin"/>
-   <xsd:enumeration value="specialNeedsCheckin"/>
-   <xsd:enumeration value="baggageSecurityCheck"/>
-   <xsd:enumeration value="securityCheck"/>
-   <xsd:enumeration value="outgoingPassportControl"/>
-   <xsd:enumeration value="incomingPassportControl"/>
-   <xsd:enumeration value="fasttrackDepartures"/>
-   <xsd:enumeration value="fasttrackArrivals"/>
-   <xsd:enumeration value="incomingDutyFree"/>
-   <xsd:enumeration value="outgoingDutyFree"/>
-   <xsd:enumeration value="taxRefunds"/>
-   <xsd:enumeration value="outgoingCustoms"/>
-   <xsd:enumeration value="incomingCustoms"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="CheckPointServiceEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for a CHECK CONSTRAINT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="selfserviceMachine"/>
-   <xsd:enumeration value="counterService"/>
-   <xsd:enumeration value="other"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="AccessibilityFeatureEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for a CHECK CONSTRAINT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="lift"/>
-   <xsd:enumeration value="stairs"/>
-   <xsd:enumeration value="seriesOfStairs"/>
-   <xsd:enumeration value="escalator"/>
-   <xsd:enumeration value="travelator"/>
-   <xsd:enumeration value="ramp"/>
-   <xsd:enumeration value="shuttle"/>
-   <xsd:enumeration value="barrier"/>
-   <xsd:enumeration value="narrowEntrance"/>
-   <xsd:enumeration value="confinedSpace"/>
-   <xsd:enumeration value="queueManagement"/>
-   <xsd:enumeration value="none"/>
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="other"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="CongestionEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for a CHECK CONSTRAINT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="noWaiting"/>
-   <xsd:enumeration value="queue"/>
-   <xsd:enumeration value="crowding"/>
-   <xsd:enumeration value="full"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:group name="DelayGroup">
-  <xsd:annotation>
-   <xsd:documentation>Group of delays found at a stop group. Duratiosn relate to given validity condition.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="MinimumLikelyDelay" type="siri:DurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Minimum duration needed to pass through CHECK CONSTRAINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AverageDelay" type="siri:DurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Average duration expected to pass through CHECK CONSTRAINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MaximumLikelyDelay" type="siri:DurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Maximum duration expected to pass through CHECK CONSTRAINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!--======Point=======================================================================================-->
+					<Project>CEN TC278 WG3 SG6</Project>
+				</Subject>
+				<Title>IFOPT Fixed Objects in Public Transport - CHECK CONSTRAINT Types. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>Fixed Objects CHECK CONSTRAINT types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_types.xsd"/>
+	<xsd:include schemaLocation="ifopt_time.xsd"/>
+	<xsd:simpleType name="CheckPointIdType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a CHECK CONSTRAINT.within a STOP PLACE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="CheckPointRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to am identifier of a hazard within a STOP PLACE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="CheckPointIdType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--======Point=======================================================================================-->
+	<xsd:complexType name="CheckPointStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a CHECK CONSTRAINT Hazard that can be associated with.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CheckPointId" type="CheckPointIdType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of CHECK CONSTRAINt.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="CheckPointGroup"/>
+			<xsd:group ref="DelayGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="CheckPointGroup">
+		<xsd:sequence>
+			<xsd:element name="ValidityCondition" type="ValidityConditionStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Validty condition governing applicability of CHECK CONSTRAINT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CheckPointProcess" type="CheckPointProcessEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of process that may occur at CHECK CONSTRAINt.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CheckPointService" type="CheckPointServiceEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of process that may occur at CHECK CONSTRAINt.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccessFeatureType" type="AccessibilityFeatureEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of physical featrue that may slow use of CHECK CONSTRAINt.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Congestion" type="CongestionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of crowding that may slow use of CHECK CONSTRAINt.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FacilityRef" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Classification of feature of CHECK CONSTRAINT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="CheckPointProcessEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for a CHECK CONSTRAINT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="ticketPurchase"/>
+			<xsd:enumeration value="ticketCollection"/>
+			<xsd:enumeration value="ticketValidation"/>
+			<xsd:enumeration value="baggageCheckIn"/>
+			<xsd:enumeration value="oversizeBaggageCheckIn"/>
+			<xsd:enumeration value="oversizeBaggageReclaim"/>
+			<xsd:enumeration value="baggageReclaim"/>
+			<xsd:enumeration value="leftLuggageDeposit"/>
+			<xsd:enumeration value="leftLuggageReclaim"/>
+			<xsd:enumeration value="firstclassCheckin"/>
+			<xsd:enumeration value="specialNeedsCheckin"/>
+			<xsd:enumeration value="baggageSecurityCheck"/>
+			<xsd:enumeration value="securityCheck"/>
+			<xsd:enumeration value="outgoingPassportControl"/>
+			<xsd:enumeration value="incomingPassportControl"/>
+			<xsd:enumeration value="fasttrackDepartures"/>
+			<xsd:enumeration value="fasttrackArrivals"/>
+			<xsd:enumeration value="incomingDutyFree"/>
+			<xsd:enumeration value="outgoingDutyFree"/>
+			<xsd:enumeration value="taxRefunds"/>
+			<xsd:enumeration value="outgoingCustoms"/>
+			<xsd:enumeration value="incomingCustoms"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CheckPointServiceEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for a CHECK CONSTRAINT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="selfserviceMachine"/>
+			<xsd:enumeration value="counterService"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AccessibilityFeatureEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for a CHECK CONSTRAINT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="lift"/>
+			<xsd:enumeration value="stairs"/>
+			<xsd:enumeration value="seriesOfStairs"/>
+			<xsd:enumeration value="escalator"/>
+			<xsd:enumeration value="travelator"/>
+			<xsd:enumeration value="ramp"/>
+			<xsd:enumeration value="shuttle"/>
+			<xsd:enumeration value="barrier"/>
+			<xsd:enumeration value="narrowEntrance"/>
+			<xsd:enumeration value="confinedSpace"/>
+			<xsd:enumeration value="queueManagement"/>
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CongestionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for a CHECK CONSTRAINT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="noWaiting"/>
+			<xsd:enumeration value="queue"/>
+			<xsd:enumeration value="crowding"/>
+			<xsd:enumeration value="full"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:group name="DelayGroup">
+		<xsd:annotation>
+			<xsd:documentation>Group of delays found at a stop group. Duratiosn relate to given validity condition.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="MinimumLikelyDelay" type="siri:DurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Minimum duration needed to pass through CHECK CONSTRAINT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AverageDelay" type="siri:DurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Average duration expected to pass through CHECK CONSTRAINT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumLikelyDelay" type="siri:DurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum duration expected to pass through CHECK CONSTRAINT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!--======Point=======================================================================================-->
 </xsd:schema>

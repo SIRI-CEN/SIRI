@@ -1,64 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_facility">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2005-11-15</Created>
-    </Date>
-    <Date>
-     <Modified>2005-11-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-03-29</Modified>
-    </Date>
-    <Date>
-     <Modified>2008-01-11</Modified>
-    </Date>
-    <Date>
-     <Modified>2008-07-05</Modified>
-     <!-- Use Accessibility assessment from ifopt -->
-    </Date>
-    <Date>
-     <Modified>2011-01-19</Modified>
-     <!-- TidyUp empty ValidityConditionGroup -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- (since SIRI 2.0): remove unnecessary dependencies -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of real-time information.
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2005-11-15</Created>
+				</Date>
+				<Date>
+					<Modified>2005-11-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-03-29</Modified>
+				</Date>
+				<Date>
+					<Modified>2008-01-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2008-07-05</Modified>
+					<!-- Use Accessibility assessment from ifopt -->
+				</Date>
+				<Date>
+					<Modified>2011-01-19</Modified>
+					<!-- TidyUp empty ValidityConditionGroup -->
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- (since SIRI 2.0): remove unnecessary dependencies -->
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of real-time information.
 
       This is a package of type modules for equipment availability</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_facility.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>CEN</Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-     <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
-    </Rights>
-    <Source>
-     <ul>
-      <li>Derived from TransModel and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_facility.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>CEN</Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Derived from TransModel and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -66,271 +67,271 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Common Facility Elements</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRi Facility model elemenys</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_facilities.xsd"/>
- <xsd:include schemaLocation="siri_journey.xsd"/>
- <xsd:include schemaLocation="siri_journey_support.xsd"/>
- <!-- ======================================================================= -->
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_stop.xsd"/>
- <!-- ======================================================================= -->
- <!--Needed to work around import limitation in jaxb - all namespaces acsb needs to be after ifopt. -->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
- <!-- ======================================================================= -->
- <!-- Facilities related elements =============================================================== -->
- <xsd:simpleType name="FacilityCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a Faclility.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:element name="FacilityRef" type="FacilityRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a Facility.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="FacilityRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a Faclility.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="FacilityCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- = Definitions for with SIRI 1.1 - Facility Management Service ======================= -->
- <xsd:complexType name="FacilityStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for description of the MONITORED FACILITY itself.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="FacilityCode" type="FacilityCodeType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identfier of Facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Textual description of the facility.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FacilityClass" type="FacilityCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Type of facility (several types may be associated to a single facility)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Features" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Features of service.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Feature" type="AllFacilitiesFeatureStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Description of the feauture of the facility. Several features may be associated to a single facility.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="OwnerRef" type="OrganisationRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Refererence to identifier of owner of facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="OwnerName" type="NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Textual description of the owner of the facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ValidityCondition" type="MonitoringValidityConditionStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>When Facility is normally avaialble. If not specified, default is 'always'. Values are Logically ANDed together.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FacilityLocation" type="FacilityLocationStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Describes where the facility is located. The location is a Transmodel object reference or an NeTEx object reference.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="FacilityAccessibilityGroup"/>
-   <xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Accessibility of the facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="FacilityScheduleRefGroup">
-  <xsd:annotation>
-   <xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="LineRef" minOccurs="0"/>
-   <xsd:element ref="StopPointRef" minOccurs="0"/>
-   <xsd:element ref="VehicleRef" minOccurs="0"/>
-   <xsd:sequence>
-    <xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
-   </xsd:sequence>
-   <xsd:element ref="DatedVehicleJourneyRef" minOccurs="0"/>
-   <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
-   <xsd:element ref="InterchangeRef" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="FacilityStopPlaceRefGroup">
-  <xsd:annotation>
-   <xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StopPlaceComponentId" type="ifopt:StopPlaceComponentRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>System identifier of STOP PLACE component. Unique at least within STOP PLACE and concrete component type.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="FacilityAccessibilityGroup">
-  <xsd:annotation>
-   <xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Limitations" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Limitation of facility.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:group ref="acsb:MobilityLimitationGroup"/>
-      <xsd:group ref="acsb:SensoryLimitationGroup"/>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Suitabilities" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Suitabilities of facility for specific passenger needs.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Suitability" type="acsb:SuitabilityStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Type of specific need for wich the facility is appropriate.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="FacilityCategoryEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Generic category of a facility.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="fixedEquipment"/>
-   <xsd:enumeration value="mobileEquipment"/>
-   <xsd:enumeration value="serviceProvidedByIndividual"/>
-   <xsd:enumeration value="serviceForPersonalDevice"/>
-   <xsd:enumeration value="reservedArea"/>
-   <xsd:enumeration value="site"/>
-   <xsd:enumeration value="siteComponent"/>
-   <xsd:enumeration value="parkingBay"/>
-   <xsd:enumeration value="vehicle"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ======================================================================= -->
- <xsd:complexType name="AnnotatedFacilityStructure">
-  <xsd:annotation>
-   <xsd:documentation>Summary information about Facility. Used in DISCOVERY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="FacilityRef"/>
-   <xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether real-time data is available for the stop. Default is 'true'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Facility" type="FacilityStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Description of the facility (without its status)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="FacilityStatusEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for the status of a MONITORED FACILITY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="available"/>
-   <xsd:enumeration value="notAvailable"/>
-   <xsd:enumeration value="partiallyAvailable"/>
-   <xsd:enumeration value="added"/>
-   <xsd:enumeration value="removed"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="FacilityStatusChangeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for changes to the status of a facility.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="added"/>
-   <xsd:enumeration value="removed"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="CountingTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for TypeOfCounting.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="availabilityCount"/>
-   <xsd:enumeration value="reservedCount"/>
-   <xsd:enumeration value="inUseCount"/>
-   <xsd:enumeration value="outOfOrderCount"/>
-   <xsd:enumeration value="presentCount"/>
-   <xsd:enumeration value="chargingLevel"/>
-   <xsd:enumeration value="availableRunningDistance"/>
-   <xsd:enumeration value="currentStateCount"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="CountingTrendEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for trend of a counting.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="decreasing"/>
-   <xsd:enumeration value="increasing"/>
-   <xsd:enumeration value="stable"/>
-   <xsd:enumeration value="unstable"/>
-   <xsd:enumeration value="increasingQuickly"/>
-   <xsd:enumeration value="increasingSlowly"/>
-   <xsd:enumeration value="decreasingQuickly"/>
-   <xsd:enumeration value="decreasingSlowly"/>
-   <xsd:enumeration value="unknown"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="CountedFeatureUnitEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for units of what is counted 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Common Facility Elements</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRi Facility model elemenys</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_facilities.xsd"/>
+	<xsd:include schemaLocation="siri_journey.xsd"/>
+	<xsd:include schemaLocation="siri_journey_support.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_stop.xsd"/>
+	<!-- ======================================================================= -->
+	<!--Needed to work around import limitation in jaxb - all namespaces acsb needs to be after ifopt. -->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
+	<!-- ======================================================================= -->
+	<!-- Facilities related elements =============================================================== -->
+	<xsd:simpleType name="FacilityCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a Faclility.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:element name="FacilityRef" type="FacilityRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a Facility.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="FacilityRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a Faclility.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="FacilityCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- = Definitions for with SIRI 1.1 - Facility Management Service ======================= -->
+	<xsd:complexType name="FacilityStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for description of the MONITORED FACILITY itself.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FacilityCode" type="FacilityCodeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identfier of Facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Textual description of the facility.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FacilityClass" type="FacilityCategoryEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Type of facility (several types may be associated to a single facility)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Features" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Features of service.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Feature" type="AllFacilitiesFeatureStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Description of the feauture of the facility. Several features may be associated to a single facility.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="OwnerRef" type="OrganisationRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Refererence to identifier of owner of facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OwnerName" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Textual description of the owner of the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ValidityCondition" type="MonitoringValidityConditionStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>When Facility is normally avaialble. If not specified, default is 'always'. Values are Logically ANDed together.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FacilityLocation" type="FacilityLocationStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Describes where the facility is located. The location is a Transmodel object reference or an NeTEx object reference.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="FacilityAccessibilityGroup"/>
+			<xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Accessibility of the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="FacilityScheduleRefGroup">
+		<xsd:annotation>
+			<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="LineRef" minOccurs="0"/>
+			<xsd:element ref="StopPointRef" minOccurs="0"/>
+			<xsd:element ref="VehicleRef" minOccurs="0"/>
+			<xsd:sequence>
+				<xsd:group ref="TrainFormationReferenceGroup" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:element ref="DatedVehicleJourneyRef" minOccurs="0"/>
+			<xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+			<xsd:element ref="InterchangeRef" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="FacilityStopPlaceRefGroup">
+		<xsd:annotation>
+			<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopPlaceComponentId" type="ifopt:StopPlaceComponentRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>System identifier of STOP PLACE component. Unique at least within STOP PLACE and concrete component type.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="FacilityAccessibilityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Limitations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Limitation of facility.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:group ref="acsb:MobilityLimitationGroup"/>
+						<xsd:group ref="acsb:SensoryLimitationGroup"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Suitabilities" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Suitabilities of facility for specific passenger needs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Suitability" type="acsb:SuitabilityStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Type of specific need for wich the facility is appropriate.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="FacilityCategoryEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Generic category of a facility.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="fixedEquipment"/>
+			<xsd:enumeration value="mobileEquipment"/>
+			<xsd:enumeration value="serviceProvidedByIndividual"/>
+			<xsd:enumeration value="serviceForPersonalDevice"/>
+			<xsd:enumeration value="reservedArea"/>
+			<xsd:enumeration value="site"/>
+			<xsd:enumeration value="siteComponent"/>
+			<xsd:enumeration value="parkingBay"/>
+			<xsd:enumeration value="vehicle"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="AnnotatedFacilityStructure">
+		<xsd:annotation>
+			<xsd:documentation>Summary information about Facility. Used in DISCOVERY.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="FacilityRef"/>
+			<xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether real-time data is available for the stop. Default is 'true'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Facility" type="FacilityStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Description of the facility (without its status)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="FacilityStatusEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for the status of a MONITORED FACILITY.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="available"/>
+			<xsd:enumeration value="notAvailable"/>
+			<xsd:enumeration value="partiallyAvailable"/>
+			<xsd:enumeration value="added"/>
+			<xsd:enumeration value="removed"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="FacilityStatusChangeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for changes to the status of a facility.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="added"/>
+			<xsd:enumeration value="removed"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountingTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for TypeOfCounting.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="availabilityCount"/>
+			<xsd:enumeration value="reservedCount"/>
+			<xsd:enumeration value="inUseCount"/>
+			<xsd:enumeration value="outOfOrderCount"/>
+			<xsd:enumeration value="presentCount"/>
+			<xsd:enumeration value="chargingLevel"/>
+			<xsd:enumeration value="availableRunningDistance"/>
+			<xsd:enumeration value="currentStateCount"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountingTrendEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for trend of a counting.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="decreasing"/>
+			<xsd:enumeration value="increasing"/>
+			<xsd:enumeration value="stable"/>
+			<xsd:enumeration value="unstable"/>
+			<xsd:enumeration value="increasingQuickly"/>
+			<xsd:enumeration value="increasingSlowly"/>
+			<xsd:enumeration value="decreasingQuickly"/>
+			<xsd:enumeration value="decreasingSlowly"/>
+			<xsd:enumeration value="unknown"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountedFeatureUnitEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for units of what is counted 
    bay: parking bay for cars, bicycle, scooter, etc
    otherSpaces: any other kind of spaces: lockers, standing spaces, toilets, etc.
    devices: electronic devices (audio guide, headphones, etc.) and physical devices (walking stick, wheelchair, etc.)
@@ -345,416 +346,416 @@ Rail transport, Roads and road transport
    C (degree Celsius): means that a temperature is measured
    other: use of "other" requires the additional open ended TypeOfCountedFeature (monitoredCountingStructure) to be filled
    </xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="bays"/>
-   <xsd:enumeration value="seats"/>
-   <xsd:enumeration value="otherSpaces"/>
-   <xsd:enumeration value="devices"/>
-   <xsd:enumeration value="vehicles"/>
-   <xsd:enumeration value="persons"/>
-   <xsd:enumeration value="litres"/>
-   <xsd:enumeration value="squareMeters"/>
-   <xsd:enumeration value="cubicMeters"/>
-   <xsd:enumeration value="meters"/>
-   <xsd:enumeration value="kWh"/>
-   <xsd:enumeration value="mAh"/>
-   <xsd:enumeration value="kW"/>
-   <xsd:enumeration value="kg"/>
-   <xsd:enumeration value="A"/>
-   <xsd:enumeration value="C"/>
-   <xsd:enumeration value="other"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="FacilityStatusStructure">
-  <xsd:annotation>
-   <xsd:documentation>Description of the status of a MONITORED FACILITY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Status" type="FacilityStatusEnumeration">
-    <xsd:annotation>
-     <xsd:documentation>Status of the facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of the facility Status.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Accessibility of the facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="FacilityLocationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Location of the MONITORED FACILITY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="FacilityScheduleRefGroup">
-    <xsd:annotation>
-     <xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:group ref="FacilityStopPlaceRefGroup">
-    <xsd:annotation>
-     <xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:group ref="ServiceInfoGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="MonitoredCountingStructure">
-  <xsd:annotation>
-   <xsd:documentation>Monitored counted values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="CountingType" type="CountingTypeEnumeration">
-    <xsd:annotation>
-     <xsd:documentation>Nature of what is counted.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="CountedFeatureUnit" type="CountedFeatureUnitEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Unit of type for what is being counted </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="TypeOfCountedFeature" type="TypeOfValueStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Open ended type or refined classification of what is counted (complement to the information coming from the facility type itself) </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:choice>
-    <xsd:element name="Count" type="xsd:integer">
-     <xsd:annotation>
-      <xsd:documentation>Counted value</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="Percentage" type="PercentageType">
-     <xsd:annotation>
-      <xsd:documentation>Value as a percentage (0.0 to 100.0) of the maximum possible value</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:element name="Trend" type="CountingTrendEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Trend of the count</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Accuracy" type="PercentageType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Accuracy of the count, as a percentage (0.0 to 100.0), the percentage being a + or - maximum deviation from the provided value</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of what is counted</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="CountedItemsIdList" minOccurs="0">
-	<xsd:annotation>
-		<xsd:documentation>List of the IDs of the counted items: usefull mainly for reservation and detailed information purposes</xsd:documentation>
-	</xsd:annotation>
-	<xsd:complexType>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="bays"/>
+			<xsd:enumeration value="seats"/>
+			<xsd:enumeration value="otherSpaces"/>
+			<xsd:enumeration value="devices"/>
+			<xsd:enumeration value="vehicles"/>
+			<xsd:enumeration value="persons"/>
+			<xsd:enumeration value="litres"/>
+			<xsd:enumeration value="squareMeters"/>
+			<xsd:enumeration value="cubicMeters"/>
+			<xsd:enumeration value="meters"/>
+			<xsd:enumeration value="kWh"/>
+			<xsd:enumeration value="mAh"/>
+			<xsd:enumeration value="kW"/>
+			<xsd:enumeration value="kg"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="FacilityStatusStructure">
+		<xsd:annotation>
+			<xsd:documentation>Description of the status of a MONITORED FACILITY.</xsd:documentation>
+		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="ItemId" type="IdType" maxOccurs="unbounded">
+			<xsd:element name="Status" type="FacilityStatusEnumeration">
 				<xsd:annotation>
-					<xsd:documentation>IDs of a counted item</xsd:documentation>
+					<xsd:documentation>Status of the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of the facility Status.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AccessibilityAssessment" type="acsb:AccessibilityAssessmentStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Accessibility of the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FacilityLocationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Location of the MONITORED FACILITY.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="FacilityScheduleRefGroup">
+				<xsd:annotation>
+					<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="FacilityStopPlaceRefGroup">
+				<xsd:annotation>
+					<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="ServiceInfoGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MonitoredCountingStructure">
+		<xsd:annotation>
+			<xsd:documentation>Monitored counted values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CountingType" type="CountingTypeEnumeration">
+				<xsd:annotation>
+					<xsd:documentation>Nature of what is counted.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CountedFeatureUnit" type="CountedFeatureUnitEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unit of type for what is being counted </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TypeOfCountedFeature" type="TypeOfValueStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Open ended type or refined classification of what is counted (complement to the information coming from the facility type itself) </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="Count" type="xsd:integer">
+					<xsd:annotation>
+						<xsd:documentation>Counted value</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Percentage" type="PercentageType">
+					<xsd:annotation>
+						<xsd:documentation>Value as a percentage (0.0 to 100.0) of the maximum possible value</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="Trend" type="CountingTrendEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Trend of the count</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Accuracy" type="PercentageType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Accuracy of the count, as a percentage (0.0 to 100.0), the percentage being a + or - maximum deviation from the provided value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of what is counted</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CountedItemsIdList" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of the IDs of the counted items: usefull mainly for reservation and detailed information purposes</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ItemId" type="IdType" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>IDs of a counted item</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ====FACILITY CONDITION========================================= -->
+	<xsd:element name="FacilityConditionElement" type="FacilityConditionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Description of any change concerning a MONITORED FACILITY New structure defined in SIRI XSD 1.1 for Facilities Management.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="FacilityConditionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Description of any change concerning a MONITORED FACILITY New structure defined in SIRI XSD 1.1 for Facilities Management.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="Facility" type="FacilityStructure">
+					<xsd:annotation>
+						<xsd:documentation>Facility affected by condition.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="FacilityRef"/>
+			</xsd:choice>
+			<xsd:element name="FacilityStatus" type="FacilityStatusStructure">
+				<xsd:annotation>
+					<xsd:documentation>Status of Facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MonitoredCounting" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="MonitoredCountingStructure"/>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="FacilityUpdatedPosition" type="LocationStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>New position of the Facility referenced by the FacilityRef or described in the FacilityStructure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="SituationRef" minOccurs="0"/>
+			<xsd:element name="Remedy" type="RemedyStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Setup action to remedy the change of the facility status (if partialy or totaly anavailable)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MonitoringInfo" type="MonitoringInformationStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Description of the mechanism used to monitor the change of the facility status.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Period (duration) of the status change for the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="RemedyTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for actions to remedy a facility change.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="replace"/>
+			<xsd:enumeration value="repair"/>
+			<xsd:enumeration value="remove"/>
+			<xsd:enumeration value="otherRoute"/>
+			<xsd:enumeration value="otherLocation"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="RemedyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Description of the remedy to the change of a facility status (mainly when it becomes partially or totally anavailable)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="RemedyType" type="RemedyTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of the remedy (repair/replacement/remove)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of the set up remedy in natural language.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RemedyPeriod" type="HalfOpenTimestampInputRangeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Validity period for the remedy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--= Definition of Monitoring Information ===========================================-->
+	<!--= First used by Facility Management service, but may be used by other services later, and then may be moved to a more generic file in the future-->
+	<xsd:complexType name="MonitoringInformationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for the monitoring conditions (frequency of measurement, etc): an automatic monitoring of the status of a lift with pushed alert in case of incident is very different from a daily manual/visual check.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="MonitoringInterval" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Mean time interval between two measurements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MonitoringType" type="MonitoringTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>How monitoring is automatic, manual, etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MonitoringPeriod" type="MonitoringValidityConditionStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>When the monitoring is in effect. If absent always.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="MonitoringTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for the types of monitoring: automatic or manual - describing the hardware transducer (video, GPS/Radio, in-road sensors, etc.) doesn't seeme useful for SIRI.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="manual"/>
+			<xsd:enumeration value="automatic"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="MonitoringValidityConditionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for the type for Description of the monitoring conditions (frequency of mesurement, etc): an automatic monitoring of the status of a lift with pushed alert in case of incident is very different from a daily manual/visual check.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Date and tme range within which condition is available.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Timeband" type="HalfOpenTimeRangeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Monitoring period within a single day (monitoring may not be available at night, or may ony occur at certain time of day for manual monitoring, etc.). Several periods can be defined.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DayType" type="DaysOfWeekEnumerationx" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Days type for monitoring availability.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HolidayType" type="HolidayTypeEnumerationx" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Holiday type for monitoring availability.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ====FACILITY CONDITION========================================= -->
- <xsd:element name="FacilityConditionElement" type="FacilityConditionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Description of any change concerning a MONITORED FACILITY New structure defined in SIRI XSD 1.1 for Facilities Management.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="FacilityConditionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Description of any change concerning a MONITORED FACILITY New structure defined in SIRI XSD 1.1 for Facilities Management.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice>
-    <xsd:element name="Facility" type="FacilityStructure">
-     <xsd:annotation>
-      <xsd:documentation>Facility affected by condition.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element ref="FacilityRef"/>
-   </xsd:choice>
-   <xsd:element name="FacilityStatus" type="FacilityStatusStructure">
-    <xsd:annotation>
-     <xsd:documentation>Status of Facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MonitoredCounting" minOccurs="0" maxOccurs="unbounded">
-    <xsd:complexType>
-     <xsd:complexContent>
-      <xsd:extension base="MonitoredCountingStructure"/>
-     </xsd:complexContent>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="FacilityUpdatedPosition" type="LocationStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>New position of the Facility referenced by the FacilityRef or described in the FacilityStructure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="SituationRef" minOccurs="0"/>
-   <xsd:element name="Remedy" type="RemedyStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Setup action to remedy the change of the facility status (if partialy or totaly anavailable)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MonitoringInfo" type="MonitoringInformationStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Description of the mechanism used to monitor the change of the facility status.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Period (duration) of the status change for the facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="RemedyTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for actions to remedy a facility change.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="replace"/>
-   <xsd:enumeration value="repair"/>
-   <xsd:enumeration value="remove"/>
-   <xsd:enumeration value="otherRoute"/>
-   <xsd:enumeration value="otherLocation"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="RemedyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Description of the remedy to the change of a facility status (mainly when it becomes partially or totally anavailable)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="RemedyType" type="RemedyTypeEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type of the remedy (repair/replacement/remove)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of the set up remedy in natural language.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="RemedyPeriod" type="HalfOpenTimestampInputRangeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Validity period for the remedy</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!--= Definition of Monitoring Information ===========================================-->
- <!--= First used by Facility Management service, but may be used by other services later, and then may be moved to a more generic file in the future-->
- <xsd:complexType name="MonitoringInformationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for the monitoring conditions (frequency of measurement, etc): an automatic monitoring of the status of a lift with pushed alert in case of incident is very different from a daily manual/visual check.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="MonitoringInterval" type="xsd:duration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Mean time interval between two measurements.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MonitoringType" type="MonitoringTypeEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>How monitoring is automatic, manual, etc.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MonitoringPeriod" type="MonitoringValidityConditionStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>When the monitoring is in effect. If absent always.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:simpleType name="MonitoringTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for the types of monitoring: automatic or manual - describing the hardware transducer (video, GPS/Radio, in-road sensors, etc.) doesn't seeme useful for SIRI.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="manual"/>
-   <xsd:enumeration value="automatic"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="MonitoringValidityConditionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Allowed values for the type for Description of the monitoring conditions (frequency of mesurement, etc): an automatic monitoring of the status of a lift with pushed alert in case of incident is very different from a daily manual/visual check.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Date and tme range within which condition is available.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Timeband" type="HalfOpenTimeRangeStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Monitoring period within a single day (monitoring may not be available at night, or may ony occur at certain time of day for manual monitoring, etc.). Several periods can be defined.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DayType" type="DaysOfWeekEnumerationx" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Days type for monitoring availability.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="HolidayType" type="HolidayTypeEnumerationx" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Holiday type for monitoring availability.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- = Definitions For backward compatibility with SIRI 1.0 ====================================== -->
- <xsd:element name="FacilityChangeElement" type="FacilityChangeStructure">
-  <xsd:annotation>
-   <xsd:documentation>A change to the availaibility of EQUIPMENT. Basic structure defined in the first 1.0 SIRI XSd.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="EquipmentAvailabilityStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Availaibility Change of EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="EquipmentRef" type="ifopt:EquipmentRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to an EQUIPMENT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of EQUIPMENT.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="EquipmentTypeRef" type="ifopt:EquipmentTypeRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a TYPE OF EQUIPMENT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Period for which change to EQUIPMENT status applies applies. If omitted, indefinite period.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="EquipmentStatus" type="ifopt:EquipmentStatusEnumeration" default="notAvailable">
-    <xsd:annotation>
-     <xsd:documentation>Availability status of the EQUIPMENT.  Default is 'notAvailable'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="EquipmentFeatures" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Service Features associated with equipment.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="FeatureRef" type="FeatureRefStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Service or Stop features associated with equipment. Recommended values based on TPEG are given in SIRI documentation and enumerated in the siri_facilities package.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="FacilityChangeStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for change to equipment availability. Basic structure defined in the first 1.0 SIRI XSd.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="EquipmentAvailability" type="EquipmentAvailabilityStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Availability change for Equipment item.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="SituationRef" minOccurs="0"/>
-   <xsd:element name="MobilityDisruption" type="MobilityDisruptionStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Effect of change on impaired access users.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ===Mobility FACILITY (For backward compatibility with SIRI 1.0 =============================== -->
- <!-- =For backward compatibility with SIRI 1.0 ====================================================================== -->
- <xsd:complexType name="MobilityDisruptionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for effect of EQUIPMENT availability change on impaired access users.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="MobilityImpairedAccess" type="xsd:boolean">
-    <xsd:annotation>
-     <xsd:documentation>Whether stop or service is accessible to mobility impaired users. This may be further qualified by one or more MobilityFacility instances to specify which types of mobility access are available (true) or not available (false). For example suitableForWheelChair, or stepFreeAccess.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="AccessFacility" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Classification of Mobility Facility type - Based on Tpeg pti23.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="DisruptionGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements describing nature of disruption.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="FormationCondition" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="FacilityConditionElement" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Information about a change of Equipment availability at stop or on vehicle that may affect access or use.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:sequence>
-    <xsd:annotation>
-     <xsd:documentation>This sequence is here only for compatibility reasons between Siri 1.0 and Siri 1.1</xsd:documentation>
-    </xsd:annotation>
-    <xsd:element ref="FacilityChangeElement" minOccurs="0"/>
-    <xsd:element ref="SituationRef" minOccurs="0" maxOccurs="unbounded"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <!-- ===Vehicle FACILITY====================================== -->
- <xsd:complexType name="TypeOfVehicleFuelStructure">
-  <xsd:annotation>
-   <xsd:documentation>Classification of vehicle energy type. See Transmodel TypeOfFuel. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="TypeOfFuel" type="TypeOfFuelEnumeration">
-    <xsd:annotation>
-     <xsd:documentation>Values for vehicle fuel type. Use of 'other' requires the additional open ended OtherTypeOfFuel to be filled.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="OtherTypeOfFuel" type="TypeOfValueStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>An arbitrary vehicle fuel classification.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>	
- </xsd:complexType>
+	<!-- = Definitions For backward compatibility with SIRI 1.0 ====================================== -->
+	<xsd:element name="FacilityChangeElement" type="FacilityChangeStructure">
+		<xsd:annotation>
+			<xsd:documentation>A change to the availaibility of EQUIPMENT. Basic structure defined in the first 1.0 SIRI XSd.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="EquipmentAvailabilityStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Availaibility Change of EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="EquipmentRef" type="ifopt:EquipmentRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to an EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of EQUIPMENT.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EquipmentTypeRef" type="ifopt:EquipmentTypeRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a TYPE OF EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Period for which change to EQUIPMENT status applies applies. If omitted, indefinite period.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EquipmentStatus" type="ifopt:EquipmentStatusEnumeration" default="notAvailable">
+				<xsd:annotation>
+					<xsd:documentation>Availability status of the EQUIPMENT.  Default is 'notAvailable'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EquipmentFeatures" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Service Features associated with equipment.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="FeatureRef" type="FeatureRefStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Service or Stop features associated with equipment. Recommended values based on TPEG are given in SIRI documentation and enumerated in the siri_facilities package.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FacilityChangeStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for change to equipment availability. Basic structure defined in the first 1.0 SIRI XSd.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="EquipmentAvailability" type="EquipmentAvailabilityStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Availability change for Equipment item.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="SituationRef" minOccurs="0"/>
+			<xsd:element name="MobilityDisruption" type="MobilityDisruptionStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Effect of change on impaired access users.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ===Mobility FACILITY (For backward compatibility with SIRI 1.0 =============================== -->
+	<!-- =For backward compatibility with SIRI 1.0 ====================================================================== -->
+	<xsd:complexType name="MobilityDisruptionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for effect of EQUIPMENT availability change on impaired access users.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="MobilityImpairedAccess" type="xsd:boolean">
+				<xsd:annotation>
+					<xsd:documentation>Whether stop or service is accessible to mobility impaired users. This may be further qualified by one or more MobilityFacility instances to specify which types of mobility access are available (true) or not available (false). For example suitableForWheelChair, or stepFreeAccess.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AccessFacility" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Classification of Mobility Facility type - Based on Tpeg pti23.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="DisruptionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements describing nature of disruption.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="FormationCondition" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="FacilityConditionElement" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information about a change of Equipment availability at stop or on vehicle that may affect access or use.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:sequence>
+				<xsd:annotation>
+					<xsd:documentation>This sequence is here only for compatibility reasons between Siri 1.0 and Siri 1.1</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element ref="FacilityChangeElement" minOccurs="0"/>
+				<xsd:element ref="SituationRef" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ===Vehicle FACILITY====================================== -->
+	<xsd:complexType name="TypeOfVehicleFuelStructure">
+		<xsd:annotation>
+			<xsd:documentation>Classification of vehicle energy type. See Transmodel TypeOfFuel. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="TypeOfFuel" type="TypeOfFuelEnumeration">
+				<xsd:annotation>
+					<xsd:documentation>Values for vehicle fuel type. Use of 'other' requires the additional open ended OtherTypeOfFuel to be filled.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OtherTypeOfFuel" type="TypeOfValueStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>An arbitrary vehicle fuel classification.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
 </xsd:schema>

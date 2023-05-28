@@ -1,75 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_generalMessage_service">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Contributor>Gustav Thiessen BLIC thi@BLIC.DE</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>&gt;Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-04-17</Modified>
-     <!-- Name Space changes -->
-    </Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
-     <!-- Revise to support substitution groups -->
-    </Date>
-    <Date>
-     <Modified>2011-04-18</Modified>
-     <!--
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Contributor>Gustav Thiessen BLIC thi@BLIC.DE</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>&gt;Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-04-17</Modified>
+					<!-- Name Space changes -->
+				</Date>
+				<Date>
+					<Modified>2008-11-17</Modified>
+					<!-- Revise to support substitution groups -->
+				</Date>
+				<Date>
+					<Modified>2011-04-18</Modified>
+					<!--
 				 (i) siri_generalMessage_service.xsd (line 221) Missing extension point in InfoMessageStructure in Robin Vettier Ixxi.biz
                 (ii) and siri_generalMessage_service.xsd subscription structure
                 (iii) Missing type: Assign a type of normalizedString to formatRef -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- (since SIRI 2.0) -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN technical standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the General Message Service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_generalMessage_service.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- (since SIRI 2.0) -->
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN technical standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the General Message Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_generalMessage_service.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -77,407 +78,407 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-GM XML schema. Service Interface for Real-time  Information. SubSchema for General Message Service </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-GM General Message Service.</xsd:documentation>
- </xsd:annotation>
- <xsd:include schemaLocation="siri/siri_requests.xsd"/>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_model/siri_reference.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
- <xsd:group name="SiriGeneralMessageIndexGroup">
-  <xsd:annotation>
-   <xsd:documentation>Convenience artefact to pick out main elements of the General Message Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="GeneralMessageRequest"/>
-   <xsd:element ref="GeneralMessageSubscriptionRequest"/>
-   <xsd:element ref="GeneralMessageDelivery"/>
-   <xsd:sequence>
-    <xsd:element ref="GeneralMessageCapabilitiesRequest"/>
-    <xsd:element ref="GeneralMessageCapabilitiesResponse"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <!-- ======================================================================= -->
- <!-- ====REQUESTS ====================================================== -->
- <!-- ==== FS: General Message Request ========================================= -->
- <xsd:element name="GeneralMessageRequest" type="GeneralMessageRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about general information messages affecting stops, vehicles or services.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="GeneralMessageRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Service Request for General Messages.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractFunctionalServiceRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="GeneralMessageTopicGroup"/>
-     <xsd:group ref="GeneralMessageRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-GM XML schema. Service Interface for Real-time  Information. SubSchema for General Message Service </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-GM General Message Service.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_model/siri_reference.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
+	<xsd:group name="SiriGeneralMessageIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artefact to pick out main elements of the General Message Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="GeneralMessageRequest"/>
+			<xsd:element ref="GeneralMessageSubscriptionRequest"/>
+			<xsd:element ref="GeneralMessageDelivery"/>
+			<xsd:sequence>
+				<xsd:element ref="GeneralMessageCapabilitiesRequest"/>
+				<xsd:element ref="GeneralMessageCapabilitiesResponse"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<!-- ====REQUESTS ====================================================== -->
+	<!-- ==== FS: General Message Request ========================================= -->
+	<xsd:element name="GeneralMessageRequest" type="GeneralMessageRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about general information messages affecting stops, vehicles or services.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="GeneralMessageRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Service Request for General Messages.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFunctionalServiceRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="GeneralMessageTopicGroup"/>
+					<xsd:group ref="GeneralMessageRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="GeneralMessageTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="InfoChannelRef" type="InfoChannelRefStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Referenceto an Info Channel for which messages are to be returned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="GeneralMessageRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:element name="GeneralMessageSubscriptionRequest" type="GeneralMessageSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for a subscription to General Message Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="GeneralMessageSubscriptionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Subscription for General Message Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractSubscriptionStructure">
-    <xsd:sequence>
-     <xsd:element ref="GeneralMessageRequest"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====RESPONSES=========================================================== -->
- <!-- ==== FS: General Message Response========================================= -->
- <xsd:element name="GeneralMessageDelivery" type="GeneralMessageDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Delivery for General Message Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="GeneralMessagePayloadGroup">
-  <xsd:annotation>
-   <xsd:documentation>General Message payload content.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="GeneralMessage" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="GeneralMessageCancellation" minOccurs="0" maxOccurs="unbounded"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="GeneralMessageDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Delivery for General Message.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceDeliveryStructure">
-    <xsd:sequence>
-     <xsd:group ref="GeneralMessagePayloadGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="GeneralMessageTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="InfoChannelRef" type="InfoChannelRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Referenceto an Info Channel for which messages are to be returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="GeneralMessageRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="GeneralMessageSubscriptionRequest" type="GeneralMessageSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for a subscription to General Message Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="GeneralMessageSubscriptionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Subscription for General Message Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractSubscriptionStructure">
+				<xsd:sequence>
+					<xsd:element ref="GeneralMessageRequest"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====RESPONSES=========================================================== -->
+	<!-- ==== FS: General Message Response========================================= -->
+	<xsd:element name="GeneralMessageDelivery" type="GeneralMessageDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Delivery for General Message Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="GeneralMessagePayloadGroup">
+		<xsd:annotation>
+			<xsd:documentation>General Message payload content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="GeneralMessage" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="GeneralMessageCancellation" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="GeneralMessageDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Delivery for General Message.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceDeliveryStructure">
+				<xsd:sequence>
+					<xsd:group ref="GeneralMessagePayloadGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:element name="GeneralMessage" type="InfoMessageStructure">
-  <xsd:annotation>
-   <xsd:documentation>An informative message.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="InfoMessageStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for an Info Message. @formatRef.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractIdentifiedItemStructure">
-    <xsd:sequence>
-     <xsd:group ref="InfoMessageGroup"/>
-     <xsd:element name="ValidUntilTime" type="xsd:dateTime" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Time until when message is valid. If absent unopen ended.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="SituationRef" minOccurs="0"/>
-     <xsd:element name="Content" type="xsd:anyType">
-      <xsd:annotation>
-       <xsd:documentation>Message Content. Format is specified by Format Ref.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <!-- BEGIN ADDED RV20100629: to comply with CEN and Profile IDF -->
-     <xsd:element ref="Extensions" minOccurs="0"/>
-     <!-- END ADDED RV20100629: to comply with CEN and Profile IDF -->
-    </xsd:sequence>
-    <xsd:attribute name="formatRef" type="xsd:string">
-     <xsd:annotation>
-      <xsd:documentation>Reference to a format of the Content. If absent, free text.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="InfoMessageGroup">
-  <xsd:annotation>
-   <xsd:documentation>Extra information provided on general message notifcation that can be used to filter messages.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="InfoMessageIdentifier" type="InfoMessageRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of message.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="InfoMessageVersion" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Optional version number of update to previosu message.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="InfoChannelRef" type="InfoChannelRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Info Channel to which message belongs.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:element name="GeneralMessageCancellation" type="InfoMessageCancellationStructure">
-  <xsd:annotation>
-   <xsd:documentation>A revocation of a previous message.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="InfoMessageCancellationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Revocation of a previous message.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractReferencingItemStructure">
-    <xsd:sequence>
-     <xsd:element name="InfoMessageIdentifier" type="InfoMessageRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Identifier of message. Unique within service and Producer participant.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="InfoChannelRef" type="InfoChannelRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Info Channel to which message belongs.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="InfoMessageIdentifierType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of an Info Message.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="InfoMessageRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to an Info Message.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="InfoMessageIdentifierType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ==== WSDL=========================================-->
- <xsd:complexType name="GeneralMessageDeliveriesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Deliveries. Used in WSDL.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="GeneralMessageDelivery" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Delivery for general Message service.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ==== CS: Capability Request=================================================================== -->
- <xsd:element name="GeneralMessageCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about General Message Service Capabilities. Answered with a GeneralMessageCapabilitiesResponse.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ==== CS: Capability Response=================================================================== -->
- <xsd:element name="GeneralMessageCapabilitiesResponse" type="GeneralMessageCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
-  <xsd:annotation>
-   <xsd:documentation>Capabilities for General Message Service. Answers a GeneralMessageCapabilitiesResponse.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="GeneralMessageCapabilitiesResponseStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for General MessageService.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
-    <xsd:sequence>
-     <xsd:element ref="GeneralMessageServiceCapabilities" minOccurs="0"/>
-     <xsd:element ref="GeneralMessagePermissions" minOccurs="0"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="GeneralMessage" type="InfoMessageStructure">
+		<xsd:annotation>
+			<xsd:documentation>An informative message.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="InfoMessageStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for an Info Message. @formatRef.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractIdentifiedItemStructure">
+				<xsd:sequence>
+					<xsd:group ref="InfoMessageGroup"/>
+					<xsd:element name="ValidUntilTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Time until when message is valid. If absent unopen ended.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="SituationRef" minOccurs="0"/>
+					<xsd:element name="Content" type="xsd:anyType">
+						<xsd:annotation>
+							<xsd:documentation>Message Content. Format is specified by Format Ref.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<!-- BEGIN ADDED RV20100629: to comply with CEN and Profile IDF -->
+					<xsd:element ref="Extensions" minOccurs="0"/>
+					<!-- END ADDED RV20100629: to comply with CEN and Profile IDF -->
+				</xsd:sequence>
+				<xsd:attribute name="formatRef" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Reference to a format of the Content. If absent, free text.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="InfoMessageGroup">
+		<xsd:annotation>
+			<xsd:documentation>Extra information provided on general message notifcation that can be used to filter messages.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="InfoMessageIdentifier" type="InfoMessageRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of message.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InfoMessageVersion" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Optional version number of update to previosu message.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InfoChannelRef" type="InfoChannelRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Info Channel to which message belongs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="GeneralMessageCancellation" type="InfoMessageCancellationStructure">
+		<xsd:annotation>
+			<xsd:documentation>A revocation of a previous message.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="InfoMessageCancellationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Revocation of a previous message.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractReferencingItemStructure">
+				<xsd:sequence>
+					<xsd:element name="InfoMessageIdentifier" type="InfoMessageRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Identifier of message. Unique within service and Producer participant.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="InfoChannelRef" type="InfoChannelRefStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Info Channel to which message belongs.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="InfoMessageIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of an Info Message.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="InfoMessageRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to an Info Message.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="InfoMessageIdentifierType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==== WSDL=========================================-->
+	<xsd:complexType name="GeneralMessageDeliveriesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Deliveries. Used in WSDL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="GeneralMessageDelivery" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Delivery for general Message service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==== CS: Capability Request=================================================================== -->
+	<xsd:element name="GeneralMessageCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about General Message Service Capabilities. Answered with a GeneralMessageCapabilitiesResponse.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ==== CS: Capability Response=================================================================== -->
+	<xsd:element name="GeneralMessageCapabilitiesResponse" type="GeneralMessageCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities for General Message Service. Answers a GeneralMessageCapabilitiesResponse.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="GeneralMessageCapabilitiesResponseStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for General MessageService.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
+				<xsd:sequence>
+					<xsd:element ref="GeneralMessageServiceCapabilities" minOccurs="0"/>
+					<xsd:element ref="GeneralMessagePermissions" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>
 Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="GeneralMessageServiceCapabilities" type="GeneralMessageServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Capabilities of General Message Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="GeneralMessageServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for General Message Capabilities.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractCapabilitiesStructure">
-    <xsd:sequence>
-     <xsd:element name="TopicFiltering" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Filtering Capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
-         <xsd:annotation>
-          <xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="FilterByInfoChannel" type="xsd:boolean" default="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by InfoChannel, departures. Default is 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="RequestPolicy" type="CapabilityRequestPolicyStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Request Policiy capabilities.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="AccessControl" type="GeneralMessageCapabilityAccessControlStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Access control capabilities.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====permissions=================================================================== -->
- <xsd:element name="GeneralMessagePermissions">
-  <xsd:annotation>
-   <xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="PermissionsStructure">
-     <xsd:sequence>
-      <xsd:element name="GeneralMessagePermission" type="GeneralMessageServicePermissionStructure" minOccurs="0" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Permission or a single particpant or all participants.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:extension>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="GeneralMessageServicePermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for General MessageService Permission.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractPermissionStructure">
-    <xsd:sequence>
-     <xsd:element name="InfoChannelPermissions">
-      <xsd:annotation>
-       <xsd:documentation>The monitoring points that the participant may access.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:choice>
-        <xsd:element ref="AllowAll"/>
-        <xsd:element name="InfoChannelPermission" type="InfoChannelPermissionStructure" maxOccurs="unbounded">
-         <xsd:annotation>
-          <xsd:documentation>Participant's permission for this InfoChannel.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:choice>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="GeneralMessageCapabilityAccessControlStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for access control.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="CapabilityAccessControlStructure">
-    <xsd:sequence>
-     <xsd:element name="CheckInfoChannelRef" type="xsd:boolean" default="true">
-      <xsd:annotation>
-       <xsd:documentation>If access control is supported, whether access control by LINE is supported. Default is 'true'.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="InfoChannelPermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Info Channel Permission.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractTopicPermissionStructure">
-    <xsd:sequence>
-     <xsd:element name="InfoChannelRef" type="InfoChannelRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to an Info Channel to which permission applies.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="GeneralMessageServiceCapabilities" type="GeneralMessageServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities of General Message Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="GeneralMessageServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for General Message Capabilities.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractCapabilitiesStructure">
+				<xsd:sequence>
+					<xsd:element name="TopicFiltering" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Filtering Capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
+									<xsd:annotation>
+										<xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="FilterByInfoChannel" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by InfoChannel, departures. Default is 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="RequestPolicy" type="CapabilityRequestPolicyStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Request Policiy capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="AccessControl" type="GeneralMessageCapabilityAccessControlStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Access control capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====permissions=================================================================== -->
+	<xsd:element name="GeneralMessagePermissions">
+		<xsd:annotation>
+			<xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="PermissionsStructure">
+					<xsd:sequence>
+						<xsd:element name="GeneralMessagePermission" type="GeneralMessageServicePermissionStructure" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Permission or a single particpant or all participants.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="GeneralMessageServicePermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for General MessageService Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractPermissionStructure">
+				<xsd:sequence>
+					<xsd:element name="InfoChannelPermissions">
+						<xsd:annotation>
+							<xsd:documentation>The monitoring points that the participant may access.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="AllowAll"/>
+								<xsd:element name="InfoChannelPermission" type="InfoChannelPermissionStructure" maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>Participant's permission for this InfoChannel.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GeneralMessageCapabilityAccessControlStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for access control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="CapabilityAccessControlStructure">
+				<xsd:sequence>
+					<xsd:element name="CheckInfoChannelRef" type="xsd:boolean" default="true">
+						<xsd:annotation>
+							<xsd:documentation>If access control is supported, whether access control by LINE is supported. Default is 'true'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="InfoChannelPermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Info Channel Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractTopicPermissionStructure">
+				<xsd:sequence>
+					<xsd:element name="InfoChannelRef" type="InfoChannelRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to an Info Channel to which permission applies.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>

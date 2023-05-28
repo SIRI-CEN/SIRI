@@ -1,96 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_SituationExchange_service">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.1 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.1 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk
         Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk
     </Creator>
-    <Date>
-     <Created>2008-01-22</Created>
-    </Date>
-    <Date>
-     <Modified>2008-01-22</Modified>
-    </Date>
-    <Date>
-     <Modified>2009-04-17</Modified>
-     <!-- Name Space changes -->
-    </Date>
-    <Date>
-     <Modified>2008-01-17</Modified>
-     <!-- IFOPT and Datex2 compatibility changes -->
-    </Date>
-    <Date>
-     <Modified>2008-07-05</Modified>
-     <!-- Allow zero sized SITUATIONs -->
-    </Date>
-    <Date>
-     <Modified>2008-10-01</Modified>
-     <!-- Add StatusFilterGroup to SIRI-SX request with Verification, Progerss and Reality
+				<Date>
+					<Created>2008-01-22</Created>
+				</Date>
+				<Date>
+					<Modified>2008-01-22</Modified>
+				</Date>
+				<Date>
+					<Modified>2009-04-17</Modified>
+					<!-- Name Space changes -->
+				</Date>
+				<Date>
+					<Modified>2008-01-17</Modified>
+					<!-- IFOPT and Datex2 compatibility changes -->
+				</Date>
+				<Date>
+					<Modified>2008-07-05</Modified>
+					<!-- Allow zero sized SITUATIONs -->
+				</Date>
+				<Date>
+					<Modified>2008-10-01</Modified>
+					<!-- Add StatusFilterGroup to SIRI-SX request with Verification, Progerss and Reality
 		  Change caridinality on LineRef and CONNECTION link filters to allow many rather than just one.
 	      Corret predictability filter values to be an enum.
 	      Add a place and Road filter. -->
-    </Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
-     <!-- Revise to support substitution groups -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- (since SIRI 2.0)
+				</Date>
+				<Date>
+					<Modified>2008-11-17</Modified>
+					<!-- Revise to support substitution groups -->
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- (since SIRI 2.0)
 		  - Update to DatexII V2.0 
 		  - [FR] Add Extensions tag to SituationExchangeSubscriptionRequest -->
-    </Date>
-    <Date>
-     <Modified>2013-10-09</Modified>
-     <!-- - [VDV] Change caridinality on StopPointRef filter to allow many rather than just one.
+				</Date>
+				<Date>
+					<Modified>2013-10-09</Modified>
+					<!-- - [VDV] Change caridinality on StopPointRef filter to allow many rather than just one.
 		  - [FR] Add Extensions tag to SituationExchangeSubscriptionRequest -->
-    </Date>
-    <Date>
-     <Modified>2014-06-20</Modified>
-     <!--
+				</Date>
+				<Date>
+					<Modified>2014-06-20</Modified>
+					<!--
         * [de] Add temporal filter to request in siri_situationExchange_service.xsd.
         * [de] Add IncludeOnly-IfInPublicationWindow to situation request temporal filter (siri_situationExchange_service.xsd).  
         * [doc/fx] Correct capability Matrix (siri_situationExchange_service.xsd).
         * [fx] StopPlaceFilterGroup: add missing component ref and facility that was in doc but missing from schema -->
-    </Date>
-    <Date>
-     <Modified>2018-11-13</Modified>
-     <!-- [vdv-UmS] SituationExchangeServiceCapabilitiesStructure.TopicFiltering "FilterByKeword" changed to "FilterByKeyword" according to recommendation.-->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the Situation Exchange Service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_SituationExchange_service.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situation.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Date>
+				<Date>
+					<Modified>2018-11-13</Modified>
+					<!-- [vdv-UmS] SituationExchangeServiceCapabilitiesStructure.TopicFiltering "FilterByKeword" changed to "FilterByKeyword" according to recommendation.-->
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the Situation Exchange Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_SituationExchange_service.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_situation.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-      <li> categories from TPEG</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+						<li> categories from TPEG</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -98,688 +99,688 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-SX XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Situation Exchange Service Subschema </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-SX Situation Exchange Service.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <!-- ===Global import of all IFOPT namespace elements used in SIRI neeeded to work around XERCES limitation=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
- <!--.....See SITUATION for the actual dependencies...-->
- <!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
- <!--.....These are the actual dependencies...-->
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri/siri_requests.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_situation.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
- <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="datex2/DATEXIISchema.xsd"/>
- <!-- ======================================================================= -->
- <xsd:group name="SiriSituationExchangeServiceIndexGroup">
-  <xsd:annotation>
-   <xsd:documentation>Convenience artifact to pick out main elements of the Situation Exchange Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="SituationExchangeRequest"/>
-   <xsd:element ref="SituationExchangeSubscriptionRequest"/>
-   <xsd:element ref="SituationExchangeDelivery"/>
-   <xsd:sequence>
-    <xsd:element ref="SituationExchangeCapabilitiesRequest"/>
-    <xsd:element ref="SituationExchangeCapabilitiesResponse"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====REQUESTS ====================================================== -->
- <!-- ==== FS: Situation Exchnage Request ================================================== -->
- <xsd:element name="SituationExchangeRequest" type="SituationExchangeRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about Facilities status.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="SituationExchangeRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Functional Service Request for Situation Exchange Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractFunctionalServiceRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="SituationExchangeTopicGroup"/>
-     <xsd:group ref="SituationExchangeRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-SX XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Situation Exchange Service Subschema </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-SX Situation Exchange Service.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<!-- ===Global import of all IFOPT namespace elements used in SIRI neeeded to work around XERCES limitation=====-->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
+	<!--.....See SITUATION for the actual dependencies...-->
+	<!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation=====-->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
+	<!--.....These are the actual dependencies...-->
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_situation.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
+	<xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="datex2/DATEXIISchema.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:group name="SiriSituationExchangeServiceIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artifact to pick out main elements of the Situation Exchange Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="SituationExchangeRequest"/>
+			<xsd:element ref="SituationExchangeSubscriptionRequest"/>
+			<xsd:element ref="SituationExchangeDelivery"/>
+			<xsd:sequence>
+				<xsd:element ref="SituationExchangeCapabilitiesRequest"/>
+				<xsd:element ref="SituationExchangeCapabilitiesResponse"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====REQUESTS ====================================================== -->
+	<!-- ==== FS: Situation Exchnage Request ================================================== -->
+	<xsd:element name="SituationExchangeRequest" type="SituationExchangeRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Facilities status.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="SituationExchangeRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Functional Service Request for Situation Exchange Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFunctionalServiceRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="SituationExchangeTopicGroup"/>
+					<xsd:group ref="SituationExchangeRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="SituationExchangeTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the content to be returned. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="TemporalSubscriptionGroup">
-    <xsd:annotation>
-     <xsd:documentation>Parameters to control time for which subscription applies.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:group ref="TemporalContentFilterGroup">
-    <xsd:annotation>
-     <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the time.  Logically ANDed with other values. </xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:group ref="AffectedModeGroup"/>
-   <xsd:group ref="SituationClassifierFilterGroup"/>
-   <xsd:group ref="SituationStatusFilterGroup"/>
-   <xsd:group ref="SituationNetworkFilterGroup" minOccurs="0"/>
-   <xsd:group ref="SituationStopPlaceFilterGroup"/>
-   <xsd:group ref="SituationJourneyFilterGroup"/>
-   <xsd:group ref="SituationPlaceFilterGroup"/>
-   <xsd:element name="SituationRoadFilter" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Road. Logically ANDed with other values.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="RoadFilter" type="RoadFilterStructure" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="AccessibilityNeedFilter" type="acsb:PassengerAccessibilityNeedsStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on specific needs .</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="TemporalSubscriptionGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Status. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="PreviewInterval" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Forward duration for which SITUATIONs should be included, that is, only SITUATIONs that start before the end of this window time will be included.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Start time for selecting SITUATIONs to be sent. Only SITUATIONs or updates created after this time will be sent. This enables a restart without resending everything.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="TemporalContentFilterGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Status. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ValidityPeriod" type="HalfOpenTimestampInputRangeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Temporal scope of Situations be included in response.  The Situations must be valid within the specified period of time.  (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="IncludeOnlyIfInPublicationWindow" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Only incidents that are currently  within their publication window shouldbe included. Otherwose all incidents will be included. Default is false</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SituationStatusFilterGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Status. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Verification" type="VerificationStatusEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether incident has been verified or not If not specified return all.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Workflow Progress Status. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION. If not specified return open, published closing and closed. l.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Reality" type="D2LogicalModel:InformationStatusEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether SITUATION is real or a test. If not specified return all.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SituationNetworkFilterGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Network. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Referance to an OPERATOR. If unspecified, all OPERATOR.s.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="OperationalUnitRef" type="OperationalUnitRefStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>OPERATIONAL UNIT responsible for managing services.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="NetworkRef" type="OperatorRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a NETWORK.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:choice>
-    <xsd:element ref="LineRef" minOccurs="0" maxOccurs="unbounded">
-     <xsd:annotation>
-      <xsd:documentation>Filter the results to include only  the given line.  </xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="Lines" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Filter the results to include only situations along the given LINEs.</xsd:documentation>
-     </xsd:annotation>
-     <xsd:complexType>
-      <xsd:sequence>
-       <xsd:element name="LineDirection" type="LineDirectionStructure" maxOccurs="unbounded">
-        <xsd:annotation>
-         <xsd:documentation>Filter the results to include only  the given line. and direction</xsd:documentation>
-        </xsd:annotation>
-       </xsd:element>
-      </xsd:sequence>
-     </xsd:complexType>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:element ref="StopPointRef" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="ConnectionLinkRef" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="FacilityRef" minOccurs="0" maxOccurs="unbounded"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SituationStopPlaceFilterGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the STOP PLACEs affected SITUATIONs. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StopPlaceComponentRef" type="ifopt:StopPlaceSpaceRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to part of a STOP PLACE. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SituationJourneyFilterGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the VEHICLE JOURNEYs affected by the SITUATION. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Use of simple reference is deprecated </xsd:documentation>
-    </xsd:annotation>
-    <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>Refercence to a VEHICLE JOURNEY framed by the day. SIRI 2.0 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element ref="VehicleJourneyRef"/>
-   </xsd:choice>
-   <xsd:element ref="InterchangeRef" minOccurs="0"/>
-   <xsd:element ref="VehicleRef" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SituationClassifierFilterGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Classifiers. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Severity" type="SeverityEnumeration" default="normal" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Severity filter value to apply: only SITUATIONs with a severity greater than or equal to the specified value will be returned. See TPEG severities. Default is 'normal'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Scope" type="ScopeTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Types of SITUATION to include.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Predictability" type="PredictabilityEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether just planned, unplanned or both SITUATIONs will be returned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Arbitrary application specific classifiers. Only SITUATIONs that match these keywords will be returned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SituationPlaceFilterGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Place. Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="CountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a COUNTRY where incident takes place If specified only incidents that affect this place country will be returned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PlaceRef" type="xsd:NMTOKEN" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a TOPOGRAPHIC PLACE. Only incidents which are deemed to affect this place will be returned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Location" type="LocationStructure" minOccurs="0" maxOccurs="2">
-    <xsd:annotation>
-     <xsd:documentation>Bounding box of an arbitrary area. Only incidents geocoded as falling within area will be included.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="RoadFilterStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Parameters to filter Situation Exchange Service requests, based on the SITUATION Road, Logically ANDed with other values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="roadNumber" type="D2LogicalModel:String" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifier or number of the road on which the reference POINT is located.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="directionBound" type="D2LogicalModel:DirectionEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The DIRECTION at the reference point in terms of general destination DIRECTION. If absent both.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="referencePointIdentifier" type="D2LogicalModel:String" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Road reference POINT identifier, unique on the specified road.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="SituationExchangeRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="IncludeTranslations" minOccurs="0"/>
-   <xsd:element name="MaximumNumberOfSituationElements" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The maximum number of SITUATION elements to return in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ==== FS: Situation Exchnage Subscription Request ================================================== -->
- <xsd:element name="SituationExchangeSubscriptionRequest" type="SituationExchangeSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for a subscription to the Situation Exchange Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="SituationExchangeSubscriptionPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the subscription publishing and notification processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the producer will return the complete set of current data, or only provide updates to this data, i.e. additions, modifications and deletions.
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="SituationExchangeTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the content to be returned. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="TemporalSubscriptionGroup">
+				<xsd:annotation>
+					<xsd:documentation>Parameters to control time for which subscription applies.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="TemporalContentFilterGroup">
+				<xsd:annotation>
+					<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the time.  Logically ANDed with other values. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="AffectedModeGroup"/>
+			<xsd:group ref="SituationClassifierFilterGroup"/>
+			<xsd:group ref="SituationStatusFilterGroup"/>
+			<xsd:group ref="SituationNetworkFilterGroup" minOccurs="0"/>
+			<xsd:group ref="SituationStopPlaceFilterGroup"/>
+			<xsd:group ref="SituationJourneyFilterGroup"/>
+			<xsd:group ref="SituationPlaceFilterGroup"/>
+			<xsd:element name="SituationRoadFilter" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Road. Logically ANDed with other values.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="RoadFilter" type="RoadFilterStructure" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="AccessibilityNeedFilter" type="acsb:PassengerAccessibilityNeedsStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on specific needs .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="TemporalSubscriptionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Status. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PreviewInterval" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Forward duration for which SITUATIONs should be included, that is, only SITUATIONs that start before the end of this window time will be included.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Start time for selecting SITUATIONs to be sent. Only SITUATIONs or updates created after this time will be sent. This enables a restart without resending everything.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="TemporalContentFilterGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Status. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ValidityPeriod" type="HalfOpenTimestampInputRangeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Temporal scope of Situations be included in response.  The Situations must be valid within the specified period of time.  (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IncludeOnlyIfInPublicationWindow" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Only incidents that are currently  within their publication window shouldbe included. Otherwose all incidents will be included. Default is false</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SituationStatusFilterGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Status. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Verification" type="VerificationStatusEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether incident has been verified or not If not specified return all.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Workflow Progress Status. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION. If not specified return open, published closing and closed. l.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Reality" type="D2LogicalModel:InformationStatusEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether SITUATION is real or a test. If not specified return all.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SituationNetworkFilterGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Network. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Referance to an OPERATOR. If unspecified, all OPERATOR.s.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OperationalUnitRef" type="OperationalUnitRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>OPERATIONAL UNIT responsible for managing services.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NetworkRef" type="OperatorRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a NETWORK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element ref="LineRef" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Filter the results to include only  the given line.  </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Lines" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Filter the results to include only situations along the given LINEs.</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="LineDirection" type="LineDirectionStructure" maxOccurs="unbounded">
+								<xsd:annotation>
+									<xsd:documentation>Filter the results to include only  the given line. and direction</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element ref="StopPointRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ConnectionLinkRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="FacilityRef" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SituationStopPlaceFilterGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the STOP PLACEs affected SITUATIONs. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopPlaceComponentRef" type="ifopt:StopPlaceSpaceRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to part of a STOP PLACE. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SituationJourneyFilterGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the VEHICLE JOURNEYs affected by the SITUATION. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Use of simple reference is deprecated </xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Refercence to a VEHICLE JOURNEY framed by the day. SIRI 2.0 </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="VehicleJourneyRef"/>
+			</xsd:choice>
+			<xsd:element ref="InterchangeRef" minOccurs="0"/>
+			<xsd:element ref="VehicleRef" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SituationClassifierFilterGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Classifiers. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Severity" type="SeverityEnumeration" default="normal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Severity filter value to apply: only SITUATIONs with a severity greater than or equal to the specified value will be returned. See TPEG severities. Default is 'normal'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Scope" type="ScopeTypeEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Types of SITUATION to include.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Predictability" type="PredictabilityEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether just planned, unplanned or both SITUATIONs will be returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Arbitrary application specific classifiers. Only SITUATIONs that match these keywords will be returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SituationPlaceFilterGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Situation Exchange Service requests, based on the SITUATION Place. Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a COUNTRY where incident takes place If specified only incidents that affect this place country will be returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PlaceRef" type="xsd:NMTOKEN" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a TOPOGRAPHIC PLACE. Only incidents which are deemed to affect this place will be returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Location" type="LocationStructure" minOccurs="0" maxOccurs="2">
+				<xsd:annotation>
+					<xsd:documentation>Bounding box of an arbitrary area. Only incidents geocoded as falling within area will be included.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="RoadFilterStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Parameters to filter Situation Exchange Service requests, based on the SITUATION Road, Logically ANDed with other values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="roadNumber" type="D2LogicalModel:String" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier or number of the road on which the reference POINT is located.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="directionBound" type="D2LogicalModel:DirectionEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The DIRECTION at the reference point in terms of general destination DIRECTION. If absent both.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="referencePointIdentifier" type="D2LogicalModel:String" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Road reference POINT identifier, unique on the specified road.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="SituationExchangeRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="IncludeTranslations" minOccurs="0"/>
+			<xsd:element name="MaximumNumberOfSituationElements" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The maximum number of SITUATION elements to return in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ==== FS: Situation Exchnage Subscription Request ================================================== -->
+	<xsd:element name="SituationExchangeSubscriptionRequest" type="SituationExchangeSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for a subscription to the Situation Exchange Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="SituationExchangeSubscriptionPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the subscription publishing and notification processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the producer will return the complete set of current data, or only provide updates to this data, i.e. additions, modifications and deletions.
 If false or omitted, each subscription response will contain the full information as specified in this request.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="SituationExchangeSubscriptionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Subscription Request for Situation Exchange Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractSubscriptionStructure">
-    <xsd:sequence>
-     <xsd:element ref="SituationExchangeRequest"/>
-     <xsd:group ref="SituationExchangeSubscriptionPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====RESPONSES=========================================================== -->
- <!-- ==== FS: Situation ExchnageDelivery ================================================== -->
- <xsd:element name="SituationExchangeDelivery" type="SituationExchangeDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Delivery for Situation Exchange Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="IncludedSituationExchangeDelivery" type="SituationExchangeDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Delivery of Situation Exchange Service included as supplement to main functional service delivery.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="SituationExchangePayloadGroup">
-  <xsd:annotation>
-   <xsd:documentation>Payload part of Situation Exchange Service delivery.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="PtSituationContext" type="ContextStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Default context for common properties of SITUATIONs, Values specified apply to all SITUATIONs unless overridden. Can be used optionally to reduce file bulk.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Situations" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>SITUATIONs in Delivery.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="PtSituationElement" type="PtSituationElementStructure" minOccurs="0" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Description of a SITUATION.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-      <xsd:element ref="RoadSituationElement" minOccurs="0" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="SituationExchangeDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for Situation Exchange Service. Provides information about one or more vehicles; each has its own VEHICLE activity element.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceDeliveryStructure">
-    <xsd:sequence>
-     <xsd:group ref="SituationExchangePayloadGroup">
-      <xsd:annotation>
-       <xsd:documentation>Payload part of Situation Exchange Service delivery.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:group>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="SituationExchangeSubscriptionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Subscription Request for Situation Exchange Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractSubscriptionStructure">
+				<xsd:sequence>
+					<xsd:element ref="SituationExchangeRequest"/>
+					<xsd:group ref="SituationExchangeSubscriptionPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====RESPONSES=========================================================== -->
+	<!-- ==== FS: Situation ExchnageDelivery ================================================== -->
+	<xsd:element name="SituationExchangeDelivery" type="SituationExchangeDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Delivery for Situation Exchange Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="IncludedSituationExchangeDelivery" type="SituationExchangeDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Delivery of Situation Exchange Service included as supplement to main functional service delivery.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="SituationExchangePayloadGroup">
+		<xsd:annotation>
+			<xsd:documentation>Payload part of Situation Exchange Service delivery.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PtSituationContext" type="ContextStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default context for common properties of SITUATIONs, Values specified apply to all SITUATIONs unless overridden. Can be used optionally to reduce file bulk.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Situations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>SITUATIONs in Delivery.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="PtSituationElement" type="PtSituationElementStructure" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Description of a SITUATION.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element ref="RoadSituationElement" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="SituationExchangeDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Situation Exchange Service. Provides information about one or more vehicles; each has its own VEHICLE activity element.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceDeliveryStructure">
+				<xsd:sequence>
+					<xsd:group ref="SituationExchangePayloadGroup">
+						<xsd:annotation>
+							<xsd:documentation>Payload part of Situation Exchange Service delivery.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====Data============================================================= -->
- <xsd:complexType name="ContextStructure">
-  <xsd:annotation>
-   <xsd:documentation>Common parameters for all SITUATIONs.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="CountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a Country of a Participant who published SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ParticipantRef" type="ParticipantRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a system publishing SITUATIONs. If SITUATIONs from other participants are included in delivery, then ParticipantRef of immediate publisher must be given here.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="TopographicPlaceRef" type="xsd:NMTOKEN" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Refrence to a TOPOGRAPHIC PLACE (locality). Also Derivable from an individual StopRef.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="TopographicPlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of locality in which SITUATIONs apply. Derivable from LocalityRef.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DefaultLanguage" type="xsd:language" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Default language of text.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="NetworkContext" type="NetworkContextStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Default context for common properties of Public Transport SITUATIONs.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Actions" type="ActionsStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Actions that apply to all SITUATIONs unless overridden.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="NetworkContextStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for shared context.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Operator" type="AffectedOperatorStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Default OPERATOR  for SITUATIONs.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Network" type="NetworkStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Default Network of affected LINEs. These values apply to all SITUATIONs unless overridden on individual instances.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ==== WSDL=========================================-->
- <xsd:complexType name="SituationExchangeDeliveriesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Deliveries for Situation Exchange Service. Used in WSDL.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="SituationExchangeDelivery" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Delivery for Vehicle Activity Service.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ==== CS: Capability Request=================================================================== -->
- <xsd:element name="SituationExchangeCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about Situation Exchange Service Capabilities. Answered with a VehicleMontoringCapabilitiesResponse.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ==== CS: Capability Response=================================================================== -->
- <xsd:element name="SituationExchangeCapabilitiesResponse" type="SituationExchangeCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
-  <xsd:annotation>
-   <xsd:documentation>Capabilities for Situation Exchange Service. Answers a VehicleMontoringCapabilitiesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="SituationExchangeCapabilitiesResponseStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for Situation Exchange Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
-    <xsd:sequence>
-     <xsd:element ref="SituationExchangeServiceCapabilities" minOccurs="0"/>
-     <xsd:element ref="SituationExchangePermissions" minOccurs="0"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====Data============================================================= -->
+	<xsd:complexType name="ContextStructure">
+		<xsd:annotation>
+			<xsd:documentation>Common parameters for all SITUATIONs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a Country of a Participant who published SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ParticipantRef" type="ParticipantRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a system publishing SITUATIONs. If SITUATIONs from other participants are included in delivery, then ParticipantRef of immediate publisher must be given here.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TopographicPlaceRef" type="xsd:NMTOKEN" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Refrence to a TOPOGRAPHIC PLACE (locality). Also Derivable from an individual StopRef.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TopographicPlaceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of locality in which SITUATIONs apply. Derivable from LocalityRef.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DefaultLanguage" type="xsd:language" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default language of text.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NetworkContext" type="NetworkContextStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default context for common properties of Public Transport SITUATIONs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Actions" type="ActionsStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Actions that apply to all SITUATIONs unless overridden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NetworkContextStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for shared context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Operator" type="AffectedOperatorStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Default OPERATOR  for SITUATIONs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Network" type="NetworkStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default Network of affected LINEs. These values apply to all SITUATIONs unless overridden on individual instances.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==== WSDL=========================================-->
+	<xsd:complexType name="SituationExchangeDeliveriesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Deliveries for Situation Exchange Service. Used in WSDL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="SituationExchangeDelivery" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Delivery for Vehicle Activity Service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==== CS: Capability Request=================================================================== -->
+	<xsd:element name="SituationExchangeCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Situation Exchange Service Capabilities. Answered with a VehicleMontoringCapabilitiesResponse.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ==== CS: Capability Response=================================================================== -->
+	<xsd:element name="SituationExchangeCapabilitiesResponse" type="SituationExchangeCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities for Situation Exchange Service. Answers a VehicleMontoringCapabilitiesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="SituationExchangeCapabilitiesResponseStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Situation Exchange Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
+				<xsd:sequence>
+					<xsd:element ref="SituationExchangeServiceCapabilities" minOccurs="0"/>
+					<xsd:element ref="SituationExchangePermissions" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="SituationExchangeServiceCapabilities" type="SituationExchangeServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Capabilities of Situation Exchange Service.  Answers a SituationExchangeCapabilitiesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="SituationExchangeServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for SItuation Exchange Service Capabilities.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractCapabilitiesStructure">
-    <xsd:sequence>
-     <xsd:element name="TopicFiltering" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Filtering Capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
-         <xsd:annotation>
-          <xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element ref="FilterByFacilityRef" minOccurs="0"/>
-        <xsd:element name="FilterByLocationRef" type="xsd:boolean" fixed="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by location. Fixed as 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element ref="FilterByVehicleRef" minOccurs="0"/>
-        <xsd:element name="FilterByMode" type="xsd:boolean" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by MODE. Default is true.. ((since SIRI 2.0))</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="FilterByNetworkRef" type="xsd:boolean" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by NETWORKs. Default is 'true'. ((since SIRI 2.0))</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element ref="FilterByLineRef" minOccurs="0"/>
-        <xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
-        <xsd:element name="FilterByStopPlaceRef" type="xsd:boolean" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by STOP PLACE identifvier.  Default is 'false'. ((since SIRI 2.0))</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element ref="FilterByVehicleJourneyRef" minOccurs="0"/>
-        <xsd:element ref="FilterByConnectionLinkRef" minOccurs="0"/>
-        <xsd:element ref="FilterByInterchangeRef" minOccurs="0"/>
-        <xsd:element name="FilterBySpecificNeed" type="xsd:boolean" default="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by Specific Needs. Default is 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="FilterByKeyword" type="xsd:boolean" default="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by Keywords. Default is 'false'</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="RequestPolicy" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Request Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="CapabilityRequestPolicyStructure">
-         <xsd:sequence>
-          <xsd:group ref="SituationExchangeVolumeGroup"/>
-         </xsd:sequence>
-        </xsd:extension>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="AccessControl" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Access control capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="CapabilityAccessControlStructure">
-         <xsd:sequence>
-          <xsd:element ref="CheckOperatorRef" minOccurs="0"/>
-          <xsd:element ref="CheckLineRef" minOccurs="0"/>
-         </xsd:sequence>
-        </xsd:extension>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="ResponseFeatures" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Response capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence/>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="SituationExchangeVolumeGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for volume control.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="HasMaximumNumberOfSituations" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether a maximum number ofSITUATIONS to include can be specified. Default is 'false'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====permissions=================================================================== -->
- <xsd:element name="SituationExchangePermissions">
-  <xsd:annotation>
-   <xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="PermissionsStructure">
-     <xsd:sequence>
-      <xsd:element name="SituationExchangePermission" type="SituationExchangeServicePermissionStructure" minOccurs="0" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:extension>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="SituationExchangeServicePermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Situation Exchange Service Permissions.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractPermissionStructure">
-    <xsd:sequence>
-     <xsd:element ref="OperatorPermissions"/>
-     <xsd:element ref="LinePermissions"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="SituationExchangeServiceCapabilities" type="SituationExchangeServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities of Situation Exchange Service.  Answers a SituationExchangeCapabilitiesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="SituationExchangeServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for SItuation Exchange Service Capabilities.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractCapabilitiesStructure">
+				<xsd:sequence>
+					<xsd:element name="TopicFiltering" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Filtering Capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
+									<xsd:annotation>
+										<xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByFacilityRef" minOccurs="0"/>
+								<xsd:element name="FilterByLocationRef" type="xsd:boolean" fixed="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by location. Fixed as 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByVehicleRef" minOccurs="0"/>
+								<xsd:element name="FilterByMode" type="xsd:boolean" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by MODE. Default is true.. ((since SIRI 2.0))</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="FilterByNetworkRef" type="xsd:boolean" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by NETWORKs. Default is 'true'. ((since SIRI 2.0))</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByLineRef" minOccurs="0"/>
+								<xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
+								<xsd:element name="FilterByStopPlaceRef" type="xsd:boolean" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by STOP PLACE identifvier.  Default is 'false'. ((since SIRI 2.0))</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByVehicleJourneyRef" minOccurs="0"/>
+								<xsd:element ref="FilterByConnectionLinkRef" minOccurs="0"/>
+								<xsd:element ref="FilterByInterchangeRef" minOccurs="0"/>
+								<xsd:element name="FilterBySpecificNeed" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by Specific Needs. Default is 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="FilterByKeyword" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by Keywords. Default is 'false'</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="RequestPolicy" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Request Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="CapabilityRequestPolicyStructure">
+									<xsd:sequence>
+										<xsd:group ref="SituationExchangeVolumeGroup"/>
+									</xsd:sequence>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="AccessControl" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Access control capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="CapabilityAccessControlStructure">
+									<xsd:sequence>
+										<xsd:element ref="CheckOperatorRef" minOccurs="0"/>
+										<xsd:element ref="CheckLineRef" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ResponseFeatures" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Response capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence/>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="SituationExchangeVolumeGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for volume control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="HasMaximumNumberOfSituations" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether a maximum number ofSITUATIONS to include can be specified. Default is 'false'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====permissions=================================================================== -->
+	<xsd:element name="SituationExchangePermissions">
+		<xsd:annotation>
+			<xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="PermissionsStructure">
+					<xsd:sequence>
+						<xsd:element name="SituationExchangePermission" type="SituationExchangeServicePermissionStructure" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="SituationExchangeServicePermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Situation Exchange Service Permissions.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractPermissionStructure">
+				<xsd:sequence>
+					<xsd:element ref="OperatorPermissions"/>
+					<xsd:element ref="LinePermissions"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>
