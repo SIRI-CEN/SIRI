@@ -348,6 +348,7 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="ferry"/>
    <xsd:enumeration value="metro"/>
    <xsd:enumeration value="rail"/>
+   <xsd:enumeration value="taxi"/>
    <xsd:enumeration value="tram"/>
    <xsd:enumeration value="underground"/>
   </xsd:restriction>
