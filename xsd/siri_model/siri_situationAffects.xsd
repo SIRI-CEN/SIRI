@@ -1221,7 +1221,7 @@ Rail transport, Roads and road transport
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
- <xsd:complexType name="AffectedStopPlaceWithoutLineStructure">
+	<xsd:complexType name="AffectedStopPlaceWithoutLineStructure">
 		<xsd:annotation>
 			<xsd:documentation>Base Type for information about the STOP PLACEs affected by an SITUATION.</xsd:documentation>
 		</xsd:annotation>
