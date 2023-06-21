@@ -560,7 +560,7 @@ Rail transport, Roads and road transport
   <xsd:complexContent>
    <xsd:extension base="AbstractDistributorItemStructure">
     <xsd:sequence>
-     <xsd:element name="ChangeNote" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+     <xsd:element name="ChangeNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
       <xsd:annotation>
        <xsd:documentation>Description of the revised stopping position of the Distributor (fetcher) in the connection zone.  (Unbounded since SIRI 2.0)</xsd:documentation>
       </xsd:annotation>
