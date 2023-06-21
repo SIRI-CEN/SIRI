@@ -5,7 +5,7 @@ on:
   push:
     branches: [ "master", "main", "integration" ]
   pull_request:
-    branches: [ "master", "main", "inegration" ]
+    branches: [ "master", "main", "integration" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
