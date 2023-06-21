@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situation">
- <!--
+	<!--
 siri_model\siri_situation-v2.0.xsd:
 19.12.2017 D. Rubli, Siri_XML-2.0p_a0.2:
 - Concequence.Period changed to unbounded.
@@ -13,51 +13,51 @@ siri_model\siri_situation-v2.0.xsd:
 - StatusGroup.Progress changed from optional to mandatory
 - PublicationWindow changed to unbounded
 -->
- <!-- ======================================================================= -->
- <!--Needed to work around import limitation in JAXB - all namespaces. -->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/>
- <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema.xsd"/>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_situationIdentity.xsd"/>
- <xsd:include schemaLocation="siri_situationServiceTypes.xsd"/>
- <xsd:include schemaLocation="siri_situationReasons.xsd"/>
- <xsd:include schemaLocation="siri_situationAffects.xsd"/>
- <xsd:include schemaLocation="siri_situationActions.xsd"/>
- <xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
- <!-- ======================================================================= -->
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>Waldemar Isajkin (INIT GmbH)</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 Kizoom SITUATION Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-05-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2008-07-05</Modified>
-     <!-- 
+	<!-- ======================================================================= -->
+	<!--Needed to work around import limitation in JAXB - all namespaces. -->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/>
+	<xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_situationIdentity.xsd"/>
+	<xsd:include schemaLocation="siri_situationServiceTypes.xsd"/>
+	<xsd:include schemaLocation="siri_situationReasons.xsd"/>
+	<xsd:include schemaLocation="siri_situationAffects.xsd"/>
+	<xsd:include schemaLocation="siri_situationActions.xsd"/>
+	<xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>Waldemar Isajkin (INIT GmbH)</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 Kizoom SITUATION Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-05-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2008-07-05</Modified>
+					<!-- 
        1) correct data type to be participant ref not participant pair.
        2) add missing scopeType to classifier.
 	  -->
-    </Date>
-    <Date>
-     <Modified>2011-04-18</Modified>
-     <!-- AffectedVehicleJourney should allow multiple journeys. Brian Ferris onebusaway.org -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- (since SIRI 2.0)
+				</Date>
+				<Date>
+					<Modified>2011-04-18</Modified>
+					<!-- AffectedVehicleJourney should allow multiple journeys. Brian Ferris onebusaway.org -->
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- (since SIRI 2.0)
        Use revised 2.0 definitions 
        Update to use DATEXII V2.0 schema 
        Namespace changed from http://datex2.eu/schema/1_0/1_0 to http://datex2.eu/schema/2_0RC1/2_0
@@ -72,54 +72,55 @@ siri_model\siri_situation-v2.0.xsd:
        Correct type on EasementRef to normalized string. 
        Allow translations of NLString elements
       -->
-    </Date>
-    <Date>
-     <Modified>2013-02-11</Modified>
-     <!-- Correction: Certain elements of DescriptionGroup unbounded. -->
-    </Date>
-    <Date>
-     <Modified>2013-10-01</Modified>
-     <!-- [VDV] Added TpegSubReasonGroup to the ReasonGroup as described in the SX Documentation -->
-    </Date>
-    <Date>
-     <Modified>2014-06-20</Modified>
-     <!-- [fr] Add additional small delay bands -->
-    </Date>
-    <Date>
-     <Modified>2019-09-01</Modified>
-     <!-- SIRI 2.1
+				</Date>
+				<Date>
+					<Modified>2013-02-11</Modified>
+					<!-- Correction: Certain elements of DescriptionGroup unbounded. -->
+				</Date>
+				<Date>
+					<Modified>2013-10-01</Modified>
+					<!-- [VDV] Added TpegSubReasonGroup to the ReasonGroup as described in the SX Documentation -->
+				</Date>
+				<Date>
+					<Modified>2014-06-20</Modified>
+					<!-- [fr] Add additional small delay bands -->
+				</Date>
+				<Date>
+					<Modified>2019-09-01</Modified>
+					<!-- SIRI 2.1
           Align with TPEG2
           Removed SubReason
           Added AdviceType, AdviceName, ConditionName, ConditionGroup
        -->
-    </Date>
-    <Description>
-     <p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs </p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_model/siri_situation.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>CEN</Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_stop.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modes.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_monitoredVehicleJourney.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-     <Copyright>Kizoom 2000-2005, CEN 2009-2021</Copyright>
-	</Rights>
-    <Source>
-     <ul>
-      <li>Schema Derived from the Kizoom XTIS schema </li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				</Date>
+				<Description>
+					<p>SIRI-SX is an XML schema for the exchange of structured SITUATIONs </p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_model/siri_situation.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>CEN</Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_stop.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modes.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_monitoredVehicleJourney.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>Kizoom 2000-2005, CEN 2009-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Schema Derived from the Kizoom XTIS schema </li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -127,1419 +128,1419 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
      </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-SX Xml Schema for PT SITUATIONs. Common element subschema</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-SX Situation Model.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:complexType name="AbstractSituationElementStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for abstract EntryAbstract type.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="CreationTime" type="xsd:dateTime">
-    <xsd:annotation>
-     <xsd:documentation>Time of creation of SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="SituationSharedIdentityGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="SituationElementStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for loggable Entry.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractSituationElementStructure">
-    <xsd:sequence>
-     <xsd:group ref="SituationInfoGroup"/>
-     <xsd:element name="VersionedAtTime" type="xsd:dateTime" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Time at which SITUATION element was versioned. Once versioned, no further changes can be made.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="SituationInfoGroup">
-  <xsd:annotation>
-   <xsd:documentation>situation Informatiion.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="References" type="ReferencesStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Associations with other SITUATIONs.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Source" type="SituationSourceStructure">
-    <xsd:annotation>
-     <xsd:documentation>Information about source of information, that is, where the agent using the capture client obtained an item of information, or in the case of an automated feed, an identifier of the specific feed. Can be used to obtain updates, verify details or otherwise assess relevance.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="ReferencesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for references.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="RelatedToRef" type="RelatedSituationStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>A reference to another SITUATION with an indication of the nature of the association, e.g. a cause, a result, an update. Note that a Entry that is an update, i.e. has the same IdentifierNumber but a later version number as a previous Entry alway has a supercedes relationship and this does not need to be expliciitly coded.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="RelatedSituationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a reference.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="CreationTime" type="xsd:dateTime">
-    <xsd:annotation>
-     <xsd:documentation>Time of creation of 'related to' assocation.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="SituationSharedIdentityGroup">
-    <xsd:annotation>
-     <xsd:documentation>Elements identifying a SITUATION element or an update to a SITUATION. Participant reference is optional and may be supplied from context.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:element name="ExternalReference" type="xsd:string" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>A single string that identifiers the referenced SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="RelatedAs" type="RelatedToEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Relationship of refercence to the referncing SITUATION e.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:simpleType name="RelatedToEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Type of Source.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="cause"/>
-   <xsd:enumeration value="effect"/>
-   <xsd:enumeration value="correctionTo"/>
-   <xsd:enumeration value="update"/>
-   <xsd:enumeration value="supercedes"/>
-   <xsd:enumeration value="supercededBy"/>
-   <xsd:enumeration value="associated"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <!--===PT SITUATION =========================================== -->
- <xsd:element name="PtSituationElement" type="PtSituationElementStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for individual IPT ncident.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="PtSituationElementStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for individual PT SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="SituationElementStructure">
-    <xsd:sequence>
-     <xsd:group ref="PtSituationBodyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="PtSituationBodyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Body of SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="StatusGroup"/>
-   <xsd:sequence>
-    <xsd:group ref="TemporalGroup"/>
-    <xsd:group ref="ClassifierGroup"/>
-    <xsd:group ref="DescriptionGroup"/>
-    <xsd:group ref="PtBodyGroup" minOccurs="0"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="PtBodyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Body of SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Structured model identifiying parts of transport network affected by SITUATION. OPERATOR and NETWORK values will be defaulted to values in general Context unless explicitly overridden.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Structured model describing effect of the SITUATION on PT system.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PublishingActions" type="ActionsStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Structured model describing distribution actions to handle SITUATION. Any actions stated completely replace those from Context. If no actions are stated, any actions from general Context are used.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!--===PT SITUATION =========================================== -->
- <xsd:element name="RoadSituationElement" type="RoadSituationElementStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for individual IPT ncident.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="RoadSituationElementStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for individual PT SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="SituationElementStructure">
-    <xsd:sequence>
-     <xsd:group ref="RoadSituationBodyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="RoadSituationBodyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Body of SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="StatusGroup"/>
-   <xsd:sequence>
-    <xsd:group ref="TemporalGroup"/>
-    <xsd:group ref="ClassifierGroup"/>
-    <xsd:group ref="DescriptionGroup"/>
-    <xsd:group ref="RoadBodyGroup"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="RoadBodyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Datex 2 SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Structured model identifiying parts of transport network affected by SITUATION. OPERATOR and Network values will be defaulted to values in general Context unless explicitly overridden.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Structured model describing effect of the SITUATION on PT system.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PublishingActions" type="ActionsStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Structured model describing distribution actions to handle SITUATION. Any actions stated completely replace those from Context. If no actions are stated, any actions from general Context are used.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="SituationRecord" type="D2LogicalModel:SituationRecord" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Datex2 SITUATION Record.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="Datex2ManagementGroup">
-  <xsd:annotation>
-   <xsd:documentation>Datex2 SITUATION management elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="situationRecordCreationReference" type="D2LogicalModel:String">
-    <xsd:annotation>
-     <xsd:documentation>A unique alphanumeric reference (either an external reference or GUID) of the SITUATIONRecord object (the first version of the record) that was created by the original supplier.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="situationRecordCreationTime" type="D2LogicalModel:DateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The date/time that the SITUATIONRecord object (the first version of the record) was created by the original supplier.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="situationRecordObservationTime" type="D2LogicalModel:DateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The date/time that the information represented by the current version of the SITUATIONRecord was observed by the original (potentially external) source of the information.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="situationRecordVersion" type="D2LogicalModel:NonNegativeInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Each record within a SITUATION may iterate through a series of versions during its life time. The SITUATION record version uniquely identifies the version of a particular record within a SITUATION. It is generated and used by systems external to DATEX 2.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="situationRecordVersionTime" type="D2LogicalModel:DateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The date/time that this current version of the SITUATIONRecord was written into the database of the supplier which is involved in the data exchange.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="situationRecordFirstSupplierVersionTime" type="D2LogicalModel:DateTime">
-    <xsd:annotation>
-     <xsd:documentation>The date/time that the current version of the SITUATION Record was written into the database of the original supplier in the supply chain.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="Datex2SituationGroup">
-  <xsd:annotation>
-   <xsd:documentation>Datex2 SITUATION common elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="probabilityOfOccurrence" type="D2LogicalModel:ProbabilityOfOccurrenceEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>An assessment of the degree of likelihood that the reported event will occur.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Source" type="D2LogicalModel:Source" minOccurs="0"/>
-   <xsd:element name="validity" type="D2LogicalModel:Validity" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="Datex2RoadGroup">
-  <xsd:annotation>
-   <xsd:documentation>Datex2 Trrffic element road.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="impact" type="D2LogicalModel:Impact" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Impact of Road SITUATION as specified by Datex2.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="cause" type="D2LogicalModel:Cause" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Impact of Road SITUATION as specified by Datex2 model.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="generalPublicComment" type="D2LogicalModel:Comment" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation> Datex 2 comments for public use.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="nonGeneralPublicComment" type="D2LogicalModel:Comment" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Ccomments not for public use.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="groupOfLocations" type="D2LogicalModel:GroupOfLocations" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Datex 2 model of where event ois taking place on the road.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="Datex2OtherGroup">
-  <xsd:annotation>
-   <xsd:documentation>Datex2 Tarffic element.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="management" type="D2LogicalModel:Management" minOccurs="0"/>
-   <xsd:element name="situationRecordExtension" type="D2LogicalModel:ExtensionType" minOccurs="0"/>
-   <xsd:element name="trafficElementExtension" type="D2LogicalModel:ExtensionType" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="AffectedRoadStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Raod scope for scope of SITUATION or effect.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Road" type="D2LogicalModel:RoadsideReferencePointLinear" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Affected Road as described by a Date2x location.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="ProjectionGroup">
-    <xsd:annotation>
-     <xsd:documentation>Optional spatial projection of road. Can be used to distribute the path of the road to systems that do not already hold it. To pass just a Reference, use Datex2 location.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="OptionalTrafficElementStructure" abstract="true">
-  <xsd:annotation>
-   <xsd:documentation>An event which is not planned by the traffic OPERATOR, which is affecting, or has the potential to affect traffic flow. This SIRI-SX element embeds the Datex2 TrafficElement, making all elements optional because they may alternatvielky be specified by common SIRI-SRX SITUATION elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="Datex2ManagementGroup"/>
-   <xsd:group ref="Datex2SituationGroup"/>
-   <xsd:group ref="Datex2RoadGroup"/>
-   <xsd:group ref="Datex2OtherGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ===Source================================================= -->
- <xsd:simpleType name="SituationSourceTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Type of Source.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="directReport"/>
-   <xsd:enumeration value="email"/>
-   <xsd:enumeration value="phone"/>
-   <xsd:enumeration value="fax"/>
-   <xsd:enumeration value="post"/>
-   <xsd:enumeration value="feed"/>
-   <xsd:enumeration value="radio"/>
-   <xsd:enumeration value="tv"/>
-   <xsd:enumeration value="web"/>
-   <xsd:enumeration value="pager"/>
-   <xsd:enumeration value="text"/>
-   <xsd:enumeration value="other"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="SituationSourceStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a source, i.e. provider of information.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Country" type="ifopt:CountryRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Country of origin of source element.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="SourceType" type="SituationSourceTypeEnumeration">
-    <xsd:annotation>
-     <xsd:documentation>Nature of Source.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="SituationSourceDetailsGroup">
-    <xsd:annotation>
-     <xsd:documentation>Further contact details about source. May be used for udpoates or verifcation.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:element name="SourceMethod" type="D2LogicalModel:SourceTypeEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Nature of method used to get Source.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AgentReference" type="xsd:string" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to an Agent, i.e. Capture client user who input a SITUATION. Available for use in intranet exchange of SITUATIONs.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Name of for source.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="SourceRole" type="xsd:string" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Job title of Source.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="TimeOfCommunication" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Time of communication of message, if different from creation time.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ExternalCode" type="xsd:string" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>External system reference to SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="SourceFile" type="xsd:anyURI" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Electronic file / attachment containing information about SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="SituationSourceDetailsGroup">
-  <xsd:annotation>
-   <xsd:documentation>Group of source details.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Email" type="EmailAddressType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Email of Supplier of information.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Phone" type="PhoneType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Phone number of Supplier of information.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Fax" type="PhoneType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Fax number of Supplier of information.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Web" type="xsd:anyURI" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Information was obtained from a web site URL of site and/or page.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Other" type="xsd:string" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Other information about source.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ===Status================================================= -->
- <xsd:group name="StatusGroup">
-  <xsd:annotation>
-   <xsd:documentation>Status elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Verification" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the SITUATION has been verified.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleType>
-     <xsd:restriction base="VerificationStatusEnumeration"/>
-    </xsd:simpleType>
-   </xsd:element>
-   <xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>ProgressStatus. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="QualityIndex" type="QualityIndexEnumeration" default="reliable" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Assessement of likely correctness of data. Default is reliable</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Reality" type="D2LogicalModel:InformationStatusEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether SITUATION is real or a test.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Likelihood" type="D2LogicalModel:ProbabilityOfOccurrenceEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Likellihood of a future situation happening.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Publication" type="PublicationStatusType" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Publishing status one of a specified set of substates to which a SITUATION can be assigned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="WorkflowStatusEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Entry Status.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="draft"/>
-   <xsd:enumeration value="pendingApproval"/>
-   <xsd:enumeration value="approvedDraft"/>
-   <xsd:enumeration value="open"/>
-   <xsd:enumeration value="published"/>
-   <xsd:enumeration value="closing"/>
-   <xsd:enumeration value="closed"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="PublicationStatusType">
-  <xsd:annotation>
-   <xsd:documentation>Type for Publication status.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <!-- ===Time=========================================== -->
- <xsd:group name="TemporalGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements affecting temporal scope of SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Overall inclusive Period of applicability of SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Repetitions" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>situation applies only on the repeated day types within the overall validity period(s). For example Sunday.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element ref="DayType" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Publication Window for SITUATION if different from validity period.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ===Classification=========================================== -->
- <xsd:group name="ClassifierGroup">
-  <xsd:annotation>
-   <xsd:documentation>Structured Classification Elements using TPEG Pts038 AlertCause.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="ReasonGroup"/>
-   <xsd:element ref="Severity" minOccurs="0"/>
-   <xsd:element name="Priority" type="xsd:nonNegativeInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Arbitrary rating of priority 1-High.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Sensitivity" type="SensitivityEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Confidentiality of SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Audience" type="AudienceEnumeration" default="public" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Intended audience of SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ScopeType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Nature of scope, e.g. general, network.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleType>
-     <xsd:restriction base="ScopeTypeEnumeration"/>
-    </xsd:simpleType>
-   </xsd:element>
-   <xsd:element ref="ReportType" minOccurs="0"/>
-   <xsd:element name="Planned" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the SITUATION was planned (eg engineering works) or unplanned (eg service alteration). Default is 'false', i.e. unplanned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Arbitrary application specific classifiers.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="SecondaryReasons" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Additional reasons</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence maxOccurs="unbounded">
-      <xsd:element name="Reason">
-       <xsd:annotation>
-        <xsd:documentation>Reason</xsd:documentation>
-       </xsd:annotation>
-       <xsd:complexType>
-        <xsd:sequence>
-         <xsd:group ref="ReasonGroup"/>
-        </xsd:sequence>
-       </xsd:complexType>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="ReasonGroup">
-  <xsd:annotation>
-   <xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ReasonName is used instead. 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-SX Xml Schema for PT SITUATIONs. Common element subschema</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-SX Situation Model.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="AbstractSituationElementStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for abstract EntryAbstract type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CreationTime" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Time of creation of SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="SituationSharedIdentityGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SituationElementStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for loggable Entry.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractSituationElementStructure">
+				<xsd:sequence>
+					<xsd:group ref="SituationInfoGroup"/>
+					<xsd:element name="VersionedAtTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Time at which SITUATION element was versioned. Once versioned, no further changes can be made.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="SituationInfoGroup">
+		<xsd:annotation>
+			<xsd:documentation>situation Informatiion.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="References" type="ReferencesStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Associations with other SITUATIONs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Source" type="SituationSourceStructure">
+				<xsd:annotation>
+					<xsd:documentation>Information about source of information, that is, where the agent using the capture client obtained an item of information, or in the case of an automated feed, an identifier of the specific feed. Can be used to obtain updates, verify details or otherwise assess relevance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="ReferencesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for references.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="RelatedToRef" type="RelatedSituationStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A reference to another SITUATION with an indication of the nature of the association, e.g. a cause, a result, an update. Note that a Entry that is an update, i.e. has the same IdentifierNumber but a later version number as a previous Entry alway has a supercedes relationship and this does not need to be expliciitly coded.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="RelatedSituationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a reference.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CreationTime" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Time of creation of 'related to' assocation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="SituationSharedIdentityGroup">
+				<xsd:annotation>
+					<xsd:documentation>Elements identifying a SITUATION element or an update to a SITUATION. Participant reference is optional and may be supplied from context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="ExternalReference" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A single string that identifiers the referenced SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RelatedAs" type="RelatedToEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Relationship of refercence to the referncing SITUATION e.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="RelatedToEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for Type of Source.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="cause"/>
+			<xsd:enumeration value="effect"/>
+			<xsd:enumeration value="correctionTo"/>
+			<xsd:enumeration value="update"/>
+			<xsd:enumeration value="supercedes"/>
+			<xsd:enumeration value="supercededBy"/>
+			<xsd:enumeration value="associated"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--===PT SITUATION =========================================== -->
+	<xsd:element name="PtSituationElement" type="PtSituationElementStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual IPT ncident.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="PtSituationElementStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual PT SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="SituationElementStructure">
+				<xsd:sequence>
+					<xsd:group ref="PtSituationBodyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="PtSituationBodyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Body of SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="StatusGroup"/>
+			<xsd:sequence>
+				<xsd:group ref="TemporalGroup"/>
+				<xsd:group ref="ClassifierGroup"/>
+				<xsd:group ref="DescriptionGroup"/>
+				<xsd:group ref="PtBodyGroup" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="PtBodyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Body of SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Structured model identifiying parts of transport network affected by SITUATION. OPERATOR and NETWORK values will be defaulted to values in general Context unless explicitly overridden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Structured model describing effect of the SITUATION on PT system.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PublishingActions" type="ActionsStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Structured model describing distribution actions to handle SITUATION. Any actions stated completely replace those from Context. If no actions are stated, any actions from general Context are used.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!--===PT SITUATION =========================================== -->
+	<xsd:element name="RoadSituationElement" type="RoadSituationElementStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual IPT ncident.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="RoadSituationElementStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual PT SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="SituationElementStructure">
+				<xsd:sequence>
+					<xsd:group ref="RoadSituationBodyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="RoadSituationBodyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Body of SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="StatusGroup"/>
+			<xsd:sequence>
+				<xsd:group ref="TemporalGroup"/>
+				<xsd:group ref="ClassifierGroup"/>
+				<xsd:group ref="DescriptionGroup"/>
+				<xsd:group ref="RoadBodyGroup"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="RoadBodyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Datex 2 SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Structured model identifiying parts of transport network affected by SITUATION. OPERATOR and Network values will be defaulted to values in general Context unless explicitly overridden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Consequences" type="PtConsequencesStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Structured model describing effect of the SITUATION on PT system.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PublishingActions" type="ActionsStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Structured model describing distribution actions to handle SITUATION. Any actions stated completely replace those from Context. If no actions are stated, any actions from general Context are used.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SituationRecord" type="D2LogicalModel:SituationRecord" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Datex2 SITUATION Record.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="Datex2ManagementGroup">
+		<xsd:annotation>
+			<xsd:documentation>Datex2 SITUATION management elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="situationRecordCreationReference" type="D2LogicalModel:String">
+				<xsd:annotation>
+					<xsd:documentation>A unique alphanumeric reference (either an external reference or GUID) of the SITUATIONRecord object (the first version of the record) that was created by the original supplier.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="situationRecordCreationTime" type="D2LogicalModel:DateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The date/time that the SITUATIONRecord object (the first version of the record) was created by the original supplier.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="situationRecordObservationTime" type="D2LogicalModel:DateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The date/time that the information represented by the current version of the SITUATIONRecord was observed by the original (potentially external) source of the information.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="situationRecordVersion" type="D2LogicalModel:NonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Each record within a SITUATION may iterate through a series of versions during its life time. The SITUATION record version uniquely identifies the version of a particular record within a SITUATION. It is generated and used by systems external to DATEX 2.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="situationRecordVersionTime" type="D2LogicalModel:DateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The date/time that this current version of the SITUATIONRecord was written into the database of the supplier which is involved in the data exchange.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="situationRecordFirstSupplierVersionTime" type="D2LogicalModel:DateTime">
+				<xsd:annotation>
+					<xsd:documentation>The date/time that the current version of the SITUATION Record was written into the database of the original supplier in the supply chain.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="Datex2SituationGroup">
+		<xsd:annotation>
+			<xsd:documentation>Datex2 SITUATION common elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="probabilityOfOccurrence" type="D2LogicalModel:ProbabilityOfOccurrenceEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>An assessment of the degree of likelihood that the reported event will occur.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Source" type="D2LogicalModel:Source" minOccurs="0"/>
+			<xsd:element name="validity" type="D2LogicalModel:Validity" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="Datex2RoadGroup">
+		<xsd:annotation>
+			<xsd:documentation>Datex2 Trrffic element road.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="impact" type="D2LogicalModel:Impact" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Impact of Road SITUATION as specified by Datex2.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="cause" type="D2LogicalModel:Cause" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Impact of Road SITUATION as specified by Datex2 model.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="generalPublicComment" type="D2LogicalModel:Comment" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation> Datex 2 comments for public use.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nonGeneralPublicComment" type="D2LogicalModel:Comment" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Ccomments not for public use.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="groupOfLocations" type="D2LogicalModel:GroupOfLocations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Datex 2 model of where event ois taking place on the road.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="Datex2OtherGroup">
+		<xsd:annotation>
+			<xsd:documentation>Datex2 Tarffic element.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="management" type="D2LogicalModel:Management" minOccurs="0"/>
+			<xsd:element name="situationRecordExtension" type="D2LogicalModel:ExtensionType" minOccurs="0"/>
+			<xsd:element name="trafficElementExtension" type="D2LogicalModel:ExtensionType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="AffectedRoadStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Raod scope for scope of SITUATION or effect.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Road" type="D2LogicalModel:RoadsideReferencePointLinear" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Affected Road as described by a Date2x location.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="ProjectionGroup">
+				<xsd:annotation>
+					<xsd:documentation>Optional spatial projection of road. Can be used to distribute the path of the road to systems that do not already hold it. To pass just a Reference, use Datex2 location.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OptionalTrafficElementStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>An event which is not planned by the traffic OPERATOR, which is affecting, or has the potential to affect traffic flow. This SIRI-SX element embeds the Datex2 TrafficElement, making all elements optional because they may alternatvielky be specified by common SIRI-SRX SITUATION elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="Datex2ManagementGroup"/>
+			<xsd:group ref="Datex2SituationGroup"/>
+			<xsd:group ref="Datex2RoadGroup"/>
+			<xsd:group ref="Datex2OtherGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ===Source================================================= -->
+	<xsd:simpleType name="SituationSourceTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for Type of Source.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="directReport"/>
+			<xsd:enumeration value="email"/>
+			<xsd:enumeration value="phone"/>
+			<xsd:enumeration value="fax"/>
+			<xsd:enumeration value="post"/>
+			<xsd:enumeration value="feed"/>
+			<xsd:enumeration value="radio"/>
+			<xsd:enumeration value="tv"/>
+			<xsd:enumeration value="web"/>
+			<xsd:enumeration value="pager"/>
+			<xsd:enumeration value="text"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="SituationSourceStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a source, i.e. provider of information.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Country" type="ifopt:CountryRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Country of origin of source element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SourceType" type="SituationSourceTypeEnumeration">
+				<xsd:annotation>
+					<xsd:documentation>Nature of Source.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="SituationSourceDetailsGroup">
+				<xsd:annotation>
+					<xsd:documentation>Further contact details about source. May be used for udpoates or verifcation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="SourceMethod" type="D2LogicalModel:SourceTypeEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nature of method used to get Source.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AgentReference" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to an Agent, i.e. Capture client user who input a SITUATION. Available for use in intranet exchange of SITUATIONs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of for source.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SourceRole" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Job title of Source.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TimeOfCommunication" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Time of communication of message, if different from creation time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExternalCode" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>External system reference to SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SourceFile" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Electronic file / attachment containing information about SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="SituationSourceDetailsGroup">
+		<xsd:annotation>
+			<xsd:documentation>Group of source details.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Email" type="EmailAddressType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Email of Supplier of information.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Phone" type="PhoneType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Phone number of Supplier of information.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Fax" type="PhoneType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Fax number of Supplier of information.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Web" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Information was obtained from a web site URL of site and/or page.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Other" type="xsd:string" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Other information about source.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ===Status================================================= -->
+	<xsd:group name="StatusGroup">
+		<xsd:annotation>
+			<xsd:documentation>Status elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Verification" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the SITUATION has been verified.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="VerificationStatusEnumeration"/>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Progress" type="WorkflowStatusEnumeration" default="open" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>ProgressStatus. One of a specified set of overall processing states assigned to SITUATION. For example, 'Draft' for not yet published; 'Published' for live SITUATIONs; 'Closed' indicates a completed SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="QualityIndex" type="QualityIndexEnumeration" default="reliable" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Assessement of likely correctness of data. Default is reliable</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Reality" type="D2LogicalModel:InformationStatusEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether SITUATION is real or a test.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Likelihood" type="D2LogicalModel:ProbabilityOfOccurrenceEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Likellihood of a future situation happening.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Publication" type="PublicationStatusType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Publishing status one of a specified set of substates to which a SITUATION can be assigned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="WorkflowStatusEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for Entry Status.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="draft"/>
+			<xsd:enumeration value="pendingApproval"/>
+			<xsd:enumeration value="approvedDraft"/>
+			<xsd:enumeration value="open"/>
+			<xsd:enumeration value="published"/>
+			<xsd:enumeration value="closing"/>
+			<xsd:enumeration value="closed"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PublicationStatusType">
+		<xsd:annotation>
+			<xsd:documentation>Type for Publication status.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<!-- ===Time=========================================== -->
+	<xsd:group name="TemporalGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements affecting temporal scope of SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ValidityPeriod" type="HalfOpenTimestampOutputRangeStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Overall inclusive Period of applicability of SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Repetitions" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>situation applies only on the repeated day types within the overall validity period(s). For example Sunday.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="DayType" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="PublicationWindow" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Publication Window for SITUATION if different from validity period.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ===Classification=========================================== -->
+	<xsd:group name="ClassifierGroup">
+		<xsd:annotation>
+			<xsd:documentation>Structured Classification Elements using TPEG Pts038 AlertCause.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="ReasonGroup"/>
+			<xsd:element ref="Severity" minOccurs="0"/>
+			<xsd:element name="Priority" type="xsd:nonNegativeInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Arbitrary rating of priority 1-High.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Sensitivity" type="SensitivityEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Confidentiality of SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Audience" type="AudienceEnumeration" default="public" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Intended audience of SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ScopeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nature of scope, e.g. general, network.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="ScopeTypeEnumeration"/>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element ref="ReportType" minOccurs="0"/>
+			<xsd:element name="Planned" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the SITUATION was planned (eg engineering works) or unplanned (eg service alteration). Default is 'false', i.e. unplanned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Arbitrary application specific classifiers.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SecondaryReasons" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Additional reasons</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence maxOccurs="unbounded">
+						<xsd:element name="Reason">
+							<xsd:annotation>
+								<xsd:documentation>Reason</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:group ref="ReasonGroup"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ReasonGroup">
+		<xsd:annotation>
+			<xsd:documentation>Structured Reason elements. The TpegReason and/or PublicEventReason enumerated values can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ReasonName is used instead. 
 Note: this means that ReasonName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="TpegReasonGroup">
-    <xsd:annotation>
-     <xsd:documentation>Structured classification of nature of SITUATION, from which a standardized message can be generated.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:group ref="TpegSubReasonGroup" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only TpegReasonGroup and PublicEventReason.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:element name="PublicEventReason" type="D2LogicalModel:PublicEventTypeEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Structured classification of Public Event, from which a standardized message can be generated.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ReasonName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Textual classification of nature of SITUATION, from which a standardized message can be generated. Not normally needed, except when TpegReason and PublicEventReason are absent.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="SensitivityEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Sensitivity.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="veryHigh"/>
-   <xsd:enumeration value="high"/>
-   <xsd:enumeration value="medium"/>
-   <xsd:enumeration value="low"/>
-   <xsd:enumeration value="veryLow"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="AudienceEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Audience.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="public"/>
-   <xsd:enumeration value="emergencyServices"/>
-   <xsd:enumeration value="staff"/>
-   <xsd:enumeration value="stationStaff"/>
-   <xsd:enumeration value="management"/>
-   <xsd:enumeration value="authorities"/>
-   <xsd:enumeration value="infoServices"/>
-   <xsd:enumeration value="transportOperators"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="NatureEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Type for Quality of data indication.  </xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="plannedOnly"/>
-   <xsd:enumeration value="unplannedOnly"/>
-   <xsd:enumeration value="both"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="ScopeTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for ScopeType - TPEG Pts36, AlertForType with additional values</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stopPlace">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_1, STOP PLACE</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="line">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_2, line</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="route">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_3, route</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="publicTransportService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_4, individual PT service</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="operator">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_5, operator</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="city">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_6, city</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="area">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_7, area</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stopPoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_8, stop point</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stopPlaceComponent">
-    <xsd:annotation>
-     <xsd:documentation>STOP PLACE component</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="place">
-    <xsd:annotation>
-     <xsd:documentation>place</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="network">
-    <xsd:annotation>
-     <xsd:documentation>network</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="vehicleJourney">
-    <xsd:annotation>
-     <xsd:documentation>vehicle journey</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="datedVehicleJourney">
-    <xsd:annotation>
-     <xsd:documentation>dated vehicle journey</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="connectionLink">
-    <xsd:annotation>
-     <xsd:documentation>connection link</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="interchange">
-    <xsd:annotation>
-     <xsd:documentation>interchange</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="allPT">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="general">
-    <xsd:annotation>
-     <xsd:documentation>general</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="road">
-    <xsd:annotation>
-     <xsd:documentation>road</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefined">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts36_255, undefined</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ====Affects Descriptions======================================= -->
- <xsd:complexType name="AffectsScopeStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Location model for scope of SITUATION or effect.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="AreaOfInterest" type="D2LogicalModel:AreaOfInterestEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Affected overall Geographic scope.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Operators" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Affected OPERATORs, If absent, taken from context. If present, any OPERATORs stated completely replace those from context.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:choice>
-      <xsd:element name="AllOperators" type="EmptyType">
-       <xsd:annotation>
-        <xsd:documentation>All OPERATORs.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="AffectedOperator" type="AffectedOperatorStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Operators of services affected by SITUATION.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:choice>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Networks" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Networks affected by SITUATION.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="AffectedNetwork" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Networks and Route(s) affected by SITUATION.</xsd:documentation>
-       </xsd:annotation>
-       <xsd:complexType>
-        <xsd:complexContent>
-         <xsd:extension base="AffectedNetworkStructure"/>
-        </xsd:complexContent>
-       </xsd:complexType>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="StopPoints" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>STOP POINTs affected by SITUATION.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>STOP POINT affected by SITUATION.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="StopPlaces" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Places other than STOP POINTs affected by SITUATION.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>STOP PLACE affected by SITUATION.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Places" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Places other than STOP POINTs affected by SITUATION.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="AffectedPlace" type="AffectedPlaceStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Place affected by SITUATION.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="VehicleJourneys" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Specific journeys affected by SITUATION.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="AffectedVehicleJourney" type="AffectedVehicleJourneyStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Journeys affected by the SITUATION.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Vehicles" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Specific vehicles affected by SITUATION. ((since SIRI 2.0))</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="AffectedVehicle" type="AffectedVehicleStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Vehicles affected by the SITUATION. ((since SIRI 2.0))</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Roads" type="AffectedRoadsStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Roads affected by.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="AffectedRoadsStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Location model for scope of SITUATION or effect.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Datex2Locations" type="D2LogicalModel:GroupOfLocations" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Refereences to road network locations affected by the SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AffectedRoad" type="AffectedRoadStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of affected road.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ====Text Descriptions======================================= -->
- <xsd:complexType name="ImageStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for image.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice>
-    <xsd:element name="ImageRef" type="xsd:anyURI">
-     <xsd:annotation>
-      <xsd:documentation>Reference to an image.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="ImageBinary" type="xsd:base64Binary">
-     <xsd:annotation>
-      <xsd:documentation>Embedded image.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:element name="ImageContent" type="ImageContentEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Categorisation of image content.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="DescriptionGroup">
-  <xsd:annotation>
-   <xsd:documentation>Text description of SITUATION. Some or all of this may have been generated from the other structured content elements. Where text has been overriden this is indicated.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Default language.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Summary" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Summary of SITUATION. If absent should be generated from structure elements / and or by condensing Description.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Description" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Detail" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Additional descriptive details about the SITUATION  (Unbounded since SIRI 2.0).</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Advice" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Further advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Internal" type="DefaultedTextStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Images" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Image" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Image description.</xsd:documentation>
-       </xsd:annotation>
-       <xsd:complexType>
-        <xsd:complexContent>
-         <xsd:extension base="ImageStructure"/>
-        </xsd:complexContent>
-       </xsd:complexType>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="InfoLinks" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="InfoLink" type="InfoLinkStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Hyperlink description.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="ImageContentEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for image content.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="map"/>
-   <xsd:enumeration value="graphic"/>
-   <xsd:enumeration value="logo"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="DefaultedTextStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a text that may be overridden.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="NaturalLanguageStringStructure">
-    <xsd:attribute name="overridden" type="xsd:boolean" use="optional" default="true">
-     <xsd:annotation>
-      <xsd:documentation>Whether the text value has been overridden from the generated default. Default is 'true'.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:simpleType name="LinkContentEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for image content.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="timetable"/>
-   <xsd:enumeration value="relatedSite"/>
-   <xsd:enumeration value="details"/>
-   <xsd:enumeration value="advice"/>
-   <xsd:enumeration value="other"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="InfoLinkStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a general hyperlink.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Uri" type="xsd:anyURI">
-    <xsd:annotation>
-     <xsd:documentation>URI for link.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Label for Link.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Image" type="ImageStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Image to use when presenting hyperlink.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="LinkContent" type="LinkContentEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Categorisation of link content.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ====Effects======================================= -->
- <xsd:complexType name="PtConsequencesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for list of effects.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Consequence" type="PtConsequenceStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Nature of the effect to disrupt (or restore) service, and further details.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="PtConsequenceStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for disruption.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="ConditionGroup">
-    <xsd:annotation>
-     <xsd:documentation>Condition(s) of effect of disruptions.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Severity of disruption if different from that of SITUATION. TPEG pti26</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Parts of transport network affected by disruption if different from that of SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Suitabilities" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Effect on different passenger needs.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Suitability" type="acsb:SuitabilityStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Effect on a passenger need.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Advice" type="PtAdviceStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Advice to passengers.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Blocking" type="BlockingStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>How Disruption should be handled in Info systems.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Boarding" type="BoardingStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Change to normal boarding activity allowed at stop.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Delays" type="DelaysStructure" minOccurs="0"/>
-   <xsd:element name="Casualties" type="CasualtiesStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Information on casualties.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Easements" type="EasementsStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of fare exceptions allowed because of disruption.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="ConditionGroup">
-  <xsd:annotation>
-   <xsd:documentation>Structured elements of a SITUATION condition. The Condition enumerated value(s) can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ConditionName is used instead. 
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="TpegReasonGroup">
+				<xsd:annotation>
+					<xsd:documentation>Structured classification of nature of SITUATION, from which a standardized message can be generated.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="TpegSubReasonGroup" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use only TpegReasonGroup and PublicEventReason.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="PublicEventReason" type="D2LogicalModel:PublicEventTypeEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Structured classification of Public Event, from which a standardized message can be generated.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ReasonName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Textual classification of nature of SITUATION, from which a standardized message can be generated. Not normally needed, except when TpegReason and PublicEventReason are absent.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="SensitivityEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for Sensitivity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="veryHigh"/>
+			<xsd:enumeration value="high"/>
+			<xsd:enumeration value="medium"/>
+			<xsd:enumeration value="low"/>
+			<xsd:enumeration value="veryLow"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AudienceEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for Audience.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="public"/>
+			<xsd:enumeration value="emergencyServices"/>
+			<xsd:enumeration value="staff"/>
+			<xsd:enumeration value="stationStaff"/>
+			<xsd:enumeration value="management"/>
+			<xsd:enumeration value="authorities"/>
+			<xsd:enumeration value="infoServices"/>
+			<xsd:enumeration value="transportOperators"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NatureEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Type for Quality of data indication.  </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="plannedOnly"/>
+			<xsd:enumeration value="unplannedOnly"/>
+			<xsd:enumeration value="both"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ScopeTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for ScopeType - TPEG Pts36, AlertForType with additional values</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopPlace">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_1, STOP PLACE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="line">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_2, line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="route">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_3, route</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="publicTransportService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_4, individual PT service</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="operator">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_5, operator</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="city">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_6, city</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="area">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_7, area</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopPoint">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_8, stop point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopPlaceComponent">
+				<xsd:annotation>
+					<xsd:documentation>STOP PLACE component</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="place">
+				<xsd:annotation>
+					<xsd:documentation>place</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="network">
+				<xsd:annotation>
+					<xsd:documentation>network</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vehicleJourney">
+				<xsd:annotation>
+					<xsd:documentation>vehicle journey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="datedVehicleJourney">
+				<xsd:annotation>
+					<xsd:documentation>dated vehicle journey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="connectionLink">
+				<xsd:annotation>
+					<xsd:documentation>connection link</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="interchange">
+				<xsd:annotation>
+					<xsd:documentation>interchange</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="allPT">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="general">
+				<xsd:annotation>
+					<xsd:documentation>general</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="road">
+				<xsd:annotation>
+					<xsd:documentation>road</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefined">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts36_255, undefined</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ====Affects Descriptions======================================= -->
+	<xsd:complexType name="AffectsScopeStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Location model for scope of SITUATION or effect.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="AreaOfInterest" type="D2LogicalModel:AreaOfInterestEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Affected overall Geographic scope.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Operators" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Affected OPERATORs, If absent, taken from context. If present, any OPERATORs stated completely replace those from context.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:choice>
+						<xsd:element name="AllOperators" type="EmptyType">
+							<xsd:annotation>
+								<xsd:documentation>All OPERATORs.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="AffectedOperator" type="AffectedOperatorStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Operators of services affected by SITUATION.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Networks" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Networks affected by SITUATION.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AffectedNetwork" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Networks and Route(s) affected by SITUATION.</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="AffectedNetworkStructure"/>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="StopPoints" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>STOP POINTs affected by SITUATION.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>STOP POINT affected by SITUATION.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="StopPlaces" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Places other than STOP POINTs affected by SITUATION.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>STOP PLACE affected by SITUATION.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Places" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Places other than STOP POINTs affected by SITUATION.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AffectedPlace" type="AffectedPlaceStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Place affected by SITUATION.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="VehicleJourneys" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Specific journeys affected by SITUATION.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AffectedVehicleJourney" type="AffectedVehicleJourneyStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Journeys affected by the SITUATION.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Vehicles" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Specific vehicles affected by SITUATION. ((since SIRI 2.0))</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AffectedVehicle" type="AffectedVehicleStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Vehicles affected by the SITUATION. ((since SIRI 2.0))</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Roads" type="AffectedRoadsStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Roads affected by.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AffectedRoadsStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Location model for scope of SITUATION or effect.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Datex2Locations" type="D2LogicalModel:GroupOfLocations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Refereences to road network locations affected by the SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AffectedRoad" type="AffectedRoadStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of affected road.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ====Text Descriptions======================================= -->
+	<xsd:complexType name="ImageStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for image.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="ImageRef" type="xsd:anyURI">
+					<xsd:annotation>
+						<xsd:documentation>Reference to an image.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ImageBinary" type="xsd:base64Binary">
+					<xsd:annotation>
+						<xsd:documentation>Embedded image.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="ImageContent" type="ImageContentEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Categorisation of image content.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="DescriptionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Text description of SITUATION. Some or all of this may have been generated from the other structured content elements. Where text has been overriden this is indicated.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default language.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Summary" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Summary of SITUATION. If absent should be generated from structure elements / and or by condensing Description.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of SITUATION. Should not repeat any strap line included in Summary.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Detail" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Additional descriptive details about the SITUATION  (Unbounded since SIRI 2.0).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Advice" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Further advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Internal" type="DefaultedTextStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>For internal information only, not passenger relevant</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Images" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Any images associated with SITUATION.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Image" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Image description.</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:complexContent>
+									<xsd:extension base="ImageStructure"/>
+								</xsd:complexContent>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="InfoLinks" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Hyperlinks to other resources associated with SITUATION.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="InfoLink" type="InfoLinkStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Hyperlink description.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="ImageContentEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for image content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="map"/>
+			<xsd:enumeration value="graphic"/>
+			<xsd:enumeration value="logo"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="DefaultedTextStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a text that may be overridden.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="NaturalLanguageStringStructure">
+				<xsd:attribute name="overridden" type="xsd:boolean" use="optional" default="true">
+					<xsd:annotation>
+						<xsd:documentation>Whether the text value has been overridden from the generated default. Default is 'true'.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="LinkContentEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for image content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="timetable"/>
+			<xsd:enumeration value="relatedSite"/>
+			<xsd:enumeration value="details"/>
+			<xsd:enumeration value="advice"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="InfoLinkStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a general hyperlink.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Uri" type="xsd:anyURI">
+				<xsd:annotation>
+					<xsd:documentation>URI for link.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Label" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Label for Link.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Image" type="ImageStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Image to use when presenting hyperlink.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LinkContent" type="LinkContentEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Categorisation of link content.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ====Effects======================================= -->
+	<xsd:complexType name="PtConsequencesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for list of effects.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Consequence" type="PtConsequenceStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Nature of the effect to disrupt (or restore) service, and further details.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PtConsequenceStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for disruption.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="ConditionGroup">
+				<xsd:annotation>
+					<xsd:documentation>Condition(s) of effect of disruptions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="Severity" type="SeverityEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Severity of disruption if different from that of SITUATION. TPEG pti26</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Affects" type="AffectsScopeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Parts of transport network affected by disruption if different from that of SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Suitabilities" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Effect on different passenger needs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Suitability" type="acsb:SuitabilityStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Effect on a passenger need.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Advice" type="PtAdviceStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Advice to passengers.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Blocking" type="BlockingStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>How Disruption should be handled in Info systems.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Boarding" type="BoardingStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Change to normal boarding activity allowed at stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Delays" type="DelaysStructure" minOccurs="0"/>
+			<xsd:element name="Casualties" type="CasualtiesStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Information on casualties.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Easements" type="EasementsStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of fare exceptions allowed because of disruption.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="ConditionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Structured elements of a SITUATION condition. The Condition enumerated value(s) can be used to generate standardized messages describing the SITUATION. If no enumerated values are given, ConditionName is used instead. 
 Note: this means that ConditionName is NOT a complete message, but only a (few) word(s) to be included in the message!</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="Condition" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Structured classification(s) of effect on service, from which a standardized message can be generated.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ConditionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Textual classification of effect on service, from which a standardized message can be generated. Not normally needed, except when Condition is absent.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="BoardingStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for boarding restrictions.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type of alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" default="boarding" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type of boarding allowed at stop. Default is 'Boarding'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="PtAdviceStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for (structured) advice. The AdviceType enumerated value can be used to generate standardized messages describing the SITUATION. If no enumerated value is given, AdviceName is used instead. 
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Condition" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Structured classification(s) of effect on service, from which a standardized message can be generated.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ConditionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Textual classification of effect on service, from which a standardized message can be generated. Not normally needed, except when Condition is absent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="BoardingStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for boarding restrictions.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ArrivalBoardingActivity" type="ArrivalBoardingActivityEnumeration" default="alighting" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of alighting allowed at stop. Default is 'Alighting'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DepartureBoardingActivity" type="DepartureBoardingActivityEnumeration" default="boarding" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type of boarding allowed at stop. Default is 'Boarding'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PtAdviceStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for (structured) advice. The AdviceType enumerated value can be used to generate standardized messages describing the SITUATION. If no enumerated value is given, AdviceName is used instead. 
 Note: this means that AdviceName is NOT a complete message, but only a (few) word(s) to be included in the message!
 Alternatively, AdviceRef can be used to reference a (complete) standardised advisory message.
    </xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="AdviceRef" type="AdviceRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a standard advisory NOTICE to be given to passengers if a particular condition arises.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Structured classification of advice for passengers in the given SITUATION, from which a standardized message can be generated.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AdviceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Textual classification of advice, from which a standardized message can be generated. Not normally needed, except when AdviceType is absent.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Details" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Further textual advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:simpleType name="AdviceTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pts039 - AdviceType, with some additional values</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="useReplacementBus">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_1, use replacement bus</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="useReplacementTrain">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_2, use replacement train</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="useAlternativeRoute">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_3, use the alternative route</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="goOnFoot">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_4, go on foot</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="dangerLeaveStation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_5, please leave the station! Danger!</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noMeansOfTravel">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_6, no means of travel</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="useDifferentStops">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_7, use different stops</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="useAlternativeStop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_8, use alternative stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="dangerDoNotLeaveVehicle">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_9, do not leave vehicle! Danger!</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="takeAdviceAnnouncements">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_10, take advice from announcements</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="takeAdvicePersonnel">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_11, take advice from personnel</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="obeyAdvicePolice">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_12, obey advice from police</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="useOtherPT">
-    <xsd:annotation>
-     <xsd:documentation>use other PT services</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="useInterchange">
-    <xsd:annotation>
-     <xsd:documentation>use interchange</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noAdvice">
-    <xsd:annotation>
-     <xsd:documentation>no advice</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedAdvice">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts39_255, undefined advice</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="takeDetour">
-    <xsd:annotation>
-     <xsd:documentation>take detour</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="useAlternativeAccess">
-    <xsd:annotation>
-     <xsd:documentation>change accessibility</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ===================================================== -->
- <xsd:complexType name="BlockingStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for blocking.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="JourneyPlanner" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether information about parts of the NETWORK identified by AffectsScope should be blocked from the Journey Planner. Default is false; do not suppress.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="RealTime" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether information about parts of the NETWORK identified by AffectsScope should be blocked from real-time departure info systems. Default is false; do not suppress.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="EasementsStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for easement info.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="TicketRestrictions" type="TicketRestrictionEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Ticket restriction conditiosn in effect. TPEG pti table pti25.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Easement" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of fare exceptions allowed because of disruption.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="EasementRef" type="xsd:normalizedString" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Refernce to a fare exceptions code that is allowed because of the disruption. An easement may relax a fare condition, for exampel "You may use your metro ticket on the bus', or 'You may use your bus ticket in teh metro between these two stops'. </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!--==Delay =========================================== -->
- <xsd:simpleType name="DelayBandEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Type for allowed values of DelayBand. Based on Datex2, with some additional values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:normalizedString">
-   <xsd:enumeration value="delayTwoMinutes"/>
-   <xsd:enumeration value="upToThreeMinutes"/>
-   <xsd:enumeration value="upToFourMinutes"/>
-   <xsd:enumeration value="upToFiveMinutes"/>
-   <xsd:enumeration value="upToEightMinutes"/>
-   <xsd:enumeration value="negligible"/>
-   <xsd:enumeration value="upToTenMinutes"/>
-   <xsd:enumeration value="betweenTenMinutesAndThirtyMinutes"/>
-   <xsd:enumeration value="betweenThirtyMinutesAndOneHour"/>
-   <xsd:enumeration value="betweenOneHourAndThreeHours"/>
-   <xsd:enumeration value="betweenThreeHoursAndSixHours"/>
-   <xsd:enumeration value="longerThanSixHours"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="DelaysStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for easement info.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="DelayBand" type="DelayBandEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Time band into which delay will fall.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DelayType" type="D2LogicalModel:DelaysTypeEnum" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Category of delay.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Delay" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Additional journey time needed to overcome disruption.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ======================================================================= -->
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="AdviceRef" type="AdviceRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a standard advisory NOTICE to be given to passengers if a particular condition arises.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AdviceType" type="AdviceTypeEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Structured classification of advice for passengers in the given SITUATION, from which a standardized message can be generated.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AdviceName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Textual classification of advice, from which a standardized message can be generated. Not normally needed, except when AdviceType is absent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Details" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Further textual advice to passengers.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="AdviceTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pts039 - AdviceType, with some additional values</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="useReplacementBus">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_1, use replacement bus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="useReplacementTrain">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_2, use replacement train</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="useAlternativeRoute">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_3, use the alternative route</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="goOnFoot">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_4, go on foot</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="dangerLeaveStation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_5, please leave the station! Danger!</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noMeansOfTravel">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_6, no means of travel</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="useDifferentStops">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_7, use different stops</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="useAlternativeStop">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_8, use alternative stop</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="dangerDoNotLeaveVehicle">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_9, do not leave vehicle! Danger!</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="takeAdviceAnnouncements">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_10, take advice from announcements</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="takeAdvicePersonnel">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_11, take advice from personnel</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="obeyAdvicePolice">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_12, obey advice from police</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="useOtherPT">
+				<xsd:annotation>
+					<xsd:documentation>use other PT services</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="useInterchange">
+				<xsd:annotation>
+					<xsd:documentation>use interchange</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noAdvice">
+				<xsd:annotation>
+					<xsd:documentation>no advice</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedAdvice">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts39_255, undefined advice</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="takeDetour">
+				<xsd:annotation>
+					<xsd:documentation>take detour</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="useAlternativeAccess">
+				<xsd:annotation>
+					<xsd:documentation>change accessibility</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ===================================================== -->
+	<xsd:complexType name="BlockingStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for blocking.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="JourneyPlanner" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether information about parts of the NETWORK identified by AffectsScope should be blocked from the Journey Planner. Default is false; do not suppress.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RealTime" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether information about parts of the NETWORK identified by AffectsScope should be blocked from real-time departure info systems. Default is false; do not suppress.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EasementsStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for easement info.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="TicketRestrictions" type="TicketRestrictionEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Ticket restriction conditiosn in effect. TPEG pti table pti25.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Easement" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of fare exceptions allowed because of disruption.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EasementRef" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Refernce to a fare exceptions code that is allowed because of the disruption. An easement may relax a fare condition, for exampel "You may use your metro ticket on the bus', or 'You may use your bus ticket in teh metro between these two stops'. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--==Delay =========================================== -->
+	<xsd:simpleType name="DelayBandEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Type for allowed values of DelayBand. Based on Datex2, with some additional values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="delayTwoMinutes"/>
+			<xsd:enumeration value="upToThreeMinutes"/>
+			<xsd:enumeration value="upToFourMinutes"/>
+			<xsd:enumeration value="upToFiveMinutes"/>
+			<xsd:enumeration value="upToEightMinutes"/>
+			<xsd:enumeration value="negligible"/>
+			<xsd:enumeration value="upToTenMinutes"/>
+			<xsd:enumeration value="betweenTenMinutesAndThirtyMinutes"/>
+			<xsd:enumeration value="betweenThirtyMinutesAndOneHour"/>
+			<xsd:enumeration value="betweenOneHourAndThreeHours"/>
+			<xsd:enumeration value="betweenThreeHoursAndSixHours"/>
+			<xsd:enumeration value="longerThanSixHours"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="DelaysStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for easement info.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DelayBand" type="DelayBandEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Time band into which delay will fall.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DelayType" type="D2LogicalModel:DelaysTypeEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Category of delay.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Delay" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Additional journey time needed to overcome disruption.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ======================================================================= -->
 </xsd:schema>

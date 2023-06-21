@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_FacilityMonitoring_service">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.1 CEN TC278 WG3 SG7 Editor Christophe Duquesne Dryade mailto:christophe.duquesne@dryade.net
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.1 CEN TC278 WG3 SG7 Editor Christophe Duquesne Dryade mailto:christophe.duquesne@dryade.net
         Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk
     </Creator>
-    <Date>
-     <Created>2007-01-22</Created>
-    </Date>
-    <Date>
-     <Modified>2007-01-22</Modified>
-    </Date>
-    <Date><Modified>2007-04-17</Modified>
+				<Date>
+					<Created>2007-01-22</Created>
+				</Date>
+				<Date>
+					<Modified>2007-01-22</Modified>
+				</Date>
+				<Date><Modified>2007-04-17</Modified>
 					 Name Space changes 
 				</Date>
-    <Date><Modified>2008-11-17</Modified>
+				<Date><Modified>2008-11-17</Modified>
 					 Revise to support substitution groups 
 				</Date>
-    <Date><Modified>2008-11-18</Modified>
+				<Date><Modified>2008-11-18</Modified>
 					 Revise in line with FM spec - add filters 
 				</Date>
-    <Date><Modified>2012-03-23</Modified>
+				<Date><Modified>2012-03-23</Modified>
 					 (since SIRI 2.0)
 					    Add Extensions tag to FacilityMonitoringSubscriptionRequest
 				</Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the Facility Monitoring Service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}sir_facilityMonitoring_service.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the Facility Monitoring Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}sir_facilityMonitoring_service.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -64,430 +65,430 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-FM XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Facility Monitoring Subschema </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-FM Facility Monitoring Service.</xsd:documentation>
- </xsd:annotation>
- <!-- ===Global import of all IFOPT namespace elements used in SIRI needed to work around XERCES limitation=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop.xsd"/>
- <!--.....See facility for the actual dependencies...-->
- <!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation This needs to be after ifopt=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
- <!--.....These are the actual dependencies...-->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_accessibility.xsd"/>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_model/siri_facility.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
- <xsd:include schemaLocation="siri/siri_requests.xsd"/>
- <!-- ======================================================================= -->
- <xsd:group name="SiriFacilityMonitoringServiceIndexGroup">
-  <xsd:annotation>
-   <xsd:documentation>Convenience artifact to pick out main elements of the Facility Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="FacilityMonitoringRequest"/>
-   <xsd:element ref="FacilityMonitoringSubscriptionRequest"/>
-   <xsd:element ref="FacilityMonitoringDelivery"/>
-   <xsd:sequence>
-    <xsd:element ref="FacilityMonitoringCapabilitiesRequest"/>
-    <xsd:element ref="FacilityMonitoringCapabilitiesResponse"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====REQUESTS ====================================================== -->
- <!-- ==== FS: Facility Monitoring Request======= ============================================= -->
- <xsd:element name="FacilityMonitoringRequest" type="FacilityMonitoringRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about Facilities status.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="FacilityMonitoringRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Functional Service Request for Facility Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractFunctionalServiceRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="FacilityMonitoringTopicGroup"/>
-     <xsd:group ref="FacilityMonitoringRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-FM XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Facility Monitoring Subschema </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-FM Facility Monitoring Service.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ===Global import of all IFOPT namespace elements used in SIRI needed to work around XERCES limitation=====-->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop.xsd"/>
+	<!--.....See facility for the actual dependencies...-->
+	<!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation This needs to be after ifopt=====-->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
+	<!--.....These are the actual dependencies...-->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_accessibility.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_model/siri_facility.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
+	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:group name="SiriFacilityMonitoringServiceIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artifact to pick out main elements of the Facility Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="FacilityMonitoringRequest"/>
+			<xsd:element ref="FacilityMonitoringSubscriptionRequest"/>
+			<xsd:element ref="FacilityMonitoringDelivery"/>
+			<xsd:sequence>
+				<xsd:element ref="FacilityMonitoringCapabilitiesRequest"/>
+				<xsd:element ref="FacilityMonitoringCapabilitiesResponse"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====REQUESTS ====================================================== -->
+	<!-- ==== FS: Facility Monitoring Request======= ============================================= -->
+	<xsd:element name="FacilityMonitoringRequest" type="FacilityMonitoringRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Facilities status.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="FacilityMonitoringRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Functional Service Request for Facility Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFunctionalServiceRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="FacilityMonitoringTopicGroup"/>
+					<xsd:group ref="FacilityMonitoringRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="FacilityMonitoringTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="PreviewInterval" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Forward duration for which Facilities status change: only status change which will occur within this time span will be returned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Start time for PreviewInterval. If absent, then current time is assumed.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="FacilityLocationGroup" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Parameters to filter Facility Monitoring requests, based on the facility location. Parameter value will be logically ANDed together. Multiple values fro the same parameter will be logically ORed.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:element name="AccessibilityNeedsFilter" type="AccessibilityNeedsFilterStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Filter only for facility changes that affect the following accessibility needs.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="AccessibilityNeedsFilterStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for information about Accessibility Facilities status.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="UserNeed" type="acsb:UserNeedStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>User need to be monitored.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="FacilityLocationGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters to filter Facility Monitoring requests, based on the facility location .</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="FacilityRef" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="FeatureRef" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="LineRef" minOccurs="0"/>
-   <xsd:element ref="StopPointRef" minOccurs="0"/>
-   <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
-   <xsd:choice minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Use of simple reference is deprecated </xsd:documentation>
-    </xsd:annotation>
-    <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>Refercence to a VEHICLE JOURNEY framed by the day. SIRI 2.0 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element ref="VehicleJourneyRef"/>
-   </xsd:choice>
-   <xsd:element ref="InterchangeRef" minOccurs="0"/>
-   <xsd:element ref="VehicleRef" minOccurs="0"/>
-   <xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StopPlaceComponentRef" type="ifopt:StopPlaceComponentRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a STOP PLACE component.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="SiteRef" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a Site.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="FacilityMonitoringRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="IncludeTranslations" minOccurs="0"/>
-   <xsd:element name="MaximumNumberOfFacilityConditions" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The maximum number of facility status in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- === FS: Facility Monitoring Subscription Request ==================== -->
- <xsd:element name="FacilityMonitoringSubscriptionRequest" type="FacilityMonitoringSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for a subscription to the Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="FacilityMonitoringSubscriptionPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the subscription publishing and notification processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the producer will return the complete set of current data, or only  provide updates to this data, i.e. additions, modifications and deletions.
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="FacilityMonitoringTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PreviewInterval" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Forward duration for which Facilities status change: only status change which will occur within this time span will be returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Start time for PreviewInterval. If absent, then current time is assumed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="FacilityLocationGroup" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Parameters to filter Facility Monitoring requests, based on the facility location. Parameter value will be logically ANDed together. Multiple values fro the same parameter will be logically ORed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="AccessibilityNeedsFilter" type="AccessibilityNeedsFilterStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Filter only for facility changes that affect the following accessibility needs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="AccessibilityNeedsFilterStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for information about Accessibility Facilities status.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="UserNeed" type="acsb:UserNeedStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>User need to be monitored.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="FacilityLocationGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters to filter Facility Monitoring requests, based on the facility location .</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="FacilityRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="FeatureRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="LineRef" minOccurs="0"/>
+			<xsd:element ref="StopPointRef" minOccurs="0"/>
+			<xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Use of simple reference is deprecated </xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Refercence to a VEHICLE JOURNEY framed by the day. SIRI 2.0 </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="VehicleJourneyRef"/>
+			</xsd:choice>
+			<xsd:element ref="InterchangeRef" minOccurs="0"/>
+			<xsd:element ref="VehicleRef" minOccurs="0"/>
+			<xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a STOP PLACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopPlaceComponentRef" type="ifopt:StopPlaceComponentRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a STOP PLACE component.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="SiteRef" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a Site.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="FacilityMonitoringRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="IncludeTranslations" minOccurs="0"/>
+			<xsd:element name="MaximumNumberOfFacilityConditions" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The maximum number of facility status in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- === FS: Facility Monitoring Subscription Request ==================== -->
+	<xsd:element name="FacilityMonitoringSubscriptionRequest" type="FacilityMonitoringSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for a subscription to the Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="FacilityMonitoringSubscriptionPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the subscription publishing and notification processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the producer will return the complete set of current data, or only  provide updates to this data, i.e. additions, modifications and deletions.
 If false or omitted, each subscription response will contain the full information as specified in this request.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="FacilityMonitoringSubscriptionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Subscription Request for Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractSubscriptionStructure">
-    <xsd:sequence>
-     <xsd:element ref="FacilityMonitoringRequest"/>
-     <xsd:group ref="FacilityMonitoringSubscriptionPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====RESPONSES=========================================================== -->
- <!-- ==== FS: Facility Monitoring Delivery======= ============================================= -->
- <xsd:element name="FacilityMonitoringDelivery" type="FacilityMonitoringDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Delivery for Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="FacilityMonitoringPayloadGroup">
-  <xsd:annotation>
-   <xsd:documentation>Payload part of Vehicle Monitoring delivery.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="FacilityCondition" minOccurs="0" maxOccurs="unbounded"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="FacilityMonitoringDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for Vehicle Monitoring Service. Provides information about one or more vehicles; each has its own VEHICLE activity element.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceDeliveryStructure">
-    <xsd:sequence>
-     <xsd:group ref="FacilityMonitoringPayloadGroup">
-      <xsd:annotation>
-       <xsd:documentation>Payload part of Facility Monitoring delivery.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:group>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="FacilityMonitoringSubscriptionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Subscription Request for Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractSubscriptionStructure">
+				<xsd:sequence>
+					<xsd:element ref="FacilityMonitoringRequest"/>
+					<xsd:group ref="FacilityMonitoringSubscriptionPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====RESPONSES=========================================================== -->
+	<!-- ==== FS: Facility Monitoring Delivery======= ============================================= -->
+	<xsd:element name="FacilityMonitoringDelivery" type="FacilityMonitoringDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Delivery for Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="FacilityMonitoringPayloadGroup">
+		<xsd:annotation>
+			<xsd:documentation>Payload part of Vehicle Monitoring delivery.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="FacilityCondition" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="FacilityMonitoringDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Vehicle Monitoring Service. Provides information about one or more vehicles; each has its own VEHICLE activity element.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceDeliveryStructure">
+				<xsd:sequence>
+					<xsd:group ref="FacilityMonitoringPayloadGroup">
+						<xsd:annotation>
+							<xsd:documentation>Payload part of Facility Monitoring delivery.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="FacilityCondition" type="FacilityConditionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Condition of a Facility that is being monitored.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ====Data============================================================= -->
- <!--   Data For Facilities Monitoring are in the siri/siri_facility.xsd file ===============-->
- <!-- ==== WSDL=========================================-->
- <xsd:complexType name="FacilityMonitoringDeliveriesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Deliveries for VEHICLE monitoring services Used in WSDL.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="FacilityMonitoringDelivery" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Delivery for Vehicle Activity Service.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ====CS: Capability Request=================================================================== -->
- <xsd:element name="FacilityMonitoringCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about Vehicle Monitoring Service Capabilities. Answered with a VehicleMontoringCapabilitiesResponse.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ====CS: Capability Response=================================================================== -->
- <xsd:element name="FacilityMonitoringCapabilitiesResponse" type="FacilityMonitoringCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
-  <xsd:annotation>
-   <xsd:documentation>Capabilities for Vehicle Monitoring Service. Answers a VehicleMontoringCapabilitiesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="FacilityMonitoringCapabilitiesResponseStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
-    <xsd:sequence>
-     <xsd:element ref="FacilityMonitoringServiceCapabilities" minOccurs="0"/>
-     <xsd:element ref="FacilityMonitoringPermissions" minOccurs="0"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="FacilityCondition" type="FacilityConditionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Condition of a Facility that is being monitored.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ====Data============================================================= -->
+	<!--   Data For Facilities Monitoring are in the siri/siri_facility.xsd file ===============-->
+	<!-- ==== WSDL=========================================-->
+	<xsd:complexType name="FacilityMonitoringDeliveriesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Deliveries for VEHICLE monitoring services Used in WSDL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="FacilityMonitoringDelivery" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Delivery for Vehicle Activity Service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ====CS: Capability Request=================================================================== -->
+	<xsd:element name="FacilityMonitoringCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Vehicle Monitoring Service Capabilities. Answered with a VehicleMontoringCapabilitiesResponse.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ====CS: Capability Response=================================================================== -->
+	<xsd:element name="FacilityMonitoringCapabilitiesResponse" type="FacilityMonitoringCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities for Vehicle Monitoring Service. Answers a VehicleMontoringCapabilitiesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="FacilityMonitoringCapabilitiesResponseStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
+				<xsd:sequence>
+					<xsd:element ref="FacilityMonitoringServiceCapabilities" minOccurs="0"/>
+					<xsd:element ref="FacilityMonitoringPermissions" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="FacilityMonitoringServiceCapabilities" type="FacilityMonitoringServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation> Capabilities of Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="FacilityMonitoringServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Vehicle Monitoring Capabilities.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractCapabilitiesStructure">
-    <xsd:sequence>
-     <xsd:element name="TopicFiltering" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Filtering Capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
-         <xsd:annotation>
-          <xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element ref="FilterByFacilityRef"/>
-        <xsd:element name="FilterByLocationRef" type="xsd:boolean" fixed="true">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by location. Fixed as 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element ref="FilterByVehicleRef" minOccurs="0"/>
-        <xsd:element ref="FilterByLineRef" minOccurs="0"/>
-        <xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
-        <xsd:element ref="FilterByVehicleJourneyRef" minOccurs="0"/>
-        <xsd:element ref="FilterByConnectionLinkRef" minOccurs="0"/>
-        <xsd:element ref="FilterByInterchangeRef" minOccurs="0"/>
-        <xsd:element name="FilterBySpecificNeed" type="xsd:boolean" default="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by Specific Needs. Default is 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="RequestPolicy" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Request Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="CapabilityRequestPolicyStructure">
-         <xsd:sequence>
-          <xsd:group ref="FacilityMonitoringVolumeGroup"/>
-         </xsd:sequence>
-        </xsd:extension>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="AccessControl" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Access control capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="CapabilityAccessControlStructure">
-         <xsd:sequence>
-          <xsd:element ref="CheckOperatorRef" minOccurs="0"/>
-          <xsd:element ref="CheckLineRef" minOccurs="0"/>
-         </xsd:sequence>
-        </xsd:extension>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="ResponseFeatures" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Response capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="HasRemedy" type="xsd:boolean" default="false" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether result supports remedy information. Default is 'false'</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="HasFacilityLocation" type="xsd:boolean" default="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether result supports facility location information. Default is 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="FacilityMonitoringVolumeGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for volume control.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="HasMaximumFacilityStatus" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether a maximum number of Facility Status to include can be specified. Default is 'false'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====permissions=================================================================== -->
- <xsd:element name="FacilityMonitoringPermissions">
-  <xsd:annotation>
-   <xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="PermissionsStructure">
-     <xsd:sequence>
-      <xsd:element name="FacilityMonitoringPermission" type="FacilityMonitoringServicePermissionStructure" minOccurs="0" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:extension>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="FacilityMonitoringServicePermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Facility Monitoring Service Permissions.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractPermissionStructure">
-    <xsd:sequence>
-     <xsd:element ref="OperatorPermissions"/>
-     <xsd:element ref="LinePermissions"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="FacilityMonitoringServiceCapabilities" type="FacilityMonitoringServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation> Capabilities of Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="FacilityMonitoringServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Vehicle Monitoring Capabilities.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractCapabilitiesStructure">
+				<xsd:sequence>
+					<xsd:element name="TopicFiltering" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Filtering Capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
+									<xsd:annotation>
+										<xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByFacilityRef"/>
+								<xsd:element name="FilterByLocationRef" type="xsd:boolean" fixed="true">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by location. Fixed as 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByVehicleRef" minOccurs="0"/>
+								<xsd:element ref="FilterByLineRef" minOccurs="0"/>
+								<xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
+								<xsd:element ref="FilterByVehicleJourneyRef" minOccurs="0"/>
+								<xsd:element ref="FilterByConnectionLinkRef" minOccurs="0"/>
+								<xsd:element ref="FilterByInterchangeRef" minOccurs="0"/>
+								<xsd:element name="FilterBySpecificNeed" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by Specific Needs. Default is 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="RequestPolicy" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Request Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="CapabilityRequestPolicyStructure">
+									<xsd:sequence>
+										<xsd:group ref="FacilityMonitoringVolumeGroup"/>
+									</xsd:sequence>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="AccessControl" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Access control capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="CapabilityAccessControlStructure">
+									<xsd:sequence>
+										<xsd:element ref="CheckOperatorRef" minOccurs="0"/>
+										<xsd:element ref="CheckLineRef" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ResponseFeatures" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Response capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="HasRemedy" type="xsd:boolean" default="false" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether result supports remedy information. Default is 'false'</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="HasFacilityLocation" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether result supports facility location information. Default is 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="FacilityMonitoringVolumeGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for volume control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="HasMaximumFacilityStatus" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether a maximum number of Facility Status to include can be specified. Default is 'false'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====permissions=================================================================== -->
+	<xsd:element name="FacilityMonitoringPermissions">
+		<xsd:annotation>
+			<xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="PermissionsStructure">
+					<xsd:sequence>
+						<xsd:element name="FacilityMonitoringPermission" type="FacilityMonitoringServicePermissionStructure" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="FacilityMonitoringServicePermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Facility Monitoring Service Permissions.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractPermissionStructure">
+				<xsd:sequence>
+					<xsd:element ref="OperatorPermissions"/>
+					<xsd:element ref="LinePermissions"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>

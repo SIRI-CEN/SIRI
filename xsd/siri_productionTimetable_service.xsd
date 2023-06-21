@@ -1,88 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_productionTimetable_service">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Contributor>Werner Kohl MDV</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2003-02-10</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-31</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-04-17</Modified>
-     <!-- Name Space changes-->
-    </Date>
-    <Date>
-     <Modified>2008-03-26</Modified>
-     <!-- Add wrapper tag for Line DIRECTION to help binding to Axis-->
-    </Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
-     <!-- Revise to support substitution groups-->
-    </Date>
-    <Date>
-     <Modified>2011-04-18</Modified>
-     <!-- - siri_productionTimetable_service.xsd Type on request ValidiyPeriod start and end should be datetime not time ..
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Contributor>Werner Kohl MDV</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2003-02-10</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-31</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-04-17</Modified>
+					<!-- Name Space changes-->
+				</Date>
+				<Date>
+					<Modified>2008-03-26</Modified>
+					<!-- Add wrapper tag for Line DIRECTION to help binding to Axis-->
+				</Date>
+				<Date>
+					<Modified>2008-11-17</Modified>
+					<!-- Revise to support substitution groups-->
+				</Date>
+				<Date>
+					<Modified>2011-04-18</Modified>
+					<!-- - siri_productionTimetable_service.xsd Type on request ValidiyPeriod start and end should be datetime not time ..
 		  - Change to ClosedTimestampRange instead of ClosedTimeRange.
           - Fix Subscription request to be an element and have extensions.-->
-    </Date>
-    <Date>
-     <Modified>2011-01-19</Modified>
-     <!-- SIRI 1.3 
+				</Date>
+				<Date>
+					<Modified>2011-01-19</Modified>
+					<!-- SIRI 1.3 
           Drop use of As Flat Groups for DatedCalls.-->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- (since SIRI 2.0) 
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- (since SIRI 2.0) 
           Add ServiceJourneyInterchange (i.e. Monitored Connection)
 		  Add additional times to TargetedServiceInterchange MinimumTransferTime, MaximimTransferTime, StandardTransferTime, MaximumAUtomaticWaitTime, StandardWiatTime.			 
 		  Add Public and Contact Details to JourneyInfo 
 		  Add AimedLatestPassengerAccessTime to TargetedCall-->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the DATED JOUNEY used in the SIRI Production Timetable Service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_productionTimetable_service.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_targetedVehicleJourney.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-        <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the DATED JOUNEY used in the SIRI Production Timetable Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_productionTimetable_service.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_targetedVehicleJourney.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -90,266 +91,266 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI_PT XML schema. Service Interface for Real-time  Information. Production Timetable Service.</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-PT DATED JOURNEY Model view.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri/siri_requests.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_datedVehicleJourney.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
- <!-- ======================================================================= -->
- <xsd:group name="SiriProductionTimetableIndexGroup">
-  <xsd:annotation>
-   <xsd:documentation>Convenience artefact to pick out main elements of the Production Timetable Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="ProductionTimetableRequest"/>
-   <xsd:element ref="ProductionTimetableSubscriptionRequest"/>
-   <xsd:element ref="ProductionTimetableDelivery"/>
-   <xsd:sequence>
-    <xsd:element ref="ProductionTimetableCapabilitiesRequest"/>
-    <xsd:element ref="ProductionTimetableCapabilitiesResponse"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====REQUESTS ====================================================== -->
- <!--==== FS: Production Timetable Request =================================-->
- <xsd:element name="ProductionTimetableRequest" type="ProductionTimetableRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for daily production timetables.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ProductionTimetableRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Functional Service Request for Production Timetables.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractFunctionalServiceRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="ProductionTimetableTopicGroup"/>
-     <xsd:group ref="ProductionTimetableRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="ProductionTimetableTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
-   <xsd:element name="TimetableVersionRef" type="VersionRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Communicate only differences to the timetable specified by this VERSION of the TIMETABLe.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include journeys for only the specified OPERATORs.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Lines" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only vehicles along the given LINEs.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="LineDirection" type="LineDirectionStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Iinclude only vehicles along the given LINE.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only journeys of the specified VEHICLE MODE. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ProductCategoryRef" type="ProductCategoryRefStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only journeys of the specified TYPE OF PRODUCT CATEGORY. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only journeys with a CALL at the specified STOP POINT. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="ProductionTimetableRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of messages exchanged.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="IncludeTranslations" minOccurs="0"/>
-   <xsd:element ref="IncludeInterchanges" minOccurs="0"/>
-   <xsd:element ref="IncludeJourneyRelations" minOccurs="0"/>
-   <xsd:element ref="IncludeTrainFormations" minOccurs="0"/>
-   <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether to return the whole timetable, or just differences from the inidicated version. Default is 'false'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ==== FS: Production Timetable Subscription ======================================-->
- <xsd:element name="ProductionTimetableSubscriptionRequest" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for a subscription to the Production Timetable Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="ProductionTimetableSubscriptionStructure"/>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="ProductionTimetableSubscriptionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Subscription Request for Production Timetable Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractSubscriptionStructure">
-    <xsd:sequence>
-     <xsd:element ref="ProductionTimetableRequest"/>
-     <xsd:group ref="ProductionTimetableSubscriptionPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="ProductionTimetableSubscriptionPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the subscription content.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the producer should return the complete set of current data, or only provide updates to the last data returned, i.e. additions, modifications and deletions.
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI_PT XML schema. Service Interface for Real-time  Information. Production Timetable Service.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-PT DATED JOURNEY Model view.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_datedVehicleJourney.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:group name="SiriProductionTimetableIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artefact to pick out main elements of the Production Timetable Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ProductionTimetableRequest"/>
+			<xsd:element ref="ProductionTimetableSubscriptionRequest"/>
+			<xsd:element ref="ProductionTimetableDelivery"/>
+			<xsd:sequence>
+				<xsd:element ref="ProductionTimetableCapabilitiesRequest"/>
+				<xsd:element ref="ProductionTimetableCapabilitiesResponse"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====REQUESTS ====================================================== -->
+	<!--==== FS: Production Timetable Request =================================-->
+	<xsd:element name="ProductionTimetableRequest" type="ProductionTimetableRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for daily production timetables.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ProductionTimetableRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Functional Service Request for Production Timetables.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFunctionalServiceRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="ProductionTimetableTopicGroup"/>
+					<xsd:group ref="ProductionTimetableRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ProductionTimetableTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
+			<xsd:element name="TimetableVersionRef" type="VersionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Communicate only differences to the timetable specified by this VERSION of the TIMETABLe.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include journeys for only the specified OPERATORs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Lines" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only vehicles along the given LINEs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LineDirection" type="LineDirectionStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Iinclude only vehicles along the given LINE.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only journeys of the specified VEHICLE MODE. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ProductCategoryRef" type="ProductCategoryRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only journeys of the specified TYPE OF PRODUCT CATEGORY. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only journeys with a CALL at the specified STOP POINT. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ProductionTimetableRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of messages exchanged.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="IncludeTranslations" minOccurs="0"/>
+			<xsd:element ref="IncludeInterchanges" minOccurs="0"/>
+			<xsd:element ref="IncludeJourneyRelations" minOccurs="0"/>
+			<xsd:element ref="IncludeTrainFormations" minOccurs="0"/>
+			<xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether to return the whole timetable, or just differences from the inidicated version. Default is 'false'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ==== FS: Production Timetable Subscription ======================================-->
+	<xsd:element name="ProductionTimetableSubscriptionRequest" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for a subscription to the Production Timetable Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="ProductionTimetableSubscriptionStructure"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ProductionTimetableSubscriptionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Subscription Request for Production Timetable Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractSubscriptionStructure">
+				<xsd:sequence>
+					<xsd:element ref="ProductionTimetableRequest"/>
+					<xsd:group ref="ProductionTimetableSubscriptionPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ProductionTimetableSubscriptionPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the subscription content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the producer should return the complete set of current data, or only provide updates to the last data returned, i.e. additions, modifications and deletions.
 If false each subscription response will contain the full information as specified in this request.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====RESPONSES=========================================================== -->
- <!-- ==== FS: Production Timetable Delivery =========================================-->
- <xsd:element name="ProductionTimetableDelivery" type="ProductionTimetableDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Delivery for Production Timetable Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="ProductionTimetablePayloadGroup">
-  <xsd:annotation>
-   <xsd:documentation>Payload part of Production Timetable delivery.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="DatedTimetableVersionFrame" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>A TIMETABLE to run on a specified date.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="ProductionTimetableDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Delivery for Production Timetable Service type.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceDeliveryStructure">
-    <xsd:sequence>
-     <xsd:group ref="ProductionTimetablePayloadGroup"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:element name="DatedTimetableVersionFrame" type="DatedTimetableVersionFrameStructure">
-  <xsd:annotation>
-   <xsd:documentation>A TIMETABLE FRAME to run on a specified date.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="DatedTimetableVersionFrameStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Production Timetable of a LINE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractItemStructure">
-    <xsd:sequence>
-     <xsd:element name="VersionRef" type="VersionRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Timetable Version.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
-     <xsd:element name="ShortestPossibleCycle" type="PositiveDurationType" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Minimum interval at which updates for this DATED TIMETABLE VERSION FRAME can be sent. (since SIRI 2.1)</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:group ref="LineIdentityGroup"/>
-     <xsd:group ref="JourneyPatternInfoGroup"/>
-     <xsd:group ref="ServiceInfoGroup" minOccurs="0"/>
-     <xsd:group ref="DatedServiceInfoGroup"/>
-     <xsd:group ref="TimetableRealtimeInfoGroup"/>
-     <xsd:element name="DatedVehicleJourney" type="DatedVehicleJourneyStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Complete list of all planned VEHICLE JOURNEYs for this LINE and DIRECTION.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="RemovedDatedVehicleJourney" type="RemovedDatedVehicleJourneyStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>List of all removed VEHICLE JOURNEYs for this LINE and DIRECTION. 
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====RESPONSES=========================================================== -->
+	<!-- ==== FS: Production Timetable Delivery =========================================-->
+	<xsd:element name="ProductionTimetableDelivery" type="ProductionTimetableDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Delivery for Production Timetable Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="ProductionTimetablePayloadGroup">
+		<xsd:annotation>
+			<xsd:documentation>Payload part of Production Timetable delivery.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="DatedTimetableVersionFrame" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A TIMETABLE to run on a specified date.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="ProductionTimetableDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Delivery for Production Timetable Service type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceDeliveryStructure">
+				<xsd:sequence>
+					<xsd:group ref="ProductionTimetablePayloadGroup"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="DatedTimetableVersionFrame" type="DatedTimetableVersionFrameStructure">
+		<xsd:annotation>
+			<xsd:documentation>A TIMETABLE FRAME to run on a specified date.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="DatedTimetableVersionFrameStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Production Timetable of a LINE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractItemStructure">
+				<xsd:sequence>
+					<xsd:element name="VersionRef" type="VersionRefStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Timetable Version.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ValidityPeriod" type="TimetableValidityPeriod" minOccurs="0"/>
+					<xsd:element name="ShortestPossibleCycle" type="PositiveDurationType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Minimum interval at which updates for this DATED TIMETABLE VERSION FRAME can be sent. (since SIRI 2.1)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:group ref="LineIdentityGroup"/>
+					<xsd:group ref="JourneyPatternInfoGroup"/>
+					<xsd:group ref="ServiceInfoGroup" minOccurs="0"/>
+					<xsd:group ref="DatedServiceInfoGroup"/>
+					<xsd:group ref="TimetableRealtimeInfoGroup"/>
+					<xsd:element name="DatedVehicleJourney" type="DatedVehicleJourneyStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Complete list of all planned VEHICLE JOURNEYs for this LINE and DIRECTION.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="RemovedDatedVehicleJourney" type="RemovedDatedVehicleJourneyStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>List of all removed VEHICLE JOURNEYs for this LINE and DIRECTION. 
 A data producer may silently remove a journey from the plan if it was previously provided in error. Careful: Removal is different from Cancellation.
 Minimal information, or no information at all, of a RemovedDatedVehicleJourney or the removal itself must be communicated to the passengers, i.e., it is "silently" removed. A Cancellation, on the other hand, is possibly the most important information to provide to the passengers.
 It is strongly advised to only use this feature in cases where a journey was sent in error and it can be assumed that as few passengers as possible have seen the erroneous information to avoid confusion. (since SIRI 2.1)</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="ServiceJourneyInterchange" type="ServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Connection paramters for a SERVICE JOURNEY INTERCHANGE between a feeder and distributor journey. SIRI 2.0</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="RemovedServiceJourneyInterchange" type="RemovedServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>List of all removed SERVICE JOURNEY INTERCHANGEs.
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ServiceJourneyInterchange" type="ServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Connection paramters for a SERVICE JOURNEY INTERCHANGE between a feeder and distributor journey. SIRI 2.0</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="RemovedServiceJourneyInterchange" type="RemovedServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>List of all removed SERVICE JOURNEY INTERCHANGEs.
 A data producer may silently remove an interchange from the plan if it was previously provided in error. Careful: Removal is different from Cancellation.
 Minimal information, or no information at all, of a RemovedServiceJourneyInterchange or the removal itself must be communicated to the passengers, i.e., it is "silently" removed. A Cancellation, on the other hand, is possibly the most important information to provide to the passengers.
 It is strongly advised to only use this feature in cases where an interchange was sent in error and it can be assumed that as few passengers as possible have seen the erroneous information to avoid confusion. (since SIRI 2.1)</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="TimetableValidityPeriod">
-  <xsd:annotation>
-   <xsd:documentation>Start and end of timetable validity (time window) of journeys for which schedules are to be returned by the data producer.
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="TimetableValidityPeriod">
+		<xsd:annotation>
+			<xsd:documentation>Start and end of timetable validity (time window) of journeys for which schedules are to be returned by the data producer.
 The ValidityPeriod of the timetable must not exceed the ValidityPeriod requested by the subscriber.
 If omitted, then the full - by the subscriber requested - ValidityPeriod or configured data horizon applies.
 
@@ -362,153 +363,153 @@ A timetable falls inside the ValidityPeriod if all of its journeys fall inside i
 A journey falls inside the ValidityPeriod if the AimedDepartureTime or AimedArrivalTime at any CALL lies between the Start- and EndTime of the ValidityPeriod (regardless of whether the aimed times at a previous or subsequent CALL fall ouside of the ValidityPeriod).
 Careful: Journeys which themselves fall outside the ValidityPeriod, but which are linked to a journey within the ValidityPeriod by a JOURNEY RELATION, are also regarded as falling inside the ValidityPeriod. Examples are journeys where the vehicle is split or joins with or is replaced by another vehicle.
    </xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="ClosedTimestampRangeStructure"/>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ==== WSDL=========================================-->
- <xsd:complexType name="ProductionTimetableDeliveriesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for deliveries of production timetable service. Used in WSDL.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="ProductionTimetableDelivery" maxOccurs="unbounded"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ==== CS: Capability Request =================================================================== -->
- <xsd:element name="ProductionTimetableCapabilitiesRequest" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about ProductionTimetable Service Capabilities. Answered with a ProductionTimetableCapabilitiesResponse.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="ServiceCapabilitiesRequestStructure"/>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <!-- ==== CS: Capability Response =================================================================== -->
- <xsd:element name="ProductionTimetableCapabilitiesResponse" type="ProductionTimetableCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
-  <xsd:annotation>
-   <xsd:documentation>Capabilities for ProductionTimetable Service. Answers a Answered with a ProductionTimetableCapabilitiesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ProductionTimetableCapabilitiesResponseStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for ProductionTimetable Capability.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
-    <xsd:sequence>
-     <xsd:element ref="ProductionTimetableServiceCapabilities" minOccurs="0"/>
-     <xsd:element ref="ProductionTimetablePermissions" minOccurs="0"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="ProductionTimetableCapabilityRequestPolicyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Estimated ProductionCapability Request Policy.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="CapabilityRequestPolicyStructure">
-    <xsd:sequence>
-     <xsd:element name="ForeignJourneysOnly" type="xsd:boolean" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Whether results returns foreign journeys only.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="ProductionTimetableServiceCapabilities" type="ProductionTimetableServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation> Capabilities of ProductionTimetableService.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ProductionTimetableServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for ProductionTimetable Capabilities.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractCapabilitiesStructure">
-    <xsd:sequence>
-     <xsd:element name="TopicFiltering" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Filtering Capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element ref="FilterByValidityPeriod"/>
-        <xsd:element ref="FilterByOperatorRef"/>
-        <xsd:element ref="FilterByLineRef"/>
-        <xsd:element ref="FilterByVehicleMode" minOccurs="0"/>
-        <xsd:element ref="FilterByProductCategoryRef" minOccurs="0"/>
-        <xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
-        <xsd:element name="FilterByVersionRef" type="xsd:boolean" default="true">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by TIMETABLE VERSION Default is 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="RequestPolicy" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Request Policiy capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="CapabilityRequestPolicyStructure"/>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="SubscriptionPolicy" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="HasIncrementalUpdates" type="xsd:boolean" default="true">
-         <xsd:annotation>
-          <xsd:documentation>Whether incremental updates can be specified for updates Default is ' true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="AccessControl" type="ConnectionCapabilityAccessControlStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Access control capabilities.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====permissions=================================================================== -->
- <xsd:element name="ProductionTimetablePermissions">
-  <xsd:annotation>
-   <xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="PermissionsStructure">
-     <xsd:sequence>
-      <xsd:element ref="ProductionTimetablePermission" minOccurs="0" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:extension>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <!-- ====permissions=================================================================== -->
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ClosedTimestampRangeStructure"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ==== WSDL=========================================-->
+	<xsd:complexType name="ProductionTimetableDeliveriesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for deliveries of production timetable service. Used in WSDL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ProductionTimetableDelivery" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==== CS: Capability Request =================================================================== -->
+	<xsd:element name="ProductionTimetableCapabilitiesRequest" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about ProductionTimetable Service Capabilities. Answered with a ProductionTimetableCapabilitiesResponse.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="ServiceCapabilitiesRequestStructure"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ==== CS: Capability Response =================================================================== -->
+	<xsd:element name="ProductionTimetableCapabilitiesResponse" type="ProductionTimetableCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities for ProductionTimetable Service. Answers a Answered with a ProductionTimetableCapabilitiesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ProductionTimetableCapabilitiesResponseStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for ProductionTimetable Capability.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
+				<xsd:sequence>
+					<xsd:element ref="ProductionTimetableServiceCapabilities" minOccurs="0"/>
+					<xsd:element ref="ProductionTimetablePermissions" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProductionTimetableCapabilityRequestPolicyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Estimated ProductionCapability Request Policy.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="CapabilityRequestPolicyStructure">
+				<xsd:sequence>
+					<xsd:element name="ForeignJourneysOnly" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether results returns foreign journeys only.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="ProductionTimetableServiceCapabilities" type="ProductionTimetableServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation> Capabilities of ProductionTimetableService.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ProductionTimetableServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for ProductionTimetable Capabilities.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractCapabilitiesStructure">
+				<xsd:sequence>
+					<xsd:element name="TopicFiltering" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Filtering Capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="FilterByValidityPeriod"/>
+								<xsd:element ref="FilterByOperatorRef"/>
+								<xsd:element ref="FilterByLineRef"/>
+								<xsd:element ref="FilterByVehicleMode" minOccurs="0"/>
+								<xsd:element ref="FilterByProductCategoryRef" minOccurs="0"/>
+								<xsd:element ref="FilterByStopPointRef" minOccurs="0"/>
+								<xsd:element name="FilterByVersionRef" type="xsd:boolean" default="true">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by TIMETABLE VERSION Default is 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="RequestPolicy" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Request Policiy capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="CapabilityRequestPolicyStructure"/>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="SubscriptionPolicy" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="HasIncrementalUpdates" type="xsd:boolean" default="true">
+									<xsd:annotation>
+										<xsd:documentation>Whether incremental updates can be specified for updates Default is ' true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="AccessControl" type="ConnectionCapabilityAccessControlStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Access control capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====permissions=================================================================== -->
+	<xsd:element name="ProductionTimetablePermissions">
+		<xsd:annotation>
+			<xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="PermissionsStructure">
+					<xsd:sequence>
+						<xsd:element ref="ProductionTimetablePermission" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====permissions=================================================================== -->
 </xsd:schema>

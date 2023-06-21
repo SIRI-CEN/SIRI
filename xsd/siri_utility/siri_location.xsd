@@ -1,64 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_location">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG9 Team.</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-04</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-03-29</Modified>
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- SIRI v2.0
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG9 Team.</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-04</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-03-29</Modified>
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- SIRI v2.0
 		  Add VelocityType 
 		  Add bounding box for use by StopPoints discovery -->
-    </Date>
-    <Date>
-     <Modified>2012-05-10</Modified>
-     <!-- SIRI v2.0
+				</Date>
+				<Date>
+					<Modified>2012-05-10</Modified>
+					<!-- SIRI v2.0
 		  Add Line Shape  by Lines  discovery -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines geospatial location elements</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_utility/}siri_location.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>CEN</Publisher>
-    <Rights><!--Unclassified-->
-        <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines geospatial location elements</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_utility/}siri_location.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>CEN</Publisher>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -66,205 +67,205 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG9.</Project>
-    </Subject>
-    <Title>SIRI XML schema. Geo spatial location subschema </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI Framewrok Location Types.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gml_extract_all_objects.xsd"/>
- <!--Actual dependency-->
- <xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gmlBasic2d-extract.xsd"/>
- <!--======WGS84=======================================================================================-->
- <xsd:simpleType name="LongitudeType">
-  <xsd:annotation>
-   <xsd:documentation>Longitude from Greenwich.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:decimal">
-   <xsd:minInclusive value="-180"/>
-   <xsd:maxInclusive value="180"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="LatitudeType">
-  <xsd:annotation>
-   <xsd:documentation>Latitude from equator.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:decimal">
-   <xsd:minInclusive value="-90"/>
-   <xsd:maxInclusive value="90"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="AltitudeType">
-  <xsd:annotation>
-   <xsd:documentation>Altitude metres from sea level.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:decimal">
-   <xsd:minInclusive value="-1000"/>
-   <xsd:maxInclusive value="+5000"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:group name="WgsGroup">
-  <xsd:annotation>
-   <xsd:documentation>WGS84 Coordinates.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Longitude" type="LongitudeType">
-    <xsd:annotation>
-     <xsd:documentation>Longitude from Greenwich Meridian. -180 (West) to +180 (East). Decimal degrees, e.g. 2.356</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Latitude" type="LatitudeType">
-    <xsd:annotation>
-     <xsd:documentation>Latitude from equator. -90 (South) to +90 (North). Decimal degrees, e.g. 56.356</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Altitude" type="AltitudeType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Altitude metres from sea level.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="CoordinatesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for GM Coordinates.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="xsd:NMTOKENS"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:simpleType name="SrsNameType">
-  <xsd:annotation>
-   <xsd:documentation>Type for coordinate reference system.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string"/>
- </xsd:simpleType>
- <xsd:element name="SrsName" type="SrsNameType">
-  <xsd:annotation>
-   <xsd:documentation>GML Spatial coordinate reference system.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!--====== LOCATION ============================================================-->
- <xsd:complexType name="LocationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice>
-    <xsd:sequence>
-     <xsd:group ref="WgsGroup"/>
-    </xsd:sequence>
-    <xsd:element name="Coordinates" type="CoordinatesStructure">
-     <xsd:annotation>
-      <xsd:documentation>Coordinates of points in a GML compatibe format, as indicated by srsName attribute.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:element name="Precision" type="DistanceType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Precision for point measurement. In meters.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
-  <xsd:attribute name="id" type="xsd:NMTOKEN">
-   <xsd:annotation>
-    <xsd:documentation>Identifier of POINT.</xsd:documentation>
-   </xsd:annotation>
-  </xsd:attribute>
-  <xsd:attribute name="srsName" type="SrsNameType">
-   <xsd:annotation>
-    <xsd:documentation>identifier of data reference system for geocodes if point is specified as gml compatible Coordinates. A gml value. If not specified taken from system configuration.</xsd:documentation>
-   </xsd:annotation>
-  </xsd:attribute>
- </xsd:complexType>
- <xsd:complexType name="BoundingBoxStructure">
-  <xsd:annotation>
-   <xsd:documentation>Defines a bounding box using two corner points. GML terminology.  (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="UpperLeft" type="LocationStructure">
-    <xsd:annotation>
-     <xsd:documentation>Upper Left corner as a geospatial point.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="LowerRight" type="LocationStructure">
-    <xsd:annotation>
-     <xsd:documentation>Lower right corner as a geospatial point.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="LineShapeStructure">
-  <xsd:annotation>
-   <xsd:documentation>Defines a line shape (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Point" type="LocationStructure" minOccurs="2" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>A geospatial point. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="CircularAreaStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a circular area centered around a point that may be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="LocationStructure">
-    <xsd:sequence>
-     <xsd:element name="Radius" type="DistanceType" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Radius around the center point in meters.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-	</xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="FlexibleAreaStructure">
-  <xsd:annotation>
-   <xsd:documentation>Bounding box, circular area or gml:polyon of the area where stops of a flexible service are called. (since SIRI 2.1)
+					<Project>CEN TC278 WG3 SG9.</Project>
+				</Subject>
+				<Title>SIRI XML schema. Geo spatial location subschema </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI Framewrok Location Types.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gml_extract_all_objects.xsd"/>
+	<!--Actual dependency-->
+	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gmlBasic2d-extract.xsd"/>
+	<!--======WGS84=======================================================================================-->
+	<xsd:simpleType name="LongitudeType">
+		<xsd:annotation>
+			<xsd:documentation>Longitude from Greenwich.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="-180"/>
+			<xsd:maxInclusive value="180"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LatitudeType">
+		<xsd:annotation>
+			<xsd:documentation>Latitude from equator.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="-90"/>
+			<xsd:maxInclusive value="90"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AltitudeType">
+		<xsd:annotation>
+			<xsd:documentation>Altitude metres from sea level.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="-1000"/>
+			<xsd:maxInclusive value="+5000"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:group name="WgsGroup">
+		<xsd:annotation>
+			<xsd:documentation>WGS84 Coordinates.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Longitude" type="LongitudeType">
+				<xsd:annotation>
+					<xsd:documentation>Longitude from Greenwich Meridian. -180 (West) to +180 (East). Decimal degrees, e.g. 2.356</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Latitude" type="LatitudeType">
+				<xsd:annotation>
+					<xsd:documentation>Latitude from equator. -90 (South) to +90 (North). Decimal degrees, e.g. 56.356</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Altitude" type="AltitudeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Altitude metres from sea level.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="CoordinatesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for GM Coordinates.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:NMTOKENS"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="SrsNameType">
+		<xsd:annotation>
+			<xsd:documentation>Type for coordinate reference system.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:element name="SrsName" type="SrsNameType">
+		<xsd:annotation>
+			<xsd:documentation>GML Spatial coordinate reference system.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--====== LOCATION ============================================================-->
+	<xsd:complexType name="LocationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:group ref="WgsGroup"/>
+				</xsd:sequence>
+				<xsd:element name="Coordinates" type="CoordinatesStructure">
+					<xsd:annotation>
+						<xsd:documentation>Coordinates of points in a GML compatibe format, as indicated by srsName attribute.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="Precision" type="DistanceType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Precision for point measurement. In meters.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:NMTOKEN">
+			<xsd:annotation>
+				<xsd:documentation>Identifier of POINT.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="srsName" type="SrsNameType">
+			<xsd:annotation>
+				<xsd:documentation>identifier of data reference system for geocodes if point is specified as gml compatible Coordinates. A gml value. If not specified taken from system configuration.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="BoundingBoxStructure">
+		<xsd:annotation>
+			<xsd:documentation>Defines a bounding box using two corner points. GML terminology.  (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="UpperLeft" type="LocationStructure">
+				<xsd:annotation>
+					<xsd:documentation>Upper Left corner as a geospatial point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LowerRight" type="LocationStructure">
+				<xsd:annotation>
+					<xsd:documentation>Lower right corner as a geospatial point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LineShapeStructure">
+		<xsd:annotation>
+			<xsd:documentation>Defines a line shape (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Point" type="LocationStructure" minOccurs="2" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A geospatial point. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CircularAreaStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a circular area centered around a point that may be expressed in concrete WGS 84 Coordinates or any gml compatible point coordinates format. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="LocationStructure">
+				<xsd:sequence>
+					<xsd:element name="Radius" type="DistanceType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Radius around the center point in meters.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FlexibleAreaStructure">
+		<xsd:annotation>
+			<xsd:documentation>Bounding box, circular area or gml:polyon of the area where stops of a flexible service are called. (since SIRI 2.1)
 A flexible area is used in cases where a pre-booked service allows pick-up/drop-off anywhere in a designated area and provides a possible interchange to a higher-frequency service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:choice>
-   <xsd:element name="BoundingBox" type="BoundingBoxStructure">
-    <xsd:annotation>
-     <xsd:documentation>Flexible area specified as a rectangular bounding box.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="CircularArea" type="CircularAreaStructure">
-    <xsd:annotation>
-     <xsd:documentation>Flexible area specified as a circular area (center coordinates and radius).</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="gml:Polygon">
-    <xsd:annotation>
-     <xsd:documentation>Flexible area specified as a gml:Polygon that consists of an interior and exterior linear ring.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:choice>
- </xsd:complexType>
- <!--======Distance ============================================================-->
- <xsd:simpleType name="DistanceType">
-  <xsd:annotation>
-   <xsd:documentation>Distance (metres) as defined by http://www.ordnancesurvey.co.uk/xml/resource/units.xml#metres. ALternative units may be specifed by context.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:nonNegativeInteger"/>
- </xsd:simpleType>
- <xsd:simpleType name="VelocityType">
-  <xsd:annotation>
-   <xsd:documentation>Distance (metres per second) ALternative unist may be specifed by context.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:nonNegativeInteger"/>
- </xsd:simpleType>
- <xsd:simpleType name="AbsoluteBearingType">
-  <xsd:annotation>
-   <xsd:documentation>Type for absolute bearing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:float"/>
- </xsd:simpleType>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="BoundingBox" type="BoundingBoxStructure">
+				<xsd:annotation>
+					<xsd:documentation>Flexible area specified as a rectangular bounding box.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CircularArea" type="CircularAreaStructure">
+				<xsd:annotation>
+					<xsd:documentation>Flexible area specified as a circular area (center coordinates and radius).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="gml:Polygon">
+				<xsd:annotation>
+					<xsd:documentation>Flexible area specified as a gml:Polygon that consists of an interior and exterior linear ring.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--======Distance ============================================================-->
+	<xsd:simpleType name="DistanceType">
+		<xsd:annotation>
+			<xsd:documentation>Distance (metres) as defined by http://www.ordnancesurvey.co.uk/xml/resource/units.xml#metres. ALternative units may be specifed by context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:nonNegativeInteger"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="VelocityType">
+		<xsd:annotation>
+			<xsd:documentation>Distance (metres per second) ALternative unist may be specifed by context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:nonNegativeInteger"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="AbsoluteBearingType">
+		<xsd:annotation>
+			<xsd:documentation>Type for absolute bearing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:float"/>
+	</xsd:simpleType>
 </xsd:schema>

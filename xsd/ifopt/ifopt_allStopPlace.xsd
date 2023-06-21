@@ -14,20 +14,20 @@ The Purpose of this file is to overcome a technical limitation in Xerces (and po
 
  -->
 <xsd:schema xmlns="http://www.ifopt.org.uk/ifopt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.ifopt.org.uk/ifopt" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.3" id="ifopt_allStopPlace">
- <!-- ===Global include of all ACSB namespace elements neeeded to work around XERCES limitation=====-->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
- <!-- ======================================================================= -->
- <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_location.xsd"/>
- <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_types.xsd"/>
- <xsd:include schemaLocation="ifopt_administration.xsd"/>
- <xsd:include schemaLocation="ifopt_countries.xsd"/>
- <xsd:include schemaLocation="ifopt_location.xsd"/>
- <xsd:include schemaLocation="ifopt_modification.xsd"/>
- <xsd:include schemaLocation="ifopt_path.xsd"/>
- <xsd:include schemaLocation="ifopt_equipment.xsd"/>
- <xsd:include schemaLocation="ifopt_stop.xsd"/>
- <xsd:include schemaLocation="ifopt_time.xsd"/>
- <xsd:include schemaLocation="ifopt_types.xsd"/>
- <xsd:include schemaLocation="ifopt_checkpoint.xsd"/>
- <xsd:include schemaLocation="ifopt_modes.xsd"/>
+	<!-- ===Global include of all ACSB namespace elements neeeded to work around XERCES limitation=====-->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_location.xsd"/>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_types.xsd"/>
+	<xsd:include schemaLocation="ifopt_administration.xsd"/>
+	<xsd:include schemaLocation="ifopt_countries.xsd"/>
+	<xsd:include schemaLocation="ifopt_location.xsd"/>
+	<xsd:include schemaLocation="ifopt_modification.xsd"/>
+	<xsd:include schemaLocation="ifopt_path.xsd"/>
+	<xsd:include schemaLocation="ifopt_equipment.xsd"/>
+	<xsd:include schemaLocation="ifopt_stop.xsd"/>
+	<xsd:include schemaLocation="ifopt_time.xsd"/>
+	<xsd:include schemaLocation="ifopt_types.xsd"/>
+	<xsd:include schemaLocation="ifopt_checkpoint.xsd"/>
+	<xsd:include schemaLocation="ifopt_modes.xsd"/>
 </xsd:schema>

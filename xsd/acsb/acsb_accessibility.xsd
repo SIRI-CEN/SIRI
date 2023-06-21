@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.ifopt.org.uk/acsb" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.ifopt.org.uk/acsb" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.3" id="accessibility">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
-    <Date>
-     <Created>2006-08-12</Created>
-    </Date>
-    <Date>
-     <Modified>2006-09-22</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-03-29</Modified>
-    </Date>
-    <Description>
-     <p>Fixed Objects in Public Transport. This subschema defines common accessibility types.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_accessibility.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, Crown Copyright 2006-2021</Copyright>
-    </Rights>
-    <Source>
-     <ul>
-      <li>Derived from the SIRI standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
+				<Date>
+					<Created>2006-08-12</Created>
+				</Date>
+				<Date>
+					<Modified>2006-09-22</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-03-29</Modified>
+				</Date>
+				<Description>
+					<p>Fixed Objects in Public Transport. This subschema defines common accessibility types.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_accessibility.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, Crown Copyright 2006-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Derived from the SIRI standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -45,94 +46,94 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG6</Project>
-    </Subject>
-    <Title>IFOPT Fixed Objects in Public Transport - accessibility Types. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>Fixed Objects accessibility types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
- </xsd:annotation>
- <xsd:include schemaLocation="acsb_limitations.xsd"/>
- <xsd:include schemaLocation="acsb_passengerMobility.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_time.xsd"/>
- <!--===========================================================================================-->
- <xsd:simpleType name="LimitationIdType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a hazard within a STOP PLACE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="LimitationRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to an identifier of a hazard within a STOP PLACE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="LimitationIdType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!--===========================================================================================-->
- <xsd:complexType name="AccessibilityLimitationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for limitation on navigation.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="LimitationId" type="LimitationIdType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of LIMITATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ValidityCondition" type="ifopt:ValidityConditionStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Validity condition governing applicability of LIMITATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="MobilityLimitationGroup"/>
-   <xsd:group ref="SensoryLimitationGroup"/>
-   <xsd:element ref="ifopt:Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!--=====Assessmen=======================================================================================-->
- <xsd:complexType name="AccessibilityAssessmentStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Assesment.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="MobilityImpairedAccess" type="xsd:boolean">
-    <xsd:annotation>
-     <xsd:documentation>Summary indication as to whether the component is considered to be accessible or not.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Limitations" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The Limitations that apply to component.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="AccessibilityLimitation" type="AccessibilityLimitationStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>The accessibility limitations on navigation.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="Suitabilities" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The Suitability of the component to meet specifc user needs.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Suitability" type="SuitabilityStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>The Suitability of com[onent to meet a specifc user need.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element ref="ifopt:Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!--======Point=======================================================================================-->
+					<Project>CEN TC278 WG3 SG6</Project>
+				</Subject>
+				<Title>IFOPT Fixed Objects in Public Transport - accessibility Types. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>Fixed Objects accessibility types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="acsb_limitations.xsd"/>
+	<xsd:include schemaLocation="acsb_passengerMobility.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_time.xsd"/>
+	<!--===========================================================================================-->
+	<xsd:simpleType name="LimitationIdType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a hazard within a STOP PLACE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="LimitationRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to an identifier of a hazard within a STOP PLACE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="LimitationIdType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--===========================================================================================-->
+	<xsd:complexType name="AccessibilityLimitationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for limitation on navigation.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="LimitationId" type="LimitationIdType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of LIMITATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ValidityCondition" type="ifopt:ValidityConditionStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Validity condition governing applicability of LIMITATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="MobilityLimitationGroup"/>
+			<xsd:group ref="SensoryLimitationGroup"/>
+			<xsd:element ref="ifopt:Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--=====Assessmen=======================================================================================-->
+	<xsd:complexType name="AccessibilityAssessmentStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Assesment.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="MobilityImpairedAccess" type="xsd:boolean">
+				<xsd:annotation>
+					<xsd:documentation>Summary indication as to whether the component is considered to be accessible or not.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Limitations" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The Limitations that apply to component.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AccessibilityLimitation" type="AccessibilityLimitationStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>The accessibility limitations on navigation.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Suitabilities" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The Suitability of the component to meet specifc user needs.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Suitability" type="SuitabilityStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>The Suitability of com[onent to meet a specifc user need.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="ifopt:Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--======Point=======================================================================================-->
 </xsd:schema>

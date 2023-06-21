@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situationIdentity">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2007-05-10</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-	 <Modified>2008-07-015</Modified>
-	 <!-- Correct data type to be particpant ref not participant pair -->
-	</Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of real-time information .</p>
-     <p>This package defines common basic domain model identifier elements that are used in one or more SIRI fucntional service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_utility/}siri_situationIdentity.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_uility/siri_participant.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-     <Copyright>Kizoom CEN, VDV, RTIG 2004-2021</Copyright>
-	</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG CML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2007-05-10</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2008-07-015</Modified>
+					<!-- Correct data type to be particpant ref not participant pair -->
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of real-time information .</p>
+					<p>This package defines common basic domain model identifier elements that are used in one or more SIRI fucntional service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_utility/}siri_situationIdentity.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_uility/siri_participant.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>Kizoom CEN, VDV, RTIG 2004-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG CML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -51,197 +52,197 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-SX XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Common SITUATION Identity elements.</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-SX Situation IDentifiers.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="../siri_utility/siri_participant.xsd"/>
- <xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
- <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/>
- <!-- ==Situation Reference as a single field : Participant + SITUATION Number + SITUATION Version=================================================================== -->
- <xsd:group name="SituationReferenceGroup">
-  <xsd:annotation>
-   <xsd:documentation>References to a SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="SituationRef" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:element name="SituationRef" type="SituationRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a SITUATION associated with the element.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="SituationRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="SituationSimpleRef" minOccurs="0"/>
-   <xsd:element ref="SituationFullRef" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a SITUATION. Elements of SITUATION identfier are expressed as atomic elements.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ==Situation Reference as a single field : Participant + SITUATION Number + SITUATION Version=================================================================== -->
- <xsd:element name="SituationSimpleRef" type="SituationSimpleRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a SITUATION associated with the element.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="SituationCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a SITUATION. Includes the Participant identifier and version components of the identifier.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string"/>
- </xsd:simpleType>
- <xsd:complexType name="SituationSimpleRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a SITUATION. Includes the Particpant identifier and version components of the identifier.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="SituationCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:element name="SituationNumber" type="EntryQualifierStructure">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of SITUATION within a Participant. Exclude versionr.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="EntryQualifierStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a referenceUnique identifier of a SITUATION within participant.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="xsd:anyURI"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:complexType name="SituationVersion">
-  <xsd:annotation>
-   <xsd:documentation>Type for SITUATION version number if entry is update to a previous version. Unique within IncidentNumber. Monotonically increasing within IncidentNumber. Any values for classification, description, affects, effects that are present in an update replace any values on previous incidents and updates with the same identifier. Values that are not updated remain in effect.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="xsd:integer"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:group name="SituationBaseIdentityGroup">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="CountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of a Country of a Participant who created SITUATION. Provides namespace for Participant If absent proided from context.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION. If absent provdied from context.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="SituationNumber">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of SITUATION within a Participant. Excludes any version number.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SituationUpdateIdentityGroup">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="UpdateCountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of a Country of a Participant who created Update SITUATION element. Provides namespace for VersionParticipant If absent same as.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="UpdateParticipantRef" type="ParticipantRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION. If absent provdied from context.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Version" type="SituationVersion" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of update version within a SITUATION Number Omit if reference to the base SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ==Full SITUATION Reference as a qualified element : Participant + SITUATION Number + SITUATION Version=================================================================== -->
- <xsd:element name="SituationFullRef" type="SituationFullRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a SITUATION. Elements are retained as atomic elements.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="SituationFullRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a SITUATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="SituationFullIdentityGroup">
-    <xsd:annotation>
-     <xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:group ref="SituationUpdateIdentityGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="SituationFullIdentityGroup">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="VersionCountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of a Country of a Participant who created Update SITUATION element. Provides namespace for VersionParticipant If absent same as.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ParticipantRef" type="ParticipantRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="SituationNumber">
-    <xsd:annotation>
-     <xsd:documentation>Unique identifier of SITUATION within a Participant. Excludes any version number.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ======================================================================= -->
- <!-- ==SharedSituation Reference as a qualified element : Participant + SITUATION Number + SITUATION Version=================================================================== -->
- <xsd:group name="SituationSharedIdentityGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements Reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="SituationBaseIdentityGroup"/>
-   <xsd:group ref="SituationUpdateIdentityGroup"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="SituationSharedRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="SituationSharedIdentityGroup">
-    <xsd:annotation>
-     <xsd:documentation>Identifiers of a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-  </xsd:sequence>
- </xsd:complexType>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-SX XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Common SITUATION Identity elements.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-SX Situation IDentifiers.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_utility/siri_participant.xsd"/>
+	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/>
+	<!-- ==Situation Reference as a single field : Participant + SITUATION Number + SITUATION Version=================================================================== -->
+	<xsd:group name="SituationReferenceGroup">
+		<xsd:annotation>
+			<xsd:documentation>References to a SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="SituationRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="SituationRef" type="SituationRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a SITUATION associated with the element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="SituationRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="SituationSimpleRef" minOccurs="0"/>
+			<xsd:element ref="SituationFullRef" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a SITUATION. Elements of SITUATION identfier are expressed as atomic elements.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==Situation Reference as a single field : Participant + SITUATION Number + SITUATION Version=================================================================== -->
+	<xsd:element name="SituationSimpleRef" type="SituationSimpleRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a SITUATION associated with the element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="SituationCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a SITUATION. Includes the Participant identifier and version components of the identifier.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:complexType name="SituationSimpleRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a SITUATION. Includes the Particpant identifier and version components of the identifier.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="SituationCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="SituationNumber" type="EntryQualifierStructure">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of SITUATION within a Participant. Exclude versionr.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="EntryQualifierStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a referenceUnique identifier of a SITUATION within participant.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:anyURI"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="SituationVersion">
+		<xsd:annotation>
+			<xsd:documentation>Type for SITUATION version number if entry is update to a previous version. Unique within IncidentNumber. Monotonically increasing within IncidentNumber. Any values for classification, description, affects, effects that are present in an update replace any values on previous incidents and updates with the same identifier. Values that are not updated remain in effect.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:integer"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:group name="SituationBaseIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="CountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of a Country of a Participant who created SITUATION. Provides namespace for Participant If absent proided from context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION. If absent provdied from context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="SituationNumber">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of SITUATION within a Participant. Excludes any version number.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SituationUpdateIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="UpdateCountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of a Country of a Participant who created Update SITUATION element. Provides namespace for VersionParticipant If absent same as.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="UpdateParticipantRef" type="ParticipantRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION. If absent provdied from context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Version" type="SituationVersion" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of update version within a SITUATION Number Omit if reference to the base SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ==Full SITUATION Reference as a qualified element : Participant + SITUATION Number + SITUATION Version=================================================================== -->
+	<xsd:element name="SituationFullRef" type="SituationFullRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a SITUATION. Elements are retained as atomic elements.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="SituationFullRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="SituationFullIdentityGroup">
+				<xsd:annotation>
+					<xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="SituationUpdateIdentityGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="SituationFullIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="VersionCountryRef" type="ifopt:CountryRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of a Country of a Participant who created Update SITUATION element. Provides namespace for VersionParticipant If absent same as.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ParticipantRef" type="ParticipantRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of a Participant. Provides namespace for SITUATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="SituationNumber">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of SITUATION within a Participant. Excludes any version number.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<!-- ==SharedSituation Reference as a qualified element : Participant + SITUATION Number + SITUATION Version=================================================================== -->
+	<xsd:group name="SituationSharedIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements Reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="SituationBaseIdentityGroup"/>
+			<xsd:group ref="SituationUpdateIdentityGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="SituationSharedRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="SituationSharedIdentityGroup">
+				<xsd:annotation>
+					<xsd:documentation>Identifiers of a SITUATION or an update to a SITUATION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+		</xsd:sequence>
+	</xsd:complexType>
 </xsd:schema>
