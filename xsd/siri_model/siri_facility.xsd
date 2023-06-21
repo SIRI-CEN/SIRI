@@ -408,7 +408,7 @@ Rail transport, Roads and road transport
 			<xsd:element name="Location" type="LocationStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Coordinates of the facility.</xsd:documentation>
-				</xsd:annotation>			
+				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="ServiceInfoGroup"/>
 		</xsd:sequence>
