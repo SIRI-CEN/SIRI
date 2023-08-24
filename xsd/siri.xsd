@@ -370,9 +370,13 @@ Rail transport, Roads and road transport.
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:group ref="ServiceDeliveryRequestStatusGroup"/>
-			<xsd:element name="AllData" type="xsd:boolean" default="false" minOccurs="0">
+			<xsd:element name="ContainsAllDataForNewInitialState" type="xsd:boolean" default="false" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether to return all data, or just new updates since the last delivery. Default false, i.e. just updates.</xsd:documentation>
+					<xsd:documentation>Whether this ServiceDelivery contains all data relevant in the context of this subscription, or just new updates compared to the last delivery. Default is false, i.e. just incremental updates (since the incremental updates capability has default true).
+A requirement of the incremental update function is that the data producer must establish a proper initial state or baseline for each and every data object (e.g. journeys in the context of SIRI-ET and SIRI-VM) after a new subscription is established with the client/consumer.
+Use with caution! For each SIRI-profile or agreement among participants of a certain SIRI-implementation, it should be decided if and how ContainsAllDataForNewInitialState is implemented.  
+In the context of SIRI-ET, for example, a baseline of a journey is synonymous to an EstimatedVehicleJourney message with IsCompleteStopSequence equal to 'true'. 
+</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="MoreData" type="xsd:boolean" default="false" minOccurs="0">
