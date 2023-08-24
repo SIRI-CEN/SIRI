@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom>
+	<!-- Title appearing on the entry page -->
+	<systemTitle><strong>O</strong>pen API for distributed <strong>J</strong>ourney 
+        <strong>P</strong>lanning</systemTitle>
+	<!-- Standardized namespace bindings -->
+	<namespaces>
+		<namespace prefix="orc" uri="http://datex2.eu/schema/2_0RC1/2_0"/>
+		<namespace prefix="wsdl" uri="http://wsdl.siri.org.uk"/>
+		<namespace prefix="acsb" uri="http://www.ifopt.org.uk/acsb"/>
+		<namespace prefix="ifopt" uri="http://www.ifopt.org.uk/ifopt"/>
+		<namespace prefix="netex" uri="http://www.netex.org.uk/netex"/>
+		<namespace prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
+		<namespace prefix="siri" uri="http://www.siri.org.uk/siri"/>
+		<namespace prefix="ojp" uri="http://www.vdv.de/ojp"/>
+	</namespaces>
+	<!-- Report type specific rules -->
+	<reportTypes/>
+	<domains>
+		<domain name="datex2">
+			<content>
+				<targetNamespace>http://datex2.eu/schema/2_0RC1/2_0</targetNamespace>
+			</content>
+			<processing>
+				<title>OJP - <strong>O</strong>pen API for distributed 
+                    <strong>J</strong>ourney <strong>P</strong>lanning (datex2)</title>
+				<titleEnumDict>OJP Enumeration Dictionary - DATEX2</titleEnumDict>
+				<reportFileBaseName>datex2</reportFileBaseName>
+				<reportTypes/>
+			</processing>
+		</domain>
+		<domain name="siri-wsdl">
+			<content>
+				<targetNamespace>http://wsdl.siri.org.uk</targetNamespace>
+			</content>
+			<processing>
+				<title>OJP - <strong>O</strong>pen API for distributed 
+                    <strong>J</strong>ourney <strong>P</strong>lanning (wsdl)</title>
+				<titleEnumDict>OJP Enumeration Dictionary - WSDL</titleEnumDict>
+				<reportFileBaseName>siri-wsdl</reportFileBaseName>
+				<reportTypes/>
+			</processing>
+		</domain>
+		<domain name="acsb">
+			<content>
+				<targetNamespace>http://www.ifopt.org.uk/acsb</targetNamespace>
+			</content>
+			<processing>
+				<title>OJP - <strong>O</strong>pen API for distributed 
+                    <strong>J</strong>ourney <strong>P</strong>lanning (ACSB)</title>
+				<titleEnumDict>OJP Enumeration Dictionary - ACSB</titleEnumDict>
+				<reportFileBaseName>acsb</reportFileBaseName>
+				<reportTypes/>
+			</processing>
+		</domain>
+		<domain name="ifopt">
+			<content>
+				<targetNamespace>http://www.ifopt.org.uk/ifopt</targetNamespace>
+			</content>
+			<processing>
+				<title>OJP - <strong>O</strong>pen API for distributed 
+                    <strong>J</strong>ourney <strong>P</strong>lanning (IFOPT)</title>
+				<titleEnumDict>OJP Enumeration Dictionary - IFOPT</titleEnumDict>
+				<reportFileBaseName>ifopt</reportFileBaseName>
+				<reportTypes/>
+			</processing>
+		</domain>
+		<domain name="opengis">
+			<content>
+				<targetNamespace>http://www.opengis.net/gml/3.2</targetNamespace>
+			</content>
+			<processing>
+				<title>OJP - <strong>O</strong>pen API for distributed 
+                    <strong>J</strong>ourney <strong>P</strong>lanning (GML)</title>
+				<titleEnumDict>OJP Enumeration Dictionary - OJP</titleEnumDict>
+				<reportFileBaseName>gml</reportFileBaseName>
+				<reportTypes/>
+			</processing>
+		</domain>
+		<domain name="siri">
+			<content>
+				<targetNamespace>http://www.siri.org.uk/siri</targetNamespace>
+			</content>
+			<processing>
+				<title>OJP - <strong>O</strong>pen API for distributed 
+                    <strong>J</strong>ourney <strong>P</strong>lanning (SIRI)</title>
+				<reportFileBaseName>siri</reportFileBaseName>
+				<reportTypes/>
+			</processing>
+		</domain>
+		<domain name="ojp">
+			<content>
+				<targetNamespace>http://www.vdv.de/ojp</targetNamespace>
+				<files dir="ojp" name="ojp.xsd"/>
+			</content>
+			<processing>
+				<title>OJP - <strong>O</strong>pen API for distributed 
+                    <strong>J</strong>ourney <strong>P</strong>lanning</title>
+				<reportFileBaseName>ojp</reportFileBaseName>
+				<order>
+					<first>
+						<xsd filePath="OJP.xsd"/>
+						<xsd filePath="ojp/OJP_Requests.xsd"/>
+						<xsd filePath="ojp/OJP_RequestSupport.xsd"/>
+						<xsd filePath="ojp/OJP_Fare.xsd"/>
+						<xsd filePath="ojp/OJP_FareSupport.xsd"/>
+						<xsd filePath="ojp/OJP_Lines.xsd"/>
+						<xsd filePath="ojp/OJP_Locations.xsd"/>
+						<xsd filePath="ojp/OJP_PlaceSupport.xsd"/>
+						<xsd filePath="ojp/OJP_StopEvents.xsd"/>
+						<xsd filePath="ojp/OJP_TripInfo.xsd"/>
+						<xsd filePath="ojp/OJP_Trips.xsd"/>
+						<xsd filePath="ojp/OJP_JourneySupport.xsd"/>
+						<xsd filePath="ojp/OJP_Availability.xsd"/>
+						<xsd filePath="ojp/OJP_Common.xsd"/>
+						<xsd filePath="ojp/OJP_FacilitySupport.xsd"/>
+						<xsd filePath="ojp/OJP_ModesSupport.xsd"/>
+						<xsd filePath="ojp/OJP_SituationSupport.xsd"/>
+						<xsd filePath="ojp/OJP_Utility.xsd"/>
+						<xsd filePath="ojp/OJP_Status.xsd"/>
+					</first>
+				</order>
+				<reportTypes>
+					<!-- Report "edisc-html" -->
+					<reportType name="contab">
+						<!-- XSD titles -->
+						<xsdTitle pref1="singleSentenceAnno" pref2="fileName"/>
+						<!-- Name edits - prefix removal and substring replacement -->
+						<nameEdit>
+							<comp removePrefix="ojp" use="main" kind="element"/>
+							<comp removePrefix="ojp" use="main" kind="complexType"/>
+							<comp removePrefix="ojp" use="main" kind="group"/>
+							<comp removePrefix="ojp" use="main" kind="simpleType"/>
+							<comp removePrefix="ojp" use="sub" kind="element"/>
+							<comp removePrefix="ojp" use="sub" kind="group" replace="Group$" with=""/>
+							<comp removePrefix="ojp" use="sub" kind="complexType" replace="Structure$" with=""/>
+						</nameEdit>
+					</reportType>
+				</reportTypes>
+			</processing>
+		</domain>
+	</domains>
+</custom>
