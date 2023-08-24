@@ -195,7 +195,6 @@ Rail transport, Roads and road transport
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="open"/>
 			<xsd:enumeration value="published"/>
-			<xsd:enumeration value="closing"/>
 			<xsd:enumeration value="closed"/>
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -598,6 +597,13 @@ Rail transport, Roads and road transport
 						<xsd:annotation>
 							<xsd:documentation>Prioritises a passenger information action from the information owner's point of view, e.g. suitable for sorting or hiding individual passenger information actions.
 1 = highest priority.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ActionIsClosing" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>ActionIsClosing 'true' is identical to Progress 'closing' but only for this individual Action. 
+If an Action is about to close, passengers are informed about normalisation. Usually ActionIsClosing 'true' results in the display of a specific symbol understood as "traffic is normalizing" or "restrictions are lifted". 
+Closing is also related to the display priority, i.e., Actions with ActionIsClosing are only to be displayed by consuming systems with enough space to spare.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
