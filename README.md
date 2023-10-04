@@ -13,7 +13,7 @@
 - **Altova XMLSpy Project**: Find an organized view of the schema and examples in the root directory.
   - Project file: Siri.spp
 - **Oxygen Project File:**
-  -Project file: Siri.xpr
+  - Project file: Siri.xpr
 
 ## Releases
 
