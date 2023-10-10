@@ -19,6 +19,7 @@
 
 | Release Number | Release Date | Summary of Changes           |
 |----------------|--------------|-----------------------------|
+| v2.           | 2022.10.25   | [Latest](https://github.com/SIRI-CEN/SIRI/releases/tag/v2.1)     |
 | v2.0           | 2015.05.13   | Bug fixes and updates      |
 | v1.4a          | 2011-04-18   | Minor corrections          |
 | v1.3           | 2009-03-31   | Corrections and revisions  |
