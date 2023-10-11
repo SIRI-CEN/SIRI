@@ -7,9 +7,39 @@
 
 More information on the folders' structure can be found in the [wiki](https://github.com/TuThoThai/SIRI/wiki/Structure-%26-Compatibility/#folders)
 
-## Getting Started 🚀
+## UML model 
 
-## Support for XML Editors 
+- You can refer to the SIRI UML model for a detailed UML view of the schema packages.
+- The SIRI UML model is available in electronic format.
+
+## Getting Started 🚀
+### Main Root Schemas
+
+**siri.xsd**
+
+- Defines the SIRI XML model elements and attributes that are used to exchange public transport information.
+- Supports both request/response and publish/subscribe communication patterns.
+- Used by a wide range of public transport operators and service providers.
+
+**siri_all_functionalServices.xsd**
+
+- Imports all of the SIRI functional service schemas.
+- Provides a convenient way to access all of the SIRI functionality in a single schema.
+- Can be used to develop applications that support all SIRI services.
+
+**siriSg.xsd**
+
+- Defines supplementary SIRI XML model elements and attributes that are used by some SIRI services.
+- For example, the siriSg.xsd schema defines elements for exchanging vehicle location and status information, as well as stop monitoring information.
+- Can be used to develop applications that support advanced SIRI features.
+
+### XML Examples
+
+- Explore XML examples in the */examples* subdirectory.
+
+Further information on the examples is available on the [wiki](https://github.com/TuThoThai/SIRI/wiki/Using-SIRI#how-to-use-example-files)
+
+### Support for XML Editors 
 
 - **Altova XMLSpy Project**: Find an organized view of the schema and examples in the root directory.
   - Project file: Siri.spp
