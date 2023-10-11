@@ -5,7 +5,7 @@
 
 ## Folder Structure 📁
 
-More information on the folders' structure can be found in the [wiki](https://github.com/TuThoThai/SIRI/wiki/Structure-%26-Compatibility/_edit#folders)
+More information on the folders' structure can be found in the [wiki](https://github.com/TuThoThai/SIRI/wiki/Structure-%26-Compatibility/#folders)
 
 ## Getting Started 🚀
 
