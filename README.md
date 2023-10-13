@@ -3,7 +3,7 @@
 
 - SIRI (Service Interface for Real-Time Information) XML schema is a standardized format for exchanging real-time information about public transportation services and events.
 
-## Folder Structure 📁
+## Folder structure 📁
 
 More information on the folders' structure can be found in the [wiki](https://github.com/ITxPT/SIRI/wiki/Structure-%26-Compatibility/#folders)
 
@@ -12,7 +12,7 @@ More information on the folders' structure can be found in the [wiki](https://gi
 - You can refer to the SIRI UML model for a detailed UML view of the schema packages.
 - The SIRI UML model is available in electronic format.
 
-## Getting Started 🚀
+## Getting started 🚀
 ### Main Root Schemas
 
 **siri.xsd**
@@ -33,13 +33,13 @@ More information on the folders' structure can be found in the [wiki](https://gi
 - For example, the siriSg.xsd schema defines elements for exchanging vehicle location and status information, as well as stop monitoring information.
 - Can be used to develop applications that support advanced SIRI features.
 
-### XML Examples
+### XML examples
 
 - Explore XML examples in the */examples* subdirectory.
 
 Further information on the examples is available on the [wiki](https://github.com/ITxPT/SIRI/wiki/Using-SIRI#how-to-use-example-files)
 
-### Support for XML Editors 
+### Support for XML editors 
 
 - **Altova XMLSpy Project**: Find an organized view of the schema and examples in the root directory.
   - Project file: Siri.spp
