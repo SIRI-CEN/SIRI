@@ -5,7 +5,7 @@
 
 ## Folder Structure 📁
 
-More information on the folders' structure can be found in the [wiki](https://github.com/TuThoThai/SIRI/wiki/Structure-%26-Compatibility/#folders)
+More information on the folders' structure can be found in the [wiki](https://github.com/ITxPT/SIRI/wiki/Structure-%26-Compatibility/#folders)
 
 ## UML model 
 
@@ -37,7 +37,7 @@ More information on the folders' structure can be found in the [wiki](https://gi
 
 - Explore XML examples in the */examples* subdirectory.
 
-Further information on the examples is available on the [wiki](https://github.com/TuThoThai/SIRI/wiki/Using-SIRI#how-to-use-example-files)
+Further information on the examples is available on the [wiki](https://github.com/ITxPT/SIRI/wiki/Using-SIRI#how-to-use-example-files)
 
 ### Support for XML Editors 
 
@@ -46,7 +46,7 @@ Further information on the examples is available on the [wiki](https://github.co
 - **Oxygen Project File:**
   - Project file: Siri.xpr
 
-More information on the tools available for working with SIRI XML schema can be found in the [wiki](https://github.com/TuThoThai/SIRI/wiki/Software-&-tools)
+More information on the tools available for working with SIRI XML schema can be found in the [wiki](https://github.com/ITxPT/SIRI/wiki/Software-&-tools)
 
 ## Releases
 
