@@ -23,13 +23,13 @@ More information on the folders' structure can be found in the [wiki](https://gi
 
 **siri_all_functionalServices.xsd**
 
-- Imports all of the SIRI functional service schemas.
-- Provides a convenient way to access all of the SIRI functionality in a single schema.
+- Imports all the SIRI functional service schemas.
+- Provides a convenient way to access all the SIRI functionality in a single schema.
 - Can be used to develop applications that support all SIRI services.
 
 **siriSg.xsd**
 
-- Defines supplementary SIRI XML model elements and attributes that are used by some SIRI services.
+- Defines additional SIRI XML model elements and attributes that are used by some SIRI services.
 - For example, the siriSg.xsd schema defines elements for exchanging vehicle location and status information, as well as stop monitoring information.
 - Can be used to develop applications that support advanced SIRI features.
 
@@ -52,9 +52,9 @@ More information on the tools available for working with SIRI XML schema can be 
 
 | Release Number | Release Date | Summary of Changes         |
 |----------------|--------------|----------------------------|
-| v2.1           | 2022.10.25   | [Latest](https://github.com/SIRI-CEN/SIRI/releases/tag/v2.1) |
-| v2.0           | 2015.05.13   | Bug fixes and updates      |
-| v1.4a          | 2011-04-18   | Minor corrections          |
-| v1.3           | 2009-03-31   | Corrections and revisions  |
+| v2.1           | Oct 2002   | [Latest](https://github.com/SIRI-CEN/SIRI/releases/tag/v2.1) |
+| v2.0           | May 2015   | Bug fixes and updates      |
+| v1.4a          | April 2011   | Minor corrections          |
+| v1.3           | March 2009   | Corrections and revisions  |
 
-Changes to the SIRI schema up to version 2.0 since v1.3 are available in [release-notes](release-notes) folder
+Changes to the SIRI schema from v1.3 and up to v2.0 are available in [release-notes](release-notes) folder
