@@ -571,7 +571,7 @@ Has the following uses:
   <xsd:sequence>
    <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>OPERATOR of a VEHICLE JOURNEY.   Note that the operator may change over the course of a journey. This should show the operator for the current point in the journey.  Use JourneyParts to record all the operators in the whole journey.</xsd:documentation>
+     <xsd:documentation>OPERATOR of a VEHICLE JOURNEY.   Note that the operator may change over the course of a journey.  This shoudl show teh operator for the curent point in the journey.  Use Journey Parts tp record all the operators in the whole journeyh.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ProductCategoryRef" type="ProductCategoryRefStructure" minOccurs="0">

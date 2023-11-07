@@ -159,7 +159,7 @@ Roads and road transport</Category>
   <xsd:sequence>
    <xsd:element name="AccountId" type="xsd:NMTOKEN" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Account identifier. May be used to attribute requests to a particular application provider and authentication key. The account may be common to all users of an application or to an individual user. Note that to identify an individual user the RequestorRef can be used with an anonymised token. (since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Account Identifier. May be used to attribute requests to a particular application provider and authentication key. The account may be common to all users of an application, or to an individual user. Note that to identify an individual user the RequestorRef can be used with an anonymised token. . (since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="AccountKey" type="xsd:normalizedString" minOccurs="0">
@@ -367,12 +367,12 @@ If SubscriptionRenewal is omitted, this request is to be treated as a re-subscri
   <xsd:sequence>
    <xsd:element name="Status" type="xsd:boolean" default="true" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the complete request could be processed successfully or not. Default is 'true'. If any of the individual requests within the delivery failed, it should be set to 'false'.</xsd:documentation>
+     <xsd:documentation>Whether the complerte request could be processed successfully or not. Default is 'true'. If any of the individual requests within the delivery failed, should be set to ' false'.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="ErrorCondition" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Description of any error or warning conditions that apply to the overall request. More specific error conditions should be included on each request that fails.</xsd:documentation>
+     <xsd:documentation>Description of any error or warning conditions that appluy to the overall request. More Specific error conditions should be included on each request that fails.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -993,7 +993,7 @@ If SubscriptionRenewal is omitted, this request is to be treated as a re-subscri
     </xsd:element>
     <xsd:element name="WgsDecimalDegrees" type="EmptyType">
      <xsd:annotation>
-      <xsd:documentation>Geospatial coordinates are given as WGS84 latiude and longitude, decimial degrees of arc.</xsd:documentation>
+      <xsd:documentation>Geospatial coordinates are given as Wgs 84 Latiude and longitude, decimial degrees of arc.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
    </xsd:choice>

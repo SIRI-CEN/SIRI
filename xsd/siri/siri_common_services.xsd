@@ -334,7 +334,7 @@ Rail transport, Roads and road transport
     </xsd:annotation>
     <xsd:element name="WgsDecimalDegrees" type="EmptyType">
      <xsd:annotation>
-      <xsd:documentation>Geospatial coordinates are given as WGS84 latiude and longitude, decimial degrees of arc.</xsd:documentation>
+      <xsd:documentation>Geospatial coordinates are given as Wgs 84 Latiude and longitude, decimial degrees of arc.</xsd:documentation>
      </xsd:annotation>
     </xsd:element>
     <xsd:element name="GmlCoordinateFormat" type="SrsNameType">
