@@ -159,12 +159,12 @@ Rail transport, Roads and road transport
  </xsd:element>
  <xsd:complexType name="ErrorCodeStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Error Code.</xsd:documentation>
+   <xsd:documentation>Type for error code.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="ErrorText" type="xsd:string" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Addtional Description of error. This allows a descripotion to be supplied when the Error code is used in a specific WSDL fault, rather than within a general error condition.</xsd:documentation>
+     <xsd:documentation>Additional description of error. This allows a description to be supplied when the Ecror code is used in a specific WSDL fault, rather than within a general error condition.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
