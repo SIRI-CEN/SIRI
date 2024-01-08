@@ -351,7 +351,7 @@ Rail transport, Roads and road transport
 			<xsd:enumeration value="rail"/>
 			<xsd:enumeration value="taxi">
 				<xsd:annotation>
-   					<xsd:documentation>To be used to indicate that a scheduled service is operated by taxi. Should not be used to indicate a regular taxi-service.</xsd:documentation>
+					<xsd:documentation>To be used to indicate that a scheduled service is operated by taxi. Should not be used to indicate a regular taxi-service.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="tram"/>
