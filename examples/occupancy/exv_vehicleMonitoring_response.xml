@@ -17,11 +17,15 @@
 				<RecordedAtTime>2023-11-16T09:30:47-05:00</RecordedAtTime>
 				<ValidUntilTime>22023-11-17T09:30:47-05:00</ValidUntilTime>
 				<MonitoredVehicleJourney>
-					<LineRef>unknown</LineRef> <!-- slnid -->
-					<DirectionRef>ch:1:Direction:H</DirectionRef> <!-- you didn't have this in the JSON, but I think it would be good, if we know this -->
+					<LineRef>unknown</LineRef>
+					<!-- slnid -->
+					<DirectionRef>ch:1:Direction:H</DirectionRef>
+					<!-- you didn't have this in the JSON, but I think it would be good, if we know this -->
 					<FramedVehicleJourneyRef>
-						<DataFrameRef>2023-11-16</DataFrameRef> <!-- operating day -->
-						<DatedVehicleJourneyRef>ch:1:sjyid:11:11293191923919</DatedVehicleJourneyRef> <!-- not yet available -->
+						<DataFrameRef>2023-11-16</DataFrameRef>
+						<!-- operating day -->
+						<DatedVehicleJourneyRef>ch:1:sjyid:11:11293191923919</DatedVehicleJourneyRef>
+						<!-- not yet available -->
 					</FramedVehicleJourneyRef>
 					<OperatorRef>11</OperatorRef>
 					<OriginRef>8504300</OriginRef>
@@ -34,13 +38,16 @@
 						<TrainNumberRef>504</TrainNumberRef>
 					</TrainNumbers>
 					<OnwardCalls>
-						<OnwardCall> <!-- we can do it for all stops in the train. It is OnwardCall, because it is in the future -->
+						<OnwardCall>
+							<!-- we can do it for all stops in the train. It is OnwardCall, because it is in the future -->
 							<StopPointRef>8504300</StopPointRef>
 							<VisitNumber>1</VisitNumber>
 							<StopPointName>Biel/Bienne</StopPointName>
-							<ExpectedDepartureTime>2023-11-16T05:14:00Z</ExpectedDepartureTime> <!-- Zulu time usually -->
+							<ExpectedDepartureTime>2023-11-16T05:14:00Z</ExpectedDepartureTime>
+							<!-- Zulu time usually -->
 							<ExpectedDepartureOccupancy>
-								<FareClass>businessClass</FareClass> <!-- or firstClass -->
+								<FareClass>businessClass</FareClass>
+								<!-- or firstClass -->
 								<OccupancyLevel>fewSeatsAvailable</OccupancyLevel>
 								<OccupancyPercentage>65</OccupancyPercentage>
 							</ExpectedDepartureOccupancy>
@@ -48,7 +55,7 @@
 								<FareClass>secondClass</FareClass>
 								<OccupancyLevel>manySeatsAvailable</OccupancyLevel>
 								<OccupancyPercentage>24</OccupancyPercentage>
-							</ExpectedDepartureOccupancy>							
+							</ExpectedDepartureOccupancy>
 						</OnwardCall>
 					</OnwardCalls>
 				</MonitoredVehicleJourney>
