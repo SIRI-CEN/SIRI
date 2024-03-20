@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (C) Copyright 2005-2012 CEN SIRI -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<ResponseTimestamp>2023-11-16T09:30:47-05:00</ResponseTimestamp>
+		<Status>true</Status>
+		<EstimatedTimetableDelivery version="2.0">
+			<ResponseTimestamp>2023-11-16T09:30:47-05:00</ResponseTimestamp>
+			<ValidUntil>2023-11-17T09:30:47-05:00</ValidUntil>
+			<EstimatedJourneyVersionFrame>
+				<RecordedAtTime>2023-11-16T09:30:47-05:00</RecordedAtTime>
+				<!--==journey 1========================== -->
+				<EstimatedVehicleJourney>
+					<LineRef>ch:1:slnid:182312</LineRef>
+					<!-- slnid -->
+					<DirectionRef>ch:1:Direction:H</DirectionRef>
+					<!-- you didn't have this in the JSON, but I think it would be good, if we know this -->
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2023-11-16</DataFrameRef>
+						<!-- operating day -->
+						<DatedVehicleJourneyRef>ch:1:sjyid:11:11293191923919</DatedVehicleJourneyRef>
+						<!-- not yet available -->
+					</FramedVehicleJourneyRef>
+					<OriginRef>8504300</OriginRef>
+					<OriginName>Biel/Bienne</OriginName>
+					<DestinationRef>8504221</DestinationRef>
+					<DestinationName>Neuchâtel</DestinationName>
+					<OperatorRef>11</OperatorRef>
+					<TrainNumbers>
+						<TrainNumberRef>504</TrainNumberRef>
+					</TrainNumbers>
+					<EstimatedCalls>
+						<!-- CALL 1-->
+						<EstimatedCall>
+							<!-- we can do it for all stops in the train. It is OnwardCall, because it is in the future -->
+							<StopPointRef>8504300</StopPointRef>
+							<VisitNumber>1</VisitNumber>
+							<StopPointName>Biel/Bienne</StopPointName>
+							<ExpectedDepartureTime>2023-11-16T05:14:00Z</ExpectedDepartureTime>
+							<!-- Zulu time usually -->
+							<ExpectedDepartureOccupancy>
+								<FareClass>businessClass</FareClass>
+								<!-- or firstClass -->
+								<OccupancyLevel>fewSeatsAvailable</OccupancyLevel>
+								<OccupancyPercentage>65</OccupancyPercentage>
+							</ExpectedDepartureOccupancy>
+							<ExpectedDepartureOccupancy>
+								<FareClass>secondClass</FareClass>
+								<OccupancyLevel>manySeatsAvailable</OccupancyLevel>
+								<OccupancyPercentage>24</OccupancyPercentage>
+							</ExpectedDepartureOccupancy>
+						</EstimatedCall>
+						<EstimatedCall>
+							<!--at least two stops needed. The last one does not have an Occupancy -->
+							<StopPointRef>8504221</StopPointRef>
+							<VisitNumber>2</VisitNumber>
+							<StopPointName>Neuchâtel</StopPointName>
+							<!-- Zulu time usually -->
+						</EstimatedCall>
+					</EstimatedCalls>
+				</EstimatedVehicleJourney>
+			</EstimatedJourneyVersionFrame>
+		</EstimatedTimetableDelivery>
+	</ServiceDelivery>
+</Siri>
