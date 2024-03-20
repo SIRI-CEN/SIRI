@@ -17,8 +17,9 @@
 				<RecordedAtTime>2023-11-16T09:30:47-05:00</RecordedAtTime>
 				<ValidUntilTime>22023-11-17T09:30:47-05:00</ValidUntilTime>
 				<MonitoredVehicleJourney>
-					<LineRef>unknown</LineRef> <!-- slnid -->
-					<DirectionRef>ch:1:Direction:H</DirectionRef> <!-- you didn't have this in the JSON, but I think it would be good, if we know this -->
+					<LineRef>ch:1:slnid:182312</LineRef>
+					<DirectionRef>ch:1:Direction:H</DirectionRef>
+					<!-- in this example the referenced line ID does not distinguish between directions, hence the latter must be provided explicitly -->
 					<FramedVehicleJourneyRef>
 						<DataFrameRef>2023-11-16</DataFrameRef> <!-- operating day -->
 						<DatedVehicleJourneyRef>ch:1:sjyid:11:11293191923919</DatedVehicleJourneyRef> <!-- not yet available -->
