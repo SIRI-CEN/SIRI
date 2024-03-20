@@ -272,7 +272,7 @@ Rail transport, Roads and road transport
   <xsd:sequence>
    <xsd:element name="DataFrameRef" type="DataFrameRefStructure">
     <xsd:annotation>
-     <xsd:documentation>identifier of data frame within particpant service. Used to ensure that the Reference to a DATED VEHICLE JOURNEY is unique with the data horizon of the service. Often the OPERATING DAY is used for this purpose.</xsd:documentation>
+     <xsd:documentation>Identifier of data frame within participant service. Used to ensure that the Reference to a DATED VEHICLE JOURNEY is unique with the data horizon of the service. Often the OPERATING DAY is used for this purpose.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyCodeType">
