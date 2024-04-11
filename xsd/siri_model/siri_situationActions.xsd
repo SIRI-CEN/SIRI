@@ -229,7 +229,7 @@ Rail transport, Roads and road transport
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
+						<xsd:element name="ScopeType" type="ScopeTypeEnumeration" minOccurs="0"/>
 						<xsd:element name="Affects" type="AffectsScopeStructure"/>
 					</xsd:sequence>
 				</xsd:complexType>
@@ -619,7 +619,7 @@ Rail transport, Roads and road transport
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="ScopeType" type="ScopeTypeEnumeration"/>
+						<xsd:element name="ScopeType" type="ScopeTypeEnumeration" minOccurs="0"/>
 						<xsd:element name="Affects" type="AffectsScopeStructure"/>
 					</xsd:sequence>
 				</xsd:complexType>
