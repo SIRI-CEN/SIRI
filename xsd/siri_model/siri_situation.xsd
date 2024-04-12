@@ -713,7 +713,7 @@ Rail transport, Roads and road transport
 			</xsd:element>
 			<xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Arbitrary application specific classifiers.</xsd:documentation>
+					<xsd:documentation>Arbitrary application specific classifiers, tags or message categories for filtering or display, for example as icons on a situation map. Can be overwritten in an individual PassengerInformationAction.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="SecondaryReasons" minOccurs="0">
