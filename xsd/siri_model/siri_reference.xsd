@@ -159,9 +159,8 @@ Rail transport, Roads and road transport
    <xsd:element name="StopPointRef" type="StopPointRefStructure">
     <xsd:annotation>
      <xsd:documentation>
-	Preferrably a reference to a NeTEx SCHEDULED STOP POINT, however profiles may choose to refer to a NeTEx QUAY instead. As a last resort it can also refer to a NeTEx STOP PLACE, but this is discouraged as it leaves room for interpretation.
-	In EPIP this must be a reference to a SCHEDULED STOP POINT but the current specification document prTS 15531-7 from 2023-11 regrettably states that it must be a QUAY.
-	For a full discussion of this reference and how it is treated in profiles, visit https://public.3.basecamp.com/p/TcEEP5WrNZJPBxrJU9GAjint .     
+      Preferrably a reference to a SCHEDULED STOP POINT, however profiles may choose to refer to a QUAY instead.
+      As a last resort it can also refer to a STOP PLACE, but this is discouraged as it leaves room for interpretation.
      </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
