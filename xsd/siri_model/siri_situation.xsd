@@ -240,7 +240,7 @@ Rail transport, Roads and road transport
  <!--===PT SITUATION =========================================== -->
  <xsd:element name="PtSituationElement" type="PtSituationElementStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for individual IPT ncident.</xsd:documentation>
+   <xsd:documentation>Type for individual PT Incident.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="PtSituationElementStructure">
@@ -295,7 +295,7 @@ Rail transport, Roads and road transport
  <!--===PT SITUATION =========================================== -->
  <xsd:element name="RoadSituationElement" type="RoadSituationElementStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for individual IPT ncident.</xsd:documentation>
+   <xsd:documentation>Type for individual PT incident.</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:complexType name="RoadSituationElementStructure">
@@ -364,12 +364,12 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="situationRecordCreationTime" type="D2LogicalModel:DateTime" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The date/time that the SITUATIONRecord object (the first version of the record) was created by the original supplier.</xsd:documentation>
+     <xsd:documentation>The date/time that the SITUATION Record object (the first version of the record) was created by the original supplier.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="situationRecordObservationTime" type="D2LogicalModel:DateTime" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The date/time that the information represented by the current version of the SITUATIONRecord was observed by the original (potentially external) source of the information.</xsd:documentation>
+     <xsd:documentation>The date/time that the information represented by the current version of the SITUATIO NRecord was observed by the original (potentially external) source of the information.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="situationRecordVersion" type="D2LogicalModel:NonNegativeInteger" minOccurs="0">
@@ -379,7 +379,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="situationRecordVersionTime" type="D2LogicalModel:DateTime" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>The date/time that this current version of the SITUATIONRecord was written into the database of the supplier which is involved in the data exchange.</xsd:documentation>
+     <xsd:documentation>The date/time that this current version of the SITUATION Record was written into the database of the supplier which is involved in the data exchange.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="situationRecordFirstSupplierVersionTime" type="D2LogicalModel:DateTime">
@@ -405,7 +405,7 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:group name="Datex2RoadGroup">
   <xsd:annotation>
-   <xsd:documentation>Datex2 Trrffic element road.</xsd:documentation>
+   <xsd:documentation>Datex2 Traffic element road.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="impact" type="D2LogicalModel:Impact" minOccurs="0">
@@ -447,12 +447,12 @@ Rail transport, Roads and road transport
  </xsd:group>
  <xsd:complexType name="AffectedRoadStructure">
   <xsd:annotation>
-   <xsd:documentation>Type for Raod scope for scope of SITUATION or effect.</xsd:documentation>
+   <xsd:documentation>Type for Road scope for scope of SITUATION or effect.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element name="Road" type="D2LogicalModel:RoadsideReferencePointLinear" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Affected Road as described by a Date2x location.</xsd:documentation>
+     <xsd:documentation>Affected Road as described by a Datex 2 location.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:group ref="ProjectionGroup">
@@ -465,7 +465,7 @@ Rail transport, Roads and road transport
  </xsd:complexType>
  <xsd:complexType name="OptionalTrafficElementStructure" abstract="true">
   <xsd:annotation>
-   <xsd:documentation>An event which is not planned by the traffic OPERATOR, which is affecting, or has the potential to affect traffic flow. This SIRI-SX element embeds the Datex2 TrafficElement, making all elements optional because they may alternatvielky be specified by common SIRI-SRX SITUATION elements.</xsd:documentation>
+   <xsd:documentation>An event which is not planned by the traffic OPERATOR, which is affecting, or has the potential to affect traffic flow. This SIRI-SX element embeds the Datex 2 TrafficElement, making all elements optional because they may alternatvielky be specified by common SIRI-SRX SITUATION elements.</xsd:documentation>
   </xsd:annotation>
   <xsd:sequence>
    <xsd:group ref="Datex2ManagementGroup"/>
@@ -526,7 +526,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Name of for source.</xsd:documentation>
+     <xsd:documentation>Name of Source.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="SourceRole" type="xsd:string" minOccurs="0">
@@ -658,7 +658,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Repetitions" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>situation applies only on the repeated day types within the overall validity period(s). For example Sunday.</xsd:documentation>
+     <xsd:documentation>Situation applies only on the repeated day types within the overall validity period(s). For example, Sunday.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:sequence>
@@ -707,7 +707,7 @@ Rail transport, Roads and road transport
    <xsd:element ref="ReportType" minOccurs="0"/>
    <xsd:element name="Planned" type="xsd:boolean" default="false" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Whether the SITUATION was planned (eg engineering works) or unplanned (eg service alteration). Default is 'false', i.e. unplanned.</xsd:documentation>
+     <xsd:documentation>Whether the SITUATION was planned (e.g. engineering works) or unplanned (e.g. service alteration). Default is 'false', i.e. unplanned.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
@@ -921,7 +921,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:element>
    <xsd:element name="Operators" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Affected OPERATORs, If absent, taken from context. If present, any OPERATORs stated completely replace those from context.</xsd:documentation>
+     <xsd:documentation>Affected OPERATORs. If absent, taken from context. If present, any OPERATORs stated completely replace those from context.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexType>
      <xsd:choice>
@@ -1089,7 +1089,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
    </xsd:element>
    <xsd:element name="Summary" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Summary of SITUATION. If absent should be generated from structure elements / and or by condensing Description.  (Unbounded since SIRI 2.0)</xsd:documentation>
+     <xsd:documentation>Summary of SITUATION. If absent should be generated from structure elements, and/or by condensing Description.  (Unbounded since SIRI 2.0)</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Description" type="DefaultedTextStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1278,6 +1278,9 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Delays" type="DelaysStructure" minOccurs="0"/>
+    <xsd:annotation>
+     <xsd:documentation>Information on delays.</xsd:documentation>
+    </xsd:annotation>
    <xsd:element name="Casualties" type="CasualtiesStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Information on casualties.</xsd:documentation>
@@ -1483,7 +1486,7 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
   <xsd:sequence>
    <xsd:element name="TicketRestrictions" type="TicketRestrictionEnumeration" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Ticket restriction conditiosn in effect. TPEG pti table pti25.</xsd:documentation>
+     <xsd:documentation>Ticket restriction conditions in effect. TPEG pti table pti25.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Easement" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -1493,7 +1496,7 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
    </xsd:element>
    <xsd:element name="EasementRef" type="xsd:normalizedString" minOccurs="0">
     <xsd:annotation>
-     <xsd:documentation>Refernce to a fare exceptions code that is allowed because of the disruption. An easement may relax a fare condition, for exampel "You may use your metro ticket on the bus', or 'You may use your bus ticket in teh metro between these two stops'. </xsd:documentation>
+     <xsd:documentation>Refernce to a fare exceptions code that is allowed because of the disruption. An easement may relax a fare condition, for example "You may use your metro ticket on the bus', or 'You may use your bus ticket in teh metro between these two stops'. </xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
