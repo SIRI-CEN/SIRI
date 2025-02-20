@@ -620,7 +620,7 @@ Rail transport, Roads and road transport
    </xsd:element>
    <xsd:element name="Publication" type="PublicationStatusType" minOccurs="0" maxOccurs="unbounded">
     <xsd:annotation>
-     <xsd:documentation>Publishing status one of a specified set of substates to which a SITUATION can be assigned.</xsd:documentation>
+     <xsd:documentation>DEPRECATED -  Use the element Progress instead, which provides an enumeration of possible values detailed in WorkflowStatusEnumeration. -- Publishing status one of a specified set of substates to which a SITUATION can be assigned.</xsd:documentation>
     </xsd:annotation>
    </xsd:element>
   </xsd:sequence>
@@ -641,7 +641,7 @@ Rail transport, Roads and road transport
  </xsd:simpleType>
  <xsd:simpleType name="PublicationStatusType">
   <xsd:annotation>
-   <xsd:documentation>Type for Publication status.</xsd:documentation>
+   <xsd:documentation>DEPRECATED -  Use the element Progress instead, which provides an enumeration of possible values detailed in WorkflowStatusEnumeration. -- Type for Publication status.</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN"/>
  </xsd:simpleType>
