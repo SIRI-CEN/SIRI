@@ -203,7 +203,7 @@ Rail transport, Roads and road transport
 			<xsd:documentation>Type for list of SITUATIONs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="Name" type="xsd:NMTOKEN">
+			<xsd:element name="Name" type="xsd:NMTOKEN" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Name of action data Element.</xsd:documentation>
 				</xsd:annotation>
@@ -213,7 +213,7 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Data type of action data.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Value" type="xsd:anyType" maxOccurs="unbounded">
+			<xsd:element name="Value" type="xsd:anyType" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Value for action.</xsd:documentation>
 				</xsd:annotation>
