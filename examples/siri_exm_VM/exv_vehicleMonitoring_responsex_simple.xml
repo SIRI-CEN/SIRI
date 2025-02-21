@@ -7,56 +7,56 @@
 
 (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======ENDPOINT ===================================== -->
-  <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-  <ProducerRef>NADER</ProducerRef>
-  <!--=======PAYLOAD ===================================== -->
-  <VehicleMonitoringDelivery version="2.0">
-   <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-   <SubscriberRef>NADER</SubscriberRef>
-   <SubscriptionRef>00047</SubscriptionRef>
-   <VehicleActivity>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <ValidUntilTime>2004-12-17T09:30:47-05:00</ValidUntilTime>
-    <VehicleMonitoringRef>ACT019456</VehicleMonitoringRef>
-    <!-- MONITORED VEHICLE JOURNEY -->
-    <MonitoredVehicleJourney>
-     <LineRef>Line123</LineRef>
-     <FramedVehicleJourneyRef>
-      <DataFrameRef>2004-12-17</DataFrameRef>
-      <DatedVehicleJourneyRef>987675</DatedVehicleJourneyRef>
-     </FramedVehicleJourneyRef>
-     <PublishedLineName xml:lang="EN">123</PublishedLineName>
-     <VehicleLocation>
-      <Longitude>0.1</Longitude>
-      <Latitude>53.55</Latitude>
-     </VehicleLocation>
-     <Bearing>123</Bearing>
-     <VehicleRef>VEH987654</VehicleRef>
-    </MonitoredVehicleJourney>
-   </VehicleActivity>
-   <!--=======SECOND SUBSCRIPTION======================== -->
-   <VehicleActivity>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <ValidUntilTime>2004-12-17T09:30:47-05:00</ValidUntilTime>
-    <VehicleMonitoringRef>MYACACT</VehicleMonitoringRef>
-    <!-- MONITORED VEHICLE JOURNEY -->
-    <MonitoredVehicleJourney>
-     <!-- LINE GROUP -->
-     <LineRef>Line123</LineRef>
-     <FramedVehicleJourneyRef>
-      <DataFrameRef>2004-12-17</DataFrameRef>
-      <DatedVehicleJourneyRef>Outbound</DatedVehicleJourneyRef>
-     </FramedVehicleJourneyRef>
-     <VehicleLocation>
-      <Longitude>0</Longitude>
-      <Latitude>53.5</Latitude>
-     </VehicleLocation>
-     <Bearing>70</Bearing>
-     <VehicleRef>VEH987659</VehicleRef>
-    </MonitoredVehicleJourney>
-   </VehicleActivity>
-  </VehicleMonitoringDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======ENDPOINT ===================================== -->
+		<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+		<ProducerRef>NADER</ProducerRef>
+		<!--=======PAYLOAD ===================================== -->
+		<VehicleMonitoringDelivery version="2.0">
+			<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+			<SubscriberRef>NADER</SubscriberRef>
+			<SubscriptionRef>00047</SubscriptionRef>
+			<VehicleActivity>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<ValidUntilTime>2004-12-17T09:30:47-05:00</ValidUntilTime>
+				<VehicleMonitoringRef>ACT019456</VehicleMonitoringRef>
+				<!-- MONITORED VEHICLE JOURNEY -->
+				<MonitoredVehicleJourney>
+					<LineRef>Line123</LineRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2004-12-17</DataFrameRef>
+						<DatedVehicleJourneyRef>987675</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<PublishedLineName xml:lang="EN">123</PublishedLineName>
+					<VehicleLocation>
+						<Longitude>0.1</Longitude>
+						<Latitude>53.55</Latitude>
+					</VehicleLocation>
+					<Bearing>123</Bearing>
+					<VehicleRef>VEH987654</VehicleRef>
+				</MonitoredVehicleJourney>
+			</VehicleActivity>
+			<!--=======SECOND SUBSCRIPTION======================== -->
+			<VehicleActivity>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<ValidUntilTime>2004-12-17T09:30:47-05:00</ValidUntilTime>
+				<VehicleMonitoringRef>MYACACT</VehicleMonitoringRef>
+				<!-- MONITORED VEHICLE JOURNEY -->
+				<MonitoredVehicleJourney>
+					<!-- LINE GROUP -->
+					<LineRef>Line123</LineRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2004-12-17</DataFrameRef>
+						<DatedVehicleJourneyRef>Outbound</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<VehicleLocation>
+						<Longitude>0</Longitude>
+						<Latitude>53.5</Latitude>
+					</VehicleLocation>
+					<Bearing>70</Bearing>
+					<VehicleRef>VEH987659</VehicleRef>
+				</MonitoredVehicleJourney>
+			</VehicleActivity>
+		</VehicleMonitoringDelivery>
+	</ServiceDelivery>
 </Siri>

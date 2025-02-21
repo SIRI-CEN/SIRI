@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_datedVehicleJourney">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Contributor>Werner Kohl MDV</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2003-02-10</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-31</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date><Modified>2007-04-17</Modified>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Contributor>Werner Kohl MDV</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2003-02-10</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-31</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date><Modified>2007-04-17</Modified>
 					 Name Space changes 
 				</Date>
-    <Date><Modified>2008-03-26</Modified>
+				<Date><Modified>2008-03-26</Modified>
 					 Add wrapper tag for Line DIRECTION to help binding to Axis 
 				</Date>
-    <Date><Modified>2008-11-17</Modified>
+				<Date><Modified>2008-11-17</Modified>
 					 Revise to support substitution groups 
 				</Date>
-    <Date><Modified>2011-04-18</Modified>
+				<Date><Modified>2011-04-18</Modified>
 					 - siri_productionTimetable_service.xsd Type on request ValidiyPeriod start and end should be datetime not time ..
 						- Change to ClosedTimestampRange instead of ClosedTimeRange.
       Fix Subscription request to be an element and have extensions .
 				</Date>
-    <Date><Modified>2011-01-19</Modified>
+				<Date><Modified>2011-01-19</Modified>
 					 SIRI 1.3 Drop use of As Flat Groups for DatedCalls. 
 				</Date>
-    <Date><Modified>2012-03-23</Modified>
+				<Date><Modified>2012-03-23</Modified>
 					 Factor out fropm ProductionTimetable package
 					 (since SIRI 2.0) Add ServiceJourneyInterchange (i.e. Monitored Connection)
 						[VDV] Add additional times to TargetedServiceInterchange MinimumTransferTime, MaximimTransferTime, StandardTransferTime, MaximumAUtomaticWaitTime, StandardWaitTime.					 
@@ -49,35 +49,36 @@
 						[VDV] Add AimedLatestPassengerAccessTime to TargetedCall 				
 					 
 				</Date>
-    <Date><Modified>2013-02-11</Modified>
+				<Date><Modified>2013-02-11</Modified>
 					SIRI v2.0 Modified ServiceJourneyInterchange  SIRI:PT
 				</Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the Production Timetable Service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_datedVehicleJourney.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-        <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the Production Timetable Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_datedVehicleJourney.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -85,618 +86,618 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI_PT XML schema. Service Interface for Real-time  Information. Production Timetable Service.</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-Model Dated Vehicle Joruney.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_journey.xsd"/>
- <!-- ======================================================================= -->
- <xsd:element name="DatedVehicleJourney" type="DatedVehicleJourneyStructure">
-  <xsd:annotation>
-   <xsd:documentation>A planned VEHICLE JOURNEY taking place on a particular date.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="DatedVehicleJourneyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Planned VEHICLE JOURNEY (Production Timetable Service).</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="DatedVehicleJourneyCode" type="DatedVehicleJourneyCodeType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifier for a VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="TimetableAlterationGroup" minOccurs="0"/>
-   <xsd:group ref="JourneyPatternInfoGroup"/>
-   <xsd:group ref="JourneyEndNamesGroup"/>
-   <xsd:group ref="ServiceInfoGroup"/>
-   <xsd:group ref="JourneyInfoGroup"/>
-   <xsd:group ref="DatedServiceInfoGroup"/>
-   <xsd:group ref="TimetableRealtimeInfoGroup"/>
-   <xsd:group ref="DatedTrainOperationalInfoGroup"/>
-   <xsd:element name="DatedCalls">
-    <xsd:annotation>
-     <xsd:documentation>Complete sequence of stops along the route path, in calling order.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element ref="DatedCall" minOccurs="2" maxOccurs="unbounded"/>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="JourneyRelations" type="JourneyRelationsStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Relations of the journey with other journeys, e.g., in case a joining/splitting takes place or the journey substitutes for another one etc.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="RemovedDatedVehicleJourneyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for previously planned VEHICLE JOURNEY that is removed from the data producer when using incremental updates. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>A reference to the DATED VEHICLE JOURNEY from a previous PT delivery that is removed by the data producer.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Optionally identify the VEHICLE JOURNEY indirectly by origin and destination and the scheduled times at these stops.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="TrainNumbers" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>TRAIN NUMBERs for journey.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>TRAIN NUMBER assigned to VEHICLE JOURNEY.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element ref="ReasonForRemoval"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="DatedServiceInfoGroup">
-  <xsd:annotation>
-   <xsd:documentation>General info elements that apply to all journeys of timetable version unless overriden.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="OriginDisplay" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of the origin stop (vehicle signage) to show on vehicle, Can be overwritten for a journey, and then also section by section by the entry in an Individual Call.  (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DestinationDisplay" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of the destination stop (vehicle signage) to show on vehicle, Can be overwritten for a journey, and then also section by section by the entry in an Individual Call.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="LineNote" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Additional Text associated with LINE.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FirstOrLastJourney" type="FirstOrLastJourneyEnumeration" default="unspecified" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether journey is first or last jouurney of day. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="TimetableAlterationGroup">
-  <xsd:annotation>
-   <xsd:documentation>If the journey is an alteration to a timetable, indicates the original journey, and the nature of the difference.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Use of simple reference is deprecated </xsd:documentation>
-    </xsd:annotation>
-    <xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>Refecence to a VEHICLE JOURNEY framed by the day. SIRI 2.0 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element ref="VehicleJourneyRef"/>
-   </xsd:choice>
-   <xsd:choice>
-    <xsd:element name="ExtraJourney" type="xsd:boolean" default="false" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Whether this journey is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to false: the journey is not an addition.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="Cancellation" type="xsd:boolean" default="false" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Whether this journey is a cancellation of a journey in the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the journey is not cancelled.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="TimetableRealtimeInfoGroup">
-  <xsd:annotation>
-   <xsd:documentation>Additional descriptive properties of service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="HeadwayService" type="xsd:boolean" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether this is a Headway Service, that is, one shown as operating at a prescribed interval rather than to a fixed timetable.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether VEHICLE JOURNEYs of LINE are normally monitored. Provides a default value for the Monitored element on individual journeys of the timetable.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ======================================================================= -->
- <xsd:complexType name="AbstractServiceJourneyInterchangeStructure" abstract="true">
-  <xsd:annotation>
-   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE between two journeys. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice>
-    <xsd:element ref="InterchangeCode" minOccurs="0"/>
-    <xsd:element ref="InterchangeRef" minOccurs="0"/>
-   </xsd:choice>
-   <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
-   <xsd:choice>
-    <xsd:element ref="ExtraInterchange" minOccurs="0"/>
-    <xsd:element name="Cancellation" type="InterchangeCancellation" default="false" minOccurs="0"/>
-   </xsd:choice>
-   <xsd:element ref="ReasonForRemoval" minOccurs="0"/>
-   <xsd:element ref="FeederRef" minOccurs="0"/>
-   <xsd:element ref="FeederArrivalStopRef" minOccurs="0"/>
-   <xsd:element ref="FeederVisitNumber" minOccurs="0"/>
-   <xsd:element ref="FeederStopOrder" minOccurs="0"/>
-   <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
-   <xsd:element ref="DistributorRef" minOccurs="0"/>
-   <xsd:element ref="DistributorDepartureStopRef" minOccurs="0"/>
-   <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
-   <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
-   <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
-   <xsd:group ref="InterchangePropertyGroup"/>
-   <xsd:group ref="InterchangeTimesGroup"/>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="FromServiceJourneyInterchangeStructure">
-  <xsd:annotation>
-   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE from a journey. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
-    <xsd:sequence>
-     <xsd:element ref="InterchangeCode" minOccurs="0"/>
-     <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
-     <xsd:element ref="FeederRef"/>
-     <xsd:element ref="FeederArrivalStopRef"/>
-     <xsd:element ref="FeederVisitNumber" minOccurs="0"/>
-     <xsd:element ref="FeederStopOrder" minOccurs="0"/>
-     <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
-     <xsd:element ref="DistributorRef" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="DistributorDepartureStopRef" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="DistributorVisitNumber" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
-     <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
-     <xsd:group ref="InterchangePropertyGroup"/>
-     <xsd:group ref="InterchangeTimesGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:restriction>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="ToServiceJourneyInterchangeStructure">
-  <xsd:annotation>
-   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE to a journey. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
-    <xsd:sequence>
-     <xsd:element ref="InterchangeCode" minOccurs="0"/>
-     <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
-     <xsd:element ref="FeederRef" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="FeederArrivalStopRef" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="FeederVisitNumber" minOccurs="0" maxOccurs="0"/>
-     <xsd:element ref="FeederStopOrder" minOccurs="0"/>
-     <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
-     <xsd:element ref="DistributorRef"/>
-     <xsd:element ref="DistributorDepartureStopRef"/>
-     <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
-     <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
-     <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
-     <xsd:group ref="InterchangePropertyGroup"/>
-     <xsd:group ref="InterchangeTimesGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:restriction>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="ServiceJourneyInterchangeStructure">
-  <xsd:annotation>
-   <xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE between two journeys. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
-    <xsd:sequence>
-     <xsd:element ref="InterchangeCode" minOccurs="0"/>
-     <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
-     <xsd:choice>
-      <xsd:element ref="ExtraInterchange" minOccurs="0"/>
-      <xsd:element name="Cancellation" type="InterchangeCancellation" default="false" minOccurs="0"/>
-     </xsd:choice>
-     <xsd:element ref="FeederRef"/>
-     <xsd:element ref="FeederArrivalStopRef"/>
-     <xsd:element ref="FeederVisitNumber" minOccurs="0"/>
-     <xsd:element ref="FeederStopOrder" minOccurs="0"/>
-     <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
-     <xsd:element ref="DistributorRef"/>
-     <xsd:element ref="DistributorDepartureStopRef"/>
-     <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
-     <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
-     <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
-     <xsd:group ref="InterchangePropertyGroup"/>
-     <xsd:group ref="InterchangeTimesGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:restriction>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="RemovedServiceJourneyInterchangeStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a previously planned SERVICE JOURNEY INTERCHANGE that a data producer wants to silently remove from the plan (because it is erroneous data). Careful: Removal is different from Cancellation. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
-    <xsd:sequence>
-     <xsd:element ref="InterchangeRef"/>
-     <xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
-     <xsd:element ref="ReasonForRemoval"/>
-     <xsd:element ref="FeederRef"/>
-     <xsd:element ref="FeederArrivalStopRef"/>
-     <xsd:element ref="FeederVisitNumber" minOccurs="0"/>
-     <xsd:element ref="FeederStopOrder" minOccurs="0"/>
-     <xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
-     <xsd:element ref="DistributorRef"/>
-     <xsd:element ref="DistributorDepartureStopRef"/>
-     <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
-     <xsd:element ref="DistributorStopOrder" minOccurs="0"/>
-     <xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:restriction>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:group name="InterchangeTimesGroup">
-  <xsd:annotation>
-   <xsd:documentation>Time Elements for SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="InterchangeWaitTimeGroup">
-    <xsd:annotation>
-     <xsd:documentation>Elements for INTERCHANGE WAIT TIME.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:group>
-   <xsd:group ref="InterchangeTransferDurationGroup"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="InterchangeTransferDurationGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for INTERCHANGE TRANSFER duration.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="StandardTransferTime" type="xsd:duration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Standard transfer duration for INTERCHANGE. SIRI v2,0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MinimumTransferTime" type="xsd:duration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Minimum transfer duration for INTERCHANGE. SIRI v2,0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MaximumTransferTime" type="xsd:duration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Maximum transfer duration for INTERCHANGE. SIRI v2,0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="InterchangeWaitTimeGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for INTERCHANGE WAIT TIME.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="StandardWaitTime" type="xsd:duration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Standard wait time for INTERCHANGE. SIRI v2,0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MaximumWaitTime" type="xsd:duration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Maximum time that Distributor will wait for Feeder for INTERCHANGE. SIRI v1.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MaximumAutomaticWaitTime" type="xsd:duration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Maximum automatic wait time that Distributor will wait for Feeder for INTERCHANGE. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ==== CALL =========================================-->
- <xsd:element name="DatedCall" type="DatedCallStructure">
-  <xsd:annotation>
-   <xsd:documentation>Complete sequence of stops along the route path, in calling order.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="DatedCallStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Planned VEHICLE JOURNEY Stop (Production Timetable Service).</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="StopPointInSequenceGroup"/>
-   <xsd:choice minOccurs="0">
-    <xsd:element name="ExtraCall" type="xsd:boolean" default="false" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Whether this DATED CALL is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to false: the journey is not an addition.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="Cancellation" type="xsd:boolean" default="false" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Whether this DATED CALL is a cancellation of a previously announced call (or planned according to the long-term timetable). Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the journey is not cancelled.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:group ref="CallPropertyGroup"/>
-   <xsd:element name="CallNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Text annotation that applies to this call.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <!-- The FacilityChangeElement has been removed here in Siri 1.1, but it is still available at the same place through the AimedCallGroup->DisruptionGroup 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI_PT XML schema. Service Interface for Real-time  Information. Production Timetable Service.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-Model Dated Vehicle Joruney.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_journey.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:element name="DatedVehicleJourney" type="DatedVehicleJourneyStructure">
+		<xsd:annotation>
+			<xsd:documentation>A planned VEHICLE JOURNEY taking place on a particular date.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="DatedVehicleJourneyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Planned VEHICLE JOURNEY (Production Timetable Service).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DatedVehicleJourneyCode" type="DatedVehicleJourneyCodeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier for a VEHICLE JOURNEY.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="TimetableAlterationGroup" minOccurs="0"/>
+			<xsd:group ref="JourneyPatternInfoGroup"/>
+			<xsd:group ref="JourneyEndNamesGroup"/>
+			<xsd:group ref="ServiceInfoGroup"/>
+			<xsd:group ref="JourneyInfoGroup"/>
+			<xsd:group ref="DatedServiceInfoGroup"/>
+			<xsd:group ref="TimetableRealtimeInfoGroup"/>
+			<xsd:group ref="DatedTrainOperationalInfoGroup"/>
+			<xsd:element name="DatedCalls">
+				<xsd:annotation>
+					<xsd:documentation>Complete sequence of stops along the route path, in calling order.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="DatedCall" minOccurs="2" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="JourneyRelations" type="JourneyRelationsStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Relations of the journey with other journeys, e.g., in case a joining/splitting takes place or the journey substitutes for another one etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="RemovedDatedVehicleJourneyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for previously planned VEHICLE JOURNEY that is removed from the data producer when using incremental updates. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the DATED VEHICLE JOURNEY from a previous PT delivery that is removed by the data producer.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DatedVehicleJourneyIndirectRef" type="DatedVehicleJourneyIndirectRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Optionally identify the VEHICLE JOURNEY indirectly by origin and destination and the scheduled times at these stops.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TrainNumbers" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>TRAIN NUMBERs for journey.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="TrainNumberRef" type="TrainNumberRefStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>TRAIN NUMBER assigned to VEHICLE JOURNEY.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="ReasonForRemoval"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="DatedServiceInfoGroup">
+		<xsd:annotation>
+			<xsd:documentation>General info elements that apply to all journeys of timetable version unless overriden.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="OriginDisplay" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of the origin stop (vehicle signage) to show on vehicle, Can be overwritten for a journey, and then also section by section by the entry in an Individual Call.  (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DestinationDisplay" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of the destination stop (vehicle signage) to show on vehicle, Can be overwritten for a journey, and then also section by section by the entry in an Individual Call.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LineNote" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Additional Text associated with LINE.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FirstOrLastJourney" type="FirstOrLastJourneyEnumeration" default="unspecified" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether journey is first or last jouurney of day. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="TimetableAlterationGroup">
+		<xsd:annotation>
+			<xsd:documentation>If the journey is an alteration to a timetable, indicates the original journey, and the nature of the difference.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Use of simple reference is deprecated </xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="FramedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Refecence to a VEHICLE JOURNEY framed by the day. SIRI 2.0 </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="VehicleJourneyRef"/>
+			</xsd:choice>
+			<xsd:choice>
+				<xsd:element name="ExtraJourney" type="xsd:boolean" default="false" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Whether this journey is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to false: the journey is not an addition.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Cancellation" type="xsd:boolean" default="false" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Whether this journey is a cancellation of a journey in the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the journey is not cancelled.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="TimetableRealtimeInfoGroup">
+		<xsd:annotation>
+			<xsd:documentation>Additional descriptive properties of service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="HeadwayService" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether this is a Headway Service, that is, one shown as operating at a prescribed interval rather than to a fixed timetable.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether VEHICLE JOURNEYs of LINE are normally monitored. Provides a default value for the Monitored element on individual journeys of the timetable.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="AbstractServiceJourneyInterchangeStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE between two journeys. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="InterchangeCode" minOccurs="0"/>
+				<xsd:element ref="InterchangeRef" minOccurs="0"/>
+			</xsd:choice>
+			<xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="ExtraInterchange" minOccurs="0"/>
+				<xsd:element name="Cancellation" type="InterchangeCancellation" default="false" minOccurs="0"/>
+			</xsd:choice>
+			<xsd:element ref="ReasonForRemoval" minOccurs="0"/>
+			<xsd:element ref="FeederRef" minOccurs="0"/>
+			<xsd:element ref="FeederArrivalStopRef" minOccurs="0"/>
+			<xsd:element ref="FeederVisitNumber" minOccurs="0"/>
+			<xsd:element ref="FeederStopOrder" minOccurs="0"/>
+			<xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+			<xsd:element ref="DistributorRef" minOccurs="0"/>
+			<xsd:element ref="DistributorDepartureStopRef" minOccurs="0"/>
+			<xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+			<xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+			<xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
+			<xsd:group ref="InterchangePropertyGroup"/>
+			<xsd:group ref="InterchangeTimesGroup"/>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="FromServiceJourneyInterchangeStructure">
+		<xsd:annotation>
+			<xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE from a journey. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
+				<xsd:sequence>
+					<xsd:element ref="InterchangeCode" minOccurs="0"/>
+					<xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+					<xsd:element ref="FeederRef"/>
+					<xsd:element ref="FeederArrivalStopRef"/>
+					<xsd:element ref="FeederVisitNumber" minOccurs="0"/>
+					<xsd:element ref="FeederStopOrder" minOccurs="0"/>
+					<xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+					<xsd:element ref="DistributorRef" minOccurs="0" maxOccurs="0"/>
+					<xsd:element ref="DistributorDepartureStopRef" minOccurs="0" maxOccurs="0"/>
+					<xsd:element ref="DistributorVisitNumber" minOccurs="0" maxOccurs="0"/>
+					<xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+					<xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
+					<xsd:group ref="InterchangePropertyGroup"/>
+					<xsd:group ref="InterchangeTimesGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="ToServiceJourneyInterchangeStructure">
+		<xsd:annotation>
+			<xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE to a journey. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
+				<xsd:sequence>
+					<xsd:element ref="InterchangeCode" minOccurs="0"/>
+					<xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+					<xsd:element ref="FeederRef" minOccurs="0" maxOccurs="0"/>
+					<xsd:element ref="FeederArrivalStopRef" minOccurs="0" maxOccurs="0"/>
+					<xsd:element ref="FeederVisitNumber" minOccurs="0" maxOccurs="0"/>
+					<xsd:element ref="FeederStopOrder" minOccurs="0"/>
+					<xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+					<xsd:element ref="DistributorRef"/>
+					<xsd:element ref="DistributorDepartureStopRef"/>
+					<xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+					<xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+					<xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
+					<xsd:group ref="InterchangePropertyGroup"/>
+					<xsd:group ref="InterchangeTimesGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="ServiceJourneyInterchangeStructure">
+		<xsd:annotation>
+			<xsd:documentation>A planned SERVICE JOURNEY INTERCHANGE between two journeys. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
+				<xsd:sequence>
+					<xsd:element ref="InterchangeCode" minOccurs="0"/>
+					<xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+					<xsd:choice>
+						<xsd:element ref="ExtraInterchange" minOccurs="0"/>
+						<xsd:element name="Cancellation" type="InterchangeCancellation" default="false" minOccurs="0"/>
+					</xsd:choice>
+					<xsd:element ref="FeederRef"/>
+					<xsd:element ref="FeederArrivalStopRef"/>
+					<xsd:element ref="FeederVisitNumber" minOccurs="0"/>
+					<xsd:element ref="FeederStopOrder" minOccurs="0"/>
+					<xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+					<xsd:element ref="DistributorRef"/>
+					<xsd:element ref="DistributorDepartureStopRef"/>
+					<xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+					<xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+					<xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
+					<xsd:group ref="InterchangePropertyGroup"/>
+					<xsd:group ref="InterchangeTimesGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="RemovedServiceJourneyInterchangeStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a previously planned SERVICE JOURNEY INTERCHANGE that a data producer wants to silently remove from the plan (because it is erroneous data). Careful: Removal is different from Cancellation. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="AbstractServiceJourneyInterchangeStructure">
+				<xsd:sequence>
+					<xsd:element ref="InterchangeRef"/>
+					<xsd:element ref="ConnectionLinkRef" minOccurs="0"/>
+					<xsd:element ref="ReasonForRemoval"/>
+					<xsd:element ref="FeederRef"/>
+					<xsd:element ref="FeederArrivalStopRef"/>
+					<xsd:element ref="FeederVisitNumber" minOccurs="0"/>
+					<xsd:element ref="FeederStopOrder" minOccurs="0"/>
+					<xsd:element ref="AimedArrivalTimeOfFeeder" minOccurs="0"/>
+					<xsd:element ref="DistributorRef"/>
+					<xsd:element ref="DistributorDepartureStopRef"/>
+					<xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+					<xsd:element ref="DistributorStopOrder" minOccurs="0"/>
+					<xsd:element ref="AimedDepartureTimeOfDistributor" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:group name="InterchangeTimesGroup">
+		<xsd:annotation>
+			<xsd:documentation>Time Elements for SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="InterchangeWaitTimeGroup">
+				<xsd:annotation>
+					<xsd:documentation>Elements for INTERCHANGE WAIT TIME.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="InterchangeTransferDurationGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="InterchangeTransferDurationGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for INTERCHANGE TRANSFER duration.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StandardTransferTime" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Standard transfer duration for INTERCHANGE. SIRI v2,0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MinimumTransferTime" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Minimum transfer duration for INTERCHANGE. SIRI v2,0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumTransferTime" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum transfer duration for INTERCHANGE. SIRI v2,0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="InterchangeWaitTimeGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for INTERCHANGE WAIT TIME.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StandardWaitTime" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Standard wait time for INTERCHANGE. SIRI v2,0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumWaitTime" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum time that Distributor will wait for Feeder for INTERCHANGE. SIRI v1.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumAutomaticWaitTime" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Maximum automatic wait time that Distributor will wait for Feeder for INTERCHANGE. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ==== CALL =========================================-->
+	<xsd:element name="DatedCall" type="DatedCallStructure">
+		<xsd:annotation>
+			<xsd:documentation>Complete sequence of stops along the route path, in calling order.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="DatedCallStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Planned VEHICLE JOURNEY Stop (Production Timetable Service).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="StopPointInSequenceGroup"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="ExtraCall" type="xsd:boolean" default="false" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Whether this DATED CALL is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to false: the journey is not an addition.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Cancellation" type="xsd:boolean" default="false" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Whether this DATED CALL is a cancellation of a previously announced call (or planned according to the long-term timetable). Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the journey is not cancelled.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:group ref="CallPropertyGroup"/>
+			<xsd:element name="CallNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Text annotation that applies to this call.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!-- The FacilityChangeElement has been removed here in Siri 1.1, but it is still available at the same place through the AimedCallGroup->DisruptionGroup 
      (DisruptionGroup has been added to AimedCallGroup)
    <xsd:element ref="FacilityChangeElement" minOccurs="0"/>
    -->
-   <xsd:group ref="AimedCallGroup"/>
-   <xsd:element name="TargetedInterchange" type="TargetedInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Information on any planned distributor connections (deprecated from SIRI V2.0 ... see 2 next attributes)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FromServiceJourneyInterchange" type="FromServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Information on any planned feeder connections. SIRI 2.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ToServiceJourneyInterchange" type="ToServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Information on any planned distributor connections. SIRI 2.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ==== INTERCHANGE =========================================-->
- <xsd:complexType name="TargetedInterchangeStructure">
-  <xsd:annotation>
-   <xsd:documentation>Planned Connection between two VEHICLE JOURNEYs.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:sequence>
-    <xsd:element ref="InterchangeCode" minOccurs="0"/>
-    <xsd:element name="DistributorVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>Reference to a (dated) distributor VEHICLE JOURNEY.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:choice>
-     <xsd:element name="DistributorConnectionLinkRef" type="ConnectionLinkRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="DistributorConnectionLink" type="ContextualisedConnectionLinkStructure">
-      <xsd:annotation>
-       <xsd:documentation>Link to Interchange stop from which the distributor journey departs. If omitted: the distributor journey stop is the same as the feeder journey stop, i.e. that of theh dated call.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:choice>
-   </xsd:sequence>
-   <xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
-   <xsd:element name="DistributorOrder" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>For implementations for which Order is not used for VisitNumber, (i.e. if VisitNumberIsOrder is false) then Order can be used to associate the Order as well if useful for translation.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="InterchangePropertyGroup"/>
-   <xsd:group ref="InterchangeTimesGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="ContextualisedConnectionLinkStructure">
-  <xsd:annotation>
-   <xsd:documentation>Connection between two stops within a connection area. Used within the context of one or other end.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ConnectionLinkCode" type="ConnectionLinkCodeType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of CONNECTION LINk.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="StopPointRef" minOccurs="0"/>
-   <xsd:element ref="StopPointName" minOccurs="0"/>
-   <xsd:group ref="ConnectionDurationGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="ConnectionDurationGroup">
-  <xsd:annotation>
-   <xsd:documentation>Times for making SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="DefaultDuration" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Default time (Duration) needeed to traverse SERVICE JOURNEY INTERCHANGE from feeder to distributor.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FrequentTravellerDuration" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Time needeed by a traveller whis is familiar with SERVICE JOURNEY INTERCHANGE to traverse it. If absent, use DefaultDuration.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="OccasionalTravellerDuration" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Time needeed by a traveller whis is not familiar with SERVICE JOURNEY INTERCHANGE to traverse it. If absent, use DefaultDuration and a standard weighting.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ImpairedAccessDuration" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Time needeed by a traveller wos is mobility impaired to traverse SERVICE JOURNEY INTERCHANGE. If absent, use DefaultDuration and a standard impaired travel speed.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="InterchangePropertyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Properties of SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="StaySeated" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the passenger can remain in VEHICLE (i.e. BLOCKlinking). Default is 'false': the passenger must change vehicles for this connection.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Guaranteed" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the SERVICE JOURNEY INTERCHANGE is guaranteed. Default is 'false'; SERVICE JOURNEY INTERCHANGE is not guaranteed.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Advertised" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the SERVICE JOURNEY INTERCHANGE is advertised as a connection. Default is 'false'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="InterchangeManagementEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Nature of Interchange management.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="Planned">
-    <xsd:annotation>
-     <xsd:documentation>Interchange is considered a possible connection between journeys.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="Advertised">
-    <xsd:annotation>
-     <xsd:documentation>Interchange is advertised to public as a possible connection between journeys.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="Controlled">
-    <xsd:annotation>
-     <xsd:documentation>Interchange is actively managed as a possible connection between journeys and passengers are informed of real-time alterations.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="Guaranteed">
-    <xsd:annotation>
-     <xsd:documentation>Interchange is actively managed as a possible connection between journeys and distributor may be delayed in order to make a transfer possible.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- =====individual elements that are referenced in various groups================================================================== -->
- <xsd:element name="InterchangeCode" type="InterchangeCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of SERVICE JOURNEY INTERCHANGE. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="ExtraInterchange" type="xsd:boolean" default="false">
-  <xsd:annotation>
-   <xsd:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="InterchangeCancellation">
-  <xsd:annotation>
-   <xsd:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable. 
+			<xsd:group ref="AimedCallGroup"/>
+			<xsd:element name="TargetedInterchange" type="TargetedInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information on any planned distributor connections (deprecated from SIRI V2.0 ... see 2 next attributes)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FromServiceJourneyInterchange" type="FromServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information on any planned feeder connections. SIRI 2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ToServiceJourneyInterchange" type="ToServiceJourneyInterchangeStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Information on any planned distributor connections. SIRI 2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ==== INTERCHANGE =========================================-->
+	<xsd:complexType name="TargetedInterchangeStructure">
+		<xsd:annotation>
+			<xsd:documentation>Planned Connection between two VEHICLE JOURNEYs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:sequence>
+				<xsd:element ref="InterchangeCode" minOccurs="0"/>
+				<xsd:element name="DistributorVehicleJourneyRef" type="DatedVehicleJourneyRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Reference to a (dated) distributor VEHICLE JOURNEY.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:choice>
+					<xsd:element name="DistributorConnectionLinkRef" type="ConnectionLinkRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a physical CONNECTION LINK over which the SERVICE JOURNEY INTERCHANGE takes place.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="DistributorConnectionLink" type="ContextualisedConnectionLinkStructure">
+						<xsd:annotation>
+							<xsd:documentation>Link to Interchange stop from which the distributor journey departs. If omitted: the distributor journey stop is the same as the feeder journey stop, i.e. that of theh dated call.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:sequence>
+			<xsd:element ref="DistributorVisitNumber" minOccurs="0"/>
+			<xsd:element name="DistributorOrder" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>For implementations for which Order is not used for VisitNumber, (i.e. if VisitNumberIsOrder is false) then Order can be used to associate the Order as well if useful for translation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="InterchangePropertyGroup"/>
+			<xsd:group ref="InterchangeTimesGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ContextualisedConnectionLinkStructure">
+		<xsd:annotation>
+			<xsd:documentation>Connection between two stops within a connection area. Used within the context of one or other end.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ConnectionLinkCode" type="ConnectionLinkCodeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of CONNECTION LINk.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="StopPointRef" minOccurs="0"/>
+			<xsd:element ref="StopPointName" minOccurs="0"/>
+			<xsd:group ref="ConnectionDurationGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="ConnectionDurationGroup">
+		<xsd:annotation>
+			<xsd:documentation>Times for making SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DefaultDuration" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default time (Duration) needeed to traverse SERVICE JOURNEY INTERCHANGE from feeder to distributor.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FrequentTravellerDuration" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Time needeed by a traveller whis is familiar with SERVICE JOURNEY INTERCHANGE to traverse it. If absent, use DefaultDuration.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OccasionalTravellerDuration" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Time needeed by a traveller whis is not familiar with SERVICE JOURNEY INTERCHANGE to traverse it. If absent, use DefaultDuration and a standard weighting.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ImpairedAccessDuration" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Time needeed by a traveller wos is mobility impaired to traverse SERVICE JOURNEY INTERCHANGE. If absent, use DefaultDuration and a standard impaired travel speed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="InterchangePropertyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Properties of SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StaySeated" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the passenger can remain in VEHICLE (i.e. BLOCKlinking). Default is 'false': the passenger must change vehicles for this connection.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Guaranteed" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the SERVICE JOURNEY INTERCHANGE is guaranteed. Default is 'false'; SERVICE JOURNEY INTERCHANGE is not guaranteed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Advertised" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the SERVICE JOURNEY INTERCHANGE is advertised as a connection. Default is 'false'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="InterchangeManagementEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Nature of Interchange management.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Planned">
+				<xsd:annotation>
+					<xsd:documentation>Interchange is considered a possible connection between journeys.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Advertised">
+				<xsd:annotation>
+					<xsd:documentation>Interchange is advertised to public as a possible connection between journeys.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Controlled">
+				<xsd:annotation>
+					<xsd:documentation>Interchange is actively managed as a possible connection between journeys and passengers are informed of real-time alterations.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Guaranteed">
+				<xsd:annotation>
+					<xsd:documentation>Interchange is actively managed as a possible connection between journeys and distributor may be delayed in order to make a transfer possible.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- =====individual elements that are referenced in various groups================================================================== -->
+	<xsd:element name="InterchangeCode" type="InterchangeCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of SERVICE JOURNEY INTERCHANGE. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ExtraInterchange" type="xsd:boolean" default="false">
+		<xsd:annotation>
+			<xsd:documentation>Whether this interchange is an addition to the plan. Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not an addition. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="InterchangeCancellation">
+		<xsd:annotation>
+			<xsd:documentation>Whether this interchange is a cancellation of a previously announced interchange (or planned according to the long-term timetable. 
 Can only be used when both participants recognise the same schedule version. If omitted, defaults to 'false': the interchange is not cancelled. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:boolean"/>
- </xsd:simpleType>
- <xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
-  <xsd:annotation>
-   <xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey or an interchange from the plan. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FeederRef" type="ConnectingJourneyRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a feeder VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FeederArrivalStopRef" type="StopPointRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>SCHEDULED STOP POINT at which feeder journey arrives. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FeederVisitNumber" type="VisitNumberType">
-  <xsd:annotation>
-   <xsd:documentation>Sequence of visit to Feeder stop within Feeder JOURNEY PATTERN.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FeederStopOrder" type="xsd:positiveInteger">
-  <xsd:annotation>
-   <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. 
+		</xsd:annotation>
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:element name="ReasonForRemoval" type="NaturalLanguageStringStructure">
+		<xsd:annotation>
+			<xsd:documentation>The data producer must provide a reason, e.g. type of error and description, in case he wants to silently remove (instead of cancel) a journey or an interchange from the plan. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FeederRef" type="ConnectingJourneyRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a feeder VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FeederArrivalStopRef" type="StopPointRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>SCHEDULED STOP POINT at which feeder journey arrives. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FeederVisitNumber" type="VisitNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Sequence of visit to Feeder stop within Feeder JOURNEY PATTERN.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FeederStopOrder" type="xsd:positiveInteger">
+		<xsd:annotation>
+			<xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. 
 ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime">
-  <xsd:annotation>
-   <xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="DistributorRef" type="ConnectingJourneyRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a feeder VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="DistributorDepartureStopRef" type="StopPointRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>SCHEDULED STOP POINT at which distributor journet departs. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="DistributorVisitNumber" type="VisitNumberType">
-  <xsd:annotation>
-   <xsd:documentation>Sequence of visit to Distributor stop within Distributor JOURNEY PATTERN.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="DistributorStopOrder" type="xsd:positiveInteger">
-  <xsd:annotation>
-   <xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. 
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AimedArrivalTimeOfFeeder" type="xsd:dateTime">
+		<xsd:annotation>
+			<xsd:documentation>Planned time at which feeder VEHICLE is scheduled to arrive. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DistributorRef" type="ConnectingJourneyRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a feeder VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DistributorDepartureStopRef" type="StopPointRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>SCHEDULED STOP POINT at which distributor journet departs. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DistributorVisitNumber" type="VisitNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Sequence of visit to Distributor stop within Distributor JOURNEY PATTERN.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DistributorStopOrder" type="xsd:positiveInteger">
+		<xsd:annotation>
+			<xsd:documentation>For implementations in which the overall order is not defined by VISIT NUMBER, i.e. in case VisitNumberIsOrder is set to false, ORDER can be used to associate the stop order instead. 
 ORDER is also used together with VISIT NUMBER in scenarios where an extra CALL is inserted as a result of despatching alterations. Because such an extra CALL may have the same VisitNumber as another (cancelled) CALL, the STOP ORDER is needed. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime">
-  <xsd:annotation>
-   <xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ======================================================================= -->
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AimedDepartureTimeOfDistributor" type="xsd:dateTime">
+		<xsd:annotation>
+			<xsd:documentation>Planned time at which distributor VEHICLE is scheduled to depart. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ======================================================================= -->
 </xsd:schema>

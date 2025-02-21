@@ -4,8 +4,8 @@
  
  -->
 <xsd:schema xmlns="http://www.ifopt.org.uk/acsb" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ifopt.org.uk/acsb" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.2" id="acsb_all">
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="acsb_accessibility.xsd"/>
- <xsd:include schemaLocation="acsb_limitations.xsd"/>
- <xsd:include schemaLocation="acsb_passengerMobility.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="acsb_accessibility.xsd"/>
+	<xsd:include schemaLocation="acsb_limitations.xsd"/>
+	<xsd:include schemaLocation="acsb_passengerMobility.xsd"/>
 </xsd:schema>
