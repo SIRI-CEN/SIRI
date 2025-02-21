@@ -4,18 +4,18 @@
 
  -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_all_journeyModel">
- <!-- ======================================================================= -->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_facilities.xsd"/>
- <xsd:include schemaLocation="siri_facility.xsd"/>
- <xsd:include schemaLocation="siri_feature_support.xsd"/>
- <xsd:include schemaLocation="siri_journey.xsd"/>
- <xsd:include schemaLocation="siri_journey_support.xsd"/>
- <xsd:include schemaLocation="siri_modes.xsd"/>
- <xsd:include schemaLocation="siri_monitoredVehicleJourney.xsd"/>
- <xsd:include schemaLocation="siri_operator_support.xsd"/>
- <xsd:include schemaLocation="siri_reference.xsd"/>
- <xsd:include schemaLocation="siri_time.xsd"/>
- <!-- ======================================================================= -->
+	<!-- ======================================================================= -->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_facilities.xsd"/>
+	<xsd:include schemaLocation="siri_facility.xsd"/>
+	<xsd:include schemaLocation="siri_feature_support.xsd"/>
+	<xsd:include schemaLocation="siri_journey.xsd"/>
+	<xsd:include schemaLocation="siri_journey_support.xsd"/>
+	<xsd:include schemaLocation="siri_modes.xsd"/>
+	<xsd:include schemaLocation="siri_monitoredVehicleJourney.xsd"/>
+	<xsd:include schemaLocation="siri_operator_support.xsd"/>
+	<xsd:include schemaLocation="siri_reference.xsd"/>
+	<xsd:include schemaLocation="siri_time.xsd"/>
+	<!-- ======================================================================= -->
 </xsd:schema>

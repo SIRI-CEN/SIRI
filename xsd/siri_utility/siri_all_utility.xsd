@@ -4,11 +4,11 @@
  
  -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_all">
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="../siri_utility/siri_participant.xsd"/>
- <xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
- <xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
- <xsd:include schemaLocation="../siri_utility/siri_location.xsd"/>
- <xsd:include schemaLocation="../siri_utility/siri_permissions.xsd"/>
- <!-- ================= =============================================== -->
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_utility/siri_participant.xsd"/>
+	<xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
+	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
+	<xsd:include schemaLocation="../siri_utility/siri_location.xsd"/>
+	<xsd:include schemaLocation="../siri_utility/siri_permissions.xsd"/>
+	<!-- ================= =============================================== -->
 </xsd:schema>

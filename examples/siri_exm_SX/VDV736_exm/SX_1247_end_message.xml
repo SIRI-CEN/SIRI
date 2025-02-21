@@ -1,397 +1,396 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../xsd/siri.xsd">
- <ServiceDelivery>
-  <ResponseTimestamp>2018-10-04T12:22:00+00:00</ResponseTimestamp>
-  <ProducerRef>ch:VBL</ProducerRef>
-  <Address>http:/server/siri/20_ums</Address>
-  <ResponseMessageIdentifier>JFI2d2mWP</ResponseMessageIdentifier>
-  <Status>true</Status>
-  <MoreData>false</MoreData>
-  <SituationExchangeDelivery version="2.1">
-   <ResponseTimestamp>2018-10-04T12:22:00+00:00</ResponseTimestamp>
-   <SubscriberRef>ch:VBL</SubscriberRef>
-   <SubscriptionRef>40599x2dsjmu8yjzy</SubscriptionRef>
-   <Situations>
-    <PtSituationElement>
-     <CreationTime>2017-05-28T12:22:00+02:00</CreationTime>
-     <ParticipantRef>VBL</ParticipantRef>
-     <SituationNumber>1</SituationNumber>
-     <Version>5</Version>
-     <Source>
-      <SourceType>feed</SourceType>
-      <Name xml:lang="DE">VBL</Name>
-     </Source>
-     <Progress>closing</Progress>
-
-     <ValidityPeriod>
-      <StartTime>2017-05-28T12:22:00+02:00</StartTime>
-      <EndTime>2017-05-28T17:10:00+02:00</EndTime>
-     </ValidityPeriod>
-     <AlertCause>fire</AlertCause>
-     <ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
-     <ReasonName xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonName>
-     <Priority>3</Priority>
-     <ScopeType>line</ScopeType>
-     <Planned>false</Planned>
-     <Language>DE</Language>
-     <Summary xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
-     <Summary xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</Summary>
-     <Affects>
-      <StopPlaces>
-       <AffectedStopPlace>
-        <StopPlaceRef>ch:vbl:622</StopPlaceRef>
-        <PlaceName xml:lang="DE">Haldensteig</PlaceName>
-       </AffectedStopPlace>
-      </StopPlaces>
-     </Affects>
-     <Consequences>
-      <Consequence>
-       <Condition>disturbanceRectified</Condition>
-       <Affects>
-        <Networks>
-         <AffectedNetwork>
-          <AffectedLine>
-           <LineRef>ch:vbl:VBL006</LineRef>
-           <PublishedLineName xml:lang="DE">6</PublishedLineName>
-          </AffectedLine>
-          <AffectedLine>
-           <LineRef>ch:vbl:VBL008</LineRef>
-           <PublishedLineName xml:lang="DE">8</PublishedLineName>
-          </AffectedLine>
-          <AffectedLine>
-           <LineRef>ch:vbl:VBL024</LineRef>
-           <PublishedLineName xml:lang="DE">24</PublishedLineName>
-          </AffectedLine>
-         </AffectedNetwork>
-        </Networks>
-       </Affects>
-       <Blocking>
-        <JourneyPlanner>false</JourneyPlanner>
-       </Blocking>
-      </Consequence>
-     </Consequences>
-     <PublishingActions>
-      <PublishingAction>
-       <PublishAtScope>
-        <ScopeType>line</ScopeType>
-        <Affects>
-         <Networks>
-          <AffectedNetwork>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName xml:lang="DE">6</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName xml:lang="DE">8</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">14</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">24</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">73</PublishedLineName>
-           </AffectedLine>
-          </AffectedNetwork>
-         </Networks>
-        </Affects>
-       </PublishAtScope>
-       <PassengerInformationAction>
-        <ActionStatus>open</ActionStatus>
-        <ActionRef>0510</ActionRef>
-        <RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
-        <Version>1</Version>
-        <SourceRef>vbl</SourceRef>
-        <OwnerRef>VBL</OwnerRef>
-        <Perspective>general</Perspective>
-        <TextualContent>
-         <TextualContentSize>L</TextualContentSize>
-         <SummaryContent>
-          <SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-          <SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
-         </SummaryContent>
-         <DescriptionContent>
-          <DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
-          <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
-         </DescriptionContent>
-         <RemarkContent>
-          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
-          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
-         </RemarkContent>
-        </TextualContent>
-       </PassengerInformationAction>
-      </PublishingAction>
-      <PublishingAction>
-       <PublishAtScope>
-        <ScopeType>line</ScopeType>
-        <Affects>
-         <Networks>
-          <AffectedNetwork>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName xml:lang="DE">6</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName xml:lang="DE">8</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">14</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">24</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">73</PublishedLineName>
-           </AffectedLine>
-          </AffectedNetwork>
-         </Networks>
-        </Affects>
-       </PublishAtScope>
-       <PassengerInformationAction>
-        <ActionStatus>open</ActionStatus>
-        <ActionRef>0510</ActionRef>
-        <RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
-        <Version>1</Version>
-        <SourceRef>vbl</SourceRef>
-        <OwnerRef>VBL</OwnerRef>
-        <Perspective>vehicleJourney</Perspective>
-        <TextualContent>
-         <TextualContentSize>L</TextualContentSize>
-         <SummaryContent>
-          <SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-          <SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
-         </SummaryContent>
-         <DescriptionContent>
-          <DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
-          <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
-         </DescriptionContent>
-         <RemarkContent>
-          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
-          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
-         </RemarkContent>
-        </TextualContent>
-       </PassengerInformationAction>
-      </PublishingAction>
-      <PublishingAction>
-       <PublishAtScope>
-        <ScopeType>line</ScopeType>
-        <Affects>
-         <Networks>
-          <AffectedNetwork>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName xml:lang="DE">6</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName xml:lang="DE">8</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">14</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">24</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">73</PublishedLineName>
-           </AffectedLine>
-          </AffectedNetwork>
-         </Networks>
-        </Affects>
-       </PublishAtScope>
-       <PassengerInformationAction>
-        <ActionStatus>open</ActionStatus>
-        <ActionRef>0510</ActionRef>
-        <RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
-        <Version>1</Version>
-        <SourceRef>vbl</SourceRef>
-        <OwnerRef>VBL</OwnerRef>
-        <Perspective>stopPoint</Perspective>
-        <TextualContent>
-         <TextualContentSize>L</TextualContentSize>
-         <SummaryContent>
-          <SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-          <SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
-         </SummaryContent>
-         <DescriptionContent>
-          <DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
-          <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
-         </DescriptionContent>
-         <RemarkContent>
-          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
-          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
-         </RemarkContent>
-        </TextualContent>
-       </PassengerInformationAction>
-      </PublishingAction>
-      <PublishingAction>
-       <PublishAtScope>
-        <ScopeType>line</ScopeType>
-        <Affects>
-         <Networks>
-          <AffectedNetwork>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName xml:lang="DE">6</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName xml:lang="DE">8</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">24</PublishedLineName>
-           </AffectedLine>
-          </AffectedNetwork>
-         </Networks>
-        </Affects>
-       </PublishAtScope>
-       <PassengerInformationAction>
-        <ActionStatus>open</ActionStatus>
-        <PublicationWindow>
-         <StartTime>2017-05-28T12:47:00+02:00</StartTime>
-         <EndTime>2017-05-28T13:15:00+02:00</EndTime>
-        </PublicationWindow>
-        <ActionRef>0510</ActionRef>
-        <RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
-        <Version>1</Version>
-        <SourceRef>vbl</SourceRef>
-        <OwnerRef>VBL</OwnerRef>
-        <Perspective>general</Perspective>
-        <TextualContent>
-         <TextualContentSize>L</TextualContentSize>
-         <SummaryContent>
-          <SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-          <SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
-         </SummaryContent>
-         <DescriptionContent>
-          <DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
-          <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
-         </DescriptionContent>
-         <RemarkContent>
-          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
-          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
-         </RemarkContent>
-        </TextualContent>
-       </PassengerInformationAction>
-      </PublishingAction>
-      <PublishingAction>
-       <PublishAtScope>
-        <ScopeType>line</ScopeType>
-        <Affects>
-         <Networks>
-          <AffectedNetwork>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName xml:lang="DE">6</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName xml:lang="DE">8</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">24</PublishedLineName>
-           </AffectedLine>
-          </AffectedNetwork>
-         </Networks>
-        </Affects>
-       </PublishAtScope>
-       <PassengerInformationAction>
-        <ActionStatus>open</ActionStatus>
-        <PublicationWindow>
-         <StartTime>2017-05-28T12:47:00+02:00</StartTime>
-         <EndTime>2017-05-28T13:15:00+02:00</EndTime>
-        </PublicationWindow>
-        <ActionRef>0510</ActionRef>
-        <RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
-        <Version>1</Version>
-        <SourceRef>vbl</SourceRef>
-        <OwnerRef>VBL</OwnerRef>
-        <Perspective>vehicleJourney</Perspective>
-        <TextualContent>
-         <TextualContentSize>L</TextualContentSize>
-         <SummaryContent>
-          <SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-          <SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
-         </SummaryContent>
-         <DescriptionContent>
-          <DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
-          <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
-         </DescriptionContent>
-         <RemarkContent>
-          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
-          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
-         </RemarkContent>
-        </TextualContent>
-       </PassengerInformationAction>
-      </PublishingAction>
-      <PublishingAction>
-       <PublishAtScope>
-        <ScopeType>line</ScopeType>
-        <Affects>
-         <Networks>
-          <AffectedNetwork>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL006</LineRef>
-            <PublishedLineName xml:lang="DE">6</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL008</LineRef>
-            <PublishedLineName xml:lang="DE">8</PublishedLineName>
-           </AffectedLine>
-           <AffectedLine>
-            <LineRef>ch:vbl:VBL024</LineRef>
-            <PublishedLineName xml:lang="DE">24</PublishedLineName>
-           </AffectedLine>
-          </AffectedNetwork>
-         </Networks>
-        </Affects>
-       </PublishAtScope>
-       <PassengerInformationAction>
-        <ActionStatus>open</ActionStatus>
-        <PublicationWindow>
-         <StartTime>2017-05-28T12:47:00+02:00</StartTime>
-         <EndTime>2017-05-28T13:15:00+02:00</EndTime>
-        </PublicationWindow>
-        <ActionRef>0510</ActionRef>
-        <RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
-        <Version>1</Version>
-        <SourceRef>vbl</SourceRef>
-        <OwnerRef>VBL</OwnerRef>
-        <Perspective>stopPoint</Perspective>
-        <TextualContent>
-         <TextualContentSize>L</TextualContentSize>
-         <SummaryContent>
-          <SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-          <SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
-         </SummaryContent>
-         <DescriptionContent>
-          <DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
-          <DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
-         </DescriptionContent>
-         <RemarkContent>
-          <Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
-          <Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
-         </RemarkContent>
-        </TextualContent>
-       </PassengerInformationAction>
-      </PublishingAction>
-     </PublishingActions>
-    </PtSituationElement>
-   </Situations>
-  </SituationExchangeDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<ResponseTimestamp>2018-10-04T12:22:00+00:00</ResponseTimestamp>
+		<ProducerRef>ch:VBL</ProducerRef>
+		<Address>http:/server/siri/20_ums</Address>
+		<ResponseMessageIdentifier>JFI2d2mWP</ResponseMessageIdentifier>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<SituationExchangeDelivery version="2.1">
+			<ResponseTimestamp>2018-10-04T12:22:00+00:00</ResponseTimestamp>
+			<SubscriberRef>ch:VBL</SubscriberRef>
+			<SubscriptionRef>40599x2dsjmu8yjzy</SubscriptionRef>
+			<Situations>
+				<PtSituationElement>
+					<CreationTime>2017-05-28T12:22:00+02:00</CreationTime>
+					<ParticipantRef>VBL</ParticipantRef>
+					<SituationNumber>1</SituationNumber>
+					<Version>5</Version>
+					<Source>
+						<SourceType>feed</SourceType>
+						<Name xml:lang="DE">VBL</Name>
+					</Source>
+					<Progress>closing</Progress>
+					<ValidityPeriod>
+						<StartTime>2017-05-28T12:22:00+02:00</StartTime>
+						<EndTime>2017-05-28T17:10:00+02:00</EndTime>
+					</ValidityPeriod>
+					<AlertCause>fire</AlertCause>
+					<ReasonName xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonName>
+					<ReasonName xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonName>
+					<Priority>3</Priority>
+					<ScopeType>line</ScopeType>
+					<Planned>false</Planned>
+					<Language>DE</Language>
+					<Summary xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
+					<Summary xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</Summary>
+					<Affects>
+						<StopPlaces>
+							<AffectedStopPlace>
+								<StopPlaceRef>ch:vbl:622</StopPlaceRef>
+								<PlaceName xml:lang="DE">Haldensteig</PlaceName>
+							</AffectedStopPlace>
+						</StopPlaces>
+					</Affects>
+					<Consequences>
+						<Consequence>
+							<Condition>disturbanceRectified</Condition>
+							<Affects>
+								<Networks>
+									<AffectedNetwork>
+										<AffectedLine>
+											<LineRef>ch:vbl:VBL006</LineRef>
+											<PublishedLineName xml:lang="DE">6</PublishedLineName>
+										</AffectedLine>
+										<AffectedLine>
+											<LineRef>ch:vbl:VBL008</LineRef>
+											<PublishedLineName xml:lang="DE">8</PublishedLineName>
+										</AffectedLine>
+										<AffectedLine>
+											<LineRef>ch:vbl:VBL024</LineRef>
+											<PublishedLineName xml:lang="DE">24</PublishedLineName>
+										</AffectedLine>
+									</AffectedNetwork>
+								</Networks>
+							</Affects>
+							<Blocking>
+								<JourneyPlanner>false</JourneyPlanner>
+							</Blocking>
+						</Consequence>
+					</Consequences>
+					<PublishingActions>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL006</LineRef>
+												<PublishedLineName xml:lang="DE">6</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL008</LineRef>
+												<PublishedLineName xml:lang="DE">8</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">14</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">24</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">73</PublishedLineName>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<ActionStatus>open</ActionStatus>
+								<ActionRef>0510</ActionRef>
+								<RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
+								<Version>1</Version>
+								<SourceRef>vbl</SourceRef>
+								<OwnerRef>VBL</OwnerRef>
+								<Perspective>general</Perspective>
+								<TextualContent>
+									<TextualContentSize>L</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
+										<DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
+									</DescriptionContent>
+									<RemarkContent>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+									</RemarkContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL006</LineRef>
+												<PublishedLineName xml:lang="DE">6</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL008</LineRef>
+												<PublishedLineName xml:lang="DE">8</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">14</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">24</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">73</PublishedLineName>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<ActionStatus>open</ActionStatus>
+								<ActionRef>0510</ActionRef>
+								<RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
+								<Version>1</Version>
+								<SourceRef>vbl</SourceRef>
+								<OwnerRef>VBL</OwnerRef>
+								<Perspective>vehicleJourney</Perspective>
+								<TextualContent>
+									<TextualContentSize>L</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
+										<DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
+									</DescriptionContent>
+									<RemarkContent>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+									</RemarkContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL006</LineRef>
+												<PublishedLineName xml:lang="DE">6</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL008</LineRef>
+												<PublishedLineName xml:lang="DE">8</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">14</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">24</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">73</PublishedLineName>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<ActionStatus>open</ActionStatus>
+								<ActionRef>0510</ActionRef>
+								<RecordedAtTime>2017-05-28T12:22:00+02:00</RecordedAtTime>
+								<Version>1</Version>
+								<SourceRef>vbl</SourceRef>
+								<OwnerRef>VBL</OwnerRef>
+								<Perspective>stopPoint</Perspective>
+								<TextualContent>
+									<TextualContentSize>L</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
+										<DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
+									</DescriptionContent>
+									<RemarkContent>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+									</RemarkContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL006</LineRef>
+												<PublishedLineName xml:lang="DE">6</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL008</LineRef>
+												<PublishedLineName xml:lang="DE">8</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">24</PublishedLineName>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<ActionStatus>open</ActionStatus>
+								<PublicationWindow>
+									<StartTime>2017-05-28T12:47:00+02:00</StartTime>
+									<EndTime>2017-05-28T13:15:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef>0510</ActionRef>
+								<RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
+								<Version>1</Version>
+								<SourceRef>vbl</SourceRef>
+								<OwnerRef>VBL</OwnerRef>
+								<Perspective>general</Perspective>
+								<TextualContent>
+									<TextualContentSize>L</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
+										<DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
+									</DescriptionContent>
+									<RemarkContent>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+									</RemarkContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL006</LineRef>
+												<PublishedLineName xml:lang="DE">6</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL008</LineRef>
+												<PublishedLineName xml:lang="DE">8</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">24</PublishedLineName>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<ActionStatus>open</ActionStatus>
+								<PublicationWindow>
+									<StartTime>2017-05-28T12:47:00+02:00</StartTime>
+									<EndTime>2017-05-28T13:15:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef>0510</ActionRef>
+								<RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
+								<Version>1</Version>
+								<SourceRef>vbl</SourceRef>
+								<OwnerRef>VBL</OwnerRef>
+								<Perspective>vehicleJourney</Perspective>
+								<TextualContent>
+									<TextualContentSize>L</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
+										<DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
+									</DescriptionContent>
+									<RemarkContent>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+									</RemarkContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>line</ScopeType>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL006</LineRef>
+												<PublishedLineName xml:lang="DE">6</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL008</LineRef>
+												<PublishedLineName xml:lang="DE">8</PublishedLineName>
+											</AffectedLine>
+											<AffectedLine>
+												<LineRef>ch:vbl:VBL024</LineRef>
+												<PublishedLineName xml:lang="DE">24</PublishedLineName>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<ActionStatus>open</ActionStatus>
+								<PublicationWindow>
+									<StartTime>2017-05-28T12:47:00+02:00</StartTime>
+									<EndTime>2017-05-28T13:15:00+02:00</EndTime>
+								</PublicationWindow>
+								<ActionRef>0510</ActionRef>
+								<RecordedAtTime>2017-05-28T12:47:00+02:00</RecordedAtTime>
+								<Version>1</Version>
+								<SourceRef>vbl</SourceRef>
+								<OwnerRef>VBL</OwnerRef>
+								<Perspective>stopPoint</Perspective>
+								<TextualContent>
+									<TextualContentSize>L</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+									</SummaryContent>
+									<DescriptionContent>
+										<DescriptionText xml:lang="DE">Der Streckenunterbruch zwischen Luzernerhof und Brüelstrasse ist behoben.</DescriptionText>
+										<DescriptionText xml:lang="EN">The route disruption between Luzernerhof and Brüelstrasse is resolved.</DescriptionText>
+									</DescriptionContent>
+									<RemarkContent>
+										<Remark xml:lang="DE">Die Linien 6, 8, 24 und 73 verkehren wieder gemäß Fahrplan.</Remark>
+										<Remark xml:lang="EN">Line 6, 8, 24 and 73 are back to regular service.</Remark>
+									</RemarkContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+					</PublishingActions>
+				</PtSituationElement>
+			</Situations>
+		</SituationExchangeDelivery>
+	</ServiceDelivery>
 </Siri>

@@ -1,73 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_targetedVehicleJourney">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-12-12</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-04-17</Modified>
-     <!-- Name Space changes -->
-    </Date>
-    <Date>
-     <Modified>2007-03-26</Modified>
-     <!-- Drop separate flatten structure on response for stopVisit -->
-    </Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
-     <!-- Revise to support substitution groups -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- (since SIRI 2.0) -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the TargetedVehicleJourney used in the Stop Timetable Service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_targetedVehicleJourney.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-12-12</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-04-17</Modified>
+					<!-- Name Space changes -->
+				</Date>
+				<Date>
+					<Modified>2007-03-26</Modified>
+					<!-- Drop separate flatten structure on response for stopVisit -->
+				</Date>
+				<Date>
+					<Modified>2008-11-17</Modified>
+					<!-- Revise to support substitution groups -->
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- (since SIRI 2.0) -->
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the TargetedVehicleJourney used in the Stop Timetable Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}siri_targetedVehicleJourney.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -75,62 +76,62 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI XML schema. Service Interface for Real-time  Information. Subschema for Stop Timetable Service.</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-ST TargetedVehicleJourney for Stop Timetable Service.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_journey.xsd"/>
- <!-- ====Targeted VEHICLE JOURNEY ==================================== -->
- <xsd:element name="TargetedVehicleJourney" type="TargetedVehicleJourneyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Timetabled VEHICLE JOURNEY.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="TargetedVehicleJourneyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a targeted VEHICLE JOURNEY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="JourneyIdentityGroup"/>
-   <xsd:group ref="JourneyPatternInfoGroup"/>
-   <xsd:group ref="VehicleJourneyInfoGroup"/>
-   <xsd:element ref="TargetedCall" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ====Targeted CALL ============================================= -->
- <xsd:group name="TargetedCallGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for a targeted call.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a SCHEDULED STOP POINT. Normally this will omitted as will be the same as the monitoring point.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="VisitNumber"/>
-   <xsd:element ref="Order" minOccurs="0"/>
-   <xsd:element ref="TimingPoint" minOccurs="0"/>
-   <xsd:group ref="ServiceInfoGroup"/>
-   <xsd:group ref="AimedCallGroup"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:element name="TargetedCall" type="TargetedCallStructure">
-  <xsd:annotation>
-   <xsd:documentation>Information about the call at the stop.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="TargetedCallStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a targeted call.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="TargetedCallGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI XML schema. Service Interface for Real-time  Information. Subschema for Stop Timetable Service.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-ST TargetedVehicleJourney for Stop Timetable Service.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_journey.xsd"/>
+	<!-- ====Targeted VEHICLE JOURNEY ==================================== -->
+	<xsd:element name="TargetedVehicleJourney" type="TargetedVehicleJourneyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Timetabled VEHICLE JOURNEY.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="TargetedVehicleJourneyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a targeted VEHICLE JOURNEY.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="JourneyIdentityGroup"/>
+			<xsd:group ref="JourneyPatternInfoGroup"/>
+			<xsd:group ref="VehicleJourneyInfoGroup"/>
+			<xsd:element ref="TargetedCall" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ====Targeted CALL ============================================= -->
+	<xsd:group name="TargetedCallGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a targeted call.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a SCHEDULED STOP POINT. Normally this will omitted as will be the same as the monitoring point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="VisitNumber"/>
+			<xsd:element ref="Order" minOccurs="0"/>
+			<xsd:element ref="TimingPoint" minOccurs="0"/>
+			<xsd:group ref="ServiceInfoGroup"/>
+			<xsd:group ref="AimedCallGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="TargetedCall" type="TargetedCallStructure">
+		<xsd:annotation>
+			<xsd:documentation>Information about the call at the stop.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="TargetedCallStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a targeted call.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="TargetedCallGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
 </xsd:schema>

@@ -9,333 +9,333 @@
 
 (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======HEADER================================================== -->
-  <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
-  <ProducerRef>KUBRICK</ProducerRef>
-  <Status>true</Status>
-  <MoreData>false</MoreData>
-  <!--=======PAYLOAD============================================== -->
-  <StopMonitoringDelivery version="2.0">
-   <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-   <SubscriberRef>NADER</SubscriberRef>
-   <SubscriptionRef>2004-12-17T09:30:47-05:00</SubscriptionRef>
-   <Status>true</Status>
-   <ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
-   <ShortestPossibleCycle>PT3M</ShortestPossibleCycle>
-   <MonitoringRef>HLTST011</MonitoringRef>
-   <MonitoringName xml:lang="EN">British Museum Stop A</MonitoringName>
-   <MonitoringName xml:lang="FR">Musee Britannique Halte A</MonitoringName>
-   <!--====FIRST ARRIVAL ============================================ -->
-   <MonitoredStopVisit>
-    <RecordedAtTime>2004-12-17T09:25:46-05:00</RecordedAtTime>
-    <!-- IDENTITY GROUP -->
-    <ItemIdentifier>SED9843214675432</ItemIdentifier>
-    <ValidUntilTime>2004-12-17T10:25:46-05:00</ValidUntilTime>
-    <MonitoringRef>HLTST011</MonitoringRef>
-    <ClearDownRef>CLR7654</ClearDownRef>
-    <MonitoredVehicleJourney>
-     <!-- JOURNEY IDENTITY GROUP -->
-     <LineRef>Line123</LineRef>
-     <DirectionRef>Out</DirectionRef>
-     <FramedVehicleJourneyRef>
-      <DataFrameRef>2004-12-17</DataFrameRef>
-      <DatedVehicleJourneyRef>Oubound</DatedVehicleJourneyRef>
-     </FramedVehicleJourneyRef>
-     <!-- LINE INFO GROUP -->
-     <PublishedLineName xml:lang="EN">123</PublishedLineName>
-     <!-- SERVICE INFO GROUP -->
-     <OperatorRef>OP22</OperatorRef>
-     <ProductCategoryRef>PDCATEXPRESS</ProductCategoryRef>
-     <ServiceFeatureRef>SERVCCAT551</ServiceFeatureRef>
-     <!-- SERVICE POINTS GROUP -->
-     <OriginRef>PLACE21</OriginRef>
-     <OriginName xml:lang="EN">Highbury</OriginName>
-     <Via>
-      <PlaceName xml:lang="EN">Kensall Green</PlaceName>
-     </Via>
-     <Via>
-      <PlaceName xml:lang="EN">Roman Road</PlaceName>
-     </Via>
-     <DestinationRef>PLACE45</DestinationRef>
-     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
-     <DestinationName xml:lang="FR">Parc du Paradis</DestinationName>
-     <VehicleJourneyName xml:lang="EN">Boris Special</VehicleJourneyName>
-     <!-- JOURNEY INFO GROUP -->
-     <JourneyNote>Kensall Green</JourneyNote>
-     <!--JOURNEY PROGRESS GROUP -->
-     <Monitored>true</Monitored>
-     <InCongestion>false</InCongestion>
-     <InPanic>false</InPanic>
-     <PredictionInaccurate>false</PredictionInaccurate>
-     <ConfidenceLevel>reliable</ConfidenceLevel>
-     <VehicleLocation>
-      <Longitude>180</Longitude>
-      <Latitude>90</Latitude>
-     </VehicleLocation>
-     <Bearing>23</Bearing>
-     <Velocity>22</Velocity>
-     <Occupancy>seatsAvailable</Occupancy>
-     <Delay>PT2M</Delay>
-     <ProgressStatus>Service running on time</ProgressStatus>
-     <VehicleStatus> inProgress</VehicleStatus>
-     <!-- Operational Info GROUP -->
-     <TrainBlockPart>
-      <NumberOfBlockParts>1</NumberOfBlockParts>
-      <TrainPartRef>3456</TrainPartRef>
-      <PositionOfTrainBlockPart>1</PositionOfTrainBlockPart>
-     </TrainBlockPart>
-     <BlockRef>BLOCK765</BlockRef>
-     <CourseOfJourneyRef>RUN765</CourseOfJourneyRef>
-     <VehicleRef>VEH987654</VehicleRef>
-     <DriverRef>DRV654</DriverRef>
-     <DriverName>N.I.Blick</DriverName>
-     <!-- MONITORED CALLING PATTERN GROUP -->
-     <PreviousCalls>
-      <PreviousCall>
-       <StopPointRef>HLT0010</StopPointRef>
-       <VisitNumber>2</VisitNumber>
-       <StopPointName xml:lang="EN">Town Hall</StopPointName>
-       <StopPointName xml:lang="EN">Hotel de Ville</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <AimedDepartureTime>2004-12-17T09:32:43-05:00</AimedDepartureTime>
-       <ActualDepartureTime>2004-12-17T09:32:43-05:00</ActualDepartureTime>
-      </PreviousCall>
-     </PreviousCalls>
-     <MonitoredCall>
-      <VisitNumber>0014</VisitNumber>
-      <!-- STOP PROGRESS GROUP -->
-      <VehicleAtStop>true</VehicleAtStop>
-      <VehicleLocationAtStop>
-       <Longitude>180</Longitude>
-       <Latitude>90</Latitude>
-      </VehicleLocationAtStop>
-      <!-- STOP Visit TIMES GROUP -->
-      <AimedArrivalTime>2004-12-17T09:40:46-05:00</AimedArrivalTime>
-      <ExpectedArrivalTime>2004-12-17T09:40:46-05:00</ExpectedArrivalTime>
-      <ArrivalStatus>arrived</ArrivalStatus>
-      <AimedDepartureTime>2004-12-17T09:42:47-05:00</AimedDepartureTime>
-      <ExpectedDepartureTime>2004-12-17T09:40:47-05:00</ExpectedDepartureTime>
-      <!-- CALL INFO GROUP -->
-      <DepartureStatus> arrived</DepartureStatus>
-      <DeparturePlatformName xml:lang="EN">Bay 5</DeparturePlatformName>
-      <!-- MONITORED VEHICLE JOURNEY -->
-     </MonitoredCall>
-     <OnwardCalls>
-      <OnwardCall>
-       <StopPointRef>HLTST012</StopPointRef>
-       <VisitNumber>4</VisitNumber>
-       <StopPointName xml:lang="EN">Church</StopPointName>
-       <StopPointName xml:lang="FR">Eglise</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <AimedArrivalTime>2004-12-17T09:30:56-05:00</AimedArrivalTime>
-       <ExpectedArrivalTime>2004-12-17T09:30:56-05:00</ExpectedArrivalTime>
-       <AimedDepartureTime>2004-12-17T09:30:57-05:00</AimedDepartureTime>
-       <ExpectedDepartureTime>2004-12-17T09:30:57-05:00</ExpectedDepartureTime>
-      </OnwardCall>
-     </OnwardCalls>
-     <IsCompleteStopSequence>true</IsCompleteStopSequence>
-    </MonitoredVehicleJourney>
-    <StopVisitNote>Hello bus for line 123 !</StopVisitNote>
-    <StopFacility>Shelter</StopFacility>
-   </MonitoredStopVisit>
-   <!--====Second ARRIVAL ====This Vehicle is at the stop============= -->
-   <MonitoredStopVisit>
-    <RecordedAtTime>2004-12-17T09:25:46-06:00</RecordedAtTime>
-    <!-- IDENTITY GROUP -->
-    <ItemIdentifier>SED9843214675434</ItemIdentifier>
-    <!-- MONITORED VEHICLE JOURNEY -->
-    <MonitoredVehicleJourney>
-     <!-- JOURNEY IDENTITY GROUP -->
-     <LineRef>Line128</LineRef>
-     <DirectionRef>Inbound</DirectionRef>
-     <FramedVehicleJourneyRef>
-      <DataFrameRef>2004-12-17</DataFrameRef>
-      <DatedVehicleJourneyRef>ABC576</DatedVehicleJourneyRef>
-     </FramedVehicleJourneyRef>
-     <RouteRef>Rt24</RouteRef>
-     <!-- LINE INFO GROUP -->
-     <PublishedLineName xml:lang="EN">24</PublishedLineName>
-     <DirectionName xml:lang="EN">To Library</DirectionName>
-     <ExternalLineRef>Line128</ExternalLineRef>
-     <!-- SERVICE INFO GROUP -->
-     <OperatorRef>OP22</OperatorRef>
-     <ProductCategoryRef>PDCATEXPRESS</ProductCategoryRef>
-     <ServiceFeatureRef>SERVCCAT551</ServiceFeatureRef>
-     <VehicleFeatureRef>444</VehicleFeatureRef>
-     <VehicleFeatureRef>446</VehicleFeatureRef>
-     <!-- SERVICE POINTS GROUP -->
-     <OriginRef>PLACE4675</OriginRef>
-     <OriginName xml:lang="EN">Chancery Lane</OriginName>
-     <Via>
-      <PlaceName xml:lang="EN">Picadilly Green</PlaceName>
-     </Via>
-     <DestinationRef>PLACE1245</DestinationRef>
-     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
-     <!--JOURNEY INFO GROUP -->
-     <JourneyNote>Accessiblity  help available from driver</JourneyNote>
-     <PublicContact>
-      <PhoneNumber>02134567</PhoneNumber>
-     </PublicContact>
-     <!--JOURNEY END TIMES  GROUP -->
-     <HeadwayService>true</HeadwayService>
-     <OriginAimedDepartureTime>2004-12-17T09:30:42-00:00</OriginAimedDepartureTime>
-     <DestinationAimedArrivalTime>2004-12-17T10:12:47-05:00</DestinationAimedArrivalTime>
-     <FirstOrLastJourney>otherService</FirstOrLastJourney>
-     <!-- DISRUPTION GROUP GROUP -->
-     <FacilityChangeElement>
-      <EquipmentAvailability>
-       <EquipmentRef>Low</EquipmentRef>
-       <Description>Low Floo vehicler</Description>
-       <EquipmentStatus> notAvailable</EquipmentStatus>
-      </EquipmentAvailability>
-      <MobilityDisruption>
-       <MobilityImpairedAccess> false</MobilityImpairedAccess>
-       <AccessFacility> palletAccess_lowFloor</AccessFacility>
-      </MobilityDisruption>
-     </FacilityChangeElement>
-     <!--JOURNEY PROGRESS GROUP -->
-     <Monitored>true</Monitored>
-     <InCongestion>false</InCongestion>
-     <InPanic>false</InPanic>
-     <PredictionInaccurate>true</PredictionInaccurate>
-     <DataSource>abcd</DataSource>
-     <ConfidenceLevel>reliable</ConfidenceLevel>
-     <VehicleLocation>
-      <Longitude>53</Longitude>
-      <Latitude>0.1</Latitude>
-     </VehicleLocation>
-     <Delay>-PT2M</Delay>
-     <ProgressStatus>Running Early</ProgressStatus>
-     <!-- Operational Info GROUP -->
-     <BlockRef>BLOCK6765</BlockRef>
-     <CourseOfJourneyRef>RUN7865</CourseOfJourneyRef>
-     <VehicleRef>VEH9876555</VehicleRef>
-     <!-- MONITORED CALLING PATTERN GROUP -->
-     <PreviousCalls>
-      <PreviousCall>
-       <StopPointRef>HLT0107</StopPointRef>
-       <VisitNumber>002</VisitNumber>
-       <StopPointName xml:lang="EN">Library</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <AimedDepartureTime>2004-12-17T09:30:42-00:00</AimedDepartureTime>
-       <ActualDepartureTime>2004-12-17T09:30:43-05:00</ActualDepartureTime>
-      </PreviousCall>
-      <PreviousCall>
-       <StopPointRef>HLT0109</StopPointRef>
-       <VisitNumber>007</VisitNumber>
-       <StopPointName xml:lang="EN">Library</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <ActualDepartureTime>2004-12-17T09:32:44-05:00</ActualDepartureTime>
-      </PreviousCall>
-      <PreviousCall>
-       <StopPointRef>HLT0110</StopPointRef>
-       <VisitNumber>009</VisitNumber>
-       <StopPointName xml:lang="EN">Library</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <ActualDepartureTime>2004-12-17T09:38:47-05:00</ActualDepartureTime>
-      </PreviousCall>
-     </PreviousCalls>
-     <MonitoredCall>
-      <VisitNumber>0012</VisitNumber>
-      <!-- STOP PROGRESS GROUP -->
-      <VehicleAtStop>true</VehicleAtStop>
-      <VehicleLocationAtStop>
-       <Longitude>180</Longitude>
-       <Latitude>90</Latitude>
-      </VehicleLocationAtStop>
-      <!-- STOP Visit TIMES GROUP -->
-      <ArrivalStatus>early</ArrivalStatus>
-      <AimedDepartureTime>2004-12-17T09:42:41-05:00</AimedDepartureTime>
-      <ActualDepartureTime>2004-12-17T09:40:41-05:00</ActualDepartureTime>
-      <DepartureStatus>onTime</DepartureStatus>
-     </MonitoredCall>
-     <OnwardCalls>
-      <OnwardCall>
-       <StopPointRef>HLTST112</StopPointRef>
-       <VisitNumber>0012</VisitNumber>
-       <StopPointName xml:lang="EN">Hospital</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <AimedArrivalTime>2004-12-17T09:55:47-05:00</AimedArrivalTime>
-       <AimedDepartureTime>2004-12-17T09:56:47-05:00</AimedDepartureTime>
-       <ProvisionalExpectedDepartureTime>2004-12-17T09:55:47-05:00</ProvisionalExpectedDepartureTime>
-       <ExpectedDeparturePredictionQuality>
-        <PredictionLevel>reliable</PredictionLevel>
-        <Percentile>0.9</Percentile>
-        <LowerTimeLimit>2004-12-17T09:55:47-05:00</LowerTimeLimit>
-        <HigherTimeLimit>2004-12-17T09:58:47-05:00</HigherTimeLimit>
-       </ExpectedDeparturePredictionQuality>
-       <AimedLatestPassengerAccessTime>2004-12-17T09:55:47-05:00</AimedLatestPassengerAccessTime>
-       <DepartureStatus>onTime</DepartureStatus>
-       <DepartureProximityText xml:lang="EN">Approaching stop</DepartureProximityText>
-       <DeparturePlatformName xml:lang="EN">2</DeparturePlatformName>
-       <AimedHeadwayInterval>PT10M</AimedHeadwayInterval>
-       <ExpectedHeadwayInterval>PT11M</ExpectedHeadwayInterval>
-       <DistanceFromStop>750</DistanceFromStop>
-       <NumberOfStopsAway>1</NumberOfStopsAway>
-      </OnwardCall>
-      <OnwardCall>
-       <StopPointRef>HLTST113</StopPointRef>
-       <VisitNumber>0013</VisitNumber>
-       <StopPointName xml:lang="EN">Starbucks</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <AimedArrivalTime>2004-12-17T10:07:47-05:00</AimedArrivalTime>
-       <AimedDepartureTime>2004-12-17T10:09:47-05:00</AimedDepartureTime>
-       <DistanceFromStop>2000</DistanceFromStop>
-       <NumberOfStopsAway>2</NumberOfStopsAway>
-      </OnwardCall>
-      <OnwardCall>
-       <StopPointRef>HLTST114</StopPointRef>
-       <VisitNumber>0014</VisitNumber>
-       <StopPointName xml:lang="EN">Station</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <AimedArrivalTime>2004-12-17T10:12:47-05:00</AimedArrivalTime>
-       <ArrivalStatus>onTime</ArrivalStatus>
-       <ArrivalPlatformName xml:lang="EN">2</ArrivalPlatformName>
-       <DistanceFromStop>4000</DistanceFromStop>
-       <NumberOfStopsAway>3</NumberOfStopsAway>
-      </OnwardCall>
-     </OnwardCalls>
-    </MonitoredVehicleJourney>
-    <StopVisitNote>Hello bus for line 123 !</StopVisitNote>
-   </MonitoredStopVisit>
-   <!--====FIRST DELETION OF EARLIER ARRIVAL =====BY SYSTEM KEY=================== -->
-   <MonitoredStopVisitCancellation>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <ItemRef>SED9843214675429</ItemRef>
-    <Reason>Arrived</Reason>
-   </MonitoredStopVisitCancellation>
-   <!--====Second DELETION OF EARLIER ARRIVAL ==IDENTIFERS ARE REF DATA============= -->
-   <MonitoredStopVisitCancellation>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <MonitoringRef>HLTST113</MonitoringRef>
-    <VisitNumber>2</VisitNumber>
-    <LineRef>Line123</LineRef>
-    <DirectionRef>Out</DirectionRef>
-    <VehicleJourneyRef>
-     <DataFrameRef>2004-12-17</DataFrameRef>
-     <DatedVehicleJourneyRef>0987656</DatedVehicleJourneyRef>
-    </VehicleJourneyRef>
-    <Reason>Arrived</Reason>
-   </MonitoredStopVisitCancellation>
-   <!--====STOP LINE NOTICE ============= -->
-   <StopLineNotice>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <ItemIdentifier>SED9843214675429</ItemIdentifier>
-    <MonitoringRef>HLTST011</MonitoringRef>
-    <LineRef>123</LineRef>
-    <DirectionRef>Out</DirectionRef>
-    <LineNote>What, will the line stretch out to the crack of doom?</LineNote>
-   </StopLineNotice>
-   <!--====STOP LINE NOTICE CANCELLED============= -->
-   <StopLineNoticeCancellation>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <ItemRef>SED9843214675429</ItemRef>
-    <MonitoringRef>HLTST011</MonitoringRef>
-    <LineRef>123</LineRef>
-    <DirectionRef>Out</DirectionRef>
-   </StopLineNoticeCancellation>
-   <Note>Hello Stop</Note>
-  </StopMonitoringDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
+		<ProducerRef>KUBRICK</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<StopMonitoringDelivery version="2.0">
+			<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+			<SubscriberRef>NADER</SubscriberRef>
+			<SubscriptionRef>2004-12-17T09:30:47-05:00</SubscriptionRef>
+			<Status>true</Status>
+			<ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
+			<ShortestPossibleCycle>PT3M</ShortestPossibleCycle>
+			<MonitoringRef>HLTST011</MonitoringRef>
+			<MonitoringName xml:lang="EN">British Museum Stop A</MonitoringName>
+			<MonitoringName xml:lang="FR">Musee Britannique Halte A</MonitoringName>
+			<!--====FIRST ARRIVAL ============================================ -->
+			<MonitoredStopVisit>
+				<RecordedAtTime>2004-12-17T09:25:46-05:00</RecordedAtTime>
+				<!-- IDENTITY GROUP -->
+				<ItemIdentifier>SED9843214675432</ItemIdentifier>
+				<ValidUntilTime>2004-12-17T10:25:46-05:00</ValidUntilTime>
+				<MonitoringRef>HLTST011</MonitoringRef>
+				<ClearDownRef>CLR7654</ClearDownRef>
+				<MonitoredVehicleJourney>
+					<!-- JOURNEY IDENTITY GROUP -->
+					<LineRef>Line123</LineRef>
+					<DirectionRef>Out</DirectionRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2004-12-17</DataFrameRef>
+						<DatedVehicleJourneyRef>Oubound</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<!-- LINE INFO GROUP -->
+					<PublishedLineName xml:lang="EN">123</PublishedLineName>
+					<!-- SERVICE INFO GROUP -->
+					<OperatorRef>OP22</OperatorRef>
+					<ProductCategoryRef>PDCATEXPRESS</ProductCategoryRef>
+					<ServiceFeatureRef>SERVCCAT551</ServiceFeatureRef>
+					<!-- SERVICE POINTS GROUP -->
+					<OriginRef>PLACE21</OriginRef>
+					<OriginName xml:lang="EN">Highbury</OriginName>
+					<Via>
+						<PlaceName xml:lang="EN">Kensall Green</PlaceName>
+					</Via>
+					<Via>
+						<PlaceName xml:lang="EN">Roman Road</PlaceName>
+					</Via>
+					<DestinationRef>PLACE45</DestinationRef>
+					<DestinationName xml:lang="EN">Paradise Park</DestinationName>
+					<DestinationName xml:lang="FR">Parc du Paradis</DestinationName>
+					<VehicleJourneyName xml:lang="EN">Boris Special</VehicleJourneyName>
+					<!-- JOURNEY INFO GROUP -->
+					<JourneyNote>Kensall Green</JourneyNote>
+					<!--JOURNEY PROGRESS GROUP -->
+					<Monitored>true</Monitored>
+					<InCongestion>false</InCongestion>
+					<InPanic>false</InPanic>
+					<PredictionInaccurate>false</PredictionInaccurate>
+					<ConfidenceLevel>reliable</ConfidenceLevel>
+					<VehicleLocation>
+						<Longitude>180</Longitude>
+						<Latitude>90</Latitude>
+					</VehicleLocation>
+					<Bearing>23</Bearing>
+					<Velocity>22</Velocity>
+					<Occupancy>seatsAvailable</Occupancy>
+					<Delay>PT2M</Delay>
+					<ProgressStatus>Service running on time</ProgressStatus>
+					<VehicleStatus> inProgress</VehicleStatus>
+					<!-- Operational Info GROUP -->
+					<TrainBlockPart>
+						<NumberOfBlockParts>1</NumberOfBlockParts>
+						<TrainPartRef>3456</TrainPartRef>
+						<PositionOfTrainBlockPart>1</PositionOfTrainBlockPart>
+					</TrainBlockPart>
+					<BlockRef>BLOCK765</BlockRef>
+					<CourseOfJourneyRef>RUN765</CourseOfJourneyRef>
+					<VehicleRef>VEH987654</VehicleRef>
+					<DriverRef>DRV654</DriverRef>
+					<DriverName>N.I.Blick</DriverName>
+					<!-- MONITORED CALLING PATTERN GROUP -->
+					<PreviousCalls>
+						<PreviousCall>
+							<StopPointRef>HLT0010</StopPointRef>
+							<VisitNumber>2</VisitNumber>
+							<StopPointName xml:lang="EN">Town Hall</StopPointName>
+							<StopPointName xml:lang="EN">Hotel de Ville</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<AimedDepartureTime>2004-12-17T09:32:43-05:00</AimedDepartureTime>
+							<ActualDepartureTime>2004-12-17T09:32:43-05:00</ActualDepartureTime>
+						</PreviousCall>
+					</PreviousCalls>
+					<MonitoredCall>
+						<VisitNumber>0014</VisitNumber>
+						<!-- STOP PROGRESS GROUP -->
+						<VehicleAtStop>true</VehicleAtStop>
+						<VehicleLocationAtStop>
+							<Longitude>180</Longitude>
+							<Latitude>90</Latitude>
+						</VehicleLocationAtStop>
+						<!-- STOP Visit TIMES GROUP -->
+						<AimedArrivalTime>2004-12-17T09:40:46-05:00</AimedArrivalTime>
+						<ExpectedArrivalTime>2004-12-17T09:40:46-05:00</ExpectedArrivalTime>
+						<ArrivalStatus>arrived</ArrivalStatus>
+						<AimedDepartureTime>2004-12-17T09:42:47-05:00</AimedDepartureTime>
+						<ExpectedDepartureTime>2004-12-17T09:40:47-05:00</ExpectedDepartureTime>
+						<!-- CALL INFO GROUP -->
+						<DepartureStatus> arrived</DepartureStatus>
+						<DeparturePlatformName xml:lang="EN">Bay 5</DeparturePlatformName>
+						<!-- MONITORED VEHICLE JOURNEY -->
+					</MonitoredCall>
+					<OnwardCalls>
+						<OnwardCall>
+							<StopPointRef>HLTST012</StopPointRef>
+							<VisitNumber>4</VisitNumber>
+							<StopPointName xml:lang="EN">Church</StopPointName>
+							<StopPointName xml:lang="FR">Eglise</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<AimedArrivalTime>2004-12-17T09:30:56-05:00</AimedArrivalTime>
+							<ExpectedArrivalTime>2004-12-17T09:30:56-05:00</ExpectedArrivalTime>
+							<AimedDepartureTime>2004-12-17T09:30:57-05:00</AimedDepartureTime>
+							<ExpectedDepartureTime>2004-12-17T09:30:57-05:00</ExpectedDepartureTime>
+						</OnwardCall>
+					</OnwardCalls>
+					<IsCompleteStopSequence>true</IsCompleteStopSequence>
+				</MonitoredVehicleJourney>
+				<StopVisitNote>Hello bus for line 123 !</StopVisitNote>
+				<StopFacility>Shelter</StopFacility>
+			</MonitoredStopVisit>
+			<!--====Second ARRIVAL ====This Vehicle is at the stop============= -->
+			<MonitoredStopVisit>
+				<RecordedAtTime>2004-12-17T09:25:46-06:00</RecordedAtTime>
+				<!-- IDENTITY GROUP -->
+				<ItemIdentifier>SED9843214675434</ItemIdentifier>
+				<!-- MONITORED VEHICLE JOURNEY -->
+				<MonitoredVehicleJourney>
+					<!-- JOURNEY IDENTITY GROUP -->
+					<LineRef>Line128</LineRef>
+					<DirectionRef>Inbound</DirectionRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2004-12-17</DataFrameRef>
+						<DatedVehicleJourneyRef>ABC576</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<RouteRef>Rt24</RouteRef>
+					<!-- LINE INFO GROUP -->
+					<PublishedLineName xml:lang="EN">24</PublishedLineName>
+					<DirectionName xml:lang="EN">To Library</DirectionName>
+					<ExternalLineRef>Line128</ExternalLineRef>
+					<!-- SERVICE INFO GROUP -->
+					<OperatorRef>OP22</OperatorRef>
+					<ProductCategoryRef>PDCATEXPRESS</ProductCategoryRef>
+					<ServiceFeatureRef>SERVCCAT551</ServiceFeatureRef>
+					<VehicleFeatureRef>444</VehicleFeatureRef>
+					<VehicleFeatureRef>446</VehicleFeatureRef>
+					<!-- SERVICE POINTS GROUP -->
+					<OriginRef>PLACE4675</OriginRef>
+					<OriginName xml:lang="EN">Chancery Lane</OriginName>
+					<Via>
+						<PlaceName xml:lang="EN">Picadilly Green</PlaceName>
+					</Via>
+					<DestinationRef>PLACE1245</DestinationRef>
+					<DestinationName xml:lang="EN">Paradise Park</DestinationName>
+					<!--JOURNEY INFO GROUP -->
+					<JourneyNote>Accessiblity  help available from driver</JourneyNote>
+					<PublicContact>
+						<PhoneNumber>02134567</PhoneNumber>
+					</PublicContact>
+					<!--JOURNEY END TIMES  GROUP -->
+					<HeadwayService>true</HeadwayService>
+					<OriginAimedDepartureTime>2004-12-17T09:30:42-00:00</OriginAimedDepartureTime>
+					<DestinationAimedArrivalTime>2004-12-17T10:12:47-05:00</DestinationAimedArrivalTime>
+					<FirstOrLastJourney>otherService</FirstOrLastJourney>
+					<!-- DISRUPTION GROUP GROUP -->
+					<FacilityChangeElement>
+						<EquipmentAvailability>
+							<EquipmentRef>Low</EquipmentRef>
+							<Description>Low Floo vehicler</Description>
+							<EquipmentStatus> notAvailable</EquipmentStatus>
+						</EquipmentAvailability>
+						<MobilityDisruption>
+							<MobilityImpairedAccess> false</MobilityImpairedAccess>
+							<AccessFacility> palletAccess_lowFloor</AccessFacility>
+						</MobilityDisruption>
+					</FacilityChangeElement>
+					<!--JOURNEY PROGRESS GROUP -->
+					<Monitored>true</Monitored>
+					<InCongestion>false</InCongestion>
+					<InPanic>false</InPanic>
+					<PredictionInaccurate>true</PredictionInaccurate>
+					<DataSource>abcd</DataSource>
+					<ConfidenceLevel>reliable</ConfidenceLevel>
+					<VehicleLocation>
+						<Longitude>53</Longitude>
+						<Latitude>0.1</Latitude>
+					</VehicleLocation>
+					<Delay>-PT2M</Delay>
+					<ProgressStatus>Running Early</ProgressStatus>
+					<!-- Operational Info GROUP -->
+					<BlockRef>BLOCK6765</BlockRef>
+					<CourseOfJourneyRef>RUN7865</CourseOfJourneyRef>
+					<VehicleRef>VEH9876555</VehicleRef>
+					<!-- MONITORED CALLING PATTERN GROUP -->
+					<PreviousCalls>
+						<PreviousCall>
+							<StopPointRef>HLT0107</StopPointRef>
+							<VisitNumber>002</VisitNumber>
+							<StopPointName xml:lang="EN">Library</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<AimedDepartureTime>2004-12-17T09:30:42-00:00</AimedDepartureTime>
+							<ActualDepartureTime>2004-12-17T09:30:43-05:00</ActualDepartureTime>
+						</PreviousCall>
+						<PreviousCall>
+							<StopPointRef>HLT0109</StopPointRef>
+							<VisitNumber>007</VisitNumber>
+							<StopPointName xml:lang="EN">Library</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<ActualDepartureTime>2004-12-17T09:32:44-05:00</ActualDepartureTime>
+						</PreviousCall>
+						<PreviousCall>
+							<StopPointRef>HLT0110</StopPointRef>
+							<VisitNumber>009</VisitNumber>
+							<StopPointName xml:lang="EN">Library</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<ActualDepartureTime>2004-12-17T09:38:47-05:00</ActualDepartureTime>
+						</PreviousCall>
+					</PreviousCalls>
+					<MonitoredCall>
+						<VisitNumber>0012</VisitNumber>
+						<!-- STOP PROGRESS GROUP -->
+						<VehicleAtStop>true</VehicleAtStop>
+						<VehicleLocationAtStop>
+							<Longitude>180</Longitude>
+							<Latitude>90</Latitude>
+						</VehicleLocationAtStop>
+						<!-- STOP Visit TIMES GROUP -->
+						<ArrivalStatus>early</ArrivalStatus>
+						<AimedDepartureTime>2004-12-17T09:42:41-05:00</AimedDepartureTime>
+						<ActualDepartureTime>2004-12-17T09:40:41-05:00</ActualDepartureTime>
+						<DepartureStatus>onTime</DepartureStatus>
+					</MonitoredCall>
+					<OnwardCalls>
+						<OnwardCall>
+							<StopPointRef>HLTST112</StopPointRef>
+							<VisitNumber>0012</VisitNumber>
+							<StopPointName xml:lang="EN">Hospital</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<AimedArrivalTime>2004-12-17T09:55:47-05:00</AimedArrivalTime>
+							<AimedDepartureTime>2004-12-17T09:56:47-05:00</AimedDepartureTime>
+							<ProvisionalExpectedDepartureTime>2004-12-17T09:55:47-05:00</ProvisionalExpectedDepartureTime>
+							<ExpectedDeparturePredictionQuality>
+								<PredictionLevel>reliable</PredictionLevel>
+								<Percentile>0.9</Percentile>
+								<LowerTimeLimit>2004-12-17T09:55:47-05:00</LowerTimeLimit>
+								<HigherTimeLimit>2004-12-17T09:58:47-05:00</HigherTimeLimit>
+							</ExpectedDeparturePredictionQuality>
+							<AimedLatestPassengerAccessTime>2004-12-17T09:55:47-05:00</AimedLatestPassengerAccessTime>
+							<DepartureStatus>onTime</DepartureStatus>
+							<DepartureProximityText xml:lang="EN">Approaching stop</DepartureProximityText>
+							<DeparturePlatformName xml:lang="EN">2</DeparturePlatformName>
+							<AimedHeadwayInterval>PT10M</AimedHeadwayInterval>
+							<ExpectedHeadwayInterval>PT11M</ExpectedHeadwayInterval>
+							<DistanceFromStop>750</DistanceFromStop>
+							<NumberOfStopsAway>1</NumberOfStopsAway>
+						</OnwardCall>
+						<OnwardCall>
+							<StopPointRef>HLTST113</StopPointRef>
+							<VisitNumber>0013</VisitNumber>
+							<StopPointName xml:lang="EN">Starbucks</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<AimedArrivalTime>2004-12-17T10:07:47-05:00</AimedArrivalTime>
+							<AimedDepartureTime>2004-12-17T10:09:47-05:00</AimedDepartureTime>
+							<DistanceFromStop>2000</DistanceFromStop>
+							<NumberOfStopsAway>2</NumberOfStopsAway>
+						</OnwardCall>
+						<OnwardCall>
+							<StopPointRef>HLTST114</StopPointRef>
+							<VisitNumber>0014</VisitNumber>
+							<StopPointName xml:lang="EN">Station</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<AimedArrivalTime>2004-12-17T10:12:47-05:00</AimedArrivalTime>
+							<ArrivalStatus>onTime</ArrivalStatus>
+							<ArrivalPlatformName xml:lang="EN">2</ArrivalPlatformName>
+							<DistanceFromStop>4000</DistanceFromStop>
+							<NumberOfStopsAway>3</NumberOfStopsAway>
+						</OnwardCall>
+					</OnwardCalls>
+				</MonitoredVehicleJourney>
+				<StopVisitNote>Hello bus for line 123 !</StopVisitNote>
+			</MonitoredStopVisit>
+			<!--====FIRST DELETION OF EARLIER ARRIVAL =====BY SYSTEM KEY=================== -->
+			<MonitoredStopVisitCancellation>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<ItemRef>SED9843214675429</ItemRef>
+				<Reason>Arrived</Reason>
+			</MonitoredStopVisitCancellation>
+			<!--====Second DELETION OF EARLIER ARRIVAL ==IDENTIFERS ARE REF DATA============= -->
+			<MonitoredStopVisitCancellation>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<MonitoringRef>HLTST113</MonitoringRef>
+				<VisitNumber>2</VisitNumber>
+				<LineRef>Line123</LineRef>
+				<DirectionRef>Out</DirectionRef>
+				<VehicleJourneyRef>
+					<DataFrameRef>2004-12-17</DataFrameRef>
+					<DatedVehicleJourneyRef>0987656</DatedVehicleJourneyRef>
+				</VehicleJourneyRef>
+				<Reason>Arrived</Reason>
+			</MonitoredStopVisitCancellation>
+			<!--====STOP LINE NOTICE ============= -->
+			<StopLineNotice>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<ItemIdentifier>SED9843214675429</ItemIdentifier>
+				<MonitoringRef>HLTST011</MonitoringRef>
+				<LineRef>123</LineRef>
+				<DirectionRef>Out</DirectionRef>
+				<LineNote>What, will the line stretch out to the crack of doom?</LineNote>
+			</StopLineNotice>
+			<!--====STOP LINE NOTICE CANCELLED============= -->
+			<StopLineNoticeCancellation>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<ItemRef>SED9843214675429</ItemRef>
+				<MonitoringRef>HLTST011</MonitoringRef>
+				<LineRef>123</LineRef>
+				<DirectionRef>Out</DirectionRef>
+			</StopLineNoticeCancellation>
+			<Note>Hello Stop</Note>
+		</StopMonitoringDelivery>
+	</ServiceDelivery>
 </Siri>
