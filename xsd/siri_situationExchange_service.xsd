@@ -108,18 +108,15 @@ Rail transport, Roads and road transport
 		<xsd:documentation>SIRI-SX Situation Exchange Service.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<!-- ===Global import of all IFOPT namespace elements used in SIRI neeeded to work around XERCES limitation=====-->
+	<!-- Global import of all IFOPT namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
-	<!--.....See SITUATION for the actual dependencies...-->
-	<!-- ===Global import of all ACSB namespace elements needed to work around XERCES limitation=====-->
+	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_all.xsd"/>
-	<!--.....These are the actual dependencies...-->
+	<xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="datex2/DATEXIISchema.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
 	<xsd:include schemaLocation="siri_model/siri_situation.xsd"/>
 	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="acsb/acsb_passengerMobility.xsd"/>
-	<xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="datex2/DATEXIISchema.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:group name="SiriSituationExchangeServiceIndexGroup">
 		<xsd:annotation>
