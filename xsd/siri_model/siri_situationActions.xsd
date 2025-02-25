@@ -208,6 +208,11 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Name of action data Element.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="ActionCode" type="xsd:NMTOKEN" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of the action, intended to faciliate its tracking by data consumers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="Type" type="xsd:NMTOKEN">
 				<xsd:annotation>
 					<xsd:documentation>Data type of action data.</xsd:documentation>
