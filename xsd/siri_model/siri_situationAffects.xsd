@@ -115,9 +115,9 @@ Rail transport, Roads and road transport
 		<xsd:documentation>SIRI-SX Situation Scope.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
-	<xsd:complexType name="AffectedStopPointStructure">
+	<xsd:complexType name="AffectedStopPointWithoutLineStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for an SCHEDULED STOP POINT affected by a SITUATION.</xsd:documentation>
+			<xsd:documentation>Base Type for an SCHEDULED STOP POINT affected by a SITUATION.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="StopPointRef" minOccurs="0"/>
@@ -190,18 +190,29 @@ Rail transport, Roads and road transport
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
-			<xsd:element name="Lines" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Used to restrict stop points to some lines</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded"/>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element ref="Extensions" minOccurs="0"/>
 		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AffectedStopPointStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for an SCHEDULED STOP POINT affected by a SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AffectedStopPointWithoutLineStructure">
+				<xsd:sequence>
+					<xsd:element name="Lines" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Used to restrict stop points to some lines.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="AffectedLine" type="AffectedLineWithoutStopStructure" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="AffectedModesStructure">
 		<xsd:annotation>
@@ -534,7 +545,7 @@ Rail transport, Roads and road transport
 		<xsd:sequence>
 			<xsd:element name="AffectedOperator" type="AffectedOperatorStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Operators of LINEs affected by incident. Overrides any value specified for (i) General Context.</xsd:documentation>
+					<xsd:documentation>Operators of LINEs affected by incident. Overrides any value specified for (i) General Context. DEPRECATED since SIRI 2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="NetworkRef" type="NetworkRefStructure" minOccurs="0">
@@ -556,7 +567,7 @@ Rail transport, Roads and road transport
 			<xsd:choice>
 				<xsd:element name="AllLines" type="EmptyType">
 					<xsd:annotation>
-						<xsd:documentation>All LINEs in the network are affected.</xsd:documentation>
+						<xsd:documentation>All LINEs in the network are affected. DEPRECATED since SIRI 2.1</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 				<xsd:element name="SelectedRoutes" type="AffectedRouteStructure" maxOccurs="unbounded">
@@ -580,9 +591,9 @@ Rail transport, Roads and road transport
 			<xsd:element ref="Extensions" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="AffectedLineStructure">
+	<xsd:complexType name="AffectedLineWithoutStopStructure">
 		<xsd:annotation>
-			<xsd:documentation>Information about the individual LINEs in the network that are affected by a SITUATION. If not explicitly overridden, modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) in the general context. </xsd:documentation>
+			<xsd:documentation>Base information about the individual LINEs in the network that are affected by a SITUATION. If not explicitly overridden, modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) in the general context. </xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="AffectedOperator" type="AffectedOperatorStructure" minOccurs="0" maxOccurs="unbounded">
@@ -591,67 +602,78 @@ Rail transport, Roads and road transport
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="LineGroup"/>
-			<xsd:element name="Origins" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>Restricts the affected scope to the specified origins</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Destinations" type="AffectedStopPointStructure" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>Restricts the affected scope to the specified DESTINATIONs</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Direction" type="DirectionStructure" minOccurs="0" maxOccurs="unbounded">
-				<xsd:annotation>
-					<xsd:documentation>DIRECTIONs affected.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Routes" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Restricts the affected scope to the specified ROUTEs</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="AffectedRoute" type="AffectedRouteStructure" maxOccurs="unbounded">
-							<xsd:annotation>
-								<xsd:documentation>Route affected by Situation.</xsd:documentation>
-							</xsd:annotation>
-						</xsd:element>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="Sections" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Restricts the affected scope to the specified LINE SECTIONs</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="AffectedSection" type="AffectedSectionStructure" maxOccurs="unbounded"/>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="StopPoints" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Restricts the affected scope to the specified SCHEDULED STOP POINTs</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure" maxOccurs="unbounded"/>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="StopPlaces" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Restricts the affected scope to the specified STOP PLACEs</xsd:documentation>
-				</xsd:annotation>
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure" maxOccurs="unbounded"/>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element ref="Extensions" minOccurs="0"/>
 		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AffectedLineStructure">
+		<xsd:annotation>
+			<xsd:documentation>Information about the individual LINEs in the network that are affected by a SITUATION. If not explicitly overridden, modes and submodes will be defaulted to any values present (i) in the AffectedNetwork (ii) in the general context. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AffectedLineWithoutStopStructure">
+				<xsd:sequence>
+					<xsd:element name="Origins" type="AffectedStopPointWithoutLineStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Restricts the affected scope to the specified origins</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Destinations" type="AffectedStopPointWithoutLineStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Restricts the affected scope to the specified DESTINATIONs</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Direction" type="DirectionStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>DIRECTIONs affected.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Routes" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Restricts the affected scope to the specified ROUTEs</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="AffectedRoute" type="AffectedRouteStructure" maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>Route affected by Situation.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Sections" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Restricts the affected scope to the specified LINE SECTIONs</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="AffectedSection" type="AffectedSectionStructure" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="StopPoints" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Restricts the affected scope to the specified SCHEDULED STOP POINTs</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="AffectedStopPoint" type="AffectedStopPointWithoutLineStructure" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="StopPlaces" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Restricts the affected scope to the specified STOP PLACEs</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="AffectedStopPlace" type="AffectedStopPlaceWithoutLineStructure" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="AffectedSectionStructure">
 		<xsd:annotation>
@@ -775,7 +797,7 @@ Rail transport, Roads and road transport
 							</xsd:annotation>
 						</xsd:element>
 						<xsd:sequence maxOccurs="unbounded">
-							<xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure">
+							<xsd:element name="AffectedStopPoint" type="AffectedStopPointWithoutLineStructure">
 								<xsd:annotation>
 									<xsd:documentation>Stop Point of the ROUTE</xsd:documentation>
 								</xsd:annotation>
@@ -1177,6 +1199,28 @@ Rail transport, Roads and road transport
 			<xsd:documentation>Type for information about the STOP PLACEs affected by an SITUATION.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
+			<xsd:extension base="AffectedStopPlaceWithoutLineStructure">
+				<xsd:sequence>
+					<xsd:element name="Lines" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Used to restrict STOP PLACEs to some lines.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AffectedStopPlaceWithoutLineStructure">
+		<xsd:annotation>
+			<xsd:documentation>Base Type for information about the STOP PLACEs affected by an SITUATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
 			<xsd:extension base="AffectedStopPlaceElementStructure">
 				<xsd:sequence>
 					<xsd:element name="StopPlaceRef" type="ifopt:StopPlaceRefStructure">
@@ -1232,17 +1276,6 @@ Rail transport, Roads and road transport
 							</xsd:sequence>
 						</xsd:complexType>
 					</xsd:element>
-					<xsd:element name="Lines" minOccurs="0">
-						<xsd:annotation>
-							<xsd:documentation>Used to restrict STOP PLACEs to some lines</xsd:documentation>
-						</xsd:annotation>
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="AffectedLine" type="AffectedLineStructure" maxOccurs="unbounded"/>
-							</xsd:sequence>
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element ref="Extensions" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
