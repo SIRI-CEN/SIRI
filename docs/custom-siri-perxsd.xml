@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom>
+	<!-- Title appearing on the entry page -->
+	<systemTitle><strong>S</strong>erver <strong>I</strong>nterface for 
+        <strong>R</strong>eal-time <strong>I</strong>nformation (SIRI)</systemTitle>
+	<!-- Standardized namespace bindings -->
+	<namespaces>
+		<namespace prefix="orc" uri="http://datex2.eu/schema/2_0RC1/2_0"/>
+		<namespace prefix="wsdl" uri="http://wsdl.siri.org.uk"/>
+		<namespace prefix="acsb" uri="http://www.ifopt.org.uk/acsb"/>
+		<namespace prefix="ifopt" uri="http://www.ifopt.org.uk/ifopt"/>
+		<namespace prefix="netex" uri="http://www.netex.org.uk/netex"/>
+		<namespace prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
+		<namespace prefix="siri" uri="http://www.siri.org.uk/siri"/>
+		<namespace prefix="ojp" uri="http://www.vdv.de/ojp"/>
+	</namespaces>
+	<!-- Report type specific rules -->
+	<reportTypes/>
+</custom>
