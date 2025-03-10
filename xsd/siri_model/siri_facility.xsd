@@ -404,6 +404,11 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
+			<xsd:element name="Location" type="LocationStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Coordinates of the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:group ref="ServiceInfoGroup"/>
 		</xsd:sequence>
 	</xsd:complexType>
