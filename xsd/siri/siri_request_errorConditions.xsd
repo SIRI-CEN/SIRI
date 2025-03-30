@@ -125,7 +125,7 @@ Rail transport, Roads and road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="ErrorConditionElement" type="ErrorConditionElementStructure" abstract="false">
 		<xsd:annotation>
-			<xsd:documentation>Element fror an erroc condition  (for use in WSDL.)</xsd:documentation>
+			<xsd:documentation>Element fror an error condition  (for use in WSDL.)</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="ErrorConditionElementStructure">
@@ -155,7 +155,7 @@ Rail transport, Roads and road transport
 	<!-- =======Error conditions========================================================== -->
 	<xsd:element name="ErrorCode" type="ErrorCodeStructure" abstract="true">
 		<xsd:annotation>
-			<xsd:documentation>Subsititutable type for a SIRI Error code.</xsd:documentation>
+			<xsd:documentation>Substitutable type for a SIRI Error code.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="ErrorCodeStructure">
@@ -165,7 +165,7 @@ Rail transport, Roads and road transport
 		<xsd:sequence>
 			<xsd:element name="ErrorText" type="xsd:string" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Addtional Description of error. This allows a descripotion to be supplied when the Error code is used in a specific WSDL fault, rather than within a general error condition.</xsd:documentation>
+					<xsd:documentation>Additional description of error. This allows a description to be supplied when the Error code is used in a specific WSDL fault, rather than within a general error condition.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -178,7 +178,7 @@ Rail transport, Roads and road transport
 	<!-- ======================================================================= -->
 	<xsd:element name="ServiceDeliveryErrorConditionElement" type="ServiceDeliveryErrorConditionStructure" abstract="false">
 		<xsd:annotation>
-			<xsd:documentation>Element fror an erroc condition for use in WSDL.</xsd:documentation>
+			<xsd:documentation>Element from an error condition for use in WSDL.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="ServiceDeliveryErrorConditionStructure">
@@ -214,7 +214,7 @@ Rail transport, Roads and road transport
 			<xsd:element ref="UnapprovedKeyAccessError"/>
 			<xsd:element ref="UnknownParticipantError">
 				<xsd:annotation>
-					<xsd:documentation>Error: Recipient for a message to be distributed is unknown. I.e. delegatior is found, but  (since SIRI 2.0)</xsd:documentation>
+					<xsd:documentation>Error: Recipient for a message to be distributed is unknown. (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="UnknownEndpointError"/>
@@ -259,7 +259,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Reference to  Participant who is unknown. + SIRI v2.0</xsd:documentation>
+							<xsd:documentation>Reference to  Participant who is unknown. (since SIRI v2.0)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -281,7 +281,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="Endpoint" type="EndpointAddress" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Endpoint that is noit known. + SIRI v2.0</xsd:documentation>
+							<xsd:documentation>Endpoint that is not known. + SIRI v2.0</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -291,7 +291,7 @@ Rail transport, Roads and road transport
 	<!-- ===Error: Endpoint Denied Access ============================================= -->
 	<xsd:element name="EndpointDeniedAccessError" type="EndpointDeniedAccessStructure" substitutionGroup="ErrorCode">
 		<xsd:annotation>
-			<xsd:documentation>Error:Endpoint to which a message is to be distributed did not allow access by the cloient. (since SIRI 2.0)</xsd:documentation>
+			<xsd:documentation>Error:Endpoint to which a message is to be distributed did not allow access by the client. (since SIRI 2.0)</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="EndpointDeniedAccessStructure">
@@ -303,7 +303,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="Endpoint" type="EndpointAddress" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Endpoint that was denied access  + SIRI v2.0</xsd:documentation>
+							<xsd:documentation>Endpoint that was denied access (since SIRI v2.0)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -325,7 +325,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="Endpoint" type="EndpointAddress" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Endpoint that is noit available. + SIRI v2.0</xsd:documentation>
+							<xsd:documentation>Endpoint that is not available. (since SIRI v2.0)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -374,7 +374,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="ExpectedRestartTime" type="xsd:dateTime" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Expected time fro reavailability of servcie.  (since SIRI 2.0)</xsd:documentation>
+							<xsd:documentation>Expected time fro reavailability of service.  (since SIRI 2.0)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -396,7 +396,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="CapabilityRef" type="CapabilityCodeType" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Id of capabiliuty that is noit supported.</xsd:documentation>
+							<xsd:documentation>Id of capability that is not supported.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -493,12 +493,12 @@ Rail transport, Roads and road transport
 	<!-- ===Error: Unknown Extensions======================================= -->
 	<xsd:element name="UnknownExtensionsError" type="UnknownExtensionsErrorStructure" substitutionGroup="ErrorCode">
 		<xsd:annotation>
-			<xsd:documentation>Error: Request contained extensions that were not supported by the producer. A response has been provided but some or all extensions have been ignored..  (since SIRI 2.0).</xsd:documentation>
+			<xsd:documentation>Error: Request contained extensions that were not supported by the producer. A response has been provided but some or all extensions have been ignored.  (since SIRI 2.0).</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="UnknownExtensionsErrorStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for Unknown Extensions Error:. (since SIRI 2.0).</xsd:documentation>
+			<xsd:documentation>Type for Unknown Extensions Error. (since SIRI 2.0).</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="ErrorCodeStructure">
@@ -520,7 +520,7 @@ Rail transport, Roads and road transport
 	</xsd:element>
 	<xsd:complexType name="AllowedResourceUsageExceededErrorStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for error. AllowedResourceUsageExceeded.</xsd:documentation>
+			<xsd:documentation>Type for error: Allowed Resource Usage Exceeded.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="ErrorCodeStructure"/>
@@ -543,7 +543,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="SubscriberRef" type="ParticipantRefStructure" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Id of capabiliuty that is noit supported. + SIRI v2.0</xsd:documentation>
+							<xsd:documentation>Id of capabiliuty that is noit supported. (since SIRI v2.0)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -566,7 +566,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="SubscriptionCode" type="SubscriptionQualifierStructure" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Ubscription code that could not be found. + SIRI v2.0</xsd:documentation>
+							<xsd:documentation>Subscription code that could not be found. (since SIRI v2.0)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -581,7 +581,7 @@ Rail transport, Roads and road transport
 	</xsd:element>
 	<xsd:complexType name="OtherErrorStructure">
 		<xsd:annotation>
-			<xsd:documentation>Type for error.</xsd:documentation>
+			<xsd:documentation>Type for error: Other.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="ErrorCodeStructure"/>
