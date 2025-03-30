@@ -281,7 +281,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="Endpoint" type="EndpointAddress" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Endpoint that is not known. + SIRI v2.0</xsd:documentation>
+							<xsd:documentation>Endpoint that is not known. (since SIRI v2.0)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -374,7 +374,7 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="ExpectedRestartTime" type="xsd:dateTime" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Expected time fro reavailability of service.  (since SIRI 2.0)</xsd:documentation>
+							<xsd:documentation>Expected time fro reavailability of service. (since SIRI 2.0)</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -493,7 +493,7 @@ Rail transport, Roads and road transport
 	<!-- ===Error: Unknown Extensions======================================= -->
 	<xsd:element name="UnknownExtensionsError" type="UnknownExtensionsErrorStructure" substitutionGroup="ErrorCode">
 		<xsd:annotation>
-			<xsd:documentation>Error: Request contained extensions that were not supported by the producer. A response has been provided but some or all extensions have been ignored.  (since SIRI 2.0).</xsd:documentation>
+			<xsd:documentation>Error: Request contained extensions that were not supported by the producer. A response has been provided but some or all extensions have been ignored. (since SIRI 2.0).</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="UnknownExtensionsErrorStructure">
