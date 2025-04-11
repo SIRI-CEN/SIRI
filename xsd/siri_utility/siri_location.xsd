@@ -202,6 +202,11 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Defines a line shape (since SIRI 2.0)</xsd:documentation>
 		</xsd:annotation>
+		<xsd:element name="Distance" type="DistanceType" minOccurs="0">
+			<xsd:annotation>
+				<xsd:documentation>Travel distance for the provided shape. In meters.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
 		<xsd:choice>
 			<xsd:sequence>
 				<xsd:element name="Point" type="LocationStructure" minOccurs="2" maxOccurs="unbounded">
@@ -213,11 +218,6 @@ Rail transport, Roads and road transport
 			<xsd:element ref="gml:LineString">
 				<xsd:annotation>
 					<xsd:documentation>A gml:LineString that consists of a sequence of two or more coordinate tuples.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="Polyline" type="xsd:string">
-				<xsd:annotation>
-					<xsd:documentation>An encoded polyline.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:choice>
