@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example occupancy in SIRI VM (could also be SIRI ET) -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<!--=======ENDPOINT ===================================== -->
+		<ResponseTimestamp>2023-11-17T09:30:47-05:00</ResponseTimestamp>
+		<ProducerRef>MPG_Manual</ProducerRef>
+		<!--=======PAYLOAD ===================================== -->
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======FIRST SUBSCRIPTION======================== -->
+		<VehicleMonitoringDelivery version="2.0">
+			<ResponseTimestamp>2023-11-16T09:30:47-05:00</ResponseTimestamp>
+			<Status>true</Status>
+			<ValidUntil>2023-11-17T09:30:47-05:00</ValidUntil>
+			<VehicleActivity>
+				<RecordedAtTime>2023-11-16T09:30:47-05:00</RecordedAtTime>
+				<ValidUntilTime>22023-11-17T09:30:47-05:00</ValidUntilTime>
+				<MonitoredVehicleJourney>
+					<LineRef>ch:1:slnid:182312</LineRef>
+					<!-- slnid -->
+					<DirectionRef>ch:1:Direction:H</DirectionRef>
+					<!-- you didn't have this in the JSON, but I think it would be good, if we know this -->
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2023-11-16</DataFrameRef>
+						<!-- operating day -->
+						<DatedVehicleJourneyRef>ch:1:sjyid:11:11293191923919</DatedVehicleJourneyRef>
+						<!-- not yet available -->
+					</FramedVehicleJourneyRef>
+					<OperatorRef>11</OperatorRef>
+					<OriginRef>8504300</OriginRef>
+					<OriginName>Biel/Bienne</OriginName>
+					<DestinationRef>8504221</DestinationRef>
+					<DestinationName>Neuchâtel</DestinationName>
+					<Monitored>true</Monitored>
+					<InCongestion>false</InCongestion>
+					<TrainNumbers>
+						<TrainNumberRef>504</TrainNumberRef>
+					</TrainNumbers>
+					<OnwardCalls>
+						<OnwardCall>
+							<!-- we can do it for all stops in the train. It is OnwardCall, because it is in the future -->
+							<StopPointRef>8504300</StopPointRef>
+							<VisitNumber>1</VisitNumber>
+							<StopPointName>Biel/Bienne</StopPointName>
+							<ExpectedDepartureTime>2023-11-16T05:14:00Z</ExpectedDepartureTime>
+							<!-- Zulu time usually -->
+							<ExpectedDepartureOccupancy>
+								<FareClass>businessClass</FareClass>
+								<!-- or firstClass -->
+								<OccupancyLevel>fewSeatsAvailable</OccupancyLevel>
+								<OccupancyPercentage>65</OccupancyPercentage>
+							</ExpectedDepartureOccupancy>
+							<ExpectedDepartureOccupancy>
+								<FareClass>secondClass</FareClass>
+								<OccupancyLevel>manySeatsAvailable</OccupancyLevel>
+								<OccupancyPercentage>24</OccupancyPercentage>
+							</ExpectedDepartureOccupancy>
+						</OnwardCall>
+					</OnwardCalls>
+				</MonitoredVehicleJourney>
+			</VehicleActivity>
+		</VehicleMonitoringDelivery>
+	</ServiceDelivery>
+</Siri>
