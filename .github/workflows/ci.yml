@@ -35,6 +35,9 @@ jobs:
       - name: Validate SIRI XML examples
         run: ./.github/scripts/validate-examples.sh
 
+      - name: Generate documentation tables
+        run: ./docs/generate-tables.sh
+          
       - name: Commit changes
         uses: EndBug/add-and-commit@v9 # https://github.com/marketplace/actions/add-commit
         with:
