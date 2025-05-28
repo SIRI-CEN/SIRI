@@ -102,6 +102,7 @@ Rail transport, Roads and road transport
 		</xsd:appinfo>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_utility/siri_location.xsd"/>
 	<xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
 	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
 	<xsd:include schemaLocation="siri_operator_support.xsd"/>
@@ -192,6 +193,11 @@ Rail transport, Roads and road transport
 			<xsd:element ref="StopPointName" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OnwardLinkShape" type="LineShapeStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Plot of points from this stop to next Stop.  Detail level is 'full'. +SIRI v2.0 </xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
