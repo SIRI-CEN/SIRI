@@ -1,78 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_connectionMonitoring_service">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Contributor>Dipl.-Ing. Sven Juergens psitrans juergens@psitrans.de</Contributor>
-    <Contributor>Gustav Thiessen BLIC thi@BLIC.DE</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2004-09-10</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date><Modified>2007-04-17</Modified>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Contributor>Dipl.-Ing. Sven Juergens psitrans juergens@psitrans.de</Contributor>
+				<Contributor>Gustav Thiessen BLIC thi@BLIC.DE</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2004-09-10</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date><Modified>2007-04-17</Modified>
 					 Name Space changes 
 				</Date>
-    <Date><Modified>2008-11-17</Modified>
+				<Date><Modified>2008-11-17</Modified>
 				 Revise to support substitution groups 
 				</Date>
-    <Date><Modified>2012-03-23</Modified>
+				<Date><Modified>2012-03-23</Modified>
 					 (since SIRI 2.0)
 					  Add SuggestedWaitDecisionTime to MonitoredArrival
 				</Date>
-    <Date><Modified>2012-04-18</Modified>
+				<Date><Modified>2012-04-18</Modified>
 					 (since SIRI 2.0)
 					  Add ValidUntil Time to MonitoredFeederArrival
 					  
      	* [FR]    Add Extensions tag to ConnectionMonitoringSubscriptionRequest
 					[DE] Correct Capabilities matrix
 				</Date>
-    <Date><Modified>2013-01-24</Modified>
+				<Date><Modified>2013-01-24</Modified>
 				 WB: insert the AimedArrivalTime in MonitoredFeederArrival; insert the ArrivalPlatformName into MonitoredFeederArrival
 				</Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the Connection Monitoring Service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_connectionMonitoring_service.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-        <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the Connection Monitoring Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_connectionMonitoring_service.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -80,652 +81,652 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-CM XML schema. Service Interface for Real-time  Information. Connection Monitoring Service.</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-CM Connection Monitoring Service.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <!-- ==== Dependencies=========================================-->
- <xsd:include schemaLocation="siri_connectionTimetable_service.xsd"/>
- <xsd:group name="SiriConnectionServiceIndexGroup">
-  <xsd:annotation>
-   <xsd:documentation>Convenience artifact to pick out main elements of the Connection Services.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="SiriConnectionTimetableIndexGroup"/>
-   <xsd:group ref="SiriConnectionMonitoringIndexGroup"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SiriConnectionMonitoringIndexGroup">
-  <xsd:annotation>
-   <xsd:documentation>Convenience artifact to pick out main elements of the Connection Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="ConnectionMonitoringRequest"/>
-   <xsd:element ref="ConnectionMonitoringSubscriptionRequest"/>
-   <xsd:element ref="ConnectionMonitoringFeederDelivery"/>
-   <xsd:element ref="ConnectionMonitoringDistributorDelivery"/>
-   <xsd:sequence>
-    <xsd:element ref="ConnectionMonitoringCapabilitiesRequest"/>
-    <xsd:element ref="ConnectionMonitoringCapabilitiesResponse"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====REQUESTS ====================================================== -->
- <!-- ==== FS: Connection Monitoring Request ========================================= -->
- <xsd:element name="ConnectionMonitoringRequest" type="ConnectionMonitoringRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about changes to connections at a stop for Connection Monitoring service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionMonitoringRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Request Connection Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractFunctionalServiceRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="ConnectionMonitoringTopicGroup"/>
-     <xsd:group ref="ConnectionMonitoringRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-CM XML schema. Service Interface for Real-time  Information. Connection Monitoring Service.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-CM Connection Monitoring Service.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<!-- ==== Dependencies=========================================-->
+	<xsd:include schemaLocation="siri_connectionTimetable_service.xsd"/>
+	<xsd:group name="SiriConnectionServiceIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artifact to pick out main elements of the Connection Services.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="SiriConnectionTimetableIndexGroup"/>
+			<xsd:group ref="SiriConnectionMonitoringIndexGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SiriConnectionMonitoringIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artifact to pick out main elements of the Connection Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ConnectionMonitoringRequest"/>
+			<xsd:element ref="ConnectionMonitoringSubscriptionRequest"/>
+			<xsd:element ref="ConnectionMonitoringFeederDelivery"/>
+			<xsd:element ref="ConnectionMonitoringDistributorDelivery"/>
+			<xsd:sequence>
+				<xsd:element ref="ConnectionMonitoringCapabilitiesRequest"/>
+				<xsd:element ref="ConnectionMonitoringCapabilitiesResponse"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====REQUESTS ====================================================== -->
+	<!-- ==== FS: Connection Monitoring Request ========================================= -->
+	<xsd:element name="ConnectionMonitoringRequest" type="ConnectionMonitoringRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about changes to connections at a stop for Connection Monitoring service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionMonitoringRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Request Connection Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFunctionalServiceRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="ConnectionMonitoringTopicGroup"/>
+					<xsd:group ref="ConnectionMonitoringRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="ConnectionMonitoringTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="PreviewInterval" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Forward duration for which events should be included, that is, interval before predicted arrival at the stop for which to include events: only journeys which will arrive or depart within this time span will be returned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>CONNECTION LINK for which data is to be supplied.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:choice>
-    <xsd:element name="ConnectingTimeFilter" type="ConnectingTimeFilterStructure">
-     <xsd:annotation>
-      <xsd:documentation>Return only journeys for the specified time.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="ConnectingJourneyFilter" type="ConnectingJourneyFilterStructure" maxOccurs="unbounded">
-     <xsd:annotation>
-      <xsd:documentation>Return only the specified journeys.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="ConnectionMonitoringRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="IncludeTranslations" minOccurs="0"/>
-   <xsd:element name="ConnectionMonitoringDetailLevel" type="ConnectionMonitoringDetailEnumeration" default="normal" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="ConnectionMonitoringDetailEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Detail Levels for Connection Monitoring Request.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="minimum">
-    <xsd:annotation>
-     <xsd:documentation>Return only the minimum amount of optional data for each Stop Visit to provide a display, A time at stop, LINE name and destination name.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="basic">
-    <xsd:annotation>
-     <xsd:documentation>Return minimum and other available basic details for each Stop Visit. Do not include data on times at next stop or destination.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="normal">
-    <xsd:annotation>
-     <xsd:documentation>Return all basic data, and also origin VIA points and destination.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="full">
-    <xsd:annotation>
-     <xsd:documentation>Return all available data for each Stop Visit, including calls.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="ConnectingJourneyFilterStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for filter for connecting journeys.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyCodeType">
-    <xsd:annotation>
-     <xsd:documentation>A reference to a dated VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="VisitNumber" minOccurs="0"/>
-   <xsd:element name="TimetabledArrivalTime" type="xsd:dateTime">
-    <xsd:annotation>
-     <xsd:documentation>Timetabled arrival time at the connection point.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="ConnectingTimeFilterStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for time filter for connecting journeys.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="LineRef" type="LineRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Feeder LINE for which data is to be supplied.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DirectionRef" type="DirectionRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Feeder for which data is to be supplied.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="EarliestArrivalTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Earliest managed arrival time at the connection point.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="LatestArrivalTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Latest managedarrival time at the connection point.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ==== FS: Connection Monitoring Subscription Request =================================== -->
- <xsd:element name="ConnectionMonitoringSubscriptionRequest" type="ConnectionMonitoringSubscriptionRequestStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for a subscription to Connection Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionMonitoringSubscriptionRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Subscription Request for Connection Monitoring.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractSubscriptionStructure">
-    <xsd:sequence>
-     <xsd:element ref="ConnectionMonitoringRequest"/>
-     <xsd:group ref="ConnectionMonitoringSubscriptionPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="ConnectionMonitoringSubscriptionPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the subscription processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ChangeBeforeUpdates" type="PositiveDurationType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The amount of change to the arrival time that can happen before an update is sent (i.e. if ChangeBeforeUpdate is set to 2 minutes, the subscriber will not be told that a bus is 30 seconds delayed - an update will only be sent when the bus is at least 2 minutes delayed). Default is zero - all changes will be sent regardless.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====RESPONSES=========================================================== -->
- <!-- ==== Connection Monitoring Feeder Delivery=================================== -->
- <xsd:element name="ConnectionMonitoringFeederDelivery" type="ConnectionMonitoringFeederDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Feeder Delivery for Connection Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionMonitoringFeederDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for Connection Monitoring.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceDeliveryStructure">
-    <xsd:sequence>
-     <xsd:group ref="ConnectionMonitoringFeederPayloadGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ConnectionMonitoringTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PreviewInterval" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Forward duration for which events should be included, that is, interval before predicted arrival at the stop for which to include events: only journeys which will arrive or depart within this time span will be returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>CONNECTION LINK for which data is to be supplied.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="ConnectingTimeFilter" type="ConnectingTimeFilterStructure">
+					<xsd:annotation>
+						<xsd:documentation>Return only journeys for the specified time.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ConnectingJourneyFilter" type="ConnectingJourneyFilterStructure" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Return only the specified journeys.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ConnectionMonitoringRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="IncludeTranslations" minOccurs="0"/>
+			<xsd:element name="ConnectionMonitoringDetailLevel" type="ConnectionMonitoringDetailEnumeration" default="normal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Level of detail to include in response. Default is 'normal'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="ConnectionMonitoringDetailEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Detail Levels for Connection Monitoring Request.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="minimum">
+				<xsd:annotation>
+					<xsd:documentation>Return only the minimum amount of optional data for each Stop Visit to provide a display, A time at stop, LINE name and destination name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="basic">
+				<xsd:annotation>
+					<xsd:documentation>Return minimum and other available basic details for each Stop Visit. Do not include data on times at next stop or destination.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normal">
+				<xsd:annotation>
+					<xsd:documentation>Return all basic data, and also origin VIA points and destination.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>Return all available data for each Stop Visit, including calls.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="ConnectingJourneyFilterStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for filter for connecting journeys.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyCodeType">
+				<xsd:annotation>
+					<xsd:documentation>A reference to a dated VEHICLE JOURNEY.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="VisitNumber" minOccurs="0"/>
+			<xsd:element name="TimetabledArrivalTime" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Timetabled arrival time at the connection point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ConnectingTimeFilterStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for time filter for connecting journeys.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="LineRef" type="LineRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Feeder LINE for which data is to be supplied.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DirectionRef" type="DirectionRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Feeder for which data is to be supplied.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EarliestArrivalTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Earliest managed arrival time at the connection point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LatestArrivalTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Latest managedarrival time at the connection point.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ==== FS: Connection Monitoring Subscription Request =================================== -->
+	<xsd:element name="ConnectionMonitoringSubscriptionRequest" type="ConnectionMonitoringSubscriptionRequestStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for a subscription to Connection Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionMonitoringSubscriptionRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Subscription Request for Connection Monitoring.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractSubscriptionStructure">
+				<xsd:sequence>
+					<xsd:element ref="ConnectionMonitoringRequest"/>
+					<xsd:group ref="ConnectionMonitoringSubscriptionPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ConnectionMonitoringSubscriptionPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the subscription processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ChangeBeforeUpdates" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The amount of change to the arrival time that can happen before an update is sent (i.e. if ChangeBeforeUpdate is set to 2 minutes, the subscriber will not be told that a bus is 30 seconds delayed - an update will only be sent when the bus is at least 2 minutes delayed). Default is zero - all changes will be sent regardless.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====RESPONSES=========================================================== -->
+	<!-- ==== Connection Monitoring Feeder Delivery=================================== -->
+	<xsd:element name="ConnectionMonitoringFeederDelivery" type="ConnectionMonitoringFeederDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Feeder Delivery for Connection Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionMonitoringFeederDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Connection Monitoring.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceDeliveryStructure">
+				<xsd:sequence>
+					<xsd:group ref="ConnectionMonitoringFeederPayloadGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="ConnectionMonitoringFeederPayloadGroup">
-  <xsd:annotation>
-   <xsd:documentation>Feeder delivery payload content.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="MonitoredFeederArrival" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element ref="MonitoredFeederArrivalCancellation" minOccurs="0" maxOccurs="unbounded"/>
-  </xsd:sequence>
- </xsd:group>
- <!-- ================================================================== -->
- <xsd:element name="MonitoredFeederArrival" type="MonitoredFeederArrivalStructure" substitutionGroup="FeederItem">
-  <xsd:annotation>
-   <xsd:documentation>A feeder arrival at the connection point.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="MonitoredFeederArrivalStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Real time connection at a stop.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractFeederItemStructure">
-    <xsd:sequence>
-     <xsd:element name="ClearDownRef" type="ClearDownRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Direct Cleardown identifier of connection arrival Activity that is being deleted.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="FeederJourney" type="InterchangeJourneyStructure">
-      <xsd:annotation>
-       <xsd:documentation>Information about the feeder journey.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="VehicleAtStop" minOccurs="0"/>
-     <xsd:element name="NumberOfTransferPassengers" type="xsd:nonNegativeInteger" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Number of passengers who wish to transfer at the connection. If absent, not known.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="AimedArrivalTime" minOccurs="0"/>
-     <xsd:element name="ExpectedArrivalTime" type="xsd:dateTime" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Predicted arrival time at the connection zone.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
-     <xsd:element name="SuggestedWaitDecisionTime" type="xsd:dateTime" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Latest time by which the feeder needs informationabout the connection from the distributor as to whether it will wait and for how long. (since SIRI 2.0)</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ================================================================== -->
- <xsd:element name="MonitoredFeederArrivalCancellation" type="MonitoredFeederArrivalCancellationStructure" substitutionGroup="FeederItem">
-  <xsd:annotation>
-   <xsd:documentation>Cancellation of a feeder arrival at a connection point.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="MonitoredFeederArrivalCancellationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Deletion of a feeder connection.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractFeederItemStructure">
-    <xsd:sequence>
-     <xsd:element name="LineRef" type="LineRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a LINE.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="DirectionRef" type="DirectionRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a DIRECTION, typically outward or return.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="VehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a Feeder VEHICLE JOURNEY.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:group ref="JourneyPatternInfoGroup" minOccurs="0"/>
-     <xsd:element name="Reason" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Reason for cancellation. (Unbounded since SIRI 2.0)</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ==== Connection Monitoring Distributor Delivery=================================== -->
- <xsd:element name="ConnectionMonitoringDistributorDelivery" type="ConnectionMonitoringDistributorDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Distributor Delivery for Connection Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionMonitoringDistributorDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Distributor Delivery for Connection Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceDeliveryStructure">
-    <xsd:sequence>
-     <xsd:group ref="ConnectionMonitoringDistributorPayloadGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ConnectionMonitoringFeederPayloadGroup">
+		<xsd:annotation>
+			<xsd:documentation>Feeder delivery payload content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="MonitoredFeederArrival" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="MonitoredFeederArrivalCancellation" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ================================================================== -->
+	<xsd:element name="MonitoredFeederArrival" type="MonitoredFeederArrivalStructure" substitutionGroup="FeederItem">
+		<xsd:annotation>
+			<xsd:documentation>A feeder arrival at the connection point.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="MonitoredFeederArrivalStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Real time connection at a stop.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFeederItemStructure">
+				<xsd:sequence>
+					<xsd:element name="ClearDownRef" type="ClearDownRefStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Direct Cleardown identifier of connection arrival Activity that is being deleted.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="FeederJourney" type="InterchangeJourneyStructure">
+						<xsd:annotation>
+							<xsd:documentation>Information about the feeder journey.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="VehicleAtStop" minOccurs="0"/>
+					<xsd:element name="NumberOfTransferPassengers" type="xsd:nonNegativeInteger" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Number of passengers who wish to transfer at the connection. If absent, not known.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="AimedArrivalTime" minOccurs="0"/>
+					<xsd:element name="ExpectedArrivalTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Predicted arrival time at the connection zone.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="ArrivalPlatformName" minOccurs="0"/>
+					<xsd:element name="SuggestedWaitDecisionTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Latest time by which the feeder needs informationabout the connection from the distributor as to whether it will wait and for how long. (since SIRI 2.0)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ================================================================== -->
+	<xsd:element name="MonitoredFeederArrivalCancellation" type="MonitoredFeederArrivalCancellationStructure" substitutionGroup="FeederItem">
+		<xsd:annotation>
+			<xsd:documentation>Cancellation of a feeder arrival at a connection point.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="MonitoredFeederArrivalCancellationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Deletion of a feeder connection.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFeederItemStructure">
+				<xsd:sequence>
+					<xsd:element name="LineRef" type="LineRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a LINE.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="DirectionRef" type="DirectionRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a DIRECTION, typically outward or return.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="VehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a Feeder VEHICLE JOURNEY.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:group ref="JourneyPatternInfoGroup" minOccurs="0"/>
+					<xsd:element name="Reason" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Reason for cancellation. (Unbounded since SIRI 2.0)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ==== Connection Monitoring Distributor Delivery=================================== -->
+	<xsd:element name="ConnectionMonitoringDistributorDelivery" type="ConnectionMonitoringDistributorDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Distributor Delivery for Connection Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionMonitoringDistributorDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Distributor Delivery for Connection Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceDeliveryStructure">
+				<xsd:sequence>
+					<xsd:group ref="ConnectionMonitoringDistributorPayloadGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="ConnectionMonitoringDistributorPayloadGroup">
-  <xsd:annotation>
-   <xsd:documentation>Distributor (fetcher) payload content.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="WaitProlongedDeparture" type="WaitProlongedDepartureStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>An action to delay the Distributor (fetcher) until a specified time.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StoppingPositionChangedDeparture" type="StoppingPositionChangedDepartureStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>A Change to a stop position.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DistributorDepartureCancellation" type="DistributorDepartureCancellationStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Deletion of previous connection.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="AbstractDistributorItemStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for an SERVICE JOURNEY INTERCHANGE Activity.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractItemStructure">
-    <xsd:sequence>
-     <xsd:group ref="InterchangeDistributorIdentityGroup">
-      <xsd:annotation>
-       <xsd:documentation>Elements identifying of a Distributor SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:group>
-     <xsd:element name="DistributorJourney" type="InterchangeJourneyStructure">
-      <xsd:annotation>
-       <xsd:documentation>Information about the connecting Distributor (fetcher) VEHICLE JOURNEY.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="FeederVehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a feeder VEHICLE JOURNEY or journeys for which the Distributor (fetcher) will wait .</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="InterchangeDistributorIdentityGroup">
-  <xsd:annotation>
-   <xsd:documentation>Identifiers of Interchange Distributor Stop.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="InterchangeRef" type="InterchangeRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to the SERVICE JOURNEY INTERCHANGE between two journeys for which data is being returned.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Reference to the CONNECTION link or ACCESS ZONE for which data is to be returned and at which SERVICE JOURNEY INTERCHANGE takes place. A reference associated with known feeder arrival and distributor departure STOP POINTs.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a STOP POINT within CONNECTION link from which distributor leaves.</xsd:documentation>
-     <xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Order of visit to a stop within JOURNEY PATTERN of distributor VEHICLE JOURNEY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DistributorOrder" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>For implementations for which Order is not used for VisitNumber, (i.e. if VisitNumberIsOrder is false) then Order can be used to associate the Order as well if useful for translation.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="DistributorDepartureCancellationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Cancellation of a Distributor VEHICLE JOURNEY from a connection.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDistributorItemStructure">
-    <xsd:sequence>
-     <xsd:element name="Reason" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Reason for failure of connection.  (Unbounded since SIRI 2.0)</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="WaitProlongedDepartureStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Distributor prolonged wait action.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDistributorItemStructure">
-    <xsd:sequence minOccurs="0">
-     <xsd:element name="ExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Estimated departure time from the connection.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="StoppingPositionChangedDepartureStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Change to a Distributor stop position.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDistributorItemStructure">
-    <xsd:sequence>
-     <xsd:element name="ChangeNote" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Description of the revised stopping position of the Distributor (fetcher) in the connection zone.  (Unbounded since SIRI 2.0)</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="NewLocation" type="LocationStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>New location from which Distributor will leave.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ====WSDL=================================================================== -->
- <xsd:complexType name="ConnectionMonitoringDeliveriesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Deliveries for Connection Monitoring Service. Used in WSDL.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice>
-    <xsd:element ref="ConnectionMonitoringFeederDelivery" maxOccurs="unbounded">
-     <xsd:annotation>
-      <xsd:documentation>Delivery for Connection Protection Feeder Service.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element ref="ConnectionMonitoringDistributorDelivery" maxOccurs="unbounded">
-     <xsd:annotation>
-      <xsd:documentation>Delivery for Connection Protection Distributor i.e. Fetcher Service.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ==== CS: Capability Request=================================================================== -->
- <xsd:element name="ConnectionMonitoringCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about Connection Monitoring Service Capabilities. Answered with a ConnectionMontoringCapabilitiesResponse.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ==== CS: Capability Response=================================================================== -->
- <xsd:element name="ConnectionMonitoringCapabilitiesResponse" type="ConnectionMonitoringCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
-  <xsd:annotation>
-   <xsd:documentation>Capabilities for Connection Monitoring Service. Answers a ConnectionMontoringCapabilitiesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionMonitoringCapabilitiesResponseStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for Connection Monitoring Capability.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
-    <xsd:sequence>
-     <xsd:element ref="ConnectionMonitoringServiceCapabilities" minOccurs="0"/>
-     <xsd:element ref="ConnectionMonitoringPermissions" minOccurs="0"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ConnectionMonitoringDistributorPayloadGroup">
+		<xsd:annotation>
+			<xsd:documentation>Distributor (fetcher) payload content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="WaitProlongedDeparture" type="WaitProlongedDepartureStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An action to delay the Distributor (fetcher) until a specified time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StoppingPositionChangedDeparture" type="StoppingPositionChangedDepartureStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A Change to a stop position.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DistributorDepartureCancellation" type="DistributorDepartureCancellationStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Deletion of previous connection.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="AbstractDistributorItemStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for an SERVICE JOURNEY INTERCHANGE Activity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractItemStructure">
+				<xsd:sequence>
+					<xsd:group ref="InterchangeDistributorIdentityGroup">
+						<xsd:annotation>
+							<xsd:documentation>Elements identifying of a Distributor SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:element name="DistributorJourney" type="InterchangeJourneyStructure">
+						<xsd:annotation>
+							<xsd:documentation>Information about the connecting Distributor (fetcher) VEHICLE JOURNEY.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="FeederVehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a feeder VEHICLE JOURNEY or journeys for which the Distributor (fetcher) will wait .</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="InterchangeDistributorIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Identifiers of Interchange Distributor Stop.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="InterchangeRef" type="InterchangeRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the SERVICE JOURNEY INTERCHANGE between two journeys for which data is being returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the CONNECTION link or ACCESS ZONE for which data is to be returned and at which SERVICE JOURNEY INTERCHANGE takes place. A reference associated with known feeder arrival and distributor departure STOP POINTs.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopPointRef" type="StopPointRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a STOP POINT within CONNECTION link from which distributor leaves.</xsd:documentation>
+					<xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DistributorVisitNumber" type="VisitNumberType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Order of visit to a stop within JOURNEY PATTERN of distributor VEHICLE JOURNEY.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DistributorOrder" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>For implementations for which Order is not used for VisitNumber, (i.e. if VisitNumberIsOrder is false) then Order can be used to associate the Order as well if useful for translation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="DistributorDepartureCancellationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Cancellation of a Distributor VEHICLE JOURNEY from a connection.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDistributorItemStructure">
+				<xsd:sequence>
+					<xsd:element name="Reason" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Reason for failure of connection.  (Unbounded since SIRI 2.0)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="WaitProlongedDepartureStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Distributor prolonged wait action.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDistributorItemStructure">
+				<xsd:sequence minOccurs="0">
+					<xsd:element name="ExpectedDepartureTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Estimated departure time from the connection.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StoppingPositionChangedDepartureStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Change to a Distributor stop position.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDistributorItemStructure">
+				<xsd:sequence>
+					<xsd:element name="ChangeNote" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Description of the revised stopping position of the Distributor (fetcher) in the connection zone.  (Unbounded since SIRI 2.0)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="NewLocation" type="LocationStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>New location from which Distributor will leave.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ====WSDL=================================================================== -->
+	<xsd:complexType name="ConnectionMonitoringDeliveriesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Deliveries for Connection Monitoring Service. Used in WSDL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="ConnectionMonitoringFeederDelivery" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Delivery for Connection Protection Feeder Service.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="ConnectionMonitoringDistributorDelivery" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Delivery for Connection Protection Distributor i.e. Fetcher Service.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==== CS: Capability Request=================================================================== -->
+	<xsd:element name="ConnectionMonitoringCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Connection Monitoring Service Capabilities. Answered with a ConnectionMontoringCapabilitiesResponse.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ==== CS: Capability Response=================================================================== -->
+	<xsd:element name="ConnectionMonitoringCapabilitiesResponse" type="ConnectionMonitoringCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities for Connection Monitoring Service. Answers a ConnectionMontoringCapabilitiesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionMonitoringCapabilitiesResponseStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Connection Monitoring Capability.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
+				<xsd:sequence>
+					<xsd:element ref="ConnectionMonitoringServiceCapabilities" minOccurs="0"/>
+					<xsd:element ref="ConnectionMonitoringPermissions" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>
 Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="ConnectionMonitoringCapabilityRequestPolicyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Connection Monitoring Capability Request Policy.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="CapabilityRequestPolicyStructure">
-    <xsd:sequence>
-     <xsd:element name="ForeignJourneysOnly" type="xsd:boolean" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Whether results returns foreign journeys only.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="ConnectionMonitoringServiceCapabilities" type="ConnectionMonitoringServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation> Capabilities of Connection Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionMonitoringServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Connection Monitoring Capabilities.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractCapabilitiesStructure">
-    <xsd:sequence>
-     <xsd:element name="TopicFiltering" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Filtering Capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Default preview horizon used.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element ref="FilterByConnectionLinkRef" minOccurs="0"/>
-        <xsd:element name="FilterByJourney" type="xsd:boolean" fixed="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by journey.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="FilterByTime" type="xsd:boolean" default="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by time  Filter of Connection. Default is ' true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="RequestPolicy" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Request Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="CapabilityRequestPolicyStructure">
-         <xsd:sequence>
-          <xsd:element name="ForeignJourneysOnly" type="xsd:boolean" default="false" minOccurs="0">
-           <xsd:annotation>
-            <xsd:documentation>Whether only foreign journeys are included.</xsd:documentation>
-           </xsd:annotation>
-          </xsd:element>
-         </xsd:sequence>
-        </xsd:extension>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="AccessControl" type="ConnectionCapabilityAccessControlStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Access control capabilities.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ========Permissions ================================================== -->
- <xsd:element name="ConnectionMonitoringPermissions">
-  <xsd:annotation>
-   <xsd:documentation>Participants permissions to use the service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:sequence>
-    <xsd:element name="ConnectionMonitoringPermission" type="ConnectionServicePermissionStructure" minOccurs="0" maxOccurs="unbounded"/>
-   </xsd:sequence>
-  </xsd:complexType>
- </xsd:element>
- <!-- ======================================================================= -->
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ConnectionMonitoringCapabilityRequestPolicyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Connection Monitoring Capability Request Policy.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="CapabilityRequestPolicyStructure">
+				<xsd:sequence>
+					<xsd:element name="ForeignJourneysOnly" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether results returns foreign journeys only.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="ConnectionMonitoringServiceCapabilities" type="ConnectionMonitoringServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation> Capabilities of Connection Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionMonitoringServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Connection Monitoring Capabilities.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractCapabilitiesStructure">
+				<xsd:sequence>
+					<xsd:element name="TopicFiltering" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Filtering Capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Default preview horizon used.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByConnectionLinkRef" minOccurs="0"/>
+								<xsd:element name="FilterByJourney" type="xsd:boolean" fixed="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by journey.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="FilterByTime" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by time  Filter of Connection. Default is ' true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="RequestPolicy" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Request Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="CapabilityRequestPolicyStructure">
+									<xsd:sequence>
+										<xsd:element name="ForeignJourneysOnly" type="xsd:boolean" default="false" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>Whether only foreign journeys are included.</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="AccessControl" type="ConnectionCapabilityAccessControlStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Access control capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ========Permissions ================================================== -->
+	<xsd:element name="ConnectionMonitoringPermissions">
+		<xsd:annotation>
+			<xsd:documentation>Participants permissions to use the service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ConnectionMonitoringPermission" type="ConnectionServicePermissionStructure" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ======================================================================= -->
 </xsd:schema>

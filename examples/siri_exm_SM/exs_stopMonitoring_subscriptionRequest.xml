@@ -7,59 +7,59 @@
 
 (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <SubscriptionRequest>
-  <RequestTimestamp>2004-12-17T09:30:47-05:00</RequestTimestamp>
-  <RequestorRef>NADER</RequestorRef>
-  <SubscriptionContext>
-   <HeartbeatInterval>PT5M</HeartbeatInterval>
-  </SubscriptionContext>
-  <StopMonitoringSubscriptionRequest>
-   <SubscriberRef>NADER</SubscriberRef>
-   <SubscriptionIdentifier>000234</SubscriptionIdentifier>
-   <InitialTerminationTime>2004-12-17T09:30:47-05:00</InitialTerminationTime>
-   <StopMonitoringRequest version="2.0">
-    <RequestTimestamp>2004-12-17T15:30:47-05:00</RequestTimestamp>
-    <PreviewInterval>PT30M</PreviewInterval>
-    <MonitoringRef>POIT5678</MonitoringRef>
-    <OperatorRef>OP22</OperatorRef>
-    <LineRef>LINE23</LineRef>
-    <DirectionRef>DIR03</DirectionRef>
-    <DestinationRef>PLACE457</DestinationRef>
-    <StopVisitTypes>all</StopVisitTypes>
-    <MaximumStopVisits>2</MaximumStopVisits>
-    <MinimumStopVisitsPerLine>2</MinimumStopVisitsPerLine>
-    <MaximumTextLength>20</MaximumTextLength>
-    <StopMonitoringDetailLevel>calls</StopMonitoringDetailLevel>
-   </StopMonitoringRequest>
-   <IncrementalUpdates>true</IncrementalUpdates>
-   <ChangeBeforeUpdates>PT2M</ChangeBeforeUpdates>
-  </StopMonitoringSubscriptionRequest>
-  <!-- Next 10 services from stop POIT5678 to destination PLACE457 in the next 30 mins -->
-  <StopMonitoringSubscriptionRequest>
-   <SubscriptionIdentifier>000234</SubscriptionIdentifier>
-   <InitialTerminationTime>2004-12-17T15:30:47-05:01</InitialTerminationTime>
-   <StopMonitoringRequest version="2.0">
-    <RequestTimestamp>2004-12-17T09:30:47-05:05</RequestTimestamp>
-    <PreviewInterval>PT30M</PreviewInterval>
-    <MonitoringRef>POIT5678</MonitoringRef>
-    <MaximumStopVisits>10</MaximumStopVisits>
-   </StopMonitoringRequest>
-   <IncrementalUpdates>true</IncrementalUpdates>
-   <ChangeBeforeUpdates>PT2M</ChangeBeforeUpdates>
-  </StopMonitoringSubscriptionRequest>
-  <!-- All Line23 services from stop POIT5678 to destination PLACE457 in the next 30 mins-->
-  <StopMonitoringSubscriptionRequest>
-   <SubscriptionIdentifier>000235</SubscriptionIdentifier>
-   <InitialTerminationTime>2004-12-17T15:30:47-05:01</InitialTerminationTime>
-   <StopMonitoringRequest version="2.0">
-    <RequestTimestamp>2004-12-17T09:30:47-05:06</RequestTimestamp>
-    <PreviewInterval>PT30M</PreviewInterval>
-    <MonitoringRef>POIT5678</MonitoringRef>
-    <LineRef>LINE23</LineRef>
-    <DestinationRef>PLACE457</DestinationRef>
-   </StopMonitoringRequest>
-   <IncrementalUpdates>true</IncrementalUpdates>
-   <ChangeBeforeUpdates>PT2M</ChangeBeforeUpdates>
-  </StopMonitoringSubscriptionRequest>
- </SubscriptionRequest>
+	<SubscriptionRequest>
+		<RequestTimestamp>2004-12-17T09:30:47-05:00</RequestTimestamp>
+		<RequestorRef>NADER</RequestorRef>
+		<SubscriptionContext>
+			<HeartbeatInterval>PT5M</HeartbeatInterval>
+		</SubscriptionContext>
+		<StopMonitoringSubscriptionRequest>
+			<SubscriberRef>NADER</SubscriberRef>
+			<SubscriptionIdentifier>000234</SubscriptionIdentifier>
+			<InitialTerminationTime>2004-12-17T09:30:47-05:00</InitialTerminationTime>
+			<StopMonitoringRequest version="2.0">
+				<RequestTimestamp>2004-12-17T15:30:47-05:00</RequestTimestamp>
+				<PreviewInterval>PT30M</PreviewInterval>
+				<MonitoringRef>POIT5678</MonitoringRef>
+				<OperatorRef>OP22</OperatorRef>
+				<LineRef>LINE23</LineRef>
+				<DirectionRef>DIR03</DirectionRef>
+				<DestinationRef>PLACE457</DestinationRef>
+				<StopVisitTypes>all</StopVisitTypes>
+				<MaximumStopVisits>2</MaximumStopVisits>
+				<MinimumStopVisitsPerLine>2</MinimumStopVisitsPerLine>
+				<MaximumTextLength>20</MaximumTextLength>
+				<StopMonitoringDetailLevel>calls</StopMonitoringDetailLevel>
+			</StopMonitoringRequest>
+			<IncrementalUpdates>true</IncrementalUpdates>
+			<ChangeBeforeUpdates>PT2M</ChangeBeforeUpdates>
+		</StopMonitoringSubscriptionRequest>
+		<!-- Next 10 services from stop POIT5678 to destination PLACE457 in the next 30 mins -->
+		<StopMonitoringSubscriptionRequest>
+			<SubscriptionIdentifier>000234</SubscriptionIdentifier>
+			<InitialTerminationTime>2004-12-17T15:30:47-05:01</InitialTerminationTime>
+			<StopMonitoringRequest version="2.0">
+				<RequestTimestamp>2004-12-17T09:30:47-05:05</RequestTimestamp>
+				<PreviewInterval>PT30M</PreviewInterval>
+				<MonitoringRef>POIT5678</MonitoringRef>
+				<MaximumStopVisits>10</MaximumStopVisits>
+			</StopMonitoringRequest>
+			<IncrementalUpdates>true</IncrementalUpdates>
+			<ChangeBeforeUpdates>PT2M</ChangeBeforeUpdates>
+		</StopMonitoringSubscriptionRequest>
+		<!-- All Line23 services from stop POIT5678 to destination PLACE457 in the next 30 mins-->
+		<StopMonitoringSubscriptionRequest>
+			<SubscriptionIdentifier>000235</SubscriptionIdentifier>
+			<InitialTerminationTime>2004-12-17T15:30:47-05:01</InitialTerminationTime>
+			<StopMonitoringRequest version="2.0">
+				<RequestTimestamp>2004-12-17T09:30:47-05:06</RequestTimestamp>
+				<PreviewInterval>PT30M</PreviewInterval>
+				<MonitoringRef>POIT5678</MonitoringRef>
+				<LineRef>LINE23</LineRef>
+				<DestinationRef>PLACE457</DestinationRef>
+			</StopMonitoringRequest>
+			<IncrementalUpdates>true</IncrementalUpdates>
+			<ChangeBeforeUpdates>PT2M</ChangeBeforeUpdates>
+		</StopMonitoringSubscriptionRequest>
+	</SubscriptionRequest>
 </Siri>

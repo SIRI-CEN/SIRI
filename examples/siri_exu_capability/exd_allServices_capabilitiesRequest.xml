@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <CapabilitiesRequest version="2.0">
-  <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  <RequestorRef>12345</RequestorRef>
-  <ProductionTimetableCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </ProductionTimetableCapabilitiesRequest>
-  <EstimatedTimetableCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </EstimatedTimetableCapabilitiesRequest>
-  <StopTimetableCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </StopTimetableCapabilitiesRequest>
-  <StopMonitoringCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </StopMonitoringCapabilitiesRequest>
-  <VehicleMonitoringCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </VehicleMonitoringCapabilitiesRequest>
-  <ConnectionTimetableCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </ConnectionTimetableCapabilitiesRequest>
-  <ConnectionMonitoringCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </ConnectionMonitoringCapabilitiesRequest>
-  <GeneralMessageCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </GeneralMessageCapabilitiesRequest>
-  <FacilityMonitoringCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </FacilityMonitoringCapabilitiesRequest>
-  <SituationExchangeCapabilitiesRequest version="2.0">
-   <RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
-  </SituationExchangeCapabilitiesRequest>
- </CapabilitiesRequest>
+	<CapabilitiesRequest version="2.0">
+		<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		<RequestorRef>12345</RequestorRef>
+		<ProductionTimetableCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</ProductionTimetableCapabilitiesRequest>
+		<EstimatedTimetableCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</EstimatedTimetableCapabilitiesRequest>
+		<StopTimetableCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</StopTimetableCapabilitiesRequest>
+		<StopMonitoringCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</StopMonitoringCapabilitiesRequest>
+		<VehicleMonitoringCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</VehicleMonitoringCapabilitiesRequest>
+		<ConnectionTimetableCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</ConnectionTimetableCapabilitiesRequest>
+		<ConnectionMonitoringCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</ConnectionMonitoringCapabilitiesRequest>
+		<GeneralMessageCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</GeneralMessageCapabilitiesRequest>
+		<FacilityMonitoringCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</FacilityMonitoringCapabilitiesRequest>
+		<SituationExchangeCapabilitiesRequest version="2.0">
+			<RequestTimestamp>2001-12-17T09:30:47.0Z</RequestTimestamp>
+		</SituationExchangeCapabilitiesRequest>
+	</CapabilitiesRequest>
 </Siri>
