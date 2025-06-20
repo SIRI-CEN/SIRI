@@ -31,7 +31,7 @@
 				</Date>
 				<Date>
 					<Modified>2012-03-23</Modified>
-					<!-- +SIRI v2.0: remove unnecessary dependencies -->
+					<!-- (since SIRI 2.0): remove unnecessary dependencies -->
 				</Date>
 				<Description>
 					<p>SIRI is a European CEN standard for the exchange of real-time information.
@@ -81,11 +81,10 @@ Rail transport, Roads and road transport
 	<xsd:include schemaLocation="siri_journey.xsd"/>
 	<xsd:include schemaLocation="siri_journey_support.xsd"/>
 	<!-- ======================================================================= -->
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_stop.xsd"/>
-	<!-- ======================================================================= -->
-	<!--Needed to work around import limitation in jaxb - all namespaces acsb needs to be after ifopt. -->
-	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
+	<!-- Global import of all IFOPT namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
+	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
 	<!-- ======================================================================= -->
@@ -406,6 +405,11 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
+			<xsd:element name="Location" type="LocationStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Coordinates of the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:group ref="ServiceInfoGroup"/>
 		</xsd:sequence>
 	</xsd:complexType>
@@ -724,7 +728,7 @@ Rail transport, Roads and road transport
 		<xsd:sequence>
 			<xsd:element ref="FormationCondition" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. +SIRI v2.1</xsd:documentation>
+					<xsd:documentation>Information about a change of the formation (e.g. TRAIN composition) or changes of vehicles within the formation. (since SIRI 2.1)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="FacilityConditionElement" minOccurs="0" maxOccurs="unbounded">
@@ -751,7 +755,7 @@ Note that if the ControlAction is the master ControlAction of a GroupOfControlAc
 	<!-- ===Vehicle FACILITY====================================== -->
 	<xsd:complexType name="TypeOfVehicleFuelStructure">
 		<xsd:annotation>
-			<xsd:documentation>Classification of vehicle energy type. See Transmodel TypeOfFuel. +SIRI v2.1</xsd:documentation>
+			<xsd:documentation>Classification of vehicle energy type. See Transmodel TypeOfFuel. (since SIRI 2.1)</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="TypeOfFuel" type="TypeOfFuelEnumeration">

@@ -1,5 +1,5 @@
 Server Interface for Real-time Information
-============================================
+==========================================
 
 v2.0 As CEN draft European Standard
 	prCEN/EN EN 00278181

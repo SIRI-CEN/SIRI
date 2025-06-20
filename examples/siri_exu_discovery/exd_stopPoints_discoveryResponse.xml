@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <StopPointsDelivery version="2.0">
-  <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-  <Status>true</Status>
-  <AnnotatedStopPointRef>
-   <StopPointRef>HLTS0001</StopPointRef>
-   <Monitored>true</Monitored>
-   <StopName xml:lang="EN">Stop 101</StopName>
-   <Features>
-    <ServiceFeature>
-     <ServiceFeatureCode>S123</ServiceFeatureCode>
-     <Name xml:lang="EN">Shelter</Name>
-     <Icon>http://www.mybus.org/shelter.jpg</Icon>
-    </ServiceFeature>
-   </Features>
-   <Lines>
-    <LineRef>A23</LineRef>
-   </Lines>
-   <Location>
-    <Longitude>0.1</Longitude>
-    <Latitude>53</Latitude>
-   </Location>
-  </AnnotatedStopPointRef>
-  <AnnotatedStopPointRef>
-   <StopPointRef>HLTS0002</StopPointRef>
-   <Monitored>true</Monitored>
-   <StopName xml:lang="EN">Stop 102</StopName>
-   <Features>
-    <ServiceFeature>
-     <ServiceFeatureCode>S123</ServiceFeatureCode>
-     <Name xml:lang="EN">Shelter</Name>
-     <Icon>http://www.mybus.org/shelter.jpg</Icon>
-    </ServiceFeature>
-   </Features>
-   <Lines>
-    <LineRef>A23</LineRef>
-    <LineRef>A24</LineRef>
-   </Lines>
-   <Location>
-    <Longitude>0.12</Longitude>
-    <Latitude>53.1</Latitude>
-   </Location>
-  </AnnotatedStopPointRef>
- </StopPointsDelivery>
+	<StopPointsDelivery version="2.0">
+		<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+		<Status>true</Status>
+		<AnnotatedStopPointRef>
+			<StopPointRef>HLTS0001</StopPointRef>
+			<Monitored>true</Monitored>
+			<StopName xml:lang="EN">Stop 101</StopName>
+			<Features>
+				<ServiceFeature>
+					<ServiceFeatureCode>S123</ServiceFeatureCode>
+					<Name xml:lang="EN">Shelter</Name>
+					<Icon>http://www.mybus.org/shelter.jpg</Icon>
+				</ServiceFeature>
+			</Features>
+			<Lines>
+				<LineRef>A23</LineRef>
+			</Lines>
+			<Location>
+				<Longitude>0.1</Longitude>
+				<Latitude>53</Latitude>
+			</Location>
+		</AnnotatedStopPointRef>
+		<AnnotatedStopPointRef>
+			<StopPointRef>HLTS0002</StopPointRef>
+			<Monitored>true</Monitored>
+			<StopName xml:lang="EN">Stop 102</StopName>
+			<Features>
+				<ServiceFeature>
+					<ServiceFeatureCode>S123</ServiceFeatureCode>
+					<Name xml:lang="EN">Shelter</Name>
+					<Icon>http://www.mybus.org/shelter.jpg</Icon>
+				</ServiceFeature>
+			</Features>
+			<Lines>
+				<LineRef>A23</LineRef>
+				<LineRef>A24</LineRef>
+			</Lines>
+			<Location>
+				<Longitude>0.12</Longitude>
+				<Latitude>53.1</Latitude>
+			</Location>
+		</AnnotatedStopPointRef>
+	</StopPointsDelivery>
 </Siri>

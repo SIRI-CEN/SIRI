@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======HEADER================================================== -->
-  <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
-  <ProducerRef>KUBRICK</ProducerRef>
-  <Status>true</Status>
-  <MoreData>false</MoreData>
-  <!--=======PAYLOAD============================================== -->
-  <EstimatedTimetableDelivery version="2.0">
-   <ResponseTimestamp>2001-12-17T09:30:47-05:00</ResponseTimestamp>
-   <SubscriberRef>NADER</SubscriberRef>
-   <SubscriptionRef>0004</SubscriptionRef>
-   <Status>true</Status>
-   <ValidUntil>2001-12-17T19:30:47-05:00</ValidUntil>
-   <ShortestPossibleCycle>P1Y2M3DT10H30M</ShortestPossibleCycle>
-   <EstimatedJourneyVersionFrame>
-    <RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
-    <VersionRef>5645</VersionRef>
-    <!--==journey 1========================== -->
-    <EstimatedVehicleJourney>
-     <LineRef>LZ123</LineRef>
-     <DirectionRef>INBOUND</DirectionRef>
-     <DatedVehicleJourneyRef>00008</DatedVehicleJourneyRef>
-     <Cancellation>false</Cancellation>
-     <PublishedLineName xml:lang="EN">124</PublishedLineName>
-     <OperatorRef>SMOOTH</OperatorRef>
-     <ProductCategoryRef>Cat274</ProductCategoryRef>
-     <ServiceFeatureRef>CyclesPermitted</ServiceFeatureRef>
-     <VehicleFeatureRef>DisabledAccess</VehicleFeatureRef>
-     <VehicleJourneyName xml:lang="EN">Shoppers Special</VehicleJourneyName>
-     <JourneyNote>Not o bank holidays</JourneyNote>
-     <Monitored>true</Monitored>
-     <PredictionInaccurate>false</PredictionInaccurate>
-     <Occupancy>full</Occupancy>
-     <EstimatedCalls>
-      <!-- CALL 1-->
-      <EstimatedCall>
-       <StopPointRef>00001</StopPointRef>
-       <ExtraCall>false</ExtraCall>
-       <PredictionInaccurate>false</PredictionInaccurate>
-       <Occupancy>seatsAvailable</Occupancy>
-       <BoardingStretch>false</BoardingStretch>
-       <RequestStop>false</RequestStop>
-       <CallNote>Starts here</CallNote>
-       <AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
-       <ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
-       <AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
-       <DeparturePlatformName xml:lang="EN">1</DeparturePlatformName>
-      </EstimatedCall>
-      <!-- CALL 2-->
-      <EstimatedCall>
-       <StopPointRef>00002</StopPointRef>
-       <ExtraCall>false</ExtraCall>
-       <PredictionInaccurate>false</PredictionInaccurate>
-       <Occupancy>seatsAvailable</Occupancy>
-       <RequestStop>true</RequestStop>
-       <AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
-       <ExpectedArrivalTime>2001-12-17T09:30:47-05:00</ExpectedArrivalTime>
-       <ArrivalPlatformName xml:lang="EN">4</ArrivalPlatformName>
-       <AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
-       <ExpectedDepartureTime>2001-12-17T09:30:47-05:00</ExpectedDepartureTime>
-       <DeparturePlatformName xml:lang="EN">3</DeparturePlatformName>
-      </EstimatedCall>
-      <!-- CALL 3 -->
-      <EstimatedCall>
-       <StopPointRef>00003</StopPointRef>
-       <PredictionInaccurate>true</PredictionInaccurate>
-       <Occupancy>full</Occupancy>
-       <AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
-       <ExpectedArrivalTime>2001-12-17T09:30:47-05:00</ExpectedArrivalTime>
-       <ArrivalPlatformName xml:lang="EN">5</ArrivalPlatformName>
-       <AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
-       <ExpectedDepartureTime>2001-12-17T09:30:47-05:00</ExpectedDepartureTime>
-       <DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
-      </EstimatedCall>
-     </EstimatedCalls>
-     <IsCompleteStopSequence>false</IsCompleteStopSequence>
-    </EstimatedVehicleJourney>
-    <!--==journey 2========================== -->
-    <EstimatedVehicleJourney>
-     <LineRef>LZ123</LineRef>
-     <DirectionRef>INBOUND</DirectionRef>
-     <DatedVehicleJourneyRef>00009</DatedVehicleJourneyRef>
-     <Cancellation>true</Cancellation>
-    </EstimatedVehicleJourney>
-   </EstimatedJourneyVersionFrame>
-  </EstimatedTimetableDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
+		<ProducerRef>KUBRICK</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<EstimatedTimetableDelivery version="2.0">
+			<ResponseTimestamp>2001-12-17T09:30:47-05:00</ResponseTimestamp>
+			<SubscriberRef>NADER</SubscriberRef>
+			<SubscriptionRef>0004</SubscriptionRef>
+			<Status>true</Status>
+			<ValidUntil>2001-12-17T19:30:47-05:00</ValidUntil>
+			<ShortestPossibleCycle>P1Y2M3DT10H30M</ShortestPossibleCycle>
+			<EstimatedJourneyVersionFrame>
+				<RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
+				<VersionRef>5645</VersionRef>
+				<!--==journey 1========================== -->
+				<EstimatedVehicleJourney>
+					<LineRef>LZ123</LineRef>
+					<DirectionRef>INBOUND</DirectionRef>
+					<DatedVehicleJourneyRef>00008</DatedVehicleJourneyRef>
+					<Cancellation>false</Cancellation>
+					<PublishedLineName xml:lang="EN">124</PublishedLineName>
+					<OperatorRef>SMOOTH</OperatorRef>
+					<ProductCategoryRef>Cat274</ProductCategoryRef>
+					<ServiceFeatureRef>CyclesPermitted</ServiceFeatureRef>
+					<VehicleFeatureRef>DisabledAccess</VehicleFeatureRef>
+					<VehicleJourneyName xml:lang="EN">Shoppers Special</VehicleJourneyName>
+					<JourneyNote>Not o bank holidays</JourneyNote>
+					<Monitored>true</Monitored>
+					<PredictionInaccurate>false</PredictionInaccurate>
+					<Occupancy>full</Occupancy>
+					<EstimatedCalls>
+						<!-- CALL 1-->
+						<EstimatedCall>
+							<StopPointRef>00001</StopPointRef>
+							<ExtraCall>false</ExtraCall>
+							<PredictionInaccurate>false</PredictionInaccurate>
+							<Occupancy>seatsAvailable</Occupancy>
+							<BoardingStretch>false</BoardingStretch>
+							<RequestStop>false</RequestStop>
+							<CallNote>Starts here</CallNote>
+							<AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
+							<ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
+							<AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
+							<DeparturePlatformName xml:lang="EN">1</DeparturePlatformName>
+						</EstimatedCall>
+						<!-- CALL 2-->
+						<EstimatedCall>
+							<StopPointRef>00002</StopPointRef>
+							<ExtraCall>false</ExtraCall>
+							<PredictionInaccurate>false</PredictionInaccurate>
+							<Occupancy>seatsAvailable</Occupancy>
+							<RequestStop>true</RequestStop>
+							<AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
+							<ExpectedArrivalTime>2001-12-17T09:30:47-05:00</ExpectedArrivalTime>
+							<ArrivalPlatformName xml:lang="EN">4</ArrivalPlatformName>
+							<AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
+							<ExpectedDepartureTime>2001-12-17T09:30:47-05:00</ExpectedDepartureTime>
+							<DeparturePlatformName xml:lang="EN">3</DeparturePlatformName>
+						</EstimatedCall>
+						<!-- CALL 3 -->
+						<EstimatedCall>
+							<StopPointRef>00003</StopPointRef>
+							<PredictionInaccurate>true</PredictionInaccurate>
+							<Occupancy>full</Occupancy>
+							<AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
+							<ExpectedArrivalTime>2001-12-17T09:30:47-05:00</ExpectedArrivalTime>
+							<ArrivalPlatformName xml:lang="EN">5</ArrivalPlatformName>
+							<AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
+							<ExpectedDepartureTime>2001-12-17T09:30:47-05:00</ExpectedDepartureTime>
+							<DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
+						</EstimatedCall>
+					</EstimatedCalls>
+					<IsCompleteStopSequence>false</IsCompleteStopSequence>
+				</EstimatedVehicleJourney>
+				<!--==journey 2========================== -->
+				<EstimatedVehicleJourney>
+					<LineRef>LZ123</LineRef>
+					<DirectionRef>INBOUND</DirectionRef>
+					<DatedVehicleJourneyRef>00009</DatedVehicleJourneyRef>
+					<Cancellation>true</Cancellation>
+				</EstimatedVehicleJourney>
+			</EstimatedJourneyVersionFrame>
+		</EstimatedTimetableDelivery>
+	</ServiceDelivery>
 </Siri>

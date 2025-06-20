@@ -58,7 +58,7 @@ siri_model\siri_situation-v2.0.xsd:
 				</Date>
 				<Date>
 					<Modified>2012-03-23</Modified>
-					<!-- +SIRI v2.0
+					<!-- (since SIRI 2.0)
        Use revised 2.0 definitions 
        Update to use DATEXII V2.0 schema 
        Namespace changed from http://datex2.eu/schema/1_0/1_0 to http://datex2.eu/schema/2_0RC1/2_0
@@ -751,7 +751,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
 			</xsd:group>
 			<xsd:group ref="TpegSubReasonGroup" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>DEPRECATED (SIRI 2.1) - use only TpegReasonGroup and PublicEventReason.</xsd:documentation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use only TpegReasonGroup and PublicEventReason.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
 			<xsd:element name="PublicEventReason" type="D2LogicalModel:PublicEventTypeEnum" minOccurs="0">
@@ -936,7 +936,7 @@ Note that if the ControlAction is the master ControlAction of a GroupOfControlAc
 					<xsd:choice>
 						<xsd:element name="AllOperators" type="EmptyType">
 							<xsd:annotation>
-								<xsd:documentation>All OPERATORs.</xsd:documentation>
+								<xsd:documentation>All OPERATORs. DEPRECATED since SIRI 2.1</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 						<xsd:element name="AffectedOperator" type="AffectedOperatorStructure" maxOccurs="unbounded">
@@ -1024,13 +1024,13 @@ Note that if the ControlAction is the master ControlAction of a GroupOfControlAc
 			</xsd:element>
 			<xsd:element name="Vehicles" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Specific vehicles affected by SITUATION. (+SIRI v2.0)</xsd:documentation>
+					<xsd:documentation>Specific vehicles affected by SITUATION. (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="AffectedVehicle" type="AffectedVehicleStructure" maxOccurs="unbounded">
 							<xsd:annotation>
-								<xsd:documentation>Vehicles affected by the SITUATION. (+SIRi v2.0)</xsd:documentation>
+								<xsd:documentation>Vehicles affected by the SITUATION. (since SIRI 2.0)</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 					</xsd:sequence>

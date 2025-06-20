@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======HEADER================================================== -->
-  <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
-  <ProducerRef>KUBRICK</ProducerRef>
-  <Status>true</Status>
-  <MoreData>false</MoreData>
-  <!--=======PAYLOAD============================================== -->
-  <GeneralMessageDelivery version="2.0">
-   <ResponseTimestamp>2001-12-17T09:30:47.0Z</ResponseTimestamp>
-   <RequestMessageRef>12345</RequestMessageRef>
-   <Status>true</Status>
-   <GeneralMessage formatRef="string">
-    <RecordedAtTime>2001-12-17T09:30:47.0Z</RecordedAtTime>
-    <InfoMessageIdentifier>00034567</InfoMessageIdentifier>
-    <InfoMessageVersion>2</InfoMessageVersion>
-    <InfoChannelRef>WARNINGS</InfoChannelRef>
-    <ValidUntilTime>2001-12-17T09:30:47.0Z</ValidUntilTime>
-    <Content>Beware the Ides of March</Content>
-   </GeneralMessage>
-   <GeneralMessageCancellation>
-    <RecordedAtTime>2001-12-17T09:30:47.0Z</RecordedAtTime>
-    <InfoMessageIdentifier>00034564</InfoMessageIdentifier>
-    <InfoChannelRef>WARNINGS</InfoChannelRef>
-   </GeneralMessageCancellation>
-  </GeneralMessageDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
+		<ProducerRef>KUBRICK</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<GeneralMessageDelivery version="2.0">
+			<ResponseTimestamp>2001-12-17T09:30:47.0Z</ResponseTimestamp>
+			<RequestMessageRef>12345</RequestMessageRef>
+			<Status>true</Status>
+			<GeneralMessage formatRef="string">
+				<RecordedAtTime>2001-12-17T09:30:47.0Z</RecordedAtTime>
+				<InfoMessageIdentifier>00034567</InfoMessageIdentifier>
+				<InfoMessageVersion>2</InfoMessageVersion>
+				<InfoChannelRef>WARNINGS</InfoChannelRef>
+				<ValidUntilTime>2001-12-17T09:30:47.0Z</ValidUntilTime>
+				<Content>Beware the Ides of March</Content>
+			</GeneralMessage>
+			<GeneralMessageCancellation>
+				<RecordedAtTime>2001-12-17T09:30:47.0Z</RecordedAtTime>
+				<InfoMessageIdentifier>00034564</InfoMessageIdentifier>
+				<InfoChannelRef>WARNINGS</InfoChannelRef>
+			</GeneralMessageCancellation>
+		</GeneralMessageDelivery>
+	</ServiceDelivery>
 </Siri>

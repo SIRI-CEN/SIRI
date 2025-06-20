@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2021 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <VehicleFeaturesDelivery version="2.0">
-  <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-  <VehicleFeature>
-   <VehicleFeatureCode>VF01</VehicleFeatureCode>
-   <Name xml:lang="EN">Low doors</Name>
-   <Icon>lowdoors.gif</Icon>
-  </VehicleFeature>
-  <VehicleFeature>
-   <VehicleFeatureCode>VF02</VehicleFeatureCode>
-   <Name xml:lang="EN">Wheelchair</Name>
-   <Icon>spastic.gif</Icon>
-  </VehicleFeature>
- </VehicleFeaturesDelivery>
+	<VehicleFeaturesDelivery version="2.0">
+		<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+		<VehicleFeature>
+			<VehicleFeatureCode>VF01</VehicleFeatureCode>
+			<Name xml:lang="EN">Low doors</Name>
+			<Icon>lowdoors.gif</Icon>
+		</VehicleFeature>
+		<VehicleFeature>
+			<VehicleFeatureCode>VF02</VehicleFeatureCode>
+			<Name xml:lang="EN">Wheelchair</Name>
+			<Icon>spastic.gif</Icon>
+		</VehicleFeature>
+	</VehicleFeaturesDelivery>
 </Siri>
