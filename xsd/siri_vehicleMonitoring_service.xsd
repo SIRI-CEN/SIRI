@@ -1,87 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_vehicleMonitoring_service">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-04-17</Modified>
-     <!-- Name Space changes -->
-    </Date>
-    <Date>
-     <Modified>2007-03-26</Modified>
-     <!-- Drop separate flatten structure on response for VehicleActivity -->
-    </Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
-     <!-- Revise to support substitution groups -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- SIRI v2.0
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-04-17</Modified>
+					<!-- Name Space changes -->
+				</Date>
+				<Date>
+					<Modified>2007-03-26</Modified>
+					<!-- Drop separate flatten structure on response for VehicleActivity -->
+				</Date>
+				<Date>
+					<Modified>2008-11-17</Modified>
+					<!-- Revise to support substitution groups -->
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- SIRI v2.0
 		  [MTA] Add MaximumNumberOfCalls to request
 		  [SIRI-LITE] Allow a monitoring name in  VehicleActivity results. 
 		  [VDV] Revise MonitoredVehicleJourney to include additional result files
 		  [SIRI-LITE] Whether any related Situations  should be included in the ServiceDelivery. Default is 'false'. (since SIRI 2.0) -->
-    </Date>
-    <Date>
-     <Modified>2012-04-29</Modified>
-     <!-- SIRI v2.0
+				</Date>
+				<Date>
+					<Modified>2012-04-29</Modified>
+					<!-- SIRI v2.0
 		  -	[MTA]Modify  MaximumNumberOfCalls to be consistent with SM
 		  - [General] Add hasSItuations and hasMaximumNumberOfCalls to Capabilities
 		  - [FR] Add Extensions tag to VehicleMonitoringSubscriptionRequest -->
-    </Date>
-    <Date>
-     <Modified>2013-02-11</Modified>
-     <!-- Revised VehicleActivityCancellationIdentityGroup making elements optional -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the Vehicle Monitoring Service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_vehicleMonitoring_service.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Date>
+				<Date>
+					<Modified>2013-02-11</Modified>
+					<!-- Revised VehicleActivityCancellationIdentityGroup making elements optional -->
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the Vehicle Monitoring Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_vehicleMonitoring_service.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_reference.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_modelPermissions.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1 </Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1 </Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -89,614 +90,614 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-VM XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Vehicle Monitoring Subschema </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-VM Vehicle Monitoring Service.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri/siri_requests.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_monitoredVehicleJourney.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
- <!-- ======================================================================= -->
- <xsd:group name="SiriVehicleActivityServiceIndexGroup">
-  <xsd:annotation>
-   <xsd:documentation>Convenience artifact to pick out main elements of the Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="VehicleMonitoringRequest"/>
-   <xsd:element ref="VehicleMonitoringSubscriptionRequest"/>
-   <xsd:element ref="VehicleMonitoringDelivery"/>
-   <xsd:sequence>
-    <xsd:element ref="VehicleMonitoringCapabilitiesRequest"/>
-    <xsd:element ref="VehicleMonitoringCapabilitiesResponse"/>
-   </xsd:sequence>
-  </xsd:sequence>
- </xsd:group>
- <!-- ====REQUESTS ====================================================== -->
- <!-- ==== FS: Vehicle Monitoring Request========================================== -->
- <xsd:element name="VehicleMonitoringRequest" type="VehicleMonitoringRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about Vehicle Movements.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="VehicleMonitoringRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Functional Service Request for Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractFunctionalServiceRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="VehicleMonitoringTopicGroup"/>
-     <xsd:group ref="VehicleMonitoringRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-VM XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Vehicle Monitoring Subschema </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-VM Vehicle Monitoring Service.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_monitoredVehicleJourney.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:group name="SiriVehicleActivityServiceIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artifact to pick out main elements of the Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="VehicleMonitoringRequest"/>
+			<xsd:element ref="VehicleMonitoringSubscriptionRequest"/>
+			<xsd:element ref="VehicleMonitoringDelivery"/>
+			<xsd:sequence>
+				<xsd:element ref="VehicleMonitoringCapabilitiesRequest"/>
+				<xsd:element ref="VehicleMonitoringCapabilitiesResponse"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====REQUESTS ====================================================== -->
+	<!-- ==== FS: Vehicle Monitoring Request========================================== -->
+	<xsd:element name="VehicleMonitoringRequest" type="VehicleMonitoringRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Vehicle Movements.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="VehicleMonitoringRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Functional Service Request for Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFunctionalServiceRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="VehicleMonitoringTopicGroup"/>
+					<xsd:group ref="VehicleMonitoringRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:simpleType name="VehicleMonitoringDetailEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Detail Levels for Request.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="minimum">
-    <xsd:annotation>
-     <xsd:documentation>Return only the minimum amount of optional data for each stop event to provide a display, A time, line name and destination name.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="basic">
-    <xsd:annotation>
-     <xsd:documentation>Return minimum and other available basic details for each stop event. Do not include data on time at next stop or destination.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="normal">
-    <xsd:annotation>
-     <xsd:documentation>Return all basic data, and also arrival times at DESTINATION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="calls">
-    <xsd:annotation>
-     <xsd:documentation>Return all available data for each stop event, including previous and onward  CALLs with  passing times for JOURNEY PATTERN.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:group name="VehicleMonitoringTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="VehicleMonitoringRef" type="VehicleMonitoringRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>A predefined scope for making VEHICLE requests.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:choice minOccurs="0">
-    <xsd:element name="VehicleRef" type="VehicleRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>Reference to a specific VEHICLE about which data is requested.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="LineRef" type="LineRefStructure">
-     <xsd:annotation>
-      <xsd:documentation>Filter the results to include only vehicles for the specific LINE.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only VEHICLEs going to this DIRECTION.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="VehicleMonitoringRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="IncludeTranslations" minOccurs="0"/>
-   <xsd:element name="MaximumVehicles" type="xsd:positiveInteger" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The maximum number of MONITORED VEHICLE JOURNEYs to include in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="VehicleMonitoringDetailLevel" type="VehicleMonitoringDetailEnumeration" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="MaximumNumberOfCalls" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>If calls are to be returned, maximum number of calls to include in response. If absent, exclude all calls.  (since SIRI 2.0).</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Previous" type="xsd:nonNegativeInteger" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Maximum number of previous calls to include. Only applies if VehicleMonitoringDetailLevel of Calls specified. Zero for none. If VehicleMonitoringDetailLevel of Calls specified  but MaximumNumberOfCalls.Previous absent, include all previous calls. (since SIRI 2.0).</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="Onwards" type="xsd:nonNegativeInteger" minOccurs="0">
-       <xsd:annotation>
-        <xsd:documentation>Maximum number of onwards calls to include. Zero for none. Only applies if VehicleMonitoringDetailLevel of 'calls' specified. Zero for none. If VehicleMonitoringDetailLevel calls specified but MaximumNumberOfCalls.Onwards absent, include all onwards calls. (since SIRI 2.0).</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-   <xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether any related Situations  should be included in the ServiceDelivery. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ==== FS: Vehicle Monitoring Subscription Request===================================== -->
- <xsd:element name="VehicleMonitoringSubscriptionRequest" type="VehicleMonitoringSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for a subscription to the Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="VehicleMonitoringSubscriptionPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the subscription publishing and notification processing.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether the producer will return the complete set of current data, or only  provide updates to this data, i.e. additions, modifications and deletions.
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="VehicleMonitoringDetailEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Detail Levels for Request.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="minimum">
+				<xsd:annotation>
+					<xsd:documentation>Return only the minimum amount of optional data for each stop event to provide a display, A time, line name and destination name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="basic">
+				<xsd:annotation>
+					<xsd:documentation>Return minimum and other available basic details for each stop event. Do not include data on time at next stop or destination.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normal">
+				<xsd:annotation>
+					<xsd:documentation>Return all basic data, and also arrival times at DESTINATION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="calls">
+				<xsd:annotation>
+					<xsd:documentation>Return all available data for each stop event, including previous and onward  CALLs with  passing times for JOURNEY PATTERN.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:group name="VehicleMonitoringTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="VehicleMonitoringRef" type="VehicleMonitoringRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A predefined scope for making VEHICLE requests.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="VehicleRef" type="VehicleRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Reference to a specific VEHICLE about which data is requested.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="LineRef" type="LineRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Filter the results to include only vehicles for the specific LINE.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only VEHICLEs going to this DIRECTION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="VehicleMonitoringRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="IncludeTranslations" minOccurs="0"/>
+			<xsd:element name="MaximumVehicles" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The maximum number of MONITORED VEHICLE JOURNEYs to include in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VehicleMonitoringDetailLevel" type="VehicleMonitoringDetailEnumeration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Level of detail to include in response.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumNumberOfCalls" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>If calls are to be returned, maximum number of calls to include in response. If absent, exclude all calls.  (since SIRI 2.0).</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Previous" type="xsd:nonNegativeInteger" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Maximum number of previous calls to include. Only applies if VehicleMonitoringDetailLevel of Calls specified. Zero for none. If VehicleMonitoringDetailLevel of Calls specified  but MaximumNumberOfCalls.Previous absent, include all previous calls. (since SIRI 2.0).</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="Onwards" type="xsd:nonNegativeInteger" minOccurs="0">
+							<xsd:annotation>
+								<xsd:documentation>Maximum number of onwards calls to include. Zero for none. Only applies if VehicleMonitoringDetailLevel of 'calls' specified. Zero for none. If VehicleMonitoringDetailLevel calls specified but MaximumNumberOfCalls.Onwards absent, include all onwards calls. (since SIRI 2.0).</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="IncludeSituations" type="xsd:boolean" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether any related Situations  should be included in the ServiceDelivery. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ==== FS: Vehicle Monitoring Subscription Request===================================== -->
+	<xsd:element name="VehicleMonitoringSubscriptionRequest" type="VehicleMonitoringSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for a subscription to the Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="VehicleMonitoringSubscriptionPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the subscription publishing and notification processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the producer will return the complete set of current data, or only  provide updates to this data, i.e. additions, modifications and deletions.
 If false or omitted, each subscription response will contain the full information as specified in this request.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:choice>
-    <xsd:element name="ChangeBeforeUpdates" type="DurationType" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>The amount of change to the VEHICLE expected arrival time at next stop that can happen before an update is sent (i.e. if ChangeBeforeUpdate is set to 2 minutes, the subscriber will not be told that a bus is 30 seconds delayed - an update will only be sent when the bus is at least 2 minutes delayed).</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="UpdateInterval" type="PositiveDurationType" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Time interval in seconds in which new data is to be transmitted. If unspecified, default to system configuration.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="VehicleMonitoringSubscriptionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Subscription Request for Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractSubscriptionStructure">
-    <xsd:sequence>
-     <xsd:element ref="VehicleMonitoringRequest"/>
-     <xsd:group ref="VehicleMonitoringSubscriptionPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====RESPONSES=========================================================== -->
- <!-- ==== FS: Vehicle Monitoring Delivery ===================================== -->
- <xsd:element name="VehicleMonitoringDelivery" type="VehicleMonitoringDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Delivery for Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="VehicleMonitoringPayloadGroup">
-  <xsd:annotation>
-   <xsd:documentation>Payload part of Vehicle Monitoring delivery.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="VehicleActivity" type="VehicleActivityStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Describes the progress of a VEHICLE along its route.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="VehicleActivityCancellation" type="VehicleActivityCancellationStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Reference to an previously communicated VEHICLE activity which should now be removed from the system.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="VehicleActivityNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Annotation to accompany of Vehicle Activities.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="VehicleMonitoringDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for Vehicle Monitoring Service. Provides information about one or more vehicles; each has its own VEHICLE activity element.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceDeliveryStructure">
-    <xsd:sequence>
-     <xsd:group ref="VehicleMonitoringPayloadGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="ChangeBeforeUpdates" type="DurationType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>The amount of change to the VEHICLE expected arrival time at next stop that can happen before an update is sent (i.e. if ChangeBeforeUpdate is set to 2 minutes, the subscriber will not be told that a bus is 30 seconds delayed - an update will only be sent when the bus is at least 2 minutes delayed).</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="UpdateInterval" type="PositiveDurationType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Time interval in seconds in which new data is to be transmitted. If unspecified, default to system configuration.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="VehicleMonitoringSubscriptionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Subscription Request for Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractSubscriptionStructure">
+				<xsd:sequence>
+					<xsd:element ref="VehicleMonitoringRequest"/>
+					<xsd:group ref="VehicleMonitoringSubscriptionPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====RESPONSES=========================================================== -->
+	<!-- ==== FS: Vehicle Monitoring Delivery ===================================== -->
+	<xsd:element name="VehicleMonitoringDelivery" type="VehicleMonitoringDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Delivery for Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="VehicleMonitoringPayloadGroup">
+		<xsd:annotation>
+			<xsd:documentation>Payload part of Vehicle Monitoring delivery.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="VehicleActivity" type="VehicleActivityStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Describes the progress of a VEHICLE along its route.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VehicleActivityCancellation" type="VehicleActivityCancellationStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Reference to an previously communicated VEHICLE activity which should now be removed from the system.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VehicleActivityNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Annotation to accompany of Vehicle Activities.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="VehicleMonitoringDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Vehicle Monitoring Service. Provides information about one or more vehicles; each has its own VEHICLE activity element.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceDeliveryStructure">
+				<xsd:sequence>
+					<xsd:group ref="VehicleMonitoringPayloadGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====Data============================================================= -->
- <xsd:complexType name="VehicleActivityStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a Vehicle Activity.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractIdentifiedItemStructure">
-    <xsd:sequence>
-     <xsd:element name="ValidUntilTime" type="xsd:dateTime">
-      <xsd:annotation>
-       <xsd:documentation>Time until when data is valid.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="VehicleMonitoringRef" type="VehicleMonitoringRefStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Reference to monitored VEHICLE or GROUP OF VEHICLEs.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="MonitoringName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Name associated with Monitoring Reference. Supports SIRI LITE servcies  ((since SIRI 2.0)).</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="ProgressBetweenStops" type="ProgressBetweenStopsStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Provides information about the progress of the VEHICLE along its current link, that is link from previous visited top to current position.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="MonitoredVehicleJourney">
-      <xsd:annotation>
-       <xsd:documentation>Monitored VEHICLE JOURNEY that VEHICLE is following.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="MonitoredVehicleJourneyStructure"/>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="VehicleActivityNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Text associated with Delivery.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:simpleType name="VehicleMonitoringCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of a Vehicle Monitoring scope.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="VehicleMonitoringRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a Vehicle Monitoring scope</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="VehicleMonitoringCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ====Data============================================================= -->
- <xsd:complexType name="VehicleActivityCancellationStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for cancellation of an earlier Vehicle Activity.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractReferencingItemStructure">
-    <xsd:sequence>
-     <xsd:group ref="VehicleActivityCancellationIdentityGroup"/>
-     <xsd:group ref="JourneyPatternInfoGroup"/>
-     <xsd:element name="Reason" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Reason for cancellation.  (Unbounded since SIRI 2.0)</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="VehicleActivityCancellationIdentityGroup">
-  <xsd:annotation>
-   <xsd:documentation>Identifiers of Vehicle Activity.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="VehicleMonitoringRef" type="VehicleMonitoringRefStructure" minOccurs="0"/>
-   <xsd:element name="VehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to VEHICLE JOURNEY that VEHICLE is making.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="LineIdentityGroup" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <!-- ==== WSDL=========================================-->
- <xsd:complexType name="VehicleMonitoringDeliveriesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Deliveries for VEHICLE monitoring services Used in WSDL.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="VehicleMonitoringDelivery" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Delivery for Vehicle Moniroting Service.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ==== CS: Capability Request=================================================================== -->
- <xsd:element name="VehicleMonitoringCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
-  <xsd:annotation>
-   <xsd:documentation>Request for information about Vehicle Monitoring Service Capabilities. Answered with a VehicleMontoringCapabilitiesResponse.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="VehicleMonitoringCapabilityRequestPolicyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for capability request policy.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="CapabilityRequestPolicyStructure">
-    <xsd:sequence>
-     <xsd:element name="HasReferences" type="xsd:boolean" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Whether results should return references.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="HasNames" type="xsd:boolean" default="false" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Whether results should return references.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="VehicleMonitoringServiceCapabilities" type="VehicleMonitoringServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation> Capabilities of Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ==== CS: Capability Response ================================================================== -->
- <xsd:element name="VehicleMonitoringCapabilitiesResponse" type="VehicleMonitoringCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
-  <xsd:annotation>
-   <xsd:documentation>Capabilities for Vehicle Monitoring Service. Answers a VehicleMontoringCapabilitiesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="VehicleMonitoringCapabilitiesResponseStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Delivery for Vehicle Monitoring Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
-    <xsd:sequence>
-     <xsd:element ref="VehicleMonitoringServiceCapabilities" minOccurs="0"/>
-     <xsd:element ref="VehicleMonitoringPermissions" minOccurs="0"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====Data============================================================= -->
+	<xsd:complexType name="VehicleActivityStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a Vehicle Activity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractIdentifiedItemStructure">
+				<xsd:sequence>
+					<xsd:element name="ValidUntilTime" type="xsd:dateTime">
+						<xsd:annotation>
+							<xsd:documentation>Time until when data is valid.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="VehicleMonitoringRef" type="VehicleMonitoringRefStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Reference to monitored VEHICLE or GROUP OF VEHICLEs.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="MonitoringName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Name associated with Monitoring Reference. Supports SIRI LITE servcies  ((since SIRI 2.0)).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ProgressBetweenStops" type="ProgressBetweenStopsStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Provides information about the progress of the VEHICLE along its current link, that is link from previous visited top to current position.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="MonitoredVehicleJourney">
+						<xsd:annotation>
+							<xsd:documentation>Monitored VEHICLE JOURNEY that VEHICLE is following.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="MonitoredVehicleJourneyStructure"/>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="VehicleActivityNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Text associated with Delivery.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="VehicleMonitoringCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a Vehicle Monitoring scope.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="VehicleMonitoringRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a Vehicle Monitoring scope</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="VehicleMonitoringCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ====Data============================================================= -->
+	<xsd:complexType name="VehicleActivityCancellationStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for cancellation of an earlier Vehicle Activity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractReferencingItemStructure">
+				<xsd:sequence>
+					<xsd:group ref="VehicleActivityCancellationIdentityGroup"/>
+					<xsd:group ref="JourneyPatternInfoGroup"/>
+					<xsd:element name="Reason" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Reason for cancellation.  (Unbounded since SIRI 2.0)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="VehicleActivityCancellationIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Identifiers of Vehicle Activity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="VehicleMonitoringRef" type="VehicleMonitoringRefStructure" minOccurs="0"/>
+			<xsd:element name="VehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to VEHICLE JOURNEY that VEHICLE is making.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="LineIdentityGroup" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ==== WSDL=========================================-->
+	<xsd:complexType name="VehicleMonitoringDeliveriesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Deliveries for VEHICLE monitoring services Used in WSDL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="VehicleMonitoringDelivery" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Delivery for Vehicle Moniroting Service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ==== CS: Capability Request=================================================================== -->
+	<xsd:element name="VehicleMonitoringCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Vehicle Monitoring Service Capabilities. Answered with a VehicleMontoringCapabilitiesResponse.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="VehicleMonitoringCapabilityRequestPolicyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for capability request policy.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="CapabilityRequestPolicyStructure">
+				<xsd:sequence>
+					<xsd:element name="HasReferences" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether results should return references.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="HasNames" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether results should return references.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="VehicleMonitoringServiceCapabilities" type="VehicleMonitoringServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation> Capabilities of Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ==== CS: Capability Response ================================================================== -->
+	<xsd:element name="VehicleMonitoringCapabilitiesResponse" type="VehicleMonitoringCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities for Vehicle Monitoring Service. Answers a VehicleMontoringCapabilitiesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="VehicleMonitoringCapabilitiesResponseStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Vehicle Monitoring Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
+				<xsd:sequence>
+					<xsd:element ref="VehicleMonitoringServiceCapabilities" minOccurs="0"/>
+					<xsd:element ref="VehicleMonitoringPermissions" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="VehicleMonitoringServiceCapabilitiesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Vehicle Monitoring Capabilities.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractCapabilitiesStructure">
-    <xsd:sequence>
-     <xsd:element name="TopicFiltering" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Topic Filtering Capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
-         <xsd:annotation>
-          <xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="FilterByVehicleMonitoringRef" type="xsd:boolean" fixed="true">
-         <xsd:annotation>
-          <xsd:documentation>Whether results can be filtered by Vehicle Monitoring  Fixed as 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element ref="FilterByVehicleRef" minOccurs="0"/>
-        <xsd:element ref="FilterByLineRef" minOccurs="0"/>
-        <xsd:element ref="FilterByDirectionRef" minOccurs="0"/>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="RequestPolicy" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Request Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="CapabilityRequestPolicyStructure">
-         <xsd:sequence>
-          <xsd:group ref="VehicleMonitoringVolumeGroup"/>
-         </xsd:sequence>
-        </xsd:extension>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="AccessControl" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Access control capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:complexContent>
-        <xsd:extension base="CapabilityAccessControlStructure">
-         <xsd:sequence>
-          <xsd:element ref="CheckOperatorRef" minOccurs="0"/>
-          <xsd:element ref="CheckLineRef" minOccurs="0"/>
-          <xsd:element name="CheckVehicleMonitoringRef" type="xsd:boolean" default="true" minOccurs="0">
-           <xsd:annotation>
-            <xsd:documentation>If access control is supported, whether access control by monitoring point is supported. Default is 'true'.</xsd:documentation>
-           </xsd:annotation>
-          </xsd:element>
-         </xsd:sequence>
-        </xsd:extension>
-       </xsd:complexContent>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element name="ResponseFeatures" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Optional Response capabilities.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element name="HasLocation" type="xsd:boolean" default="true" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether result has location. Default is 'true'.</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="HasSituations" type="xsd:boolean" default="false" minOccurs="0">
-         <xsd:annotation>
-          <xsd:documentation>Whether result supports SITUATION REFERENCESs. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="VehicleMonitoringVolumeGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for volume control.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="HasDetailLevel" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether Detail level filtering is supported. Default is ' false'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DefaultDetailLevel" type="VehicleMonitoringDetailEnumeration" default="normal" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Detail level. Default Normal.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="HasMaximumVehicles" type="xsd:boolean" default="true" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether results can be limited to a maximum number. Default is 'true'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="HasMaximumNumberOfCalls" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>If system can return detailed calling pattern, whether a number of  calls to include can be specified. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="HasNumberOfOnwardsCalls" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>If system can return detailed calling pattern, whether a number of onwards calls to include can be specified. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="HasNumberOfPreviousCalls" type="xsd:boolean" default="false" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>If system can return detailed calling pattern, whether a number of previous calls to include can be specified. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:element name="VehicleMonitoringPermissions">
-  <xsd:annotation>
-   <xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="PermissionsStructure">
-     <xsd:sequence>
-      <xsd:element name="VehicleMonitoringPermission" type="VehicleMonitoringServicePermissionStructure" minOccurs="0" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Permissions for use of VEHICLE MONITORING. Can be used to specify which Consumers can see which vehicles</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:extension>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <!-- ====permissions=================================================================== -->
- <xsd:complexType name="VehicleMonitoringServicePermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Monitoring Service Permissions.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractPermissionStructure">
-    <xsd:sequence>
-     <xsd:element ref="OperatorPermissions"/>
-     <xsd:element ref="LinePermissions"/>
-     <xsd:element name="VehicleMonitoringPermissions">
-      <xsd:annotation>
-       <xsd:documentation>The Vehicle Monitors (DIUSPLAY ASSIGNMENTs) that the participant may access.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:choice>
-        <xsd:element ref="AllowAll"/>
-        <xsd:element name="VehicleMonitorPermission" type="VehicleMonitorPermissionStructure" maxOccurs="unbounded">
-         <xsd:annotation>
-          <xsd:documentation>Participant's permission for this Vehicle Monitor (DISPLAY SSIGNMENT).</xsd:documentation>
-         </xsd:annotation>
-        </xsd:element>
-       </xsd:choice>
-      </xsd:complexType>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="VehicleMonitorPermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for MonitoringPoint Permission.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractTopicPermissionStructure">
-    <xsd:sequence>
-     <xsd:element name="VehicleMonitoringRef" type="VehicleMonitoringRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Vehicle Monitoring reference for which permission is made.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="VehicleMonitoringServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Vehicle Monitoring Capabilities.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractCapabilitiesStructure">
+				<xsd:sequence>
+					<xsd:element name="TopicFiltering" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Topic Filtering Capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M">
+									<xsd:annotation>
+										<xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="FilterByVehicleMonitoringRef" type="xsd:boolean" fixed="true">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by Vehicle Monitoring  Fixed as 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByVehicleRef" minOccurs="0"/>
+								<xsd:element ref="FilterByLineRef" minOccurs="0"/>
+								<xsd:element ref="FilterByDirectionRef" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="RequestPolicy" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Request Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="CapabilityRequestPolicyStructure">
+									<xsd:sequence>
+										<xsd:group ref="VehicleMonitoringVolumeGroup"/>
+									</xsd:sequence>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Subscription Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="AccessControl" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Access control capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="CapabilityAccessControlStructure">
+									<xsd:sequence>
+										<xsd:element ref="CheckOperatorRef" minOccurs="0"/>
+										<xsd:element ref="CheckLineRef" minOccurs="0"/>
+										<xsd:element name="CheckVehicleMonitoringRef" type="xsd:boolean" default="true" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation>If access control is supported, whether access control by monitoring point is supported. Default is 'true'.</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="ResponseFeatures" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional Response capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="HasLocation" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether result has location. Default is 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="HasSituations" type="xsd:boolean" default="false" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether result supports SITUATION REFERENCESs. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="VehicleMonitoringVolumeGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for volume control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="HasDetailLevel" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether Detail level filtering is supported. Default is ' false'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DefaultDetailLevel" type="VehicleMonitoringDetailEnumeration" default="normal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Detail level. Default Normal.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HasMaximumVehicles" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether results can be limited to a maximum number. Default is 'true'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HasMaximumNumberOfCalls" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>If system can return detailed calling pattern, whether a number of  calls to include can be specified. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HasNumberOfOnwardsCalls" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>If system can return detailed calling pattern, whether a number of onwards calls to include can be specified. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="HasNumberOfPreviousCalls" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>If system can return detailed calling pattern, whether a number of previous calls to include can be specified. Default is 'false'. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="VehicleMonitoringPermissions">
+		<xsd:annotation>
+			<xsd:documentation>Participant's permissions to use the service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="PermissionsStructure">
+					<xsd:sequence>
+						<xsd:element name="VehicleMonitoringPermission" type="VehicleMonitoringServicePermissionStructure" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Permissions for use of VEHICLE MONITORING. Can be used to specify which Consumers can see which vehicles</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ====permissions=================================================================== -->
+	<xsd:complexType name="VehicleMonitoringServicePermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Monitoring Service Permissions.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractPermissionStructure">
+				<xsd:sequence>
+					<xsd:element ref="OperatorPermissions"/>
+					<xsd:element ref="LinePermissions"/>
+					<xsd:element name="VehicleMonitoringPermissions">
+						<xsd:annotation>
+							<xsd:documentation>The Vehicle Monitors (DIUSPLAY ASSIGNMENTs) that the participant may access.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element ref="AllowAll"/>
+								<xsd:element name="VehicleMonitorPermission" type="VehicleMonitorPermissionStructure" maxOccurs="unbounded">
+									<xsd:annotation>
+										<xsd:documentation>Participant's permission for this Vehicle Monitor (DISPLAY SSIGNMENT).</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="VehicleMonitorPermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for MonitoringPoint Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractTopicPermissionStructure">
+				<xsd:sequence>
+					<xsd:element name="VehicleMonitoringRef" type="VehicleMonitoringRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Vehicle Monitoring reference for which permission is made.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>

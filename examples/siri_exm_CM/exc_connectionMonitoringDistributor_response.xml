@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======HEADER================================================== -->
-  <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
-  <ProducerRef>KUBRICK</ProducerRef>
-  <Status>true</Status>
-  <!--=======PAYLOAD============================================== -->
-  <ConnectionMonitoringDistributorDelivery version="2.0">
-   <ResponseTimestamp>2001-12-17T09:30:47.0Z</ResponseTimestamp>
-   <RequestMessageRef>12345</RequestMessageRef>
-   <Status>true</Status>
-   <!--=======WAIT PROLONGED EVENT ============================ -->
-   <WaitProlongedDeparture>
-    <RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
-    <ConnectionLinkRef>HLKT00023</ConnectionLinkRef>
-    <DistributorVisitNumber>001</DistributorVisitNumber>
-    <DistributorJourney>
-     <LineRef>ABC</LineRef>
-     <DirectionRef>Out</DirectionRef>
-    </DistributorJourney>
-    <FeederVehicleJourneyRef>
-     <DataFrameRef>2001-12-17</DataFrameRef>
-     <DatedVehicleJourneyRef>8776654986</DatedVehicleJourneyRef>
-    </FeederVehicleJourneyRef>
-    <ExpectedDepartureTime>2001-12-17T09:30:47-05:00</ExpectedDepartureTime>
-   </WaitProlongedDeparture>
-   <!--=======STOPPING POSITION CHANGED EVENT =============== -->
-   <StoppingPositionChangedDeparture>
-    <RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
-    <ConnectionLinkRef>HLKT00022</ConnectionLinkRef>
-    <DistributorVisitNumber>001</DistributorVisitNumber>
-    <DistributorJourney>
-     <LineRef>A11C</LineRef>
-     <DirectionRef>OUT</DirectionRef>
-     <FramedVehicleJourneyRef>
-      <DataFrameRef>2001-12-17</DataFrameRef>
-      <DatedVehicleJourneyRef>09876</DatedVehicleJourneyRef>
-     </FramedVehicleJourneyRef>
-     <PublishedLineName xml:lang="EN">Line A11C</PublishedLineName>
-     <DirectionName xml:lang="EN">Outbound</DirectionName>
-     <OperatorRef>1s23</OperatorRef>
-     <ProductCategoryRef>School</ProductCategoryRef>
-     <ServiceFeatureRef>CyclesPermitted</ServiceFeatureRef>
-     <VehicleFeatureRef>LowFloors</VehicleFeatureRef>
-     <OriginName xml:lang="EN">Purgatory</OriginName>
-     <DestinationName xml:lang="EN">Paradise</DestinationName>
-     <JourneyNote>from A to B</JourneyNote>
-     <OriginAimedDepartureTime>2001-12-17T08:30:47-05:00</OriginAimedDepartureTime>
-     <DestinationAimedArrivalTime>2001-12-17T10:30:47-05:00</DestinationAimedArrivalTime>
-     <BlockRef>12345</BlockRef>
-     <CourseOfJourneyRef>89765</CourseOfJourneyRef>
-     <VehicleRef>V987</VehicleRef>
-     <Monitored>true</Monitored>
-     <AimedDepartureTime>2001-12-17T09:34:47-05:00</AimedDepartureTime>
-    </DistributorJourney>
-    <FeederVehicleJourneyRef>
-     <DataFrameRef>2001-12-17</DataFrameRef>
-     <DatedVehicleJourneyRef>87766545677</DatedVehicleJourneyRef>
-    </FeederVehicleJourneyRef>
-    <ChangeNote>Will now leave from platform 6 </ChangeNote>
-   </StoppingPositionChangedDeparture>
-   <!--=======DEPARTURE CANCELLATION EVENT =============== -->
-   <DistributorDepartureCancellation>
-    <RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
-    <ConnectionLinkRef>987259</ConnectionLinkRef>
-    <DistributorVisitNumber>2</DistributorVisitNumber>
-    <DistributorJourney>
-     <LineRef>123</LineRef>
-     <DirectionRef>OUT</DirectionRef>
-     <PublishedLineName xml:lang="EN">Line 123</PublishedLineName>
-     <DirectionName xml:lang="EN">Outbound</DirectionName>
-    </DistributorJourney>
-    <FeederVehicleJourneyRef>
-     <DataFrameRef>2001-12-17</DataFrameRef>
-     <DatedVehicleJourneyRef>09867</DatedVehicleJourneyRef>
-    </FeederVehicleJourneyRef>
-    <Reason>Short staff</Reason>
-   </DistributorDepartureCancellation>
-  </ConnectionMonitoringDistributorDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
+		<ProducerRef>KUBRICK</ProducerRef>
+		<Status>true</Status>
+		<!--=======PAYLOAD============================================== -->
+		<ConnectionMonitoringDistributorDelivery version="2.0">
+			<ResponseTimestamp>2001-12-17T09:30:47.0Z</ResponseTimestamp>
+			<RequestMessageRef>12345</RequestMessageRef>
+			<Status>true</Status>
+			<!--=======WAIT PROLONGED EVENT ============================ -->
+			<WaitProlongedDeparture>
+				<RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
+				<ConnectionLinkRef>HLKT00023</ConnectionLinkRef>
+				<DistributorVisitNumber>001</DistributorVisitNumber>
+				<DistributorJourney>
+					<LineRef>ABC</LineRef>
+					<DirectionRef>Out</DirectionRef>
+				</DistributorJourney>
+				<FeederVehicleJourneyRef>
+					<DataFrameRef>2001-12-17</DataFrameRef>
+					<DatedVehicleJourneyRef>8776654986</DatedVehicleJourneyRef>
+				</FeederVehicleJourneyRef>
+				<ExpectedDepartureTime>2001-12-17T09:30:47-05:00</ExpectedDepartureTime>
+			</WaitProlongedDeparture>
+			<!--=======STOPPING POSITION CHANGED EVENT =============== -->
+			<StoppingPositionChangedDeparture>
+				<RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
+				<ConnectionLinkRef>HLKT00022</ConnectionLinkRef>
+				<DistributorVisitNumber>001</DistributorVisitNumber>
+				<DistributorJourney>
+					<LineRef>A11C</LineRef>
+					<DirectionRef>OUT</DirectionRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2001-12-17</DataFrameRef>
+						<DatedVehicleJourneyRef>09876</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<PublishedLineName xml:lang="EN">Line A11C</PublishedLineName>
+					<DirectionName xml:lang="EN">Outbound</DirectionName>
+					<OperatorRef>1s23</OperatorRef>
+					<ProductCategoryRef>School</ProductCategoryRef>
+					<ServiceFeatureRef>CyclesPermitted</ServiceFeatureRef>
+					<VehicleFeatureRef>LowFloors</VehicleFeatureRef>
+					<OriginName xml:lang="EN">Purgatory</OriginName>
+					<DestinationName xml:lang="EN">Paradise</DestinationName>
+					<JourneyNote>from A to B</JourneyNote>
+					<OriginAimedDepartureTime>2001-12-17T08:30:47-05:00</OriginAimedDepartureTime>
+					<DestinationAimedArrivalTime>2001-12-17T10:30:47-05:00</DestinationAimedArrivalTime>
+					<BlockRef>12345</BlockRef>
+					<CourseOfJourneyRef>89765</CourseOfJourneyRef>
+					<VehicleRef>V987</VehicleRef>
+					<Monitored>true</Monitored>
+					<AimedDepartureTime>2001-12-17T09:34:47-05:00</AimedDepartureTime>
+				</DistributorJourney>
+				<FeederVehicleJourneyRef>
+					<DataFrameRef>2001-12-17</DataFrameRef>
+					<DatedVehicleJourneyRef>87766545677</DatedVehicleJourneyRef>
+				</FeederVehicleJourneyRef>
+				<ChangeNote>Will now leave from platform 6 </ChangeNote>
+			</StoppingPositionChangedDeparture>
+			<!--=======DEPARTURE CANCELLATION EVENT =============== -->
+			<DistributorDepartureCancellation>
+				<RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
+				<ConnectionLinkRef>987259</ConnectionLinkRef>
+				<DistributorVisitNumber>2</DistributorVisitNumber>
+				<DistributorJourney>
+					<LineRef>123</LineRef>
+					<DirectionRef>OUT</DirectionRef>
+					<PublishedLineName xml:lang="EN">Line 123</PublishedLineName>
+					<DirectionName xml:lang="EN">Outbound</DirectionName>
+				</DistributorJourney>
+				<FeederVehicleJourneyRef>
+					<DataFrameRef>2001-12-17</DataFrameRef>
+					<DatedVehicleJourneyRef>09867</DatedVehicleJourneyRef>
+				</FeederVehicleJourneyRef>
+				<Reason>Short staff</Reason>
+			</DistributorDepartureCancellation>
+		</ConnectionMonitoringDistributorDelivery>
+	</ServiceDelivery>
 </Siri>
