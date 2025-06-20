@@ -46,6 +46,9 @@
  <message name="SituationExchangeNotify">
   <part name="SituationExchangeNotifyParameters" element="siriWS:NotifySituationExchange"/>
  </message>
+ <message name="ControlActionNotify">
+  <part name="ControlActionNotifyParameters" element="siriWS:NotifyControlAction"/>
+ </message>
  <portType name="SiriConsumerDocPort">
   <operation name="NotifyDataReady">
    <input message="siriWS:DataReadyNotify"/>
@@ -86,6 +89,9 @@
   </operation>
   <operation name="NotifySituationExchange">
    <input message="siriWS:SituationExchangeNotify"/>
+  </operation>
+  <operation name="NotifyControlAction">
+   <input message="siriWS:ControlActionNotify"/>
   </operation>
  </portType>
  <binding name="SiriConsumerDocBinding" type="siriWS:SiriConsumerDocPort">
@@ -164,6 +170,12 @@
   </operation>
   <operation name="NotifySituationExchange">
    <soap:operation soapAction="GetSituationExchange"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+  </operation>
+  <operation name="NotifyControlAction">
+   <soap:operation soapAction="GetControlAction"/>
    <input>
     <soap:body use="literal"/>
    </input>

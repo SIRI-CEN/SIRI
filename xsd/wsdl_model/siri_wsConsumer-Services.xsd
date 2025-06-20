@@ -54,10 +54,10 @@ Public transport, Bus services, Coach services, Bus stops and stations,
 Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport.
-</Category>
+					</Category>
 					<Project>CEN TC278 WG3 SG7</Project>
 				</Subject>
-				<Title>XSD elements for WSDL Consumer (Document Wrapped style) interface for SIRI XML schema. Service Interface for Real Time Information relating to Public Transport Operations. </Title>
+				<Title>XSD elements for WSDL Consumer (Document Wrapped style) interface for SIRI XML schema. Service Interface for Real Time Information relating to Public Transport Operations.</Title>
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
@@ -143,6 +143,15 @@ Rail transport, Roads and road transport.
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:element name="NotifySituationExchange" type="WsSituationExchangeNotificationStructure"/>
+	<!-- ControlAction -->
+	<xsd:complexType name="WsControlActionNotificationStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Notification" type="siri:ControlActionDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="SiriExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="NotifyControlAction" type="WsControlActionNotificationStructure"/>
 	<!-- VehicleMonitoring -->
 	<xsd:complexType name="WsVehicleMonitoringNotificationStructure">
 		<xsd:sequence>

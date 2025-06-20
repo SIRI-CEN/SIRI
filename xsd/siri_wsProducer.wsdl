@@ -220,6 +220,20 @@
   <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
   <part name="SiriError" element="siri:ServiceDeliveryErrorConditionElement"/>
  </message>
+ <message name="ControlActionRequest">
+  <part name="ServiceRequestInfo" type="siriWS:WsServiceRequestInfoStructure"/>
+  <part name="Request" type="siri:ControlActionRequestStructure"/>
+  <part name="RequestExtension" type="siri:ExtensionsStructure"/>
+ </message>
+ <message name="ControlActionAnswer">
+  <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
+  <part name="Answer" type="siri:ControlActionDeliveriesStructure"/>
+  <part name="AnswerExtension" type="siri:ExtensionsStructure"/>
+ </message>
+ <message name="ControlActionError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siri:ServiceDeliveryErrorConditionElement"/>
+ </message> 
  <message name="GetCapabilitiesRequest">
   <part name="Request" type="siri:CapabilitiesRequestStructure"/>
   <part name="RequestExtension" type="siri:ExtensionsStructure"/>
@@ -351,6 +365,11 @@
    <input message="siriWS:SituationExchangeRequest"/>
    <output message="siriWS:SituationExchangeAnswer"/>
    <fault name="FaultName" message="siriWS:SituationExchangeError"/>
+  </operation>
+  <operation name="GetControlAction">
+   <input message="siriWS:ControlActionRequest"/>
+   <output message="siriWS:ControlActionAnswer"/>
+   <fault name="FaultName" message="siriWS:ControlActionError"/>
   </operation>
   <operation name="GetCapabilities">
    <input message="siriWS:GetCapabilitiesRequest"/>
@@ -563,6 +582,18 @@
     <soap:fault name="FaultName" use="literal"/>
    </fault>
   </operation>
+  <operation name="GetControlAction">
+   <soap:operation soapAction="GetControlAction"/>
+   <input>
+    <soap:body use="literal" namespace="http://wsdl.siri.org.uk"/>
+   </input>
+   <output>
+    <soap:body use="literal" namespace="http://wsdl.siri.org.uk"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>  
   <operation name="GetCapabilities">
    <soap:operation soapAction="GetCapabilities"/>
    <input>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2021 rel. 2 sp1 (x64) (http://www.altova.com) by Christophe Duquesne (Aurige) -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situation">
 	<!--
 siri_model\siri_situation-v2.0.xsd:
@@ -14,10 +15,10 @@ siri_model\siri_situation-v2.0.xsd:
 - PublicationWindow changed to unbounded
 -->
 	<!-- ======================================================================= -->
-	<!-- Global import of all IFOPT namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
-	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
+	<!--Needed to work around import limitation in JAXB - all namespaces. -->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/>
 	<xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="siri_situationIdentity.xsd"/>
@@ -87,7 +88,7 @@ siri_model\siri_situation-v2.0.xsd:
 				</Date>
 				<Date>
 					<Modified>2019-09-01</Modified>
-					<!-- SIRI 2.1
+					<!-- SIRI v2.1
           Align with TPEG2
           Removed SubReason
           Added AdviceType, AdviceName, ConditionName, ConditionGroup
@@ -763,6 +764,13 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
 					<xsd:documentation>Textual classification of nature of SITUATION, from which a standardized message can be generated. Not normally needed, except when TpegReason and PublicEventReason are absent.  (Unbounded since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="ControlActionRef" type="ControlActionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a ControlAction being a reason for the situation. It is place in the ReasonGroup to emphasise that the CONTROL ACTION is the reason for the SITUATION, and not the way around: in the opposite case (a SITUATION being the reason for the CONTROL ACTION, some weather condition, or an accident, for example) the CONTROL ACTION will refer the SITUATION.
+Note that if the ControlAction is the master ControlAction of a GroupOfControlActions it is assumed that the refence is valid for all the ControlActions of the group.
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:simpleType name="SensitivityEnumeration">
@@ -1016,13 +1024,13 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
 			</xsd:element>
 			<xsd:element name="Vehicles" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Specific vehicles affected by SITUATION. ((since SIRI 2.0))</xsd:documentation>
+					<xsd:documentation>Specific vehicles affected by SITUATION. (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="AffectedVehicle" type="AffectedVehicleStructure" maxOccurs="unbounded">
 							<xsd:annotation>
-								<xsd:documentation>Vehicles affected by the SITUATION. ((since SIRI 2.0))</xsd:documentation>
+								<xsd:documentation>Vehicles affected by the SITUATION. (since SIRI 2.0)</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 					</xsd:sequence>
