@@ -78,7 +78,7 @@ Public transport, Bus services, Coach services, Bus stops and stations,
 Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
-</Category>
+					</Category>
 					<Project>CEN TC278 WG3 SG7</Project>
 				</Subject>
 				<Title>SIRI XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Subschema of identifers common journey elements</Title>
@@ -262,7 +262,7 @@ Rail transport, Roads and road transport
 	</xsd:complexType>
 	<xsd:element name="InterchangeRef" type="InterchangeRefStructure">
 		<xsd:annotation>
-			<xsd:documentation> Reference to a SERVICE JOURNEY  INTERCHANGE.</xsd:documentation>
+			<xsd:documentation>Reference to a SERVICE JOURNEY  INTERCHANGE.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<!-- ======================================================================= -->
@@ -273,7 +273,7 @@ Rail transport, Roads and road transport
 		<xsd:sequence>
 			<xsd:element name="DataFrameRef" type="DataFrameRefStructure">
 				<xsd:annotation>
-					<xsd:documentation>identifier of data frame within particpant service. Used to ensure that the Reference to a DATED VEGICLE JOURNEY is unique with the data horizon of the service. Often the OperationalDayType is used for this purpose.</xsd:documentation>
+					<xsd:documentation>Identifier of data frame within participant service. Used to ensure that the Reference to a DATED VEHICLE JOURNEY is unique with the data horizon of the service. Often the OPERATING DAY is used for this purpose.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="DatedVehicleJourneyRef" type="DatedVehicleJourneyCodeType">
@@ -492,7 +492,7 @@ Has the following uses:
 - Either the smallest part of a formation, a TRAIN COMPONENT, is referenced or the TRAIN itself. The former is ideally used in a FORMATION ASSIGNMENT, i.e. QUAY (sector) assignment, to provide the highest level of detail for passenger orientation. 
 - If the formation consists of multiple coupled TRAINs, a reference to the COMPOUND TRAIN is also possible. This might be used in a FORMATION CONDITION to signal a change of the train composition.
 - In case alighting/boarding data from an automatic passenger counting system is available, the respective vehicle entrances may be referenced.
-</xsd:documentation>
+			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="CompoundTrainRef" minOccurs="0"/>
