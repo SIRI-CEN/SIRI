@@ -1278,10 +1278,11 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
 					<xsd:documentation>Change to normal boarding activity allowed at stop.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Delays" type="DelaysStructure" minOccurs="0"/>
-			<xsd:annotation>
-				<xsd:documentation>Information on delays.</xsd:documentation>
-			</xsd:annotation>
+			<xsd:element name="Delays" type="DelaysStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Information on delays.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="Casualties" type="CasualtiesStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Information on casualties.</xsd:documentation>
