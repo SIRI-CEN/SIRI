@@ -86,6 +86,11 @@
    <output element="siriWS:GetSituationExchangeResponse"/>
    <outfault ref="siriWS:DeliveryFault"/>
   </operation>
+  <operation name="GetControlAction" pattern="http://www.w3.org/ns/wsdl/in-out">
+   <input element="siriWS:GetControlAction"/>
+   <output element="siriWS:GetControlActionResponse"/>
+   <outfault ref="siriWS:DeliveryFault"/>
+  </operation>
   <operation name="GetCapabilities" pattern="http://www.w3.org/ns/wsdl/in-out">
    <input element="siriWS:GetCapabilities"/>
    <output element="siriWS:GetCapabilitiesResponse"/>
@@ -190,6 +195,11 @@
    <outfault ref="siriWS:DeliveryFault"/>
   </operation>
   <operation ref="siriWS:GetSituationExchange">
+   <input/>
+   <output/>
+   <outfault ref="siriWS:DeliveryFault"/>
+  </operation>
+  <operation ref="siriWS:GetControlAction">
    <input/>
    <output/>
    <outfault ref="siriWS:DeliveryFault"/>

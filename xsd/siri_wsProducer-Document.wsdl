@@ -154,6 +154,16 @@
   <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
   <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
  </message>
+ <message name="ControlActionRequest">
+  <part name="ControlActionRequestParameters" element="siriWS:GetControlAction"/>
+ </message>
+ <message name="ControlActionAnswer">
+  <part name="ControlActionAnswerParameters" element="siriWS:GetControlActionResponse"/>
+ </message>
+ <message name="ControlActionError">
+  <documentation>SOAP Fault deprecated from Siri 2.0</documentation>
+  <part name="SiriError" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+ </message> 
  <message name="GetCapabilitiesRequest">
   <part name="GetCapabilitiesRequestParameters" element="siriWS:GetCapabilities"/>
  </message>
@@ -278,6 +288,11 @@
    <output message="siriWS:SituationExchangeAnswer"/>
    <fault name="FaultName" message="siriWS:SituationExchangeError"/>
   </operation>
+  <operation name="GetControlAction">
+   <input message="siriWS:ControlActionRequest"/>
+   <output message="siriWS:ControlActionAnswer"/>
+   <fault name="FaultName" message="siriWS:ControlActionError"/>
+  </operation>  
   <operation name="GetCapabilities">
    <input message="siriWS:GetCapabilitiesRequest"/>
    <output message="siriWS:GetCapabilitiesAnswer"/>
@@ -490,6 +505,18 @@
     <soap:fault name="FaultName" use="literal"/>
    </fault>
   </operation>
+  <operation name="GetControlAction">
+   <soap:operation soapAction="GetControlAction"/>
+   <input>
+    <soap:body use="literal"/>
+   </input>
+   <output>
+    <soap:body use="literal"/>
+   </output>
+   <fault name="FaultName">
+    <soap:fault name="FaultName" use="literal"/>
+   </fault>
+  </operation>  
   <operation name="GetCapabilities">
    <soap:operation soapAction="GetCapabilities"/>
    <input>

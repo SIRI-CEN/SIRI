@@ -763,6 +763,13 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
 					<xsd:documentation>Textual classification of nature of SITUATION, from which a standardized message can be generated. Not normally needed, except when TpegReason and PublicEventReason are absent.  (Unbounded since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="ControlActionRef" type="ControlActionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a ControlAction being a reason for the situation. It is place in the ReasonGroup to emphasise that the CONTROL ACTION is the reason for the SITUATION, and not the way around: in the opposite case (a SITUATION being the reason for the CONTROL ACTION, some weather condition, or an accident, for example) the CONTROL ACTION will refer the SITUATION.
+
+Note that if the ControlAction is the master ControlAction of a GroupOfControlActions it is assumed that the refence is valid for all the ControlActions of the group.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:simpleType name="SensitivityEnumeration">

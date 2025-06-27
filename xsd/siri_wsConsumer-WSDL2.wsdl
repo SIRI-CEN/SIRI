@@ -48,6 +48,9 @@
   <operation name="NotifySituationExchange" pattern="http://www.w3.org/ns/wsdl/in-only">
    <input element="siriWS:NotifySituationExchange"/>
   </operation>
+  <operation name="NotifyControlAction" pattern="http://www.w3.org/ns/wsdl/in-only">
+   <input element="siriWS:NotifyControlAction"/>
+  </operation>
  </interface>
  <binding name="SiriConsumerWsdl2Binding" interface="siriWS:SiriConsumerWsdl2Port" type="http://www.w3.org/ns/wsdl/soap" wsoap:version="1.1" wsoap:protocol="http://www.w3.org/2006/01/soap11/bindings/HTTP/">
   <operation ref="siriWS:NotifyDataReady">
@@ -87,6 +90,9 @@
    <input/>
   </operation>
   <operation ref="siriWS:NotifySituationExchange">
+   <input/>
+  </operation>
+  <operation ref="siriWS:NotifyControlAction">
    <input/>
   </operation>
  </binding>

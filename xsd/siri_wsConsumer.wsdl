@@ -69,6 +69,11 @@
   <part name="Notification" type="siri:SituationExchangeDeliveriesStructure"/>
   <part name="SiriExtension" type="siri:ExtensionsStructure"/>
  </message>
+ <message name="ControlActionNotify">
+  <part name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure"/>
+  <part name="Notification" type="siri:ControlActionDeliveriesStructure"/>
+  <part name="SiriExtension" type="siri:ExtensionsStructure"/>
+ </message>
  <portType name="SiriConsumerRpcPort">
   <operation name="NotifyDataReady">
    <input message="siriWS:DataReadyNotify"/>
@@ -109,6 +114,9 @@
   </operation>
   <operation name="NotifySituationExchange">
    <input message="siriWS:SituationExchangeNotify"/>
+  </operation>
+  <operation name="NotifyControlAction">
+   <input message="siriWS:ControlActionNotify"/>
   </operation>
  </portType>
  <binding name="SiriConsumerRpcBinding" type="siriWS:SiriConsumerRpcPort">
@@ -187,6 +195,12 @@
   </operation>
   <operation name="NotifySituationExchange">
    <soap:operation soapAction="GetSituationExchange"/>
+   <input>
+    <soap:body use="literal" namespace="http://wsdl.siri.org.uk"/>
+   </input>
+  </operation>
+  <operation name="NotifyControlAction">
+   <soap:operation soapAction="GetControlAction"/>
    <input>
     <soap:body use="literal" namespace="http://wsdl.siri.org.uk"/>
    </input>
