@@ -1,48 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_connectionTimetable_service">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Contributor>Dipl.-Ing. Sven Juergens psitrans juergens@psitrans.de</Contributor>
-    <Contributor>Gustav Thiessen BLIC thi@BLIC.DE</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date><Created>2012-03-29</Created>
-					  <!--Factored out of conection timnetable servcie-->
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Contributor>Dipl.-Ing. Sven Juergens psitrans juergens@psitrans.de</Contributor>
+				<Contributor>Gustav Thiessen BLIC thi@BLIC.DE</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2012-03-29</Created>
+					<!--Factored out of conection timnetable servcie-->
 				</Date>
-    <Date><Modified>2012-03-20</Modified>
+				<Date><Modified>2012-03-20</Modified>
 					 (since SIRI 2.0)
 				</Date>
-    <Description>
-     <p>SIRI is a European CEN technical standard for the exchange of Public Transport real-time information.</p>
-     <p>This sub-schema describes the Connection Timetable Service, which provides timetables of planned connections at a connection point.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/siri/2.0/xsd/}siri_connectionTimetable_service.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-        <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				<Description>
+					<p>SIRI is a European CEN technical standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the Connection Timetable Service, which provides timetables of planned connections at a connection point.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/siri/2.0/xsd/}siri_connectionTimetable_service.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG XML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -50,39 +52,39 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>-SIRI-CT Interchange journey for Service Interface for Real-time  Information. Connection Timetable Service.</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-CT Interchange journey Connection Timetable Service.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_journey.xsd"/>
- <!-- ====SERVICE JOURNEY INTERCHANGE ================================== -->
- <xsd:complexType name="InterchangeJourneyStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for feeder or Distributor Journey info about a VEHICLE JOURNEY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="JourneyIdentityGroup"/>
-   <xsd:group ref="JourneyPatternInfoGroup" minOccurs="0"/>
-   <xsd:group ref="VehicleJourneyInfoGroup" minOccurs="0"/>
-   <xsd:group ref="DisruptionGroup" minOccurs="0"/>
-   <xsd:group ref="OperationalInfoGroup" minOccurs="0"/>
-   <xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether there is real-time information available for journey. Default is 'true'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="AimedDepartureTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>On a Distributor journey, a timetabled departure time of the VEHICLE JOURNEY from the CONNECTION LINK for the SERVICE JOURNEY INTERCHANGE. On a Feeder journey a Timetabled arrival time of the VEHICLE JOURNEY at the CONNECTION link for the SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="Extensions" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>-SIRI-CT Interchange journey for Service Interface for Real-time  Information. Connection Timetable Service.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-CT Interchange journey Connection Timetable Service.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_journey.xsd"/>
+	<!-- ====SERVICE JOURNEY INTERCHANGE ================================== -->
+	<xsd:complexType name="InterchangeJourneyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for feeder or Distributor Journey info about a VEHICLE JOURNEY.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="JourneyIdentityGroup"/>
+			<xsd:group ref="JourneyPatternInfoGroup" minOccurs="0"/>
+			<xsd:group ref="VehicleJourneyInfoGroup" minOccurs="0"/>
+			<xsd:group ref="DisruptionGroup" minOccurs="0"/>
+			<xsd:group ref="OperationalInfoGroup" minOccurs="0"/>
+			<xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether there is real-time information available for journey. Default is 'true'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AimedDepartureTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>On a Distributor journey, a timetabled departure time of the VEHICLE JOURNEY from the CONNECTION LINK for the SERVICE JOURNEY INTERCHANGE. On a Feeder journey a Timetabled arrival time of the VEHICLE JOURNEY at the CONNECTION link for the SERVICE JOURNEY INTERCHANGE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
 </xsd:schema>

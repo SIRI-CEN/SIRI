@@ -1,94 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_discovery">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-04</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-11-25</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-04-17</Modified>
-     <!-- Name Space changes -->
-    </Date>
-    <Date>
-     <Modified>2008-11-13</Modified>
-     <!-- Fix cardinalities on delivery items eg LINEs, refs, facilities
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-04</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-11-25</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-04-17</Modified>
+					<!-- Name Space changes -->
+				</Date>
+				<Date>
+					<Modified>2008-11-13</Modified>
+					<!-- Fix cardinalities on delivery items eg LINEs, refs, facilities
 							MoveAbstractDiscoveryDelivery to siri_requests -->
-    </Date>
-    <Date>
-     <Modified>2008-11-17</Modified>
-     <!-- Revise to support substitution groups
+				</Date>
+				<Date>
+					<Modified>2008-11-17</Modified>
+					<!-- Revise to support substitution groups
 					 Correct Type on VEHICLE features delivery structure -->
-    </Date>
-    <Date>
-     <Modified>2012-03-23</Modified>
-     <!-- (since SIRI 2.0)
+				</Date>
+				<Date>
+					<Modified>2012-03-23</Modified>
+					<!-- (since SIRI 2.0)
 						 Move Features to separate model separate model package
 						 Move Annotated Facility to separate model package.
 						 Add filtering to StopPoints request by box, place, line and OPERATOR and detail  level
 			 			 Add filtering to Lines request by box, place,  and Operator
 			 			 Add filtering to Facility  request by box, place,   and OPERATOR and detail  level
 			 			 Add filtering of Lang to all requests -->
-    </Date>
-    <Date>
-     <Modified>2012-05-17</Modified>
-     <!-- (since SIRI 2.0)
+				</Date>
+				<Date>
+					<Modified>2012-05-17</Modified>
+					<!-- (since SIRI 2.0)
  						 [MTA]  Add filtering to StopPoints and Lines Discovery requests by point + radius  
 						 [MTA]  Add filtering to Lines Discovery  request by LineRef and Direction
 						[MTA]  Add stops in pattern to Lines Discovery and LineDetailParameter
 						[MTA]  Add url to annotated stop -->
-    </Date>
-    <Date>
-     <Modified>2013-03-28</Modified>
-     <!-- (since SIRI 2.0)
+				</Date>
+				<Date>
+					<Modified>2013-03-28</Modified>
+					<!-- (since SIRI 2.0)
  						 [FR]  Addition of Connection Links Discovery -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
-     <p>This subschema describes discovery services used by different SIRI functional services
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
+					<p>This subschema describes discovery services used by different SIRI functional services
 						 <ul><li>STOP POINTs Discovery</li><li>LINEs Discovery Discovery</li><li>Service Feature discovery</li><li>TYPE OF PRODUCT CATEGORY Discovery</li><li>Vehicle Feature Discovery</li><li>Info Channels for SIRI General Message Service</li></ul>
 					</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_discovery.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_discovery.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Discovery services Derived from the NaPTAN standard .</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Discovery services Derived from the NaPTAN standard .</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -96,803 +97,803 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI_DS XML schema. Service Interface for Real-time  Information. Discovery subschema. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI DIscovery Services for SCHEDULED STOP POINTs, LINEs,OPERATORs, FACILITies and feature TYPE OF VALUE codes.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri/siri_requests.xsd"/>
- <xsd:include schemaLocation="siri_model/siri_journey.xsd"/>
- <xsd:include schemaLocation="siri_model_discovery/siri_line.xsd"/>
- <xsd:include schemaLocation="siri_model_discovery/siri_feature.xsd"/>
- <xsd:include schemaLocation="siri_model_discovery/siri_stopPoint.xsd"/>
- <xsd:include schemaLocation="siri_model_discovery/siri_infoChannel.xsd"/>
- <xsd:include schemaLocation="siri_model_discovery/siri_connectionLink.xsd"/>
- <!-- ======================================================================= -->
- <xsd:group name="SiriDiscoveryIndexGroup">
-  <xsd:annotation>
-   <xsd:documentation>Convenience artifact to pick out main elements of the Estimated Timetable Service.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:group ref="SiriReferenceDiscoveryRequestGroup"/>
-   <xsd:group ref="SiriDiscoveryReferenceDeliveryGroup"/>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="SiriReferenceDiscoveryRequestGroup">
-  <xsd:annotation>
-   <xsd:documentation>Requests for reference data for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:choice>
-   <xsd:element ref="StopPointsRequest"/>
-   <xsd:element ref="LinesRequest"/>
-   <xsd:element ref="ServiceFeaturesRequest"/>
-   <xsd:element ref="ProductCategoriesRequest"/>
-   <xsd:element ref="VehicleFeaturesRequest"/>
-   <xsd:element ref="InfoChannelRequest"/>
-   <xsd:element ref="FacilityRequest"/>
-   <xsd:element ref="ConnectionLinksRequest"/>
-  </xsd:choice>
- </xsd:group>
- <!-- ======================================================================= -->
- <!-- ====DISCOVERY SERVCIES =============================================== -->
- <!-- ======================================================================= -->
- <xsd:group name="SiriDiscoveryReferenceDeliveryGroup">
-  <xsd:annotation>
-   <xsd:documentation>Responses with reference data for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:choice>
-   <xsd:element ref="StopPointsDelivery"/>
-   <xsd:element ref="LinesDelivery"/>
-   <xsd:element ref="ProductCategoriesDelivery"/>
-   <xsd:element ref="ServiceFeaturesDelivery"/>
-   <xsd:element ref="VehicleFeaturesDelivery"/>
-   <xsd:element ref="InfoChannelDelivery"/>
-   <xsd:element ref="FacilityDelivery"/>
-   <xsd:element ref="ConnectionLinksDelivery"/>
-  </xsd:choice>
- </xsd:group>
- <!-- ===== SCHEDUELED STOP POINT discovery=============================================== -->
- <!-- ===== DS: STOP POINT Request =========================================== -->
- <xsd:element name="StopPointsRequest" substitutionGroup="AbstractDiscoveryRequest">
-  <xsd:annotation>
-   <xsd:documentation>Requests a list of the STOP POINTs and places covered by a Producer.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="StopPointsDiscoveryRequestStructure"/>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="StopPointsDiscoveryRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Requests for stop reference data for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="StopPointsDiscoveryRequestTopicGroup">
-      <xsd:annotation>
-       <xsd:documentation>Parameters that specify the content to be returned. ((since SIRI 2.0))</xsd:documentation>
-      </xsd:annotation>
-     </xsd:group>
-     <xsd:group ref="StopPointsDiscoveryRequestPolicyGroup">
-      <xsd:annotation>
-       <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. ((since SIRI 2.0))</xsd:documentation>
-      </xsd:annotation>
-     </xsd:group>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI_DS XML schema. Service Interface for Real-time  Information. Discovery subschema. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI DIscovery Services for SCHEDULED STOP POINTs, LINEs,OPERATORs, FACILITies and feature TYPE OF VALUE codes.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_journey.xsd"/>
+	<xsd:include schemaLocation="siri_model_discovery/siri_line.xsd"/>
+	<xsd:include schemaLocation="siri_model_discovery/siri_feature.xsd"/>
+	<xsd:include schemaLocation="siri_model_discovery/siri_stopPoint.xsd"/>
+	<xsd:include schemaLocation="siri_model_discovery/siri_infoChannel.xsd"/>
+	<xsd:include schemaLocation="siri_model_discovery/siri_connectionLink.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:group name="SiriDiscoveryIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artifact to pick out main elements of the Estimated Timetable Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="SiriReferenceDiscoveryRequestGroup"/>
+			<xsd:group ref="SiriDiscoveryReferenceDeliveryGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="SiriReferenceDiscoveryRequestGroup">
+		<xsd:annotation>
+			<xsd:documentation>Requests for reference data for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element ref="StopPointsRequest"/>
+			<xsd:element ref="LinesRequest"/>
+			<xsd:element ref="ServiceFeaturesRequest"/>
+			<xsd:element ref="ProductCategoriesRequest"/>
+			<xsd:element ref="VehicleFeaturesRequest"/>
+			<xsd:element ref="InfoChannelRequest"/>
+			<xsd:element ref="FacilityRequest"/>
+			<xsd:element ref="ConnectionLinksRequest"/>
+		</xsd:choice>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<!-- ====DISCOVERY SERVCIES =============================================== -->
+	<!-- ======================================================================= -->
+	<xsd:group name="SiriDiscoveryReferenceDeliveryGroup">
+		<xsd:annotation>
+			<xsd:documentation>Responses with reference data for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element ref="StopPointsDelivery"/>
+			<xsd:element ref="LinesDelivery"/>
+			<xsd:element ref="ProductCategoriesDelivery"/>
+			<xsd:element ref="ServiceFeaturesDelivery"/>
+			<xsd:element ref="VehicleFeaturesDelivery"/>
+			<xsd:element ref="InfoChannelDelivery"/>
+			<xsd:element ref="FacilityDelivery"/>
+			<xsd:element ref="ConnectionLinksDelivery"/>
+		</xsd:choice>
+	</xsd:group>
+	<!-- ===== SCHEDUELED STOP POINT discovery=============================================== -->
+	<!-- ===== DS: STOP POINT Request =========================================== -->
+	<xsd:element name="StopPointsRequest" substitutionGroup="AbstractDiscoveryRequest">
+		<xsd:annotation>
+			<xsd:documentation>Requests a list of the STOP POINTs and places covered by a Producer.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="StopPointsDiscoveryRequestStructure"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="StopPointsDiscoveryRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Requests for stop reference data for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="StopPointsDiscoveryRequestTopicGroup">
+						<xsd:annotation>
+							<xsd:documentation>Parameters that specify the content to be returned. ((since SIRI 2.0))</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:group ref="StopPointsDiscoveryRequestPolicyGroup">
+						<xsd:annotation>
+							<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. ((since SIRI 2.0))</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="StopPointsDiscoveryRequestTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the  STOP POINTs  to be returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice>
-    <xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Rectangle containing stops  be returned. ((since SIRI 2.0))</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="Circle" type="LocationStructure" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Circle containing stops  be returned. Point indicates centre, precision indicates radius ((since SIRI 2.0))</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Filter the results to include only stops associated with  the PLACE . ((since SIRI 2.0))</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only stops run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only stops for the given LINE. ((since SIRI 2.0))</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="StopPointsDiscoveryRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StopPointsDetailLevel" type="StopPointsDetailEnumeration" default="normal" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="StopPointsDetailEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Detail Levels for Stop Points Discovery Request. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="minimum">
-    <xsd:annotation>
-     <xsd:documentation>Return only the name and identifier of the stop.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="normal">
-    <xsd:annotation>
-     <xsd:documentation>Return name, dientifier and coordinates of the stop.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="full">
-    <xsd:annotation>
-     <xsd:documentation>Return all available data for each stop.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ===== DS: STOP POINT Response =========================================== -->
- <xsd:element name="StopPointsDelivery" type="StopPointsDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Returns basic details about the  STOP POINTs/places covered by a service. Answers a StopPointsRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="StopPointsDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Response with STOP POINTs available to make requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryDeliveryStructure">
-    <xsd:sequence>
-     <xsd:element ref="AnnotatedStopPointRef" minOccurs="0" maxOccurs="unbounded"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="StopPointsDiscoveryRequestTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the  STOP POINTs  to be returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Rectangle containing stops  be returned. ((since SIRI 2.0))</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Circle" type="LocationStructure" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Circle containing stops  be returned. Point indicates centre, precision indicates radius ((since SIRI 2.0))</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Filter the results to include only stops associated with  the PLACE . ((since SIRI 2.0))</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only stops run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only stops for the given LINE. ((since SIRI 2.0))</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="StopPointsDiscoveryRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopPointsDetailLevel" type="StopPointsDetailEnumeration" default="normal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="StopPointsDetailEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Detail Levels for Stop Points Discovery Request. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="minimum">
+				<xsd:annotation>
+					<xsd:documentation>Return only the name and identifier of the stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normal">
+				<xsd:annotation>
+					<xsd:documentation>Return name, dientifier and coordinates of the stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>Return all available data for each stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ===== DS: STOP POINT Response =========================================== -->
+	<xsd:element name="StopPointsDelivery" type="StopPointsDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Returns basic details about the  STOP POINTs/places covered by a service. Answers a StopPointsRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="StopPointsDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Response with STOP POINTs available to make requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryDeliveryStructure">
+				<xsd:sequence>
+					<xsd:element ref="AnnotatedStopPointRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- =======LINE discovery====================================== -->
- <!-- ===== DS: LINEs Request =========================================== -->
- <xsd:element name="LinesRequest" type="LinesDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
-  <xsd:annotation>
-   <xsd:documentation>Requests a list of the LINEs covered by a Producer.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="LinesDiscoveryRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Requests for LINE data for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="LinesDiscoveryRequestTopicGroup"/>
-     <xsd:group ref="LinesDiscoveryRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- =======LINE discovery====================================== -->
+	<!-- ===== DS: LINEs Request =========================================== -->
+	<xsd:element name="LinesRequest" type="LinesDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
+		<xsd:annotation>
+			<xsd:documentation>Requests a list of the LINEs covered by a Producer.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="LinesDiscoveryRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Requests for LINE data for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="LinesDiscoveryRequestTopicGroup"/>
+					<xsd:group ref="LinesDiscoveryRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="LinesDiscoveryRequestTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the LINEs to be returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice minOccurs="0">
-    <xsd:choice>
-     <xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="1">
-      <xsd:annotation>
-       <xsd:documentation>Rectangle containing stops of lines be returned. ((since SIRI 2.0))</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="Circle" type="LocationStructure" minOccurs="1">
-      <xsd:annotation>
-       <xsd:documentation>Circle containing stops for lines  be returned. Point indicates centre, precision indicates radius ((since SIRI 2.0))</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="1">
-      <xsd:annotation>
-       <xsd:documentation>Filter the results to include only lines for  stops assoicated with  the place . ((since SIRI 2.0))</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:choice>
-    <xsd:element name="LineDirectionRef" type="LineDirectionStructure">
-     <xsd:annotation>
-      <xsd:documentation>Reference to line for which details are to be returned (v2.0)</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only Stop d run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="LinesDiscoveryRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Linesreturned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="LinesDetailLevel" type="LinesDetailEnumeration" default="normal" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="LinesDetailEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Detail Levels for Lines Discovery Request. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="minimum">
-    <xsd:annotation>
-     <xsd:documentation>Return only the name and identifier of the stop.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="normal">
-    <xsd:annotation>
-     <xsd:documentation>Return name, dientifier and coordinates of the stop.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stops"/>
-   <xsd:enumeration value="full">
-    <xsd:annotation>
-     <xsd:documentation>Return all available data for each stop.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ===== DS: Stop Points Response =========================================== -->
- <xsd:element name="LinesDelivery" type="LinesDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Returns the LINEs covered by a web service. Answers a LINEsRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="LinesDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Response with LINEs available to make requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryDeliveryStructure">
-    <xsd:sequence>
-     <xsd:element ref="AnnotatedLineRef" minOccurs="0" maxOccurs="unbounded"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ===== PRODUCT CATEGORY ============================================ -->
- <!-- ===== DS: PRODUCT CATEGORY Request =========================================== -->
- <xsd:element name="ProductCategoriesRequest" type="ProductCategoriesDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
-  <xsd:annotation>
-   <xsd:documentation>Requests a list of the Product Categories covered by a Producer.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ProductCategoriesDiscoveryRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Requests for TYPE OF PRODUCT CATEGORY reference data for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="ProductCategoriesRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="LinesDiscoveryRequestTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the LINEs to be returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:choice>
+					<xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Rectangle containing stops of lines be returned. ((since SIRI 2.0))</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Circle" type="LocationStructure" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Circle containing stops for lines  be returned. Point indicates centre, precision indicates radius ((since SIRI 2.0))</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Filter the results to include only lines for  stops assoicated with  the place . ((since SIRI 2.0))</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:choice>
+				<xsd:element name="LineDirectionRef" type="LineDirectionStructure">
+					<xsd:annotation>
+						<xsd:documentation>Reference to line for which details are to be returned (v2.0)</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only Stop d run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="LinesDiscoveryRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Linesreturned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LinesDetailLevel" type="LinesDetailEnumeration" default="normal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="LinesDetailEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Detail Levels for Lines Discovery Request. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="minimum">
+				<xsd:annotation>
+					<xsd:documentation>Return only the name and identifier of the stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normal">
+				<xsd:annotation>
+					<xsd:documentation>Return name, dientifier and coordinates of the stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stops"/>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>Return all available data for each stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ===== DS: Stop Points Response =========================================== -->
+	<xsd:element name="LinesDelivery" type="LinesDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Returns the LINEs covered by a web service. Answers a LINEsRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="LinesDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Response with LINEs available to make requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryDeliveryStructure">
+				<xsd:sequence>
+					<xsd:element ref="AnnotatedLineRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ===== PRODUCT CATEGORY ============================================ -->
+	<!-- ===== DS: PRODUCT CATEGORY Request =========================================== -->
+	<xsd:element name="ProductCategoriesRequest" type="ProductCategoriesDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
+		<xsd:annotation>
+			<xsd:documentation>Requests a list of the Product Categories covered by a Producer.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ProductCategoriesDiscoveryRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Requests for TYPE OF PRODUCT CATEGORY reference data for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="ProductCategoriesRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="ProductCategoriesRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ===== DS: RODUCT CATEGORY Response =========================================== -->
- <xsd:element name="ProductCategoriesDelivery" type="ProductCategoriesDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Returns the Product Categories covered by a service. Answers a ProductCategoriesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ProductCategoriesDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Response with Product Categories available to make requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryDeliveryStructure">
-    <xsd:sequence>
-     <xsd:element ref="ProductCategory" minOccurs="0" maxOccurs="unbounded"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ====== VEHICLE FEATURE Discovery========================================================= -->
- <!-- ===== DS: VEHICLE FEATURE Request =========================================== -->
- <xsd:element name="VehicleFeaturesRequest" type="VehicleFeaturesRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
-  <xsd:annotation>
-   <xsd:documentation>Requests a list of the Vehicle Features covered by a Producer.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="VehicleFeaturesRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Requests for VEHICLE feature data for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="VehicleFeaturesRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ProductCategoriesRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ===== DS: RODUCT CATEGORY Response =========================================== -->
+	<xsd:element name="ProductCategoriesDelivery" type="ProductCategoriesDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Returns the Product Categories covered by a service. Answers a ProductCategoriesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ProductCategoriesDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Response with Product Categories available to make requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryDeliveryStructure">
+				<xsd:sequence>
+					<xsd:element ref="ProductCategory" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====== VEHICLE FEATURE Discovery========================================================= -->
+	<!-- ===== DS: VEHICLE FEATURE Request =========================================== -->
+	<xsd:element name="VehicleFeaturesRequest" type="VehicleFeaturesRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
+		<xsd:annotation>
+			<xsd:documentation>Requests a list of the Vehicle Features covered by a Producer.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="VehicleFeaturesRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Requests for VEHICLE feature data for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="VehicleFeaturesRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="VehicleFeaturesRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <!-- ===== DS: VEHICLE FEATURE Response ========================================== -->
- <xsd:element name="VehicleFeaturesDelivery" type="VehicleFeaturesDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Returns the Vehicle Features covered by a service. Answers a VehicleFeaturesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="VehicleFeaturesDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Response with Vehicle Features available to make requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryDeliveryStructure">
-    <xsd:sequence>
-     <xsd:element ref="VehicleFeature" minOccurs="0" maxOccurs="unbounded"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ===== INFO CHANNEL ============================================== -->
- <!-- ===== DS:  INFO CHANNELRequest =========================================== -->
- <xsd:element name="InfoChannelRequest" type="InfoChannelDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
-  <xsd:annotation>
-   <xsd:documentation>Requests a list of the Info Channels covered by a Producer.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="InfoChannelDiscoveryRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Requests for info channels for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryRequestStructure">
-    <xsd:sequence>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="VehicleFeaturesRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ===== DS: VEHICLE FEATURE Response ========================================== -->
+	<xsd:element name="VehicleFeaturesDelivery" type="VehicleFeaturesDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Returns the Vehicle Features covered by a service. Answers a VehicleFeaturesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="VehicleFeaturesDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Response with Vehicle Features available to make requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryDeliveryStructure">
+				<xsd:sequence>
+					<xsd:element ref="VehicleFeature" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ===== INFO CHANNEL ============================================== -->
+	<!-- ===== DS:  INFO CHANNELRequest =========================================== -->
+	<xsd:element name="InfoChannelRequest" type="InfoChannelDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
+		<xsd:annotation>
+			<xsd:documentation>Requests a list of the Info Channels covered by a Producer.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="InfoChannelDiscoveryRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Requests for info channels for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryRequestStructure">
+				<xsd:sequence>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ===== DS:  INFO CHANNEL Response =========================================== -->
- <xsd:element name="InfoChannelDelivery" type="InfoChannelDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Returns the Info Channels covered by a service. Answers a InfoChannelRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="InfoChannelDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Response with Info channels categories available to make requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryDeliveryStructure">
-    <xsd:sequence>
-     <xsd:element ref="InfoChannel" minOccurs="0" maxOccurs="unbounded"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ===== FACILITY Discovery=============================================== -->
- <!-- ===== DS: FACILITY Request =========================================== -->
- <xsd:element name="FacilityRequest" type="FacilityRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
-  <xsd:annotation>
-   <xsd:documentation>Requests a list of the Facilities covered by a Producer.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="FacilityRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Requests for info channels for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="FacilityRequestTopicGroup"/>
-     <xsd:group ref="FacilityRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ===== DS:  INFO CHANNEL Response =========================================== -->
+	<xsd:element name="InfoChannelDelivery" type="InfoChannelDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Returns the Info Channels covered by a service. Answers a InfoChannelRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="InfoChannelDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Response with Info channels categories available to make requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryDeliveryStructure">
+				<xsd:sequence>
+					<xsd:element ref="InfoChannel" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ===== FACILITY Discovery=============================================== -->
+	<!-- ===== DS: FACILITY Request =========================================== -->
+	<xsd:element name="FacilityRequest" type="FacilityRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
+		<xsd:annotation>
+			<xsd:documentation>Requests a list of the Facilities covered by a Producer.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="FacilityRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Requests for info channels for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="FacilityRequestTopicGroup"/>
+					<xsd:group ref="FacilityRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="FacilityRequestTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the  Facilities to be returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice>
-    <xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Rectangle containing Facilities  be returned. ((since SIRI 2.0))</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Filter the results to include only Facilities associated with  the TOPOGRAPHIC PLACE . ((since SIRI 2.0))</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only Facilities run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only Facilities for the given LINE. ((since SIRI 2.0))</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="FacilityRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FacilityDetailLevel" type="FacilityDetailEnumeration" default="normal" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="FacilityDetailEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Detail Levels for Facility Points Request. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="minimum">
-    <xsd:annotation>
-     <xsd:documentation>Return only the name and identifier of the Facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="normal">
-    <xsd:annotation>
-     <xsd:documentation>Return name, identifier and coordinates of the Facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="full">
-    <xsd:annotation>
-     <xsd:documentation>Return all available data for each Facility.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ===== DS: FACILITY  Response =========================================== -->
- <xsd:element name="FacilityDelivery" type="FacilityDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Returns the Facilities covered by a service. Answers a StopPointsRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="FacilityDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Response with Facilities available to make requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryDeliveryStructure">
-    <xsd:sequence>
-     <xsd:element name="AnnotatedFacility" type="AnnotatedFacilityStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Facility Definition.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ===== DS: SERVICE FEATURE =========================================== -->
- <!-- = For backward compatibility with SIRI 1.0 (use FacilityRequest) ==================== -->
- <!-- ===== DS: SERVICE FEATURE Response =========================================== -->
- <xsd:element name="ServiceFeaturesRequest" substitutionGroup="AbstractDiscoveryRequest">
-  <xsd:annotation>
-   <xsd:documentation>Requests a list of the Service Features covered by a Producer.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:complexContent>
-    <xsd:extension base="ServiceFeaturesDiscoveryRequestStructure"/>
-   </xsd:complexContent>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="ServiceFeaturesDiscoveryRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for equests for TYPE OF PRODUCT CATEGORY reference data for use in service requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryRequestStructure">
-    <xsd:sequence>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed 
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="FacilityRequestTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the  Facilities to be returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Rectangle containing Facilities  be returned. ((since SIRI 2.0))</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Filter the results to include only Facilities associated with  the TOPOGRAPHIC PLACE . ((since SIRI 2.0))</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only Facilities run by the specified OPERATOR.  ((since SIRI 2.0))</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only Facilities for the given LINE. ((since SIRI 2.0))</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="FacilityRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of Facilities returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FacilityDetailLevel" type="FacilityDetailEnumeration" default="normal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="FacilityDetailEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Detail Levels for Facility Points Request. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="minimum">
+				<xsd:annotation>
+					<xsd:documentation>Return only the name and identifier of the Facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normal">
+				<xsd:annotation>
+					<xsd:documentation>Return name, identifier and coordinates of the Facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>Return all available data for each Facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ===== DS: FACILITY  Response =========================================== -->
+	<xsd:element name="FacilityDelivery" type="FacilityDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Returns the Facilities covered by a service. Answers a StopPointsRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="FacilityDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Response with Facilities available to make requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryDeliveryStructure">
+				<xsd:sequence>
+					<xsd:element name="AnnotatedFacility" type="AnnotatedFacilityStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Facility Definition.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ===== DS: SERVICE FEATURE =========================================== -->
+	<!-- = For backward compatibility with SIRI 1.0 (use FacilityRequest) ==================== -->
+	<!-- ===== DS: SERVICE FEATURE Response =========================================== -->
+	<xsd:element name="ServiceFeaturesRequest" substitutionGroup="AbstractDiscoveryRequest">
+		<xsd:annotation>
+			<xsd:documentation>Requests a list of the Service Features covered by a Producer.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="ServiceFeaturesDiscoveryRequestStructure"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ServiceFeaturesDiscoveryRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for equests for TYPE OF PRODUCT CATEGORY reference data for use in service requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryRequestStructure">
+				<xsd:sequence>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed 
 </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ===== DS: SERVICE FEATURE Response =========================================== -->
- <xsd:element name="ServiceFeaturesDelivery" type="ServiceFeaturesDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Returns the SERVICE FEATUREs covered by a service. Answers a ServiceFeaturesRequest.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ServiceFeaturesDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Response with SERVICE FEATUREs available to make requests.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryDeliveryStructure">
-    <xsd:sequence>
-     <xsd:element ref="ServiceFeature" minOccurs="0" maxOccurs="unbounded"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- =======CONNECTION LINKs discovery ====================================== -->
- <!-- ===== DS: CONNECTION LINKs Request =========================================== -->
- <xsd:element name="ConnectionLinksRequest" type="ConnectionLinksDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
-  <xsd:annotation>
-   <xsd:documentation>Requests a list of the CONNECTION LINKs covered by a Producer. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionLinksDiscoveryRequestStructure">
-  <xsd:annotation>
-   <xsd:documentation>Requests for CONNECTION LINK data for use in service requests. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryRequestStructure">
-    <xsd:sequence>
-     <xsd:group ref="ConnectionLinksDiscoveryRequestTopicGroup"/>
-     <xsd:group ref="ConnectionLinksDiscoveryRequestPolicyGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of request. Fixed </xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="ConnectionLinksDiscoveryRequestTopicGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that specify the CONNECTION LINKs to be returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:choice minOccurs="0">
-    <xsd:choice>
-     <xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="1">
-      <xsd:annotation>
-       <xsd:documentation>Rectangle containing stops of ConnectionLinks be returned.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="Circle" type="LocationStructure" minOccurs="1">
-      <xsd:annotation>
-       <xsd:documentation>Circle containing stops for ConnectionLinks  be returned. Point indicates centre, precision indicates radius</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="1">
-      <xsd:annotation>
-       <xsd:documentation>Filter the results to include only ConnectionLinks for stops assoicated with  the place .</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:choice>
-   </xsd:choice>
-   <xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only ConnectionLinks for stops assoicated with the specified line.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Filter the results to include only Stop d run by the specified OPERATOR. </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="ConnectionLinksDiscoveryRequestPolicyGroup">
-  <xsd:annotation>
-   <xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of ConnectionLinks returned. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ConnectionLinksDetailLevel" type="ConnectionLinksDetailEnumeration" default="normal" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="ConnectionLinksDetailEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Detail Levels for CONNECTION LINKs Discovery Request. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="minimum">
-    <xsd:annotation>
-     <xsd:documentation>Return only the name and identifier of the connection link.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="normal">
-    <xsd:annotation>
-     <xsd:documentation>Return name, identifier of the connection link and connected stops's identifiers.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="full">
-    <xsd:annotation>
-     <xsd:documentation>Return all available data for each connection link.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ===== DS: CONNECTION LINKs Response =========================================== -->
- <xsd:element name="ConnectionLinksDelivery" type="ConnectionLinksDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
-  <xsd:annotation>
-   <xsd:documentation>Returns the CONNECTION LINKs covered by a web service. Answers a LINEsRequest. (since SIRI 2.0)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionLinksDeliveryStructure">
-  <xsd:annotation>
-   <xsd:documentation>Response with CONNECTION LINKs available to make requests. +SIR v2.0</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractDiscoveryDeliveryStructure">
-    <xsd:sequence>
-     <xsd:element ref="AnnotatedConnectionLinkRef" minOccurs="0" maxOccurs="unbounded"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" use="required" fixed="2.1">
-     <xsd:annotation>
-      <xsd:documentation>Version number of response. Fixed.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ===== DS: SERVICE FEATURE Response =========================================== -->
+	<xsd:element name="ServiceFeaturesDelivery" type="ServiceFeaturesDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Returns the SERVICE FEATUREs covered by a service. Answers a ServiceFeaturesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ServiceFeaturesDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Response with SERVICE FEATUREs available to make requests.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryDeliveryStructure">
+				<xsd:sequence>
+					<xsd:element ref="ServiceFeature" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- =======CONNECTION LINKs discovery ====================================== -->
+	<!-- ===== DS: CONNECTION LINKs Request =========================================== -->
+	<xsd:element name="ConnectionLinksRequest" type="ConnectionLinksDiscoveryRequestStructure" substitutionGroup="AbstractDiscoveryRequest">
+		<xsd:annotation>
+			<xsd:documentation>Requests a list of the CONNECTION LINKs covered by a Producer. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionLinksDiscoveryRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Requests for CONNECTION LINK data for use in service requests. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="ConnectionLinksDiscoveryRequestTopicGroup"/>
+					<xsd:group ref="ConnectionLinksDiscoveryRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" use="required" fixed="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request. Fixed </xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="ConnectionLinksDiscoveryRequestTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the CONNECTION LINKs to be returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:choice>
+					<xsd:element name="BoundingBox" type="BoundingBoxStructure" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Rectangle containing stops of ConnectionLinks be returned.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Circle" type="LocationStructure" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Circle containing stops for ConnectionLinks  be returned. Point indicates centre, precision indicates radius</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="PlaceRef" type="xsd:normalizedString" minOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation>Filter the results to include only ConnectionLinks for stops assoicated with  the place .</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:choice>
+			<xsd:element name="LineRef" type="LineRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only ConnectionLinks for stops assoicated with the specified line.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only Stop d run by the specified OPERATOR. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ConnectionLinksDiscoveryRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of ConnectionLinks returned. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ConnectionLinksDetailLevel" type="ConnectionLinksDetailEnumeration" default="normal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Level of detail to include in response. Default is 'normal'. (since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="ConnectionLinksDetailEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Detail Levels for CONNECTION LINKs Discovery Request. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="minimum">
+				<xsd:annotation>
+					<xsd:documentation>Return only the name and identifier of the connection link.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normal">
+				<xsd:annotation>
+					<xsd:documentation>Return name, identifier of the connection link and connected stops's identifiers.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>Return all available data for each connection link.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ===== DS: CONNECTION LINKs Response =========================================== -->
+	<xsd:element name="ConnectionLinksDelivery" type="ConnectionLinksDeliveryStructure" substitutionGroup="AbstractDiscoveryDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Returns the CONNECTION LINKs covered by a web service. Answers a LINEsRequest. (since SIRI 2.0)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionLinksDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Response with CONNECTION LINKs available to make requests. +SIR v2.0</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractDiscoveryDeliveryStructure">
+				<xsd:sequence>
+					<xsd:element ref="AnnotatedConnectionLinkRef" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" use="required" fixed="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>

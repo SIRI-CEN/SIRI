@@ -1,52 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_permissions">
- <xsd:include schemaLocation="../siri_utility/siri_permissions.xsd"/>
- <xsd:include schemaLocation="siri_reference.xsd"/>
- <!-- ======================================================================= -->
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2005-03-18</Created>
-    </Date>
-    <Date>
-     <Modified>2005-03-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-03-29</Modified>
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines common permission processing elements for access control. Used for capability defintion and for confioguration access matrix.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model}siri_modelPermissions.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>CEN</Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_types.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-     <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
-	</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIGXML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+	<xsd:include schemaLocation="../siri_utility/siri_permissions.xsd"/>
+	<xsd:include schemaLocation="siri_reference.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2005-03-18</Created>
+				</Date>
+				<Date>
+					<Modified>2005-03-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-03-29</Modified>
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines common permission processing elements for access control. Used for capability defintion and for confioguration access matrix.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model}siri_modelPermissions.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>CEN</Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_types.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIGXML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -54,285 +55,285 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI XML schema. Common Permission elements. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
- </xsd:annotation>
- <xsd:complexType name="PermissionsStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for abstract permissions.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="PermissionVersionRef" type="VersionRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Version of permission set.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <!-- ======================================================================= -->
- <xsd:element name="LinePermissions">
-  <xsd:annotation>
-   <xsd:documentation>The LINEs that the participant may access.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:choice>
-    <xsd:element ref="AllowAll"/>
-    <xsd:element name="LinePermission" type="LinePermissionStructure" maxOccurs="unbounded">
-     <xsd:annotation>
-      <xsd:documentation>Participant's permission for this LINE.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="LinePermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Line Permission.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractTopicPermissionStructure">
-    <xsd:sequence>
-     <xsd:element name="LineRef" type="LineRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a LINE. whose data participant is allowed to access.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a DIRECTION of LINE. that participant is allowed to access.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="OperatorPermissions">
-  <xsd:annotation>
-   <xsd:documentation>The OPERATOR data that the participant may access.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:choice>
-    <xsd:element ref="AllowAll"/>
-    <xsd:element name="OperatorPermission" type="OperatorPermissionStructure" maxOccurs="unbounded">
-     <xsd:annotation>
-      <xsd:documentation>Participant's permission for this OPERATOR.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="OperatorPermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for OPERATOR Permission.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractTopicPermissionStructure">
-    <xsd:sequence>
-     <xsd:element name="OperatorRef" type="OperatorRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to an OPERATOR whose data participant is allowed to access.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="ConnectionLinkPermissions">
-  <xsd:annotation>
-   <xsd:documentation>The CONNECTION links that the participant may access.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexType>
-   <xsd:choice>
-    <xsd:element ref="AllowAll"/>
-    <xsd:element name="ConnectionLinkPermission" type="ConnectionLinkPermissionStructure" maxOccurs="unbounded">
-     <xsd:annotation>
-      <xsd:documentation>Participant's permission for this CONNECTION link.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-  </xsd:complexType>
- </xsd:element>
- <xsd:complexType name="ConnectionLinkPermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for CONNECTION link Permission.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractTopicPermissionStructure">
-    <xsd:sequence>
-     <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a CONNECTION link for which permission is made.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="StopMonitorPermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Monitoring Point  (LOGICAL DISPLAY) Permission.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractTopicPermissionStructure">
-    <xsd:sequence>
-     <xsd:element name="MonitoringRef" type="MonitoringRefStructure">
-      <xsd:annotation>
-       <xsd:documentation>Reference to a Stop Monitoring point (LOGICAL DISPLAY) to which permission applies.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:element name="FilterByValidityPeriod" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by VALIDITY PERIOD. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByOperatorRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by OPERATOR. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByLineRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by LINE. Default is 'true'</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByDirectionRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by DIRECTION Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByMonitoringRef" type="xsd:boolean" fixed="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by Monitoring point (LOGICAL DISPLAY). Fixed as 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByConnectionLinkRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by CONNECTION LINK. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByDestination" type="xsd:boolean" default="false">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by DESTINATION. Default is 'false'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByVehicleRef" type="xsd:boolean" default="false">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by VEHICLE. Default is 'false'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByStopPointRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by SCHEDULED STOP POINT. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByInterchangeRef" type="xsd:boolean" default="false">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by SERVICE JOURNEY INTERCHANGE. Default is 'false'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByVehicleJourneyRef" type="xsd:boolean" default="false">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by VEHICLE JOURNEY. Default is 'false'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByFacilityRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by Facility (EQUIPMENT). Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByVehicleMode" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by VEHICLE MODE. Default is 'true'. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="FilterByProductCategoryRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether results can be filtered by PRODUCT CATEGORY. Default is 'true'. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ======================================================================= -->
- <xsd:complexType name="MonitoringCapabilityAccessControlStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Monitoring Service Capability access control.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="CapabilityAccessControlStructure">
-    <xsd:sequence>
-     <xsd:element ref="CheckOperatorRef" minOccurs="0"/>
-     <xsd:element ref="CheckLineRef" minOccurs="0"/>
-     <xsd:element ref="CheckMonitoringRef" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:element name="ProductionTimetablePermission" type="ConnectionServicePermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Permission for a single participant or all participants to use an aspect of the service.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionServicePermissionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Monitoring Service Permission.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractPermissionStructure">
-    <xsd:sequence>
-     <xsd:element ref="OperatorPermissions"/>
-     <xsd:element ref="LinePermissions"/>
-     <xsd:element ref="ConnectionLinkPermissions"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="ConnectionCapabilityAccessControlStructure">
-  <xsd:annotation>
-   <xsd:documentation>Abstract type for capability access control.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="CapabilityAccessControlStructure">
-    <xsd:sequence>
-     <xsd:element ref="CheckOperatorRef" minOccurs="0"/>
-     <xsd:element ref="CheckLineRef" minOccurs="0"/>
-     <xsd:element ref="CheckConnectionLinkRef" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>If access control is supported, whether access control by CONNECTION LINK is supported. Default is 'true'.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:element name="CheckOperatorRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>If access control is supported, whether access control by OPERATOR is supported. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="CheckLineRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>If access control is supported, whether access control by LINE is supported. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="CheckMonitoringRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>If access control is supported, whether access control by monitoring point (LOGICAL DISPLAY) is supported. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="CheckConnectionLinkRef" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>If access control is supported, whether access control by CONNECTION link is supported. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI XML schema. Common Permission elements. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="PermissionsStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for abstract permissions.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PermissionVersionRef" type="VersionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Version of permission set.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ======================================================================= -->
+	<xsd:element name="LinePermissions">
+		<xsd:annotation>
+			<xsd:documentation>The LINEs that the participant may access.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="AllowAll"/>
+				<xsd:element name="LinePermission" type="LinePermissionStructure" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Participant's permission for this LINE.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="LinePermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Line Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractTopicPermissionStructure">
+				<xsd:sequence>
+					<xsd:element name="LineRef" type="LineRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a LINE. whose data participant is allowed to access.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a DIRECTION of LINE. that participant is allowed to access.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="OperatorPermissions">
+		<xsd:annotation>
+			<xsd:documentation>The OPERATOR data that the participant may access.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="AllowAll"/>
+				<xsd:element name="OperatorPermission" type="OperatorPermissionStructure" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Participant's permission for this OPERATOR.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="OperatorPermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for OPERATOR Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractTopicPermissionStructure">
+				<xsd:sequence>
+					<xsd:element name="OperatorRef" type="OperatorRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to an OPERATOR whose data participant is allowed to access.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="ConnectionLinkPermissions">
+		<xsd:annotation>
+			<xsd:documentation>The CONNECTION links that the participant may access.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="AllowAll"/>
+				<xsd:element name="ConnectionLinkPermission" type="ConnectionLinkPermissionStructure" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Participant's permission for this CONNECTION link.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ConnectionLinkPermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for CONNECTION link Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractTopicPermissionStructure">
+				<xsd:sequence>
+					<xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a CONNECTION link for which permission is made.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StopMonitorPermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Monitoring Point  (LOGICAL DISPLAY) Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractTopicPermissionStructure">
+				<xsd:sequence>
+					<xsd:element name="MonitoringRef" type="MonitoringRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to a Stop Monitoring point (LOGICAL DISPLAY) to which permission applies.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="FilterByValidityPeriod" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by VALIDITY PERIOD. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByOperatorRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by OPERATOR. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByLineRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by LINE. Default is 'true'</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByDirectionRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by DIRECTION Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByMonitoringRef" type="xsd:boolean" fixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by Monitoring point (LOGICAL DISPLAY). Fixed as 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByConnectionLinkRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by CONNECTION LINK. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByDestination" type="xsd:boolean" default="false">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by DESTINATION. Default is 'false'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByVehicleRef" type="xsd:boolean" default="false">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by VEHICLE. Default is 'false'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByStopPointRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by SCHEDULED STOP POINT. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByInterchangeRef" type="xsd:boolean" default="false">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by SERVICE JOURNEY INTERCHANGE. Default is 'false'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByVehicleJourneyRef" type="xsd:boolean" default="false">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by VEHICLE JOURNEY. Default is 'false'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByFacilityRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by Facility (EQUIPMENT). Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByVehicleMode" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by VEHICLE MODE. Default is 'true'. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilterByProductCategoryRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether results can be filtered by PRODUCT CATEGORY. Default is 'true'. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="MonitoringCapabilityAccessControlStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Monitoring Service Capability access control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="CapabilityAccessControlStructure">
+				<xsd:sequence>
+					<xsd:element ref="CheckOperatorRef" minOccurs="0"/>
+					<xsd:element ref="CheckLineRef" minOccurs="0"/>
+					<xsd:element ref="CheckMonitoringRef" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="ProductionTimetablePermission" type="ConnectionServicePermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Permission for a single participant or all participants to use an aspect of the service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionServicePermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Monitoring Service Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractPermissionStructure">
+				<xsd:sequence>
+					<xsd:element ref="OperatorPermissions"/>
+					<xsd:element ref="LinePermissions"/>
+					<xsd:element ref="ConnectionLinkPermissions"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ConnectionCapabilityAccessControlStructure">
+		<xsd:annotation>
+			<xsd:documentation>Abstract type for capability access control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="CapabilityAccessControlStructure">
+				<xsd:sequence>
+					<xsd:element ref="CheckOperatorRef" minOccurs="0"/>
+					<xsd:element ref="CheckLineRef" minOccurs="0"/>
+					<xsd:element ref="CheckConnectionLinkRef" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>If access control is supported, whether access control by CONNECTION LINK is supported. Default is 'true'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="CheckOperatorRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>If access control is supported, whether access control by OPERATOR is supported. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CheckLineRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>If access control is supported, whether access control by LINE is supported. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CheckMonitoringRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>If access control is supported, whether access control by monitoring point (LOGICAL DISPLAY) is supported. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CheckConnectionLinkRef" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>If access control is supported, whether access control by CONNECTION link is supported. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 </xsd:schema>
