@@ -43,43 +43,49 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-					<Project>CEN TC278 WG3 SG6</Project>
-				</Subject>
-				<Title>IFOPT Fixed Objects in Public Transport - mode Types. </Title>
-				<Type>Standard</Type>
-			</Metadata>
-		</xsd:appinfo>
-		<xsd:documentation>Mode types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
-	</xsd:annotation>
-	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_model/siri_modes.xsd"/>
-	<!--======Point=======================================================================================-->
-	<xsd:simpleType name="TypeOfStopPlaceEnumeration">
-		<xsd:annotation>
-			<xsd:documentation>Allowed categories  of STOP PLACE.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="onstreetBus"/>
-			<xsd:enumeration value="onstreetTram"/>
-			<xsd:enumeration value="ferryStop"/>
-			<xsd:enumeration value="airport"/>
-			<xsd:enumeration value="railStation"/>
-			<xsd:enumeration value="metroStation"/>
-			<xsd:enumeration value="coachStation"/>
-			<xsd:enumeration value="ferryPort"/>
-			<xsd:enumeration value="harbourPort"/>
-			<xsd:enumeration value="other"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="AccessModesEnumeration">
-		<xsd:annotation>
-			<xsd:documentation>Allowed categroies of access to STOP PLACE.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="foot"/>
-			<xsd:enumeration value="bicycle"/>
-			<xsd:enumeration value="car"/>
-			<xsd:enumeration value="taxi"/>
-			<xsd:enumeration value="shuttle"/>
-		</xsd:restriction>
-	</xsd:simpleType>
+     <Project>CEN TC278 WG3 SG6</Project>
+    </Subject>
+    <Title>IFOPT Fixed Objects in Public Transport - mode Types. </Title>
+    <Type>Standard</Type>
+   </Metadata>
+  </xsd:appinfo>
+  <xsd:documentation>Mode types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
+ </xsd:annotation>
+ <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_model/siri_modes.xsd"/>
+ <!--======Point=======================================================================================-->
+ <xsd:simpleType name="TypeOfStopPlaceEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed categories  of STOP PLACE.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:string">
+   <xsd:enumeration value="onstreetBus"/>
+   <xsd:enumeration value="onstreetTram"/>
+   <xsd:enumeration value="ferryStop"/>
+   <xsd:enumeration value="airport"/>
+   <xsd:enumeration value="railStation"/>
+   <xsd:enumeration value="metroStation"/>
+   <xsd:enumeration value="coachStation"/>
+   <xsd:enumeration value="ferryPort"/>
+   <xsd:enumeration value="harbourPort"/>
+   <xsd:enumeration value="other"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+ <xsd:simpleType name="AccessModesEnumeration">
+  <xsd:annotation>
+   <xsd:documentation>Allowed categroies of access to STOP PLACE.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:restriction base="xsd:string">
+   <xsd:enumeration value="foot"/>
+   <xsd:enumeration value="bicycle"/>
+   <xsd:enumeration value="boat"/>
+   <xsd:enumeration value="car"/>
+   <xsd:enumeration value="taxi"/>
+   <xsd:enumeration value="shuttle"/>
+   <xsd:enumeration value="ski"/>
+   <xsd:enumeration value="skate"/>
+   <xsd:enumeration value="motorcycle"/>
+   <xsd:enumeration value="scooter"/>
+   <xsd:enumeration value="wheelchair"/>
+  </xsd:restriction>
+ </xsd:simpleType>
 </xsd:schema>
