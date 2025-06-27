@@ -370,7 +370,7 @@ Rail transport, Roads and road transport
 			</xsd:element>
 			<xsd:element name="situationRecordObservationTime" type="D2LogicalModel:DateTime" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>The date/time that the information represented by the current version of the SITUATIO NRecord was observed by the original (potentially external) source of the information.</xsd:documentation>
+					<xsd:documentation>The date/time that the information represented by the current version of the SITUATIONRecord was observed by the original (potentially external) source of the information.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="situationRecordVersion" type="D2LogicalModel:NonNegativeInteger" minOccurs="0">
