@@ -9,6 +9,7 @@
 			<File FilePath="xsd\siri_all_functionalServices.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_connectionMonitoring_service.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_connectionTimetable_service.xsd" HomeFolder="Yes"/>
+			<File FilePath="xsd\siri_controlAction_service.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_discovery.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_estimatedTimetable_service.xsd" HomeFolder="Yes"/>
 			<File FilePath="xsd\siri_facilityMonitoring_service.xsd" HomeFolder="Yes"/>
@@ -41,7 +42,7 @@
 				<File FilePath="xsd\siri_model\siri_all.xsd"/>
 				<File FilePath="xsd\siri_model\siri_all_journeyModel.xsd"/>
 				<File FilePath="xsd\siri_model\siri_all_model.xsd"/>
-				<File FilePath="xsd\siri_model\siri_all_situation.xsd"/>
+				<File FilePath="xsd\siri_model\siri_all_situation.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\siri_model\siri_facilities.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\siri_model\siri_feature_support.xsd" HomeFolder="Yes"/>
 				<File FilePath="xsd\siri_model\siri_interchangeJourney.xsd" HomeFolder="Yes"/>

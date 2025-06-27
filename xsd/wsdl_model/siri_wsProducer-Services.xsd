@@ -170,6 +170,23 @@ Rail transport, Roads and road transport.
 	</xsd:complexType>
 	<xsd:element name="GetProductionTimetable" type="ProductionTimetableRequestStructure"/>
 	<xsd:element name="GetProductionTimetableResponse" type="ProductionTimetableAnswerStructure"/>
+	<!-- ControlAction -->
+	<xsd:complexType name="ControlActionRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:ControlActionRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ControlActionAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:ControlActionDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetControlAction" type="ControlActionRequestStructure"/>
+	<xsd:element name="GetControlActionResponse" type="ControlActionAnswerStructure"/>
 	<!-- SituationExchange -->
 	<xsd:complexType name="SituationExchangeRequestStructure">
 		<xsd:sequence>

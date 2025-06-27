@@ -1,0 +1,1800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_ControlAction_service">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Christophe Duquesne</Creator>
+				<Date>
+					<Created>2021-09-06</Created>
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of Public Transport real-time information.</p>
+					<p>This sub-schema describes the Control Action Service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/}siri_controlAction_service.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>CEN </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_model/siri_journey.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Derived from the NOPTIS, VDV, RTIG XML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+Air transport, Airports,
+Ports and maritime transport, Ferries (marine),
+Public transport, Bus services, Coach services, Bus stops and stations,
+Rail transport, Railway stations and track, Train services, Underground trains,
+Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
+Rail transport, Roads and road transport
+</Category>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-CA XML schema. Service Interface for Real-time  Information. Subschema for Control Action Service.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation/>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri/siri_requests.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_situation.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_monitoredVehicleJourney.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_modelPermissions.xsd"/>
+	<xsd:include schemaLocation="siri_model/siri_facility.xsd"/>
+	<!--	<xsd:include schemaLocation="siri_generalMessage_service.xsd"/>-->
+	<!--TODO : MOST PROBABLY TO BE CHANGED BY PUTTING THE MESSAGE STRUCTURE IN A MORE GENERIC FILE (i.e inSIRI MODEL-->
+	<!-- ===Global import of all IFOPT namespace elements used in SIRI needed to work around XERCES limitation=====-->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_allStopPlace.xsd"/>
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="ifopt/ifopt_stop.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:group name="SiricontrolActionIndexGroup">
+		<xsd:annotation>
+			<xsd:documentation>Convenience artifact to pick out main elements of the Control Action Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ControlActionRequest"/>
+			<xsd:element ref="ControlActionMultipleRequest">
+				<xsd:annotation>
+					<xsd:documentation>Request for information about Stop Visits, i.e. arrivals and departures at multiple stops.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="ControlActionSubscriptionRequest"/>
+			<xsd:element ref="ControlActionDelivery"/>
+			<xsd:sequence>
+				<xsd:element ref="ControlActionCapabilitiesRequest"/>
+				<xsd:element ref="ControlActionCapabilitiesResponse"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====REQUESTS ====================================================== -->
+	<!-- ==== FS: Control Action Request =============================================== -->
+	<xsd:element name="ControlActionRequest" type="ControlActionRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Control Actions.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="ControlActionTopicGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that specify the content to be returned.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PreviewInterval" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Forward duration for which Visits should be included, that is, interval before predicted arrival at the stop for which to include Visits: only journeys which will arrive or depart within this time span will be returned.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StartTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Start time for PreviewInterval. If absent, then current time is assumed.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Filter the results to include only Stop Visits for VEHICLEs run by the specified OPERATOR.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OperationalUnitRef" type="OperationalUnitRefStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>OPERATIONAL UNIT responsible for managing services.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NetworkRef" type="OperatorRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a NETWORK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element ref="LineRef" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Filter the results to include only  the given line.  </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Lines" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Filter the results to include only situations along the given LINEs.</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="LineDirection" type="LineDirectionStructure" maxOccurs="unbounded">
+								<xsd:annotation>
+									<xsd:documentation>Filter the results to include only  the given line. and direction</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="IncludeDriverMessages" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Wether Driver Messages shall be included in the answer (defaulf no)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IncludeVehicleDetectings" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Wether Vehicle Detecting shall be included in the answer (defaulf no)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ControlActionRequestPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the request processing. Mostly act to reduce the number of stops returned.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Language" type="xsd:language" default="en" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Preferred languages in which to return text values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="IncludeTranslations" minOccurs="0"/>
+			<xsd:element name="IncludeSituations" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether any related SITUATIONs should be included in the ServiceDelivery. Default is 'false'. +SIRI v2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaximumNumberOfControlActions" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The maximum number of CONTROL ACTIONS elements to return in a given delivery. The most recent n Events within the look ahead window are included.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="ControlActionDetailEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Detail Levels for Control Action Request.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="minimum">
+				<xsd:annotation>
+					<xsd:documentation>Return only the minimum amount of optional data for each Stop Visit to provide a display, A time at stop, LINE name and destination name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="basic">
+				<xsd:annotation>
+					<xsd:documentation>Return minimum and other available basic details for each Stop Visit. Do not include data on times at next stop or destination.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normal">
+				<xsd:annotation>
+					<xsd:documentation>Return all basic data, and also origin VIA points and destination.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="calls">
+				<xsd:annotation>
+					<xsd:documentation>Return in addition to normal data, the CALL data for each Stop Visit, including PREVIOUS and ONWARD CALLs with passing times.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>Return all available data for each Stop Visit, including calls.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ======================================================================= -->
+	<!-- ==== FS: Control Action Multiple Request =============================================== -->
+	<xsd:complexType name="ControlActionRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Functional Service Request for Control Action Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFunctionalServiceRequestStructure">
+				<xsd:sequence>
+					<xsd:group ref="ControlActionTopicGroup"/>
+					<xsd:group ref="ControlActionRequestPolicyGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of request.  
+</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="ControlActionMultipleRequest" type="ControlActionMultipleRequestStructure" substitutionGroup="AbstractFunctionalServiceRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Stop Visits, i.e. arrivals and departures at multiple stops stop. SIRI 1.3</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ControlActionMultipleRequestStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Functional Service Request for Control Action Service on multiple stops.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractFunctionalServiceRequestStructure">
+				<xsd:sequence>
+					<xsd:element name="ControlActionFilter" type="ControlActionFilterStructure" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Request particulars for an individual stop as part of a list of multiple= requests.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" use="optional" default="2.1"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ControlActionFilterStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for an individual Control Action a Multiple Request.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="ControlActionTopicGroup"/>
+			<xsd:group ref="ControlActionRequestPolicyGroup"/>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ====Control Action Subscription Request ==================================== -->
+	<xsd:element name="ControlActionSubscriptionRequest" type="ControlActionSubscriptionStructure" substitutionGroup="AbstractFunctionalServiceSubscriptionRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for a subscription to Control Action Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="ControlActionSubscriptionPolicyGroup">
+		<xsd:annotation>
+			<xsd:documentation>Parameters that affect the subscription publishing and notification processing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="IncrementalUpdates" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the producer should return the complete set of current data, or only provide updates to the last data returned, i.e. additions, modifications and deletions.
+If false each subscription response will contain the full information as specified in this request.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="ControlActionSubscriptionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Subscription Request for Control Action Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractSubscriptionStructure">
+				<xsd:sequence>
+					<xsd:element ref="ControlActionRequest"/>
+					<xsd:sequence>
+						<xsd:group ref="ControlActionSubscriptionPolicyGroup"/>
+					</xsd:sequence>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ====RESPONSES=========================================================== -->
+	<!-- ==== FS: Control Action Delivery ==================================== -->
+	<xsd:element name="ControlActionDelivery" type="ControlActionDeliveryStructure" substitutionGroup="AbstractFunctionalServiceDelivery">
+		<xsd:annotation>
+			<xsd:documentation>Delivery for Control Action Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ControlActionDeliveryStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Control Action Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceDeliveryStructure">
+				<xsd:sequence>
+					<xsd:group ref="ControlActionPayloadGroup"/>
+					<xsd:element name="Note" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Text associated with whole delivery.  (Unbounded since SIRI 2.0)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed 
+		</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="MasterRef">
+		<xsd:choice>
+			<xsd:element name="MasterControlCaseRef" type="ControlActionRefStructure"/>
+			<xsd:element ref="SituationRef"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="ControlActionPayloadGroup">
+		<xsd:annotation>
+			<xsd:documentation>Payload part of Control Action Service delivery.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="controlActions" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Describes ControlActions</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ControlAction" type="ControlActionStructure" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="groupsOfControlActions" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Add one or more ControlActions to a set of related ControlActions.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="GroupOfControlActions" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Describes a group of control action</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="GroupOfControlActionsCode" type="xsd:NMTOKEN">
+										<xsd:annotation>
+											<xsd:documentation>Identification of the set: can be the Master Case / Situation Id</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="PurposeOfGrouping" type="NaturalLanguageStringStructure" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>Functional purpose for which GROUPs of CONTROL ACTIONs is defined. </xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+										<xsd:annotation>
+											<xsd:documentation>Contains a generic textual description of the Control Action Set (reason fro creatin the set, etc.)</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:group ref="MasterRef"/>
+									<xsd:element name="AddedControlActions" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>Codes of Control Actions added to the set (group)</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="AddedControlActionRef" type="ControlActionRefStructure" maxOccurs="unbounded">
+													<xsd:annotation>
+														<xsd:documentation>Control Action Code</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="RemovedControlActions" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>Codes of Control Actions removed from the set (group)</xsd:documentation>
+										</xsd:annotation>
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="RemovedControlActionRef" type="ControlActionRefStructure" maxOccurs="unbounded">
+													<xsd:annotation>
+														<xsd:documentation>Control Action Code</xsd:documentation>
+													</xsd:annotation>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="revokedControlActions" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Revokes one or several ControlActions</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="RevokedControlAction" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Only certain Control Actions can be revoked. Revoking will typically only shorten the time scope of a Control Action.</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:choice>
+										<xsd:element ref="ControlActionRef">
+											<xsd:annotation>
+												<xsd:documentation>Control Action Code</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ItemIdentifierRef" type="ItemRefStructure">
+											<xsd:annotation>
+												<xsd:documentation>Itemidentifier of an update of the ControlAction (only that update is revoked)</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+									<xsd:element name="RevokedFromDateTime" type="xsd:dateTime" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>Time at which the ControlAction has been revoke, or will be revoked.</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+									<xsd:element name="SourceNote" type="NaturalLanguageStringStructure" minOccurs="0">
+										<xsd:annotation>
+											<xsd:documentation>This is a note including a hint of who revoked this control action. It could include name and organisational unit of the information provider</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="driverMessages" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Set of message echnaged with dirvers</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="DriverMessage" type="DriverMessageStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Describes a message exchanges with a driver</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="vehicleDetectings" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Set of detections of Vehicles</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="VehicleDetecting" type="VehicleDetectingStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Describes a vehicle detection</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<!-- ==== WSDL=========================================-->
+	<xsd:complexType name="ControlActionDeliveriesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Deliveries for Control Action Service. Used in WSDL.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ControlActionDelivery" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Delivery for Stop Event service.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==== CA: Capability Request=================================================================== -->
+	<xsd:element name="ControlActionCapabilitiesRequest" type="ServiceCapabilitiesRequestStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesRequest">
+		<xsd:annotation>
+			<xsd:documentation>Request for information about Control Action Service Capabilities. Answered with ControlActionCapabilitiesResponse.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ==== CA: Capability Response =================================================================== -->
+	<xsd:element name="ControlActionCapabilitiesResponse" type="ControlActionCapabilitiesResponseStructure" substitutionGroup="AbstractFunctionalServiceCapabilitiesResponse">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities for Control Action Service. Answers a ControlActionCapabilitiesRequest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ControlActionCapabilitiesResponseStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Delivery for Control Action Service.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractServiceCapabilitiesResponseStructure">
+				<xsd:sequence>
+					<xsd:element ref="ControlActionServiceCapabilities" minOccurs="0"/>
+					<xsd:element ref="ControlActionPermissions" minOccurs="0"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="version" type="VersionString" default="2.1">
+					<xsd:annotation>
+						<xsd:documentation>Version number of response. Fixed </xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="ControlActionServiceCapabilities" type="ControlActionServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Capabilities of controlAction Service.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ControlActionServiceCapabilitiesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Control Action Capabilities.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractCapabilitiesStructure">
+				<xsd:sequence>
+					<xsd:element name="TopicFiltering" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Available Filtering Capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="DefaultPreviewInterval" type="PositiveDurationType" default="PT60M" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Default preview interval. Default is 60 minutes.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="ByStartTime" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether a start time other than now can be specified for preview interval. Default  is 'true'.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="FilterByMode" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by Network. Default True.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="FilterByNetworkRef" type="xsd:boolean" default="true" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether results can be filtered by Network. Default True.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="FilterByLineRef" minOccurs="0"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="RequestPolicy" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Available Request Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="ControlActionCapabilityRequestPolicyStructure">
+									<xsd:sequence>
+										<xsd:group ref="ControlActionVolumeGroup"/>
+									</xsd:sequence>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="SubscriptionPolicy" type="CapabilitySubscriptionPolicyStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Available Subscription Policy capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="AccessControl" type="MonitoringCapabilityAccessControlStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Available Optional Access control capabilities.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ResponseFeatures" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Available Optional Response capabilities.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="HasSituations" type="xsd:boolean" default="false" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation>Whether result supports SITUATION REFERENCESs. Default is 'false'. +SIRI v2.0</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ControlActionCapabilityRequestPolicyStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Monitoring Service Capability Request Policy.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="CapabilityRequestPolicyStructure">
+				<xsd:sequence>
+					<xsd:element name="HasDriverMessages" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether results can return Driver Messages. Default is 'false'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="HasVehicleDetectings" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Whether results can return Vehicle Detectings. Default is 'false'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ==== Permissions =================================================== -->
+	<xsd:element name="ControlActionPermissions">
+		<xsd:annotation>
+			<xsd:documentation>Participants permissions to use the service, Only returned if requested.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="PermissionsStructure">
+					<xsd:sequence>
+						<xsd:element name="ControlActionPermission" type="ControlActionServicePermissionStructure" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Permission for a single participant or all participants to use an aspect of the service.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:group name="ControlActionVolumeGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for volume control.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="HasMaximumControlActions" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether results can be limited to a maximum number. Default is 'true'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ====permissions=================================================================== -->
+	<xsd:complexType name="ControlActionServicePermissionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Monitoring Service Permission.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractPermissionStructure">
+				<xsd:sequence>
+					<xsd:element ref="OperatorPermissions"/>
+					<xsd:element ref="LinePermissions"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<!--   FOM NOPTIS  (updated to SIRI style)                       -->
+	<!--  *********************************************************  -->
+	<xsd:element name="ControlActionCode" type="ControlActionCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of CONTROL ACTION within a Participant.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ControlActionVersion">
+		<xsd:annotation>
+			<xsd:documentation>Type for CONTROL ACTION version number if entry is update from a previous version. Unique within Control Action, monotonically increasing.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:integer"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="AbstractControlActionHeaderStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for abstract CONTROL ACTION Header</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ItemIdentifier" type="ItemIdentifierType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of Item within data horizon of producer. Can be used to refer to the Item later for server side cleardown.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CreationTime" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Time of creation of CONTROL ACTION</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GroupOfControlActionRef" type="ItemRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a set of related ControlAction items. By specifying this element here, this Control Action is added to that group. Note that, in parallel, there are also other mechanisms to group and un-group Control Actions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="ControlActionBaseIdentityGroup">
+				<xsd:annotation>
+					<xsd:documentation>Type for reference to a CONTROL ACTION. Participant ref is optional and may be supplied from context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="ControlActionUpdateIdentityGroup">
+				<xsd:annotation>
+					<xsd:documentation>Type for reference to an update to a CONTROL ACTION.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="ControlActionBaseIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a CONTROL ACTION or an update to a CONTROL ACTION Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ParticipantRef" type="ParticipantRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of a Participant. Provides namespace for CONTROL ACTION If absent provdied from context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="ControlActionCode">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of CONTROL ACTION within a Participant. Excludes any version number.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ControlActionUpdateIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a CONTROL ACTION or an update to a CONTROL ACTION Participant ref is optional and may be supplied from context.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Version" type="ControlActionVersion" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of update version within a CONTROL ACTION Number Omit if reference to the base CONTROL ACTION</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VersionedAtTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Time at which CONTROL ACTION element was versioned. Once versioned, no further changes can be made.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="ControlActionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual CONTROL ACTION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractControlActionHeaderStructure">
+				<xsd:sequence>
+					<xsd:element name="Reason" type="ControlActionReason" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Reason for which the ControlAction is performed</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="RegistrationDateTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>This is the offical time used for penalty-decisions. It could be the time a fax or phone call laying the basis for a control action reached the transport authority.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="SourceNote" type="NaturalLanguageStringStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>This is a note including a hint of who originally supplied a manual report leading to this control action. It could include name and organisational unit of the information provider.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Contains a generic textual description of the CONTROL ACTION and additional information that can not be expressed in data (for CONTROL CENTER and PASSENGER information)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="MessageToDriver" type="NaturalLanguageStringStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Contains additional information, specific for  the driver, that can not be expressed in data.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:choice>
+						<xsd:group ref="JourneyControlAction"/>
+						<xsd:group ref="NetworkControlAction"/>
+						<xsd:group ref="InterchangeControlAction"/>
+						<xsd:group ref="VehicleControlAction"/>
+					</xsd:choice>
+					<xsd:choice minOccurs="0">
+						<xsd:element ref="SituationRef"/>
+						<xsd:element name="SituationDescription">
+							<xsd:complexType>
+								<xsd:group ref="DescriptionGroup"/>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="NeedsAssociatedPassengerInformation" type="xsd:boolean">
+							<xsd:annotation>
+								<xsd:documentation>Wether some passenger information shall be associated to this CONTROL ACTION (meaning that if no SituationRef is associated, then some information shall be created)</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="DriverMessageStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual Message exchanged with driver.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractIdentifiedItemStructure">
+				<xsd:sequence>
+					<xsd:element name="MessageIdentifier" type="EntryQualifierStructure">
+						<xsd:annotation>
+							<xsd:documentation>Identifier of MESSAGE within a Participant.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="MessageVersion" type="xsd:positiveInteger" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Optional version number of update to previosu message.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ValidUntilTime" type="xsd:dateTime" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Time until when message is valid. If absent unopen ended.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="SituationRef" minOccurs="0"/>
+					<xsd:element name="MessageHeading" type="NaturalLanguageStringStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Title of the message.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:choice>
+						<xsd:element name="MessageContents">
+							<xsd:annotation>
+								<xsd:documentation>Messages, possibly multiple if multiple languages are to be used</xsd:documentation>
+							</xsd:annotation>
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="MessageContent" type="NaturalLanguageStringStructure" maxOccurs="unbounded">
+										<xsd:annotation>
+											<xsd:documentation>Contains additional information, specific for  the driver, that can not be expressed in data. Multiplicity for multiple languages.</xsd:documentation>
+										</xsd:annotation>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="MessageCode" type="xsd:NMTOKEN">
+							<xsd:annotation>
+								<xsd:documentation>Code corresponding to the message: the code can be used to replace the message content; it has to be agreed between participant ahead of the exchange</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+					<xsd:element name="OriginatedByDriver" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>if TRUE means that the message was originated by the driver (defauld FALSE, meaning that the Message is sent to the driver)</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="CallForMeans" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>if TRUE means that it is a message sent to a PARKING POINT to ask for the disposal of  resources in stand-by.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="CallForRepairs" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>if TRUE means that it is a message sent to a sent to a GARAGE to ask for repair of a VEHICLE.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="DiverScope">
+						<xsd:annotation>
+							<xsd:documentation>Identification of the DRIVER</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:choice>
+								<xsd:element name="EmployeeRef" type="xsd:normalizedString">
+									<xsd:annotation>
+										<xsd:documentation>Reference to the concerned employee (most probably the driver)</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="DutyRef" type="xsd:normalizedString">
+									<xsd:annotation>
+										<xsd:documentation>Reference to the concerned duty (work to be performed by a driver on a particular day)</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element ref="VehicleRef"/>
+								<xsd:group ref="JourneyScope">
+									<xsd:annotation>
+										<xsd:documentation>Reference to the concerned journey</xsd:documentation>
+									</xsd:annotation>
+								</xsd:group>
+							</xsd:choice>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="formatRef" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>Reference to a format of the Content. If absent, free text.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="VehicleDetectingStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for individual Vehicle Detecting information structure. Based on the TRANSMODEL's VEHICLE DETECTING and associated LOG ENTRY model. Limited to position and speed detection. Limited to position and speed detection. 
+Note that this is NOT the tracking of the vehicle position (see VehicleMonitoring for this) but the detecting of a passing vehicle by a fixed device (nearby, under/connected to the rail or the road used by the vehicle)
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="VehicleDetectingLogEntryGroup"/>
+			<xsd:element ref="Extensions" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="VehicleDetectingLogEntryGroup">
+		<xsd:annotation>
+			<xsd:documentation>LOG ENTRY for the DETECTING</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="LogEntryGroup"/>
+			<xsd:element name="DetectingLocation" type="LocationStructure">
+				<xsd:annotation>
+					<xsd:documentation>Current geospatial location of DETECTING device (NOT THE VEHICLE LOCATION)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DetectedSpeed" type="xsd:positiveInteger" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Speed of the detected vehicle (in kilometers per hour)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DetectingEquipmentRef" type="FacilityRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the Equimpent that triggered the detection (expected to be defined in a static data set, possibly a NeTEx ActivatedEquipment or ActivationPoint).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TypeOfDetecting" type="TypeOfValueStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Open type associated with te detection (could be some weight range, length range, etc.)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MeasuredValue" type="xsd:decimal" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Value associated to the detection (to be used together with open TypeOfDetection)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="VehicleRef" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the detected vehicle </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="JourneyScope" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the DATED VEHICLE JOURNEY associated to the detected VEHICLE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="LogEntryGroup">
+		<xsd:annotation>
+			<xsd:documentation>Generic LOG ENTRY (cf Transmodel)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Id" type="ItemIdentifierType">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of LOG ENTRY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="LoggedAtTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Date and time when that entry was first logged.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Contains a generic textual description of the LOG ENTRY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of the LOG ENTRY </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="ControlActionReason">
+		<xsd:annotation>
+			<xsd:documentation>Control Action Reason description</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StandardCategory" type="ControlActionReasonCategory" minOccurs="1"/>
+			<xsd:element name="CustomCategory" type="TypeOfValueStructure" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="ControlActionReasonCategory">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="accident"/>
+			<xsd:enumeration value="assault"/>
+			<xsd:enumeration value="vandalism"/>
+			<xsd:enumeration value="noDriver"/>
+			<xsd:enumeration value="strike"/>
+			<xsd:enumeration value="vehicleShortage"/>
+			<xsd:enumeration value="technicalFailure"/>
+			<xsd:enumeration value="vehicleBreakdown"/>
+			<xsd:enumeration value="infrastructurFailure"/>
+			<xsd:enumeration value="delays"/>
+			<xsd:enumeration value="reducedspeed"/>
+			<xsd:enumeration value="weather"/>
+			<xsd:enumeration value="congestion"/>
+			<xsd:enumeration value="roadwork"/>
+			<xsd:enumeration value="changedRoute"/>
+			<xsd:enumeration value="traficIncident"/>
+			<xsd:enumeration value="earlydeparture"/>
+			<xsd:enumeration value="wrongRoute"/>
+			<xsd:enumeration value="policeDecision"/>
+			<xsd:enumeration value="safety"/>
+			<xsd:enumeration value="smoke"/>
+			<xsd:enumeration value="medical"/>
+			<xsd:enumeration value="heavyload"/>
+			<xsd:enumeration value="restoreOperation"/>
+			<xsd:enumeration value="maintenance"/>
+			<xsd:enumeration value="serviceInfo"/>
+			<xsd:enumeration value="marketingInfo"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:group name="JourneyControlAction">
+		<xsd:choice>
+			<xsd:element name="JourneyCreation" type="JourneyCreation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in adding a completely new DATED VEHICLE JOURNEY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="JourneyCancellation" type="JourneyCancellation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in deleting a DATED VEHICLE JOURNEY from the latest valid plan.
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PartialJourneyCancellation" type="CallCancellationActionStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in assigning a JOURNEY PATTERN that is a subset of the original JOURNEY PATTERN to a DATED VEHICLE JOURNEY; thus specifically expressing that a part of a DATED VEHICLE JOURNEY has been cancelled.
+Can be used for shortened journeys and when stops are bypassed by certain journeys</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FlexibleJourneyActivation" type="FlexibleJourneyActivation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in activating a DATED VEHICLE JOURNEY that has an activation (i.e.  booking) pre-condition.
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ChangeOfJourneyPattern" type="JourneyPatternModification" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A CONTROL ACTION consisting in assigning a new JOURNEY PATTERN (and possibly the ROUTE supporting it) to a DATED VEHICLE JOURNEY.
+Can be used  when stops are replaced by other stops on certain journeys</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ChangeOfJourneyTiming" type="ChangeOfJourneyTiming" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Simplified view mixing Transmodel,’s RESPACING, RESORPTION, DEPARTURE LAG and DEPARTURE EXCHANGE (all resulting in some changes in the passing times)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:group name="NetworkControlAction">
+		<xsd:choice>
+			<xsd:element name="ChangeOfStopPointStatus" type="ChangeOfStopPointStatus" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>This report can be used when a stop is closed for all journeys.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:group name="InterchangeControlAction">
+		<xsd:choice>
+			<xsd:element name="InterchangeCreation" type="ExtraConnection" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in adding a completely new DATED VEHICLE JOURNEY INTERCHANGE between a feeder DATED VEHICLE JOURNEY and a distributor DATED VEHICLE JOURNEY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InterchangeCancellation" type="CancelledConnection" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION consisting in deleting a DATED VEHICLE JOURNEY INTERCHANGE from the latest valid plan so that a distributor DATED VEHICLE JOURNEY no longer needs to wait for a feeder DATED VEHICLE JOURNEY.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="InterchangeModification" type="ModifiedConnection" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>CONTROL ACTION expressing that the duration a distributor DATED VEHICLE  JOURNEY needs to wait for a feeder DATED VEHICLE JOURNEY in a DATED VEHICLE JOURNEY INTERCHANGE is changed or that a different DATED VEHICLE JOURNEY is to wait for the feeder.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:group name="VehicleControlAction">
+		<xsd:sequence>
+			<xsd:element name="VehicleWorkAssignment" type="VehicleWorkAssignment" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The assignment, or the cancellation of an assignment, of a LOGICAL VEHICLE to a planned work, represented as DATED BLOCKs or as DATED VEHICLE JOURNEYs. This assignment may be overridden by a further assignment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="MiddleCallStructure">
+		<xsd:annotation>
+			<xsd:documentation>Call being neither the begining or the end ot the JOURNEY</xsd:documentation>
+		</xsd:annotation>
+		<xsd:group ref="AimedXCallGroup"/>
+	</xsd:complexType>
+	<!-- =====AimedX Call====================================================== -->
+	<xsd:group name="AimedXCallGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements describing the targeted CALL of a VEHICLE at a stop.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PointInJourneyPattern" type="PointInJourneyPatternRef"/>
+			<xsd:group ref="AimedXVehicleArrivalGroup"/>
+			<xsd:group ref="AimedXVehicleDepartureGroup"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="AimedXVehicleArrivalGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements describing the arrival of a VEHICLE at a stop.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="AimedArrivalTime" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="AimedXVehicleDepartureGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements describing the departure of a VEHICLE from a stop.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="AimedDepartureTime" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="TargetPoint">
+		<xsd:sequence>
+			<xsd:group ref="PointRefGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="ChangedPoints">
+		<xsd:sequence>
+			<xsd:element name="ChangedPoint" type="ModifiedPointInJourneyPattern" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="ModifiedPointInJourneyPattern">
+		<xsd:sequence>
+			<xsd:annotation>
+				<xsd:documentation>Either or both of TargetDeparturePoint and TargetArrivalPoint must be supplied.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:element name="TimetabledPointInJourneyPatternRef" type="PointInJourneyPatternRef">
+				<xsd:annotation>
+					<xsd:documentation>If attribute VisitCount is omitted then there will be no filtering based on VisitCount. I.e. if this stop is visited several times in the same vehicle journey then all those calls are affected.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TargetArrivalPoint" type="TargetPoint" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>New point to be used for arrival</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TargetDeparturePoint" type="TargetPoint" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>New point to be used for departure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="JourneyPatternModification">
+		<xsd:sequence>
+			<xsd:group ref="JourneyScope">
+				<xsd:annotation>
+					<xsd:documentation>Identification of the DATED VEHICLE JOURNEY to be changed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:element name="ChangedPoints" type="ChangedPoints">
+				<xsd:annotation>
+					<xsd:documentation>List of modified points</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="CallCancellationActionStructure">
+		<xsd:sequence>
+			<xsd:group ref="PartialJourneyScope"/>
+			<xsd:element name="ConcernsArrivals" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the cancellation concerns arrivals (default is “true”)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ConcernsDepartures" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the cancellation concerns departures (default is “true”)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="JourneyCancellation">
+		<xsd:group ref="JourneyScope">
+			<xsd:annotation>
+				<xsd:documentation>Simple Journey Scope</xsd:documentation>
+			</xsd:annotation>
+		</xsd:group>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="FlexibleJourneyActivation">
+		<xsd:annotation>
+			<xsd:documentation>To revoke this operation use JourneyCancellation.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure"/>
+			<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+			<xsd:element name="TypeOfActivatedJourney" type="TypeOfActivatedJourneyEnumeration" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="VehicleWorkAssignment">
+		<xsd:annotation>
+			<xsd:documentation/>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="VehicleRef"/>
+			<xsd:element name="DeAssignment" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>if "true" this information is a deassignment (defaulf "false")</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DriverRef" type="xsd:NMTOKEN" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>A reference to the DRIVER or Crew currently logged in to operate a monitored VEHICLE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DriverName" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The name of the Driver or Crew </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<!--NOPTIS-CHANGE: >>BlockRefStructure -->
+				<xsd:element name="DatedBlockRef" type="BlockRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Reference to a DATED BLOCK</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Reference to a DATED VEHICLE JOURNEY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="JourneyCreation">
+		<xsd:annotation>
+			<xsd:documentation>.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:sequence>
+				<xsd:element name="Start" type="JourneyStartStructure">
+					<xsd:annotation>
+						<xsd:documentation>Starting point of the new journey (mandatory even if it is the same as the one of a cloned VEHICEL JOURNEY or reference JOURNEY PATTERN) </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="End" type="JourneyEndStructure" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Only required if the created journey ends before the last point in the cloned vehicle journey or referenced journey pattern.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:element name="ClonedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to the VEHICLE JOURNEY used as model: timings are to be recalculated using the departure time provided in Start and using the run times of the referenced VEHICLE JOURNEY,  all other characteristics of the VEHICLE JOURNEY remains identical.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="JourneyPatternRef" type="JourneyPatternRefStructure">
+						<xsd:annotation>
+							<xsd:documentation>Reference to the JOURNEY PATTERN on which the newly created VEHICLE JOURNEY runs</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:sequence>
+						<!--					<xsd:element name="MiddleCall" type="Call" minOccurs="0" maxOccurs="unbounded"/> NOPTIS-CHANGE: Change to regular SIRI Calls -->
+						<xsd:element name="MiddleCall" type="MiddleCallStructure" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Aimed Calls of the newly created VEHICLE JOURNEY (excluding Start, and End if it is provided)</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<!-- NOPTIS-CHANGE: Change to regular SIRI MonitoredCalls => NO, Middlecall -->
+					</xsd:sequence>
+				</xsd:sequence>
+			</xsd:choice>
+			<xsd:element name="ReinforcedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the VEHICLE JOURNEY that the newly created VEHICLE JOURNEY may reinforce</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+			<xsd:element name="NewJourneyCode" type="DatedVehicleJourneyCodeType" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Identifier for the newly created VEHICLE JOURNEY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!--NOPTIS-CHANGE: attribute>>element + NewJourneyGid>>NewJourneyCode -->
+			<!--		<xsd:attribute name="InformPassengersCondition" type="InformPassengersCondition" use="optional" default="ALWAYS"/>  NOPTIS-CHANGE: InformPassengersCondition>>SituationRef : CA service does not do PI... this is for SX ! -->
+			<xsd:element name="OperatingDayDate" type="xsd:date" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Defaults to current date</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="ChangeOfJourneyTiming">
+		<xsd:sequence>
+			<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure"/>
+			<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+			<xsd:element name="TypeOfChange" type="ChangeOfJourneyTimingTypeEnumeration">
+				<xsd:annotation>
+					<xsd:documentation>Type/reason for the change (respacing, resorption, etc.)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="RelativeTime" type="RelativeTime">
+					<xsd:annotation>
+						<xsd:documentation>Changes to subsequent Calls can be applied using different change models. MINIMAL, LINEAR, STATISTIC</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="TimedCalls" type="TimedCalls"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="StopRefs">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:choice>
+				<!--				<xsd:element name="StopAreaRef" type="StopAreaRefStructure"/>-->
+				<xsd:element ref="StopPointRef"/>
+				<xsd:element ref="ifopt:StopPlaceRef"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="ChangeOfStopPointStatus">
+		<xsd:sequence>
+			<xsd:element name="StopRefs" type="StopRefs"/>
+			<xsd:element name="TimeScope" type="StopPointStatusTimeScope"/>
+			<xsd:element name="Status" type="StopPlaceStatusEnumeration" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>New status of the stop (valid for all journeys/calls using it)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- *********************************************************  -->
+	<xsd:complexType name="AllocatedStopPoint">
+		<xsd:sequence minOccurs="0">
+			<xsd:annotation>
+				<xsd:documentation>The allocated journey pattern point. Should only be provided if it differs from the planned journey pattern point.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:group ref="PointRefGroup" minOccurs="0"/>
+			<xsd:element name="ReservedFromDateTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Stop point is not available before this time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ReservedUptoDateTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Stop point is not available from this time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="StopPointAllocation">
+		<xsd:sequence>
+			<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure"/>
+			<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+			<xsd:element name="Point" type="PointInJourneyPatternRef">
+				<xsd:annotation>
+					<xsd:documentation>If attribute VisitCount is omitted then VisitCount = 1 is assumed. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="TargetPoint" type="AllocatedStopPoint"/>
+				<xsd:sequence>
+					<xsd:element name="TargetArrivalPoint" type="AllocatedStopPoint"/>
+					<xsd:element name="TargetDeparturePoint" type="AllocatedStopPoint"/>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="JourneyStartStructure">
+		<xsd:sequence>
+			<!--		<xsd:element name="EarliestDepartureDateTime" type="xsd:dateTime" minOccurs="1"/> NOPTIS-CHANGE: attribute>>element + moved to window -->
+			<!--NOPTIS-CHANGE: attribute>>element + VisitCount >> VisitNumber-->
+			<!--NOPTIS-CHANGE: added to complement visitnumber -->
+			<xsd:element name="PointInJourneyPattern" type="PointInJourneyPatternRef"/>
+			<xsd:element name="AimedDepartureDateTime" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Aimed departure time from the described point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="JourneyEndStructure">
+		<xsd:sequence>
+			<!--	<xsd:attribute name="LatestArrivalDateTime" type="xsd:dateTime" use="required"/> NOPTIS-CHANGE: attribute>>element + moved to window -->
+			<!--NOPTIS-CHANGE: attribute>>element + VisitCount >> VisitNumber-->
+			<!--NOPTIS-CHANGE: added to complement visitnumber -->
+			<xsd:element name="PointInJourneyPattern" type="PointInJourneyPatternRef"/>
+			<xsd:element name="AimedLatestDateTime" type="xsd:dateTime">
+				<xsd:annotation>
+					<xsd:documentation>Latest aimed arrival time at the described point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="RelativeTime">
+		<xsd:sequence>
+			<xsd:element name="FromPointInJourneyPatternRef" type="PointInJourneyPatternRef" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Point from which the change occurs (included)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Offset" type="xsd:duration">
+				<xsd:annotation>
+					<xsd:documentation>Offset, positive or negative, to be applied to all PASSING TIME of the DATED VEHICLE JOURNEY from the specified POINT IN JOURNEY PATTERN</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ChangeModel" type="ChangeModelEnumeration" default="minimal" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="TimedCalls">
+		<xsd:sequence>
+			<xsd:element name="TimedCall" type="MiddleCallStructure" maxOccurs="unbounded"/>
+			<!--NOPTIS-CHANGE: TimedCall>>MonitoredCall  => NO, Middlecall-->
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="StopPointStatusTimeScope">
+		<xsd:sequence>
+			<xsd:element name="FromDateTime" type="xsd:dateTime" minOccurs="1"/>
+			<xsd:element name="UptoDateTime" type="xsd:dateTime" minOccurs="1"/>
+			<xsd:element name="FromTimeOffset" type="TimeOffset" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>If FromTimeOffset is provided UptoTimeOffset must also be provided. If provided these two values further restricts the control action to only apply during part of each day that is within FromDateTime - UptoDateTime period. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="UptoTimeOffset" type="TimeOffset" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>If the value of UptoTimeOffset is less than FromTimeOffset it should be interpreted as beeing on the following date.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:simpleType name="TimeOffset">
+		<xsd:annotation>
+			<xsd:documentation>Time from midnight expressed as hh:mm:ss.sss</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:time"/>
+	</xsd:simpleType>
+	<!--  *********************************************************  -->
+	<xsd:group name="JourneyScope">
+		<xsd:choice>
+			<xsd:sequence>
+				<xsd:group ref="SimplifiedJourneyScope"/>
+				<xsd:element name="TimeScope" type="ifopt:ValidityConditionStructure">
+					<xsd:annotation>
+						<xsd:documentation>Time scope of the DATED VEHICLE JOURNEY</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!--NOPTIS-CHANGE:TimeScope >>ValidityConditionStructure -->
+				<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Reference to the OPERATOR of the DATED VEHICLE JOURNEY to cancel</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!--NOPTIS-CHANGE: >>OperatorRefStructure -->
+			</xsd:sequence>
+			<xsd:sequence>
+				<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure">
+					<xsd:annotation>
+						<xsd:documentation>Identification of the DATED VEHICLE JOURNEY to cancel</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+			</xsd:sequence>
+		</xsd:choice>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:group name="PartialJourneyScope">
+		<xsd:sequence>
+			<xsd:group ref="JourneyScope">
+				<xsd:annotation>
+					<xsd:documentation>Identification of the DATED VEHICLE JOURNEY to partially cancel</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+			<xsd:group ref="PartOfJourneyPatternScope">
+				<xsd:annotation>
+					<xsd:documentation>Identification of part of the DATED VEHICLE JOURNEY to cancel</xsd:documentation>
+				</xsd:annotation>
+			</xsd:group>
+		</xsd:sequence>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:group name="PartOfJourneyPatternScope">
+		<xsd:choice>
+			<xsd:element name="AllCallsBeforePointInJourneyPatterRef" type="PointInJourneyPatternRef">
+				<xsd:annotation>
+					<xsd:documentation>All Calls before this point (not include) </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="AllCallsAfterPointInJourneyPatternRef" type="PointInJourneyPatternRef">
+				<xsd:annotation>
+					<xsd:documentation>All Calls after this point (not include)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="SelectedCalls">
+				<xsd:annotation>
+					<xsd:documentation>List of  (non consecutive) Calls</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="PointInJourneyPatternRef" type="PointInJourneyPatternRef" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>If attribute VisitCount is omitted then there will be no filtering based on VisitCount. I.e. if this stop is visited several times in the same vehicle journey then all those calls are affected.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="CallsBetweenPoints">
+				<xsd:annotation>
+					<xsd:documentation>All Calls between, but not including, the from and to points.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="FromPointInJourneyPatternRef" type="PointInJourneyPatternRef">
+							<xsd:annotation>
+								<xsd:documentation>The first call at this point is assumed.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="ToPointInJourneyPatternRef" type="PointInJourneyPatternRef">
+							<xsd:annotation>
+								<xsd:documentation>The last call at this point is assumed.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:group name="JourneysWithinLineScope">
+		<xsd:choice>
+			<xsd:element ref="VehicleJourneyRef"/>
+			<xsd:element name="JourneysOnDirectionOfLineRef" type="DirectionRefStructure"/>
+		</xsd:choice>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:group name="SimplifiedJourneyScope">
+		<xsd:choice>
+			<xsd:element ref="VehicleJourneyRef"/>
+			<xsd:element name="DirectionOfLineRef" type="DirectionRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the direction of the VEHICLE JOURNEY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="LineRef"/>
+			<xsd:element name="TransportAuthorityRef" type="ifopt:AuthorityRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>AUTHORITY to which the VEHICLE JOURNEY belongs</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<!--NOPTIS-CHANGE: why not operator ? -->
+		</xsd:choice>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:group name="PointRefGroup">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="StopPointRef"/>
+				<!-- <xsd:element ref="ParkingPointRef"/> -->
+				<xsd:element ref="ifopt:StopPlaceRef"/>
+				<xsd:element name="arbitraryPoint" type="LocationStructure">
+					<xsd:annotation>
+						<xsd:documentation>Current geospatial location of VEHICLE. Measured to front of vehicle.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element name="QuayRef" type="ifopt:QuayRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a QUAY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="TimingPoint" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="PointInJourneyPatternRef">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a stop point in a JOURNEY PATTERN. If attribute VisitCount is omitted then VisitCount = 1 is assumed.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="PointRefGroup"/>
+			<xsd:element ref="VisitNumber" minOccurs="0"/>
+			<!--NOPTIS-CHANGE: attribute>>element + VisitCount >> VisitNumber-->
+			<xsd:element ref="Order" minOccurs="0"/>
+			<!--NOPTIS-CHANGE: added to complement visitnumber -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  -->
+	<xsd:complexType name="DatedCallRef">
+		<xsd:sequence>
+			<xsd:element name="DatedVehicleJourneyRef" type="FramedVehicleJourneyRefStructure"/>
+			<!--NOPTIS-CHANGE: >>FramedVehicleJourneyRefStructure -->
+			<xsd:group ref="PointRefGroup"/>
+			<xsd:element ref="VisitNumber" minOccurs="0"/>
+			<!--NOPTIS-CHANGE: attribute>>element + VisitCount >> VisitNumber-->
+			<xsd:element ref="Order" minOccurs="0"/>
+			<!--NOPTIS-CHANGE: added to complement visitnumber -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="CancelledConnection">
+		<xsd:sequence>
+			<xsd:element name="FeederCallRef" type="DatedCallRef">
+				<xsd:annotation>
+					<xsd:documentation>Call from which the interchange is starting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FetcherCallRef" type="DatedCallRef">
+				<xsd:annotation>
+					<xsd:documentation>Call to which the interchange is ending</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="ModifiedConnection">
+		<xsd:sequence>
+			<xsd:element name="FeederCallRef" type="DatedCallRef">
+				<xsd:annotation>
+					<xsd:documentation>Call from which the interchange is starting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="OriginalFetcherCallRef" type="DatedCallRef">
+				<xsd:annotation>
+					<xsd:documentation>Call to which the interchange was initially ending</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NewFetcherCallRef" type="DatedCallRef" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Call to which the interchange is now ending</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="WaitForFeederUntilDateTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Update time up to when the fetcher waits for the feeder (arriving vehicle).
+Not expressed anymore as duration since the waiting may have already started.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--  *********************************************************  -->
+	<xsd:complexType name="ExtraConnection">
+		<xsd:sequence>
+			<xsd:element name="FeederCallRef" type="DatedCallRef">
+				<xsd:annotation>
+					<xsd:documentation>Call from which the interchange is starting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FetcherCallRef" type="DatedCallRef">
+				<xsd:annotation>
+					<xsd:documentation>Call to which the interchange is ending</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaxWaitForFeederDuration" type="xsd:duration" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>Maximum waiting time for the feeder at this new  INTERCHANGE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MinChangeDuration" type="xsd:duration" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Minimum duration needed for a passenger to use  the INTERCHANGE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StaySeated" type="xsd:boolean" default="false" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the interchange has the same physical vehicle is both the feeder and the fetcher, allowing passenger to stay in the vehicle.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IsExposedToStaff" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether the staff should be informed of this INTERCHANGE
+Default is true</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IsExposedToPassengers" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether passengers should be informed of this INTERCHANGE
+Default is true</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- ==ControlAction Reference ================================================================== -->
+	<!-- Moved to sisi_references to allow references from other services
+
+	<xsd:element name="ControlActionRef" type="ControlActionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a ControlAction associated with the element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ControlActionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a ControlAction.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="ItemRefStructure"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	-->
+	<!--Ressource types from RII-SharedTypes -->
+	<!--  -->
+	<xsd:simpleType name="ChangeModelEnumeration">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="minimal"/>
+			<xsd:enumeration value="linear"/>
+			<xsd:enumeration value="statistic"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--  -->
+	<xsd:simpleType name="StopPlaceStatusEnumeration">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="limitedAccess"/>
+			<xsd:enumeration value="closed"/>
+			<xsd:enumeration value="attention"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--  -->
+	<xsd:simpleType name="ChangeOfJourneyTimingTypeEnumeration">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="respacing"/>
+			<xsd:enumeration value="resorption"/>
+			<xsd:enumeration value="departureLag"/>
+			<xsd:enumeration value="interchangeSecuring"/>
+			<xsd:enumeration value="trafic"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--  -->
+	<xsd:simpleType name="TypeOfActivatedJourneyEnumeration">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="virtualLineJourney"/>
+			<xsd:enumeration value="otherFlexibleJourney"/>
+			<xsd:enumeration value="planedReplacement"/>
+			<xsd:enumeration value="planedReinforcement"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
