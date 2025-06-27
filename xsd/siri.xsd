@@ -55,226 +55,226 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport.
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>XSD elements for WSDL Consumer (Document Wrapped style) interface for SIRI XML schema. Service Interface for Real Time Information relating to Public Transport Operations. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
- </xsd:annotation>
- <!-- Request headers -->
- <xsd:complexType name="WsServiceRequestInfoStructure">
-  <xsd:complexContent>
-   <xsd:extension base="siri:ContextualisedRequestStructure"/>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ConnectionMonitoring -->
- <xsd:complexType name="WsConnectionMonitoringRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:ConnectionMonitoringRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="WsConnectionMonitoringAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:ConnectionMonitoringDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetConnectionMonitoring" type="WsConnectionMonitoringRequestStructure"/>
- <xsd:element name="GetConnectionMonitoringResponse" type="WsConnectionMonitoringAnswerStructure"/>
- <!-- ConnectionTimetable -->
- <xsd:complexType name="WsConnectionTimetableRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:ConnectionTimetableRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="WsConnectionTimetableAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:ConnectionTimetableDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetConnectionTimetable" type="WsConnectionTimetableRequestStructure"/>
- <xsd:element name="GetConnectionTimetableResponse" type="WsConnectionTimetableAnswerStructure"/>
- <!-- EstimatedTimetable -->
- <xsd:complexType name="WsEstimatedTimetableRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:EstimatedTimetableRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="WsEstimatedTimetableAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:EstimatedTimetableDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetEstimatedTimetable" type="WsEstimatedTimetableRequestStructure"/>
- <xsd:element name="GetEstimatedTimetableResponse" type="WsEstimatedTimetableAnswerStructure"/>
- <!-- FacilityMonitoring -->
- <xsd:complexType name="WsFacilityMonitoringRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:FacilityMonitoringRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="WsFacilityMonitoringAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:FacilityMonitoringDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetFacilityMonitoring" type="WsFacilityMonitoringRequestStructure"/>
- <xsd:element name="GetFacilityMonitoringResponse" type="WsFacilityMonitoringAnswerStructure"/>
- <!-- GeneralMessage -->
- <xsd:complexType name="GeneralMessageRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:GeneralMessageRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="GeneralMessageAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:GeneralMessageDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetGeneralMessage" type="GeneralMessageRequestStructure"/>
- <xsd:element name="GetGeneralMessageResponse" type="GeneralMessageAnswerStructure"/>
- <!-- ProductionTimetable -->
- <xsd:complexType name="ProductionTimetableRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:ProductionTimetableRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="ProductionTimetableAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:ProductionTimetableDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetProductionTimetable" type="ProductionTimetableRequestStructure"/>
- <xsd:element name="GetProductionTimetableResponse" type="ProductionTimetableAnswerStructure"/>
- <!-- ControlAction -->
- <xsd:complexType name="ControlActionRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:ControlActionRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="ControlActionAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:ControlActionDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetControlAction" type="ControlActionRequestStructure"/>
- <xsd:element name="GetControlActionResponse" type="ControlActionAnswerStructure"/>
- <!-- SituationExchange -->
- <xsd:complexType name="SituationExchangeRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:SituationExchangeRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="SituationExchangeAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:SituationExchangeDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetSituationExchange" type="SituationExchangeRequestStructure"/>
- <xsd:element name="GetSituationExchangeResponse" type="SituationExchangeAnswerStructure"/>
-<!-- StopMonitoring -->
- <xsd:complexType name="StopMonitoringRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:StopMonitoringRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="StopMonitoringMultipleRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:StopMonitoringMultipleRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="StopMonitoringAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:StopMonitoringDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetStopMonitoring" type="StopMonitoringRequestStructure"/>
- <xsd:element name="GetMultipleStopMonitoring" type="StopMonitoringMultipleRequestStructure"/>
- <xsd:element name="GetStopMonitoringResponse" type="StopMonitoringAnswerStructure"/>
- <xsd:element name="GetMultipleStopMonitoringResponse" type="StopMonitoringAnswerStructure"/>
- <!-- StopTimetable -->
- <xsd:complexType name="StopTimetableRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:StopTimetableRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="StopTimetableAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:StopTimetableDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetStopTimetable" type="StopTimetableRequestStructure"/>
- <xsd:element name="GetStopTimetableResponse" type="StopTimetableAnswerStructure"/>
- <!-- VehicleMonitoring -->
- <xsd:complexType name="VehicleMonitoringRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Request" type="siri:VehicleMonitoringRequestStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="VehicleMonitoringAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="Answer" type="siri:VehicleMonitoringDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetVehicleMonitoring" type="VehicleMonitoringRequestStructure"/>
- <xsd:element name="GetVehicleMonitoringResponse" type="VehicleMonitoringAnswerStructure"/>
- <!-- SiriService -->
- <xsd:complexType name="GetSiriServiceRequestStructure">
-  <xsd:sequence>
-   <xsd:element name="Request" type="siri:ServiceRequestStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="GetSiriServiceAnswerStructure">
-  <xsd:sequence>
-   <xsd:element name="Answer" type="siri:ServiceDeliveryStructure" minOccurs="1" maxOccurs="1"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:element name="GetSiriService" type="GetSiriServiceRequestStructure"/>
- <xsd:element name="GetSiriServiceResponse" type="GetSiriServiceAnswerStructure"/>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>XSD elements for WSDL Consumer (Document Wrapped style) interface for SIRI XML schema. Service Interface for Real Time Information relating to Public Transport Operations. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<!-- Request headers -->
+	<xsd:complexType name="WsServiceRequestInfoStructure">
+		<xsd:complexContent>
+			<xsd:extension base="siri:ContextualisedRequestStructure"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ConnectionMonitoring -->
+	<xsd:complexType name="WsConnectionMonitoringRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:ConnectionMonitoringRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="WsConnectionMonitoringAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:ConnectionMonitoringDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetConnectionMonitoring" type="WsConnectionMonitoringRequestStructure"/>
+	<xsd:element name="GetConnectionMonitoringResponse" type="WsConnectionMonitoringAnswerStructure"/>
+	<!-- ConnectionTimetable -->
+	<xsd:complexType name="WsConnectionTimetableRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:ConnectionTimetableRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="WsConnectionTimetableAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:ConnectionTimetableDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetConnectionTimetable" type="WsConnectionTimetableRequestStructure"/>
+	<xsd:element name="GetConnectionTimetableResponse" type="WsConnectionTimetableAnswerStructure"/>
+	<!-- EstimatedTimetable -->
+	<xsd:complexType name="WsEstimatedTimetableRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:EstimatedTimetableRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="WsEstimatedTimetableAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:EstimatedTimetableDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetEstimatedTimetable" type="WsEstimatedTimetableRequestStructure"/>
+	<xsd:element name="GetEstimatedTimetableResponse" type="WsEstimatedTimetableAnswerStructure"/>
+	<!-- FacilityMonitoring -->
+	<xsd:complexType name="WsFacilityMonitoringRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:FacilityMonitoringRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="WsFacilityMonitoringAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:FacilityMonitoringDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetFacilityMonitoring" type="WsFacilityMonitoringRequestStructure"/>
+	<xsd:element name="GetFacilityMonitoringResponse" type="WsFacilityMonitoringAnswerStructure"/>
+	<!-- GeneralMessage -->
+	<xsd:complexType name="GeneralMessageRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:GeneralMessageRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="GeneralMessageAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:GeneralMessageDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetGeneralMessage" type="GeneralMessageRequestStructure"/>
+	<xsd:element name="GetGeneralMessageResponse" type="GeneralMessageAnswerStructure"/>
+	<!-- ProductionTimetable -->
+	<xsd:complexType name="ProductionTimetableRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:ProductionTimetableRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ProductionTimetableAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:ProductionTimetableDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetProductionTimetable" type="ProductionTimetableRequestStructure"/>
+	<xsd:element name="GetProductionTimetableResponse" type="ProductionTimetableAnswerStructure"/>
+	<!-- ControlAction -->
+	<xsd:complexType name="ControlActionRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:ControlActionRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ControlActionAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:ControlActionDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetControlAction" type="ControlActionRequestStructure"/>
+	<xsd:element name="GetControlActionResponse" type="ControlActionAnswerStructure"/>
+	<!-- SituationExchange -->
+	<xsd:complexType name="SituationExchangeRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:SituationExchangeRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SituationExchangeAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:SituationExchangeDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetSituationExchange" type="SituationExchangeRequestStructure"/>
+	<xsd:element name="GetSituationExchangeResponse" type="SituationExchangeAnswerStructure"/>
+	<!-- StopMonitoring -->
+	<xsd:complexType name="StopMonitoringRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:StopMonitoringRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="StopMonitoringMultipleRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:StopMonitoringMultipleRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="StopMonitoringAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:StopMonitoringDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetStopMonitoring" type="StopMonitoringRequestStructure"/>
+	<xsd:element name="GetMultipleStopMonitoring" type="StopMonitoringMultipleRequestStructure"/>
+	<xsd:element name="GetStopMonitoringResponse" type="StopMonitoringAnswerStructure"/>
+	<xsd:element name="GetMultipleStopMonitoringResponse" type="StopMonitoringAnswerStructure"/>
+	<!-- StopTimetable -->
+	<xsd:complexType name="StopTimetableRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:StopTimetableRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="StopTimetableAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:StopTimetableDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetStopTimetable" type="StopTimetableRequestStructure"/>
+	<xsd:element name="GetStopTimetableResponse" type="StopTimetableAnswerStructure"/>
+	<!-- VehicleMonitoring -->
+	<xsd:complexType name="VehicleMonitoringRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceRequestInfo" type="WsServiceRequestInfoStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="siri:VehicleMonitoringRequestStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="VehicleMonitoringAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="ServiceDeliveryInfo" type="siri:ProducerResponseEndpointStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Answer" type="siri:VehicleMonitoringDeliveriesStructure" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AnswerExtension" type="siri:ExtensionsStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetVehicleMonitoring" type="VehicleMonitoringRequestStructure"/>
+	<xsd:element name="GetVehicleMonitoringResponse" type="VehicleMonitoringAnswerStructure"/>
+	<!-- SiriService -->
+	<xsd:complexType name="GetSiriServiceRequestStructure">
+		<xsd:sequence>
+			<xsd:element name="Request" type="siri:ServiceRequestStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="GetSiriServiceAnswerStructure">
+		<xsd:sequence>
+			<xsd:element name="Answer" type="siri:ServiceDeliveryStructure" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="GetSiriService" type="GetSiriServiceRequestStructure"/>
+	<xsd:element name="GetSiriServiceResponse" type="GetSiriServiceAnswerStructure"/>
 </xsd:schema>
