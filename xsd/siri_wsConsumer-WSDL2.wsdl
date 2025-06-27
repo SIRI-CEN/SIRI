@@ -1,102 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ======== All the structures are comming from siri.xsd ========= -->
 <description xmlns="http://www.w3.org/ns/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:siriWS="http://wsdl.siri.org.uk" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ns="http://datex2.eu/schema/1_0/1_0" xmlns:ns1="http://www.ifopt.org.uk/acsb" xmlns:ns2="http://www.ifopt.org.uk/ifopt" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:ns3="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://wsdl.siri.org.uk">
- <types>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk">
-   <xsd:include schemaLocation="wsdl_model/siri_wsConsumer-Framework.xsd"/>
-   <xsd:include schemaLocation="wsdl_model/siri_wsConsumer-Services.xsd"/>
-  </xsd:schema>
- </types>
- <interface name="SiriConsumerWsdl2Port">
-  <operation name="NotifyDataReady" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyDataReady"/>
-  </operation>
-  <operation name="NotifyHeartbeat" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyHeartbeat"/>
-  </operation>
-  <operation name="NotifySubscriptionTerminated" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifySubscriptionTerminated"/>
-  </operation>
-  <!-- == Service Specific == -->
-  <operation name="NotifyProductionTimetable" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyProductionTimetable"/>
-  </operation>
-  <operation name="NotifyEstimatedTimetable" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyEstimatedTimetable"/>
-  </operation>
-  <operation name="NotifyStopTimetable" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyStopTimetable"/>
-  </operation>
-  <operation name="NotifyStopMonitoring" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyStopMonitoring"/>
-  </operation>
-  <operation name="NotifyVehicleMonitoring" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyVehicleMonitoring"/>
-  </operation>
-  <operation name="NotifyConnectionTimetable" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyConnectionTimetable"/>
-  </operation>
-  <operation name="NotifyConnectionMonitoring" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyConnectionMonitoring"/>
-  </operation>
-  <operation name="NotifyGeneralMessage" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyGeneralMessage"/>
-  </operation>
-  <operation name="NotifyFacilityMonitoring" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyFacilityMonitoring"/>
-  </operation>
-  <operation name="NotifySituationExchange" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifySituationExchange"/>
-  </operation>
-  <operation name="NotifyControlAction" pattern="http://www.w3.org/ns/wsdl/in-only">
-   <input element="siriWS:NotifyControlAction"/>
-  </operation>
- </interface>
- <binding name="SiriConsumerWsdl2Binding" interface="siriWS:SiriConsumerWsdl2Port" type="http://www.w3.org/ns/wsdl/soap" wsoap:version="1.1" wsoap:protocol="http://www.w3.org/2006/01/soap11/bindings/HTTP/">
-  <operation ref="siriWS:NotifyDataReady">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyHeartbeat">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifySubscriptionTerminated">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyProductionTimetable">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyEstimatedTimetable">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyStopTimetable">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyStopMonitoring">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyVehicleMonitoring">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyConnectionTimetable">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyConnectionMonitoring">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyGeneralMessage">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyFacilityMonitoring">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifySituationExchange">
-   <input/>
-  </operation>
-  <operation ref="siriWS:NotifyControlAction">
-   <input/>
-  </operation>
- </binding>
- <service name="SiriConsumerWsdl2Services" interface="siriWS:SiriConsumerWsdl2Port">
-  <endpoint name="SiriWSPort" binding="siriWS:SiriConsumerWsdl2Binding" address="http://www.siri-service-location.com"/>
- </service>
+	<types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk">
+			<xsd:include schemaLocation="wsdl_model/siri_wsConsumer-Framework.xsd"/>
+			<xsd:include schemaLocation="wsdl_model/siri_wsConsumer-Services.xsd"/>
+		</xsd:schema>
+	</types>
+	<interface name="SiriConsumerWsdl2Port">
+		<operation name="NotifyDataReady" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyDataReady"/>
+		</operation>
+		<operation name="NotifyHeartbeat" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyHeartbeat"/>
+		</operation>
+		<operation name="NotifySubscriptionTerminated" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifySubscriptionTerminated"/>
+		</operation>
+		<!-- == Service Specific == -->
+		<operation name="NotifyProductionTimetable" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyProductionTimetable"/>
+		</operation>
+		<operation name="NotifyEstimatedTimetable" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyEstimatedTimetable"/>
+		</operation>
+		<operation name="NotifyStopTimetable" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyStopTimetable"/>
+		</operation>
+		<operation name="NotifyStopMonitoring" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyStopMonitoring"/>
+		</operation>
+		<operation name="NotifyVehicleMonitoring" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyVehicleMonitoring"/>
+		</operation>
+		<operation name="NotifyConnectionTimetable" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyConnectionTimetable"/>
+		</operation>
+		<operation name="NotifyConnectionMonitoring" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyConnectionMonitoring"/>
+		</operation>
+		<operation name="NotifyGeneralMessage" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyGeneralMessage"/>
+		</operation>
+		<operation name="NotifyFacilityMonitoring" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyFacilityMonitoring"/>
+		</operation>
+		<operation name="NotifySituationExchange" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifySituationExchange"/>
+		</operation>
+		<operation name="NotifyControlAction" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<input element="siriWS:NotifyControlAction"/>
+		</operation>
+	</interface>
+	<binding name="SiriConsumerWsdl2Binding" interface="siriWS:SiriConsumerWsdl2Port" type="http://www.w3.org/ns/wsdl/soap" wsoap:version="1.1" wsoap:protocol="http://www.w3.org/2006/01/soap11/bindings/HTTP/">
+		<operation ref="siriWS:NotifyDataReady">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyHeartbeat">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifySubscriptionTerminated">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyProductionTimetable">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyEstimatedTimetable">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyStopTimetable">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyStopMonitoring">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyVehicleMonitoring">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyConnectionTimetable">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyConnectionMonitoring">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyGeneralMessage">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyFacilityMonitoring">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifySituationExchange">
+			<input/>
+		</operation>
+		<operation ref="siriWS:NotifyControlAction">
+			<input/>
+		</operation>
+	</binding>
+	<service name="SiriConsumerWsdl2Services" interface="siriWS:SiriConsumerWsdl2Port">
+		<endpoint name="SiriWSPort" binding="siriWS:SiriConsumerWsdl2Binding" address="http://www.siri-service-location.com"/>
+	</service>
 </description>

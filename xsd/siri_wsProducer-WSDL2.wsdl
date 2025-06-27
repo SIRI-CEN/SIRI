@@ -1,239 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ======== All the structures are comming from siri.xsd ========= -->
 <description xmlns="http://www.w3.org/ns/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:siriWS="http://wsdl.siri.org.uk" xmlns:siri="http://www.siri.org.uk/siri" xmlns:ns="http://datex2.eu/schema/1_0/1_0" xmlns:ns1="http://www.ifopt.org.uk/acsb" xmlns:ns2="http://www.ifopt.org.uk/ifopt" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" targetNamespace="http://wsdl.siri.org.uk">
- <types>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk">
-   <xsd:include schemaLocation="wsdl_model/siri_wsProducer-Framework.xsd"/>
-   <xsd:include schemaLocation="wsdl_model/siri_wsProducer-DiscoveryCapability.xsd"/>
-   <xsd:include schemaLocation="wsdl_model/siri_wsProducer-Services.xsd"/>
-  </xsd:schema>
- </types>
- <interface name="SiriProducerWsdl2Port">
-  <!-- ====PORTS ================================================================================== -->
-  <operation name="Subscribe" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:Subscribe"/>
-   <output element="siriWS:SubscribeResponse"/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation name="DeleteSubscription" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:DeleteSubscription"/>
-   <output element="siriWS:DeleteSubscriptionResponse"/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation name="DataSupply" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:DataSupply"/>
-   <output element="siriWS:DataSupplyResponse"/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation name="CheckStatus" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:CheckStatus"/>
-   <output element="siriWS:CheckStatusResponse"/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation name="GetProductionTimetable" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetProductionTimetable"/>
-   <output element="siriWS:GetProductionTimetableResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetEstimatedTimetable" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetEstimatedTimetable"/>
-   <output element="siriWS:GetEstimatedTimetableResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetStopTimetable" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetStopTimetable"/>
-   <output element="siriWS:GetStopTimetableResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetStopMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetStopMonitoring"/>
-   <output element="siriWS:GetStopMonitoringResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetMultipleStopMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <documentation>GetMultipleStopMonitoring deprecated from Siri 2.0 (use GetSiriService instead)</documentation>
-   <input element="siriWS:GetMultipleStopMonitoring"/>
-   <output element="siriWS:GetMultipleStopMonitoringResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetVehicleMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetVehicleMonitoring"/>
-   <output element="siriWS:GetVehicleMonitoringResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetConnectionTimetable" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetConnectionTimetable"/>
-   <output element="siriWS:GetConnectionTimetableResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetConnectionMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetConnectionMonitoring"/>
-   <output element="siriWS:GetConnectionMonitoringResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetGeneralMessage" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetGeneralMessage"/>
-   <output element="siriWS:GetGeneralMessageResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetFacilityMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetFacilityMonitoring"/>
-   <output element="siriWS:GetFacilityMonitoringResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetSituationExchange" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetSituationExchange"/>
-   <output element="siriWS:GetSituationExchangeResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetControlAction" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetControlAction"/>
-   <output element="siriWS:GetControlActionResponse"/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation name="GetCapabilities" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:GetCapabilities"/>
-   <output element="siriWS:GetCapabilitiesResponse"/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation name="StopPointsDiscovery" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:StopPointsDiscovery"/>
-   <output element="siriWS:StopPointsDiscoveryResponse"/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation name="LinesDiscovery" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:LinesDiscovery"/>
-   <output element="siriWS:LinesDiscoveryResponse"/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation name="ConnectionLinksDiscovery" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <input element="siriWS:ConnectionLinksDiscovery"/>
-   <output element="siriWS:ConnectionLinksDiscoveryResponse"/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <!-- SIRI 2.x addition : global SIRI service access (access to any SIRI services) -->
-  <operation name="GetSiriService" pattern="http://www.w3.org/ns/wsdl/in-out">
-   <documentation>SIRI 2.x : Single access to any SIRI Service</documentation>
-   <input element="siriWS:GetSiriService"/>
-   <output element="siriWS:GetSiriServiceResponse"/>
-  </operation>
-  <fault name="FaultName" element="siriWS:WSErrorConditionElement"/>
-  <fault name="DeliveryFault" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
- </interface>
- <binding name="SiriProducerWsdl2Binding" interface="siriWS:SiriProducerWsdl2Port" type="http://www.w3.org/ns/wsdl/soap" wsoap:version="1.1" wsoap:protocol="http://www.w3.org/2006/01/soap11/bindings/HTTP/">
-  <!-- ====BINDINGS  ================================================================================== -->
-  <!-- ====general  services ===== -->
-  <operation ref="siriWS:Subscribe">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation ref="siriWS:DeleteSubscription">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation ref="siriWS:DataSupply">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation ref="siriWS:CheckStatus">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <!-- ====SIRI services ===== -->
-  <operation ref="siriWS:GetProductionTimetable">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetEstimatedTimetable">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetStopTimetable">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetStopMonitoring">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetMultipleStopMonitoring">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetVehicleMonitoring">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetConnectionTimetable">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetConnectionMonitoring">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetGeneralMessage">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetFacilityMonitoring">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetSituationExchange">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetControlAction">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:DeliveryFault"/>
-  </operation>
-  <operation ref="siriWS:GetCapabilities">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <!-- ====Access to any Siri Service (from 2.0) ===== -->
-  <operation ref="siriWS:GetSiriService">
-   <input/>
-   <output/>
-  </operation>
-  <!-- ====Discovery  services ===== -->
-  <operation ref="siriWS:StopPointsDiscovery">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation ref="siriWS:LinesDiscovery">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <operation ref="siriWS:ConnectionLinksDiscovery">
-   <input/>
-   <output/>
-   <outfault ref="siriWS:FaultName"/>
-  </operation>
-  <fault ref="siriWS:FaultName"/>
-  <fault ref="siriWS:DeliveryFault"/>
- </binding>
- <service name="SiriProducerWsdl2Services" interface="siriWS:SiriProducerWsdl2Port">
-  <endpoint name="SiriWSPort" binding="siriWS:SiriProducerWsdl2Binding" address="http://www.siri-service-location.com"/>
- </service>
+	<types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsdl.siri.org.uk">
+			<xsd:include schemaLocation="wsdl_model/siri_wsProducer-Framework.xsd"/>
+			<xsd:include schemaLocation="wsdl_model/siri_wsProducer-DiscoveryCapability.xsd"/>
+			<xsd:include schemaLocation="wsdl_model/siri_wsProducer-Services.xsd"/>
+		</xsd:schema>
+	</types>
+	<interface name="SiriProducerWsdl2Port">
+		<!-- ====PORTS ================================================================================== -->
+		<operation name="Subscribe" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:Subscribe"/>
+			<output element="siriWS:SubscribeResponse"/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation name="DeleteSubscription" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:DeleteSubscription"/>
+			<output element="siriWS:DeleteSubscriptionResponse"/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation name="DataSupply" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:DataSupply"/>
+			<output element="siriWS:DataSupplyResponse"/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation name="CheckStatus" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:CheckStatus"/>
+			<output element="siriWS:CheckStatusResponse"/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation name="GetProductionTimetable" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetProductionTimetable"/>
+			<output element="siriWS:GetProductionTimetableResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetEstimatedTimetable" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetEstimatedTimetable"/>
+			<output element="siriWS:GetEstimatedTimetableResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetStopTimetable" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetStopTimetable"/>
+			<output element="siriWS:GetStopTimetableResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetStopMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetStopMonitoring"/>
+			<output element="siriWS:GetStopMonitoringResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetMultipleStopMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<documentation>GetMultipleStopMonitoring deprecated from Siri 2.0 (use GetSiriService instead)</documentation>
+			<input element="siriWS:GetMultipleStopMonitoring"/>
+			<output element="siriWS:GetMultipleStopMonitoringResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetVehicleMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetVehicleMonitoring"/>
+			<output element="siriWS:GetVehicleMonitoringResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetConnectionTimetable" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetConnectionTimetable"/>
+			<output element="siriWS:GetConnectionTimetableResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetConnectionMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetConnectionMonitoring"/>
+			<output element="siriWS:GetConnectionMonitoringResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetGeneralMessage" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetGeneralMessage"/>
+			<output element="siriWS:GetGeneralMessageResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetFacilityMonitoring" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetFacilityMonitoring"/>
+			<output element="siriWS:GetFacilityMonitoringResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetSituationExchange" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetSituationExchange"/>
+			<output element="siriWS:GetSituationExchangeResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetControlAction" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetControlAction"/>
+			<output element="siriWS:GetControlActionResponse"/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation name="GetCapabilities" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:GetCapabilities"/>
+			<output element="siriWS:GetCapabilitiesResponse"/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation name="StopPointsDiscovery" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:StopPointsDiscovery"/>
+			<output element="siriWS:StopPointsDiscoveryResponse"/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation name="LinesDiscovery" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:LinesDiscovery"/>
+			<output element="siriWS:LinesDiscoveryResponse"/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation name="ConnectionLinksDiscovery" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<input element="siriWS:ConnectionLinksDiscovery"/>
+			<output element="siriWS:ConnectionLinksDiscoveryResponse"/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<!-- SIRI 2.x addition : global SIRI service access (access to any SIRI services) -->
+		<operation name="GetSiriService" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<documentation>SIRI 2.x : Single access to any SIRI Service</documentation>
+			<input element="siriWS:GetSiriService"/>
+			<output element="siriWS:GetSiriServiceResponse"/>
+		</operation>
+		<fault name="FaultName" element="siriWS:WSErrorConditionElement"/>
+		<fault name="DeliveryFault" element="siriWS:WSServiceDeliveryErrorConditionElement"/>
+	</interface>
+	<binding name="SiriProducerWsdl2Binding" interface="siriWS:SiriProducerWsdl2Port" type="http://www.w3.org/ns/wsdl/soap" wsoap:version="1.1" wsoap:protocol="http://www.w3.org/2006/01/soap11/bindings/HTTP/">
+		<!-- ====BINDINGS  ================================================================================== -->
+		<!-- ====general  services ===== -->
+		<operation ref="siriWS:Subscribe">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation ref="siriWS:DeleteSubscription">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation ref="siriWS:DataSupply">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation ref="siriWS:CheckStatus">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<!-- ====SIRI services ===== -->
+		<operation ref="siriWS:GetProductionTimetable">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetEstimatedTimetable">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetStopTimetable">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetStopMonitoring">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetMultipleStopMonitoring">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetVehicleMonitoring">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetConnectionTimetable">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetConnectionMonitoring">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetGeneralMessage">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetFacilityMonitoring">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetSituationExchange">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetControlAction">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:DeliveryFault"/>
+		</operation>
+		<operation ref="siriWS:GetCapabilities">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<!-- ====Access to any Siri Service (from 2.0) ===== -->
+		<operation ref="siriWS:GetSiriService">
+			<input/>
+			<output/>
+		</operation>
+		<!-- ====Discovery  services ===== -->
+		<operation ref="siriWS:StopPointsDiscovery">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation ref="siriWS:LinesDiscovery">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<operation ref="siriWS:ConnectionLinksDiscovery">
+			<input/>
+			<output/>
+			<outfault ref="siriWS:FaultName"/>
+		</operation>
+		<fault ref="siriWS:FaultName"/>
+		<fault ref="siriWS:DeliveryFault"/>
+	</binding>
+	<service name="SiriProducerWsdl2Services" interface="siriWS:SiriProducerWsdl2Port">
+		<endpoint name="SiriWSPort" binding="siriWS:SiriProducerWsdl2Binding" address="http://www.siri-service-location.com"/>
+	</service>
 </description>
