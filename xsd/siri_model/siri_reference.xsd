@@ -159,10 +159,10 @@ Rail transport, Roads and road transport
 		<xsd:sequence>
 			<xsd:element name="StopPointRef" type="StopPointRefStructure">
 				<xsd:annotation>
-     <xsd:documentation>
-      Preferrably a reference to a SCHEDULED STOP POINT, however profiles may choose to refer to a QUAY instead.
-      As a last resort it can also refer to a STOP PLACE, but this is discouraged as it leaves room for interpretation.
-     </xsd:documentation>
+					<xsd:documentation>
+						Preferably a reference to a SCHEDULED STOP POINT, however profiles may choose to refer to a QUAY instead.
+						As a last resort it can also refer to a STOP PLACE, but this is discouraged as it leaves room for interpretation.
+     				</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="StopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -174,8 +174,10 @@ Rail transport, Roads and road transport
 	</xsd:group>
 	<xsd:element name="StopPointRef" type="StopPointRefStructure">
 		<xsd:annotation>
-			<xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
-			<xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
+			<xsd:documentation>
+				Preferably a reference to a SCHEDULED STOP POINT, however profiles may choose to refer to a QUAY instead.
+				As a last resort it can also refer to a STOP PLACE, but this is discouraged as it leaves room for interpretation.
+			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="StopPointName" type="NaturalLanguageStringStructure">
