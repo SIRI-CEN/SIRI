@@ -31,14 +31,14 @@
 				</Date>
 				<Date>
 					<Modified>2012-03-22</Modified>
-					<!-- SIRI 2.0 
+					<!-- SIRI 2.0
        Refactor Monitoring code 
        Add QUAY Ref
       -->
 				</Date>
 				<Date>
 					<Modified>2012-06-22</Modified>
-					<!-- SIRI 2.0  
+					<!-- SIRI 2.0
        Add Group of Lines to JourneyPatternInfoGroup
        [CH] Set explicit  default value for VehicleAtStop to be false  
        [DE] Add Driver Ref
@@ -56,7 +56,7 @@
 				</Date>
 				<Date>
 					<Modified>2020-01-29</Modified>
-					<!-- SIRI 2.1  
+					<!-- SIRI 2.1
        Extra values for OccupancyEnumeration 
       -->
 				</Date>
@@ -159,8 +159,10 @@ Rail transport, Roads and road transport
 		<xsd:sequence>
 			<xsd:element name="StopPointRef" type="StopPointRefStructure">
 				<xsd:annotation>
-					<xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
-					<xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
+					<xsd:documentation>
+						Preferably a reference to a SCHEDULED STOP POINT, however profiles may choose to refer to a QUAY instead.
+						As a last resort it can also refer to a STOP PLACE, but this is discouraged as it leaves room for interpretation.
+     				</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="StopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
@@ -172,8 +174,10 @@ Rail transport, Roads and road transport
 	</xsd:group>
 	<xsd:element name="StopPointRef" type="StopPointRefStructure">
 		<xsd:annotation>
-			<xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
-			<xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
+			<xsd:documentation>
+				Preferably a reference to a SCHEDULED STOP POINT, however profiles may choose to refer to a QUAY instead.
+				As a last resort it can also refer to a STOP PLACE, but this is discouraged as it leaves room for interpretation.
+			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="StopPointName" type="NaturalLanguageStringStructure">
@@ -432,7 +436,7 @@ Rail transport, Roads and road transport
 	<!-- ==== LINE and DESTINATION elements======================================================== -->
 	<xsd:group name="JourneyPatternInfoGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elements describing the LINE, ROUTE and DIRECTION of a VEHICLE JOURNEYwhich are derived from the JOURNEY PATTERN associated with the journey. 
+			<xsd:documentation>Elements describing the LINE, ROUTE and DIRECTION of a VEHICLE JOURNEYwhich are derived from the JOURNEY PATTERN associated with the journey.
 Values for these elements can be specified on an annual schedule and will be inherited, unless overriden, onto the production timetable and then onto the individul dated VEHICLE JOURNEYs of the timetable. Each monitored journey takes its values from the dated VEHICLE JOURNEY that it follows. The absence of a value on an entity at a given level indicates that the value should be inherited (i) from any recent preceding update message for the same entity, or if there is no previous override, (ii) from its immediate parent entity.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
