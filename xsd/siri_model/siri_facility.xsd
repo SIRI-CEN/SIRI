@@ -742,6 +742,13 @@ Rail transport, Roads and road transport
 				<xsd:element ref="FacilityChangeElement" minOccurs="0"/>
 				<xsd:element ref="SituationRef" minOccurs="0" maxOccurs="unbounded"/>
 			</xsd:sequence>
+			<xsd:element name="ControlActionRef" type="ControlActionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a ControlAction having possible consequences on the EstimatedVehicleJourney.
+Note that if the ControlAction is the master ControlAction of a GroupOfControlActions it is assumed that the refence is valid for all the ControlActions of the group.
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ===Vehicle FACILITY====================================== -->
