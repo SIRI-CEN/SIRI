@@ -575,7 +575,7 @@ Rail transport, Roads and road transport
 					</xsd:element>
 					<xsd:element name="Version" type="SituationVersion" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>The monotonically inscresing version of the passenger information instance. If absent, is the same version as the enclosing Situation</xsd:documentation>
+							<xsd:documentation>The monotonically increasing version of the passenger information instance. If absent, is the same version as the enclosing Situation</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 					<xsd:element name="SourceRef" type="ParticipantRefStructure" minOccurs="0">
@@ -610,6 +610,11 @@ By default, an action does not correspond to a normalisation, i.e., has ActionIs
 					<xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation>The actual, structured passenger information for a specific TextualContentSize.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Arbitrary application specific classifiers, tags or message categories for filtering or display, for example as icons on a situation map. Overwrites Keywords on PtSituationElement level (in the context of this PassengerInformationAction).</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
