@@ -599,6 +599,14 @@ Rail transport, Roads and road transport
 1 = highest priority.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="ActionIsClosing" type="xsd:boolean" default="false" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>ActionIsClosing 'true' signals to the consuming system that the corresponding TextualContent informs passengers about a normalisation. 
+Consequently, the consuming system will display a specific symbol, understood by passengers as "traffic is normalizing" or "restrictions are lifted", in combination with the TextualContent of this action. 
+Actions corresponding to a normalisation of traffic typically have a lower display priority than other actions, i.e., should be displayed only if enough space is available.
+By default, an action does not correspond to a normalisation, i.e., has ActionIsClosing 'false'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 					<xsd:element name="TextualContent" type="TextualContentStructure" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation>The actual, structured passenger information for a specific TextualContentSize.</xsd:documentation>
