@@ -14,6 +14,10 @@
 					 SIRI Version 2.0 
 					  Refactored to improve modularisation 
 				</Date>
+				<Date><Modified>2021-09-22</Modified>
+					 SIRI Control Action
+					  Addition of Control Action service
+				</Date>
 				<Description>
 					<p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
 					<p>SIRI is defined by XMLschemas and comprises a general protocol for communication, and a modular set of functional services.
@@ -91,6 +95,7 @@ Rail transport, Roads and road transport.
 	<xsd:include schemaLocation="siri_facilityMonitoring_service.xsd"/>
 	<xsd:include schemaLocation="siri_situationExchange_service.xsd"/>
 	<xsd:include schemaLocation="siri_discovery.xsd"/>
+	<xsd:include schemaLocation="siri_controlAction_service.xsd"/>
 	<!-- END OF FUNCTIONAL SERVICES -->
 	<!-- ======================================================================= -->
 </xsd:schema>
