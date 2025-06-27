@@ -25,7 +25,7 @@ while IFS= read -r -d $'\0' filename; do
   fi
   # Remove temp file
   rm "${filename}.pretty"
-done < <(/usr/bin/find . -type f \( -name "*.xsd" -or -name "*.xml" \) -not -path "./.git/*" -print0)
+done < <(/usr/bin/find . -type f \( -name "*.xsd" -or -name "*.xml" -or -name "*.wsdl" \) -not -path "./.git/*" -print0)
 
 if [ ${PARSING_ERROR} -ne 0 ]; then
   exit ${PARSING_ERROR}
