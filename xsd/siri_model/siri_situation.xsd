@@ -14,10 +14,10 @@ siri_model\siri_situation-v2.0.xsd:
 - PublicationWindow changed to unbounded
 -->
 	<!-- ======================================================================= -->
-	<!--Needed to work around import limitation in JAXB - all namespaces. -->
+	<!-- Global import of all IFOPT namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
+	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries.xsd"/>
 	<xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="siri_situationIdentity.xsd"/>
@@ -928,7 +928,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
 					<xsd:choice>
 						<xsd:element name="AllOperators" type="EmptyType">
 							<xsd:annotation>
-								<xsd:documentation>All OPERATORs.</xsd:documentation>
+								<xsd:documentation>All OPERATORs. DEPRECATED since SIRI 2.1</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 						<xsd:element name="AffectedOperator" type="AffectedOperatorStructure" maxOccurs="unbounded">

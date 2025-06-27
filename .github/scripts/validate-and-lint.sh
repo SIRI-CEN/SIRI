@@ -12,6 +12,9 @@ echo "Validating XML file structure and linting XSD and XML files ..."
 PARSING_ERROR=0
 # Iterate all XML and XSD files
 while IFS= read -r -d $'\0' filename; do
+  if [[ "$filename" =~ \.git/ ]]; then
+    continue  # Skip files inside the .git directory
+  fi
   # Prettify the file using xmllint and save the result to ${filename}.pretty
   if XMLLINT_INDENT=$'\t' xmllint --encode UTF-8 --format --pretty 1 "${filename}" >"${filename}.pretty"; then
     # Remove lines containing the term "xmlspy" to get rid of advertising this and save the result as ${filename}

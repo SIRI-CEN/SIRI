@@ -58,7 +58,8 @@ Rail transport, Roads and road transport
 		</xsd:appinfo>
 		<xsd:documentation>Fixed Objects CHECK CONSTRAINT types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
 	</xsd:annotation>
-	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
+	<!-- Global import of all ACSB namespace elements needed to work around JAXB/XERCES/xmllint limitations -->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
 	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_types.xsd"/>
 	<xsd:include schemaLocation="ifopt_time.xsd"/>
 	<xsd:simpleType name="CheckPointIdType">

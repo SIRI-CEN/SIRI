@@ -80,11 +80,10 @@ Rail transport, Roads and road transport
 	<xsd:include schemaLocation="siri_journey.xsd"/>
 	<xsd:include schemaLocation="siri_journey_support.xsd"/>
 	<!-- ======================================================================= -->
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_equipment.xsd"/>
-	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_stop.xsd"/>
-	<!-- ======================================================================= -->
-	<!--Needed to work around import limitation in jaxb - all namespaces acsb needs to be after ifopt. -->
-	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility.xsd"/>
+	<!-- Global import of all IFOPT namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
+	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
+	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
 	<!-- ======================================================================= -->
@@ -405,6 +404,11 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
+			<xsd:element name="Location" type="LocationStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Coordinates of the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:group ref="ServiceInfoGroup"/>
 		</xsd:sequence>
 	</xsd:complexType>
