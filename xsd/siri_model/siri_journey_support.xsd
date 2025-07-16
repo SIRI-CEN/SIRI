@@ -956,6 +956,11 @@ The first class carriage of a TRAIN might, for example, be assigned to sector "A
 			</xsd:enumeration>
 			<xsd:enumeration value="secondClass ">
 				<xsd:annotation>
+					<xsd:documentation>pti23_7. -v.2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="secondClass">
+				<xsd:annotation>
 					<xsd:documentation>pti23_7</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
