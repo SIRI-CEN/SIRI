@@ -929,12 +929,12 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Timetabled arrival time of journey at Destination.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="OriginDisplayAtDestination" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="OriginDisplayAtDestination" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>DESTINATION name shown for journey at the origin. Can be Used to identify journey for user. (since SIRI 2.0), </xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>DESTINATION name shown for journey at the origin.  Can be Used to identify journey for user. (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
