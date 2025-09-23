@@ -185,7 +185,7 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Description of the destination stop (vehicle signage) to show on vehicle, Can be overwritten for a journey, and then also section by section by the entry in an Individual Call.  (Unbounded since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="LineNote" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="LineNote" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Additional Text associated with LINE.  (Unbounded since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
