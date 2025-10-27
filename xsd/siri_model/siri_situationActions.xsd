@@ -604,10 +604,13 @@ Rail transport, Roads and road transport
 							<xsd:documentation>The actual, structured passenger information for a specific TextualContentSize.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
+					<xsd:element name="Keywords" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Arbitrary application specific classifiers, tags or message categories for filtering or display, for example as icons on a situation map. Overwrites Keywords on PtSituationElement level (in the context of this PassengerInformationAction).</xsd:documentation>
+							<xsd:documentation>A whitespace-separated list of arbitrary application specific classifiers, tags or message categories for filtering or display, for example as icons on a situation map. Overwrites Keywords on PtSituationElement level (in the context of this PassengerInformationAction).</xsd:documentation>
 						</xsd:annotation>
+						<xsd:simpleType>
+							<xsd:list itemType="xsd:string"/>
+						</xsd:simpleType>
 					</xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
