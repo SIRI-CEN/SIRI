@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.siri.org.uk/siri" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_feature">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2013-03-07</Created>
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
-     <p>This subschema describes  soem code value  models used by different SIRI functional services
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2013-03-07</Created>
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN technical standard for the exchange of real-time information.</p>
+					<p>This subschema describes  soem code value  models used by different SIRI functional services
      <ul><li>Service Feature discovery</li><li>TYPE OF PRODUCT CATEGORY Discovery</li></ul>
 					</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_discovery.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/}siri_discovery.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri/siri_requests.xsd</Requires>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_reference.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Discovery services Derived from the NaPTAN standard .</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Discovery services Derived from the NaPTAN standard .</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -47,69 +48,69 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI_DS XML schema. Service Interface for Real-time  Information. Discovery subschema. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI  subschema with view of SCHEDULED CONNECTION LINKS for use in Connection Link Discovery service</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_feature.xsd"/>
- <xsd:include schemaLocation="../siri_model/siri_reference.xsd"/>
- <!-- === VIEW of SCHEDULED CONNECTION LINK ============================================== -->
- <xsd:element name="AnnotatedConnectionLinkRef" type="AnnotatedConnectionLinkStructure">
-  <xsd:annotation>
-   <xsd:documentation>SCHEDULED CONNECTION LINK definition.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="AnnotatedConnectionLinkStructure">
-  <xsd:annotation>
-   <xsd:documentation>View of a SCHEDULED CONNECTION LINK description.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Identifer of the connection link. DetailLevel=minimum </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FeederStopPointRef" type="StopPointRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifer of the feeder's stop. DetailLevel=normal </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DistributorStopPointRef" type="StopPointRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifer of the distributor's stop. DetailLevel=normal </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Whether real-time data is available for the connection link. Default is 'true'. DetailLevel=minimum </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ConnectionLinkName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of SCHEDULED CONNECTION LINK.  DetailLevel=minimum </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FeederStopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of the feeder's stop.  DetailLevel=full </xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DistributorStopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of the distributor's stop. DetailLevel=full</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Url" type="xsd:anyURI" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Web page associated with connection link. DetailLevel=full</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI_DS XML schema. Service Interface for Real-time  Information. Discovery subschema. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI  subschema with view of SCHEDULED CONNECTION LINKS for use in Connection Link Discovery service</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_feature.xsd"/>
+	<xsd:include schemaLocation="../siri_model/siri_reference.xsd"/>
+	<!-- === VIEW of SCHEDULED CONNECTION LINK ============================================== -->
+	<xsd:element name="AnnotatedConnectionLinkRef" type="AnnotatedConnectionLinkStructure">
+		<xsd:annotation>
+			<xsd:documentation>SCHEDULED CONNECTION LINK definition.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="AnnotatedConnectionLinkStructure">
+		<xsd:annotation>
+			<xsd:documentation>View of a SCHEDULED CONNECTION LINK description.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Identifer of the connection link. DetailLevel=minimum </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FeederStopPointRef" type="StopPointRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifer of the feeder's stop. DetailLevel=normal </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DistributorStopPointRef" type="StopPointRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifer of the distributor's stop. DetailLevel=normal </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Monitored" type="xsd:boolean" default="true" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Whether real-time data is available for the connection link. Default is 'true'. DetailLevel=minimum </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ConnectionLinkName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of SCHEDULED CONNECTION LINK.  DetailLevel=minimum </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FeederStopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of the feeder's stop.  DetailLevel=full </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DistributorStopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of the distributor's stop. DetailLevel=full</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Url" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Web page associated with connection link. DetailLevel=full</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
 </xsd:schema>

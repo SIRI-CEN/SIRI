@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <LinesDelivery version="2.0">
-  <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-  <Status>true</Status>
-  <AnnotatedLineRef>
-   <LineRef>Line564</LineRef>
-   <LineName xml:lang="EN">564</LineName>
-   <Monitored>true</Monitored>
-   <Destinations>
-    <Destination>
-     <DestinationRef>PLace45</DestinationRef>
-     <PlaceName xml:lang="EN">Paradise</PlaceName>
-    </Destination>
-   </Destinations>
-   <Directions>
-    <Direction>
-     <DirectionRef>DIR01</DirectionRef>
-     <DirectionName xml:lang="EN">Outbound</DirectionName>
-     <JourneyPatterns>
-      <JourneyPattern>
-       <StopsInPattern>
-        <StopPointInPattern>
-         <StopPointRef>ST001</StopPointRef>
-         <StopName xml:lang="EN">Alpha Road</StopName>
-         <Lines>
-          <LineRef>Line564</LineRef>
-          <LineRef>22</LineRef>
-         </Lines>
-         <Location>
-          <Longitude>0.11</Longitude>
-          <Latitude>53.01</Latitude>
-         </Location>
-         <Order>1</Order>
-        </StopPointInPattern>
-        <StopPointInPattern>
-         <StopPointRef>ST002</StopPointRef>
-         <StopName xml:lang="EN">Beta Street</StopName>
-         <Lines>
-          <LineRef>Line564</LineRef>
-         </Lines>
-         <Location>
-          <Longitude>0.12</Longitude>
-          <Latitude>53.02</Latitude>
-         </Location>
-         <Order>2</Order>
-        </StopPointInPattern>
-        <StopPointInPattern>
-         <StopPointRef>ST003</StopPointRef>
-         <StopName xml:lang="EN">Charley Square</StopName>
-         <StopAreaRef>SA2001</StopAreaRef>
-         <Lines>
-          <LineDirection>
-           <LineRef>Line564</LineRef>
-           <DirectionRef>NORTH</DirectionRef>
-          </LineDirection>
-          <LineRef>44</LineRef>
-         </Lines>
-         <Location>
-          <Longitude>0.13</Longitude>
-          <Latitude>53.03</Latitude>
-         </Location>
-         <Order>3</Order>
-        </StopPointInPattern>
-       </StopsInPattern>
-      </JourneyPattern>
-     </JourneyPatterns>
-    </Direction>
-    <Direction>
-     <DirectionRef>DIR02</DirectionRef>
-     <DirectionName xml:lang="EN">Inbound</DirectionName>
-    </Direction>
-   </Directions>
-  </AnnotatedLineRef>
- </LinesDelivery>
+	<LinesDelivery version="2.0">
+		<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+		<Status>true</Status>
+		<AnnotatedLineRef>
+			<LineRef>Line564</LineRef>
+			<LineName xml:lang="EN">564</LineName>
+			<Monitored>true</Monitored>
+			<Destinations>
+				<Destination>
+					<DestinationRef>PLace45</DestinationRef>
+					<PlaceName xml:lang="EN">Paradise</PlaceName>
+				</Destination>
+			</Destinations>
+			<Directions>
+				<Direction>
+					<DirectionRef>DIR01</DirectionRef>
+					<DirectionName xml:lang="EN">Outbound</DirectionName>
+					<JourneyPatterns>
+						<JourneyPattern>
+							<StopsInPattern>
+								<StopPointInPattern>
+									<StopPointRef>ST001</StopPointRef>
+									<StopName xml:lang="EN">Alpha Road</StopName>
+									<Lines>
+										<LineRef>Line564</LineRef>
+										<LineRef>22</LineRef>
+									</Lines>
+									<Location>
+										<Longitude>0.11</Longitude>
+										<Latitude>53.01</Latitude>
+									</Location>
+									<Order>1</Order>
+								</StopPointInPattern>
+								<StopPointInPattern>
+									<StopPointRef>ST002</StopPointRef>
+									<StopName xml:lang="EN">Beta Street</StopName>
+									<Lines>
+										<LineRef>Line564</LineRef>
+									</Lines>
+									<Location>
+										<Longitude>0.12</Longitude>
+										<Latitude>53.02</Latitude>
+									</Location>
+									<Order>2</Order>
+								</StopPointInPattern>
+								<StopPointInPattern>
+									<StopPointRef>ST003</StopPointRef>
+									<StopName xml:lang="EN">Charley Square</StopName>
+									<StopAreaRef>SA2001</StopAreaRef>
+									<Lines>
+										<LineDirection>
+											<LineRef>Line564</LineRef>
+											<DirectionRef>NORTH</DirectionRef>
+										</LineDirection>
+										<LineRef>44</LineRef>
+									</Lines>
+									<Location>
+										<Longitude>0.13</Longitude>
+										<Latitude>53.03</Latitude>
+									</Location>
+									<Order>3</Order>
+								</StopPointInPattern>
+							</StopsInPattern>
+						</JourneyPattern>
+					</JourneyPatterns>
+				</Direction>
+				<Direction>
+					<DirectionRef>DIR02</DirectionRef>
+					<DirectionName xml:lang="EN">Inbound</DirectionName>
+				</Direction>
+			</Directions>
+		</AnnotatedLineRef>
+	</LinesDelivery>
 </Siri>

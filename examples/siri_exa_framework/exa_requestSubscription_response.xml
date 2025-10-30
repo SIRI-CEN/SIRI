@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2014 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <SubscriptionResponse>
-  <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-  <ResponderRef>EREWHON</ResponderRef>
-  <ResponseStatus>
-   <ResponseTimestamp>2004-12-17T09:30:47-05:01</ResponseTimestamp>
-   <SubscriptionRef>0003456</SubscriptionRef>
-   <Status>true</Status>
-   <ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
-   <ShortestPossibleCycle>P1Y2M3DT10H30M</ShortestPossibleCycle>
-  </ResponseStatus>
-  <ResponseStatus>
-   <ResponseTimestamp>2004-12-17T09:30:47-05:02</ResponseTimestamp>
-   <SubscriptionRef>0003457</SubscriptionRef>
-   <Status>false</Status>
-   <ErrorCondition>
-    <NoInfoForTopicError/>
-   </ErrorCondition>
-  </ResponseStatus>
- </SubscriptionResponse>
+	<SubscriptionResponse>
+		<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+		<ResponderRef>EREWHON</ResponderRef>
+		<ResponseStatus>
+			<ResponseTimestamp>2004-12-17T09:30:47-05:01</ResponseTimestamp>
+			<SubscriptionRef>0003456</SubscriptionRef>
+			<Status>true</Status>
+			<ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
+			<ShortestPossibleCycle>P1Y2M3DT10H30M</ShortestPossibleCycle>
+		</ResponseStatus>
+		<ResponseStatus>
+			<ResponseTimestamp>2004-12-17T09:30:47-05:02</ResponseTimestamp>
+			<SubscriptionRef>0003457</SubscriptionRef>
+			<Status>false</Status>
+			<ErrorCondition>
+				<NoInfoForTopicError/>
+			</ErrorCondition>
+		</ResponseStatus>
+	</SubscriptionResponse>
 </Siri>

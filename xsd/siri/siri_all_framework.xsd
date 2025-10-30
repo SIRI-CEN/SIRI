@@ -4,9 +4,9 @@
  
  -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_all">
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_base.xsd"/>
- <xsd:include schemaLocation="siri_common_services.xsd"/>
- <xsd:include schemaLocation="siri_request_errorConditions.xsd"/>
- <xsd:include schemaLocation="siri_requests.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_base.xsd"/>
+	<xsd:include schemaLocation="siri_common_services.xsd"/>
+	<xsd:include schemaLocation="siri_request_errorConditions.xsd"/>
+	<xsd:include schemaLocation="siri_requests.xsd"/>
 </xsd:schema>

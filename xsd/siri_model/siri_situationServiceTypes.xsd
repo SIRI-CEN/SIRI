@@ -1,58 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situationServiceType">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>Add names</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-05-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-05-14</Modified>
-     <!-- [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_2" changed to "27_1_Alias_2" according to recommendation document
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>Add names</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-05-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-05-14</Modified>
+					<!-- [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_2" changed to "27_1_Alias_2" according to recommendation document
 		[vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_3" changed to "27_1_Alias_3" according to recommendation document-->
-    </Date>
-    <Date>
-     <Modified>2020-01-10</Modified>
-     <!-- SIRI 2.1
+				</Date>
+				<Date>
+					<Modified>2020-01-10</Modified>
+					<!-- SIRI 2.1
 		Align with TPEG2 PTS
 		Remove numerical values ("Pti25_0") from enumerations-->
-    </Date>
-    <Description>
-     <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes service types.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/standards/siri/schema/2.0/xsd/siri_model/}siri_situationServiceTypes.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>CEN</Publisher>
-    <Relation>
+				</Date>
+				<Description>
+					<p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes service types.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/standards/siri/schema/2.0/xsd/siri_model/}siri_situationServiceTypes.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>CEN</Publisher>
+				<Relation>
     </Relation>
-    <Rights><!--Unclassified-->
-     <Copyright>Kizoom 2000-2007, CEN 2009-2021</Copyright>
-    </Rights>
-    <Source>
-     <ul>
-      <li>Schema derived Derived from the Kizoom XTIS schema</li>
-      <li>Derived from the TPEG2 PTS schemas</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>Kizoom 2000-2007, CEN 2009-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Schema derived Derived from the Kizoom XTIS schema</li>
+						<li>Derived from the TPEG2 PTS schemas</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -60,580 +61,580 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
      </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>Xml Schema for PT Incidents. Service subschema</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <!-- ==ReportType================================= -->
- <xsd:element name="ReportType" type="ReportTypeEnumeration" default="unknown">
-  <xsd:annotation>
-   <xsd:documentation>Scope of incident - TPEG Pti27 ReportType</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="ReportTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti27 - ReportType</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="incident">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_1, incident</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="general">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_1_1, general</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="operator">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_1_2, operator</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="network">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_1_3, network</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stationTerminal">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_2, station terminal</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stopPoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_2_1, stoppoint</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="connectionLink">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_2_2, connection link</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="point">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_2_3, point</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="route">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_3, route</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="individualService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_4, individual service</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefined">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti27_255, undefined type</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ==Interchange Status Type================================= -->
- <xsd:element name="InterchangeStatusType" type="InterchangeStatusEnumeration" default="unknown">
-  <xsd:annotation>
-   <xsd:documentation>Status of a SERVICE JOURNEY INTERCHANGE - TPEG Pti31 InterchangeStatus</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="InterchangeStatusEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti31 - InterchangeStatus</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti31_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="connection">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti31_1, connection</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="replacement">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti31_2, replacement</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="alternative">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti31_3, alternative</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="connectionNotHeld">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti31_4, connection not held</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="connectionHeld">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti31_5, connection held</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="statusOfConnectionUndecided">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti31_6, status of connection undecided</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedCrossReferenceInformation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti31_255, undefined cross reference information</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="connectionChanged">
-    <xsd:annotation>
-     <xsd:documentation>Interchange is planned but was updated as a result of changes in the QUAYs or arrival/departure times. Can be used if the status is a combination of the other values. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="distributorWaitProlonged">
-    <xsd:annotation>
-     <xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders. 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>Xml Schema for PT Incidents. Service subschema</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<!-- ==ReportType================================= -->
+	<xsd:element name="ReportType" type="ReportTypeEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Scope of incident - TPEG Pti27 ReportType</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="ReportTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pti27 - ReportType</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="incident">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_1, incident</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="general">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_1_1, general</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="operator">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_1_2, operator</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="network">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_1_3, network</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stationTerminal">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_2, station terminal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopPoint">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_2_1, stoppoint</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="connectionLink">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_2_2, connection link</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="point">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_2_3, point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="route">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_3, route</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="individualService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_4, individual service</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefined">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti27_255, undefined type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ==Interchange Status Type================================= -->
+	<xsd:element name="InterchangeStatusType" type="InterchangeStatusEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Status of a SERVICE JOURNEY INTERCHANGE - TPEG Pti31 InterchangeStatus</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="InterchangeStatusEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pti31 - InterchangeStatus</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti31_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="connection">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti31_1, connection</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="replacement">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti31_2, replacement</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="alternative">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti31_3, alternative</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="connectionNotHeld">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti31_4, connection not held</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="connectionHeld">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti31_5, connection held</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="statusOfConnectionUndecided">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti31_6, status of connection undecided</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedCrossReferenceInformation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti31_255, undefined cross reference information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="connectionChanged">
+				<xsd:annotation>
+					<xsd:documentation>Interchange is planned but was updated as a result of changes in the QUAYs or arrival/departure times. Can be used if the status is a combination of the other values. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="distributorWaitProlonged">
+				<xsd:annotation>
+					<xsd:documentation>An important function of connection protection is the ability to hold back a distributor VEHICLE (i.e. prolonged waiting) to allow passengers to transfer from delayed feeders. 
 To achieve this a distributorWaitProlonged status shall be communicated back to the feeder VEHICLEs to inform the passengers about the new departure time of the distributor or even a willWait guarantee. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="departurePlatformChanged">
-    <xsd:annotation>
-     <xsd:documentation>Used to provide the passengers with information about a new departure platform of the distributor VEHICLE if the distributor changes its planned stopping position. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="extraInterchange">
-    <xsd:annotation>
-     <xsd:documentation>Interchange is an addition to the plan. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="cancelled">
-    <xsd:annotation>
-     <xsd:documentation>Interchange is a cancellation of an interchange in the plan. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="feederArrivalCancellation">
-    <xsd:annotation>
-     <xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. 
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="departurePlatformChanged">
+				<xsd:annotation>
+					<xsd:documentation>Used to provide the passengers with information about a new departure platform of the distributor VEHICLE if the distributor changes its planned stopping position. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="extraInterchange">
+				<xsd:annotation>
+					<xsd:documentation>Interchange is an addition to the plan. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="cancelled">
+				<xsd:annotation>
+					<xsd:documentation>Interchange is a cancellation of an interchange in the plan. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="feederArrivalCancellation">
+				<xsd:annotation>
+					<xsd:documentation>Loss of the inbound connection indicates the cancellation of the visit (of the FeederJourney) to the FeederArrivalStop, or a severely delayed arrival. This can lead to the distributor VEHICLE abandoning the connection. 
 Reasons for the loss of a feeder include (but are not limited to) the cancellation of the feeder VEHICLE, diversion/rerouting of the feeder VEHICLE, disruption of a line section or journey part of the feeder VEHICLE etc. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="distributorDepartureCancellation">
-    <xsd:annotation>
-     <xsd:documentation>Indicates the loss of an outbound connection, i.e., is used to signal the cancellation of the onward connection to the passengers in the feeder VEHICLEs. (since SIRI 2.1)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="statusOfConenctionUndecided">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use statusOfConnectionUndecided instead</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ==Ticket Restriction Type================================= -->
- <xsd:element name="TicketRestrictionType" type="TicketRestrictionEnumeration" default="unknown">
-  <xsd:annotation>
-   <xsd:documentation>Ticket restrictions - TPEG Pti025</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="TicketRestrictionEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti025 - TicketRestrictionType</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="allTicketClassesValid">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_1, all ticket classes valid</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fullFareOnly">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_2, full fare only</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="certainTicketsOnly">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_3, certain tickets only</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="ticketWithReservation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_4, ticket with reservation</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="specialFare">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_5, special fare</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="onlyTicketsOfSpecifiedOperator">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_6, only tickets of specified operator</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noRestrictions">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_7, no restrictions</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noOffPeakTickets">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_8, no off-peak tickets</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noWeekendReturnTickets">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_9, no weekend return tickets</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noReducedFareTickets">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_10, no reduced fare tickets</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="unknownTicketRestriction">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti25_255, unknown ticket restriction</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ==Booking Status Type================================= -->
- <xsd:element name="BookingStatusType" type="BookingStatusEnumeration" default="unknown">
-  <xsd:annotation>
-   <xsd:documentation>Booking Status - TPEG Pti024.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="BookingStatusEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Values for TPEG Pti024 - BookingStatus</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="available">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_1, available</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="limited">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_2, limited</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="veryLimited">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_3, very limited</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="full">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_4, full</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="waitingList">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_5, waiting list</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noBookingRequired">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_6, no booking required</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="bookingRequired">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_7, booking is required</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="bookingOptional">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_8, booking is optional</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedBookingInformation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti24_255, undefined booking information</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ==STOP POINT Type================================= -->
- <xsd:element name="StopPointType" type="StopPointTypeEnumeration" default="unknown">
-  <xsd:annotation>
-   <xsd:documentation>STOP POINT type - TPEG Pts017, ServiceDeliveryPointType</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="StopPointTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pts017 - ServiceDeliveryPointType</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts17_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="platformNumber">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts17_1, platform number</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="terminalGate">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts17_2, terminal gate</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="ferryBerth">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts17_3, ferry berth</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="harbourPier">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts17_4, harbour pier</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="landingStage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts17_5, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="busStop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts17_6, bus stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedStopPointType">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts17_255, undefined service delivery point type</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedBookingInformation">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use undefinedStopPointType</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ==Route point Type================================= -->
- <xsd:element name="RoutePointType" type="RoutePointTypeEnumeration" default="unknown">
-  <xsd:annotation>
-   <xsd:documentation>Type for ROUTE POINT.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="RoutePointTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for ROUTE POINT type that correspond to TPEG Pts44: StopPlaceUsage (Pti15: deprecated since SIRI 2.1).</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_0, Pts44_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="origin">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_1, origin</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="destination">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti15_2, Pts44_2, destination</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="intermediate">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_3, intermediate.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="legBoard">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_4, leg board</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="legIntermediate">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_5, leg intermediate</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="legAlight">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_6, leg alight</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="firstRoutePoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_7, first route point</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lastRoutePoint">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_8, last route point</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="affectedStopplace">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_9, affected STOP PLACE</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="presentedStopplace">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_10, presented STOP PLACE</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedStopplaceUsage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts44_255, undefined STOP PLACE usage</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="startPoint">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 and replaced by Pts44_1 value 'origin' (TPEG Pti15_1 - start point) .</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stop">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_3 - stop)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="via">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_4 - via)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="notStopping">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_5 - not-stopping)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="temporaryStop">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_6 - temporary stop)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="temporarilyNotStopping">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_7 - temporarily not-stopping)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="exceptionalStop">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_8 - exceptional stop)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="additionalStop">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_9 - additional stop)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="requestStop">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_10 - request stop)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="frontTrainDestination">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_11 - front train destination)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="rearTrainDestination">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_12 - rear train destination)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="throughServiceDestination">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_13 - through service destination)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="notVia">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_14 - not via)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="alteredStartPoint">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_15 - altered start point)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="alteredDestination">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_16 - altered destination)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedRoutePoint">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_255 - undefined route point)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ==STOP POINT Type================================= -->
- <xsd:element name="TimetableType" type="TimetableTypeEnumeration" default="unknown">
-  <xsd:annotation>
-   <xsd:documentation>Timetable type - TPEG Pti033.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="TimetableTypeEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti033 - TimetableType</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti33_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="winter">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti33_1, winter</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="spring">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti33_2, spring</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="summer">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti33_3, summer</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="autumn">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti33_4, autumn</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="special">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti33_5, special</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="emergency">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti33_6, emergency</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedTimetableType">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti33_255, undefined timetable type</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="distributorDepartureCancellation">
+				<xsd:annotation>
+					<xsd:documentation>Indicates the loss of an outbound connection, i.e., is used to signal the cancellation of the onward connection to the passengers in the feeder VEHICLEs. (since SIRI 2.1)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="statusOfConenctionUndecided">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use statusOfConnectionUndecided instead</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ==Ticket Restriction Type================================= -->
+	<xsd:element name="TicketRestrictionType" type="TicketRestrictionEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Ticket restrictions - TPEG Pti025</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="TicketRestrictionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pti025 - TicketRestrictionType</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="allTicketClassesValid">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_1, all ticket classes valid</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fullFareOnly">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_2, full fare only</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="certainTicketsOnly">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_3, certain tickets only</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ticketWithReservation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_4, ticket with reservation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="specialFare">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_5, special fare</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="onlyTicketsOfSpecifiedOperator">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_6, only tickets of specified operator</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noRestrictions">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_7, no restrictions</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noOffPeakTickets">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_8, no off-peak tickets</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noWeekendReturnTickets">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_9, no weekend return tickets</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noReducedFareTickets">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_10, no reduced fare tickets</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unknownTicketRestriction">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti25_255, unknown ticket restriction</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ==Booking Status Type================================= -->
+	<xsd:element name="BookingStatusType" type="BookingStatusEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Booking Status - TPEG Pti024.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="BookingStatusEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for Values for TPEG Pti024 - BookingStatus</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="available">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_1, available</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="limited">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_2, limited</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="veryLimited">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_3, very limited</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_4, full</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="waitingList">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_5, waiting list</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noBookingRequired">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_6, no booking required</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bookingRequired">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_7, booking is required</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bookingOptional">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_8, booking is optional</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedBookingInformation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti24_255, undefined booking information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ==STOP POINT Type================================= -->
+	<xsd:element name="StopPointType" type="StopPointTypeEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>STOP POINT type - TPEG Pts017, ServiceDeliveryPointType</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="StopPointTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pts017 - ServiceDeliveryPointType</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts17_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="platformNumber">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts17_1, platform number</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="terminalGate">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts17_2, terminal gate</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ferryBerth">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts17_3, ferry berth</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="harbourPier">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts17_4, harbour pier</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="landingStage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts17_5, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="busStop">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts17_6, bus stop</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedStopPointType">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts17_255, undefined service delivery point type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedBookingInformation">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use undefinedStopPointType</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ==Route point Type================================= -->
+	<xsd:element name="RoutePointType" type="RoutePointTypeEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Type for ROUTE POINT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="RoutePointTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for ROUTE POINT type that correspond to TPEG Pts44: StopPlaceUsage (Pti15: deprecated since SIRI 2.1).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti15_0, Pts44_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="origin">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_1, origin</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="destination">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti15_2, Pts44_2, destination</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="intermediate">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_3, intermediate.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="legBoard">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_4, leg board</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="legIntermediate">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_5, leg intermediate</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="legAlight">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_6, leg alight</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="firstRoutePoint">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_7, first route point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lastRoutePoint">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_8, last route point</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="affectedStopplace">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_9, affected STOP PLACE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="presentedStopplace">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_10, presented STOP PLACE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedStopplaceUsage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts44_255, undefined STOP PLACE usage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="startPoint">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 and replaced by Pts44_1 value 'origin' (TPEG Pti15_1 - start point) .</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stop">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_3 - stop)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="via">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_4 - via)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="notStopping">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_5 - not-stopping)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="temporaryStop">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_6 - temporary stop)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="temporarilyNotStopping">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_7 - temporarily not-stopping)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="exceptionalStop">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_8 - exceptional stop)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="additionalStop">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_9 - additional stop)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="requestStop">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_10 - request stop)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="frontTrainDestination">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_11 - front train destination)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="rearTrainDestination">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_12 - rear train destination)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="throughServiceDestination">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_13 - through service destination)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="notVia">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_14 - not via)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="alteredStartPoint">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_15 - altered start point)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="alteredDestination">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_16 - altered destination)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedRoutePoint">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti15_255 - undefined route point)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ==STOP POINT Type================================= -->
+	<xsd:element name="TimetableType" type="TimetableTypeEnumeration" default="unknown">
+		<xsd:annotation>
+			<xsd:documentation>Timetable type - TPEG Pti033.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="TimetableTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pti033 - TimetableType</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti33_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="winter">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti33_1, winter</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="spring">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti33_2, spring</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="summer">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti33_3, summer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="autumn">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti33_4, autumn</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="special">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti33_5, special</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="emergency">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti33_6, emergency</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedTimetableType">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti33_255, undefined timetable type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
 </xsd:schema>

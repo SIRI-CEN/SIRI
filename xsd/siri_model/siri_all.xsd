@@ -4,10 +4,10 @@
  
  -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:D2LogicalModel="http://datex2.eu/schema/2_0RC1/2_0" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_all_journeyModel">
- <!-- ======================================================================= -->
- <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="../siri/siri_all_framework.xsd"/>
- <xsd:include schemaLocation="siri_all_model.xsd"/>
- <!-- ======================================================================= -->
+	<!-- ======================================================================= -->
+	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri/siri_all_framework.xsd"/>
+	<xsd:include schemaLocation="siri_all_model.xsd"/>
+	<!-- ======================================================================= -->
 </xsd:schema>

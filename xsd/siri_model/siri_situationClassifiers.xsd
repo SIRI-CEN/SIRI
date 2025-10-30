@@ -1,55 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_classifiers">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>Add names </Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
-    <Date>
-     <Created>2008-07-05</Created>
-    </Date>
-    <Date>
-     <Modified>2008-07-05</Modified>
-    </Date>
-    <Date>
-     <Modified>2008-10-01</Modified>
-     <!-- Add predictability status -->
-    </Date>
-    <Date>
-     <Modified>2019-09-01</Modified>
-     <!-- (since SIRI 2.1)
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>Add names </Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
+				<Date>
+					<Created>2008-07-05</Created>
+				</Date>
+				<Date>
+					<Modified>2008-07-05</Modified>
+				</Date>
+				<Date>
+					<Modified>2008-10-01</Modified>
+					<!-- Add predictability status -->
+				</Date>
+				<Date>
+					<Modified>2019-09-01</Modified>
+					<!-- (since SIRI 2.1)
        Merged with TPEG2 (Pts43 ServiceStatus).
        Removed numerical values from SeverityEnumeration and VerificationStatusEnumeration.
        Corrected content of Predictability.
       -->
-    </Date>
-    <Description>
-     <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes calssifier codes </p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}/siri_situationClassifiers.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>CEN</Publisher>
-    <Relation> </Relation>
-    <Rights><!--Unclassified-->
-     <Copyright>Kizoom 2000-2007, CEN 2009-2021</Copyright>
-    </Rights>
-    <Source>
-     <ul>
-      <li>Schema derived Derived from the Kizoom XTIS schema </li>
-      <li>Derived from the TPEG Categories schema </li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				</Date>
+				<Description>
+					<p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes calssifier codes </p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model/}/siri_situationClassifiers.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>CEN</Publisher>
+				<Relation> </Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>Kizoom 2000-2007, CEN 2009-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Schema derived Derived from the Kizoom XTIS schema </li>
+						<li>Derived from the TPEG Categories schema </li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -57,374 +58,374 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
      </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-SX Xml Schema for PT Incidents. Classifier subschema</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI-SX Situation Classifiers.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <!-- ===INCIDENT SEVERITIES================================================== -->
- <xsd:element name="Severity" type="SeverityEnumeration" default="normal">
-  <xsd:annotation>
-   <xsd:documentation>Severity of Incident - TPEG Pti26. Default is 'normal'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="SeverityEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti26 - Severity</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="verySlight">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_1, very slight</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="slight">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_2, slight</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="normal">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_3, normal</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="severe">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_4, severe</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="verySevere">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_5, very severe</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noImpact">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_6, no impact</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefined">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti26_255, undefined</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ===INCIDENT CONDITIONS================================= -->
- <xsd:element name="Condition" type="ServiceConditionEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Classification of effect on service. TPEG PTS043 ServiceStatus</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="ServiceConditionEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pts43 ServiceStatus, with additional values from Pti013</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="delay">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_1, delay</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="minorDelays">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_2, minor delays</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="majorDelays">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_3, major delays</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="operationTimeExtension">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_4, operation time extension</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="onTime">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_5, on time</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="disturbanceRectified">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_6, disturbance rectified</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="changeOfPlatform">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_7, change of platform</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lineCancellation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_8, line cancellation</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="tripCancellation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_9, trip cancellation</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="boarding">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_10, boarding</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="goToGate">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_11, go to gate</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stopCancelled">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_12, stop cancelled</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stopMoved">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_13, stop moved</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stopOnDemand">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_14, stop on demand</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="additionalStop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_15, additional stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="substitutedStop">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_16, substituted stop</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="diverted">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_17, diverted</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="disruption">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_18, disruption</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="limitedOperation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_19, limited operation</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="discontinuedOperation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_20, discontinued operation</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="irregularTraffic">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_21, irregular traffic</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="wagonOrderChanged">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_22, wagon order changed</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="trainShortened">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_23, train shortened</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="additionalRide">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_24, additional ride</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="replacementRide">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_25, replacement ride</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="temporarilyNonStopping">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_26, temporarily non-stopping</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="temporaryStopplace">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_27, temporary stopplace</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedStatus">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_255, undefined status</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="altered">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="cancelled">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="delayed">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_3, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="noService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_5, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="disrupted">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_6, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="additionalService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_7, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="specialService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_8, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="normalService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_10, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="intermittentService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_11, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="shortFormedService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_12, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fullLengthService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_13, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="extendedService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_14, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="splittingTrain">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_15, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="replacementTransport">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_16, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="arrivesEarly">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_17, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="shuttleService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_18, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="replacementService">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_19, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedServiceInformation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti13_255, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ==Verification================================= -->
- <xsd:element name="VerificationStatus">
-  <xsd:annotation>
-   <xsd:documentation>Classification of verification status - TPEG Pti032</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleType>
-   <xsd:restriction base="VerificationStatusEnumeration"/>
-  </xsd:simpleType>
- </xsd:element>
- <xsd:simpleType name="VerificationStatusEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pti032 - VerificationStatus</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti32_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="unverified">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti32_1, unverified</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="verified">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti32_?, verified</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="verifiedAsDuplicate">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti32_?, verifiedAsDuplicate</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefined">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti32_255 ?</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ==Predictability================================= -->
- <xsd:element name="Predictability">
-  <xsd:annotation>
-   <xsd:documentation>Classification of Predictability status.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleType>
-   <xsd:restriction base="PredictabilityEnumeration"/>
-  </xsd:simpleType>
- </xsd:element>
- <xsd:simpleType name="PredictabilityEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for Predictability Status.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="planned"/>
-   <xsd:enumeration value="unplanned"/>
-   <xsd:enumeration value="all"/>
-  </xsd:restriction>
- </xsd:simpleType>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-SX Xml Schema for PT Incidents. Classifier subschema</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI-SX Situation Classifiers.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<!-- ===INCIDENT SEVERITIES================================================== -->
+	<xsd:element name="Severity" type="SeverityEnumeration" default="normal">
+		<xsd:annotation>
+			<xsd:documentation>Severity of Incident - TPEG Pti26. Default is 'normal'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="SeverityEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pti26 - Severity</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti26_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="verySlight">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti26_1, very slight</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="slight">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti26_2, slight</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normal">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti26_3, normal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="severe">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti26_4, severe</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="verySevere">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti26_5, very severe</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noImpact">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti26_6, no impact</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefined">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti26_255, undefined</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ===INCIDENT CONDITIONS================================= -->
+	<xsd:element name="Condition" type="ServiceConditionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Classification of effect on service. TPEG PTS043 ServiceStatus</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="ServiceConditionEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pts43 ServiceStatus, with additional values from Pti013</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="delay">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_1, delay</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="minorDelays">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_2, minor delays</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="majorDelays">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_3, major delays</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="operationTimeExtension">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_4, operation time extension</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="onTime">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_5, on time</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="disturbanceRectified">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_6, disturbance rectified</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="changeOfPlatform">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_7, change of platform</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lineCancellation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_8, line cancellation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="tripCancellation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_9, trip cancellation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="boarding">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_10, boarding</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="goToGate">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_11, go to gate</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopCancelled">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_12, stop cancelled</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopMoved">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_13, stop moved</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopOnDemand">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_14, stop on demand</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="additionalStop">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_15, additional stop</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="substitutedStop">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_16, substituted stop</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="diverted">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_17, diverted</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="disruption">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_18, disruption</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="limitedOperation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_19, limited operation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="discontinuedOperation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_20, discontinued operation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="irregularTraffic">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_21, irregular traffic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="wagonOrderChanged">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_22, wagon order changed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trainShortened">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_23, train shortened</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="additionalRide">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_24, additional ride</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="replacementRide">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_25, replacement ride</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="temporarilyNonStopping">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_26, temporarily non-stopping</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="temporaryStopplace">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_27, temporary stopplace</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedStatus">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts43_255, undefined status</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="altered">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="cancelled">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="delayed">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_3, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="noService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_5, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="disrupted">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_6, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="additionalService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_7, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="specialService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_8, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="normalService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_10, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="intermittentService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_11, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="shortFormedService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_12, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fullLengthService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_13, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="extendedService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_14, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="splittingTrain">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_15, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="replacementTransport">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_16, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="arrivesEarly">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_17, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="shuttleService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_18, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="replacementService">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_19, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedServiceInformation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti13_255, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ==Verification================================= -->
+	<xsd:element name="VerificationStatus">
+		<xsd:annotation>
+			<xsd:documentation>Classification of verification status - TPEG Pti032</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="VerificationStatusEnumeration"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:simpleType name="VerificationStatusEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pti032 - VerificationStatus</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti32_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unverified">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti32_1, unverified</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="verified">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti32_?, verified</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="verifiedAsDuplicate">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti32_?, verifiedAsDuplicate</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefined">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti32_255 ?</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ==Predictability================================= -->
+	<xsd:element name="Predictability">
+		<xsd:annotation>
+			<xsd:documentation>Classification of Predictability status.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="PredictabilityEnumeration"/>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:simpleType name="PredictabilityEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for Predictability Status.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="planned"/>
+			<xsd:enumeration value="unplanned"/>
+			<xsd:enumeration value="all"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 </xsd:schema>

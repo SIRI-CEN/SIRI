@@ -1,91 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_reference">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG7 Team</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-03-20</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-05-11</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-03-29</Modified>
-    </Date>
-    <Date>
-     <Modified>2012-03-22</Modified>
-     <!-- SIRI 2.0 
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG7 Team</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG7 Editor Nicholas Knowles, Kizoom. mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-03-20</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-05-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-03-29</Modified>
+				</Date>
+				<Date>
+					<Modified>2012-03-22</Modified>
+					<!-- SIRI 2.0 
        Refactor Monitoring code 
        Add QUAY Ref
       -->
-    </Date>
-    <Date>
-     <Modified>2012-06-22</Modified>
-     <!-- SIRI 2.0  
+				</Date>
+				<Date>
+					<Modified>2012-06-22</Modified>
+					<!-- SIRI 2.0  
        Add Group of Lines to JourneyPatternInfoGroup
        [CH] Set explicit  default value for VehicleAtStop to be false  
        [DE] Add Driver Ref
       -->
-    </Date>
-    <Date>
-     <Modified>2013-02-11</Modified>
-     <!-- Correction: PlaceName unbounded to allow multiple languages -->
-    </Date>
-    <Date>
-     <Modified>2018-11-08</Modified>
-     <!-- [vdv] "PublishedLineName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
+				</Date>
+				<Date>
+					<Modified>2013-02-11</Modified>
+					<!-- Correction: PlaceName unbounded to allow multiple languages -->
+				</Date>
+				<Date>
+					<Modified>2018-11-08</Modified>
+					<!-- [vdv] "PublishedLineName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
           [vdv] "DestinationName" inside "PublishedLineGroup" changed to "unbounded" to allow multiple definitions for different languages due to the xml:lang-Attribute
       -->
-    </Date>
-    <Date>
-     <Modified>2020-01-29</Modified>
-     <!-- SIRI 2.1  
+				</Date>
+				<Date>
+					<Modified>2020-01-29</Modified>
+					<!-- SIRI 2.1  
        Extra values for OccupancyEnumeration 
       -->
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of real-time information.</p>
-     <p>This package defines common basic domain model identifier elements that are used in one or more SIRI fucntional service.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri/utility/}siri_reference.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Relation>
-     <Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types.xsd</Requires>
-    </Relation>
-    <Rights><!--Unclassified-->
-     <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
-    </Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIG CML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of real-time information.</p>
+					<p>This package defines common basic domain model identifier elements that are used in one or more SIRI fucntional service.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri/utility/}siri_reference.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Relation>
+					<Requires>http://www.siri.org.uk/schema/2.0/xsd/siri_utility/siri_types.xsd</Requires>
+				</Relation>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIG CML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -93,752 +94,752 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Common DomainModel elements.</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
- <xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
- <xsd:include schemaLocation="siri_operator_support.xsd"/>
- <xsd:include schemaLocation="siri_time.xsd"/>
- <xsd:include schemaLocation="siri_situationIdentity.xsd"/>
- <!-- ========= VERSION =========================================== -->
- <xsd:element name="VersionRef" type="VersionCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Version Identifier.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="VersionCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a Version.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="VersionRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference Timetable Version.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="VersionCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ===== SCHEDULED STOP POINT ==================================================== -->
- <xsd:simpleType name="StopPointCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a SCHEDULED STOP POINT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="StopPointRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="StopPointCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:element name="VisitNumber" type="VisitNumberType">
-  <xsd:annotation>
-   <xsd:documentation>Sequence of visit to SCHEDULED STOP POINT.within VEHICLE JOURNEY. Increases monotonically, but not necessarily sequentially.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="Order" type="xsd:positiveInteger">
-  <xsd:annotation>
-   <xsd:documentation>For implementations for which the overall Order is not used for VisitNumber, (i.e. if VisitNumberIsOrder is false) then can be used to associate the stop Order as well if useful.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="StopPointGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for a SCHEDULED STOP POINT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="StopPointRef" type="StopPointRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
-     <xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="StopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:element name="StopPointRef" type="StopPointRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
-   <xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="StopPointName" type="NaturalLanguageStringStructure">
-  <xsd:annotation>
-   <xsd:documentation>Name of SCHEDULED STOP POINT.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="StopPointInSequenceGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements identifying an ordered visit to a SCHEDULED STOP POINT within a SERVICE PATTERN.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="StopPointRef"/>
-   <xsd:element ref="VisitNumber" minOccurs="0"/>
-   <xsd:element ref="Order" minOccurs="0"/>
-   <xsd:element ref="StopPointName" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="ContextualisedStopPointInSequenceGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements identifying Ordered visit to a stop within calling sequence of a SERVICE PATTERN.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="StopPointRef" minOccurs="0"/>
-   <xsd:element ref="VisitNumber" minOccurs="0"/>
-   <xsd:element ref="Order" minOccurs="0"/>
-   <xsd:element ref="StopPointName" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="VisitNumberType">
-  <xsd:annotation>
-   <xsd:documentation>Type for Stop Visit.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:positiveInteger"/>
- </xsd:simpleType>
- <xsd:simpleType name="ClearDownCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of a Stop for Direct Cleardown. Suitable for radio transmission over a constrained bandwidth channel. This may be a separate code from the full stop identifier.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="ClearDownRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference Cleardown identifier of a stop.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="ClearDownCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ===== STOP AREA ==================================================== -->
- <xsd:simpleType name="StopAreaCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a STOP AREA.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="StopAreaRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a  STOP AREA.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="StopAreaCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!--==== QUAY =================================================================== -->
- <xsd:simpleType name="QuayCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a QUAY (Platform, Bay, etc).</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="QuayRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a QUAY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="QuayCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!--==== BOARDING POSITION =================================================================== -->
- <xsd:simpleType name="BoardingPositionCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a BOARDING POSITION (location on a QUAY where passengers can actually board/alight).</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="BoardingPositionRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a BOARDING POSITION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="BoardingPositionCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!--==== FLEXIBLE AREA =================================================================== -->
- <xsd:simpleType name="FlexibleAreaCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a FLEXIBLE AREA (area that encompasses the stop location of a flexible service).</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="FlexibleAreaRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a FLEXIBLE AREA.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="FlexibleAreaCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ==== MonitopringPoint (LOGICAL DISPLAY) ==================================================== -->
- <xsd:simpleType name="MonitoringCode">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of a monitoring point. May correspond to a SCHEDULED STOP POINT or represent a group of Stops other Timing Points (i.e. LOGICAL DISPLAY)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="MonitoringRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a monitoring point (LOGICAL DISPLAY).</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="MonitoringCode"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ====Stop Properties====================================================== -->
- <xsd:element name="TimingPoint" type="xsd:boolean" default="true">
-  <xsd:annotation>
-   <xsd:documentation>Whether the stop is a TIMING POINT. Times for stops that are not timing points are sometimes interpolated crudely from the timing points, and may represent a lower level of accuracy. Default is 'true'.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="VehicleAtStop" type="xsd:boolean" default="false">
-  <xsd:annotation>
-   <xsd:documentation>Whether VEHICLE is currently at stop.  Default is false (xml  default added from SIRI 2.0) </xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- === CONNECTION link ====================================================== -->
- <xsd:simpleType name="ConnectionLinkCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a CONNECTION link</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a CONNECTION link</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ConnectionLinkRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a CONNECTION link</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="ConnectionLinkCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!--==== Mode Enumerations =================================================================== -->
- <xsd:simpleType name="VehicleModesEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>MODEs of transport applicable to timetabled public transport.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="air"/>
-   <xsd:enumeration value="bus"/>
-   <xsd:enumeration value="coach"/>
-   <xsd:enumeration value="ferry"/>
-   <xsd:enumeration value="metro"/>
-   <xsd:enumeration value="rail"/>
-   <xsd:enumeration value="tram"/>
-   <xsd:enumeration value="underground"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="ContinuousModesEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>MODEs of transport applicable to private and non-timetabled transport.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="walk"/>
-   <xsd:enumeration value="car"/>
-   <xsd:enumeration value="taxi"/>
-   <xsd:enumeration value="cycle"/>
-   <xsd:enumeration value="drt"/>
-   <xsd:enumeration value="movingWalkway"/>
-   <xsd:enumeration value="through"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="AllModesEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Union of VEHICLE and continuous MODEs.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="walk"/>
-   <xsd:enumeration value="car"/>
-   <xsd:enumeration value="taxi"/>
-   <xsd:enumeration value="cycle"/>
-   <xsd:enumeration value="drt"/>
-   <xsd:enumeration value="movingWalkway"/>
-   <xsd:enumeration value="through"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:complexType name="ModesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Transport MODEs.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Mode" type="AllModesEnumeration" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>A method of transportation such as bus, rail, etc.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
-  <xsd:attribute name="Exclude" type="xsd:boolean" use="optional" default="false">
-   <xsd:annotation>
-    <xsd:documentation>if true, listed modes to be excluded from list.</xsd:documentation>
-   </xsd:annotation>
-  </xsd:attribute>
- </xsd:complexType>
- <!-- =====JOURNEY PATTERN identfiers=============================================================== -->
- <xsd:simpleType name="JourneyPatternCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a JOURNEY PATTERN.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="JourneyPatternRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for refrence to a JOURNEY PATTERN.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="JourneyPatternCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:element name="JourneyPatternRef" type="JourneyPatternRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a JOURNEY PATTERN.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="JourneyPatternRefGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements describing the ROUTE and JOURNEY PATTERN Identfiers associated with a journey.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence/>
- </xsd:group>
- <!-- ==== LINE and DESTINATION elements======================================================== -->
- <xsd:group name="JourneyPatternInfoGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements describing the LINE, ROUTE and DIRECTION of a VEHICLE JOURNEYwhich are derived from the JOURNEY PATTERN associated with the journey. 
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI XML schema. Service Interface for Real-time  Information relating to Public Transport Operations. Common DomainModel elements.</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
+	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
+	<xsd:include schemaLocation="siri_operator_support.xsd"/>
+	<xsd:include schemaLocation="siri_time.xsd"/>
+	<xsd:include schemaLocation="siri_situationIdentity.xsd"/>
+	<!-- ========= VERSION =========================================== -->
+	<xsd:element name="VersionRef" type="VersionCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Version Identifier.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="VersionCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a Version.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="VersionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference Timetable Version.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="VersionCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== SCHEDULED STOP POINT ==================================================== -->
+	<xsd:simpleType name="StopPointCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a SCHEDULED STOP POINT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="StopPointRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="StopPointCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="VisitNumber" type="VisitNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Sequence of visit to SCHEDULED STOP POINT.within VEHICLE JOURNEY. Increases monotonically, but not necessarily sequentially.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Order" type="xsd:positiveInteger">
+		<xsd:annotation>
+			<xsd:documentation>For implementations for which the overall Order is not used for VisitNumber, (i.e. if VisitNumberIsOrder is false) then can be used to associate the stop Order as well if useful.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="StopPointGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a SCHEDULED STOP POINT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StopPointRef" type="StopPointRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
+					<xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="StopPointName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="StopPointRef" type="StopPointRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a SCHEDULED STOP POINT.</xsd:documentation>
+			<xsd:documentation>Reference to a STOP POINT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="StopPointName" type="NaturalLanguageStringStructure">
+		<xsd:annotation>
+			<xsd:documentation>Name of SCHEDULED STOP POINT.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="StopPointInSequenceGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements identifying an ordered visit to a SCHEDULED STOP POINT within a SERVICE PATTERN.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="StopPointRef"/>
+			<xsd:element ref="VisitNumber" minOccurs="0"/>
+			<xsd:element ref="Order" minOccurs="0"/>
+			<xsd:element ref="StopPointName" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="ContextualisedStopPointInSequenceGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements identifying Ordered visit to a stop within calling sequence of a SERVICE PATTERN.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="StopPointRef" minOccurs="0"/>
+			<xsd:element ref="VisitNumber" minOccurs="0"/>
+			<xsd:element ref="Order" minOccurs="0"/>
+			<xsd:element ref="StopPointName" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name of SCHEDULED STOP POINT.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="VisitNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Type for Stop Visit.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:positiveInteger"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="ClearDownCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a Stop for Direct Cleardown. Suitable for radio transmission over a constrained bandwidth channel. This may be a separate code from the full stop identifier.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="ClearDownRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference Cleardown identifier of a stop.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="ClearDownCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== STOP AREA ==================================================== -->
+	<xsd:simpleType name="StopAreaCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a STOP AREA.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="StopAreaRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a  STOP AREA.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="StopAreaCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--==== QUAY =================================================================== -->
+	<xsd:simpleType name="QuayCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a QUAY (Platform, Bay, etc).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="QuayRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a QUAY.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="QuayCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--==== BOARDING POSITION =================================================================== -->
+	<xsd:simpleType name="BoardingPositionCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a BOARDING POSITION (location on a QUAY where passengers can actually board/alight).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="BoardingPositionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a BOARDING POSITION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="BoardingPositionCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--==== FLEXIBLE AREA =================================================================== -->
+	<xsd:simpleType name="FlexibleAreaCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a FLEXIBLE AREA (area that encompasses the stop location of a flexible service).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="FlexibleAreaRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a FLEXIBLE AREA.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="FlexibleAreaCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ==== MonitopringPoint (LOGICAL DISPLAY) ==================================================== -->
+	<xsd:simpleType name="MonitoringCode">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a monitoring point. May correspond to a SCHEDULED STOP POINT or represent a group of Stops other Timing Points (i.e. LOGICAL DISPLAY)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="MonitoringRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a monitoring point (LOGICAL DISPLAY).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="MonitoringCode"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ====Stop Properties====================================================== -->
+	<xsd:element name="TimingPoint" type="xsd:boolean" default="true">
+		<xsd:annotation>
+			<xsd:documentation>Whether the stop is a TIMING POINT. Times for stops that are not timing points are sometimes interpolated crudely from the timing points, and may represent a lower level of accuracy. Default is 'true'.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="VehicleAtStop" type="xsd:boolean" default="false">
+		<xsd:annotation>
+			<xsd:documentation>Whether VEHICLE is currently at stop.  Default is false (xml  default added from SIRI 2.0) </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- === CONNECTION link ====================================================== -->
+	<xsd:simpleType name="ConnectionLinkCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a CONNECTION link</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:element name="ConnectionLinkRef" type="ConnectionLinkRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a CONNECTION link</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ConnectionLinkRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a CONNECTION link</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="ConnectionLinkCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--==== Mode Enumerations =================================================================== -->
+	<xsd:simpleType name="VehicleModesEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>MODEs of transport applicable to timetabled public transport.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="air"/>
+			<xsd:enumeration value="bus"/>
+			<xsd:enumeration value="coach"/>
+			<xsd:enumeration value="ferry"/>
+			<xsd:enumeration value="metro"/>
+			<xsd:enumeration value="rail"/>
+			<xsd:enumeration value="tram"/>
+			<xsd:enumeration value="underground"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ContinuousModesEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>MODEs of transport applicable to private and non-timetabled transport.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="walk"/>
+			<xsd:enumeration value="car"/>
+			<xsd:enumeration value="taxi"/>
+			<xsd:enumeration value="cycle"/>
+			<xsd:enumeration value="drt"/>
+			<xsd:enumeration value="movingWalkway"/>
+			<xsd:enumeration value="through"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AllModesEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Union of VEHICLE and continuous MODEs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="walk"/>
+			<xsd:enumeration value="car"/>
+			<xsd:enumeration value="taxi"/>
+			<xsd:enumeration value="cycle"/>
+			<xsd:enumeration value="drt"/>
+			<xsd:enumeration value="movingWalkway"/>
+			<xsd:enumeration value="through"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="ModesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Transport MODEs.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Mode" type="AllModesEnumeration" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A method of transportation such as bus, rail, etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="Exclude" type="xsd:boolean" use="optional" default="false">
+			<xsd:annotation>
+				<xsd:documentation>if true, listed modes to be excluded from list.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!-- =====JOURNEY PATTERN identfiers=============================================================== -->
+	<xsd:simpleType name="JourneyPatternCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a JOURNEY PATTERN.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="JourneyPatternRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for refrence to a JOURNEY PATTERN.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="JourneyPatternCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="JourneyPatternRef" type="JourneyPatternRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a JOURNEY PATTERN.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="JourneyPatternRefGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements describing the ROUTE and JOURNEY PATTERN Identfiers associated with a journey.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence/>
+	</xsd:group>
+	<!-- ==== LINE and DESTINATION elements======================================================== -->
+	<xsd:group name="JourneyPatternInfoGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements describing the LINE, ROUTE and DIRECTION of a VEHICLE JOURNEYwhich are derived from the JOURNEY PATTERN associated with the journey. 
 Values for these elements can be specified on an annual schedule and will be inherited, unless overriden, onto the production timetable and then onto the individul dated VEHICLE JOURNEYs of the timetable. Each monitored journey takes its values from the dated VEHICLE JOURNEY that it follows. The absence of a value on an entity at a given level indicates that the value should be inherited (i) from any recent preceding update message for the same entity, or if there is no previous override, (ii) from its immediate parent entity.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="JourneyPatternRef" type="JourneyPatternRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of JOURNEY PATTERN that journey follows.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="JourneyPatternName" type="NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Name of Joruney Pattern</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>A means of transportation such as bus, rail, etc.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="RouteRef" type="RouteRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of ROUTE that journey follows.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="PublishedLineName" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Name or Number by which the LINE is known to the public.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="GroupOfLinesRef" type="GroupOfLinesRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a GROUP OF LINEs to which journey belongs. SIRI 2.0</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DirectionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of the DIRECTION. May correspond to a DESTINATION DISPLAY.  (Unbounded since SIRI 2.0)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ExternalLineRef" type="LineRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Alternative identifier of LINE that an external system may associate with journey.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:choice>
-    <xsd:element name="BrandingRef" type="BrandingRefStructure" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>Reference to a BRANDING. (since SIRI 2.1)</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-    <xsd:element name="Branding" type="BrandingStructure" minOccurs="0">
-     <xsd:annotation>
-      <xsd:documentation>An arbitrary marketing classification. (since SIRI 2.1)</xsd:documentation>
-     </xsd:annotation>
-    </xsd:element>
-   </xsd:choice>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="LineIdentityGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for identifying a LINE and DIRECTION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="LineRef" type="LineRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a LINE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DirectionRef" type="DirectionRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a LINE DIRECTION DIRECTION, typically outward or return.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="LineDirectionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for LINEand DIRECTION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:group ref="LineDirectionGroup"/>
- </xsd:complexType>
- <xsd:group name="LineDirectionGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for a LINE and DIRECTION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="LineRef" type="LineRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Line Reference.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Direction Reference.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:simpleType name="LineRefCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a LINE</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:element name="LineRef" type="LineRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a LINE.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="LineRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a LINE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="LineRefCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:group name="PublishedLineGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements describing the LINEand DESTINATION of a journey. Values for these elements can be specified on an annual schedule and will be inherited, unless overriden, onto the production timetable and then onto the individul dated VEHICLE JOURNEYs of the timetable. Each real-time journey takes its values from the dated VEHICLE JOURNEY that it follows. The absence of a value on an entity at a given level indicates that the value should be inherited (i) from any recent preceding update message for the same entity, or if there is no previous override, (ii) from its immediate parent entity.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="PublishedLineName" minOccurs="0" maxOccurs="unbounded"/>
-   <xsd:element name="DestinationName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Description of the destination stop (vehicle signage), if different from the that in  timetable - the DESTINATION DISPLAY. Can be overwritten section by section by the entry in an individual CALL.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:element name="PublishedLineName" type="NaturalLanguageStringStructure">
-  <xsd:annotation>
-   <xsd:documentation>Name or Number by which the LINEis known to the public.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="GroupOfLinesCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of a GROUP OF LINEs</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="GroupOfLinesRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a GROUP OF LINEs</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="GroupOfLinesCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ====Route related elements============================================================== -->
- <xsd:simpleType name="RouteCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a Route.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:element name="RouteName" type="NaturalLanguageStringStructure">
-  <xsd:annotation>
-   <xsd:documentation>Description of route by which it can be recogniozed.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="RouteRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a Route (Transmodel)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="RouteCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:simpleType name="DirectionCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of a DIRECTION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="DirectionRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a DIRECTION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="DirectionCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:simpleType name="RouteLinkCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of a ROUTE LINk.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="RouteLinkRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a ROUTE LINk.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="RouteLinkCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ====Place Related elements============================================================== -->
- <xsd:simpleType name="DestinationCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a DESTINATION.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="JourneyPlaceRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a PLACE visited by a VEHICLE JOURNEY.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="xsd:NMTOKEN"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:complexType name="PlaceNameStructure">
-  <xsd:annotation>
-   <xsd:documentation>Names of VIA points, used to help identify the LINE, for example, Luton to Luton via Sutton. Currently 3 in VDV. Should only be included if the detail level was requested.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="PlaceRef" type="JourneyPlaceRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Reference to a TOPOGRAPHIC PLACE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PlaceName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Names of place used to help identify the LINE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PlaceShortName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Short name of TOPOGRAPHIC PLACE. Should only be included if the detail level was requested.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="VehicleCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of a VEHICLE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="VehicleRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a VEHICLE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="VehicleCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:element name="VehicleRef" type="VehicleRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a VEHICLE.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="OccupancyEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Passenger load status of a VEHICLE - GTFS-R / TPEG Pts045</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts45_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="empty">
-    <xsd:annotation>
-     <xsd:documentation>GTFS-R "EMPTY"
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="JourneyPatternRef" type="JourneyPatternRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of JOURNEY PATTERN that journey follows.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="JourneyPatternName" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of Joruney Pattern</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A means of transportation such as bus, rail, etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="RouteRef" type="RouteRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of ROUTE that journey follows.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PublishedLineName" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Name or Number by which the LINE is known to the public.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GroupOfLinesRef" type="GroupOfLinesRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a GROUP OF LINEs to which journey belongs. SIRI 2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DirectionName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of the DIRECTION. May correspond to a DESTINATION DISPLAY.  (Unbounded since SIRI 2.0)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ExternalLineRef" type="LineRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Alternative identifier of LINE that an external system may associate with journey.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="BrandingRef" type="BrandingRefStructure" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Reference to a BRANDING. (since SIRI 2.1)</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Branding" type="BrandingStructure" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>An arbitrary marketing classification. (since SIRI 2.1)</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="LineIdentityGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for identifying a LINE and DIRECTION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="LineRef" type="LineRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DirectionRef" type="DirectionRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a LINE DIRECTION DIRECTION, typically outward or return.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="LineDirectionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for LINEand DIRECTION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:group ref="LineDirectionGroup"/>
+	</xsd:complexType>
+	<xsd:group name="LineDirectionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for a LINE and DIRECTION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="LineRef" type="LineRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Line Reference.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DirectionRef" type="DirectionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Direction Reference.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:simpleType name="LineRefCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a LINE</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:element name="LineRef" type="LineRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a LINE.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="LineRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a LINE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="LineRefCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:group name="PublishedLineGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements describing the LINEand DESTINATION of a journey. Values for these elements can be specified on an annual schedule and will be inherited, unless overriden, onto the production timetable and then onto the individul dated VEHICLE JOURNEYs of the timetable. Each real-time journey takes its values from the dated VEHICLE JOURNEY that it follows. The absence of a value on an entity at a given level indicates that the value should be inherited (i) from any recent preceding update message for the same entity, or if there is no previous override, (ii) from its immediate parent entity.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="PublishedLineName" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="DestinationName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Description of the destination stop (vehicle signage), if different from the that in  timetable - the DESTINATION DISPLAY. Can be overwritten section by section by the entry in an individual CALL.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="PublishedLineName" type="NaturalLanguageStringStructure">
+		<xsd:annotation>
+			<xsd:documentation>Name or Number by which the LINEis known to the public.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="GroupOfLinesCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a GROUP OF LINEs</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="GroupOfLinesRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a GROUP OF LINEs</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="GroupOfLinesCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ====Route related elements============================================================== -->
+	<xsd:simpleType name="RouteCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a Route.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:element name="RouteName" type="NaturalLanguageStringStructure">
+		<xsd:annotation>
+			<xsd:documentation>Description of route by which it can be recogniozed.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="RouteRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a Route (Transmodel)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="RouteCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="DirectionCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a DIRECTION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="DirectionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a DIRECTION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="DirectionCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="RouteLinkCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a ROUTE LINk.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="RouteLinkRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a ROUTE LINk.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="RouteLinkCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ====Place Related elements============================================================== -->
+	<xsd:simpleType name="DestinationCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a DESTINATION.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="JourneyPlaceRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a PLACE visited by a VEHICLE JOURNEY.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:NMTOKEN"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="PlaceNameStructure">
+		<xsd:annotation>
+			<xsd:documentation>Names of VIA points, used to help identify the LINE, for example, Luton to Luton via Sutton. Currently 3 in VDV. Should only be included if the detail level was requested.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PlaceRef" type="JourneyPlaceRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a TOPOGRAPHIC PLACE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PlaceName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Names of place used to help identify the LINE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PlaceShortName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Short name of TOPOGRAPHIC PLACE. Should only be included if the detail level was requested.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="VehicleCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a VEHICLE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="VehicleRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a VEHICLE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="VehicleCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="VehicleRef" type="VehicleRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a VEHICLE.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="OccupancyEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Passenger load status of a VEHICLE - GTFS-R / TPEG Pts045</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts45_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="empty">
+				<xsd:annotation>
+					<xsd:documentation>GTFS-R "EMPTY"
        The vehicle is considered empty by most measures, and has few or no passengers onboard, but is still accepting passengers.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="manySeatsAvailable">
-    <xsd:annotation>
-     <xsd:documentation>GTFS-R "MANY_SEATS_AVAILABLE" / TPEG Pts45_1, many seats available
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="manySeatsAvailable">
+				<xsd:annotation>
+					<xsd:documentation>GTFS-R "MANY_SEATS_AVAILABLE" / TPEG Pts45_1, many seats available
        The vehicle has a large percentage of seats available. What percentage of free seats out of the total seats available is to be considered large enough to fall into this category is determined at the discretion of the producer.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fewSeatsAvailable">
-    <xsd:annotation>
-     <xsd:documentation>GTFS-R "FEW_SEATS_AVAILABLE" / TPEG Pts45_2, few seats available
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fewSeatsAvailable">
+				<xsd:annotation>
+					<xsd:documentation>GTFS-R "FEW_SEATS_AVAILABLE" / TPEG Pts45_2, few seats available
        The vehicle has a small percentage of seats available. What percentage of free seats out of the total seats available is to be considered small enough to fall into this category is determined at the discretion of the producer.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="standingRoomOnly">
-    <xsd:annotation>
-     <xsd:documentation>GTFS-R "STANDING_ROOM_ONLY" / TPEG Pts45_4, standing room only (and TPEG Pts45_3, no seats available)
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="standingRoomOnly">
+				<xsd:annotation>
+					<xsd:documentation>GTFS-R "STANDING_ROOM_ONLY" / TPEG Pts45_4, standing room only (and TPEG Pts45_3, no seats available)
        The vehicle can currently accommodate only standing passengers.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="crushedStandingRoomOnly">
-    <xsd:annotation>
-     <xsd:documentation>GTFS-R "CRUSHED_STANDING_ROOM_ONLY"
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="crushedStandingRoomOnly">
+				<xsd:annotation>
+					<xsd:documentation>GTFS-R "CRUSHED_STANDING_ROOM_ONLY"
        The vehicle can currently accommodate only standing passengers and has limited space for them.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="full">
-    <xsd:annotation>
-     <xsd:documentation>GTFS-R "FULL" / TPEG Pts45_5, full</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="notAcceptingPassengers">
-    <xsd:annotation>
-     <xsd:documentation>GTFS-R "NOT_ACCEPTING_PASSENGERS"
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="full">
+				<xsd:annotation>
+					<xsd:documentation>GTFS-R "FULL" / TPEG Pts45_5, full</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="notAcceptingPassengers">
+				<xsd:annotation>
+					<xsd:documentation>GTFS-R "NOT_ACCEPTING_PASSENGERS"
        The vehicle cannot accept passengers.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefined">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts45_255, undefined occupancy</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="seatsAvailable">
-    <xsd:annotation>
-     <xsd:documentation>(SIRI 2.1) deprecated - use a more specific value</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="standingAvailable">
-    <xsd:annotation>
-     <xsd:documentation>(SIRI 2.1) deprecated - use a more specific value</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="DriverCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Identifier of a DRIVER</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="DriverRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Reference to a DRIVER.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="DriverCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="NoteStructure">
-  <xsd:annotation>
-   <xsd:documentation>DataType for a NOTICe.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="SituationRef" minOccurs="0"/>
-   <xsd:element ref="SituationSimpleRef" minOccurs="0"/>
-   <xsd:element ref="SituationFullRef" minOccurs="0"/>
-   <xsd:element name="Note" type="NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Text annotation that applies to an element.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="InfoChannelCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of an Info Channel.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="InfoChannelRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to an Info Channel.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="InfoChannelCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="BrandingCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a BRANDING. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="BrandingRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a BRANDING. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="BrandingCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:complexType name="BrandingStructure">
-  <xsd:annotation>
-   <xsd:documentation>An arbitrary marketing classification. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="BrandingCode" type="xsd:NMTOKEN">
-    <xsd:annotation>
-     <xsd:documentation>Identity of BRANDING.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="TypeOfValueGroup" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
-<xsd:simpleType name="SiteCodeType">
-	<xsd:annotation>
-		<xsd:documentation>Identifier of a SITE</xsd:documentation>
-	</xsd:annotation>
-	<xsd:restriction base="xsd:NMTOKEN"/>
-</xsd:simpleType>
-<xsd:complexType name="SiteRefStructure">
-	<xsd:annotation>
-		<xsd:documentation>Reference to a SITE</xsd:documentation>
-	</xsd:annotation>
-	<xsd:simpleContent>
-		<xsd:extension base="SiteCodeType"/>
-	</xsd:simpleContent>
-</xsd:complexType>
-<xsd:element name="SiteRef" type="SiteRefStructure">
-	<xsd:annotation>
-		<xsd:documentation>Reference to a SITE</xsd:documentation>
-	</xsd:annotation>
-</xsd:element>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefined">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts45_255, undefined occupancy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="seatsAvailable">
+				<xsd:annotation>
+					<xsd:documentation>(SIRI 2.1) deprecated - use a more specific value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="standingAvailable">
+				<xsd:annotation>
+					<xsd:documentation>(SIRI 2.1) deprecated - use a more specific value</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DriverCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a DRIVER</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="DriverRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a DRIVER.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="DriverCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="NoteStructure">
+		<xsd:annotation>
+			<xsd:documentation>DataType for a NOTICe.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="SituationRef" minOccurs="0"/>
+			<xsd:element ref="SituationSimpleRef" minOccurs="0"/>
+			<xsd:element ref="SituationFullRef" minOccurs="0"/>
+			<xsd:element name="Note" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Text annotation that applies to an element.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="InfoChannelCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of an Info Channel.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="InfoChannelRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to an Info Channel.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="InfoChannelCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="BrandingCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a BRANDING. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="BrandingRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a BRANDING. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="BrandingCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="BrandingStructure">
+		<xsd:annotation>
+			<xsd:documentation>An arbitrary marketing classification. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="BrandingCode" type="xsd:NMTOKEN">
+				<xsd:annotation>
+					<xsd:documentation>Identity of BRANDING.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="TypeOfValueGroup" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="SiteCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a SITE</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="SiteRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a SITE</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="SiteCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="SiteRef" type="SiteRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a SITE</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 </xsd:schema>

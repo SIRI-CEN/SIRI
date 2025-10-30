@@ -1,49 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.ifopt.org.uk/ifopt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.ifopt.org.uk/ifopt" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.3" id="ifopt_location">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
-    <Date>
-     <Created>2006-08-12</Created>
-    </Date>
-    <Date>
-     <Modified>2006-09-22</Modified>
-    </Date>
-    <Date><Modified>2007-03-22</Modified>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
+				<Date>
+					<Created>2006-08-12</Created>
+				</Date>
+				<Date>
+					<Modified>2006-09-22</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-03-22</Modified>
 					<!--2007 03 23 Revise projections -->
 				</Date>
-    <Date>
-     <Modified>2007-06-12</Modified>
-    </Date>
-    <Date><Modified>2011-04-19</Modified>
-					 <!--Correct siri: namespace-->
+				<Date>
+					<Modified>2007-06-12</Modified>
 				</Date>
-    <Description>
-     <p>Fixed Objects in Public Transport. This subschema defines common location types.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_location.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, Crown Copyright 2006-2021</Copyright>
+				<Date>
+					<Modified>2011-04-19</Modified>
+					<!--Correct siri: namespace-->
+				</Date>
+				<Description>
+					<p>Fixed Objects in Public Transport. This subschema defines common location types.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_location.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, Crown Copyright 2006-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the SIRI standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the SIRI standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -51,231 +54,231 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG6</Project>
-    </Subject>
-    <Title>IFOPT Fixed Objects in Public Transport - location Types. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>location types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
- </xsd:annotation>
- <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_location.xsd"/>
- <!--======Point============================================================== ========-->
- <xsd:complexType name="AbstractProjection">
-  <xsd:sequence>
-   <xsd:element name="Features" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>GIS Features that this element projects onto.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="GisFeatureRef" type="FeatureRefStructure" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Identifier of FEATURE in a GIS data system.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="FeatureRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a FEATURE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="FeatureIdRef" type="FeatureIdRefStructure">
-    <xsd:annotation>
-     <xsd:documentation>Unique identfiier of referenced element, eg TOId.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FeatureType" type="xsd:NMTOKEN" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type for identifier of FEATURE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:simpleType name="FeatureIdType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a GIS FEATURe.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="FeatureIdRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a GIS FEATURe.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="FeatureIdType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!--======Link ============================================================-->
- <xsd:element name="PointProjection" type="PointProjectionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Points may be defined in tagged format or using GM coordinates element.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="PointProjectionStructure">
-  <xsd:annotation>
-   <xsd:documentation xml:lang="en">Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates or any GML compatible point coordinates format.  </xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractProjection">
-    <xsd:sequence>
-     <xsd:group ref="Wgs84Group" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>WGS84 Corodinates.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:group>
-     <xsd:element name="Coordinates" type="siri:CoordinatesStructure" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Coordinates of points in a GML compatible format, as indicated by srsName attribute.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-     <xsd:element name="Precision" type="siri:DistanceType" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Precision for point measurement. In meters.</xsd:documentation>
-      </xsd:annotation>
-     </xsd:element>
-    </xsd:sequence>
-    <xsd:attribute name="id" type="xsd:NMTOKEN">
-     <xsd:annotation>
-      <xsd:documentation>Identifier of POINT.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-    <xsd:attribute name="srsName" type="siri:SrsNameType">
-     <xsd:annotation>
-      <xsd:documentation>identifier of data reference system for geocodes, if point is specified as GML compatible Coordinates. A GML value. If not specified taken from system configuration.</xsd:documentation>
-     </xsd:annotation>
-    </xsd:attribute>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="Wgs84Group">
-  <xsd:annotation>
-   <xsd:documentation>WGS84 Coordinates.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Longitude" type="siri:LongitudeType">
-    <xsd:annotation>
-     <xsd:documentation>Longitude from Greenwich Meridian. -180° (East) to +180° (West).</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Latitude" type="siri:LatitudeType">
-    <xsd:annotation>
-     <xsd:documentation>Latitude from equator. -90° (South) to +90° (North).</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Altitude" type="siri:AltitudeType" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Altitude.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:group name="GmlGroup">
-  <xsd:annotation>
-   <xsd:documentation>GML compatible markup as series of values.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="SrsName" type="siri:SrsNameType" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <!--======Link ============================================================-->
- <xsd:element name="LinkProjection" type="LinkProjectionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Projection as a geospatial polyline.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="LinkProjectionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for PROJECTION as a geospatial polyline.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractProjection">
-    <xsd:sequence>
-     <xsd:element name="Line" minOccurs="0">
-      <xsd:annotation>
-       <xsd:documentation>Ordered sequence of points. There must always be a start and end point.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element ref="PointProjection" minOccurs="2" maxOccurs="unbounded"/>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <!--======Zone ============================================================-->
- <xsd:element name="ZoneProjection" type="ZoneProjectionStructure">
-  <xsd:annotation>
-   <xsd:documentation>PROJECTION onto a geospatial zone.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ZoneProjectionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for PROJECTION as a geospatial zone.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractProjection">
-    <xsd:sequence>
-     <xsd:element name="Boundary" maxOccurs="unbounded">
-      <xsd:annotation>
-       <xsd:documentation>Boundary line of Zone as an ordered set of points.</xsd:documentation>
-      </xsd:annotation>
-      <xsd:complexType>
-       <xsd:sequence>
-        <xsd:element ref="PointProjection" minOccurs="3" maxOccurs="unbounded"/>
-       </xsd:sequence>
-      </xsd:complexType>
-     </xsd:element>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:group name="PlaceProjectionGroup">
-  <xsd:annotation>
-   <xsd:documentation>Defines geospatial data elements for a zone such that it can be projected.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="PointProjection" minOccurs="0"/>
-   <xsd:element ref="LinkProjection" minOccurs="0"/>
-   <xsd:element ref="ZoneProjection" minOccurs="0"/>
-  </xsd:sequence>
- </xsd:group>
- <!--======Distance ============================================================-->
- <xsd:simpleType name="CompassBearing8Enumeration">
-  <xsd:annotation>
-   <xsd:documentation>8 point compass.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="SW"/>
-   <xsd:enumeration value="SE"/>
-   <xsd:enumeration value="NW"/>
-   <xsd:enumeration value="NE"/>
-   <xsd:enumeration value="W"/>
-   <xsd:enumeration value="E"/>
-   <xsd:enumeration value="S"/>
-   <xsd:enumeration value="N"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="CompassBearing16Enumeration">
-  <xsd:annotation>
-   <xsd:documentation>16 point compass.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value=""/>
-   <xsd:enumeration value="SW"/>
-   <xsd:enumeration value="SE"/>
-   <xsd:enumeration value="NW"/>
-   <xsd:enumeration value="NE"/>
-   <xsd:enumeration value="W"/>
-   <xsd:enumeration value="E"/>
-   <xsd:enumeration value="S"/>
-   <xsd:enumeration value="N"/>
-  </xsd:restriction>
- </xsd:simpleType>
+					<Project>CEN TC278 WG3 SG6</Project>
+				</Subject>
+				<Title>IFOPT Fixed Objects in Public Transport - location Types. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>location types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_location.xsd"/>
+	<!--======Point============================================================== ========-->
+	<xsd:complexType name="AbstractProjection">
+		<xsd:sequence>
+			<xsd:element name="Features" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>GIS Features that this element projects onto.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="GisFeatureRef" type="FeatureRefStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Identifier of FEATURE in a GIS data system.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FeatureRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a FEATURE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FeatureIdRef" type="FeatureIdRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Unique identfiier of referenced element, eg TOId.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FeatureType" type="xsd:NMTOKEN" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type for identifier of FEATURE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="FeatureIdType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a GIS FEATURe.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="FeatureIdRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a GIS FEATURe.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="FeatureIdType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!--======Link ============================================================-->
+	<xsd:element name="PointProjection" type="PointProjectionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Points may be defined in tagged format or using GM coordinates element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="PointProjectionStructure">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type for geospatial Position of a point. May be expressed in concrete WGS 84 Coordinates or any GML compatible point coordinates format.  </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractProjection">
+				<xsd:sequence>
+					<xsd:group ref="Wgs84Group" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>WGS84 Corodinates.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:group>
+					<xsd:element name="Coordinates" type="siri:CoordinatesStructure" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Coordinates of points in a GML compatible format, as indicated by srsName attribute.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="Precision" type="siri:DistanceType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Precision for point measurement. In meters.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="id" type="xsd:NMTOKEN">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of POINT.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="srsName" type="siri:SrsNameType">
+					<xsd:annotation>
+						<xsd:documentation>identifier of data reference system for geocodes, if point is specified as GML compatible Coordinates. A GML value. If not specified taken from system configuration.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="Wgs84Group">
+		<xsd:annotation>
+			<xsd:documentation>WGS84 Coordinates.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Longitude" type="siri:LongitudeType">
+				<xsd:annotation>
+					<xsd:documentation>Longitude from Greenwich Meridian. -180° (East) to +180° (West).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Latitude" type="siri:LatitudeType">
+				<xsd:annotation>
+					<xsd:documentation>Latitude from equator. -90° (South) to +90° (North).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Altitude" type="siri:AltitudeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Altitude.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="GmlGroup">
+		<xsd:annotation>
+			<xsd:documentation>GML compatible markup as series of values.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="SrsName" type="siri:SrsNameType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<!--======Link ============================================================-->
+	<xsd:element name="LinkProjection" type="LinkProjectionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Projection as a geospatial polyline.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="LinkProjectionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for PROJECTION as a geospatial polyline.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractProjection">
+				<xsd:sequence>
+					<xsd:element name="Line" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Ordered sequence of points. There must always be a start and end point.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="PointProjection" minOccurs="2" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--======Zone ============================================================-->
+	<xsd:element name="ZoneProjection" type="ZoneProjectionStructure">
+		<xsd:annotation>
+			<xsd:documentation>PROJECTION onto a geospatial zone.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ZoneProjectionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for PROJECTION as a geospatial zone.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractProjection">
+				<xsd:sequence>
+					<xsd:element name="Boundary" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Boundary line of Zone as an ordered set of points.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="PointProjection" minOccurs="3" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:group name="PlaceProjectionGroup">
+		<xsd:annotation>
+			<xsd:documentation>Defines geospatial data elements for a zone such that it can be projected.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="PointProjection" minOccurs="0"/>
+			<xsd:element ref="LinkProjection" minOccurs="0"/>
+			<xsd:element ref="ZoneProjection" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:group>
+	<!--======Distance ============================================================-->
+	<xsd:simpleType name="CompassBearing8Enumeration">
+		<xsd:annotation>
+			<xsd:documentation>8 point compass.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SW"/>
+			<xsd:enumeration value="SE"/>
+			<xsd:enumeration value="NW"/>
+			<xsd:enumeration value="NE"/>
+			<xsd:enumeration value="W"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CompassBearing16Enumeration">
+		<xsd:annotation>
+			<xsd:documentation>16 point compass.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value=""/>
+			<xsd:enumeration value="SW"/>
+			<xsd:enumeration value="SE"/>
+			<xsd:enumeration value="NW"/>
+			<xsd:enumeration value="NE"/>
+			<xsd:enumeration value="W"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 </xsd:schema>

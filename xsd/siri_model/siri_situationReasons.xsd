@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_reasons">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>Add names </Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
-    <Date>
-     <Created>2004-09-29</Created>
-    </Date>
-    <Date>
-     <Modified>2004-10-01</Modified>
-    </Date>
-    <Date>
-     <Modified>2005-02-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-05-14</Modified>
-    </Date>
-    <Date>
-     <Modified>2008-07-05</Modified>
-     <!-- split out classifiers -->
-    </Date>
-    <Date>
-     <Modified>2009-03-31</Modified>
-     <!-- add subreason elements -->
-    </Date>
-    <Date>
-     <Modified>2018-11-13</Modified>
-     <!-- [vdv] MiscellaneousReasonEnumeration TPEG-code of "altercation" changed from pti19_1_Alias_6 to pti19_1_Alias_7 because TPEG-code pti19_1_Alias_6 was wrongly doubled in use for "emergencyServicesCall" and "altercation"
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>Add names </Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
+				<Date>
+					<Created>2004-09-29</Created>
+				</Date>
+				<Date>
+					<Modified>2004-10-01</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-02-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-05-14</Modified>
+				</Date>
+				<Date>
+					<Modified>2008-07-05</Modified>
+					<!-- split out classifiers -->
+				</Date>
+				<Date>
+					<Modified>2009-03-31</Modified>
+					<!-- add subreason elements -->
+				</Date>
+				<Date>
+					<Modified>2018-11-13</Modified>
+					<!-- [vdv] MiscellaneousReasonEnumeration TPEG-code of "altercation" changed from pti19_1_Alias_6 to pti19_1_Alias_7 because TPEG-code pti19_1_Alias_6 was wrongly doubled in use for "emergencyServicesCall" and "altercation"
           [vdv] MiscellaneousReasonEnumeration TPEG-code of "illVehicleOccupants" changed from pti19_1_Alias_7 to pti19_1_Alias_8
           [vdv] MiscellaneousReasonEnumeration TPEG-code of "undefinedProblem" changed from pti19_27 to pti19_255
           [vdv] MiscellaneousSubReasonEnumeration TPEG-code value "assault" added according to recommendation document and Datex2  
@@ -52,46 +52,47 @@
           [vdv] EnvironmentSubReasonEnumeration TPEG-code value "lighteningStrike" changed to "lightningStrike" according to recommendation document
           [vdv] EnvironmentSubReasonEnumeration TPEG-code value "mudslip" changed to "mudslide" according to recommendation document and Datex2
       -->
-    </Date>
-    <Date>
-     <Modified>2014-06-23</Modified>
-     <!-- (since SIRI 2.0)
+				</Date>
+				<Date>
+					<Modified>2014-06-23</Modified>
+					<!-- (since SIRI 2.0)
        add Holiday and PoliceActivity subreasons to Miscellaneous 
        Correct Reason codes to match spec.
       -->
-    </Date>
-    <Date>
-     <Modified>2019-09-01</Modified>
-     <!-- (since SIRI 2.1)
+				</Date>
+				<Date>
+					<Modified>2019-09-01</Modified>
+					<!-- (since SIRI 2.1)
        Replaced separate ReasonEnumerations by AlertCauseEnumeration (TPEG2).
        Removed SubReasonEnumerations
       -->
-    </Date>
-    <Description>
-     <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes reason codes.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model}/siri_situationReasons.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>CEN</Publisher>
-    <Relation> 
+				</Date>
+				<Description>
+					<p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes reason codes.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_model}/siri_situationReasons.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>CEN</Publisher>
+				<Relation> 
     </Relation>
-    <Rights><!--Unclassified-->
-      <Copyright>Kizoom 2000-2007, CEN 2009-2021</Copyright>
-    </Rights>
-    <Source>
-     <ul>
-      <li>Schema derived from the Kizoom XTIS schema </li>
-      <li>Derived from the TPEG2 AlertCause schema </li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>Kizoom 2000-2007, CEN 2009-2021</Copyright>
+				</Rights>
+				<Source>
+					<ul>
+						<li>Schema derived from the Kizoom XTIS schema </li>
+						<li>Derived from the TPEG2 AlertCause schema </li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -99,1272 +100,1272 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
      </Category>
-     <Project>CEN TC278 WG3 SG7</Project>
-    </Subject>
-    <Title>SIRI-SX Xml Schema for PT Incidents. Reasons subschema</Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:group name="TpegReasonGroup">
-  <xsd:annotation>
-   <xsd:documentation>Structured Classification Elements.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:choice>
-   <xsd:element ref="AlertCause"/>
-   <xsd:element ref="UnknownReason">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="MiscellaneousReason">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="PersonnelReason">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="EquipmentReason">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="EnvironmentReason">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element ref="UndefinedReason">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:choice>
- </xsd:group>
- <xsd:group name="TpegSubReasonGroup">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:choice>
-   <xsd:element ref="MiscellaneousSubReason"/>
-   <xsd:element ref="PersonnelSubReason"/>
-   <xsd:element ref="EquipmentSubReason"/>
-   <xsd:element ref="EnvironmentSubReason"/>
-  </xsd:choice>
- </xsd:group>
- <xsd:element name="AlertCause" type="AlertCauseEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>TPEG Pts38: AlertCause.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:simpleType name="AlertCauseEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Values for TPEG Pts38 - AlertCause, plus additional values from TPEG Pti19/20/21/22</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_0, unknown</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="securityAlert">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_1, security alert</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="emergencyServicesCall">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_2, emergency services call</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="policeActivity">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_3, police activity</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="policeOrder">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_4, police order</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fire">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_5, fire</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="cableFire">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_6, cable fire</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="smokeDetectedOnVehicle">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_7, smoke detected on vehicle</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fireAtStation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_8, fire at the station</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fireRun">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_9, fire run</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fireBrigadeOrder">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_10, fire brigade order</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="explosion">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_11, explosion</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="explosionHazard">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_12, explosion hazard</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="bombDisposal">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_13, bomb disposal</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="emergencyMedicalServices">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_14, emergency medical services</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="emergencyBrake">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_15, emergency brake</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="vandalism">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_16, vandalism</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="cableTheft">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_17, cable theft</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="signalPassedAtDanger">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_18, signal passed at danger</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stationOverrun">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_19, station overrun</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="passengersBlockingDoors">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_20, passengers blocking doors</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="defectiveSecuritySystem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_21, defective security system</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="overcrowded">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_22, overcrowded</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="borderControl">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_23, border control</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="unattendedBag">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_24, unattended bag</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="telephonedThreat">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_25, telephoned threat</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="suspectVehicle">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_26, suspect vehicle</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="evacuation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_27, evacuation</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="terroristIncident">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_28, terrorist incident</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="publicDisturbance">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_29, public disturbance</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="technicalProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_30, technical problem</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="vehicleFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_31, vehicle failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="serviceDisruption">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_32, service disruption</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="doorFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_33, door failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lightingFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_34, lighting failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pointsProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_35, points problem</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pointsFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_36, points failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="signalProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_37, signal problem</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="signalFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_38, signal failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="overheadWireFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_39, overhead wire failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="levelCrossingFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_40, level crossing failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="trafficManagementSystemFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_41, traffic management system failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="engineFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_42, engine failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="breakDown">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_43, break down</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="repairWork">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_44, repair work</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="constructionWork">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_45, construction work</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="maintenanceWork">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_46, maintenance work</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="powerProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_47, power problem</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="trackCircuitProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_48, track circuit</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="swingBridgeFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_49, swing bridge failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="escalatorFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_50, escalator failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="liftFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_51, lift failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="gangwayProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_52, gangway problem</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="defectiveVehicle">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_53, defective vehicle</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="brokenRail">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_54, broken rail</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="poorRailConditions">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_55, poor rail conditions</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="deicingWork">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_56, de-icing work</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="wheelProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_57, wheel problem</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="routeBlockage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_58, route blockage</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="congestion">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_59, congestion</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="heavyTraffic">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_60, heavy traffic</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="routeDiversion">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_61, route diversion</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="roadworks">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_62, roadworks</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="unscheduledConstructionWork">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_63, unscheduled construction work</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="levelCrossingIncident">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_64, level crossing incident</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="sewerageMaintenance">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_65, sewerageMaintenance </xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="roadClosed">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_66, road closed</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="roadwayDamage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_67, roadway damage</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="bridgeDamage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_68, bridge damage</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="personOnTheLine">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_69, person on the line</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="objectOnTheLine">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_70, object on the line</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="vehicleOnTheLine">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_71, vehicle on the line</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="animalOnTheLine">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_72, animal on the line</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fallenTreeOnTheLine">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_73, fallen tree on the line</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="vegetation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_74, vegetation</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="speedRestrictions">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_75, speed restrictions</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="precedingVehicle">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_76, preceding vehicle</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="accident">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_77, accident</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="nearMiss">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_78, near miss</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="personHitByVehicle">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_79, person hit by vehicle</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="vehicleStruckObject">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_80, vehicle struck object</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="vehicleStruckAnimal">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_81, vehicle struck animal</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="derailment">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_82, derailment</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="collision">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_83, collision</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="levelCrossingAccident">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_84, level crossing accident</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="poorWeather">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_85, poor weather</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fog">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_86, fog</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="heavySnowFall">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_87, heavy snowfall</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="heavyRain">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_88, heavy rain</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="strongWinds">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_89, strong winds</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="ice">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_90, ice</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="hail">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_91, hail</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="highTemperatures">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_92, high temperatures</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="flooding">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_93, flooding</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lowWaterLevel">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_94, low water level</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="riskOfFlooding">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_95, risk of flooding</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="highWaterLevel">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_96, high water level</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fallenLeaves">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_97, fallen leaves</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fallenTree">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_98, fallen tree</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="landslide">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_99, landslide</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="riskOfLandslide">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_100, risk of landslide</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="driftingSnow">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_101, drifting snow</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="blizzardConditions">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_102, blizzard conditions</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stormDamage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_103, storm damage</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lightningStrike">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_104, lightning strike</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="roughSea">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_105, rough sea</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="highTide">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_106, high tide</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lowTide">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_107, low tide</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="iceDrift">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_108, ice drift</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="avalanches">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_109, avalanches</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="riskOfAvalanches">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_110, risk of avalanches</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="flashFloods">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_111, flash floods</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="mudslide">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_112, mudslide</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="rockfalls">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_113, rockfalls</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="subsidence">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_114, subsidence</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="earthquakeDamage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_115, earthquake damage</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="grassFire">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_116, grass fire</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="wildlandFire">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_117, wildland fire</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="iceOnRailway">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_118, ice on railway</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="iceOnCarriages">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_119, ice on carriages</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="specialEvent">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_120, special event</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="procession">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_121, procession</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="demonstration">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_122, demonstration</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="industrialAction">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_123, industrial action</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="staffSickness">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_124, staff sickness</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="staffAbsence">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_125, staff absence</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="operatorCeasedTrading">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_126, operator ceased trading</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="previousDisturbances">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_127, previous disturbances</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="vehicleBlockingTrack">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_128, vehicle blocking track</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="foreignDisturbances">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_129, foreign disturbances</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="awaitingShuttle">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_130, awaiting shuttle</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="changeInCarriages">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_131, change in carriages</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="trainCoupling">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_132, train coupling</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="boardingDelay">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_133, boarding delay</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="awaitingApproach">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_134, awaiting approach</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="overtaking">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_135, overtaking</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="provisionDelay">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_136, provision delay</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="miscellaneous">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_137, miscellaneous</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedAlertCause">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pts38_255, undefined alert cause</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="incident">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="safetyViolation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="trainDoor">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_5, DEPRECATED since SIRI 2.1 - replaced by Pts38_33, door failure</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="altercation">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_7, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="illVehicleOccupants">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_8, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="serviceFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_1_12, DEPRECATED since SIRI 2.1 - replaced by Pts38_32, service disruption</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="bombExplosion">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fireBrigadeSafetyChecks">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="civilEmergency">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_6, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="airRaid">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_7, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="sabotage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_8, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="bombAlert">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_9, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="attack">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_10, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="gunfireOnRoadway">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_13, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="securityIncident">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_3_16, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="linesideFire">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_4_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="passengerAction">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="staffAssault">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="railwayCrime">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_3, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="assault">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_4, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="theft">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_5_5, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fatality">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="personUnderTrain">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="personHitByTrain">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_3, DEPRECATED since SIRI 2.1 - replaced by Pts38_79, person hit by vehicle</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="personIllOnVehicle">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_4, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="emergencyServices">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_6_5, DEPRECATED since SIRI 2.1 - replaced by Pts38_14, emergency medical services</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="insufficientDemand">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_8, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="leaderBoardFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_10, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="serviceIndicatorFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_11, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="operatorSuspended">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_14, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="problemsAtBorderPost">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_15_1, DEPRECATED since SIRI 2.1 - replaced by Pts38_23, border control</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="problemsAtCustomsPost">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_15_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="levelCrossingIncident">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_18_1, DEPRECATED since SIRI 2.1 - replaced by Pts38_64, level crossing blocked</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="trainStruckAnimal">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_19_3, DEPRECATED since SIRI 2.1 - replaced by Pts38_81, vehicle struck animal</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="trainStruckObject">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_19_4, DEPRECATED since SIRI 2.1 - replaced by Pts38_80, vehicle struck object</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="roadMaintenance">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_23_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="asphalting">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_23_3, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="paving">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_23_4, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="march">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_24_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="filterBlockade">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_24_5, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="sightseersObstructingAccess">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_24_6, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="holiday">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_24_7, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="bridgeStrike">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_25, DEPRECATED since SIRI 2.1 - replaced by Pts38_68, bridge damage</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="viaductFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_25_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="overheadObstruction">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_26, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_255, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="logisticProblems">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_255_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="problemsOnLocalRoad">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_255_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti19_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="staffInjury">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_1_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="contractorStaffInjury">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_1_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="staffInWrongPlace">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_3, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="staffShortage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_4, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="unofficialIndustrialAction">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="workToRule">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_6, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedPersonnelProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti20_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="trainWarningSystemProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_3_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="signalAndSwitchFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_4_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="tractionFailure">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_6_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="defectiveTrain">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_6_2, DEPRECATED since SIRI 2.1 - replaced by Pts38_53, defective vehicle</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="wheelImpactLoad">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_3, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lackOfOperationalStock">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_4, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="defectiveFireAlarmEquipment">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_5, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="defectivePlatformEdgeDoors">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_6, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="defectiveCctv">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_7, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="defectivePublicAnnouncementSystem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_8, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="ticketingSystemNotAvailable">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_8_9, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="emergencyEngineeringWork">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_11_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lateFinishToEngineeringWork">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_11_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fuelProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_13, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="closedForMaintenance">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_18, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="fuelShortage">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_19, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="slipperyTrack">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_21_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="luggageCarouselProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_22, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedEquipmentProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti21_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="stormConditions">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="tidalRestrictions">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_6, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="slipperiness">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_9_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="glazedFrost">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_9_3, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="frozen">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_10, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="sleet">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_11_1, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="waterlogged">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_14, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="sewerOverflow">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_255_2, DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="undefinedEnvironmentalProblem">
-    <xsd:annotation>
-     <xsd:documentation>TPEG Pti22_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <!-- Values added for compatiblity -->
-   <xsd:enumeration value="fireAtTheStation">
-    <xsd:annotation>
-     <xsd:documentation>See also TPEG Pts38_8 value 'fireAtStation'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="breakdown">
-    <xsd:annotation>
-     <xsd:documentation>See also TPEG Pts38_43 value 'breakDown'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="levelCrossingBlocked">
-    <xsd:annotation>
-     <xsd:documentation>See also TPEG Pts38_64 value 'levelCrossingIncident'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="heavySnowfall">
-    <xsd:annotation>
-     <xsd:documentation>See also TPEG Pts38_87 value 'heavySnowFall'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="waitingForTransferPassengers">
-    <xsd:annotation>
-     <xsd:documentation>See also TPEG Pts38_130 value 'awaitingShuttle'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="awaitingOncomingVehicle">
-    <xsd:annotation>
-     <xsd:documentation>See also TPEG Pts38_134 value 'awaitingApproach'.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ===INCIDENT REASON TYPES====================================== -->
- <xsd:element name="UnknownReason" type="xsd:string">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti18_0 - unknown event reason).</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ===================================================== -->
- <xsd:element name="UndefinedReason" type="xsd:string">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti18_255 - undefined event reason).</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ===DEPRECATED REASON TYPES====================================== -->
- <xsd:element name="MiscellaneousReason" type="xsd:NMTOKEN">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="MiscellaneousSubReason" type="xsd:NMTOKEN">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="PersonnelReason" type="xsd:NMTOKEN">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="PersonnelSubReason" type="xsd:NMTOKEN">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="EquipmentReason" type="xsd:NMTOKEN">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="EquipmentSubReason" type="xsd:NMTOKEN">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="EnvironmentReason" type="xsd:NMTOKEN">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:element name="EnvironmentSubReason" type="xsd:NMTOKEN">
-  <xsd:annotation>
-   <xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
+					<Project>CEN TC278 WG3 SG7</Project>
+				</Subject>
+				<Title>SIRI-SX Xml Schema for PT Incidents. Reasons subschema</Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:group name="TpegReasonGroup">
+		<xsd:annotation>
+			<xsd:documentation>Structured Classification Elements.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element ref="AlertCause"/>
+			<xsd:element ref="UnknownReason">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="MiscellaneousReason">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PersonnelReason">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="EquipmentReason">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="EnvironmentReason">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="UndefinedReason">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:group name="TpegSubReasonGroup">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED since SIRI 2.1 - use only AlertCause.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element ref="MiscellaneousSubReason"/>
+			<xsd:element ref="PersonnelSubReason"/>
+			<xsd:element ref="EquipmentSubReason"/>
+			<xsd:element ref="EnvironmentSubReason"/>
+		</xsd:choice>
+	</xsd:group>
+	<xsd:element name="AlertCause" type="AlertCauseEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>TPEG Pts38: AlertCause.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="AlertCauseEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Values for TPEG Pts38 - AlertCause, plus additional values from TPEG Pti19/20/21/22</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_0, unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="securityAlert">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_1, security alert</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="emergencyServicesCall">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_2, emergency services call</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="policeActivity">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_3, police activity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="policeOrder">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_4, police order</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fire">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_5, fire</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="cableFire">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_6, cable fire</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="smokeDetectedOnVehicle">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_7, smoke detected on vehicle</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fireAtStation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_8, fire at the station</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fireRun">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_9, fire run</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fireBrigadeOrder">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_10, fire brigade order</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="explosion">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_11, explosion</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="explosionHazard">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_12, explosion hazard</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bombDisposal">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_13, bomb disposal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="emergencyMedicalServices">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_14, emergency medical services</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="emergencyBrake">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_15, emergency brake</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vandalism">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_16, vandalism</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="cableTheft">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_17, cable theft</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="signalPassedAtDanger">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_18, signal passed at danger</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stationOverrun">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_19, station overrun</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="passengersBlockingDoors">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_20, passengers blocking doors</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="defectiveSecuritySystem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_21, defective security system</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="overcrowded">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_22, overcrowded</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="borderControl">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_23, border control</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unattendedBag">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_24, unattended bag</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="telephonedThreat">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_25, telephoned threat</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="suspectVehicle">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_26, suspect vehicle</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="evacuation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_27, evacuation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="terroristIncident">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_28, terrorist incident</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="publicDisturbance">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_29, public disturbance</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="technicalProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_30, technical problem</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vehicleFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_31, vehicle failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="serviceDisruption">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_32, service disruption</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="doorFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_33, door failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lightingFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_34, lighting failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="pointsProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_35, points problem</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="pointsFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_36, points failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="signalProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_37, signal problem</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="signalFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_38, signal failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="overheadWireFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_39, overhead wire failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="levelCrossingFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_40, level crossing failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trafficManagementSystemFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_41, traffic management system failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="engineFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_42, engine failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="breakDown">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_43, break down</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="repairWork">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_44, repair work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="constructionWork">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_45, construction work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="maintenanceWork">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_46, maintenance work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="powerProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_47, power problem</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trackCircuitProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_48, track circuit</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="swingBridgeFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_49, swing bridge failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="escalatorFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_50, escalator failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="liftFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_51, lift failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="gangwayProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_52, gangway problem</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="defectiveVehicle">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_53, defective vehicle</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="brokenRail">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_54, broken rail</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="poorRailConditions">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_55, poor rail conditions</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="deicingWork">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_56, de-icing work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="wheelProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_57, wheel problem</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="routeBlockage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_58, route blockage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="congestion">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_59, congestion</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="heavyTraffic">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_60, heavy traffic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="routeDiversion">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_61, route diversion</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="roadworks">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_62, roadworks</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unscheduledConstructionWork">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_63, unscheduled construction work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="levelCrossingIncident">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_64, level crossing incident</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="sewerageMaintenance">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_65, sewerageMaintenance </xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="roadClosed">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_66, road closed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="roadwayDamage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_67, roadway damage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bridgeDamage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_68, bridge damage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="personOnTheLine">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_69, person on the line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="objectOnTheLine">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_70, object on the line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vehicleOnTheLine">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_71, vehicle on the line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="animalOnTheLine">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_72, animal on the line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fallenTreeOnTheLine">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_73, fallen tree on the line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vegetation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_74, vegetation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="speedRestrictions">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_75, speed restrictions</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="precedingVehicle">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_76, preceding vehicle</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="accident">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_77, accident</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="nearMiss">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_78, near miss</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="personHitByVehicle">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_79, person hit by vehicle</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vehicleStruckObject">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_80, vehicle struck object</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vehicleStruckAnimal">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_81, vehicle struck animal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="derailment">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_82, derailment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="collision">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_83, collision</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="levelCrossingAccident">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_84, level crossing accident</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="poorWeather">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_85, poor weather</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fog">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_86, fog</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="heavySnowFall">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_87, heavy snowfall</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="heavyRain">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_88, heavy rain</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="strongWinds">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_89, strong winds</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ice">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_90, ice</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="hail">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_91, hail</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="highTemperatures">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_92, high temperatures</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="flooding">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_93, flooding</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lowWaterLevel">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_94, low water level</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="riskOfFlooding">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_95, risk of flooding</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="highWaterLevel">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_96, high water level</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fallenLeaves">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_97, fallen leaves</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fallenTree">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_98, fallen tree</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="landslide">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_99, landslide</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="riskOfLandslide">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_100, risk of landslide</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="driftingSnow">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_101, drifting snow</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="blizzardConditions">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_102, blizzard conditions</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stormDamage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_103, storm damage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lightningStrike">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_104, lightning strike</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="roughSea">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_105, rough sea</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="highTide">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_106, high tide</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lowTide">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_107, low tide</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="iceDrift">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_108, ice drift</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="avalanches">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_109, avalanches</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="riskOfAvalanches">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_110, risk of avalanches</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="flashFloods">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_111, flash floods</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="mudslide">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_112, mudslide</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="rockfalls">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_113, rockfalls</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="subsidence">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_114, subsidence</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="earthquakeDamage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_115, earthquake damage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="grassFire">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_116, grass fire</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="wildlandFire">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_117, wildland fire</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="iceOnRailway">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_118, ice on railway</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="iceOnCarriages">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_119, ice on carriages</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="specialEvent">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_120, special event</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="procession">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_121, procession</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="demonstration">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_122, demonstration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="industrialAction">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_123, industrial action</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="staffSickness">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_124, staff sickness</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="staffAbsence">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_125, staff absence</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="operatorCeasedTrading">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_126, operator ceased trading</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="previousDisturbances">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_127, previous disturbances</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vehicleBlockingTrack">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_128, vehicle blocking track</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="foreignDisturbances">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_129, foreign disturbances</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="awaitingShuttle">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_130, awaiting shuttle</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="changeInCarriages">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_131, change in carriages</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trainCoupling">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_132, train coupling</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="boardingDelay">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_133, boarding delay</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="awaitingApproach">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_134, awaiting approach</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="overtaking">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_135, overtaking</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="provisionDelay">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_136, provision delay</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="miscellaneous">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_137, miscellaneous</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedAlertCause">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pts38_255, undefined alert cause</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="incident">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="safetyViolation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_1_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trainDoor">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_1_5, DEPRECATED since SIRI 2.1 - replaced by Pts38_33, door failure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="altercation">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_1_7, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="illVehicleOccupants">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_1_8, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="serviceFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_1_12, DEPRECATED since SIRI 2.1 - replaced by Pts38_32, service disruption</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bombExplosion">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fireBrigadeSafetyChecks">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_3_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="civilEmergency">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_3_6, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="airRaid">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_3_7, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="sabotage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_3_8, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bombAlert">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_3_9, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="attack">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_3_10, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="gunfireOnRoadway">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_3_13, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="securityIncident">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_3_16, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="linesideFire">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_4_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="passengerAction">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="staffAssault">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_5_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="railwayCrime">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_5_3, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="assault">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_5_4, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="theft">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_5_5, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fatality">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_6_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="personUnderTrain">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_6_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="personHitByTrain">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_6_3, DEPRECATED since SIRI 2.1 - replaced by Pts38_79, person hit by vehicle</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="personIllOnVehicle">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_6_4, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="emergencyServices">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_6_5, DEPRECATED since SIRI 2.1 - replaced by Pts38_14, emergency medical services</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="insufficientDemand">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_8, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="leaderBoardFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_10, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="serviceIndicatorFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_11, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="operatorSuspended">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_14, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="problemsAtBorderPost">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_15_1, DEPRECATED since SIRI 2.1 - replaced by Pts38_23, border control</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="problemsAtCustomsPost">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_15_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="levelCrossingIncident">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_18_1, DEPRECATED since SIRI 2.1 - replaced by Pts38_64, level crossing blocked</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trainStruckAnimal">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_19_3, DEPRECATED since SIRI 2.1 - replaced by Pts38_81, vehicle struck animal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trainStruckObject">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_19_4, DEPRECATED since SIRI 2.1 - replaced by Pts38_80, vehicle struck object</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="roadMaintenance">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_23_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="asphalting">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_23_3, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="paving">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_23_4, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="march">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_24_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="filterBlockade">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_24_5, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="sightseersObstructingAccess">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_24_6, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="holiday">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_24_7, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bridgeStrike">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_25, DEPRECATED since SIRI 2.1 - replaced by Pts38_68, bridge damage</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="viaductFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_25_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="overheadObstruction">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_26, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_255, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="logisticProblems">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_255_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="problemsOnLocalRoad">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_255_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti19_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="staffInjury">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti20_1_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="contractorStaffInjury">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti20_1_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="staffInWrongPlace">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti20_3, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="staffShortage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti20_4, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="unofficialIndustrialAction">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti20_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="workToRule">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti20_6, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedPersonnelProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti20_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="trainWarningSystemProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_3_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="signalAndSwitchFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_4_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="tractionFailure">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_6_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="defectiveTrain">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_6_2, DEPRECATED since SIRI 2.1 - replaced by Pts38_53, defective vehicle</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="wheelImpactLoad">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_8_3, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lackOfOperationalStock">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_8_4, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="defectiveFireAlarmEquipment">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_8_5, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="defectivePlatformEdgeDoors">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_8_6, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="defectiveCctv">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_8_7, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="defectivePublicAnnouncementSystem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_8_8, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ticketingSystemNotAvailable">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_8_9, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="emergencyEngineeringWork">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_11_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="lateFinishToEngineeringWork">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_11_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fuelProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_13, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="closedForMaintenance">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_18, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="fuelShortage">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_19, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="slipperyTrack">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_21_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="luggageCarouselProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_22, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedEquipmentProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti21_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stormConditions">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_5_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="tidalRestrictions">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_6, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="slipperiness">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_9_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="glazedFrost">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_9_3, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="frozen">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_10, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="sleet">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_11_1, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="waterlogged">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_14, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="sewerOverflow">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_255_2, DEPRECATED since SIRI 2.1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="undefinedEnvironmentalProblem">
+				<xsd:annotation>
+					<xsd:documentation>TPEG Pti22_255, DEPRECATED since SIRI 2.1 - replaced by Pts38_255, undefined alert cause</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<!-- Values added for compatiblity -->
+			<xsd:enumeration value="fireAtTheStation">
+				<xsd:annotation>
+					<xsd:documentation>See also TPEG Pts38_8 value 'fireAtStation'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="breakdown">
+				<xsd:annotation>
+					<xsd:documentation>See also TPEG Pts38_43 value 'breakDown'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="levelCrossingBlocked">
+				<xsd:annotation>
+					<xsd:documentation>See also TPEG Pts38_64 value 'levelCrossingIncident'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="heavySnowfall">
+				<xsd:annotation>
+					<xsd:documentation>See also TPEG Pts38_87 value 'heavySnowFall'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="waitingForTransferPassengers">
+				<xsd:annotation>
+					<xsd:documentation>See also TPEG Pts38_130 value 'awaitingShuttle'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="awaitingOncomingVehicle">
+				<xsd:annotation>
+					<xsd:documentation>See also TPEG Pts38_134 value 'awaitingApproach'.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ===INCIDENT REASON TYPES====================================== -->
+	<xsd:element name="UnknownReason" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti18_0 - unknown event reason).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ===================================================== -->
+	<xsd:element name="UndefinedReason" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED since SIRI 2.1 (TPEG Pti18_255 - undefined event reason).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ===DEPRECATED REASON TYPES====================================== -->
+	<xsd:element name="MiscellaneousReason" type="xsd:NMTOKEN">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MiscellaneousSubReason" type="xsd:NMTOKEN">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti19 - Miscellaneous Event Reason)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PersonnelReason" type="xsd:NMTOKEN">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PersonnelSubReason" type="xsd:NMTOKEN">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti20 - Personnel Event Reason)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EquipmentReason" type="xsd:NMTOKEN">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EquipmentSubReason" type="xsd:NMTOKEN">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti21 - Equipment Event Reason)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EnvironmentReason" type="xsd:NMTOKEN">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EnvironmentSubReason" type="xsd:NMTOKEN">
+		<xsd:annotation>
+			<xsd:documentation>DEPRECATED and changed to nmtoken since SIRI 2.1 (TPEG Pti22 - Environment Event Reason)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 </xsd:schema>

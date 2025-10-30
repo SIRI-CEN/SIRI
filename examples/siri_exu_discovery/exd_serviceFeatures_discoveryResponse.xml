@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceFeaturesDelivery version="2.0">
-  <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-  <Status>true</Status>
-  <ServiceFeature>
-   <ServiceFeatureCode>CAT01</ServiceFeatureCode>
-   <Name xml:lang="EN">Express</Name>
-   <Icon>express.gif</Icon>
-  </ServiceFeature>
-  <ServiceFeature>
-   <ServiceFeatureCode>CAT021</ServiceFeatureCode>
-   <Name xml:lang="EN">School</Name>
-   <Icon>school.gif</Icon>
-  </ServiceFeature>
- </ServiceFeaturesDelivery>
+	<ServiceFeaturesDelivery version="2.0">
+		<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+		<Status>true</Status>
+		<ServiceFeature>
+			<ServiceFeatureCode>CAT01</ServiceFeatureCode>
+			<Name xml:lang="EN">Express</Name>
+			<Icon>express.gif</Icon>
+		</ServiceFeature>
+		<ServiceFeature>
+			<ServiceFeatureCode>CAT021</ServiceFeatureCode>
+			<Name xml:lang="EN">School</Name>
+			<Icon>school.gif</Icon>
+		</ServiceFeature>
+	</ServiceFeaturesDelivery>
 </Siri>

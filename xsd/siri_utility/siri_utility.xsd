@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_utility">
- <!-- ======================================================================= -->
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>CEN TC278 WG3 SG9 Team.</Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@siri.org.uk</Creator>
-    <Date>
-     <Created>2008-09-307</Created>
-     <!--  change any to lax / empty -->
-    </Date>
-    <Date>
-     <Created>2007-04-17</Created>
-    </Date>
-    <Description>
-     <p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines common utility types</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_utiliyty/}siri_utility.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
+	<!-- ======================================================================= -->
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Contributor>CEN TC278 WG3 SG9 Team.</Contributor>
+				<Coverage>Europe</Coverage>
+				<Creator>First drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@siri.org.uk</Creator>
+				<Date>
+					<Created>2008-09-307</Created>
+					<!--  change any to lax / empty -->
+				</Date>
+				<Date>
+					<Created>2007-04-17</Created>
+				</Date>
+				<Description>
+					<p>SIRI is a European CEN standard for the exchange of real-time information. This subschema defines common utility types</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/xsd/siri_utiliyty/}siri_utility.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD </Publisher>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, VDV, RTIG 2004-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the VDV, RTIGXML and Trident standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the VDV, RTIGXML and Trident standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -45,257 +46,257 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG9.</Project>
-    </Subject>
-    <Title>SIRI XML schema. Shared utility types </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>SIRI Framework Utility Types.</xsd:documentation>
- </xsd:annotation>
- <!-- ======================================================================= -->
- <xsd:include schemaLocation="siri_types.xsd"/>
- <!-- ======================================================================= -->
- <xsd:simpleType name="EmptyType">
-  <xsd:annotation>
-   <xsd:documentation>A type with no allowed content, used when simply the presence of an element is significant.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value=""/>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ======================================================================= -->
- <xsd:element name="Extensions" type="ExtensionsStructure">
-  <xsd:annotation>
-   <xsd:documentation>Extensions to schema. (Wrapper tag used to avoid problems with handling of optional 'any' by some validators).</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="ExtensionsStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for Extensions to schema. Wraps an 'any' tag to ensure decidability.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Placeholder for user extensions.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:any>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- === KEY LIST ================================================== -->
- <xsd:element name="KeyList" type="KeyListStructure">
-  <xsd:annotation>
-   <xsd:documentation>A list of alternative Key values for an element. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:unique name="KeyValuePair_unique">
-   <xsd:annotation>
-    <xsd:documentation>Every Key Value Pair must be unique.</xsd:documentation>
-   </xsd:annotation>
-   <xsd:selector xpath=".//siri:KeyValue"/>
-   <xsd:field xpath="siri:Key"/>
-   <xsd:field xpath="siri:Value"/>
-  </xsd:unique>
- </xsd:element>
- <xsd:complexType name="KeyListStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a Key List. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="KeyValue" type="KeyValueStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Key value pair for Entity.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="KeyValueStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a Key List. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Key" type="xsd:normalizedString">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of value e.g. System.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Value" type="xsd:normalizedString">
-    <xsd:annotation>
-     <xsd:documentation>Value for alternative key.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="TypeOfKey" type="xsd:normalizedString" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of type of key.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- === TYPE OF VALUES ================================================== -->
- <xsd:element name="TypesOfValue" type="TypesOfValueStructure">
-  <xsd:annotation>
-   <xsd:documentation>VALUE SETs and TYPE OF VALUEs as part of the SIRI extension model. 
+					<Project>CEN TC278 WG3 SG9.</Project>
+				</Subject>
+				<Title>SIRI XML schema. Shared utility types </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>SIRI Framework Utility Types.</xsd:documentation>
+	</xsd:annotation>
+	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="siri_types.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="EmptyType">
+		<xsd:annotation>
+			<xsd:documentation>A type with no allowed content, used when simply the presence of an element is significant.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value=""/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Extensions" type="ExtensionsStructure">
+		<xsd:annotation>
+			<xsd:documentation>Extensions to schema. (Wrapper tag used to avoid problems with handling of optional 'any' by some validators).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ExtensionsStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Extensions to schema. Wraps an 'any' tag to ensure decidability.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Placeholder for user extensions.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:any>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- === KEY LIST ================================================== -->
+	<xsd:element name="KeyList" type="KeyListStructure">
+		<xsd:annotation>
+			<xsd:documentation>A list of alternative Key values for an element. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:unique name="KeyValuePair_unique">
+			<xsd:annotation>
+				<xsd:documentation>Every Key Value Pair must be unique.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//siri:KeyValue"/>
+			<xsd:field xpath="siri:Key"/>
+			<xsd:field xpath="siri:Value"/>
+		</xsd:unique>
+	</xsd:element>
+	<xsd:complexType name="KeyListStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a Key List. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="KeyValue" type="KeyValueStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Key value pair for Entity.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="KeyValueStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a Key List. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Key" type="xsd:normalizedString">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of value e.g. System.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Value" type="xsd:normalizedString">
+				<xsd:annotation>
+					<xsd:documentation>Value for alternative key.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TypeOfKey" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of type of key.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- === TYPE OF VALUES ================================================== -->
+	<xsd:element name="TypesOfValue" type="TypesOfValueStructure">
+		<xsd:annotation>
+			<xsd:documentation>VALUE SETs and TYPE OF VALUEs as part of the SIRI extension model. 
 TYPES OF VALUE can be used to exchange metadata for validation or collection of data, 
 such as the description and allowed values for codes. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:unique name="ValueSet_unique">
-   <xsd:annotation>
-    <xsd:documentation>VALUE SETs must be unique.</xsd:documentation>
-   </xsd:annotation>
-   <xsd:selector xpath=".//siri:ValueSet"/>
-   <xsd:field xpath="siri:ValueSetCode"/>
-  </xsd:unique>
- </xsd:element>
- <xsd:complexType name="TypesOfValueStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for containment of VALUE SETs and/or TYPE OF VALUEs. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:choice maxOccurs="unbounded">
-   <xsd:element ref="ValueSet"/>
-   <xsd:element ref="TypeOfValue"/>
-  </xsd:choice>
- </xsd:complexType>
- <xsd:element name="TypeOfValue" type="TypeOfValueStructure" abstract="false">
-  <xsd:annotation>
-   <xsd:documentation>A code value from an extensible set which may be added to by user applications, and is used to classify other SIRI entities. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:complexType name="TypeOfValueStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a TYPE OF VALUE. Used to define open classifications of value types. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="TypeOfValueCode" type="TypeOfValueCodeType">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of a TYPE OF VALUE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="NameOfClass" type="NameOfClassType">
-    <xsd:annotation>
-     <xsd:documentation>Name of class of which TypeOfValue is an instance.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="TypeOfValueGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="TypeOfValueGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for TYPE OF VALUE. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Name of TYPE OF VALUE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ShortName" type="NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Short Name for TYPE OF VALUE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Description of TYPE OF VALUE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Image" type="xsd:anyURI" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Default image for TYPE OF VALUE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Url" type="xsd:anyURI" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Default URL for TYPE OF VALUE.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="PrivateCode" type="xsd:normalizedString" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Arbitrary code (usually the technical part of the identifier).</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:element name="ValueSet" type="ValueSetStructure">
-  <xsd:annotation>
-   <xsd:documentation>An extensible set of code values which may be added to by user applications and is used to validate the properties of entities. 
+		</xsd:annotation>
+		<xsd:unique name="ValueSet_unique">
+			<xsd:annotation>
+				<xsd:documentation>VALUE SETs must be unique.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//siri:ValueSet"/>
+			<xsd:field xpath="siri:ValueSetCode"/>
+		</xsd:unique>
+	</xsd:element>
+	<xsd:complexType name="TypesOfValueStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for containment of VALUE SETs and/or TYPE OF VALUEs. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="ValueSet"/>
+			<xsd:element ref="TypeOfValue"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:element name="TypeOfValue" type="TypeOfValueStructure" abstract="false">
+		<xsd:annotation>
+			<xsd:documentation>A code value from an extensible set which may be added to by user applications, and is used to classify other SIRI entities. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="TypeOfValueStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a TYPE OF VALUE. Used to define open classifications of value types. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="TypeOfValueCode" type="TypeOfValueCodeType">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of a TYPE OF VALUE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="NameOfClass" type="NameOfClassType">
+				<xsd:annotation>
+					<xsd:documentation>Name of class of which TypeOfValue is an instance.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="TypeOfValueGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="TypeOfValueGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for TYPE OF VALUE. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of TYPE OF VALUE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ShortName" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Short Name for TYPE OF VALUE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Description" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Description of TYPE OF VALUE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Image" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default image for TYPE OF VALUE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Url" type="xsd:anyURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Default URL for TYPE OF VALUE.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PrivateCode" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Arbitrary code (usually the technical part of the identifier).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:element name="ValueSet" type="ValueSetStructure">
+		<xsd:annotation>
+			<xsd:documentation>An extensible set of code values which may be added to by user applications and is used to validate the properties of entities. 
 Contains TYPE OF VALUEs that are an instance of the same class. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:unique name="TypeOfValue_unique">
-   <xsd:annotation>
-    <xsd:documentation>TYPE OF VALUEs of the set must be unique.</xsd:documentation>
-   </xsd:annotation>
-   <xsd:selector xpath=".//siri:Values/siri:*"/>
-   <xsd:field xpath="siri:TypeOfValueCode"/>
-  </xsd:unique>
- </xsd:element>
- <xsd:complexType name="ValueSetStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a VALUE SET. Used to define open classifications of value types. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ValueSetCode" type="ValueSetCodeType">
-    <xsd:annotation>
-     <xsd:documentation>Identifier of VALUE SET.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ClassOfValues" type="NameOfClassType">
-    <xsd:annotation>
-     <xsd:documentation>Name of Class of values in set.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:group ref="ValueSetGroup"/>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:group name="ValueSetGroup">
-  <xsd:annotation>
-   <xsd:documentation>Elements for VALUE SET. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Name of set.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Values" type="ValuesStructure">
-    <xsd:annotation>
-     <xsd:documentation>Values in set.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="ValuesStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a list of TYPE OF VALUEs. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element ref="TypeOfValue" maxOccurs="unbounded"/>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="TypeOfValueCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a TYPE OF VALUE. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="TypeOfValueRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a TYPE OF VALUE. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="TypeOfValueCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <xsd:simpleType name="ValueSetCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of a VALUE SET. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:simpleType name="NameOfClassType">
-  <xsd:annotation>
-   <xsd:documentation>Name of class of which TypeOfValue is an instance. Used for reflection. (since SIRI 2.1)</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:Name"/>
- </xsd:simpleType>
- <!-- ======================================================================= -->
+		</xsd:annotation>
+		<xsd:unique name="TypeOfValue_unique">
+			<xsd:annotation>
+				<xsd:documentation>TYPE OF VALUEs of the set must be unique.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//siri:Values/siri:*"/>
+			<xsd:field xpath="siri:TypeOfValueCode"/>
+		</xsd:unique>
+	</xsd:element>
+	<xsd:complexType name="ValueSetStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a VALUE SET. Used to define open classifications of value types. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ValueSetCode" type="ValueSetCodeType">
+				<xsd:annotation>
+					<xsd:documentation>Identifier of VALUE SET.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ClassOfValues" type="NameOfClassType">
+				<xsd:annotation>
+					<xsd:documentation>Name of Class of values in set.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:group ref="ValueSetGroup"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:group name="ValueSetGroup">
+		<xsd:annotation>
+			<xsd:documentation>Elements for VALUE SET. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Name" type="NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of set.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Values" type="ValuesStructure">
+				<xsd:annotation>
+					<xsd:documentation>Values in set.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="ValuesStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a list of TYPE OF VALUEs. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="TypeOfValue" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="TypeOfValueCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a TYPE OF VALUE. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="TypeOfValueRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a TYPE OF VALUE. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="TypeOfValueCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="ValueSetCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of a VALUE SET. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="NameOfClassType">
+		<xsd:annotation>
+			<xsd:documentation>Name of class of which TypeOfValue is an instance. Used for reflection. (since SIRI 2.1)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:Name"/>
+	</xsd:simpleType>
+	<!-- ======================================================================= -->
 </xsd:schema>

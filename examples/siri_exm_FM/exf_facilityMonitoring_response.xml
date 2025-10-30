@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======HEADER================================================== -->
-  <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
-  <ProducerRef>KUBRICK</ProducerRef>
-  <Status>true</Status>
-  <MoreData>false</MoreData>
-  <!--=======PAYLOAD============================================== -->
-  <FacilityMonitoringDelivery version="2.0">
-   <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-   <SubscriberRef>NADER</SubscriberRef>
-   <SubscriptionRef>2004-12-17T09:30:47-05:00</SubscriptionRef>
-   <Status>true</Status>
-   <ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
-   <ShortestPossibleCycle>PT3M</ShortestPossibleCycle>
-   <!--====FCAILITY ============================================ -->
-   <FacilityCondition>
-    <Facility xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt">
-     <FacilityCode>134567-L4</FacilityCode>
-     <Description xml:lang="FR">Les Halles sattion Lift 4 </Description>
-     <FacilityClass> fixedEquipment</FacilityClass>
-     <Features>
-      <Feature>
-       <AccessFacility> lift</AccessFacility>
-      </Feature>
-     </Features>
-     <OwnerRef>RATP</OwnerRef>
-     <OwnerName xml:lang="EN">RATP</OwnerName>
-     <ValidityCondition>
-      <Period>
-       <StartTime>2004-12-17T09:30:47-05:00</StartTime>
-       <EndTime>2004-12-17T11:30:47-05:00</EndTime>
-      </Period>
-     </ValidityCondition>
-     <FacilityLocation>
-      <LineRef>LINE4</LineRef>
-      <StopPointRef>HGALLES</StopPointRef>
-      <StopPlaceRef>HGALLES</StopPlaceRef>
-      <StopPlaceComponentId>ORT123</StopPlaceComponentId>
-     </FacilityLocation>
-     <Limitations>
-      <acsb:WheelchairAccess>true</acsb:WheelchairAccess>
-      <acsb:StepFreeAccess>true</acsb:StepFreeAccess>
-      <acsb:LiftFreeAccess>true</acsb:LiftFreeAccess>
-     </Limitations>
-     <Suitabilities>
-      <Suitability>
-       <acsb:Suitable>suitable</acsb:Suitable>
-       <acsb:UserNeed>
-        <acsb:MobilityNeed>wheelchair</acsb:MobilityNeed>
-       </acsb:UserNeed>
-      </Suitability>
-     </Suitabilities>
-    </Facility>
-    <!--====STATUS ============================================ -->
-    <FacilityStatus>
-     <Status>notAvailable</Status>
-     <Description>Lift Broken</Description>
-     <AccessibilityAssessment>
-      <acsb:MobilityImpairedAccess>true</acsb:MobilityImpairedAccess>
-      <acsb:Limitations>
-       <acsb:AccessibilityLimitation>
-        <acsb:ValidityCondition>
-         <ifopt:FromDateTime>2004-12-17T09:30:47-05:00</ifopt:FromDateTime>
-         <ifopt:ToDateTime>2004-12-17T11:30:47-05:00</ifopt:ToDateTime>
-        </acsb:ValidityCondition>
-        <acsb:WheelchairAccess>false</acsb:WheelchairAccess>
-        <acsb:StepFreeAccess>true</acsb:StepFreeAccess>
-        <acsb:LiftFreeAccess>true</acsb:LiftFreeAccess>
-        <ifopt:Extensions/>
-       </acsb:AccessibilityLimitation>
-      </acsb:Limitations>
-      <acsb:Suitabilities>
-       <acsb:Suitability>
-        <acsb:Suitable>notSuitable</acsb:Suitable>
-        <acsb:UserNeed>
-         <acsb:MobilityNeed>wheelchair</acsb:MobilityNeed>
-         <acsb:Excluded>true</acsb:Excluded>
-        </acsb:UserNeed>
-       </acsb:Suitability>
-      </acsb:Suitabilities>
-     </AccessibilityAssessment>
-    </FacilityStatus>
-    <SituationRef>
-     <SituationSimpleRef>13456</SituationSimpleRef>
-    </SituationRef>
-    <Remedy>
-     <RemedyType> otherRoute</RemedyType>
-    </Remedy>
-   </FacilityCondition>
-  </FacilityMonitoringDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
+		<ProducerRef>KUBRICK</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<FacilityMonitoringDelivery version="2.0">
+			<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+			<SubscriberRef>NADER</SubscriberRef>
+			<SubscriptionRef>2004-12-17T09:30:47-05:00</SubscriptionRef>
+			<Status>true</Status>
+			<ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
+			<ShortestPossibleCycle>PT3M</ShortestPossibleCycle>
+			<!--====FCAILITY ============================================ -->
+			<FacilityCondition>
+				<Facility xmlns:acsb="http://www.ifopt.org.uk/acsb" xmlns:ifopt="http://www.ifopt.org.uk/ifopt">
+					<FacilityCode>134567-L4</FacilityCode>
+					<Description xml:lang="FR">Les Halles sattion Lift 4 </Description>
+					<FacilityClass> fixedEquipment</FacilityClass>
+					<Features>
+						<Feature>
+							<AccessFacility> lift</AccessFacility>
+						</Feature>
+					</Features>
+					<OwnerRef>RATP</OwnerRef>
+					<OwnerName xml:lang="EN">RATP</OwnerName>
+					<ValidityCondition>
+						<Period>
+							<StartTime>2004-12-17T09:30:47-05:00</StartTime>
+							<EndTime>2004-12-17T11:30:47-05:00</EndTime>
+						</Period>
+					</ValidityCondition>
+					<FacilityLocation>
+						<LineRef>LINE4</LineRef>
+						<StopPointRef>HGALLES</StopPointRef>
+						<StopPlaceRef>HGALLES</StopPlaceRef>
+						<StopPlaceComponentId>ORT123</StopPlaceComponentId>
+					</FacilityLocation>
+					<Limitations>
+						<acsb:WheelchairAccess>true</acsb:WheelchairAccess>
+						<acsb:StepFreeAccess>true</acsb:StepFreeAccess>
+						<acsb:LiftFreeAccess>true</acsb:LiftFreeAccess>
+					</Limitations>
+					<Suitabilities>
+						<Suitability>
+							<acsb:Suitable>suitable</acsb:Suitable>
+							<acsb:UserNeed>
+								<acsb:MobilityNeed>wheelchair</acsb:MobilityNeed>
+							</acsb:UserNeed>
+						</Suitability>
+					</Suitabilities>
+				</Facility>
+				<!--====STATUS ============================================ -->
+				<FacilityStatus>
+					<Status>notAvailable</Status>
+					<Description>Lift Broken</Description>
+					<AccessibilityAssessment>
+						<acsb:MobilityImpairedAccess>true</acsb:MobilityImpairedAccess>
+						<acsb:Limitations>
+							<acsb:AccessibilityLimitation>
+								<acsb:ValidityCondition>
+									<ifopt:FromDateTime>2004-12-17T09:30:47-05:00</ifopt:FromDateTime>
+									<ifopt:ToDateTime>2004-12-17T11:30:47-05:00</ifopt:ToDateTime>
+								</acsb:ValidityCondition>
+								<acsb:WheelchairAccess>false</acsb:WheelchairAccess>
+								<acsb:StepFreeAccess>true</acsb:StepFreeAccess>
+								<acsb:LiftFreeAccess>true</acsb:LiftFreeAccess>
+								<ifopt:Extensions/>
+							</acsb:AccessibilityLimitation>
+						</acsb:Limitations>
+						<acsb:Suitabilities>
+							<acsb:Suitability>
+								<acsb:Suitable>notSuitable</acsb:Suitable>
+								<acsb:UserNeed>
+									<acsb:MobilityNeed>wheelchair</acsb:MobilityNeed>
+									<acsb:Excluded>true</acsb:Excluded>
+								</acsb:UserNeed>
+							</acsb:Suitability>
+						</acsb:Suitabilities>
+					</AccessibilityAssessment>
+				</FacilityStatus>
+				<SituationRef>
+					<SituationSimpleRef>13456</SituationSimpleRef>
+				</SituationRef>
+				<Remedy>
+					<RemedyType> otherRoute</RemedyType>
+				</Remedy>
+			</FacilityCondition>
+		</FacilityMonitoringDelivery>
+	</ServiceDelivery>
 </Siri>

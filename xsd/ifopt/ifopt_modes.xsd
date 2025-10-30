@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.ifopt.org.uk/ifopt" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ifopt.org.uk/ifopt" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.2" id="ifopt_modes">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
-    <Date>
-     <Created>2006-08-12</Created>
-    </Date>
-    <Date>
-     <Modified>2006-09-22</Modified>
-    </Date>
-    <Description>
-     <p>Fixed Objects in Public Transport. This subschema defines common mode types.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_modes.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
-    <Rights><!--Unclassified-->
-        <Copyright>CEN, Crown Copyright 2006-2021</Copyright>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
+				<Date>
+					<Created>2006-08-12</Created>
+				</Date>
+				<Date>
+					<Modified>2006-09-22</Modified>
+				</Date>
+				<Description>
+					<p>Fixed Objects in Public Transport. This subschema defines common mode types.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_modes.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, Crown Copyright 2006-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the SIRI standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the SIRI standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -42,43 +43,43 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG6</Project>
-    </Subject>
-    <Title>IFOPT Fixed Objects in Public Transport - mode Types. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>Mode types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
- </xsd:annotation>
- <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_model/siri_modes.xsd"/>
- <!--======Point=======================================================================================-->
- <xsd:simpleType name="TypeOfStopPlaceEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed categories  of STOP PLACE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="onstreetBus"/>
-   <xsd:enumeration value="onstreetTram"/>
-   <xsd:enumeration value="ferryStop"/>
-   <xsd:enumeration value="airport"/>
-   <xsd:enumeration value="railStation"/>
-   <xsd:enumeration value="metroStation"/>
-   <xsd:enumeration value="coachStation"/>
-   <xsd:enumeration value="ferryPort"/>
-   <xsd:enumeration value="harbourPort"/>
-   <xsd:enumeration value="other"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <xsd:simpleType name="AccessModesEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Allowed categroies of access to STOP PLACE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:string">
-   <xsd:enumeration value="foot"/>
-   <xsd:enumeration value="bicycle"/>
-   <xsd:enumeration value="car"/>
-   <xsd:enumeration value="taxi"/>
-   <xsd:enumeration value="shuttle"/>
-  </xsd:restriction>
- </xsd:simpleType>
+					<Project>CEN TC278 WG3 SG6</Project>
+				</Subject>
+				<Title>IFOPT Fixed Objects in Public Transport - mode Types. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>Mode types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_model/siri_modes.xsd"/>
+	<!--======Point=======================================================================================-->
+	<xsd:simpleType name="TypeOfStopPlaceEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed categories  of STOP PLACE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="onstreetBus"/>
+			<xsd:enumeration value="onstreetTram"/>
+			<xsd:enumeration value="ferryStop"/>
+			<xsd:enumeration value="airport"/>
+			<xsd:enumeration value="railStation"/>
+			<xsd:enumeration value="metroStation"/>
+			<xsd:enumeration value="coachStation"/>
+			<xsd:enumeration value="ferryPort"/>
+			<xsd:enumeration value="harbourPort"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AccessModesEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed categroies of access to STOP PLACE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="foot"/>
+			<xsd:enumeration value="bicycle"/>
+			<xsd:enumeration value="car"/>
+			<xsd:enumeration value="taxi"/>
+			<xsd:enumeration value="shuttle"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 </xsd:schema>

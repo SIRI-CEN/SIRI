@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.ifopt.org.uk/ifopt" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ifopt.org.uk/ifopt" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.3" id="ifopt_equipment">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
-    <Date>
-     <Created>2006-08-12</Created>
-    </Date>
-    <Date>
-     <Modified>2006-09-22</Modified>
-    </Date>
-    <Date>
-     <Modified>2007-03-29</Modified>
-    </Date>
-    <Description>
-     <p>Fixed Objects in Public Transport. This subschema defines equipment base types.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_equipment.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
-    <Rights><!--Unclassified-->
-       <Copyright>CEN, Crown Copyright 2006-2021</Copyright>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
+				<Date>
+					<Created>2006-08-12</Created>
+				</Date>
+				<Date>
+					<Modified>2006-09-22</Modified>
+				</Date>
+				<Date>
+					<Modified>2007-03-29</Modified>
+				</Date>
+				<Description>
+					<p>Fixed Objects in Public Transport. This subschema defines equipment base types.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_equipment.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, Crown Copyright 2006-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the TransModel standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the TransModel standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -45,163 +46,163 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG6</Project>
-    </Subject>
-    <Title>IFOPT Fixed Objects in Public Transport - Equipment Base Types. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>Equipment types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
- </xsd:annotation>
- <xsd:include schemaLocation="ifopt_time.xsd"/>
- <xsd:include schemaLocation="ifopt_administration.xsd"/>
- <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_types.xsd"/>
- <xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_model/siri_feature_support.xsd"/>
- <!-- ======================================================================= -->
- <xsd:simpleType name="EquipmentIdType">
-  <xsd:annotation>
-   <xsd:documentation>Type for identifier of EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="EquipmentRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for reference to a EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="EquipmentIdType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="EquipmentTypeCodeType">
-  <xsd:annotation>
-   <xsd:documentation>Type for a identifier of EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN"/>
- </xsd:simpleType>
- <xsd:complexType name="EquipmentTypeRefStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for TYPE OF EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:simpleContent>
-   <xsd:extension base="EquipmentTypeCodeType"/>
-  </xsd:simpleContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:simpleType name="EquipmentStatusEnumeration">
-  <xsd:annotation>
-   <xsd:documentation>Availabilityload status of a EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="available"/>
-   <xsd:enumeration value="notAvailable"/>
-  </xsd:restriction>
- </xsd:simpleType>
- <!-- ======================================================================= -->
- <xsd:group name="AbstractEquipmentGroup">
-  <xsd:annotation>
-   <xsd:documentation>Coomon Elements for EQUIPMENt.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="EquipmentId" type="EquipmentIdType">
-    <xsd:annotation>
-     <xsd:documentation>Identifer of EQUIPMENT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="EquipmentName" type="siri:NaturalLanguageStringStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Name of EQUIPMENT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="TypeOfEquipment" type="EquipmentTypeRefStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Type for reference to TYPE OF EQUIPMENT.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="AbstractEquipmentStructure" abstract="true">
-  <xsd:annotation>
-   <xsd:documentation>Type for abstract EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="DataManagedObjectStructure">
-    <xsd:sequence>
-     <xsd:group ref="AbstractEquipmentGroup"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="InstalledEquipmentStructure" abstract="true">
-  <xsd:annotation>
-   <xsd:documentation>Type for INSTALLED EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="AbstractEquipmentStructure"/>
-  </xsd:complexContent>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="PlaceEquipmentStructure" abstract="false">
-  <xsd:annotation>
-   <xsd:documentation>Type for SITE EQUIPMENT.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="InstalledEquipmentStructure">
-    <xsd:sequence>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:element name="OtherPlaceEquipment" type="PlaceEquipmentStructure">
-  <xsd:annotation>
-   <xsd:documentation>EQUIPMENT. that may be in a fixed within a SITe.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <!-- ======================================================================= -->
- <xsd:element name="LocalService" type="LocalServiceStructure">
-  <xsd:annotation>
-   <xsd:documentation> LOCAL SERVICe.</xsd:documentation>
-  </xsd:annotation>
- </xsd:element>
- <xsd:group name="LocalServiceGroup">
-  <xsd:annotation>
-   <xsd:documentation>Element for LOCAL SERVICe.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ValidityConditions" type="ValidityConditionsStructure" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Conditison governing availability of serevice.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="FeatureRefs" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Classification of features.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="FeatureRef" type="siri:ServiceFeatureRefStructure" minOccurs="0" maxOccurs="unbounded">
-       <xsd:annotation>
-        <xsd:documentation>Features of LOCAL SERVICe.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:group>
- <xsd:complexType name="LocalServiceStructure" abstract="false">
-  <xsd:annotation>
-   <xsd:documentation>Type for LOCAL SERVICE.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="InstalledEquipmentStructure">
-    <xsd:sequence>
-     <xsd:group ref="LocalServiceGroup"/>
-     <xsd:element ref="Extensions" minOccurs="0"/>
-    </xsd:sequence>
-   </xsd:extension>
-  </xsd:complexContent>
- </xsd:complexType>
+					<Project>CEN TC278 WG3 SG6</Project>
+				</Subject>
+				<Title>IFOPT Fixed Objects in Public Transport - Equipment Base Types. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>Equipment types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="ifopt_time.xsd"/>
+	<xsd:include schemaLocation="ifopt_administration.xsd"/>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_utility/siri_types.xsd"/>
+	<xsd:import namespace="http://www.siri.org.uk/siri" schemaLocation="../siri_model/siri_feature_support.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="EquipmentIdType">
+		<xsd:annotation>
+			<xsd:documentation>Type for identifier of EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="EquipmentRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentIdType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="EquipmentTypeCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type for a identifier of EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="EquipmentTypeRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for TYPE OF EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="EquipmentTypeCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:simpleType name="EquipmentStatusEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Availabilityload status of a EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="unknown"/>
+			<xsd:enumeration value="available"/>
+			<xsd:enumeration value="notAvailable"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ======================================================================= -->
+	<xsd:group name="AbstractEquipmentGroup">
+		<xsd:annotation>
+			<xsd:documentation>Coomon Elements for EQUIPMENt.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="EquipmentId" type="EquipmentIdType">
+				<xsd:annotation>
+					<xsd:documentation>Identifer of EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EquipmentName" type="siri:NaturalLanguageStringStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Name of EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="TypeOfEquipment" type="EquipmentTypeRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Type for reference to TYPE OF EQUIPMENT.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="AbstractEquipmentStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Type for abstract EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="DataManagedObjectStructure">
+				<xsd:sequence>
+					<xsd:group ref="AbstractEquipmentGroup"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="InstalledEquipmentStructure" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>Type for INSTALLED EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AbstractEquipmentStructure"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="PlaceEquipmentStructure" abstract="false">
+		<xsd:annotation>
+			<xsd:documentation>Type for SITE EQUIPMENT.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="InstalledEquipmentStructure">
+				<xsd:sequence>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="OtherPlaceEquipment" type="PlaceEquipmentStructure">
+		<xsd:annotation>
+			<xsd:documentation>EQUIPMENT. that may be in a fixed within a SITe.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ======================================================================= -->
+	<xsd:element name="LocalService" type="LocalServiceStructure">
+		<xsd:annotation>
+			<xsd:documentation> LOCAL SERVICe.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:group name="LocalServiceGroup">
+		<xsd:annotation>
+			<xsd:documentation>Element for LOCAL SERVICe.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ValidityConditions" type="ValidityConditionsStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Conditison governing availability of serevice.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FeatureRefs" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Classification of features.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="FeatureRef" type="siri:ServiceFeatureRefStructure" minOccurs="0" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Features of LOCAL SERVICe.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:complexType name="LocalServiceStructure" abstract="false">
+		<xsd:annotation>
+			<xsd:documentation>Type for LOCAL SERVICE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="InstalledEquipmentStructure">
+				<xsd:sequence>
+					<xsd:group ref="LocalServiceGroup"/>
+					<xsd:element ref="Extensions" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
 </xsd:schema>

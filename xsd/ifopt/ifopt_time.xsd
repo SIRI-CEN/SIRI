@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.ifopt.org.uk/ifopt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.ifopt.org.uk/ifopt" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.2" id="ifopt_time">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Coverage>Europe</Coverage>
-    <Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
-    <Date>
-     <Created>2006-08-12</Created>
-    </Date>
-    <Date>
-     <Modified>2006-09-22</Modified>
-    </Date>
-    <Description>
-     <p>Fixed Objects in Public Transport. This subschema defines. Time base types.</p>
-    </Description>
-    <Format>
-     <MediaType>text/xml</MediaType>
-     <Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
-     <Description>XML schema, W3C Recommendation 2001</Description>
-    </Format>
-    <Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_types.xsd</Identifier>
-    <Language>[ISO 639-2/B] ENG</Language>
-    <Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
-    <Rights><!--Unclassified-->
-        <Copyright>CEN, Crown Copyright 2006-2021</Copyright>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Aggregation>main schema</Aggregation>
+				<Audience>e-service developers</Audience>
+				<Coverage>Europe</Coverage>
+				<Creator>Drafted for version 1.0 CEN TC278 WG3 SG6 Editor Nicholas Knowles, Kizoom. mailto:schemer@ifopt.org.uk</Creator>
+				<Date>
+					<Created>2006-08-12</Created>
+				</Date>
+				<Date>
+					<Modified>2006-09-22</Modified>
+				</Date>
+				<Description>
+					<p>Fixed Objects in Public Transport. This subschema defines. Time base types.</p>
+				</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.siri.org.uk/schema/2.0/ifopt}ifopt_types.xsd</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Kizoom, 109-123 Clifton Street, London EC4A 4LD</Publisher>
+				<Rights>
+					<!--Unclassified-->
+					<Copyright>CEN, Crown Copyright 2006-2021</Copyright>
 				</Rights>
-    <Source>
-     <ul>
-      <li>Derived from the SIRI standards.</li>
-     </ul>
-    </Source>
-    <Status>Version 2.1</Status>
-    <Subject>
-     <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
+				<Source>
+					<ul>
+						<li>Derived from the SIRI standards.</li>
+					</ul>
+				</Source>
+				<Status>Version 2.1</Status>
+				<Subject>
+					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
 Air transport, Airports,
 Ports and maritime transport, Ferries (marine),
 Public transport, Bus services, Coach services, Bus stops and stations,
@@ -42,90 +43,90 @@ Rail transport, Railway stations and track, Train services, Underground trains,
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
 Rail transport, Roads and road transport
 </Category>
-     <Project>CEN TC278 WG3 SG6</Project>
-    </Subject>
-    <Title>IFOPT Fixed Objects in Public Transport - Time Base Types. </Title>
-    <Type>Standard</Type>
-   </Metadata>
-  </xsd:appinfo>
-  <xsd:documentation>Basic Time types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
- </xsd:annotation>
- <xsd:include schemaLocation="ifopt_types.xsd"/>
- <!-- ======================================================================= -->
- <!-- This structure is replicated from SIRI as some validators dont pic, up indirect extension-->
- <xsd:complexType name="HalfOpenTimeRangeStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a range of times. Start time must be specified, end time is optional.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="StartTime" type="xsd:time">
-    <xsd:annotation>
-     <xsd:documentation>The (inclusive) start time.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="EndTime" type="xsd:time" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The (inclusive) end time. If omitted, the range end is open-ended, that is, it should be interpreted as specifed by the EndTimeStatus</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ======================================================================= -->
- <xsd:complexType name="ValidityConditionStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a validity condition.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="FromDateTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The (inclusive) start date and time.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="ToDateTime" type="xsd:dateTime" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>The (inclusive) end time. If omitted, the range end is open-ended, that is, it should be interpreted as "forever".</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="DayType" type="xsd:NMTOKEN" minOccurs="0">
-    <xsd:annotation>
-     <xsd:documentation>Day type for which timeband applies. If absent all day types in context.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-   <xsd:element name="Timebands" minOccurs="0" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Any timebands which further qualify the validity condition.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexType>
-     <xsd:sequence>
-      <xsd:element name="Timeband" type="TimebandStructure">
-       <xsd:annotation>
-        <xsd:documentation>Timeband during which element is available or in effect.</xsd:documentation>
-       </xsd:annotation>
-      </xsd:element>
-     </xsd:sequence>
-    </xsd:complexType>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <xsd:complexType name="TimebandStructure">
-  <xsd:annotation>
-   <xsd:documentation>Type for a timeband.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:complexContent>
-   <xsd:extension base="HalfOpenTimeRangeStructure"/>
-  </xsd:complexContent>
- </xsd:complexType>
- <xsd:complexType name="ValidityConditionsStructure">
-  <xsd:annotation>
-   <xsd:documentation>A collection of one or more validity conditions.</xsd:documentation>
-  </xsd:annotation>
-  <xsd:sequence>
-   <xsd:element name="ValidityCondition" type="ValidityConditionStructure" maxOccurs="unbounded">
-    <xsd:annotation>
-     <xsd:documentation>Reference to the identifier of an administrative area.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:element>
-  </xsd:sequence>
- </xsd:complexType>
- <!-- ====STOP POINTs========================================================= -->
+					<Project>CEN TC278 WG3 SG6</Project>
+				</Subject>
+				<Title>IFOPT Fixed Objects in Public Transport - Time Base Types. </Title>
+				<Type>Standard</Type>
+			</Metadata>
+		</xsd:appinfo>
+		<xsd:documentation>Basic Time types for IFOPT Fixed Objects in Public Transport.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="ifopt_types.xsd"/>
+	<!-- ======================================================================= -->
+	<!-- This structure is replicated from SIRI as some validators dont pic, up indirect extension-->
+	<xsd:complexType name="HalfOpenTimeRangeStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a range of times. Start time must be specified, end time is optional.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="StartTime" type="xsd:time">
+				<xsd:annotation>
+					<xsd:documentation>The (inclusive) start time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="EndTime" type="xsd:time" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The (inclusive) end time. If omitted, the range end is open-ended, that is, it should be interpreted as specifed by the EndTimeStatus</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="ValidityConditionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a validity condition.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FromDateTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The (inclusive) start date and time.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ToDateTime" type="xsd:dateTime" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The (inclusive) end time. If omitted, the range end is open-ended, that is, it should be interpreted as "forever".</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DayType" type="xsd:NMTOKEN" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Day type for which timeband applies. If absent all day types in context.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Timebands" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Any timebands which further qualify the validity condition.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Timeband" type="TimebandStructure">
+							<xsd:annotation>
+								<xsd:documentation>Timeband during which element is available or in effect.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TimebandStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for a timeband.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="HalfOpenTimeRangeStructure"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ValidityConditionsStructure">
+		<xsd:annotation>
+			<xsd:documentation>A collection of one or more validity conditions.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ValidityCondition" type="ValidityConditionStructure" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the identifier of an administrative area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ====STOP POINTs========================================================= -->
 </xsd:schema>

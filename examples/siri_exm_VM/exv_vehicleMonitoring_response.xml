@@ -9,151 +9,151 @@
 
 (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======ENDPOINT ===================================== -->
-  <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-  <ProducerRef>NADER</ProducerRef>
-  <!--=======PAYLOAD ===================================== -->
-  <Status>true</Status>
-  <MoreData>false</MoreData>
-  <!--=======FIRST SUBSCRIPTION======================== -->
-  <VehicleMonitoringDelivery version="2.0">
-   <ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
-   <SubscriberRef>NADER</SubscriberRef>
-   <SubscriptionRef>00047</SubscriptionRef>
-   <Status>true</Status>
-   <ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
-   <ShortestPossibleCycle>P1Y2M3DT10H30M</ShortestPossibleCycle>
-   <VehicleActivity>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <ItemIdentifier>EV000123</ItemIdentifier>
-    <ValidUntilTime>2004-12-17T09:30:47-05:00</ValidUntilTime>
-    <VehicleMonitoringRef>ACT019456</VehicleMonitoringRef>
-    <ProgressBetweenStops>
-     <LinkDistance>3.14</LinkDistance>
-     <Percentage>60.5</Percentage>
-    </ProgressBetweenStops>
-    <!-- MONITORED VEHICLE JOURNEY -->
-    <MonitoredVehicleJourney>
-     <!-- JOURNEY IDENTITY GROUP -->
-     <LineRef>Line123</LineRef>
-     <DirectionRef>OUT</DirectionRef>
-     <FramedVehicleJourneyRef>
-      <DataFrameRef>2004-12-17</DataFrameRef>
-      <DatedVehicleJourneyRef>987675</DatedVehicleJourneyRef>
-     </FramedVehicleJourneyRef>
-     <!-- LINE GROUP -->
-     <PublishedLineName xml:lang="EN">123</PublishedLineName>
-     <!-- SERVICE INFO GROUP -->
-     <OperatorRef>OP22</OperatorRef>
-     <ProductCategoryRef>PDCATEXPRESS</ProductCategoryRef>
-     <ServiceFeatureRef>SERVCCAT551</ServiceFeatureRef>
-     <!-- SERVICE POINTS GROUP -->
-     <OriginName xml:lang="EN">Highbury</OriginName>
-     <Via>
-      <PlaceName xml:lang="EN">Kensall Green</PlaceName>
-     </Via>
-     <Via>
-      <PlaceName xml:lang="EN">Roman Road</PlaceName>
-     </Via>
-     <DestinationRef>PLACE45</DestinationRef>
-     <DestinationName xml:lang="EN">Paradise Park</DestinationName>
-     <JourneyNote>Kensall Green</JourneyNote>
-     <!--JOURNEY PROGRESS GROUP -->
-     <Monitored>true</Monitored>
-     <InCongestion>false</InCongestion>
-     <VehicleLocation>
-      <Longitude>180</Longitude>
-      <Latitude>90</Latitude>
-     </VehicleLocation>
-     <Bearing>123</Bearing>
-     <ProgressRate>slowProgress</ProgressRate>
-     <Delay>PT2M</Delay>
-     <ProgressStatus>On time</ProgressStatus>
-     <!-- Operational Info GROUP -->
-     <TrainBlockPart>
-      <NumberOfBlockParts>1</NumberOfBlockParts>
-      <TrainPartRef>3456</TrainPartRef>
-      <PositionOfTrainBlockPart>1</PositionOfTrainBlockPart>
-     </TrainBlockPart>
-     <BlockRef>BLOCK765</BlockRef>
-     <CourseOfJourneyRef>RUN765</CourseOfJourneyRef>
-     <VehicleRef>VEH987654</VehicleRef>
-     <!-- MONITORED CALLING PATTERN GROUP -->
-     <PreviousCalls>
-      <PreviousCall>
-       <StopPointRef>HLT0011</StopPointRef>
-       <VisitNumber>2</VisitNumber>
-       <StopPointName xml:lang="EN">String</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <AimedDepartureTime>2004-12-17T09:32:43-05:00</AimedDepartureTime>
-       <ActualDepartureTime>2004-12-17T09:32:43-05:00</ActualDepartureTime>
-      </PreviousCall>
-     </PreviousCalls>
-     <OnwardCalls>
-      <OnwardCall>
-       <StopPointRef>HLTST012</StopPointRef>
-       <VisitNumber>4</VisitNumber>
-       <StopPointName xml:lang="EN">Church</StopPointName>
-       <VehicleAtStop>false</VehicleAtStop>
-       <AimedArrivalTime>2004-12-17T09:30:56-05:00</AimedArrivalTime>
-       <ExpectedArrivalTime>2004-12-17T09:30:56-05:00</ExpectedArrivalTime>
-       <AimedDepartureTime>2004-12-17T09:30:57-05:00</AimedDepartureTime>
-       <ExpectedDepartureTime>2004-12-17T09:30:57-05:00</ExpectedDepartureTime>
-      </OnwardCall>
-     </OnwardCalls>
-    </MonitoredVehicleJourney>
-    <VehicleActivityNote>hello vehicle</VehicleActivityNote>
-   </VehicleActivity>
-   <!--=======SECOND SUBSCRIPTION======================== -->
-   <VehicleActivity>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <ItemIdentifier>915468</ItemIdentifier>
-    <ValidUntilTime>2004-12-17T09:30:47-05:00</ValidUntilTime>
-    <VehicleMonitoringRef>MYACACT</VehicleMonitoringRef>
-    <ProgressBetweenStops>
-     <LinkDistance>3.14</LinkDistance>
-     <Percentage>60.5</Percentage>
-    </ProgressBetweenStops>
-    <!-- MONITORED VEHICLE JOURNEY -->
-    <MonitoredVehicleJourney>
-     <!-- LINE GROUP -->
-     <LineRef>Line123</LineRef>
-     <!-- JOURNEY IDENTITY GROUP -->
-     <FramedVehicleJourneyRef>
-      <DataFrameRef>2004-12-17</DataFrameRef>
-      <DatedVehicleJourneyRef>Outbound</DatedVehicleJourneyRef>
-     </FramedVehicleJourneyRef>
-     <!--JOURNEY PROGRESS GROUP -->
-     <Monitored>true</Monitored>
-     <VehicleLocation>
-      <Longitude>180</Longitude>
-      <Latitude>90</Latitude>
-     </VehicleLocation>
-     <Delay>PT2M</Delay>
-     <VehicleRef>VEH987659</VehicleRef>
-     <!-- Next STOP POINT -->
-     <OnwardCalls>
-      <OnwardCall>
-       <StopPointRef>HLTST012</StopPointRef>
-       <StopPointName xml:lang="EN">Church</StopPointName>
-      </OnwardCall>
-     </OnwardCalls>
-    </MonitoredVehicleJourney>
-   </VehicleActivity>
-   <!--=======CANCELLATION ======================== -->
-   <VehicleActivityCancellation>
-    <RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
-    <VehicleMonitoringRef>9876542</VehicleMonitoringRef>
-    <VehicleJourneyRef>
-     <DataFrameRef>2001-12-17</DataFrameRef>
-     <DatedVehicleJourneyRef>09867</DatedVehicleJourneyRef>
-    </VehicleJourneyRef>
-    <LineRef>Line123</LineRef>
-    <DirectionRef>Out</DirectionRef>
-    <Reason>Gone home</Reason>
-   </VehicleActivityCancellation>
-   <VehicleActivityNote>hello delivery</VehicleActivityNote>
-  </VehicleMonitoringDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======ENDPOINT ===================================== -->
+		<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+		<ProducerRef>NADER</ProducerRef>
+		<!--=======PAYLOAD ===================================== -->
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======FIRST SUBSCRIPTION======================== -->
+		<VehicleMonitoringDelivery version="2.0">
+			<ResponseTimestamp>2004-12-17T09:30:47-05:00</ResponseTimestamp>
+			<SubscriberRef>NADER</SubscriberRef>
+			<SubscriptionRef>00047</SubscriptionRef>
+			<Status>true</Status>
+			<ValidUntil>2004-12-17T09:30:47-05:00</ValidUntil>
+			<ShortestPossibleCycle>P1Y2M3DT10H30M</ShortestPossibleCycle>
+			<VehicleActivity>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<ItemIdentifier>EV000123</ItemIdentifier>
+				<ValidUntilTime>2004-12-17T09:30:47-05:00</ValidUntilTime>
+				<VehicleMonitoringRef>ACT019456</VehicleMonitoringRef>
+				<ProgressBetweenStops>
+					<LinkDistance>3.14</LinkDistance>
+					<Percentage>60.5</Percentage>
+				</ProgressBetweenStops>
+				<!-- MONITORED VEHICLE JOURNEY -->
+				<MonitoredVehicleJourney>
+					<!-- JOURNEY IDENTITY GROUP -->
+					<LineRef>Line123</LineRef>
+					<DirectionRef>OUT</DirectionRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2004-12-17</DataFrameRef>
+						<DatedVehicleJourneyRef>987675</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<!-- LINE GROUP -->
+					<PublishedLineName xml:lang="EN">123</PublishedLineName>
+					<!-- SERVICE INFO GROUP -->
+					<OperatorRef>OP22</OperatorRef>
+					<ProductCategoryRef>PDCATEXPRESS</ProductCategoryRef>
+					<ServiceFeatureRef>SERVCCAT551</ServiceFeatureRef>
+					<!-- SERVICE POINTS GROUP -->
+					<OriginName xml:lang="EN">Highbury</OriginName>
+					<Via>
+						<PlaceName xml:lang="EN">Kensall Green</PlaceName>
+					</Via>
+					<Via>
+						<PlaceName xml:lang="EN">Roman Road</PlaceName>
+					</Via>
+					<DestinationRef>PLACE45</DestinationRef>
+					<DestinationName xml:lang="EN">Paradise Park</DestinationName>
+					<JourneyNote>Kensall Green</JourneyNote>
+					<!--JOURNEY PROGRESS GROUP -->
+					<Monitored>true</Monitored>
+					<InCongestion>false</InCongestion>
+					<VehicleLocation>
+						<Longitude>180</Longitude>
+						<Latitude>90</Latitude>
+					</VehicleLocation>
+					<Bearing>123</Bearing>
+					<ProgressRate>slowProgress</ProgressRate>
+					<Delay>PT2M</Delay>
+					<ProgressStatus>On time</ProgressStatus>
+					<!-- Operational Info GROUP -->
+					<TrainBlockPart>
+						<NumberOfBlockParts>1</NumberOfBlockParts>
+						<TrainPartRef>3456</TrainPartRef>
+						<PositionOfTrainBlockPart>1</PositionOfTrainBlockPart>
+					</TrainBlockPart>
+					<BlockRef>BLOCK765</BlockRef>
+					<CourseOfJourneyRef>RUN765</CourseOfJourneyRef>
+					<VehicleRef>VEH987654</VehicleRef>
+					<!-- MONITORED CALLING PATTERN GROUP -->
+					<PreviousCalls>
+						<PreviousCall>
+							<StopPointRef>HLT0011</StopPointRef>
+							<VisitNumber>2</VisitNumber>
+							<StopPointName xml:lang="EN">String</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<AimedDepartureTime>2004-12-17T09:32:43-05:00</AimedDepartureTime>
+							<ActualDepartureTime>2004-12-17T09:32:43-05:00</ActualDepartureTime>
+						</PreviousCall>
+					</PreviousCalls>
+					<OnwardCalls>
+						<OnwardCall>
+							<StopPointRef>HLTST012</StopPointRef>
+							<VisitNumber>4</VisitNumber>
+							<StopPointName xml:lang="EN">Church</StopPointName>
+							<VehicleAtStop>false</VehicleAtStop>
+							<AimedArrivalTime>2004-12-17T09:30:56-05:00</AimedArrivalTime>
+							<ExpectedArrivalTime>2004-12-17T09:30:56-05:00</ExpectedArrivalTime>
+							<AimedDepartureTime>2004-12-17T09:30:57-05:00</AimedDepartureTime>
+							<ExpectedDepartureTime>2004-12-17T09:30:57-05:00</ExpectedDepartureTime>
+						</OnwardCall>
+					</OnwardCalls>
+				</MonitoredVehicleJourney>
+				<VehicleActivityNote>hello vehicle</VehicleActivityNote>
+			</VehicleActivity>
+			<!--=======SECOND SUBSCRIPTION======================== -->
+			<VehicleActivity>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<ItemIdentifier>915468</ItemIdentifier>
+				<ValidUntilTime>2004-12-17T09:30:47-05:00</ValidUntilTime>
+				<VehicleMonitoringRef>MYACACT</VehicleMonitoringRef>
+				<ProgressBetweenStops>
+					<LinkDistance>3.14</LinkDistance>
+					<Percentage>60.5</Percentage>
+				</ProgressBetweenStops>
+				<!-- MONITORED VEHICLE JOURNEY -->
+				<MonitoredVehicleJourney>
+					<!-- LINE GROUP -->
+					<LineRef>Line123</LineRef>
+					<!-- JOURNEY IDENTITY GROUP -->
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2004-12-17</DataFrameRef>
+						<DatedVehicleJourneyRef>Outbound</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<!--JOURNEY PROGRESS GROUP -->
+					<Monitored>true</Monitored>
+					<VehicleLocation>
+						<Longitude>180</Longitude>
+						<Latitude>90</Latitude>
+					</VehicleLocation>
+					<Delay>PT2M</Delay>
+					<VehicleRef>VEH987659</VehicleRef>
+					<!-- Next STOP POINT -->
+					<OnwardCalls>
+						<OnwardCall>
+							<StopPointRef>HLTST012</StopPointRef>
+							<StopPointName xml:lang="EN">Church</StopPointName>
+						</OnwardCall>
+					</OnwardCalls>
+				</MonitoredVehicleJourney>
+			</VehicleActivity>
+			<!--=======CANCELLATION ======================== -->
+			<VehicleActivityCancellation>
+				<RecordedAtTime>2004-12-17T09:30:47-05:00</RecordedAtTime>
+				<VehicleMonitoringRef>9876542</VehicleMonitoringRef>
+				<VehicleJourneyRef>
+					<DataFrameRef>2001-12-17</DataFrameRef>
+					<DatedVehicleJourneyRef>09867</DatedVehicleJourneyRef>
+				</VehicleJourneyRef>
+				<LineRef>Line123</LineRef>
+				<DirectionRef>Out</DirectionRef>
+				<Reason>Gone home</Reason>
+			</VehicleActivityCancellation>
+			<VehicleActivityNote>hello delivery</VehicleActivityNote>
+		</VehicleMonitoringDelivery>
+	</ServiceDelivery>
 </Siri>

@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======HEADER================================================== -->
-  <ResponseTimestamp>2005-12-17T09:30:46-05:00</ResponseTimestamp>
-  <ProducerRef>KUBRICK</ProducerRef>
-  <!--=======PAYLOAD============================================== -->
-  <GeneralMessageDelivery version="2.0">
-   <ResponseTimestamp>2005-12-17T09:30:47.0Z</ResponseTimestamp>
-   <RequestMessageRef>12345</RequestMessageRef>
-   <Status>true</Status>
-   <GeneralMessage formatRef="Xtis version=1.0">
-    <RecordedAtTime>2005-12-17T09:30:47.0Z</RecordedAtTime>
-    <InfoMessageIdentifier>00034567</InfoMessageIdentifier>
-    <InfoMessageVersion>2</InfoMessageVersion>
-    <InfoChannelRef>WARNINGS</InfoChannelRef>
-    <ValidUntilTime>2005-12-17T09:30:47.0Z</ValidUntilTime>
-    <Content>
-     <Xtis version="2.0">
-      <Incidents>
-       <PtIncident>
-        <CreationTime>2005-08-18T10:58:11Z</CreationTime>
-        <IncidentNumber>1323</IncidentNumber>
-        <Verification>verified</Verification>
-        <Progress>open</Progress>
-        <ValidityPeriod>
-         <StartTime>2005-08-18T10:49:00Z</StartTime>
-         <EndTime>2005-08-18T23:59:59Z</EndTime>
-        </ValidityPeriod>
-        <AlertCause>signalFailure</AlertCause>
-        <Severity>normal</Severity>
-        <Planned>false</Planned>
-        <Summary>Routesection information bakerloo</Summary>
-        <Affects>
-         <Networks>
-          <AffectedNetwork>
-           <AffectedLine>
-            <LineRef>01BAK</LineRef>
-            <Direction>
-             <DirectionRef>R</DirectionRef>
-            </Direction>
-            <Direction>
-             <DirectionRef>H</DirectionRef>
-            </Direction>
-           </AffectedLine>
-          </AffectedNetwork>
-         </Networks>
-         <StopPoints>
-          <AffectedStopPoint>
-           <StopPointRef>490G00000011</StopPointRef>
-           <PrivateRef>1000011</PrivateRef>
-           <StopPointName xml:lang="EN">Baker Street</StopPointName>
-           <ZoneName xml:lang="EN">London</ZoneName>
-          </AffectedStopPoint>
-         </StopPoints>
-        </Affects>
-       </PtIncident>
-      </Incidents>
-     </Xtis>
-    </Content>
-   </GeneralMessage>
-  </GeneralMessageDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2005-12-17T09:30:46-05:00</ResponseTimestamp>
+		<ProducerRef>KUBRICK</ProducerRef>
+		<!--=======PAYLOAD============================================== -->
+		<GeneralMessageDelivery version="2.0">
+			<ResponseTimestamp>2005-12-17T09:30:47.0Z</ResponseTimestamp>
+			<RequestMessageRef>12345</RequestMessageRef>
+			<Status>true</Status>
+			<GeneralMessage formatRef="Xtis version=1.0">
+				<RecordedAtTime>2005-12-17T09:30:47.0Z</RecordedAtTime>
+				<InfoMessageIdentifier>00034567</InfoMessageIdentifier>
+				<InfoMessageVersion>2</InfoMessageVersion>
+				<InfoChannelRef>WARNINGS</InfoChannelRef>
+				<ValidUntilTime>2005-12-17T09:30:47.0Z</ValidUntilTime>
+				<Content>
+					<Xtis version="2.0">
+						<Incidents>
+							<PtIncident>
+								<CreationTime>2005-08-18T10:58:11Z</CreationTime>
+								<IncidentNumber>1323</IncidentNumber>
+								<Verification>verified</Verification>
+								<Progress>open</Progress>
+								<ValidityPeriod>
+									<StartTime>2005-08-18T10:49:00Z</StartTime>
+									<EndTime>2005-08-18T23:59:59Z</EndTime>
+								</ValidityPeriod>
+								<AlertCause>signalFailure</AlertCause>
+								<Severity>normal</Severity>
+								<Planned>false</Planned>
+								<Summary>Routesection information bakerloo</Summary>
+								<Affects>
+									<Networks>
+										<AffectedNetwork>
+											<AffectedLine>
+												<LineRef>01BAK</LineRef>
+												<Direction>
+													<DirectionRef>R</DirectionRef>
+												</Direction>
+												<Direction>
+													<DirectionRef>H</DirectionRef>
+												</Direction>
+											</AffectedLine>
+										</AffectedNetwork>
+									</Networks>
+									<StopPoints>
+										<AffectedStopPoint>
+											<StopPointRef>490G00000011</StopPointRef>
+											<PrivateRef>1000011</PrivateRef>
+											<StopPointName xml:lang="EN">Baker Street</StopPointName>
+											<ZoneName xml:lang="EN">London</ZoneName>
+										</AffectedStopPoint>
+									</StopPoints>
+								</Affects>
+							</PtIncident>
+						</Incidents>
+					</Xtis>
+				</Content>
+			</GeneralMessage>
+		</GeneralMessageDelivery>
+	</ServiceDelivery>
 </Siri>

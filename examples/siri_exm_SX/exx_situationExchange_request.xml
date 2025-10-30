@@ -7,26 +7,26 @@
 
 (C) Copyright 2005-2012 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceRequest>
-  <!--=======GENERAL CONTEXT==================================-->
-  <ServiceRequestContext>
-   <Language>en</Language>
-   <DataHorizon>P1Y2M3DT10H30M</DataHorizon>
-   <RequestTimeout>P1Y2M3DT10H30M</RequestTimeout>
-   <DeliveryMethod>direct</DeliveryMethod>
-   <MultipartDespatch>true</MultipartDespatch>
-   <ConfirmDelivery>false</ConfirmDelivery>
-  </ServiceRequestContext>
-  <!--======ENDPOINT REFERENCES================================-->
-  <RequestTimestamp>2004-12-17T09:30:47-05:00</RequestTimestamp>
-  <RequestorRef>NADER</RequestorRef>
-  <SituationExchangeRequest version="2.0">
-   <RequestTimestamp>2004-12-17T09:30:47-05:00</RequestTimestamp>
-   <!--=======TOPIC ===================================== -->
-   <StartTime>2004-12-17T09:30:47-05:00 </StartTime>
-   <VehicleMode>rail</VehicleMode>
-   <Scope>network</Scope>
-   <!--=======POLICY==========================================-->
-  </SituationExchangeRequest>
- </ServiceRequest>
+	<ServiceRequest>
+		<!--=======GENERAL CONTEXT==================================-->
+		<ServiceRequestContext>
+			<Language>en</Language>
+			<DataHorizon>P1Y2M3DT10H30M</DataHorizon>
+			<RequestTimeout>P1Y2M3DT10H30M</RequestTimeout>
+			<DeliveryMethod>direct</DeliveryMethod>
+			<MultipartDespatch>true</MultipartDespatch>
+			<ConfirmDelivery>false</ConfirmDelivery>
+		</ServiceRequestContext>
+		<!--======ENDPOINT REFERENCES================================-->
+		<RequestTimestamp>2004-12-17T09:30:47-05:00</RequestTimestamp>
+		<RequestorRef>NADER</RequestorRef>
+		<SituationExchangeRequest version="2.0">
+			<RequestTimestamp>2004-12-17T09:30:47-05:00</RequestTimestamp>
+			<!--=======TOPIC ===================================== -->
+			<StartTime>2004-12-17T09:30:47-05:00 </StartTime>
+			<VehicleMode>rail</VehicleMode>
+			<Scope>network</Scope>
+			<!--=======POLICY==========================================-->
+		</SituationExchangeRequest>
+	</ServiceRequest>
 </Siri>

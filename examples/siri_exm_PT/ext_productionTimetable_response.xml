@@ -1,113 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- (C) Copyright 2005-2011 CEN SIRI -->
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
- <ServiceDelivery>
-  <!--=======HEADER================================================== -->
-  <ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
-  <ProducerRef>KUBRICK</ProducerRef>
-  <Status>true</Status>
-  <MoreData>false</MoreData>
-  <!--=======PAYLOAD============================================== -->
-  <ProductionTimetableDelivery version="2.0">
-   <ResponseTimestamp>2001-12-17T09:30:47-05:00</ResponseTimestamp>
-   <SubscriberRef>NADER</SubscriberRef>
-   <SubscriptionRef>00123456</SubscriptionRef>
-   <Status>true</Status>
-   <ValidUntil>2001-12-17T10:30:47-05:00</ValidUntil>
-   <DatedTimetableVersionFrame>
-    <RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
-    <VersionRef>1.1</VersionRef>
-    <!-- JP Info Group -->
-    <LineRef>123</LineRef>
-    <DirectionRef>Out</DirectionRef>
-    <PublishedLineName xml:lang="EN">String</PublishedLineName>
-    <DirectionName xml:lang="EN">Outbound</DirectionName>
-    <!-- Service Info Group -->
-    <OperatorRef>Smooth</OperatorRef>
-    <ProductCategoryRef>AllCats</ProductCategoryRef>
-    <ServiceFeatureRef>CyclesPermitted</ServiceFeatureRef>
-    <VehicleFeatureRef>LowStep</VehicleFeatureRef>
-    <LineNote>Special services at Easter</LineNote>
-    <!-- Timetable real-time info Group -->
-    <Monitored>true</Monitored>
-    <DatedVehicleJourney>
-     <!-- Identity Group -->
-     <DatedVehicleJourneyCode>DVC0008767</DatedVehicleJourneyCode>
-     <VehicleJourneyRef>VJ123</VehicleJourneyRef>
-     <ExtraJourney>false</ExtraJourney>
-     <PublishedLineName xml:lang="EN">123 Out</PublishedLineName>
-     <!-- Service Info Group -->
-     <OperatorRef>Sharp</OperatorRef>
-     <ProductCategoryRef>Plusbus</ProductCategoryRef>
-     <ServiceFeatureRef>HailAndRider</ServiceFeatureRef>
-     <VehicleFeatureRef>LowDoor</VehicleFeatureRef>
-     <VehicleFeatureRef>WheelchairsAllowed</VehicleFeatureRef>
-     <!-- Journey  Info Group -->
-     <VehicleJourneyName xml:lang="EN">Shoppers Special</VehicleJourneyName>
-     <JourneyNote xml:lang="EN">Not suitable for claustrophobes.</JourneyNote>
-     <HeadwayService>false</HeadwayService>
-     <Monitored>true</Monitored>
-     <DatedCalls>
-      <!-- CALL 1 -->
-      <DatedCall>
-       <StopPointRef>HLTS00101</StopPointRef>
-       <BoardingStretch>false</BoardingStretch>
-       <RequestStop>false</RequestStop>
-       <DestinationDisplay>Limbo</DestinationDisplay>
-       <AimedArrivalTime>2001-12-17T09:20:47-05:00</AimedArrivalTime>
-       <ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-       <AimedDepartureTime>2001-12-17T09:21:47-05:00</AimedDepartureTime>
-       <DeparturePlatformName xml:lang="EN">1</DeparturePlatformName>
-       <DepartureBoardingActivity>boarding</DepartureBoardingActivity>
-      </DatedCall>
-      <!-- CALL 2 -->
-      <DatedCall>
-       <StopPointRef>HLTS00102</StopPointRef>
-       <BoardingStretch>true</BoardingStretch>
-       <DestinationDisplay>Hell First Circle</DestinationDisplay>
-       <AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
-       <AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
-       <TargetedInterchange>
-        <DistributorVehicleJourneyRef>V45681</DistributorVehicleJourneyRef>
-        <DistributorConnectionLink>
-         <ConnectionLinkCode>01340</ConnectionLinkCode>
-         <DefaultDuration>P3M</DefaultDuration>
-        </DistributorConnectionLink>
-        <DistributorVisitNumber>1</DistributorVisitNumber>
-        <Guaranteed>true</Guaranteed>
-       </TargetedInterchange>
-      </DatedCall>
-      <!-- CALL 3 -->
-      <DatedCall>
-       <StopPointRef>HLTS00103</StopPointRef>
-       <DestinationDisplay>Hell</DestinationDisplay>
-       <CallNote>Can change here to </CallNote>
-       <AimedArrivalTime>2001-12-17T09:35:47-05:00</AimedArrivalTime>
-       <ArrivalPlatformName xml:lang="EN">4</ArrivalPlatformName>
-       <AimedDepartureTime>2001-12-17T09:37:47-05:00</AimedDepartureTime>
-       <DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
-       <TargetedInterchange>
-        <InterchangeCode>I765</InterchangeCode>
-        <DistributorVehicleJourneyRef>V45678</DistributorVehicleJourneyRef>
-        <DistributorConnectionLink>
-         <ConnectionLinkCode>01345</ConnectionLinkCode>
-         <StopPointRef>HLTS00103</StopPointRef>
-         <StopPointName xml:lang="EN">Gare de Nord</StopPointName>
-         <DefaultDuration>P5M</DefaultDuration>
-         <FrequentTravellerDuration>P3M</FrequentTravellerDuration>
-         <OccasionalTravellerDuration>P7M</OccasionalTravellerDuration>
-         <ImpairedAccessDuration>P15M</ImpairedAccessDuration>
-        </DistributorConnectionLink>
-        <DistributorVisitNumber>2</DistributorVisitNumber>
-        <StaySeated>true</StaySeated>
-        <Guaranteed>true</Guaranteed>
-        <Advertised>true</Advertised>
-        <MaximumWaitTime>P15M</MaximumWaitTime>
-       </TargetedInterchange>
-      </DatedCall>
-     </DatedCalls>
-    </DatedVehicleJourney>
-   </DatedTimetableVersionFrame>
-  </ProductionTimetableDelivery>
- </ServiceDelivery>
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2004-12-17T09:30:46-05:00</ResponseTimestamp>
+		<ProducerRef>KUBRICK</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<ProductionTimetableDelivery version="2.0">
+			<ResponseTimestamp>2001-12-17T09:30:47-05:00</ResponseTimestamp>
+			<SubscriberRef>NADER</SubscriberRef>
+			<SubscriptionRef>00123456</SubscriptionRef>
+			<Status>true</Status>
+			<ValidUntil>2001-12-17T10:30:47-05:00</ValidUntil>
+			<DatedTimetableVersionFrame>
+				<RecordedAtTime>2001-12-17T09:30:47-05:00</RecordedAtTime>
+				<VersionRef>1.1</VersionRef>
+				<!-- JP Info Group -->
+				<LineRef>123</LineRef>
+				<DirectionRef>Out</DirectionRef>
+				<PublishedLineName xml:lang="EN">String</PublishedLineName>
+				<DirectionName xml:lang="EN">Outbound</DirectionName>
+				<!-- Service Info Group -->
+				<OperatorRef>Smooth</OperatorRef>
+				<ProductCategoryRef>AllCats</ProductCategoryRef>
+				<ServiceFeatureRef>CyclesPermitted</ServiceFeatureRef>
+				<VehicleFeatureRef>LowStep</VehicleFeatureRef>
+				<LineNote>Special services at Easter</LineNote>
+				<!-- Timetable real-time info Group -->
+				<Monitored>true</Monitored>
+				<DatedVehicleJourney>
+					<!-- Identity Group -->
+					<DatedVehicleJourneyCode>DVC0008767</DatedVehicleJourneyCode>
+					<VehicleJourneyRef>VJ123</VehicleJourneyRef>
+					<ExtraJourney>false</ExtraJourney>
+					<PublishedLineName xml:lang="EN">123 Out</PublishedLineName>
+					<!-- Service Info Group -->
+					<OperatorRef>Sharp</OperatorRef>
+					<ProductCategoryRef>Plusbus</ProductCategoryRef>
+					<ServiceFeatureRef>HailAndRider</ServiceFeatureRef>
+					<VehicleFeatureRef>LowDoor</VehicleFeatureRef>
+					<VehicleFeatureRef>WheelchairsAllowed</VehicleFeatureRef>
+					<!-- Journey  Info Group -->
+					<VehicleJourneyName xml:lang="EN">Shoppers Special</VehicleJourneyName>
+					<JourneyNote xml:lang="EN">Not suitable for claustrophobes.</JourneyNote>
+					<HeadwayService>false</HeadwayService>
+					<Monitored>true</Monitored>
+					<DatedCalls>
+						<!-- CALL 1 -->
+						<DatedCall>
+							<StopPointRef>HLTS00101</StopPointRef>
+							<BoardingStretch>false</BoardingStretch>
+							<RequestStop>false</RequestStop>
+							<DestinationDisplay>Limbo</DestinationDisplay>
+							<AimedArrivalTime>2001-12-17T09:20:47-05:00</AimedArrivalTime>
+							<ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
+							<AimedDepartureTime>2001-12-17T09:21:47-05:00</AimedDepartureTime>
+							<DeparturePlatformName xml:lang="EN">1</DeparturePlatformName>
+							<DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+						</DatedCall>
+						<!-- CALL 2 -->
+						<DatedCall>
+							<StopPointRef>HLTS00102</StopPointRef>
+							<BoardingStretch>true</BoardingStretch>
+							<DestinationDisplay>Hell First Circle</DestinationDisplay>
+							<AimedArrivalTime>2001-12-17T09:30:47-05:00</AimedArrivalTime>
+							<AimedDepartureTime>2001-12-17T09:30:47-05:00</AimedDepartureTime>
+							<TargetedInterchange>
+								<DistributorVehicleJourneyRef>V45681</DistributorVehicleJourneyRef>
+								<DistributorConnectionLink>
+									<ConnectionLinkCode>01340</ConnectionLinkCode>
+									<DefaultDuration>P3M</DefaultDuration>
+								</DistributorConnectionLink>
+								<DistributorVisitNumber>1</DistributorVisitNumber>
+								<Guaranteed>true</Guaranteed>
+							</TargetedInterchange>
+						</DatedCall>
+						<!-- CALL 3 -->
+						<DatedCall>
+							<StopPointRef>HLTS00103</StopPointRef>
+							<DestinationDisplay>Hell</DestinationDisplay>
+							<CallNote>Can change here to </CallNote>
+							<AimedArrivalTime>2001-12-17T09:35:47-05:00</AimedArrivalTime>
+							<ArrivalPlatformName xml:lang="EN">4</ArrivalPlatformName>
+							<AimedDepartureTime>2001-12-17T09:37:47-05:00</AimedDepartureTime>
+							<DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
+							<TargetedInterchange>
+								<InterchangeCode>I765</InterchangeCode>
+								<DistributorVehicleJourneyRef>V45678</DistributorVehicleJourneyRef>
+								<DistributorConnectionLink>
+									<ConnectionLinkCode>01345</ConnectionLinkCode>
+									<StopPointRef>HLTS00103</StopPointRef>
+									<StopPointName xml:lang="EN">Gare de Nord</StopPointName>
+									<DefaultDuration>P5M</DefaultDuration>
+									<FrequentTravellerDuration>P3M</FrequentTravellerDuration>
+									<OccasionalTravellerDuration>P7M</OccasionalTravellerDuration>
+									<ImpairedAccessDuration>P15M</ImpairedAccessDuration>
+								</DistributorConnectionLink>
+								<DistributorVisitNumber>2</DistributorVisitNumber>
+								<StaySeated>true</StaySeated>
+								<Guaranteed>true</Guaranteed>
+								<Advertised>true</Advertised>
+								<MaximumWaitTime>P15M</MaximumWaitTime>
+							</TargetedInterchange>
+						</DatedCall>
+					</DatedCalls>
+				</DatedVehicleJourney>
+			</DatedTimetableVersionFrame>
+		</ProductionTimetableDelivery>
+	</ServiceDelivery>
 </Siri>
