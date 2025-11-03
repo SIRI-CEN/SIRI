@@ -111,7 +111,7 @@ A string containing a phrase in a natural language name that requires at least o
 		<xsd:annotation>
 			<xsd:documentation>Id type for document references.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="xsd:normalizedString"/>
 	</xsd:simpleType>
 	<xsd:simpleType name="DurationType">
 		<xsd:annotation>
