@@ -252,13 +252,13 @@ A flexible area is used in cases where a pre-booked service allows pick-up/drop-
 	<!--======Distance ============================================================-->
 	<xsd:simpleType name="DistanceType">
 		<xsd:annotation>
-			<xsd:documentation>Distance (metres) as defined by http://www.ordnancesurvey.co.uk/xml/resource/units.xml#metres. ALternative units may be specifed by context.</xsd:documentation>
+			<xsd:documentation>Distance (in metres) as defined by http://www.ordnancesurvey.co.uk/xml/resource/units.xml#metres.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:nonNegativeInteger"/>
 	</xsd:simpleType>
 	<xsd:simpleType name="VelocityType">
 		<xsd:annotation>
-			<xsd:documentation>Distance (metres per second) ALternative unist may be specifed by context.</xsd:documentation>
+			<xsd:documentation>Velocity (in metres per second).</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:nonNegativeInteger"/>
 	</xsd:simpleType>
