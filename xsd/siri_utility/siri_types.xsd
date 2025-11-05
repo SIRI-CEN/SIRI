@@ -123,7 +123,9 @@ A string containing a phrase in a natural language name that requires at least o
 		<xsd:annotation>
 			<xsd:documentation>Limited version of duration. Must be positive.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="DurationType"/>
+		<xsd:restriction base="DurationType">
+			<xsd:minInclusive value="PT0S"/>
+		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="PhoneType">
 		<xsd:annotation>
