@@ -568,6 +568,11 @@ Rail transport, Roads and road transport
 							<xsd:documentation>Reference to the action number within the incident concept.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="ActionPeriod" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Period of effect of disruption, if different from that of SITUATION, specifically in case of multiple applicable periods (for example periodic roadworks during the night). If omitted, then the ValidityPeriods on PtSituationElement level apply, otherwise overwrites the former.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 					<xsd:element name="RecordedAtTime" type="xsd:dateTime">
 						<xsd:annotation>
 							<xsd:documentation>The time of the last update. This must be the timestamp of the original data source and not that of an intermediate system, such as a data hub. This timestamp has to be changed by the source system with every update.</xsd:documentation>
