@@ -55,6 +55,8 @@ Rail transport, Roads and road transport
 		<xsd:documentation>OPERATOR types for SIRi.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
+	<!-- ======================================================================= -->
 	<xsd:complexType name="OperatorRefStructure">
 		<xsd:annotation>
 			<xsd:documentation>Reference to an OPERATOR.</xsd:documentation>
@@ -67,7 +69,7 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of an OPERATOR Code.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<!-- ======================================================================= -->
 	<xsd:complexType name="OrganisationRefStructure">
@@ -82,7 +84,7 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of an OrganisationCode.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<!-- ======================================================================= -->
 </xsd:schema>
