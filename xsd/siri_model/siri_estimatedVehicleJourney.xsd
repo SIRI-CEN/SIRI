@@ -363,11 +363,6 @@ the original journey and the nature of the difference.</xsd:documentation>
 					<xsd:documentation>Relations of the journey with other journeys, e.g., in case a joining/splitting takes place or the journey substitutes for another one etc.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="UpdatedServiceLinks" type="ServiceLinkViewsStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>List of SERVICE LINKs having updated shapes in that journey. This is only to provide updated the shapes of the journey (as gml:linestring), not to provide additional SERVICE LINK (provided through the sequence of CALLS)</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
 			<xsd:element ref="Extensions" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
