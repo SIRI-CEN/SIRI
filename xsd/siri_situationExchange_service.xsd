@@ -261,7 +261,7 @@ Rail transport, Roads and road transport
 		<xsd:sequence>
 			<xsd:element name="OperatorRef" type="OperatorRefStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Referance to an OPERATOR. If unspecified, all OPERATOR.s.</xsd:documentation>
+					<xsd:documentation>Reference to an OPERATOR. If unspecified, all OPERATOR.s.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="OperationalUnitRef" type="OperationalUnitRefStructure" minOccurs="0" maxOccurs="unbounded">
