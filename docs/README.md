@@ -26,13 +26,9 @@ In each branch, we have:
 ## Branches  🌿
 |**Branch**|**Description**|**Link**|
 |----------|---------------|--------|
-<<<<<<< HEAD
-|v2.2|The latest version of the XML Schema that matches the CEN documentation|[Direct link](https://github.com/SIRI-CEN/SIRI)|
+|v2.3|All the upcoming work that goes with the revision of SIRI, matching the next round of CEN documentation|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/2.3)|
+|v2.2|The latest version of the XML Schema that matches the CEN documentation|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/2.2)|
 |v2.1|The previous version of the XML Schema that matches the CEN documentation (without the Control Actions)|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/2.1)|
-=======
-|master|The latest version of the XML Schema that matches the CEN documentation|[Direct link](https://github.com/SIRI-CEN/SIRI)|
->>>>>>> 9a250e243a4d9130b16ca28935a093e9a7e73c38
-|integration|All the upcoming work that goes with the revision of SIRI, matching the next round of CEN documentation|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/integration)|
 
 ## How to contribute
 
