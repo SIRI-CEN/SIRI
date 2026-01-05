@@ -756,9 +756,41 @@ By default, an action does not correspond to a normalisation, i.e., has ActionIs
 			<xsd:documentation>Values for perspectives.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
-			<xsd:enumeration value="general"/>
-			<xsd:enumeration value="stopPoint"/>
-			<xsd:enumeration value="vehicleJourney"/>
+			<xsd:enumeration value="general">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.3, use anywhere instead</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="stopPoint">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.3, use atStopPoint instead</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="vehicleJourney">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED since SIRI 2.3, use onBoardVehicle instead</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="anywhere">
+				<xsd:annotation>
+					<xsd:documentation>Bird's eye perspective, e.g., passenger looks at an overview of situations on a network map. (since SIRI 2.3)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="atStopPoint">
+				<xsd:annotation>
+					<xsd:documentation>Passenger looks, for example, at a display on a platform during interchange. (since SIRI 2.3)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="onBoardVehicle">
+				<xsd:annotation>
+					<xsd:documentation>Passenger looks, for example, at a display while moving in a vehicle. (since SIRI 2.3)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="whilePlanningTrip">
+				<xsd:annotation>
+					<xsd:documentation>Passenger looks, for example, at a trip search application on a smartphone. (since SIRI 2.3)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 </xsd:schema>
