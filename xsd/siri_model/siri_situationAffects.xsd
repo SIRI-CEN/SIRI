@@ -176,6 +176,20 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Status of STOP</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="AffectedFacilities" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Facilities available for STOP POINT. (since SIRI 2.3)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AffectedFacility" type="AffectedFacilityStructure" maxOccurs="unbounded">
+							<xsd:annotation>
+								<xsd:documentation>Facility available for STOP POINT.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
 			<xsd:element name="ConnectionLinks" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>CONNECTION links from stop.</xsd:documentation>
@@ -961,13 +975,13 @@ Rail transport, Roads and road transport
 			</xsd:element>
 			<xsd:element name="Facilities" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Facilities available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
+					<xsd:documentation>Facilities available for VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="AffectedFacility" type="AffectedFacilityStructure" maxOccurs="unbounded">
 							<xsd:annotation>
-								<xsd:documentation>Facililitiy available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
+								<xsd:documentation>Facility available for VEHICLE JOURNEY. (since SIRI 2.0)</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 					</xsd:sequence>
@@ -1245,13 +1259,13 @@ Rail transport, Roads and road transport
 					</xsd:element>
 					<xsd:element name="AffectedFacilities" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Facilities available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
+							<xsd:documentation>Facilities available for STOP PLACE. (since SIRI 2.0)</xsd:documentation>
 						</xsd:annotation>
 						<xsd:complexType>
 							<xsd:sequence>
 								<xsd:element name="AffectedFacility" type="AffectedFacilityStructure" maxOccurs="unbounded">
 									<xsd:annotation>
-										<xsd:documentation>Facililitiy available for VEHICLE JOURNEY   (since SIRI 2.0)</xsd:documentation>
+										<xsd:documentation>Facility available for STOP PLACE. (since SIRI 2.0)</xsd:documentation>
 									</xsd:annotation>
 								</xsd:element>
 							</xsd:sequence>
