@@ -768,7 +768,7 @@ By default, an action does not correspond to a normalisation, i.e., has ActionIs
 			</xsd:enumeration>
 			<xsd:enumeration value="vehicleJourney">
 				<xsd:annotation>
-					<xsd:documentation>DEPRECATED since SIRI 2.3, use onBoardVehicle instead. -v.3</xsd:documentation>
+					<xsd:documentation>DEPRECATED since SIRI 2.3, use onBoardVehicle instead. -v2.3</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="anywhere">
