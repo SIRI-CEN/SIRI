@@ -1197,11 +1197,18 @@ Can be used  when stops are replaced by other stops on certain journeys</xsd:doc
 					<xsd:documentation>Identification of the DATED VEHICLE JOURNEY to be changed</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
-			<xsd:element name="ChangedPoints" type="ChangedPoints">
-				<xsd:annotation>
-					<xsd:documentation>List of modified points</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
+			<xsd:choice>
+				<xsd:element name="ChangedPoints" type="ChangedPoints">
+					<xsd:annotation>
+						<xsd:documentation>List of modified points</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="UpdatedServiceLinks" type="ServiceLinkViewsStructure">
+					<xsd:annotation>
+						<xsd:documentation>List of SERVICE LINKs having updated shapes in that journey. This is only to provide updated the shapes of the journey (as gml:linestring), not to provide additional SERVICE LINK (provided through the sequence of CALLS)</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
 		</xsd:sequence>
 	</xsd:complexType>
 	<!--  *********************************************************  -->

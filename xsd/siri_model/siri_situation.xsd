@@ -1300,6 +1300,11 @@ Note that if the ControlAction is the master ControlAction of a GroupOfControlAc
 					<xsd:documentation>Description of fare exceptions allowed because of disruption.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element name="UpdatedServiceLinks" type="ServiceLinkViewsStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of SERVICE LINKs having updated shapes in that journey. This is only to provide updated the shapes of the journey (as gml:linestring), not to provide additional SERVICE LINK (provided through the sequence of CALLS)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element ref="Extensions" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
