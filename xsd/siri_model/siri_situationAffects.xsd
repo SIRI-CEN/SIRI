@@ -878,7 +878,7 @@ Rail transport, Roads and road transport
 					<xsd:documentation>BLOCK which journey runs. (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="VehicleMode" type="VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>A means of transportation such as bus, rail, etc.</xsd:documentation>
 				</xsd:annotation>
