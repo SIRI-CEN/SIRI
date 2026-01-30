@@ -1,1137 +1,232 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
-	<ServiceDelivery>
-		<ResponseTimestamp>2022-04-14T09:17:32Z</ResponseTimestamp>
-		<ProducerRef>ski-ems-out-sx_tesst</ProducerRef>
-		<ResponseMessageIdentifier>wcP9TgJhf</ResponseMessageIdentifier>
-		<Status>true</Status>
-		<MoreData>false</MoreData>
-		<SituationExchangeDelivery version="2.0">
-			<ResponseTimestamp>2022-04-14T09:17:32Z</ResponseTimestamp>
-			<SubscriberRef>ski-ddip-in-sx_test</SubscriberRef>
-			<SubscriptionRef>1</SubscriptionRef>
-			<Situations>
-				<PtSituationElement>
-					<CreationTime>2022-04-14T09:17:23Z</CreationTime>
-					<CountryRef>ch</CountryRef>
-					<ParticipantRef>ski-ems-out-sx_test</ParticipantRef>
-					<SituationNumber>ch:1:sstid:1:3ac880a2-aeb1-5757-989d-d3c15c8220c6</SituationNumber>
-					<Version>1</Version>
-					<Source>
-						<CountryRef>ch</CountryRef>
-						<SourceType>directReport</SourceType>
-						<Name>EMS</Name>
-						<ExternalCode>ski-ems-out-sx_test</ExternalCode>
-					</Source>
-					<VersionedAtTime>2022-04-14T09:17:26Z</VersionedAtTime>
-					<Progress>published</Progress>
-					<ValidityPeriod>
-						<StartTime>2022-08-26T04:00:00Z</StartTime>
-						<EndTime>2022-08-28T21:00:00Z</EndTime>
-					</ValidityPeriod>
-					<PublicationWindow>
-						<StartTime>2022-04-14T09:17:23Z</StartTime>
-						<EndTime>2022-08-28T23:59:00Z</EndTime>
-					</PublicationWindow>
-					<AlertCause>specialEvent</AlertCause>
-					<Severity>normal</Severity>
-					<Priority>3</Priority>
-					<Planned>true</Planned>
-					<Audience>public</Audience>
-					<ScopeType>stopPlace</ScopeType>
-					<Language>DE</Language>
-					<Summary xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben.</Summary>
-					<Summary xml:lang="EN">Pratteln, Bahnhof stop moved.</Summary>
-					<Summary xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé.</Summary>
-					<Summary xml:lang="IT">Fermata Pratteln, Bahnhof spostata.</Summary>
-					<Detail xml:lang="DE">Grund ist eine Veranstaltung.</Detail>
-					<Detail xml:lang="EN">Due to an event.</Detail>
-					<Detail xml:lang="FR">Cause: manifestation.</Detail>
-					<Detail xml:lang="IT">Motivo è una manifestazione.</Detail>
-					<Affects>
-						<StopPlaces>
-							<AffectedStopPlace>
-								<StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
-								<PlaceName>Pratteln, Bahnhof</PlaceName>
-							</AffectedStopPlace>
-						</StopPlaces>
-					</Affects>
-					<PublishingActions>
-						<PublishingAction>
-							<PublishAtScope>
-								<ScopeType>stopPlace</ScopeType>
-								<Affects>
-									<StopPlaces>
-										<AffectedStopPlace>
-											<StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
-											<PlaceName>Pratteln, Bahnhof</PlaceName>
-										</AffectedStopPlace>
-									</StopPlaces>
-								</Affects>
-							</PublishAtScope>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2022-04-14T09:17:23Z</StartTime>
-									<EndTime>2022-08-28T23:59:00Z</EndTime>
-								</PublicationWindow>
-								<ActionRef>ems-696-1</ActionRef>
-								<ValidityPeriod>
-									<StartTime>2022-08-26T04:00:00Z</StartTime>
-									<EndTime>2022-08-26T14:00:00Z</EndTime>
-								</ValidityPeriod>
-								<ValidityPeriod>
-									<StartTime>2022-08-27T04:00:00Z</StartTime>
-									<EndTime>2022-08-27T14:00:00Z</EndTime>
-								</ValidityPeriod>
-								<ValidityPeriod>
-									<StartTime>2022-08-28T04:00:00Z</StartTime>
-									<EndTime>2022-08-28T14:00:00Z</EndTime>
-								</ValidityPeriod>
-								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-								<OwnerRef>ch:1:sboid:100626</OwnerRef>
-								<Perspective>whilePlanningTrip</Perspective>
-								<TextualContent>
-									<TextualContentSize>S</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-										<SummaryText xml:lang="FR">Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo: manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände)</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Dauer: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="EN">Duration: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="FR">Durée: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="IT">Durata: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>M</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof stop moved</SummaryText>
-										<SummaryText xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Fermata Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund ist eine Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo è una manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände)</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Einschränkungsdauer: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="EN">Duration of the restriction: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="FR">Durée de la perturbation: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="IT">Durata della restrizione: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>L</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Die Haltestelle Pratteln, Bahnhof ist verschoben.</SummaryText>
-										<SummaryText xml:lang="EN">The Pratteln, Bahnhof stop has been moved.</SummaryText>
-										<SummaryText xml:lang="FR">L’arrêt Pratteln, Bahnhof est déplacé.</SummaryText>
-										<SummaryText xml:lang="IT">La fermata Pratteln, Bahnhof è stata spostata.</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Der Grund dafür ist eine Veranstaltung (ESAF).</ReasonText>
-										<ReasonText xml:lang="EN">This ist due to an event (ESAF).</ReasonText>
-										<ReasonText xml:lang="FR">Une manifestation en est la cause (ESAF).</ReasonText>
-										<ReasonText xml:lang="IT">Il motivo è una manifestazione (ESAF).</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt.</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town.</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville.</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico.</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände).</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Die Einschränkung dauert vom 26.08.2022, 04:00 - 26.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="EN">The restriction lasts from 26.08.2022, 04:00 until 26.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="FR">La perturbation dure du 26.08.2022, 04:00 au 26.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="IT">La restrizione durerà dal 26.08.2022, 04:00 al 26.08.2022, 14:00.</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort.</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site.</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place.</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco.</Remark>
-									</RemarkContent>
-								</TextualContent>
-							</PassengerInformationAction>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2022-04-14T09:17:26Z</StartTime>
-									<EndTime>2022-08-28T23:59:00Z</EndTime>
-								</PublicationWindow>
-								<ActionRef>ems-696-2</ActionRef>
-								<ValidityPeriod>
-									<StartTime>2022-08-26T15:00:00Z</StartTime>
-									<EndTime>2022-08-26T23:59:00Z</EndTime>
-								</ValidityPeriod>
-								<ValidityPeriod>
-									<StartTime>2022-08-27T15:00:00Z</StartTime>
-									<EndTime>2022-08-27T23:59:00Z</EndTime>
-								</ValidityPeriod>
-								<ValidityPeriod>
-									<StartTime>2022-08-28T15:00:00Z</StartTime>
-									<EndTime>2022-08-28T23:59:00Z</EndTime>
-								</ValidityPeriod>
-								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-								<OwnerRef>ch:1:sboid:100626</OwnerRef>
-								<Perspective>whilePlanningTrip</Perspective>
-								<TextualContent>
-									<TextualContentSize>S</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-										<SummaryText xml:lang="FR">Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo: manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Dauer: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">Duration: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">Durée: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">Durata: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>M</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof stop moved</SummaryText>
-										<SummaryText xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Fermata Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund ist eine Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo è una manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Einschränkungsdauer: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">Duration of the restriction: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">Durée de la perturbation: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">Durata della restrizione: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>L</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Die Haltestelle Pratteln, Bahnhof ist verschoben.</SummaryText>
-										<SummaryText xml:lang="EN">The Pratteln, Bahnhof stop has been moved.</SummaryText>
-										<SummaryText xml:lang="FR">L’arrêt Pratteln, Bahnhof est déplacé.</SummaryText>
-										<SummaryText xml:lang="IT">La fermata Pratteln, Bahnhof è stata spostata.</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Der Grund dafür ist eine Veranstaltung (ESAF).</ReasonText>
-										<ReasonText xml:lang="EN">This ist due to an event (ESAF).</ReasonText>
-										<ReasonText xml:lang="FR">Une manifestation en est la cause (ESAF).</ReasonText>
-										<ReasonText xml:lang="IT">Il motivo è una manifestazione (ESAF).</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse.</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen.</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms.</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais.</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme.</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Die Einschränkung dauert vom 26.08.2022, 15:00 bis 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">The restriction lasts from 26.08.2022, 15:00 until 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">La perturbation dure du 26.08.2022, 15:00 au 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">La restrizione durerà dal 26.08.2022, 15:00 al 26.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort.</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site.</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place.</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco.</Remark>
-									</RemarkContent>
-								</TextualContent>
-							</PassengerInformationAction>
-						</PublishingAction>
-						<PublishingAction>
-							<PublishAtScope>
-								<ScopeType>stopPlace</ScopeType>
-								<Affects>
-									<StopPlaces>
-										<AffectedStopPlace>
-											<StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
-											<PlaceName>Pratteln, Bahnhof</PlaceName>
-										</AffectedStopPlace>
-									</StopPlaces>
-								</Affects>
-							</PublishAtScope>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2022-08-26T02:00:00Z</StartTime>
-									<EndTime>2022-08-26T12:00:00Z</EndTime>
-								</PublicationWindow>
-								<ActionRef>ems-696-3</ActionRef>
-								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-								<OwnerRef>ch:1:sboid:100626</OwnerRef>
-								<Perspective>atStopPoint</Perspective>
-								<Perspective>onBoardVehicle</Perspective>
-								<TextualContent>
-									<TextualContentSize>S</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-										<SummaryText xml:lang="FR">Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo: manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände)</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Dauer: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="EN">Duration: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="FR">Durée: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="IT">Durata: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>M</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof stop moved</SummaryText>
-										<SummaryText xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Fermata Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund ist eine Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo è una manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände)</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Einschränkungsdauer: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="EN">Duration of the restriction: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="FR">Durée de la perturbation: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="IT">Durata della restrizione: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>L</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Die Haltestelle Pratteln, Bahnhof ist verschoben.</SummaryText>
-										<SummaryText xml:lang="EN">The Pratteln, Bahnhof stop has been moved.</SummaryText>
-										<SummaryText xml:lang="FR">L’arrêt Pratteln, Bahnhof est déplacé.</SummaryText>
-										<SummaryText xml:lang="IT">La fermata Pratteln, Bahnhof è stata spostata.</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Der Grund dafür ist eine Veranstaltung (ESAF).</ReasonText>
-										<ReasonText xml:lang="EN">This ist due to an event (ESAF).</ReasonText>
-										<ReasonText xml:lang="FR">Une manifestation en est la cause (ESAF).</ReasonText>
-										<ReasonText xml:lang="IT">Il motivo è una manifestazione (ESAF).</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt.</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town.</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville.</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico.</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände).</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Die Einschränkung dauert vom 26.08.2022, 04:00 - 26.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="EN">The restriction lasts from 26.08.2022, 04:00 until 26.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="FR">La perturbation dure du 26.08.2022, 04:00 au 26.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="IT">La restrizione durerà dal 26.08.2022, 04:00 al 26.08.2022, 14:00.</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort.</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site.</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place.</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco.</Remark>
-									</RemarkContent>
-								</TextualContent>
-							</PassengerInformationAction>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2022-08-27T02:00:00Z</StartTime>
-									<EndTime>2022-08-27T12:00:00Z</EndTime>
-								</PublicationWindow>
-								<ActionRef>ems-696-4</ActionRef>
-								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-								<OwnerRef>ch:1:sboid:100626</OwnerRef>
-								<Perspective>atStopPoint</Perspective>
-								<Perspective>onBoardVehicle</Perspective>
-								<TextualContent>
-									<TextualContentSize>S</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-										<SummaryText xml:lang="FR">Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo: manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände)</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Dauer: 27.08.2022, 04:00 - 27.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="EN">Duration: 27.08.2022, 04:00 - 27.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="FR">Durée: 27.08.2022, 04:00 - 27.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="IT">Durata: 27.08.2022, 04:00 - 27.08.2022, 14:00</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>M</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof stop moved</SummaryText>
-										<SummaryText xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Fermata Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund ist eine Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo è una manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände)</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Einschränkungsdauer: 27.08.2022, 04:00 - 27.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="EN">Duration of the restriction: 27.08.2022, 04:00 - 27.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="FR">Durée de la perturbation: 27.08.2022, 04:00 - 27.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="IT">Durata della restrizione: 27.08.2022, 04:00 - 27.08.2022, 14:00</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>L</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Die Haltestelle Pratteln, Bahnhof ist verschoben.</SummaryText>
-										<SummaryText xml:lang="EN">The Pratteln, Bahnhof stop has been moved.</SummaryText>
-										<SummaryText xml:lang="FR">L’arrêt Pratteln, Bahnhof est déplacé.</SummaryText>
-										<SummaryText xml:lang="IT">La fermata Pratteln, Bahnhof è stata spostata.</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Der Grund dafür ist eine Veranstaltung (ESAF).</ReasonText>
-										<ReasonText xml:lang="EN">This ist due to an event (ESAF).</ReasonText>
-										<ReasonText xml:lang="FR">Une manifestation en est la cause (ESAF).</ReasonText>
-										<ReasonText xml:lang="IT">Il motivo è una manifestazione (ESAF).</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt.</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town.</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville.</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico.</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände).</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Die Einschränkung dauert vom 27.08.2022, 04:00 - 27.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="EN">The restriction lasts from 27.08.2022, 04:00 until 27.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="FR">La perturbation dure du 27.08.2022, 04:00 au 27.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="IT">La restrizione durerà dal 27.08.2022, 04:00 al 27.08.2022, 14:00.</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort.</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site.</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place.</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco.</Remark>
-									</RemarkContent>
-								</TextualContent>
-							</PassengerInformationAction>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2022-08-28T02:00:00Z</StartTime>
-									<EndTime>2022-08-28T12:00:00Z</EndTime>
-								</PublicationWindow>
-								<ActionRef>ems-696-5</ActionRef>
-								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-								<OwnerRef>ch:1:sboid:100626</OwnerRef>
-								<Perspective>atStopPoint</Perspective>
-								<Perspective>onBoardVehicle</Perspective>
-								<TextualContent>
-									<TextualContentSize>S</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-										<SummaryText xml:lang="FR">Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo: manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände)</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Dauer: 28.08.2022, 04:00 - 28.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="EN">Duration: 28.08.2022, 04:00 - 28.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="FR">Durée: 28.08.2022, 04:00 - 28.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="IT">Durata: 28.08.2022, 04:00 - 28.08.2022, 14:00</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>M</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof stop moved</SummaryText>
-										<SummaryText xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Fermata Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund ist eine Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo è una manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände)</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Einschränkungsdauer: 28.08.2022, 04:00 - 28.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="EN">Duration of the restriction: 28.08.2022, 04:00 - 28.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="FR">Durée de la perturbation: 28.08.2022, 04:00 - 28.08.2022, 14:00</DurationText>
-										<DurationText xml:lang="IT">Durata della restrizione: 28.08.2022, 04:00 - 28.08.2022, 14:00</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>L</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Die Haltestelle Pratteln, Bahnhof ist verschoben.</SummaryText>
-										<SummaryText xml:lang="EN">The Pratteln, Bahnhof stop has been moved.</SummaryText>
-										<SummaryText xml:lang="FR">L’arrêt Pratteln, Bahnhof est déplacé.</SummaryText>
-										<SummaryText xml:lang="IT">La fermata Pratteln, Bahnhof è stata spostata.</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Der Grund dafür ist eine Veranstaltung (ESAF).</ReasonText>
-										<ReasonText xml:lang="EN">This ist due to an event (ESAF).</ReasonText>
-										<ReasonText xml:lang="FR">Une manifestation en est la cause (ESAF).</ReasonText>
-										<ReasonText xml:lang="IT">Il motivo è una manifestazione (ESAF).</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt.</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town.</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé de 500 mètres en direction de la vieille ville.</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata di 500 metri in direzione del centro storico.</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez utiliser l'arrêt temporaire Pratteln, Bahnhof (direction Festgelände).</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di utilizzare la fermata temporanea Pratteln, Bahnhof (direzione Festgelände).</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Die Einschränkung dauert vom 28.08.2022, 04:00 - 28.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="EN">The restriction lasts from 28.08.2022, 04:00 until 28.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="FR">La perturbation dure du 28.08.2022, 04:00 au 28.08.2022, 14:00.</DurationText>
-										<DurationText xml:lang="IT">La restrizione durerà dal 28.08.2022, 04:00 al 28.08.2022, 14:00.</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort.</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site.</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place.</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco.</Remark>
-									</RemarkContent>
-								</TextualContent>
-							</PassengerInformationAction>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2022-08-26T13:00:00Z</StartTime>
-									<EndTime>2022-08-26T21:59:00Z</EndTime>
-								</PublicationWindow>
-								<ActionRef>ems-696-6</ActionRef>
-								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-								<OwnerRef>ch:1:sboid:100626</OwnerRef>
-								<Perspective>atStopPoint</Perspective>
-								<Perspective>onBoardVehicle</Perspective>
-								<TextualContent>
-									<TextualContentSize>S</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-										<SummaryText xml:lang="FR">Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo: manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Dauer: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">Duration: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">Durée: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">Durata: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>M</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof stop moved</SummaryText>
-										<SummaryText xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Fermata Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund ist eine Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo è una manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Einschränkungsdauer: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">Duration of the restriction: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">Durée de la perturbation: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">Durata della restrizione: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>L</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Die Haltestelle Pratteln, Bahnhof ist verschoben.</SummaryText>
-										<SummaryText xml:lang="EN">The Pratteln, Bahnhof stop has been moved.</SummaryText>
-										<SummaryText xml:lang="FR">L’arrêt Pratteln, Bahnhof est déplacé.</SummaryText>
-										<SummaryText xml:lang="IT">La fermata Pratteln, Bahnhof è stata spostata.</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Der Grund dafür ist eine Veranstaltung (ESAF).</ReasonText>
-										<ReasonText xml:lang="EN">This ist due to an event (ESAF).</ReasonText>
-										<ReasonText xml:lang="FR">Une manifestation en est la cause (ESAF).</ReasonText>
-										<ReasonText xml:lang="IT">Il motivo è una manifestazione (ESAF).</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse.</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen.</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms.</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais.</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme.</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Die Einschränkung dauert vom 26.08.2022, 15:00 bis 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">The restriction lasts from 26.08.2022, 15:00 until 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">La perturbation dure du 26.08.2022, 15:00 au 26.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">La restrizione durerà dal 26.08.2022, 15:00 al 26.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort.</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site.</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place.</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco.</Remark>
-									</RemarkContent>
-								</TextualContent>
-							</PassengerInformationAction>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2022-08-27T13:00:00Z</StartTime>
-									<EndTime>2022-08-27T21:59:00Z</EndTime>
-								</PublicationWindow>
-								<ActionRef>ems-696-7</ActionRef>
-								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-								<OwnerRef>ch:1:sboid:100626</OwnerRef>
-								<Perspective>atStopPoint</Perspective>
-								<Perspective>onBoardVehicle</Perspective>
-								<TextualContent>
-									<TextualContentSize>S</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-										<SummaryText xml:lang="FR">Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo: manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Dauer: 27.08.2022, 15:00 - 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">Duration: 27.08.2022, 15:00 - 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">Durée: 27.08.2022, 15:00 - 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">Durata: 27.08.2022, 15:00 - 27.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>M</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof stop moved</SummaryText>
-										<SummaryText xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Fermata Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund ist eine Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo è una manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Einschränkungsdauer: 27.08.2022, 15:00 - 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">Duration of the restriction: 27.08.2022, 15:00 - 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">Durée de la perturbation: 27.08.2022, 15:00 - 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">Durata della restrizione: 27.08.2022, 15:00 - 27.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>L</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Die Haltestelle Pratteln, Bahnhof ist verschoben.</SummaryText>
-										<SummaryText xml:lang="EN">The Pratteln, Bahnhof stop has been moved.</SummaryText>
-										<SummaryText xml:lang="FR">L’arrêt Pratteln, Bahnhof est déplacé.</SummaryText>
-										<SummaryText xml:lang="IT">La fermata Pratteln, Bahnhof è stata spostata.</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Der Grund dafür ist eine Veranstaltung (ESAF).</ReasonText>
-										<ReasonText xml:lang="EN">This ist due to an event (ESAF).</ReasonText>
-										<ReasonText xml:lang="FR">Une manifestation en est la cause (ESAF).</ReasonText>
-										<ReasonText xml:lang="IT">Il motivo è una manifestazione (ESAF).</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse.</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen.</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms.</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais.</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme.</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Die Einschränkung dauert vom 27.08.2022, 15:00 bis 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">The restriction lasts from 27.08.2022, 15:00 until 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">La perturbation dure du 27.08.2022, 15:00 au 27.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">La restrizione durerà dal 27.08.2022, 15:00 al 27.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort.</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site.</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place.</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco.</Remark>
-									</RemarkContent>
-								</TextualContent>
-							</PassengerInformationAction>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2022-08-28T13:00:00Z</StartTime>
-									<EndTime>2022-08-28T21:59:00Z</EndTime>
-								</PublicationWindow>
-								<ActionRef>ems-696-8</ActionRef>
-								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-								<OwnerRef>ch:1:sboid:100626</OwnerRef>
-								<Perspective>atStopPoint</Perspective>
-								<Perspective>onBoardVehicle</Perspective>
-								<TextualContent>
-									<TextualContentSize>S</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-										<SummaryText xml:lang="FR">Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo: manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Dauer: 28.08.2022, 15:00 - 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">Duration: 28.08.2022, 15:00 - 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">Durée: 28.08.2022, 15:00 - 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">Durata: 28.08.2022, 15:00 - 28.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>M</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben</SummaryText>
-										<SummaryText xml:lang="EN">Pratteln, Bahnhof stop moved</SummaryText>
-										<SummaryText xml:lang="FR">Arrêt Pratteln, Bahnhof déplacé</SummaryText>
-										<SummaryText xml:lang="IT">Fermata Pratteln, Bahnhof spostata</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Grund ist eine Veranstaltung (ESAF)</ReasonText>
-										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-										<ReasonText xml:lang="FR">Cause: manifestation (ESAF)</ReasonText>
-										<ReasonText xml:lang="IT">Motivo è una manifestazione (ESAF)</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Einschränkungsdauer: 28.08.2022, 15:00 - 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">Duration of the restriction: 28.08.2022, 15:00 - 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">Durée de la perturbation: 28.08.2022, 15:00 - 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">Durata della restrizione: 28.08.2022, 15:00 - 28.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco</Remark>
-									</RemarkContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>L</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">Die Haltestelle Pratteln, Bahnhof ist verschoben.</SummaryText>
-										<SummaryText xml:lang="EN">The Pratteln, Bahnhof stop has been moved.</SummaryText>
-										<SummaryText xml:lang="FR">L’arrêt Pratteln, Bahnhof est déplacé.</SummaryText>
-										<SummaryText xml:lang="IT">La fermata Pratteln, Bahnhof è stata spostata.</SummaryText>
-									</SummaryContent>
-									<ReasonContent>
-										<ReasonText xml:lang="DE">Der Grund dafür ist eine Veranstaltung (ESAF).</ReasonText>
-										<ReasonText xml:lang="EN">This ist due to an event (ESAF).</ReasonText>
-										<ReasonText xml:lang="FR">Une manifestation en est la cause (ESAF).</ReasonText>
-										<ReasonText xml:lang="IT">Il motivo è una manifestazione (ESAF).</ReasonText>
-									</ReasonContent>
-									<ConsequenceContent>
-										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="FR">L'arrêt de bus a été déplacé dans la Wasenstrasse.</ConsequenceText>
-										<ConsequenceText xml:lang="IT">La fermata dell'autobus è stata spostata in Wasenstrasse.</ConsequenceText>
-									</ConsequenceContent>
-									<RecommendationContent>
-										<RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen.</RecommendationText>
-										<RecommendationText xml:lang="EN">Please follow the signs to access the platforms.</RecommendationText>
-										<RecommendationText xml:lang="FR">Veuillez suivre les panneaux pour accéder aux quais.</RecommendationText>
-										<RecommendationText xml:lang="IT">Si prega di seguire le indicazioni per accedere alle piattaforme.</RecommendationText>
-									</RecommendationContent>
-									<DurationContent>
-										<DurationText xml:lang="DE">Die Einschränkung dauert vom 28.08.2022, 15:00 bis 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="EN">The restriction lasts from 28.08.2022, 15:00 until 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="FR">La perturbation dure du 28.08.2022, 15:00 au 28.08.2022, 23:59</DurationText>
-										<DurationText xml:lang="IT">La restrizione durerà dal 28.08.2022, 15:00 al 28.08.2022, 23:59</DurationText>
-									</DurationContent>
-									<RemarkContent>
-										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort.</Remark>
-										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site.</Remark>
-										<Remark xml:lang="FR">Si vous avez des questions, veuillez contacter le personnel d'information sur place.</Remark>
-										<Remark xml:lang="IT">In caso di domande, si prega di contattare il personale informativo in loco.</Remark>
-									</RemarkContent>
-								</TextualContent>
-							</PassengerInformationAction>
-						</PublishingAction>
-					</PublishingActions>
-				</PtSituationElement>
-			</Situations>
-		</SituationExchangeDelivery>
-	</ServiceDelivery>
+<?xml version="1.0" encoding="utf-8"?>
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+  <ServiceDelivery>
+    <ResponseTimestamp>2022-04-14T09:17:32Z</ResponseTimestamp>
+    <ProducerRef>ski-ems-out-sx_tesst</ProducerRef>
+    <ResponseMessageIdentifier>wcP9TgJhf</ResponseMessageIdentifier>
+    <Status>true</Status>
+    <MoreData>false</MoreData>
+    <SituationExchangeDelivery version="2.3">
+      <ResponseTimestamp>2022-04-14T09:17:32Z</ResponseTimestamp>
+      <SubscriberRef>ski-ddip-in-sx_test</SubscriberRef>
+      <SubscriptionRef>1</SubscriptionRef>
+      <Situations>
+        <PtSituationElement>
+          <CreationTime>2022-04-14T09:17:23Z</CreationTime>
+          <CountryRef>ch</CountryRef>
+          <ParticipantRef>ski-ems-out-sx_test</ParticipantRef>
+          <SituationNumber>ch:1:sstid:1:3ac880a2-aeb1-5757-989d-d3c15c8220c6</SituationNumber>
+          <Version>1</Version>
+          <Source>
+            <CountryRef>ch</CountryRef>
+            <SourceType>directReport</SourceType>
+            <Name>EMS</Name>
+            <ExternalCode>ski-ems-out-sx_test</ExternalCode>
+          </Source>
+          <VersionedAtTime>2022-04-14T09:17:26Z</VersionedAtTime>
+          <Progress>published</Progress>
+          <ValidityPeriod>
+            <StartTime>2022-08-26T04:00:00Z</StartTime>
+            <EndTime>2022-08-26T21:00:00Z</EndTime>
+          </ValidityPeriod>
+          <PublicationWindow>
+            <StartTime>2022-04-14T09:17:23Z</StartTime>
+            <EndTime>2022-08-26T21:59:00Z</EndTime>
+          </PublicationWindow>
+          <AlertCause>specialEvent</AlertCause>
+          <Severity>normal</Severity>
+          <Priority>3</Priority>
+          <Planned>true</Planned>
+          <Audience>public</Audience>
+          <ScopeType>stopPlace</ScopeType>
+          <Language>DE</Language>
+          <Summary xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben.</Summary>
+          <Summary xml:lang="EN">Pratteln, Bahnhof stop moved.</Summary>
+          <Detail xml:lang="DE">Grund ist eine Veranstaltung.</Detail>
+          <Detail xml:lang="EN">Due to an event.</Detail>
+          <Affects>
+            <StopPlaces>
+              <AffectedStopPlace>
+                <StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
+                <PlaceName>Pratteln, Bahnhof</PlaceName>
+              </AffectedStopPlace>
+            </StopPlaces>
+          </Affects>
+          <PublishingActions>
+            <PublishingAction>
+              <PublishAtScope>
+                <ScopeType>stopPlace</ScopeType>
+                <Affects>
+                  <StopPlaces>
+                    <AffectedStopPlace>
+                      <StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
+                      <PlaceName>Pratteln, Bahnhof</PlaceName>
+                    </AffectedStopPlace>
+                  </StopPlaces>
+                </Affects>
+              </PublishAtScope>
+              <PassengerInformationAction>
+                <PublicationWindow>
+                  <StartTime>2022-04-14T09:17:23Z</StartTime>
+                  <EndTime>2022-08-26T21:59:00Z</EndTime>
+                </PublicationWindow>
+                <ActionRef>ems-696-1</ActionRef>
+                <ValidityPeriod>
+                  <StartTime>2022-08-26T04:00:00Z</StartTime>
+                  <EndTime>2022-08-26T12:00:00Z</EndTime>
+                </ValidityPeriod>
+                <RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
+                <OwnerRef>ch:1:sboid:100626</OwnerRef>
+                <Perspective>whilePlanningTrip</Perspective>
+                <TextualContent>
+                  <TextualContentSize>S</TextualContentSize>
+                  <SummaryContent>
+                    <SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
+                    <SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
+                  </SummaryContent>
+                  <ReasonContent>
+                    <ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
+                    <ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
+                  </ReasonContent>
+                  <ConsequenceContent>
+                    <ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
+                    <ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
+                  </ConsequenceContent>
+                  <RecommendationContent>
+                    <RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
+                    <RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
+                  </RecommendationContent>
+                  <DurationContent>
+                    <DurationText xml:lang="DE">Dauer: 26.08.2022, 06:00 - 26.08.2022, 14:00</DurationText>
+                    <DurationText xml:lang="EN">Duration: 26.08.2022, 06:00 - 26.08.2022, 14:00</DurationText>
+                  </DurationContent>
+                  <RemarkContent>
+                    <Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
+                    <Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
+                  </RemarkContent>
+                </TextualContent>
+              </PassengerInformationAction>
+              <PassengerInformationAction>
+                <PublicationWindow>
+                  <StartTime>2022-04-14T09:17:26Z</StartTime>
+                  <EndTime>2022-08-28T21:59:00Z</EndTime>
+                </PublicationWindow>
+                <ActionRef>ems-696-2</ActionRef>
+                <ValidityPeriod>
+                  <StartTime>2022-08-26T13:00:00Z</StartTime>
+                  <EndTime>2022-08-26T21:00:00Z</EndTime>
+                </ValidityPeriod>
+                <RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
+                <OwnerRef>ch:1:sboid:100626</OwnerRef>
+                <Perspective>whilePlanningTrip</Perspective>
+                <TextualContent>
+                  <TextualContentSize>S</TextualContentSize>
+                  <SummaryContent>
+                    <SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
+                    <SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
+                  </SummaryContent>
+                  <ReasonContent>
+                    <ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
+                    <ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
+                  </ReasonContent>
+                  <ConsequenceContent>
+                    <ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
+                    <ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
+                  </ConsequenceContent>
+                  <RecommendationContent>
+                    <RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
+                    <RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
+                  </RecommendationContent>
+                  <DurationContent>
+                    <DurationText xml:lang="DE">Dauer: 26.08.2022, 15:00 - 26.08.2022, 23:00</DurationText>
+                    <DurationText xml:lang="EN">Duration: 26.08.2022, 15:00 - 26.08.2022, 23:00</DurationText>
+                  </DurationContent>
+                  <RemarkContent>
+                    <Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
+                    <Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
+                  </RemarkContent>
+                </TextualContent>
+              </PassengerInformationAction>
+              <PassengerInformationAction>
+                <PublicationWindow>
+                  <StartTime>2022-08-26T02:00:00Z</StartTime>
+                  <EndTime>2022-08-26T12:00:00Z</EndTime>
+                </PublicationWindow>
+                <ActionRef>ems-696-3</ActionRef>
+                <RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
+                <OwnerRef>ch:1:sboid:100626</OwnerRef>
+                <Perspective>atStopPoint</Perspective>
+                <Perspective>onBoardVehicle</Perspective>
+                <TextualContent>
+                  <TextualContentSize>S</TextualContentSize>
+                  <SummaryContent>
+                    <SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
+                    <SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
+                  </SummaryContent>
+                  <ReasonContent>
+                    <ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
+                    <ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
+                  </ReasonContent>
+                  <ConsequenceContent>
+                    <ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
+                    <ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
+                  </ConsequenceContent>
+                  <RecommendationContent>
+                    <RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
+                    <RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
+                  </RecommendationContent>
+                  <DurationContent>
+                    <DurationText xml:lang="DE">Dauer: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
+                    <DurationText xml:lang="EN">Duration: 26.08.2022, 04:00 - 26.08.2022, 14:00</DurationText>
+                  </DurationContent>
+                  <RemarkContent>
+                    <Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
+                    <Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
+                  </RemarkContent>
+                </TextualContent>
+              </PassengerInformationAction>
+              <PassengerInformationAction>
+                <PublicationWindow>
+                  <StartTime>2022-08-26T13:00:00Z</StartTime>
+                  <EndTime>2022-08-26T21:59:00Z</EndTime>
+                </PublicationWindow>
+                <ActionRef>ems-696-6</ActionRef>
+                <RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
+                <OwnerRef>ch:1:sboid:100626</OwnerRef>
+                <Perspective>atStopPoint</Perspective>
+                <Perspective>onBoardVehicle</Perspective>
+                <TextualContent>
+                  <TextualContentSize>S</TextualContentSize>
+                  <SummaryContent>
+                    <SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
+                    <SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
+                  </SummaryContent>
+                  <ReasonContent>
+                    <ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
+                    <ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
+                  </ReasonContent>
+                  <ConsequenceContent>
+                    <ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben an die Wasenstrasse</ConsequenceText>
+                    <ConsequenceText xml:lang="EN">The bus stop has been moved to Wasenstrasse</ConsequenceText>
+                  </ConsequenceContent>
+                  <RecommendationContent>
+                    <RecommendationText xml:lang="DE">Bitte folgen Sie der Signalisation für den Zugang zu den Gleisen</RecommendationText>
+                    <RecommendationText xml:lang="EN">Please follow the signs to access the platforms</RecommendationText>
+                  </RecommendationContent>
+                  <DurationContent>
+                    <DurationText xml:lang="DE">Dauer: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
+                    <DurationText xml:lang="EN">Duration: 26.08.2022, 15:00 - 26.08.2022, 23:59</DurationText>
+                  </DurationContent>
+                  <RemarkContent>
+                    <Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
+                    <Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
+                  </RemarkContent>
+                </TextualContent>
+              </PassengerInformationAction>
+            </PublishingAction>
+          </PublishingActions>
+        </PtSituationElement>
+      </Situations>
+    </SituationExchangeDelivery>
+  </ServiceDelivery>
 </Siri>
