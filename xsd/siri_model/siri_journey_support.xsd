@@ -517,6 +517,7 @@ Has the following uses:
 			<xsd:enumeration value="noBoarding"/>
 			<xsd:enumeration value="noAlighting"/>
 			<xsd:enumeration value="passThru"/>
+			<xsd:enumeration value="JourneyRelationRestricted"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="ArrivalBoardingActivityEnumeration">
@@ -527,6 +528,7 @@ Has the following uses:
 			<xsd:enumeration value="alighting"/>
 			<xsd:enumeration value="noAlighting"/>
 			<xsd:enumeration value="passThru"/>
+			<xsd:enumeration value="JourneyRelationRestricted"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="DepartureBoardingActivityEnumeration">
@@ -537,6 +539,7 @@ Has the following uses:
 			<xsd:enumeration value="boarding"/>
 			<xsd:enumeration value="noBoarding"/>
 			<xsd:enumeration value="passThru"/>
+			<xsd:enumeration value="JourneyRelationRestricted"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!-- ======================================================================= -->
