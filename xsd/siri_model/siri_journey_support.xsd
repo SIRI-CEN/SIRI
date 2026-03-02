@@ -528,7 +528,11 @@ Has the following uses:
 			<xsd:enumeration value="alighting"/>
 			<xsd:enumeration value="noAlighting"/>
 			<xsd:enumeration value="passThru"/>
-			<xsd:enumeration value="JourneyRelationRestricted"/>
+			<xsd:enumeration value="journeyRelationRestricted">
+                <xsd:annotation>
+					<xsd:documentation>summarized use case description from basecamp</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="DepartureBoardingActivityEnumeration">
