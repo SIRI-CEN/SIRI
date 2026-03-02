@@ -517,7 +517,7 @@ Has the following uses:
 			<xsd:enumeration value="noBoarding"/>
 			<xsd:enumeration value="noAlighting"/>
 			<xsd:enumeration value="passThru"/>
-			<xsd:enumeration value="JourneyRelationRestricted"/>
+			<xsd:enumeration value="journeyRelationRestricted"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="ArrivalBoardingActivityEnumeration">
