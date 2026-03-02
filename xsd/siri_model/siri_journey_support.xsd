@@ -517,7 +517,11 @@ Has the following uses:
 			<xsd:enumeration value="noBoarding"/>
 			<xsd:enumeration value="noAlighting"/>
 			<xsd:enumeration value="passThru"/>
-			<xsd:enumeration value="journeyRelationRestricted"/>
+			<xsd:enumeration value="journeyRelationRestricted">
+				 <xsd:annotation>
+					<xsd:documentation>Restricts boarding or alighting so that it is only permitted when the passenger is interchanging from/to a journey explicitly referenced in a JourneyRelation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="ArrivalBoardingActivityEnumeration">
@@ -530,7 +534,7 @@ Has the following uses:
 			<xsd:enumeration value="passThru"/>
 			<xsd:enumeration value="journeyRelationRestricted">
                 <xsd:annotation>
-					<xsd:documentation>summarized use case description from basecamp</xsd:documentation>
+					<xsd:documentation>Restricts alighting so that it is only permitted when the passenger is interchanging to a journey explicitly referenced in a JourneyRelation.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
@@ -543,7 +547,11 @@ Has the following uses:
 			<xsd:enumeration value="boarding"/>
 			<xsd:enumeration value="noBoarding"/>
 			<xsd:enumeration value="passThru"/>
-			<xsd:enumeration value="journeyRelationRestricted"/>
+			<xsd:enumeration value="journeyRelationRestricted">
+				 <xsd:annotation>
+					<xsd:documentation>Restricts boarding so that it is only permitted when the passenger is interchanging from a journey explicitly referenced in a JourneyRelation.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!-- ======================================================================= -->
