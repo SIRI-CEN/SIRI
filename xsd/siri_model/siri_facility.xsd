@@ -85,6 +85,7 @@ Rail transport, Roads and road transport
 	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
 	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
 	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
 	<!-- ======================================================================= -->
 	<!-- Facilities related elements =============================================================== -->
@@ -92,7 +93,7 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a Faclility.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<xsd:element name="FacilityRef" type="FacilityRefStructure">
 		<xsd:annotation>
@@ -404,6 +405,11 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Group of Facility accessibility elements.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:group>
+			<xsd:element name="Location" type="LocationStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Coordinates of the facility.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:group ref="ServiceInfoGroup"/>
 		</xsd:sequence>
 	</xsd:complexType>

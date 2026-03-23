@@ -140,7 +140,7 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a VEHICLE JOURNEY.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<xsd:complexType name="VehicleJourneyRefStructure">
 		<xsd:annotation>
@@ -159,7 +159,7 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a Dated VEHICLE JOURNEY.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<xsd:complexType name="DatedVehicleJourneyRefStructure">
 		<xsd:annotation>
@@ -178,7 +178,7 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a Realtime VEHICLE JOURNEY. Used for adhoc journeys.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<xsd:complexType name="DatedVehicleJourneyIndirectRefStructure">
 		<xsd:annotation>

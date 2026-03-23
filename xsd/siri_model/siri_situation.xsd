@@ -621,7 +621,7 @@ Rail transport, Roads and road transport
 			</xsd:element>
 			<xsd:element name="Publication" type="PublicationStatusType" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Publishing status one of a specified set of substates to which a SITUATION can be assigned.</xsd:documentation>
+					<xsd:documentation>DEPRECATED - Use the element Progress instead, which provides an enumeration of possible values detailed in WorkflowStatusEnumeration. Publishing status one of a specified set of substates to which a SITUATION can be assigned. -v2.1</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -642,7 +642,7 @@ Rail transport, Roads and road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="PublicationStatusType">
 		<xsd:annotation>
-			<xsd:documentation>Type for Publication status.</xsd:documentation>
+			<xsd:documentation>DEPRECATED - Type for Publication status. -v2.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN"/>
 	</xsd:simpleType>
@@ -713,7 +713,7 @@ Rail transport, Roads and road transport
 			</xsd:element>
 			<xsd:element name="Keywords" type="xsd:NMTOKENS" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Arbitrary application specific classifiers.</xsd:documentation>
+					<xsd:documentation>A whitespace-separated list of arbitrary application specific classifiers, tags or message categories for filtering or display, for example as icons on a situation map. Can be overwritten in an individual action.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="SecondaryReasons" minOccurs="0">
@@ -935,7 +935,7 @@ Note that if the ControlAction is the master ControlAction of a GroupOfControlAc
 					<xsd:choice>
 						<xsd:element name="AllOperators" type="EmptyType">
 							<xsd:annotation>
-								<xsd:documentation>All OPERATORs.</xsd:documentation>
+								<xsd:documentation>All OPERATORs. DEPRECATED since SIRI 2.1</xsd:documentation>
 							</xsd:annotation>
 						</xsd:element>
 						<xsd:element name="AffectedOperator" type="AffectedOperatorStructure" maxOccurs="unbounded">
@@ -1298,6 +1298,11 @@ Note that if the ControlAction is the master ControlAction of a GroupOfControlAc
 			<xsd:element name="Easements" type="EasementsStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Description of fare exceptions allowed because of disruption.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="UpdatedServiceLinks" type="ServiceLinkViewsStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>List of SERVICE LINKs having updated shapes in that journey. This is only to provide updated the shapes of the journey (as gml:linestring), not to provide additional SERVICE LINK (provided through the sequence of CALLS)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="Extensions" minOccurs="0"/>
