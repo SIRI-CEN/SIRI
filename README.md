@@ -73,7 +73,7 @@ Embeds SIRI:
 - RequestGroup and ResponseGroup
 
 2. **siri_all_functionalServices.xsd**
-Embeds all of SIRI functional services with direct links with the XML Schema of each SIRI service ().
+Embeds all of SIRI functional services with direct links with the XML Schema of each SIRI service (General Message, Estimated Timetable, Stop Monitoring, Situation Exchange, Control Action, etc.).
 
 ### How to navigate the schemas
 
@@ -95,7 +95,7 @@ The XML examples are sorted by SIRI Service. In each service folder, you will ha
 
 Either for a modelling question or a request for change, please start a discussion using the [GitHub issues](https://github.com/SIRI-CEN/SIRI/issues). 
 In your issue, make sure that:
-- The title is a clear summary of your question / requst for change,
+- The title is a clear summary of your question / request for change,
 - The content sufficiently details:
    - The context,
    - The elements / features you want to discuss,
