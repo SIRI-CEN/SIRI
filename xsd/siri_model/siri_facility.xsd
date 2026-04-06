@@ -85,6 +85,7 @@ Rail transport, Roads and road transport
 	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
 	<!-- ======================================================================= -->
+	<xsd:include schemaLocation="../siri_utility/siri_types.xsd"/>
 	<xsd:include schemaLocation="../siri_utility/siri_utility.xsd"/>
 	<!-- ======================================================================= -->
 	<!-- Facilities related elements =============================================================== -->
@@ -92,7 +93,7 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a Faclility.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<xsd:element name="FacilityRef" type="FacilityRefStructure">
 		<xsd:annotation>
@@ -742,6 +743,13 @@ Rail transport, Roads and road transport
 				<xsd:element ref="FacilityChangeElement" minOccurs="0"/>
 				<xsd:element ref="SituationRef" minOccurs="0" maxOccurs="unbounded"/>
 			</xsd:sequence>
+			<xsd:element name="ControlActionRef" type="ControlActionRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Reference to a ControlAction having possible consequences on the EstimatedVehicleJourney.
+Note that if the ControlAction is the master ControlAction of a GroupOfControlActions it is assumed that the refence is valid for all the ControlActions of the group.
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ===Vehicle FACILITY====================================== -->

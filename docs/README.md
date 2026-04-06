@@ -1,36 +1,37 @@
+# SIRI (Service interface for real-time information relating to public transport operations) XML schema
+**(C) 2006-2025 NeTEx, CEN, Crown Copyright**
 
-# Generating OJP Documentation
+## Schemas for:
 
-This document describes the generation of documentation for the OJP XML schemas. There are two goals:
+- Core
+- Part 1 (Context and Framework) 
+- Part 2 (Communications)
+- Part 3 (Functional Service Interfaces: Production Timetable, Estimated Timetable, Stop Monitoring, Vehicle Monitoring, Connection Monitoring, General Message)
+- Part 4 (Functional Service Interfaces: Facility Monitoring)
+- Part 5 (Functional Service Interfaces: Situation Exchange)
+- Part 6 (Functional Service Interfaces: Control Actions)
 
-* Generate plain HTML documentation with a table of contents for reference purposes.
-* Provide the HTML documentation in a format so it can be easily integrated into the associated CEN standards document which is maintained as an MS Word file.
+## Overview
 
-## Prerequisites
+SIRI is a European standard and that enables real-time information about public transportation to be shared between different computer systems. 
+SIRI was established as European standard in October 2006. It is a CEN (Comité Européen de Normalisation) norm and Technical Specification.
 
-The documentation generation process requires an XSLT 1.0 processor like [Apache Xalan-J](http://xalan.apache.org/xalan-j/index.html) or (xsltproc](http://xmlsoft.org/XSLT/).
+## Folder structure 📁
 
-On Linux, install xsltproc running `apt-get install xsltproc` (or the required equivalent in non-Debian based distributions).
+In each branch, we have:
+- The folder `xsd` in which all the XML schemas can be found
+- The folder `examples` in which all examples can be found
+- At the root folder, `Siri.spp` which is the project for XMLSpy and `Siri.xpr` for Oxygen
 
-For Windows, you'll find Windows binaries for xsltproc at http://xmlsoft.org/XSLT/.
+## Branches  🌿
+|**Branch**|**Description**|**Link**|
+|----------|---------------|--------|
+|v2.3|All the upcoming work that goes with the revision of SIRI, matching the next round of CEN documentation|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/2.3)|
+|v2.2|The latest version of the XML Schema that matches the CEN documentation|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/2.2)|
+|v2.1|The previous version of the XML Schema that matches the CEN documentation (without the Control Actions)|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/2.1)|
 
-## Generation of HTML documentation
+## How to contribute
 
-### Instructions
-
-On Linux and with the above prerequisites at hand, you can run `generate-tables.sh` to convert the XML schemas into a single HTML file [`index.html`](generated/index.html) in the `generated` subdirectory.
-
-The generated HTML file requires the file `asciidoc.css` to be in the same directory. The above script makes sure it's there.
-
-On Windows, please refer to the `generate-tables.sh` to figure out the necessary program invocations for your XSLT processor of choice.
-
-### Inner workings
-
-`generate-tables.sh` runs `xsltproc` twice. First the file `schema-collection.xml` is run against `ojp-to-prepdoc.xsl`. This combines all references XSD files to a single intermediate XML files which maps all information into a simplified structure that will make it easier in the second step to generate the final HTML documentation.
-
-Once, you have the intermediate XML file (`generated/OJP-prep.xml`), you can run that against the `ojp-prep-to-html-with-toc.xsl` stylesheet. This will generate the final `index.html` (HTML with table of contents). Alternatively, if you don't want the table of contents, you can use the stylesheet `ojp-prep-to-html.xsl`.
-
-## XML Schema Convention Check
-
-There is an additional XSLT stylesheet `check-ojp-schemas.xsl` (invoked by `check-ojp-schemas.sh`) that can be used to check whether certain conventions for the design
-of the XML schemas for OJP have been violated.
+When you want to suggest a change to SIRI XSD, please target:
+- Master for any bug fixes or typos
+- Integration for any functional changes

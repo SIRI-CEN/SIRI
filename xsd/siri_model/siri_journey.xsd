@@ -132,6 +132,8 @@ Rail transport, Roads and road transport
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
 	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
+	<!-- For GML (GIS features) -->
+	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gml_extract_all_objects.xsd"/>
 	<!-- ==== VEHICLEJOURNEY ================================================================== -->
 	<xsd:group name="JourneyInfoGroup">
 		<xsd:annotation>
@@ -191,17 +193,17 @@ Rail transport, Roads and road transport
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element ref="OriginRef" minOccurs="0"/>
-			<xsd:element name="OriginName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="OriginName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Name of the origin of the journey.  (Unbounded since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="OriginShortName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="OriginShortName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Short name of the origin of the journey; used to help identify the VEHICLE JOURNEY on arrival boards. If absent, same as Origin Name.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="DestinationDisplayAtOrigin" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>DIRECTION name shown for jurney at the origin. (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
@@ -221,12 +223,12 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Description of the destination stop (vehicle signage), Can be overwritten for a journey, and then also section by section by the entry in an individual CALl.  (Unbounded since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="DestinationShortName" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="DestinationShortName" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Short name of the DESTINATION.of the journey; used to help identify the VEHICLE JOURNEY on arrival boards. If absent, same as DestinationName.  (Unbounded since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="OriginDisplayAtDestination" type="NaturalLanguagePlaceNameStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="OriginDisplayAtDestination" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Origin name shown for jourey at the destination (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
@@ -1907,5 +1909,40 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ======================================================================================================== -->
+	<!-- Service Links ======================================================================= -->
+		<xsd:complexType name="ServiceLinkViewsStructure">
+		<xsd:annotation>
+			<xsd:documentation>Provides information about updated SERVICE LINKs</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ServiceLinkView" type="ServiceLinkViewStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ServiceLinkViewStructure">
+		<xsd:annotation>
+			<xsd:documentation>Simplified description of an update of a SERVICE LINK, in order to provide an updated schematic shape (not ROUTE POINTs) in case of rerouting. Only updated ServiceLink are expected to be provided here, the scheduled one being provided by a NeTEx feed. The SERVICE JOURNEY itself is knonw from hte context</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FromStopPointRef" type="StopPointRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related SERVICE LINK begins.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ToStopPointRef" type="StopPointRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related SERVICE LINK ends.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Distance" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Length of LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="gml:LineString" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The shape (LineString) is mandatory in order to be consistent with the use case, which is to update the shape</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
 </xsd:schema>

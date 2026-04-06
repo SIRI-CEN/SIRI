@@ -132,7 +132,7 @@ Rail transport, Roads and road transport
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a SCHEDULED STOP POINT.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<xsd:complexType name="StopPointRefStructure">
 		<xsd:annotation>
@@ -538,7 +538,7 @@ Values for these elements can be specified on an annual schedule and will be inh
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a LINE</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<xsd:element name="LineRef" type="LineRefStructure">
 		<xsd:annotation>
@@ -638,14 +638,14 @@ Values for these elements can be specified on an annual schedule and will be inh
 		<xsd:annotation>
 			<xsd:documentation>Type for identifier of a DESTINATION.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:NMTOKEN"/>
+		<xsd:restriction base="IdType"/>
 	</xsd:simpleType>
 	<xsd:complexType name="JourneyPlaceRefStructure">
 		<xsd:annotation>
 			<xsd:documentation>Reference to a PLACE visited by a VEHICLE JOURNEY.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
-			<xsd:extension base="xsd:NMTOKEN"/>
+			<xsd:extension base="IdType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:complexType name="PlaceNameStructure">
@@ -851,4 +851,25 @@ Values for these elements can be specified on an annual schedule and will be inh
 			<xsd:documentation>Reference to a SITE</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
+	<!-- ======================================================================= -->
+	<!-- References to CONTROL ACTIONS ========================================= -->
+	<xsd:element name="ControlActionRef" type="ControlActionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a ControlAction associated with the element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="ControlActionCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a CONTROL ACTION</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="ControlActionRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a ControlAction.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="ControlActionCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 </xsd:schema>

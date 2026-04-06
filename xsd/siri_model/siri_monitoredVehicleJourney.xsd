@@ -200,7 +200,7 @@ MonitoringError must not be used if Monitored is omitted or set to 'true'.</xsd:
 			</xsd:element>
 			<xsd:element name="Velocity" type="VelocityType" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Velocity of VEHICLE. EIther actual speed or average speed may be used. (since SIRI 2.0)</xsd:documentation>
+					<xsd:documentation>Velocity of VEHICLE. Either actual speed or average speed may be used. (since SIRI 2.0)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="EngineOn" type="xsd:boolean" default="true" minOccurs="0">
