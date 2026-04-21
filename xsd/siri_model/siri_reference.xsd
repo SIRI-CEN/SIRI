@@ -868,4 +868,25 @@ Values for these elements can be specified on an annual schedule and will be inh
 			<xsd:extension base="ControlActionCodeType"/>
 		</xsd:simpleContent>
 	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<!-- References to PT CONSEQUENCE ========================================= -->
+	<xsd:element name="ConsequenceRef" type="ConsequenceRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a Consequence associated with the element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="ConsequenceCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of a PT CONSEQUENCE</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN"/>
+	</xsd:simpleType>
+	<xsd:complexType name="ConsequenceRefStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for reference to a PT CONSEQUENCE.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="ConsequenceCodeType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
 </xsd:schema>
