@@ -132,6 +132,8 @@ Rail transport, Roads and road transport
 	<xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_allStopPlace.xsd"/>
 	<!-- Global import of all ACSB namespace elements used in SIRI needed to work around JAXB/XERCES/xmllint limitations -->
 	<xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_all.xsd"/>
+	<!-- For GML (GIS features) -->
+	<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/gml_extract_all_objects.xsd"/>
 	<!-- ==== VEHICLEJOURNEY ================================================================== -->
 	<xsd:group name="JourneyInfoGroup">
 		<xsd:annotation>
@@ -1907,5 +1909,40 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ======================================================================================================== -->
+	<!-- Service Links ======================================================================= -->
+		<xsd:complexType name="ServiceLinkViewsStructure">
+		<xsd:annotation>
+			<xsd:documentation>Provides information about updated SERVICE LINKs</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ServiceLinkView" type="ServiceLinkViewStructure" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ServiceLinkViewStructure">
+		<xsd:annotation>
+			<xsd:documentation>Simplified description of an update of a SERVICE LINK, in order to provide an updated schematic shape (not ROUTE POINTs) in case of rerouting. Only updated ServiceLink are expected to be provided here, the scheduled one being provided by a NeTEx feed. The SERVICE JOURNEY itself is knonw from hte context</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FromStopPointRef" type="StopPointRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related SERVICE LINK begins.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ToStopPointRef" type="StopPointRefStructure">
+				<xsd:annotation>
+					<xsd:documentation>Reference to the SCHEDULED STOP POINT at which the related SERVICE LINK ends.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Distance" type="LengthType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Length of LINK.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="gml:LineString" minOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>The shape (LineString) is mandatory in order to be consistent with the use case, which is to update the shape</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
 </xsd:schema>
