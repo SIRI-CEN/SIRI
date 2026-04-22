@@ -262,6 +262,7 @@ Rail transport, Roads and road transport
 			<xsd:element ref="PublishToTvAction" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="PublishToAlertsAction" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="PublishToDisplayAction" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PublishToAudioAction" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="ManualAction" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="NotifyByEmailAction" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="NotifyBySmsAction" minOccurs="0" maxOccurs="unbounded"/>
@@ -403,6 +404,27 @@ Rail transport, Roads and road transport
 					<xsd:element name="Teletext" type="xsd:boolean" default="true" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>Publish to Teletext. Default is 'true'.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="PublishToAudioAction" type="PublishToAudioActionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Action: Publish SITUATION via Audio messages.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="PublishToAudioActionStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for Action Publish SITUATION via Audio messages.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ParameterisedActionStructure">
+				<xsd:sequence>
+					<xsd:element name="Url" type="xsd:anyURI" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Url for the pre-recorded message</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
