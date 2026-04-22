@@ -424,7 +424,13 @@ Rail transport, Roads and road transport
 				<xsd:sequence>
 					<xsd:element name="Url" type="xsd:anyURI" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Url for the pre-recorded message</xsd:documentation>
+							<xsd:documentation>Url for the pre-recorded message. If there is no language attribute specified, there is the assumption that the language is multilingual. Producers must change the URL whenever they want a different message to be broadcasted (i.e., situation has changed).</xsd:documentation>
+						</xsd:annotation>
+						<xsd:attribute name="lang" type="xsd:language" use="optional" />
+					</xsd:element>
+					<xsd:element >
+						<xsd:annotation>
+							<xsd:documentation></xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
