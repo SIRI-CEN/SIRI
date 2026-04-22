@@ -273,7 +273,7 @@ Rail transport, Roads and road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="mobilityImpairedAccessLimited">
 				<xsd:annotation>
-					<xsd:documentation>Access is limited for mobility impaired passengers. The value should correspond the the overall summary of the AccessibilityAssessment of the StopPoint, when known. +v2.3</xsd:documentation>
+					<xsd:documentation>Access is limited for mobility impaired passengers. The value should correspond to the overall summary of the AccessibilityAssessment of the StopPoint, when known. +v2.3</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="undefinedStatus">
