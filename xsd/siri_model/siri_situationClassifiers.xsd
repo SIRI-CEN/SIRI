@@ -271,6 +271,11 @@ Rail transport, Roads and road transport
 					<xsd:documentation>TPEG Pts43_27, temporary stopplace</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="mobilityImpairedAccessLimited">
+				<xsd:annotation>
+					<xsd:documentation>Access is limited for mobility impaired passengers. The value should correspond to the overall summary of the AccessibilityAssessment of the StopPoint, when known. +v2.3</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="undefinedStatus">
 				<xsd:annotation>
 					<xsd:documentation>TPEG Pts43_255, undefined status</xsd:documentation>
