@@ -49228,7 +49228,7 @@
                     <p class="tableblock"/>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock anno-text">Elemenst for authecticiation. (since SIRI 2.0)</p>
+                    <p class="tableblock anno-text">Elements for authentication. (since SIRI 2.0)</p>
                   </td>
                 </tr>
                 <tr>
@@ -76522,7 +76522,7 @@
                   <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
                     <p class="tableblock">
                       <code>
-                        <strong>siri:DiverScope</strong>
+                        <strong>siri:DriverScope</strong>
                       </code>
                     </p>
                   </td>
@@ -83684,7 +83684,7 @@
           </div>
         </div>
         <div class="sect2" id="local-type.typedef-78.17">
-          <h3>9.123. The complex type <code>complexType[siri:DriverMessageStructure]/DiverScope#complexType (typedef-78.17)</code>
+          <h3>9.123. The complex type <code>complexType[siri:DriverMessageStructure]/DriverScope#complexType (typedef-78.17)</code>
           </h3>
           <div class="sectionbody">
             <table class="tableblock frame-all grid-all spread">
@@ -83702,7 +83702,7 @@
                     <p class="tableblock">
                       <code>complexType[siri:DriverMessageStructure]</code>
                       <br/>
-                      <code>  /DiverScope #complexType</code>
+                      <code>  /DriverScope #complexType</code>
                       <br/>
                       <code>  (typedef-78.17)</code>
                     </p>
@@ -197982,7 +197982,7 @@
                   </td>
                   <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
                     <p class="tableblock">
-                      <code>siri:ActionPeriod</code>
+                      <code>siri:Period</code>
                     </p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
@@ -197997,7 +197997,7 @@
                     </p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">Period of effect of disruption, if different from that of SITUATION, specifically in case of multiple applicable periods (for example periodic roadworks during the night). If omitted, then the ValidityPeriods on PtSituationElement level apply, otherwise overwrites the former.</p>
+                    <p class="tableblock darkbrown">Period restricts the applicability of a PassengerInformationAction to a specific sub-range of the enclosing ValidityPeriod on PtSituationElement level. In particular when using the Perspective 'whilePlanningTrip', a single ValidityPeriod at PtSituationElement level may be insufficient to ensure correct selection of the actually affected journeys in a journey planning context. This applies whenever a PassengerInformationAction is intended to be effective only during certain parts of the overall SITUATION duration or validity (e.g. time-of-day–dependent passenger information). Period SHALL ONLY be used when a single ValidityPeriod is insufficient to differentiate the applicability of multiple actions. Period MUST always be a strict subset of the enclosing ValidityPeriod and MUST NOT start earlier or end later. For PassengerInformationActions with Perspective 'atStopPoint' and/or 'onBoardVehicle', Period has no meaning and SHALL NOT be used. If omitted, then the ValidityPeriods on PtSituationElement level apply.</p>
                   </td>
                 </tr>
                 <tr>

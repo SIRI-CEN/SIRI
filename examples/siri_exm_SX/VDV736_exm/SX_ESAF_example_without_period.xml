@@ -1,150 +1,150 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
-  <ServiceDelivery>
-    <ResponseTimestamp>2022-04-14T09:17:32Z</ResponseTimestamp>
-    <ProducerRef>ski-ems-out-sx_tesst</ProducerRef>
-    <ResponseMessageIdentifier>wcP9TgJhf</ResponseMessageIdentifier>
-    <Status>true</Status>
-    <MoreData>false</MoreData>
-    <SituationExchangeDelivery version="2.3">
-      <ResponseTimestamp>2022-04-14T09:17:32Z</ResponseTimestamp>
-      <SubscriberRef>ski-ddip-in-sx_test</SubscriberRef>
-      <SubscriptionRef>1</SubscriptionRef>
-      <Situations>
-        <PtSituationElement>
-          <CreationTime>2022-04-14T09:17:23Z</CreationTime>
-          <CountryRef>ch</CountryRef>
-          <ParticipantRef>ski-ems-out-sx_test</ParticipantRef>
-          <SituationNumber>ch:1:sstid:1:3ac880a2-aeb1-5757-989d-d3c15c8220c6</SituationNumber>
-          <Version>1</Version>
-          <Source>
-            <Country>ch</Country>
-            <SourceType>directReport</SourceType>
-            <Name>EMS</Name>
-            <ExternalCode>ski-ems-out-sx_test</ExternalCode>
-          </Source>
-          <VersionedAtTime>2022-04-14T09:17:26Z</VersionedAtTime>
-          <Progress>published</Progress>
-          <ValidityPeriod>
-            <StartTime>2022-08-26T04:00:00Z</StartTime>
-            <EndTime>2022-08-26T21:00:00Z</EndTime>
-          </ValidityPeriod>
-          <PublicationWindow>
-            <StartTime>2022-04-14T09:17:23Z</StartTime>
-            <EndTime>2022-08-26T21:59:00Z</EndTime>
-          </PublicationWindow>
-          <AlertCause>specialEvent</AlertCause>
-          <Severity>normal</Severity>
-          <Priority>3</Priority>
-          <Audience>public</Audience>
-          <ScopeType>stopPlace</ScopeType>
-          <Planned>true</Planned>
-          <Language>DE</Language>
-          <Summary xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben.</Summary>
-          <Summary xml:lang="EN">Pratteln, Bahnhof stop moved.</Summary>
-          <Detail xml:lang="DE">Grund ist eine Veranstaltung.</Detail>
-          <Detail xml:lang="EN">Due to an event.</Detail>
-          <Affects>
-            <StopPlaces>
-              <AffectedStopPlace>
-                <StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
-                <PlaceName>Pratteln, Bahnhof</PlaceName>
-              </AffectedStopPlace>
-            </StopPlaces>
-          </Affects>
-          <PublishingActions>
-            <PublishingAction>
-              <PublishAtScope>
-                <ScopeType>stopPlace</ScopeType>
-                <Affects>
-                  <StopPlaces>
-                    <AffectedStopPlace>
-                      <StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
-                      <PlaceName>Pratteln, Bahnhof</PlaceName>
-                    </AffectedStopPlace>
-                  </StopPlaces>
-                </Affects>
-              </PublishAtScope>
-              <PassengerInformationAction>
-                <PublicationWindow>
-                  <StartTime>2022-04-14T09:17:23Z</StartTime>
-                  <EndTime>2022-08-26T21:59:00Z</EndTime>
-                </PublicationWindow>
-                <!--Compared to the other ESAF example with Period, in this scenario only a single consistent text is published over the whole day (morning and afternoon don't differ). As a result, a single ValidityPeriod on PtSituationElement level is sufficient and Period is not required on PassengerInformationAction level.-->
-                <ActionRef>ems-696-1</ActionRef>
-                <RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-                <OwnerRef>ch:1:sboid:100626</OwnerRef>
-                <Perspective>whilePlanningTrip</Perspective>
-                <TextualContent>
-                  <TextualContentSize>S</TextualContentSize>
-                  <SummaryContent>
-                    <SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-                    <SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-                  </SummaryContent>
-                  <ReasonContent>
-                    <ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-                    <ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-                  </ReasonContent>
-                  <ConsequenceContent>
-                    <ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-                    <ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-                  </ConsequenceContent>
-                  <RecommendationContent>
-                    <RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-                    <RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-                  </RecommendationContent>
-                  <DurationContent>
-                    <DurationText xml:lang="DE">Dauer: 26.08.2022, 06:00 - 26.08.2022, 23:00</DurationText>
-                    <DurationText xml:lang="EN">Duration: 26.08.2022, 06:00 - 26.08.2022, 23:00</DurationText>
-                  </DurationContent>
-                  <RemarkContent>
-                    <Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-                    <Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-                  </RemarkContent>
-                </TextualContent>
-              </PassengerInformationAction>
-              <PassengerInformationAction>
-                <PublicationWindow>
-                  <StartTime>2022-08-26T02:00:00Z</StartTime>
-                  <EndTime>2022-08-26T21:59:00Z</EndTime>
-                </PublicationWindow>
-                <ActionRef>ems-696-2</ActionRef>
-                <RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
-                <OwnerRef>ch:1:sboid:100626</OwnerRef>
-                <Perspective>atStopPoint</Perspective>
-                <Perspective>onBoardVehicle</Perspective>
-                <TextualContent>
-                  <TextualContentSize>S</TextualContentSize>
-                  <SummaryContent>
-                    <SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
-                    <SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
-                  </SummaryContent>
-                  <ReasonContent>
-                    <ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
-                    <ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
-                  </ReasonContent>
-                  <ConsequenceContent>
-                    <ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
-                    <ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
-                  </ConsequenceContent>
-                  <RecommendationContent>
-                    <RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
-                    <RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
-                  </RecommendationContent>
-                  <DurationContent>
-                    <DurationText xml:lang="DE">Dauer: 26.08.2022, 04:00 - 26.08.2022, 23:59</DurationText>
-                    <DurationText xml:lang="EN">Duration: 26.08.2022, 04:00 - 26.08.2022, 23:59</DurationText>
-                  </DurationContent>
-                  <RemarkContent>
-                    <Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
-                    <Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
-                  </RemarkContent>
-                </TextualContent>
-              </PassengerInformationAction>
-            </PublishingAction>
-          </PublishingActions>
-        </PtSituationElement>
-      </Situations>
-    </SituationExchangeDelivery>
-  </ServiceDelivery>
+	<ServiceDelivery>
+		<ResponseTimestamp>2022-04-14T09:17:32Z</ResponseTimestamp>
+		<ProducerRef>ski-ems-out-sx_tesst</ProducerRef>
+		<ResponseMessageIdentifier>wcP9TgJhf</ResponseMessageIdentifier>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<SituationExchangeDelivery version="2.3">
+			<ResponseTimestamp>2022-04-14T09:17:32Z</ResponseTimestamp>
+			<SubscriberRef>ski-ddip-in-sx_test</SubscriberRef>
+			<SubscriptionRef>1</SubscriptionRef>
+			<Situations>
+				<PtSituationElement>
+					<CreationTime>2022-04-14T09:17:23Z</CreationTime>
+					<CountryRef>ch</CountryRef>
+					<ParticipantRef>ski-ems-out-sx_test</ParticipantRef>
+					<SituationNumber>ch:1:sstid:1:3ac880a2-aeb1-5757-989d-d3c15c8220c6</SituationNumber>
+					<Version>1</Version>
+					<Source>
+						<Country>ch</Country>
+						<SourceType>directReport</SourceType>
+						<Name>EMS</Name>
+						<ExternalCode>ski-ems-out-sx_test</ExternalCode>
+					</Source>
+					<VersionedAtTime>2022-04-14T09:17:26Z</VersionedAtTime>
+					<Progress>published</Progress>
+					<ValidityPeriod>
+						<StartTime>2022-08-26T04:00:00Z</StartTime>
+						<EndTime>2022-08-26T21:00:00Z</EndTime>
+					</ValidityPeriod>
+					<PublicationWindow>
+						<StartTime>2022-04-14T09:17:23Z</StartTime>
+						<EndTime>2022-08-26T21:59:00Z</EndTime>
+					</PublicationWindow>
+					<AlertCause>specialEvent</AlertCause>
+					<Severity>normal</Severity>
+					<Priority>3</Priority>
+					<Audience>public</Audience>
+					<ScopeType>stopPlace</ScopeType>
+					<Planned>true</Planned>
+					<Language>DE</Language>
+					<Summary xml:lang="DE">Haltestelle Pratteln, Bahnhof verschoben.</Summary>
+					<Summary xml:lang="EN">Pratteln, Bahnhof stop moved.</Summary>
+					<Detail xml:lang="DE">Grund ist eine Veranstaltung.</Detail>
+					<Detail xml:lang="EN">Due to an event.</Detail>
+					<Affects>
+						<StopPlaces>
+							<AffectedStopPlace>
+								<StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
+								<PlaceName>Pratteln, Bahnhof</PlaceName>
+							</AffectedStopPlace>
+						</StopPlaces>
+					</Affects>
+					<PublishingActions>
+						<PublishingAction>
+							<PublishAtScope>
+								<ScopeType>stopPlace</ScopeType>
+								<Affects>
+									<StopPlaces>
+										<AffectedStopPlace>
+											<StopPlaceRef>ch:1:sloid:94994</StopPlaceRef>
+											<PlaceName>Pratteln, Bahnhof</PlaceName>
+										</AffectedStopPlace>
+									</StopPlaces>
+								</Affects>
+							</PublishAtScope>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2022-04-14T09:17:23Z</StartTime>
+									<EndTime>2022-08-26T21:59:00Z</EndTime>
+								</PublicationWindow>
+								<!--Compared to the other ESAF example with Period, in this scenario only a single consistent text is published over the whole day (morning and afternoon don't differ). As a result, a single ValidityPeriod on PtSituationElement level is sufficient and Period is not required on PassengerInformationAction level.-->
+								<ActionRef>ems-696-1</ActionRef>
+								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
+								<OwnerRef>ch:1:sboid:100626</OwnerRef>
+								<Perspective>whilePlanningTrip</Perspective>
+								<TextualContent>
+									<TextualContentSize>S</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
+										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
+									</SummaryContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
+										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
+									</ReasonContent>
+									<ConsequenceContent>
+										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
+										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
+									</ConsequenceContent>
+									<RecommendationContent>
+										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
+										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
+									</RecommendationContent>
+									<DurationContent>
+										<DurationText xml:lang="DE">Dauer: 26.08.2022, 06:00 - 26.08.2022, 23:00</DurationText>
+										<DurationText xml:lang="EN">Duration: 26.08.2022, 06:00 - 26.08.2022, 23:00</DurationText>
+									</DurationContent>
+									<RemarkContent>
+										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
+										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
+									</RemarkContent>
+								</TextualContent>
+							</PassengerInformationAction>
+							<PassengerInformationAction>
+								<PublicationWindow>
+									<StartTime>2022-08-26T02:00:00Z</StartTime>
+									<EndTime>2022-08-26T21:59:00Z</EndTime>
+								</PublicationWindow>
+								<ActionRef>ems-696-2</ActionRef>
+								<RecordedAtTime>2022-04-14T09:17:26Z</RecordedAtTime>
+								<OwnerRef>ch:1:sboid:100626</OwnerRef>
+								<Perspective>atStopPoint</Perspective>
+								<Perspective>onBoardVehicle</Perspective>
+								<TextualContent>
+									<TextualContentSize>S</TextualContentSize>
+									<SummaryContent>
+										<SummaryText xml:lang="DE">Pratteln, Bahnhof verschoben</SummaryText>
+										<SummaryText xml:lang="EN">Pratteln, Bahnhof moved</SummaryText>
+									</SummaryContent>
+									<ReasonContent>
+										<ReasonText xml:lang="DE">Grund: Veranstaltung (ESAF)</ReasonText>
+										<ReasonText xml:lang="EN">Due to an event (ESAF)</ReasonText>
+									</ReasonContent>
+									<ConsequenceContent>
+										<ConsequenceText xml:lang="DE">Die Haltestelle ist verschoben um 500 Meter Richtung Altstadt</ConsequenceText>
+										<ConsequenceText xml:lang="EN">The bus stop has been moved by 500 meters in the direction of the old town</ConsequenceText>
+									</ConsequenceContent>
+									<RecommendationContent>
+										<RecommendationText xml:lang="DE">Bitte benutzen Sie die provisorische Haltestelle Pratteln, Bahnhof (Richtung Festgelände)</RecommendationText>
+										<RecommendationText xml:lang="EN">Please use the temporary stop Pratteln, Bahnhof (direction Festgelände)</RecommendationText>
+									</RecommendationContent>
+									<DurationContent>
+										<DurationText xml:lang="DE">Dauer: 26.08.2022, 04:00 - 26.08.2022, 23:59</DurationText>
+										<DurationText xml:lang="EN">Duration: 26.08.2022, 04:00 - 26.08.2022, 23:59</DurationText>
+									</DurationContent>
+									<RemarkContent>
+										<Remark xml:lang="DE">Bei Fragen wenden Sie sich an das Informationspersonal vor Ort</Remark>
+										<Remark xml:lang="EN">If you have any questions, please contact the information staff on site</Remark>
+									</RemarkContent>
+								</TextualContent>
+							</PassengerInformationAction>
+						</PublishingAction>
+					</PublishingActions>
+				</PtSituationElement>
+			</Situations>
+		</SituationExchangeDelivery>
+	</ServiceDelivery>
 </Siri>
