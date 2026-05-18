@@ -884,7 +884,7 @@ If false each subscription response will contain the full information as specifi
 							<xsd:documentation>if TRUE means that it is a message sent to a sent to a GARAGE to ask for repair of a VEHICLE.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element name="DriverScope">
+					<xsd:element name="DiverScope">
 						<xsd:annotation>
 							<xsd:documentation>Identification of the DRIVER</xsd:documentation>
 						</xsd:annotation>
