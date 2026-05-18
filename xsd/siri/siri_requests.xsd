@@ -145,7 +145,7 @@ Roads and road transport</Category>
 	</xsd:element>
 	<xsd:complexType name="AuthenticatedRequestStructure" abstract="true">
 		<xsd:annotation>
-			<xsd:documentation>Type for Authticated SIRI Request.</xsd:documentation>
+			<xsd:documentation>Type for Authenticated SIRI Request.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
 			<xsd:extension base="AbstractRequestStructure">
@@ -155,7 +155,7 @@ Roads and road transport</Category>
 	</xsd:complexType>
 	<xsd:group name="AuthenticatedRequestGroup">
 		<xsd:annotation>
-			<xsd:documentation>Elemenst for authecticiation. (since SIRI 2.0)</xsd:documentation>
+			<xsd:documentation>Elements for authentication. (since SIRI 2.0)</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="AccountId" type="xsd:NMTOKEN" minOccurs="0">
