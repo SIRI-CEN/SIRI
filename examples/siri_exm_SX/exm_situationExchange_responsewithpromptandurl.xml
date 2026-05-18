@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (C) Copyright 2005-2012 CEN SIRI -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:d2="http://datex2.eu/schema/2_0RC1/2_0" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2026-05-17T16:00:26+01:00</ResponseTimestamp>
+		<ProducerRef>GT7</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<SituationExchangeDelivery version="2.0">
+			<ResponseTimestamp>2026-04-30T08:00:00+01:00</ResponseTimestamp>
+			<Situations>
+				<PtSituationElement>
+					<CreationTime>2026-04-30T08:00:00.0Z</CreationTime>
+					<CountryRef>fr</CountryRef>
+					<ParticipantRef>GT7</ParticipantRef>
+					<SituationNumber>202606</SituationNumber>
+					<Version>0</Version>
+					<References>
+						<RelatedToRef>
+							<CreationTime>2026-04-30T08:00:00</CreationTime>
+							<CountryRef>fr</CountryRef>
+							<ParticipantRef>GT7</ParticipantRef>
+							<SituationNumber>202606</SituationNumber>
+							<Version>0</Version>
+						</RelatedToRef>
+					</References>
+					<Source>
+						<Country>fr</Country>
+						<SourceType>email</SourceType>
+						<AgentReference>MNTL12</AgentReference>
+						<TimeOfCommunication>2026-04-29T15:30:00.0Z</TimeOfCommunication>
+					</Source>
+					<Verification>verified</Verification>
+					<Progress>open</Progress>
+					<QualityIndex>certain</QualityIndex>
+					<ValidityPeriod>
+						<StartTime>2026-05-01T05:00:00.0Z</StartTime>
+						<EndTime>2026-05-31T23:59:59.0Z</EndTime>
+					</ValidityPeriod>
+					<AlertCause>maintenanceWork</AlertCause>
+					<Severity>verySlight</Severity>
+					<Priority>1</Priority>
+					<Audience>public</Audience>
+					<ReportType>general</ReportType>
+					<Summary xml:lang="fr">Travaux de maintenance en soirée.</Summary>
+					<Description xml:lang="fr">Travaux de maintenance jusqu'à la fin de l'été avec une fin de service anticipée pour tout l'été.</Description>
+					<Affects>
+						<Operators>
+							<AllOperators/>
+						</Operators>
+						<StopPlaces>
+							<AffectedStopPlace>
+								<StopPlaceRef>L123SP1</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Saigon</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+							<AffectedStopPlace>
+								<StopPlaceRef>L123SP2</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Abbesses</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+							<AffectedStopPlace>
+								<StopPlaceRef>L123SP3</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Saint-Lazare</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+							<AffectedStopPlace>
+								<StopPlaceRef>L123SP4</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Assemblée Nationale</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+							<AffectedStopPlace>
+								<StopPlaceRef>L123SP5</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Place des fêtes</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+						</StopPlaces>
+					</Affects>
+					<Consequences>
+						<Consequence>
+							<Period>
+								<StartTime>2026-05-01T22:00:00.0Z</StartTime>
+								<EndTime>2026-05-02T00:59:59.0Z</EndTime>
+							</Period>
+							<Condition>noService</Condition>
+							<Severity>severe</Severity>
+							<Blocking>
+								<JourneyPlanner>true</JourneyPlanner>
+								<RealTime>true</RealTime>
+							</Blocking>
+							<Boarding>
+								<ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
+								<DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
+							</Boarding>
+						</Consequence>
+					</Consequences>
+					<PublishingActions>
+						<PublishToWebAction>
+							<ActionData>
+								<Type>image</Type>
+								<Url content-type="image/png" label="calendrier_fermeture">http://mediabank.aom.fr/images/calendrier/ligne_123_ete.png</Url>
+							</ActionData>
+							<Incidents>false</Incidents>
+							<HomePage>true</HomePage>
+							<Ticker>false</Ticker>
+						</PublishToWebAction>
+						<PublishToMobileAction>
+							<ActionData>
+								<Type>ShortText</Type>
+								<Prompt xml:lang="fr">Travaux de maintenance. Fermeture totale de la ligne à partir de 22h.</Prompt>
+								<Prompt xml:lang="en">Maintenance work. No service on the entire line from 10pm.</Prompt>
+							</ActionData>
+							<Incidents>false</Incidents>
+							<HomePage>false</HomePage>
+						</PublishToMobileAction>
+						<PublishToDisplayAction>
+							<ActionData>
+								<Type>FormattedText</Type>
+								<Prompt content-type="text/markdown" xml:lang="fr">Travaux de maintenance. **Fermeture totale de la ligne à partir de 22h.**</Prompt>
+								<Prompt content-type="text/markdown" xml:lang="en">Maintenance work. **No service on the entire line from 10pm.**</Prompt>
+							</ActionData>
+							<OnPlace>true</OnPlace>
+						</PublishToDisplayAction>
+					</PublishingActions>
+				</PtSituationElement>
+			</Situations>
+		</SituationExchangeDelivery>
+	</ServiceDelivery>
+</Siri>

@@ -166,4 +166,42 @@ The value range is normally 0-100, but could in some circumstances go beyond 100
 			<xsd:minInclusive value="0"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:complexType name="PromptType">
+		<xsd:annotation>
+			<xsd:documentation>Allow the addition of attributes in a Prompt to add further details about its content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="NaturalLanguageStringStructure">	
+				<xsd:attribute name="content-type" type="xsd:string" default="text/plain" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Specifies the MIME type of the Prompt, to be used when it is not plain text (which is the value per default).</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="ContentURI">
+		<xsd:annotation>
+			<xsd:documentation>Allow the addition of attributes in an URL to add further details about the content of the file that the link points to.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:anyURI">	
+				<xsd:attribute name="content-type" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Specifies the MIME media type of the resource that the link points to. For audio messages, it can also optionally include a codecs parameter. For all possible values, pleaser refer to https://www.iana.org/assignments/media-types/media-types.xhtml</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute ref="xml:lang" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If the content of the resource is in a single language, specifies which one.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="label" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Gives additional information on the resource that the link points to (e.g., recorded message, text-to-speech, image).</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
 </xsd:schema>
