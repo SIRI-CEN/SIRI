@@ -114,8 +114,8 @@
 							<ActionData>
 								<Type>RecordedMessage</Type>
 							</ActionData>
-							<Url type="audio/mpeg" lang="fr">http://mediabank.aom.fr/audio/unattended_bag_fr.mp3</Url>
-							<Url type="audio/mpeg" lang="en">http://mediabank.aom.fr/audio/unattended_bag_en.mp3</Url>
+							<Url type="audio/mpeg" xml:lang="fr">http://mediabank.aom.fr/audio/unattended_bag_fr.mp3</Url>
+							<Url type="audio/mpeg" xml:lang="en">http://mediabank.aom.fr/audio/unattended_bag_en.mp3</Url>
 						</PublishToAudioAction>
 					</PublishingActions>
 				</PtSituationElement>
