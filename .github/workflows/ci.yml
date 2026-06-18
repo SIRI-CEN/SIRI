@@ -4,6 +4,9 @@ on:
   push:
     branches: [ "v[0-9]*" ]
   pull_request:
+    # NB: this is a glob filter, not a regex - `*` matches any chars (except `/`),
+    # Hence it should match `v2.2`, `v2.3-wip`, etc.
+    # See https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#filter-pattern-cheat-sheet
     branches: [ "v[0-9]*" ]
 
   # Allows you to run this workflow manually from the Actions tab
