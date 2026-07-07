@@ -224,7 +224,7 @@ Contains TYPE OF VALUEs that are an instance of the same class. (since SIRI 2.1)
 			<xsd:annotation>
 				<xsd:documentation>TYPE OF VALUEs of the set must be unique.</xsd:documentation>
 			</xsd:annotation>
-			<xsd:selector xpath=".//siri:Values/siri:*"/>
+			<xsd:selector xpath="siri:Values/siri:TypeOfValue"/>
 			<xsd:field xpath="siri:TypeOfValueCode"/>
 		</xsd:unique>
 	</xsd:element>
