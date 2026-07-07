@@ -107,6 +107,7 @@ Rail transport, Roads and road transport
 	<xsd:include schemaLocation="siri_operator_support.xsd"/>
 	<xsd:include schemaLocation="siri_time.xsd"/>
 	<xsd:include schemaLocation="siri_situationIdentity.xsd"/>
+	<xsd:include schemaLocation="siri_modes.xsd"/>
 	<!-- ========= VERSION =========================================== -->
 	<xsd:element name="VersionRef" type="VersionCodeType">
 		<xsd:annotation>
@@ -340,7 +341,7 @@ Rail transport, Roads and road transport
 	<!--==== Mode Enumerations =================================================================== -->
 	<xsd:simpleType name="VehicleModesEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>MODEs of transport applicable to timetabled public transport.</xsd:documentation>
+			<xsd:documentation>DEPRECATED since SIRI 2.3 (replaced by VehicleModesOfTransportEnumeration in siri_modes.xsd) - MODEs of transport applicable to timetabled public transport.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="air"/>
@@ -446,7 +447,7 @@ Values for these elements can be specified on an annual schedule and will be inh
 					<xsd:documentation>Name of Joruney Pattern</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="VehicleMode" type="VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>A means of transportation such as bus, rail, etc.</xsd:documentation>
 				</xsd:annotation>
