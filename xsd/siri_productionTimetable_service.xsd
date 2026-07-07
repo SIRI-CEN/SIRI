@@ -174,7 +174,7 @@ Rail transport, Roads and road transport
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
-			<xsd:element name="VehicleMode" type="VehicleModesEnumeration" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="VehicleMode" type="VehicleModesOfTransportEnumeration" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Filter the results to include only journeys of the specified VEHICLE MODE. (since SIRI 2.1)</xsd:documentation>
 				</xsd:annotation>
