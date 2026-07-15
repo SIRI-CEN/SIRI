@@ -16,6 +16,10 @@ jobs:
   run:
     runs-on: ubuntu-latest
 
+    # Needed by the "Commit changes" step to push regenerated tables back to the branch
+    permissions:
+      contents: write
+
     steps:
       - run: echo "Job was automatically triggered by a ${{ github.event_name }} event for branch ${{ github.ref }}"
 
