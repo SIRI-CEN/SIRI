@@ -1910,7 +1910,7 @@ TRAINs within a COMPOUND TRAIN may have different origins and destinations due t
 		</xsd:sequence>
 	</xsd:group>
 	<!-- Service Links ======================================================================= -->
-		<xsd:complexType name="ServiceLinkViewsStructure">
+	<xsd:complexType name="ServiceLinkViewsStructure">
 		<xsd:annotation>
 			<xsd:documentation>Provides information about updated SERVICE LINKs</xsd:documentation>
 		</xsd:annotation>
