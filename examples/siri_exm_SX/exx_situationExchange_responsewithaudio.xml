@@ -113,9 +113,11 @@
 						<PublishToAudioAction>
 							<ActionData>
 								<Type>RecordedMessage</Type>
+								<Url contentType="audio/mp4" xml:lang="fr">http://mediabank.aom.fr/audio/unattended_bag_fr.mp4</Url>
+								<Url contentType="audio/mp4" xml:lang="en">http://mediabank.aom.fr/audio/unattended_bag_en.mp4</Url>
 							</ActionData>
-							<Url type="audio/mpeg" xml:lang="fr">http://mediabank.aom.fr/audio/unattended_bag_fr.mp3</Url>
-							<Url type="audio/mpeg" xml:lang="en">http://mediabank.aom.fr/audio/unattended_bag_en.mp3</Url>
+							<Repeat>true</Repeat>
+							<RepeatInterval>3</RepeatInterval>
 						</PublishToAudioAction>
 					</PublishingActions>
 				</PtSituationElement>

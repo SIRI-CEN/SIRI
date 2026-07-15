@@ -4,7 +4,8 @@
 15.07.2026 Tu-Tho Thai:
 - Addition of URL in ActionData
 - Change of Prompt to include the type of content being shared directly, using an enumeration to limit of options
-- Addition of annotation to clarify the use
+- Addition of annotation to clarify the use of the attribute ContentType
+- Addition of PublishtoAudioAction
 
 10.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
 - PublishToDisplayAction added to ActionsGroup
@@ -422,9 +423,14 @@ Rail transport, Roads and road transport
 		<xsd:complexContent>
 			<xsd:extension base="ParameterisedActionStructure">
 				<xsd:sequence>
-					<xsd:element name="Url" type="AudioURI" minOccurs="0" maxOccurs="unbounded">
+					<xsd:element name="Repeat" type="xsd:boolean" default="true" minOccurs="0">
 						<xsd:annotation>
-							<xsd:documentation>Url for the pre-recorded message. If there is no language attribute specified, there is the assumption that the language is multilingual. Producers must change the URL whenever they want a different message to be broadcasted (i.e., situation has changed).</xsd:documentation>
+							<xsd:documentation>Indicates if the pre-recorded audio message should be repeated or not. Default is 'true'. +v2.3</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="RepeatInterval" type="xsd:integer" default="1" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Specifies the interval in minutes at which the pre-recorded message should be repeated. +v2.3</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>	
