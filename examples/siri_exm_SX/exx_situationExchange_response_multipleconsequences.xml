@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (C) Copyright 2005-2012 CEN SIRI -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:d2="http://datex2.eu/schema/2_0RC1/2_0" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2026-05-17T16:00:26+01:00</ResponseTimestamp>
+		<ProducerRef>GT7</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<SituationExchangeDelivery version="2.0">
+			<ResponseTimestamp>2026-05-17T16:00:26+01:00</ResponseTimestamp>
+			<Situations>
+				<PtSituationElement>
+					<CreationTime>2026-05-17T16:00:00.0Z</CreationTime>
+					<CountryRef>fr</CountryRef>
+					<ParticipantRef>GT7</ParticipantRef>
+					<SituationNumber>123456</SituationNumber>
+					<Version>0</Version>
+					<References>
+						<RelatedToRef>
+							<CreationTime>2026-05-17T16:00:00</CreationTime>
+							<CountryRef>fr</CountryRef>
+							<ParticipantRef>GT7</ParticipantRef>
+							<SituationNumber>123456</SituationNumber>
+							<Version>0</Version>
+						</RelatedToRef>
+					</References>
+					<Source>
+						<Country>fr</Country>
+						<SourceType>directReport</SourceType>
+						<AgentReference>987654</AgentReference>
+						<TimeOfCommunication>2026-05-17T15:55:00.0Z</TimeOfCommunication>
+					</Source>
+					<Verification>verified</Verification>
+					<Progress>open</Progress>
+					<QualityIndex>certain</QualityIndex>
+					<ValidityPeriod>
+						<StartTime>2026-05-17T16:00:00.0Z</StartTime>
+						<EndTime>2026-05-17T17:30:00.0Z</EndTime>
+					</ValidityPeriod>
+					<AlertCause>unattendedBag</AlertCause>
+					<Severity>slight</Severity>
+					<Priority>2</Priority>
+					<Audience>public</Audience>
+					<ReportType>point</ReportType>
+					<Summary xml:lang="fr">Bagage oublié à la station Saint-Paul</Summary>
+					<Summary xml:lang="en">Unattended bag at the metro station Saint-Paul</Summary>
+					<Description xml:lang="en">Unattended bag at the metro station Saint-Paul on the line 1, direction Château de Vincennes. No service between Hôtel-de-Ville and Château de Vincennes. Disrupted service between La Défense and Hôtel-de-Ville.</Description>
+					<Affects>
+						<Operators>
+							<AllOperators/>
+						</Operators>
+						<StopPoints>
+							<AffectedStopPoint>
+								<StopPointRef>STPL987SSP</StopPointRef>
+								<StopPointName xml:lang="fr">Hôtel-de-Ville</StopPointName>
+							</AffectedStopPoint>
+						</StopPoints>
+						<StopPlaces>
+							<AffectedStopPlace>
+								<StopPlaceRef>STPL987SP</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Hôtel-de-Ville</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+						</StopPlaces>
+					</Affects>
+					<Consequences>
+						<Consequence>
+							<ConsequenceCode>C1</ConsequenceCode>
+							<Period>
+								<StartTime>2026-05-17T16:00:00.0Z</StartTime>
+								<EndTime>2026-05-17T17:30:00.0Z</EndTime>
+							</Period>
+							<Condition>noService</Condition>
+							<Severity>verySevere</Severity>
+							<Blocking>
+								<JourneyPlanner>true</JourneyPlanner>
+								<RealTime>true</RealTime>
+							</Blocking>
+							<Boarding>
+								<ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
+								<DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+							</Boarding>
+						</Consequence>
+						<Consequence>
+							<ConsequenceCode>C2</ConsequenceCode>
+							<Period>
+								<StartTime>2026-05-17T16:00:00.0Z</StartTime>
+								<EndTime>2026-05-17T17:30:00.0Z</EndTime>
+							</Period>
+							<Condition>disruption</Condition>
+							<Severity>slight</Severity>
+							<Blocking>
+								<JourneyPlanner>true</JourneyPlanner>
+								<RealTime>true</RealTime>
+							</Blocking>
+							<Boarding>
+								<ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
+								<DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+							</Boarding>
+						</Consequence>
+					</Consequences>
+					<PublishingActions>
+						<PublishToWebAction>
+							<ActionData>
+								<Type>LongText</Type>
+								<Prompt xml:lang="en">Unattended bag at the Saint-Paul station. No service between Hôtel-de-Ville and Château de Vincennes. Disrupted service between La Défense and Hôtel-de-Ville.</Prompt>
+							</ActionData>
+							<PublicationRef>WEB123</PublicationRef>
+							<ConsequenceRef>C1</ConsequenceRef>
+							<ConsequenceRef>C2</ConsequenceRef>
+							<Incidents>true</Incidents>
+							<HomePage>true</HomePage>
+							<Ticker>false</Ticker>
+						</PublishToWebAction>
+						<PublishToMobileAction>
+							<ActionData>
+								<Type>ShortText</Type>
+								<Prompt xml:lang="en">Unattended bag at Saint-Paul station. Disrupted service between La Défense and Hôtel-de-Ville.</Prompt>
+							</ActionData>
+							<PublicationRef>MOB123</PublicationRef>
+							<ConsequenceRef>C2</ConsequenceRef>
+							<Incidents>true</Incidents>
+							<HomePage>false</HomePage>
+						</PublishToMobileAction>
+						<PublishToMobileAction>
+							<ActionData>
+								<Type>ShortText</Type>
+								<Prompt xml:lang="en">Unattended bag at Saint-Paul station. No service between Hôtel-de-Ville and Château de Vincennes.</Prompt>
+							</ActionData>
+							<PublicationRef>MOB456</PublicationRef>
+							<ConsequenceRef>C1</ConsequenceRef>
+							<Incidents>true</Incidents>
+							<HomePage>false</HomePage>
+						</PublishToMobileAction>
+					</PublishingActions>
+				</PtSituationElement>
+			</Situations>
+		</SituationExchangeDelivery>
+	</ServiceDelivery>
+</Siri>
