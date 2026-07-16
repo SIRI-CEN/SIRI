@@ -878,7 +878,7 @@ Values for these elements can be specified on an annual schedule and will be inh
 	</xsd:element>
 	<xsd:simpleType name="ConsequenceCodeType">
 		<xsd:annotation>
-			<xsd:documentation>Identifier of a PT CONSEQUENCE</xsd:documentation>
+			<xsd:documentation>Identifier of a PT CONSEQUENCE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:NMTOKEN"/>
 	</xsd:simpleType>
