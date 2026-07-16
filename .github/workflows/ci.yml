@@ -25,6 +25,7 @@ jobs:
           # https://github.com/marketplace/actions/add-commit#working-with-prs
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.SECRET_ACTION_TOKEN || github.token }}
 
       - name: Install xmllint and xsltproc
         run: |
