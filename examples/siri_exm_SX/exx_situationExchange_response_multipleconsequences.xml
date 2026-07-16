@@ -93,24 +93,22 @@
 							<Condition>noService</Condition>
 							<Severity>verySevere</Severity>
 							<Affects>
-								<AffectedStopPoint>
-									<StopPointRef>STPL456SSP</StopPointRef>
-									<StopPointName xml:lang="fr">Saint-Paul</StopPointName>
-								</AffectedStopPoint>
-								<AffectedStopPoint>
-									<StopPointRef>STPL123SSP</StopPointRef>
-									<StopPointName xml:lang="fr">Château de Vincennes</StopPointName>
-								</AffectedStopPoint>
-								<AffectedStopPlace>
-									<StopPlaceRef>STPL456SP</StopPlaceRef>
-									<StopPlaceName xml:lang="FR">Saint-Paul</StopPlaceName>
-									<StopPlaceType>metroStation</StopPlaceType>
-								</AffectedStopPlace>
-								<AffectedStopPlace>
-									<StopPlaceRef>STPL123SP</StopPlaceRef>
-									<StopPlaceName xml:lang="FR">Château de Vincennes</StopPlaceName>
-									<StopPlaceType>metroStation</StopPlaceType>
-								</AffectedStopPlace>
+								<StopPoints>
+									<AffectedStopPoint>
+										<StopPointRef>STPL456SSP</StopPointRef>
+									</AffectedStopPoint>
+									<AffectedStopPoint>
+										<StopPointRef>STPL123SSP</StopPointRef>
+									</AffectedStopPoint>
+								</StopPoints>
+								<StopPlaces>
+									<AffectedStopPlace>
+										<StopPlaceRef>STPL456SP</StopPlaceRef>
+									</AffectedStopPlace>
+									<AffectedStopPlace>
+										<StopPlaceRef>STPL123SP</StopPlaceRef>
+									</AffectedStopPlace>
+								</StopPlaces>
 							</Affects>	
 							<Blocking>
 								<JourneyPlanner>true</JourneyPlanner>
