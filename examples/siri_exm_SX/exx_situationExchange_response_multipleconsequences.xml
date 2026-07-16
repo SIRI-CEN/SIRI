@@ -56,11 +56,29 @@
 								<StopPointRef>STPL987SSP</StopPointRef>
 								<StopPointName xml:lang="fr">Hôtel-de-Ville</StopPointName>
 							</AffectedStopPoint>
+							<AffectedStopPoint>
+								<StopPointRef>STPL456SSP</StopPointRef>
+								<StopPointName xml:lang="fr">Saint-Paul</StopPointName>
+							</AffectedStopPoint>
+							<AffectedStopPoint>
+								<StopPointRef>STPL123SSP</StopPointRef>
+								<StopPointName xml:lang="fr">Château de Vincennes</StopPointName>
+							</AffectedStopPoint>
 						</StopPoints>
 						<StopPlaces>
 							<AffectedStopPlace>
 								<StopPlaceRef>STPL987SP</StopPlaceRef>
 								<StopPlaceName xml:lang="FR">Hôtel-de-Ville</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+							<AffectedStopPlace>
+								<StopPlaceRef>STPL456SP</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Saint-Paul</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+							<AffectedStopPlace>
+								<StopPlaceRef>STPL123SP</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Château de Vincennes</StopPlaceName>
 								<StopPlaceType>metroStation</StopPlaceType>
 							</AffectedStopPlace>
 						</StopPlaces>
@@ -74,13 +92,33 @@
 							</Period>
 							<Condition>noService</Condition>
 							<Severity>verySevere</Severity>
+							<Affects>
+								<AffectedStopPoint>
+									<StopPointRef>STPL456SSP</StopPointRef>
+									<StopPointName xml:lang="fr">Saint-Paul</StopPointName>
+								</AffectedStopPoint>
+								<AffectedStopPoint>
+									<StopPointRef>STPL123SSP</StopPointRef>
+									<StopPointName xml:lang="fr">Château de Vincennes</StopPointName>
+								</AffectedStopPoint>
+								<AffectedStopPlace>
+									<StopPlaceRef>STPL456SP</StopPlaceRef>
+									<StopPlaceName xml:lang="FR">Saint-Paul</StopPlaceName>
+									<StopPlaceType>metroStation</StopPlaceType>
+								</AffectedStopPlace>
+								<AffectedStopPlace>
+									<StopPlaceRef>STPL123SP</StopPlaceRef>
+									<StopPlaceName xml:lang="FR">Château de Vincennes</StopPlaceName>
+									<StopPlaceType>metroStation</StopPlaceType>
+								</AffectedStopPlace>
+							</Affects>	
 							<Blocking>
 								<JourneyPlanner>true</JourneyPlanner>
 								<RealTime>true</RealTime>
 							</Blocking>
 							<Boarding>
-								<ArrivalBoardingActivity>alighting</ArrivalBoardingActivity>
-								<DepartureBoardingActivity>boarding</DepartureBoardingActivity>
+								<ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
+								<DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
 							</Boarding>
 						</Consequence>
 						<Consequence>
