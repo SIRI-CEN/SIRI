@@ -179,7 +179,7 @@ The value range is normally 0-100, but could in some circumstances go beyond 100
 				</xsd:attribute>
 			</xsd:extension>
 		</xsd:simpleContent>
-	</xsd:complexType>	
+	</xsd:complexType>
 	<xsd:complexType name="ContentURI">
 		<xsd:annotation>
 			<xsd:documentation>Allow the addition of attributes in an URL to add further details about the content of the file that the link points to.</xsd:documentation>
