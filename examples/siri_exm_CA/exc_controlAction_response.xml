@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (C) Copyright 2005-2012 CEN SIRI -->
+<ControlActionDelivery xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.2" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ResponseTimestamp>2022-06-17T09:30:00Z</ResponseTimestamp>
+	<RequestMessageRef>SiriMessage4597528</RequestMessageRef>
+	<Status>true</Status>
+	<ValidUntil>2022-06-17T10:30:00Z</ValidUntil>
+	<ShortestPossibleCycle>PT0H30M</ShortestPossibleCycle>
+	<DefaultLanguage>fr-fr</DefaultLanguage>
+	<controlActions>
+		<!-- Journey creation -->
+		<ControlAction>
+			<ItemIdentifier>SiriItem-982478</ItemIdentifier>
+			<CreationTime>2022-06-17T09:28:00Z</CreationTime>
+			<GroupOfControlActionRef>FR:GroupOfControlAction:789:LOC
+          </GroupOfControlActionRef>
+			<ControlActionCode>FR:ControlAction:78954:LOC</ControlActionCode>
+			<Version>1</Version>
+			<VersionedAtTime>2022-06-17T09:28:00Z</VersionedAtTime>
+			<Reason>
+				<StandardCategory>safety</StandardCategory>
+			</Reason>
+			<RegistrationDateTime>2022-06-17T09:28:00Z</RegistrationDateTime>
+			<Description>Service reinforcement for security issue</Description>
+			<JourneyCreation>
+				<Start>
+					<PointInJourneyPattern>
+						<StopPointRef>FR:78297:LMO:110E8400:LOC</StopPointRef>
+					</PointInJourneyPattern>
+					<AimedDepartureDateTime>2022-06-17T09:45:00Z</AimedDepartureDateTime>
+				</Start>
+				<ClonedVehicleJourneyRef>
+					<DataFrameRef>FR:Frame:TH789:RATP</DataFrameRef>
+					<DatedVehicleJourneyRef>FR:VehicleJourney:789:RATP
+						  </DatedVehicleJourneyRef>
+				</ClonedVehicleJourneyRef>
+				<ReinforcedVehicleJourneyRef>
+					<DataFrameRef>FR:Frame:TH789:RATP</DataFrameRef>
+					<DatedVehicleJourneyRef>FR:VehicleJourney:789:RATP
+					  </DatedVehicleJourneyRef>
+				</ReinforcedVehicleJourneyRef>
+				<NewJourneyCode>FR:VehicleJourney:789-2:RATP</NewJourneyCode>
+				<OperatingDayDate>2022-06-17</OperatingDayDate>
+			</JourneyCreation>
+			<SituationRef>
+				<SituationSimpleRef>FR:Situation:24889:RATP</SituationSimpleRef>
+			</SituationRef>
+		</ControlAction>
+		<!-- Journey cancellation -->
+		<ControlAction>
+			<CreationTime>2022-06-17T12:00:00</CreationTime>
+			<ParticipantRef>System_X</ParticipantRef>
+			<ControlActionCode>DevCase:25</ControlActionCode>
+			<Reason>
+				<StandardCategory>noDriver</StandardCategory>
+				<CustomCategory>
+					<TypeOfValueCode>detailedReason</TypeOfValueCode>
+					<NameOfClass>reason</NameOfClass>
+					<PrivateCode>strike</PrivateCode>
+				</CustomCategory>
+			</Reason>
+			<JourneyCancellation>
+				<DatedVehicleJourneyRef>
+					<DataFrameRef>2022-06-17</DataFrameRef>
+					<DatedVehicleJourneyRef>SE:ST:VehicleJourney:9015012081701759</DatedVehicleJourneyRef>
+				</DatedVehicleJourneyRef>
+			</JourneyCancellation>
+			<SituationRef>
+				<SituationSimpleRef>SE:ST:Situation:90123456</SituationSimpleRef>
+			</SituationRef>
+		</ControlAction>
+	</controlActions>
+</ControlActionDelivery>
