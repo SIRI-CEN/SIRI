@@ -48,26 +48,26 @@
 		</ControlAction>
 		<!-- Journey cancellation -->
 		<ControlAction>
-            <CreationTime>2022-06-17T12:00:00</CreationTime>
-           	<ParticipantRef>System_X</ParticipantRef>
-           	<ControlActionCode>DevCase:25</ControlActionCode>
-            <Reason>
-                <StandardCategory>noDriver</StandardCategory>
-                 <CustomCategory>
-                    <TypeOfValueCode>detailedReason</TypeOfValueCode>
-                    <NameOfClass>reason</NameOfClass>
-                    <PrivateCode>strike</PrivateCode>
-                 </CustomCategory>
-            </Reason>
-           	<JourneyCancellation>
-              	<DatedVehicleJourneyRef>
+			<CreationTime>2022-06-17T12:00:00</CreationTime>
+			<ParticipantRef>System_X</ParticipantRef>
+			<ControlActionCode>DevCase:25</ControlActionCode>
+			<Reason>
+				<StandardCategory>noDriver</StandardCategory>
+				<CustomCategory>
+					<TypeOfValueCode>detailedReason</TypeOfValueCode>
+					<NameOfClass>reason</NameOfClass>
+					<PrivateCode>strike</PrivateCode>
+				</CustomCategory>
+			</Reason>
+			<JourneyCancellation>
+				<DatedVehicleJourneyRef>
 					<DataFrameRef>2022-06-17</DataFrameRef>
 					<DatedVehicleJourneyRef>SE:ST:VehicleJourney:9015012081701759</DatedVehicleJourneyRef>
-                </DatedVehicleJourneyRef>
-           	</JourneyCancellation>
-            <SituationRef>
+				</DatedVehicleJourneyRef>
+			</JourneyCancellation>
+			<SituationRef>
 				<SituationSimpleRef>SE:ST:Situation:90123456</SituationSimpleRef>
-            </SituationRef>
-        </ControlAction>
+			</SituationRef>
+		</ControlAction>
 	</controlActions>
 </ControlActionDelivery>
