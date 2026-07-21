@@ -1,5 +1,5 @@
 # SIRI (Service interface for real-time information relating to public transport operations) XML schema
-**(C) 2006-2026 NeTEx, CEN, Crown Copyright**
+**(C) 2006-2026 SIRI, CEN, Crown Copyright**
 
 
 ## Overview 🔍
@@ -49,10 +49,10 @@ The `xsd` folder is sub-divided as follow:
 
 |**Branch**|**Description**|**Maintenance status**|**Link**|
 |----------|---------------|--------|--------|
-|v2.2|The latest version of the XML Schema that matches the CEN documentation|Bug fixes only|[Direct link](https://github.com/SIRI-CEN/SIRI)|
-|v2.1|The previous version of the XML Schema that matches the CEN documentation (without the Control Actions)|Not maintained|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/v2.1)|
-|v2.3-wip|All the upcoming work to improve v2.2|In development|In development|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/v2.3-wip)|
-|v3.0-wip|All the upcoming work preparing the migration from CEN/TS to CEN/EN for the entire SIRI series|Not yet published|[Direct link](https://github.com/SIRI-CEN/SIRI/tree/v3.0-wip)|
+|v2.2|The latest version of the XML Schema that matches the CEN documentation|Bug fixes only|[Direct link](https://github.com/TransmodelEcosystem/SIRI)|
+|v2.1|The previous version of the XML Schema that matches the CEN documentation (without the Control Actions)|Not maintained|[Direct link](https://github.com/TransmodelEcosystem/SIRI/tree/v2.1)|
+|v2.3-wip|All the upcoming work to improve v2.2|In development|[Direct link](https://github.com/TransmodelEcosystem/SIRI/tree/v2.3-wip)|
+|v3.0-wip|All the upcoming work preparing the migration from CEN/TS to CEN/EN for the entire SIRI series|Not yet published|[Direct link](https://github.com/TransmodelEcosystem/SIRI/tree/v3.0-wip)|
 
 All other branches are considered as feature branches, meaning that they are used for development only and are to be deleted once a Pull Request is merged. See below for more details on contributions.
 
@@ -93,7 +93,7 @@ The XML examples are sorted by SIRI Service. In each service folder, you will ha
 
 ### Starting a discussion 💬
 
-Either for a modelling question or a request for change, please start a discussion using the [GitHub issues](https://github.com/SIRI-CEN/SIRI/issues). 
+Either for a modelling question or a request for change, please start a discussion using the [GitHub issues](https://github.com/TransmodelEcosystem/SIRI/issues). 
 In your issue, make sure that:
 - The title is a clear summary of your question / request for change,
 - The content sufficiently details:
@@ -111,6 +111,24 @@ In your issue, make sure that:
 
 For new features, the decision between targetting v2.3-wip or v3.0-wip will be made by the group.
 
+### The use of AI in this repo 🤖
+
+In this repository, the use of AI should follow these guidelines. The guiding principle is that any contributor is ultimately reponsible for their work on SIRI and they should be the last reviewer of any AI-guided work before submitting it for peer-review; in other words, only contributors can be authors or co-authors of any change made to SIRI.
+
+AI **can** be used for:
+- Generation of code for contributors to work on the XSD by themselves,
+- Analysis of any change proposed to the XSD before it is edited / commented / approved,
+- Improvements to the general language in the documentation (i.e, anything in `<xsd:annotation>` and `<xsd:documentation>`) or to check for typos in any work.
+
+AI **cannot** be used for:
+- Committing a change in a Pull Request, i.e. the AI agent cannot be an author or co-author of any commit,
+- Authoring a change, i.e. the AI agent cannot be an author or co-author of any Pull Request,
+- Automated code review as a stand alone action, i.e. the result of a review must be proof-read by a contributor,
+- Produce documentation from scratch (i.e, anything in `<xsd:annotation>` and `<xsd:documentation>` should be proof-read by a contributor if it was suggested by AI).
+
+In case you have a GitHub Pro account, please disable the feature `Automated Copilot code review` before contributing here.
+
+
 ----
 
 ## Changelog 📰
@@ -118,9 +136,9 @@ For new features, the decision between targetting v2.3-wip or v3.0-wip will be m
 ### Releases
 | Release Number | Release Date  | Description                                    | Link          |
 | -------------- | ------------- | ---------------------------------------------- | ------------- |
-| v2.0q          | October 2022  | Before the release of the documentation for the 2022 revision | [Code](https://github.com/SIRI-CEN/SIRI/releases/tag/v2.0r) |
-| v2.1           | October 2022  | Release matching the CEN documentation for Part 1 to 5 as of 2022 revision | [Code](https://github.com/SIRI-CEN/SIRI/releases/tag/v2.1) |
-| v2.2           | October 2025  | Addition of SIRI-CA, which is Part 6 in CEN documentation and was published in 2024 | [Code](https://github.com/SIRI-CEN/SIRI/releases/tag/v2.2) |
+| v2.0q          | October 2022  | Before the release of the documentation for the 2022 revision | [Code](https://github.com/TransmodelEcosystem/SIRI/releases/tag/v2.0r) |
+| v2.1           | October 2022  | Release matching the CEN documentation for Part 1 to 5 as of 2022 revision | [Code](https://github.com/TransmodelEcosystem/SIRI/releases/tag/v2.1) |
+| v2.2           | October 2025  | Addition of SIRI-CA, which is Part 6 in CEN documentation and was published in 2024 | [Code](https://github.com/TransmodelEcosystem/SIRI/releases/tag/v2.2) |
 
 **Important notes:** 
 - Releases (and their tags) are a snapshot of the corresponding working branch in time.
@@ -128,4 +146,4 @@ For new features, the decision between targetting v2.3-wip or v3.0-wip will be m
 
 ### Comprehensive version history
 
-The comprehensive versions history is available in [CHANGELOG.md](https://github.com/SIRI-CEN/SIRI/blob/v2.2/CHANGELOG.md).
+The comprehensive versions history is available in [CHANGELOG.md](https://github.com/TransmodelEcosystem/SIRI/blob/v2.2/CHANGELOG.md).
