@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- COPYRIGHT 2011 CEN SIRI -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.2" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceRequest>
+		<!--=======GENERAL CONTEXT==================================-->
+		<ServiceRequestContext>
+			<Language>en</Language>
+			<DataHorizon>P1Y2M3DT10H30M</DataHorizon>
+			<RequestTimeout>P1Y2M3DT10H30M</RequestTimeout>
+			<DeliveryMethod>direct</DeliveryMethod>
+			<MultipartDespatch>true</MultipartDespatch>
+			<ConfirmDelivery>false</ConfirmDelivery>
+		</ServiceRequestContext>
+		<!--======ENDPOINT REFERENCES================================-->
+		<RequestTimestamp>2022-06-17T09:30:47-05:00</RequestTimestamp>
+		<RequestorRef>NADER</RequestorRef>
+		<ControlActionRequest>
+			<RequestTimestamp>2022-06-17T09:30:47Z</RequestTimestamp>
+			<MessageIdentifier>SiriMEssage-568453</MessageIdentifier>
+			<PreviewInterval>PT4H30M</PreviewInterval>
+			<StartTime>2022-06-17T09:30:00Z</StartTime>
+			<OperatorRef>FR:Operator:768:LOC</OperatorRef>
+			<OperationalUnitRef>FR:OperationalUnit:768-1:LOC</OperationalUnitRef>
+			<NetworkRef>FR:Network:42:</NetworkRef>
+			<LineRef>FR:Line:12:RATP</LineRef>
+			<IncludeDriverMessages>false</IncludeDriverMessages>
+			<IncludeVehicleDetectings>false</IncludeVehicleDetectings>
+			<IncludeTranslations>false</IncludeTranslations>
+			<IncludeSituations>true</IncludeSituations>
+			<MaximumNumberOfControlActions>20</MaximumNumberOfControlActions>
+		</ControlActionRequest>
+	</ServiceRequest>
+</Siri>

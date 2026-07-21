@@ -239,6 +239,7 @@ Rail transport, Roads and road transport.
 			<xsd:element ref="GeneralMessageRequest" maxOccurs="unbounded"/>
 			<xsd:element ref="FacilityMonitoringRequest" maxOccurs="unbounded"/>
 			<xsd:element ref="SituationExchangeRequest" maxOccurs="unbounded"/>
+			<xsd:element ref="ControlActionRequest" maxOccurs="unbounded"/>
 		</xsd:choice>
 	</xsd:group>
 	<!--===GS: Subscription REquest ==================================================================== -->
@@ -288,6 +289,7 @@ Rail transport, Roads and road transport.
 			<xsd:element ref="GeneralMessageSubscriptionRequest" maxOccurs="unbounded"/>
 			<xsd:element ref="FacilityMonitoringSubscriptionRequest" maxOccurs="unbounded"/>
 			<xsd:element ref="SituationExchangeSubscriptionRequest" maxOccurs="unbounded"/>
+			<xsd:element ref="ControlActionSubscriptionRequest" maxOccurs="unbounded"/>
 		</xsd:choice>
 	</xsd:group>
 	<!-- === RESPONSES ================================================================== -->
@@ -436,6 +438,7 @@ In the context of SIRI-ET, for example, a baseline of a journey is synonymous to
 				</xsd:choice>
 			</xsd:sequence>
 			<xsd:element ref="SituationExchangeDelivery" maxOccurs="unbounded"/>
+			<xsd:element ref="ControlActionDelivery" maxOccurs="unbounded"/>
 		</xsd:choice>
 	</xsd:group>
 	<!-- ===Discovery==================================================================== -->
@@ -507,6 +510,7 @@ In the context of SIRI-ET, for example, a baseline of a journey is synonymous to
 			<xsd:element ref="GeneralMessageCapabilitiesRequest" minOccurs="0"/>
 			<xsd:element ref="FacilityMonitoringCapabilitiesRequest" minOccurs="0"/>
 			<xsd:element ref="SituationExchangeCapabilitiesRequest" minOccurs="0"/>
+			<xsd:element ref="ControlActionCapabilitiesRequest" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ===GS: Capabilities Delivery==================================================================== -->
@@ -543,6 +547,7 @@ In the context of SIRI-ET, for example, a baseline of a journey is synonymous to
 			<xsd:element ref="GeneralMessageCapabilitiesResponse" minOccurs="0"/>
 			<xsd:element ref="FacilityMonitoringCapabilitiesResponse" minOccurs="0"/>
 			<xsd:element ref="SituationExchangeCapabilitiesResponse" minOccurs="0"/>
+			<xsd:element ref="ControlActionCapabilitiesResponse" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ======================================================================= -->
