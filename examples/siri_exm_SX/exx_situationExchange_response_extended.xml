@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (C) Copyright 2005-2012 CEN SIRI -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:d2="http://datex2.eu/schema/2_0RC1/2_0" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2026-05-17T16:00:26+01:00</ResponseTimestamp>
+		<ProducerRef>GT7</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<SituationExchangeDelivery version="2.0">
+			<ResponseTimestamp>2026-05-17T16:00:26+01:00</ResponseTimestamp>
+			<Situations>
+				<PtSituationElement>
+					<CreationTime>2026-05-17T16:00:00.0Z</CreationTime>
+					<CountryRef>fr</CountryRef>
+					<ParticipantRef>GT7</ParticipantRef>
+					<SituationNumber>123456</SituationNumber>
+					<Version>0</Version>
+					<References>
+						<RelatedToRef>
+							<CreationTime>2026-05-17T16:00:00</CreationTime>
+							<CountryRef>fr</CountryRef>
+							<ParticipantRef>GT7</ParticipantRef>
+							<SituationNumber>123456</SituationNumber>
+							<Version>0</Version>
+						</RelatedToRef>
+					</References>
+					<Source>
+						<Country>fr</Country>
+						<SourceType>directReport</SourceType>
+						<AgentReference>987654</AgentReference>
+						<TimeOfCommunication>2026-05-17T15:55:00.0Z</TimeOfCommunication>
+					</Source>
+					<Verification>verified</Verification>
+					<Progress>open</Progress>
+					<QualityIndex>certain</QualityIndex>
+					<ValidityPeriod>
+						<StartTime>2026-05-17T16:00:00.0Z</StartTime>
+						<EndTime>2026-05-17T17:30:00.0Z</EndTime>
+					</ValidityPeriod>
+					<AlertCause>unattendedBag</AlertCause>
+					<Severity>slight</Severity>
+					<Priority>5</Priority>
+					<Audience>public</Audience>
+					<ReportType>point</ReportType>
+					<Summary xml:lang="fr">Bagage oublié à la station Rome</Summary>
+					<Description xml:lang="fr">Bagage oublié à la station Rome. Service temporairement interrompu.</Description>
+					<Affects>
+						<Operators>
+							<AllOperators/>
+						</Operators>
+						<StopPoints>
+							<AffectedStopPoint>
+								<StopPointRef>ROM123SSP</StopPointRef>
+								<StopPointName xml:lang="fr">Rome</StopPointName>
+							</AffectedStopPoint>
+						</StopPoints>
+						<StopPlaces>
+							<AffectedStopPlace>
+								<StopPlaceRef>ROM123SP</StopPlaceRef>
+								<StopPlaceName xml:lang="FR">Rome</StopPlaceName>
+								<StopPlaceType>metroStation</StopPlaceType>
+							</AffectedStopPlace>
+						</StopPlaces>
+					</Affects>
+					<Consequences>
+						<Consequence>
+							<Period>
+								<StartTime>2026-05-17T16:00:00.0Z</StartTime>
+								<EndTime>2026-05-17T17:30:00.0Z</EndTime>
+							</Period>
+							<Condition>disruption</Condition>
+							<Severity>slight</Severity>
+							<Blocking>
+								<JourneyPlanner>true</JourneyPlanner>
+								<RealTime>true</RealTime>
+							</Blocking>
+							<Boarding>
+								<ArrivalBoardingActivity>noAlighting</ArrivalBoardingActivity>
+								<DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
+							</Boarding>
+						</Consequence>
+					</Consequences>
+					<PublishingActions>
+						<PublishToWebAction>
+							<ActionData>
+								<Type>ShortText</Type>
+								<Prompt>Babage oublié à Rome. Service interrompu jusqu'à 17h30.</Prompt>
+							</ActionData>
+							<Incidents>true</Incidents>
+							<HomePage>true</HomePage>
+							<Ticker>false</Ticker>
+						</PublishToWebAction>
+						<PublishToWebAction>
+							<ActionData>
+								<Type>image</Type>
+								<Url contentType="image/png" label="deviation_map">https://mediabank.aom.fr/images/perturbations/devation_map.png</Url>
+							</ActionData>
+							<HomePage>true</HomePage>
+						</PublishToWebAction>
+						<PublishToMobileAction>
+							<ActionData>
+								<Type>ShortText</Type>
+								<Prompt xml:lang="fr">Babage oublié à Rome. Service interrompu jusqu'à 17h30.</Prompt>
+								<Prompt xml:lang="en">Unattended bag at Rome station. Disruption of service until 17:30.</Prompt>
+							</ActionData>
+							<Incidents>true</Incidents>
+							<HomePage>false</HomePage>
+						</PublishToMobileAction>
+						<PublishToDisplayAction>
+							<ActionData>
+								<Type>ShortText</Type>
+								<Prompt contentType="text/plain" xml:lang="fr">Babage oublié à Rome. Service interrompu jusqu'à 17h30.</Prompt>
+								<Prompt contentType="text/markdown" xml:lang="fr">Babage oublié à Rome. **Service interrompu jusqu'à 17h30**.</Prompt>
+								<Prompt contentType="text/plain" xml:lang="en">Unattended bag at Rome station. Disruption of service until 17:30.</Prompt>
+								<Prompt contentType="text/markdown" xml:lang="en">Unattended bag at Rome station. **Disruption of service until 17:30**.</Prompt>
+							</ActionData>
+							<OnPlace>true</OnPlace>
+						</PublishToDisplayAction>
+					</PublishingActions>
+				</PtSituationElement>
+			</Situations>
+		</SituationExchangeDelivery>
+	</ServiceDelivery>
+</Siri>

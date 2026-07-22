@@ -166,4 +166,109 @@ The value range is normally 0-100, but could in some circumstances go beyond 100
 			<xsd:minInclusive value="0"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:complexType name="PromptType">
+		<xsd:annotation>
+			<xsd:documentation>Allow the addition of attributes in a Prompt to add further details about its content.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="NaturalLanguageStringStructure">
+				<xsd:attribute name="contentType" type="ContentTypeEnumeration" default="text/plain" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Specifies the type of the Prompt, to be used when it is not plain text (which is the value per default).</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>	
+	<xsd:complexType name="ContentURI">
+		<xsd:annotation>
+			<xsd:documentation>Allow the addition of attributes in an URL to add further details about the content of the file that the link points to.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:anyURI">
+				<xsd:attribute name="contentType" type="ContentTypeEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Specifies the media type of the resource that the link points to.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute ref="xml:lang" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>If the content of the resource is in a single language, specifies which one.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="label" type="xsd:string" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Gives additional information on the resource that the link points to (e.g., recorded message, text-to-speech, image).</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="ContentTypeEnumeration">
+		<xsd:annotation>
+			<xsd:documentation>Allowed values for contenType attribute (+v2.3)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="text/plain">
+				<xsd:annotation>
+					<xsd:documentation>Plain text</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="text/html">
+				<xsd:annotation>
+					<xsd:documentation>HTML text</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="text/markdown">
+				<xsd:annotation>
+					<xsd:documentation>Markdown text</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="audio/aac">
+				<xsd:annotation>
+					<xsd:documentation>AAC audio file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="audio/midi">
+				<xsd:annotation>
+					<xsd:documentation>MIDI audio file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="audio/mp4">
+				<xsd:annotation>
+					<xsd:documentation>MP4 audio file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="audio/ogg">
+				<xsd:annotation>
+					<xsd:documentation>OGG audio file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="audio/x-wav">
+				<xsd:annotation>
+					<xsd:documentation>Waveform audio file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="image/bmp">
+				<xsd:annotation>
+					<xsd:documentation>Bitmap image file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="image/gif">
+				<xsd:annotation>
+					<xsd:documentation>GIF image file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="image/jpeg">
+				<xsd:annotation>
+					<xsd:documentation>JPEG image file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="image/png">
+				<xsd:annotation>
+					<xsd:documentation>PNG image file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
 </xsd:schema>
