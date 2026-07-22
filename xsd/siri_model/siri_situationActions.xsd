@@ -154,9 +154,19 @@ Rail transport, Roads and road transport
 							<xsd:documentation>Data associated with action.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
+					<xsd:element name="PublicationRef" type="xsd:NMTOKEN" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Unique identifier of the Published Action, intended to faciliate its tracking by data consumers.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 					<xsd:element name="PublicationWindow" type="ClosedTimestampRangeStructure" minOccurs="0" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation>Defines a number of publication windows. When not sent, then the publication windows of higher level are valid. Can be overwritten by deeper level.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ConsequenceRef" type="ConsequenceRefStructure" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Refers to the unique identifier of one or several Consequences that trigerred this Action.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>

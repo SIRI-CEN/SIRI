@@ -1236,6 +1236,11 @@ Note that if the ControlAction is the master ControlAction of a GroupOfControlAc
 			<xsd:documentation>Type for disruption.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
+			<xsd:element name="ConsequenceCode" type="xsd:NMTOKEN" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Unique identifier of the Consequence, facilitating its link with the ParametrisedActionStructure.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="Period" type="HalfOpenTimestampOutputRangeStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Period of effect of disruption, if different from that of SITUATION.</xsd:documentation>
