@@ -5002,11 +5002,19 @@
                 <a shape="rect" href="#schema_siri_types_std">48.1. Simple type definitions</a>
               </li>
               <li>
-                <a shape="rect" href="#type.siri:NaturalLanguagePlaceNameStructure">48.2 The complexType <code>siri:NaturalLanguagePlaceNameStructure</code>
+                <a shape="rect" href="#type.siri:ContentURI">48.2 The complexType <code>siri:ContentURI</code>
                 </a>
               </li>
               <li>
-                <a shape="rect" href="#type.siri:NaturalLanguageStringStructure">48.3 The complexType <code>siri:NaturalLanguageStringStructure</code>
+                <a shape="rect" href="#type.siri:NaturalLanguagePlaceNameStructure">48.3 The complexType <code>siri:NaturalLanguagePlaceNameStructure</code>
+                </a>
+              </li>
+              <li>
+                <a shape="rect" href="#type.siri:NaturalLanguageStringStructure">48.4 The complexType <code>siri:NaturalLanguageStringStructure</code>
+                </a>
+              </li>
+              <li>
+                <a shape="rect" href="#type.siri:PromptType">48.5 The complexType <code>siri:PromptType</code>
                 </a>
               </li>
             </ul>
@@ -196340,12 +196348,36 @@
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
                     <p class="tableblock">
-                      <em>&gt;<a shape="rect" href="#type.siri:NaturalLanguageStringStructure" title="siri:NaturalLanguageStringStructure">siri:NaturalLanguageStringStructure</a>
+                      <em>&gt;<a shape="rect" href="#type.siri:PromptType" title="siri:PromptType">siri:PromptType</a>
                       </em>
                     </p>
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
-                    <p class="tableblock darkbrown">Display prompt for presenting action to user. (Unbounded since SIRI 2.0)</p>
+                    <p class="tableblock darkbrown">Display prompt for presenting action to user. (Unbounded since SIRI 2.0). Possibility to add attributs on the type of prompt, and its language (+v2.3)</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <a shape="rect" href="" title=""/>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>siri:Url</code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <span title="optional, multiple">0:*</span>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <em>&gt;<a shape="rect" href="#type.siri:ContentURI" title="siri:ContentURI">siri:ContentURI</a>
+                      </em>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Direct link to the content to be published or broadcaseted as is (e.g., pre-recorded message, image, etc.).</p>
                   </td>
                 </tr>
                 <tr>
@@ -252795,6 +252827,126 @@
               </colgroup>
               <tbody>
                 <tr>
+                  <td colspan="1" rowspan="2" class="tableblock halign-left valign-top">
+                    <p id="type.siri:ContentTypeEnumeration" class="tableblock">
+                      <strong>
+                        <code>siri:ContentTypeEnumeration</code>
+                      </strong>
+                    </p>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">Allowed values for contenType attribute (+v2.3)</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table class="tableblock frame-all grid-all spread">
+                      <colgroup span="1">
+                        <col span="1" style="width:28%"/>
+                        <col span="1" style="width:72%"/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">text/plain</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">Plain text</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">text/html</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">HTML text</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">text/markdown</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">Markdown text</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">audio/aac</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">AAC audio file</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">audio/midi</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">MIDI audio file</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">audio/mp4</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">MP4 audio file</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">audio/ogg</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">OGG audio file</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">audio/x-wav</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">Waveform audio file</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">image/bmp</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">Bitmap image file</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">image/gif</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">GIF image file</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">image/jpeg</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">JPEG image file</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock">image/png</p>
+                          </td>
+                          <td class="tableblock halign-left valign-top">
+                            <p class="tableblock anno-text">PNG image file</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
                     <p id="type.siri:DurationType" class="tableblock">
                       <strong>
@@ -252995,8 +253147,131 @@
             </table>
           </div>
         </div>
+        <div class="sect2" id="type.siri:ContentURI">
+          <h3>48.15. The complex type <code>siri:ContentURI</code>
+          </h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>siri:ContentURI</code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>xs:anyURI</code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">-</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6" rowspan="1" class="tableblock halign-left valign-top announceBase">
+                    <p class="tableblock">Inherited content is followed by <b>own content</b>:</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <a shape="rect" href="" title=""/>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong>@contentType</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong title="mandatory, single">1:1</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <em>
+                        <a shape="rect" href="#type.siri:ContentTypeEnumeration" title="siri:ContentTypeEnumeration">siri:ContentTypeEnumeration</a>
+                      </em>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Specifies the media type of the resource that the link points to.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <a shape="rect" href="" title=""/>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong>@xml:lang</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong title="mandatory, single">1:1</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <em>
+                        <a shape="rect" href="" title=""/>
+                      </em>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">If the content of the resource is in a single language, specifies which one. lang (as an attribute name) denotes an attribute whose value is a language code for the natural language of the content of any element; its value is inherited. This name is reserved by virtue of its definition in the XML specification. Notes Attempting to install the relevant ISO 2- and 3-letter codes as the enumerated possible values is probably never going to be a realistic possibility. See BCP 47 at http://www.rfc-editor.org/rfc/bcp/bcp47.txt and the IANA language subtag registry at http://www.iana.org/assignments/language-subtag-registry for further information. The union allows for the 'un-declaration' of xml:lang with the empty string.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <a shape="rect" href="" title=""/>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong>@label</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong title="mandatory, single">1:1</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <em>xs:string</em>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Gives additional information on the resource that the link points to (e.g., recorded message, text-to-speech, image).</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
         <div class="sect2" id="type.siri:NaturalLanguagePlaceNameStructure">
-          <h3>48.14. The complex type <code>siri:NaturalLanguagePlaceNameStructure</code>
+          <h3>48.16. The complex type <code>siri:NaturalLanguagePlaceNameStructure</code>
           </h3>
           <div class="sectionbody">
             <table class="tableblock frame-all grid-all spread">
@@ -253063,7 +253338,7 @@
           </div>
         </div>
         <div class="sect2" id="type.siri:NaturalLanguageStringStructure">
-          <h3>48.15. The complex type <code>siri:NaturalLanguageStringStructure</code>
+          <h3>48.17. The complex type <code>siri:NaturalLanguageStringStructure</code>
           </h3>
           <div class="sectionbody">
             <table class="tableblock frame-all grid-all spread">
@@ -253123,6 +253398,107 @@
                   </td>
                   <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
                     <p class="tableblock darkbrown">lang (as an attribute name) denotes an attribute whose value is a language code for the natural language of the content of any element; its value is inherited. This name is reserved by virtue of its definition in the XML specification. Notes Attempting to install the relevant ISO 2- and 3-letter codes as the enumerated possible values is probably never going to be a realistic possibility. See BCP 47 at http://www.rfc-editor.org/rfc/bcp/bcp47.txt and the IANA language subtag registry at http://www.iana.org/assignments/language-subtag-registry for further information. The union allows for the 'un-declaration' of xml:lang with the empty string.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="sect2" id="type.siri:PromptType">
+          <h3>48.18. The complex type <code>siri:PromptType</code>
+          </h3>
+          <div class="sectionbody">
+            <table class="tableblock frame-all grid-all spread">
+              <colgroup span="1">
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:11.9047619047619%"/>
+                <col span="1" style="width:1.19047619047619%"/>
+                <col span="1" style="width:23.8095238095238%"/>
+                <col span="1" style="width:35.7142857142857%"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td colspan="4" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>siri:PromptType</code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <a shape="rect" href="#type.siri:NaturalLanguageStringStructure" title="siri:NaturalLanguageStringStructure">siri:NaturalLanguageStringStructure</a>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock anno-text">A restriction of W3C XML Schema's string that requires at least one character of text.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6" rowspan="1" class="tableblock halign-left valign-top announceBase">
+                    <p class="tableblock">The element content starts with <b>items inherited</b> from the base type:</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <a shape="rect" href="" title=""/>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong>@xml:lang</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong title="mandatory, single">1:1</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <em>
+                        <a shape="rect" href="" title=""/>
+                      </em>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">lang (as an attribute name) denotes an attribute whose value is a language code for the natural language of the content of any element; its value is inherited. This name is reserved by virtue of its definition in the XML specification. Notes Attempting to install the relevant ISO 2- and 3-letter codes as the enumerated possible values is probably never going to be a realistic possibility. See BCP 47 at http://www.rfc-editor.org/rfc/bcp/bcp47.txt and the IANA language subtag registry at http://www.iana.org/assignments/language-subtag-registry for further information. The union allows for the 'un-declaration' of xml:lang with the empty string.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6" rowspan="1" class="tableblock halign-left valign-top announceBase">
+                    <p class="tableblock">Inherited content is followed by <b>own content</b>:</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <a shape="rect" href="" title=""/>
+                  </td>
+                  <td colspan="2" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong>@contentType</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <code>
+                        <strong title="mandatory, single">1:1</strong>
+                      </code>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock">
+                      <em>
+                        <a shape="rect" href="#type.siri:ContentTypeEnumeration" title="siri:ContentTypeEnumeration">siri:ContentTypeEnumeration</a>
+                      </em>
+                    </p>
+                  </td>
+                  <td colspan="1" rowspan="1" class="tableblock halign-left valign-top">
+                    <p class="tableblock darkbrown">Specifies the type of the Prompt, to be used when it is not plain text (which is the value per default).</p>
                   </td>
                 </tr>
               </tbody>

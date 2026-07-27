@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_situationActions">
 	<!--
+15.07.2026 Tu-Tho Thai:
+- Addition of URL in ActionData
+- Change of Prompt to include the type of content being shared directly, using an enumeration to limit of options
+- Addition of annotation to clarify the use
+
 10.01.2018 D. Rubli, Siri_XML-2.0p synchronisation of recommendation with xsd:
 - PublishToDisplayAction added to ActionsGroup
 -->
@@ -218,14 +223,19 @@ Rail transport, Roads and road transport
 					<xsd:documentation>Data type of action data.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Value" type="xsd:anyType" maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="Value" type="xsd:anyType" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Value for action.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="Prompt" type="NaturalLanguageStringStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="Prompt" type="PromptType" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
-					<xsd:documentation>Display prompt for presenting action to user. (Unbounded since SIRI 2.0)</xsd:documentation>
+					<xsd:documentation>Display prompt for presenting action to user. (Unbounded since SIRI 2.0). Possibility to add attributs on the type of prompt, and its language (+v2.3)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Url" type="ContentURI" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Direct link to the content to be published or broadcaseted as is (e.g., pre-recorded message, image, etc.).</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="PublishAtScope" minOccurs="0">
