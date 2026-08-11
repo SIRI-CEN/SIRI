@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EXAMPLE SIRI-VM Response
+
+	This example describes a simple response to return the vehicle position for a dead run using a SIRI-VM Service.
+
+(C) Copyright 2005-2026 CEN SIRI -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<!--=======ENDPOINT ===================================== -->
+		<ResponseTimestamp>2026-07-22T09:09:26-05:00</ResponseTimestamp>
+		<ProducerRef>GT7</ProducerRef>
+		<!--=======PAYLOAD ===================================== -->
+		<VehicleMonitoringDelivery version="2.3">
+			<ResponseTimestamp>2026-07-22T09:09:27-05:00</ResponseTimestamp>
+			<SubscriberRef>SAESUB</SubscriberRef>
+			<SubscriptionRef>00047</SubscriptionRef>
+			<Status>true</Status>
+			<VehicleActivity>
+				<RecordedAtTime>2026-07-22T09:20:27-05:00</RecordedAtTime>
+				<ValidUntilTime>2026-07-22T10:00:00-05:00</ValidUntilTime>
+				<VehicleMonitoringRef>Vehicle:123456:GT7</VehicleMonitoringRef>
+				<!-- MONITORED VEHICLE JOURNEY -->
+				<MonitoredVehicleJourney>
+					<LineRef>Line456</LineRef>
+					<FramedVehicleJourneyRef>
+						<DataFrameRef>2026-07-01</DataFrameRef>
+						<DatedVehicleJourneyRef>123456</DatedVehicleJourneyRef>
+					</FramedVehicleJourneyRef>
+					<PublishedLineName xml:lang="fr">Ligne 3 Metro</PublishedLineName>
+					<DirectionName>Direction Name</DirectionName>
+					<DeadRun>true</DeadRun> <!-- a Vehicle Journey not accepting any passenger -->
+					<Monitored>true</Monitored>
+					<VehicleLocation>
+						<Longitude>1.234</Longitude>
+						<Latitude>5.678</Latitude>
+					</VehicleLocation>
+					<Bearing>234</Bearing>
+					<Occupancy>notAcceptingPassengers</Occupancy>
+				</MonitoredVehicleJourney>
+			</VehicleActivity>
+		</VehicleMonitoringDelivery>
+	</ServiceDelivery>
+</Siri>
