@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EXAMPLE SIRI-ET Response
+
+	This example describes a simple response to return the vehicle position for a dead run using a SIRI-ET Service.
+
+(C) Copyright 2005-2026 CEN SIRI -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<!--=======HEADER================================================== -->
+		<ResponseTimestamp>2026-07-22T09:09:26-05:00</ResponseTimestamp>
+		<ProducerRef>GT7</ProducerRef>
+		<Status>true</Status>
+		<MoreData>false</MoreData>
+		<!--=======PAYLOAD============================================== -->
+		<EstimatedTimetableDelivery version="2.3">
+			<ResponseTimestamp>2026-07-22T09:09:27-05:00</ResponseTimestamp>
+			<SubscriberRef>SAESUB</SubscriberRef>
+			<SubscriptionRef>00047</SubscriptionRef>
+			<Status>true</Status>
+			<ValidUntil>2026-07-22T10:00:00-05:00</ValidUntil>
+			<ShortestPossibleCycle>P1Y2M3DT10H30M</ShortestPossibleCycle>
+			<EstimatedJourneyVersionFrame>
+				<RecordedAtTime>2026-07-22T09:20:27-05:00</RecordedAtTime>
+				<VersionRef>5645</VersionRef>
+				<!--== Regular Journey ========================== -->
+				<EstimatedVehicleJourney>
+					<LineRef>Line456</LineRef>
+					<DirectionRef>INBOUND</DirectionRef>
+					<DatedVehicleJourneyRef>00008</DatedVehicleJourneyRef>
+					<Cancellation>false</Cancellation>
+					<PublishedLineName xml:lang="fr">Ligne 3 Metro</PublishedLineName>
+					<OperatorRef>FREX</OperatorRef>
+					<ProductCategoryRef>Cat274</ProductCategoryRef>
+					<Monitored>true</Monitored>
+					<PredictionInaccurate>false</PredictionInaccurate>
+					<DataSource>ACME</DataSource>
+					<Occupancy>seatsAvailable</Occupancy>
+					<EstimatedCalls>
+						<!-- CALL 1-->
+						<EstimatedCall>
+							<StopPointRef>00001</StopPointRef>
+							<ExtraCall>false</ExtraCall>
+							<PredictionInaccurate>false</PredictionInaccurate>
+							<Occupancy>seatsAvailable</Occupancy>
+							<BoardingStretch>false</BoardingStretch>
+							<RequestStop>false</RequestStop>
+							<AimedArrivalTime>2026-07-22T09:20:30-05:00</AimedArrivalTime>
+							<AimedDepartureTime>2001-12-17T09:21:00-05:00</AimedDepartureTime>
+						</EstimatedCall>
+						<!-- CALL 2-->
+						<EstimatedCall>
+							<StopPointRef>00002</StopPointRef>
+							<ExtraCall>false</ExtraCall>
+							<PredictionInaccurate>false</PredictionInaccurate>
+							<Occupancy>fewSeatsAvailable</Occupancy>
+							<AimedArrivalTime>2026-07-22T09:22:30-05:00</AimedArrivalTime>
+							<AimedDepartureTime>2026-07-22T09:23:00-05:00</AimedDepartureTime>
+						</EstimatedCall>
+						<!-- CALL 3 -->
+						<EstimatedCall>
+							<StopPointRef>00003</StopPointRef>
+							<PredictionInaccurate>true</PredictionInaccurate>
+							<Occupancy>full</Occupancy>
+							<AimedArrivalTime>2026-07-22T09:25:00-05:00</AimedArrivalTime>
+							<ExpectedArrivalTime>2026-07-22T09:26:30-05:00</ExpectedArrivalTime>
+							<AimedDepartureTime>2001-12-17T09:25:30-05:00</AimedDepartureTime>
+							<ExpectedDepartureTime>2001-12-17T09:27:00-05:00</ExpectedDepartureTime>
+							<DepartureBoardingActivity>noBoarding</DepartureBoardingActivity>
+						</EstimatedCall>
+					</EstimatedCalls>
+					<IsCompleteStopSequence>false</IsCompleteStopSequence>
+				</EstimatedVehicleJourney>
+				<!--== Dead run Journey ========================== -->
+				<EstimatedVehicleJourney>
+					<LineRef>Line456</LineRef>
+					<DirectionRef>INBOUND</DirectionRef>
+					<DatedVehicleJourneyRef>00009</DatedVehicleJourneyRef>
+					<Cancellation>false</Cancellation>
+					<PublishedLineName xml:lang="fr">Ligne 3 Metro</PublishedLineName>
+					<OperatorRef>FREX</OperatorRef>
+					<ProductCategoryRef>Cat274</ProductCategoryRef>
+					<DeadRun>true</DeadRun>
+					<Monitored>true</Monitored>
+					<PredictionInaccurate>false</PredictionInaccurate>
+					<DataSource>ACME</DataSource>
+					<Occupancy>notAcceptingPassengers</Occupancy>
+				</EstimatedVehicleJourney>
+			</EstimatedJourneyVersionFrame>
+		</EstimatedTimetableDelivery>
+	</ServiceDelivery>
+</Siri>
