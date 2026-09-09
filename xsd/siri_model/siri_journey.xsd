@@ -488,6 +488,7 @@ Rail transport, Roads and road transport
 			<xsd:element ref="ArrivalFormationAssignment" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="ArrivalOrientationRelativeToQuay" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="ArrivalOperatorRefs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="AlightingSideInDirectionOfTravel" type="SideInDirectionOfTravelEnumeration" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="MonitoredStopDepartureStatusGroup">
@@ -514,6 +515,7 @@ Rail transport, Roads and road transport
 				</xsd:sequence>
 			</xsd:choice>
 			<xsd:element ref="DepartureOperatorRefs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="BoardingSideInDirectionOfTravel" type="SideInDirectionOfTravelEnumeration" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ======MONITORED CALL================================================= -->
